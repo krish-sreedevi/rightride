@@ -1,0 +1,760 @@
+{
+ "brand": "Mercedes-Benz",
+ "scrapedAt": "2026-09-30T07:19:38.065Z",
+ "source": "https://www.mercedes-benz.co.in/passengercars/models.html?group=all",
+ "models": [
+  {
+   "model": "CLA",
+   "body": "Sedan",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/saloon/cla-electric/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/174313/806_056/iris.png?q=COSY-EU-100-1713d0VXq0SFng9jfZobxEnlqHI5QqqrQCPPnU2GkHJxm7skt0uBuipB2rTeJApn6jA5uoSV4C3MJ9gzNTOBO7j6pPbKVSZvsvqt72kLRcKp6axXvieH1JE7v8wOlGOiZbVA94FIqcYg9QRanPDkxeAeWm1l5sdhw2XUf%25kHTGEyuEe0lY3iKB2rN8iACBUXOck44FIdCzge4nJDPsgfzneWmqLSsdhDdvUf%25WHtGEyJdS0lY21pB2rpCJApFO1yU7tTJ5OF6ldHrn85or%25N%25GcGDtlp96WtwQZM7s12H&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "CLA Electric",
+     "trim": "Electric",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "engine": "",
+     "price": 5650000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "210",
+      "Boot": "405"
+     }
+    }
+   ]
+  },
+  {
+   "model": "CLE Cabriolet",
+   "body": "Coupe / Convertible",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/cabriolet-roadster/cle/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/236447/804_054/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtGyWtsd2HdcUfp8qXGEubmJ0l3ItOB2NQnbApjtwI5uVKMQC31C1kzNwzdm7jZeohKVFsW%25vqCtTyLRzcyYax7oxrH1Kj1n8wsOcoiZUidM4FGTlTg90k26PDMI6SeWzXutsd7YNcUfKM6XGEv5RJ0lgYlOB2PBqbApedlI5usQMQC3UvrkzNGLNm7j0afhKVHXt%25vq8cXyr%25kWfDpJJ0lCrnOIJRdAbQOznRI5uefuQC3PS9kzN5P6m7jdA9hKVvsW%25vqLUayLRaARYaBEUVmMDZfrE8OYTwHxXr1RjijhWh5DvaAFCDGp0wMkULc&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040,DZO&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "CLE Cabriolet Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 4,
+     "engine": "1999 cc",
+     "price": 11500000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "295"
+     }
+    }
+   ]
+  },
+  {
+   "model": "C-Class",
+   "body": "Sedan",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/saloon/c-class/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/206046/804_054/iris.png?q=COSY-EU-100-1713d0VXqaSFqtyO67PobzIr3eWsrrCsdRRzwQZ6ZHZbMw3SGtGyWtsd2HdcUfp8qXGEubmJ0l3ItOB2NQnbApjtwI5uVQDQC3qvTkzNwTVm7jZ7ZhKVFKh%25vq9vlyLRDG6YaxWbSrH1KJtn8wv8noiZLqZM4FGIlTg90QO6PDBPlSeWAXutsd5c3cUfCX1XGEvaVJ0lL6tOB2az1bApenpI5us5xQC3UEpkzNGmnm7j0hShKVBHM%25vqA8qyLR5i2Yax4JOroYhfld3bbAp7oMIkb1ECQmIKM1kzNUlNm7jscWhKVzst%25vq7BTyLRKOfYax2jurH18B%25n8wiA2oiZ45gM4FgCQTg9Pv96PKNCZnX2f3SNsF6hdmDkSW9wUwopoL24PvEa2zq7dXrCgQ&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "C-Class Diesel",
+     "trim": "Diesel",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "engine": "1496 cc",
+     "price": 6120000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "455"
+     }
+    },
+    {
+     "name": "C-Class Hybrid",
+     "trim": "Hybrid",
+     "fuel": "Hybrid",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "engine": "1496 cc",
+     "price": 19090909,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "455"
+     }
+    },
+    {
+     "name": "C-Class Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "engine": "1496 cc",
+     "price": 6120000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "455"
+     }
+    }
+   ]
+  },
+  {
+   "model": "EQS",
+   "body": "Sedan",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/saloon/eqs/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/297144/804/iris.png?q=COSY-EU-100-1713d0VXqrS7qtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtlKStsd2HtcUfp8qXGEuiBJ0l3IrOB2NzObApRA9I5ux4uQC31SrkzNwL6m7jA6ohKV5SQ%25vqCv%25yLRzAHYax75prH1KM1n8wvT3oiZLkYM4FGIJTg90QT6PDBLNSeWAwItsd5cQcUfCX1XGEz53J0l7rhOB2Ky2bApHtXI5u8c1QC3ikwkzN4Lum7jgMmhKVBSV%25vqAv9yLR5nWYaxCbxrH1zmRn8w7oboiZKeXM4F1RcTg9Ukm6tTnuNpRhhKVHtc%25YhD3Lyr%258cDYax5ahrH1ABfn8wa82oiZH5XM4F8mMTg9iml6PDePoSeWsKjtsLV79MOuljcVGXvGE7dhcfWF0FT3THuPsa28uKxvEOo7em&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "EQS Electric",
+     "trim": "Electric",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "",
+     "price": 13000000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "210",
+      "Boot": "620"
+     }
+    }
+   ]
+  },
+  {
+   "model": "EQS",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/eqs/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/296644/805/iris.png?q=COSY-EU-100-1713d0VXq0W7qtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtxa2tsd1JpcUfwFuXGEZT3J0l30xOB2NB5bApjiVI5uVeIQC3qsFkzNRUKm7jxyohKV1YQ%25vqwr%25yLRZOmYaxFNhrH19jin8wDhyoiZW%25pM4FdslTg9fUn6PDEG6SeWl0Wtsd2B%25cUfN%25yXGEjGwJ0lVHhOB2q82bApRiwI5ux4zQC31SrkzNwt9m7jZ2DhKVFpE%25vq98cyLRzc6Yax7aYrH1KCtn8wvz4oiZL6ZM4FaSjTg9HY36PD8SmSeWAmutsd5hQcUfC8qXGEzbXJ0l7oNOB2KWFbApvIyI5uLQIQC3akWkzNH6nm7j8MjhKVksN%25vqmucyLRsGWYaxUkhrH1Gmln8w0hEoiZBMlM4FAOrTg9LQ36PDaPpSeWHa3tsd8JGcUfiOjXGE4nEJ0lgDVOB2PS%25bApetCI5usc2QC3UkQkzNGm6m7j0aZhKVBHM%25vqA8ayLR5i2YaxC4qrH1qJ%25n8wP8yoiZekXM4FsmMTg9Uhk6PDGmhSc6o3jux%25%25vq8cXyr%25WNaYnyiXSrH1CJRn8w5AEoiZHb1M4F84FTg9igV6PD47pSeWgKItsdPHQcUfeO1XGEsbYJ0lUoJOB2GorbAp0MqI5uBTLQC3ATxkzN5aDm7jd6ohKVfii%25vqLtTyLRaLDYaxHahrH18HOn8wiA2oiZ46IM4FgmwTg735wrcldu63eSTwW59Q6DF1s1n2nvligKfLlCVzWcY54I&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "EQS Electric",
+     "trim": "Electric",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "",
+     "price": 13350000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "210",
+      "Boot": "645"
+     }
+    }
+   ]
+  },
+  {
+   "model": "E-Class Sedan Long",
+   "body": "Sedan",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/saloon/e-class/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/214161/805/iris.png?q=COSY-EU-100-1713d0VXqah7qtyO67PobzIr3eWsrrCsdRRzwQZUnRZbMw3SGtlehtsd2vtcUfp8fXGEubmJ0l3ItOB2NS1bApj7pI5uVKDQC31CWkzNwP9m7jA7mhKV50L%25vqCuqyLRgc6YaxP5qrH1eMdn8wsocoiZBkIM4FAm2Tg95Yn6PDCruSeWHmjtsd8s3cUfiFNXGE49dJ0lgOhOB2PbnbApe7lI5uKMTQmIJwF1d66PDGmhSc63ZstXS0h3cUf8U1XGEHaVJ0lU0lOB2GB1bApFjhI5uC5JQC3zgFkzN7UNm7sDgubYwR9hDvQCvawj6hVNpLpIZIGwC7Ux0wPfeqYOgzT&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "E-Class Sedan Long Diesel",
+     "trim": "Diesel",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1993 cc",
+     "price": 8350000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "540"
+     }
+    },
+    {
+     "name": "E-Class Sedan Long Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1993 cc",
+     "price": 8150000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "540"
+     }
+    }
+   ]
+  },
+  {
+   "model": "S-Class",
+   "body": "Sedan",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/saloon-long/s-class/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/223167/807/iris.png?q=COSY-EU-100-1713d0VXqbh7ng9jfZobxEnlqHI5QqqrQCPPnU2G2vmxm7skt0uBI5TB2rQm6ApnksS5uoSiaC3Mt9CzNTcfV7j6XLeKVSJAmvqtO5xLRcba7axXIFKH1JQ9H8wOkDMiZbyAa4FIY5Dg9Qr9SPDknjieWmoVesdhMqSUf%25TRoGEy6870lYSiXB2rtmJApnchQ5uoXC0C3Ml4HzNT2gA7j6pPqKVSuVKvqt3fgLRcNp7axXju0H1JV4Y8wOqCUiZbRza4FIx74g9Q1aMPDkweAeWmZsKsdhFzCUf%253BTGEyNAG0lYjiKB2rVmvApnqhG5uoRCaC3MxzBzNT17o7j6wxqKVSzdTvqt72kLRcKBIaxXvzKH1JE2%258wOlNriZb2va4FIq56g9QR9BPDkxDdeWm1VMsdhw1TUf%25ZH%25GEyFQ60lY9kbB2rDevApnWsn5uodUrC3MfzHzNTE7A7j6lK7KVS2vyvqtpLULRcuamaxX3FeH1JN9Z8wOjDXiZbXAa4FIJ54g9QOs8PDkbvneWmlW4sdh2aCUf%25pHUGEyuQO0lY3H8B50scJtQiiZbW5C4PirX9ge4dCBPDkRDteWmjxesdhVaMUf%25qHUGEyRQe0lYxkHB2r1eUApnFgb5uo2ikC3Mp4gzNTuDO7j63WiKVSNlSvqtj2hLRcV8LaxXqinH1JR5H8wOxCOiZb1tb4FIwz9g9QZ7KPDkF7heWm92SsdhcKCUf%25XbGGEylLO0lY2lSB2rp28ApnuZO5uo3FNC3MN9gzNTjfQ7j6VUMKVSqnIvqtRLzLRl%25d6ziQOha%251sh1ZxcUaXtTwT7k7pQVR2buQfrEJiCdqs&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "S-Class Hybrid",
+     "trim": "Hybrid",
+     "fuel": "Hybrid",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "engine": "2999 cc",
+     "price": 22000000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "345"
+     }
+    }
+   ]
+  },
+  {
+   "model": "GLA",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/gla/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/247715/804/iris.png?q=COSY-EU-100-1713d0VXqNEFqtyO67PobzIr3eWsrrCsdRRzwQZYVHZbMw3SGtlaWtsd2HVcUfpOkXGEunSJ0l3ofOB2NS1bApRARI5ux6YQC30CQkzNBtum7j86ZhKViSM%25vq4vZyLRgY6Yax%25XqrH1yCtn8w0A2oiZB7lM4FAyrTg95b96PDakDSeWHnRtsd8c%25cUfiANXGE45wJ0ldoVOB2znobQOcxwRDMM4FsQkTSMp1P6tTUkbSeWawMtsdLYqcUfxZ3XGE0aSJ0lBHAOB2A8EbAp5ToI5uCfJQCPFi2J%25xVZkF7DgOoA3MkNulKlO1OsxACeqUx4Wgj%25Xi5o&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "GLA Diesel",
+     "trim": "Diesel",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1332 cc",
+     "price": 5300000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "219",
+      "Boot": "425"
+     }
+    },
+    {
+     "name": "GLA Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1332 cc",
+     "price": 5180000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "219",
+      "Boot": "425"
+     }
+    }
+   ]
+  },
+  {
+   "model": "GLC",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/glc/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/254605/804/iris.png?q=COSY-EU-100-1713d0VXqaW7qtyO67PobzIr3eWsrrCsdRRzwQZ63pZbMw3SGtlaWtsd2JQcUfpO6XGEuTRJ0l3CJOB2NznbApRnyI5ux5IQC31SrkzNwmbm7jA6ohKV5Kh%25vqCuqyLRgc6Yax%255SrH1yI6n8w0A2oiZB5lM4FAsuTg9LQ96PDaPpSeWHXUtsd8ZDcUfiXWXGE4JYJ0lgClOB2PzFbAp7oMIkbX1ZxWTTg9Ukm6tTuweSc6GmutsdHhdcUfa8MXGE0GSJ0lBHxOBi1aftkV3xb15pGfxG2rbpldCdcqcgVGB4NPVHF8ukSa0Y&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "GLC Diesel",
+     "trim": "Diesel",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1993 cc",
+     "price": 7700000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "240",
+      "Boot": "620"
+     }
+    },
+    {
+     "name": "GLC Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1993 cc",
+     "price": 7700000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "240",
+      "Boot": "620"
+     }
+    }
+   ]
+  },
+  {
+   "model": "GLE",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/gle/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/167133/804/iris.png?q=COSY-EU-100-1713d0VXqaSFqtyO67PobzIr3eWsrrCsdRRzwQZU3IZbMw3SGtlaWtsd2HVcUfpOkXGEunSJ0l36xOB2NzFbApRAyI5uGoYQC30CQkzNBUdm7jA2mhKV5%25t%25vq4t9yLRgc6YaxPNprH1entn8wso3oiZUMdM4FnCwTg9otO6PDC76SeWzK3tsd7oTcUfi%25fXGE4GjJ0lgIAOB2PS5bApeIoI5usKxQC3UvWkzNpTnm7jaSthymI9WFlccUfAyYXOcVD0JbX5YVOB2g8cbAp4ixI5uBo2QC3ACWkzN5Pnm7jCGohKVzpV%25vqEaryLRac6YaxHXJrH18H%25n8wiAyoiZ451M4zuA1YtEWpTuzKCP6ZFIT9ZxexrlrKE847dvE5jCDtyAib&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "GLE Diesel",
+     "trim": "Diesel",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1993 cc",
+     "price": 10000000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "630"
+     }
+    },
+    {
+     "name": "GLE Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1993 cc",
+     "price": 11150000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "630"
+     }
+    }
+   ]
+  },
+  {
+   "model": "GLS",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/gls/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/167933/806/iris.png?q=COSY-EU-100-1713d0VXq4EFqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtlKUtsd2HtcUfp8qXGEubmJ0l3otOB2NW5bApjtwI5uVKDQC31grkzNBTnm7jA7mhKV50E%25vqCrlyLRzOmYax7NYrH1KnOn8wsOfoiZUbXM4FG4fTg90tT6PDBSbSeWAtMtsd5cxcUfSLWXGEtbmJ0lLHJOB2a8RbApHPwI5u8cJQC3UM7kzNGzwm7j0yDhKVBYL%25vqAJqyLR5QmYaxCk8rH1znOn8w7PfoiZKeNM4FvswTg9wQO6PDGmhSc6o3jux%25%25vq8cXyr%25WNaYnyiXhrH1CCtn8w5QpoiZHb1M4F84jTg9iz26PD4LbSeWgyjtsdPZdcUfe5LXGE1zWJ0lBYhOB2ArnbAp5iXI5uC4zQC3zgpkzN7twm7jKhIhKUWP3IrZxD%25WU0siyjVS%25qjuauQFQ0ZzKG1BZeEsRrbP76&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "GLS Diesel",
+     "trim": "Diesel",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 7,
+     "engine": "2989 cc",
+     "price": 13970000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "355"
+     }
+    },
+    {
+     "name": "GLS Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 7,
+     "engine": "2989 cc",
+     "price": 13750000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "355"
+     }
+    }
+   ]
+  },
+  {
+   "model": "G-Class",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/g-class-electric/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/465600/X25/iris.png?q=COSY-EU-100-1713d0VXq4hLqtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtlaWtsd2H%25cUfgUfXGEzymJ0l7%25fOB2XgRbApJkyI5u8r2QC3UC1kzNGtNm7j0hShKVBHE%25vqA6jyLRiXJYnymdEWuOOB2znobQOxf5Ikb7oYQC3vl1kzN8mwm7jitjhKV4tF%25vqgi9yLRPN6Yaxe8YrH1Vrln8wqYfoiZRRXM4FPYrTg9t%25O6PDK%25jSeWgaItsdPoxcUfeT6XGE14dJ0lwUlOB2JgnbApwPCI5uZmJQC3mgFkzNttnm7j2TvhKVp2E%25vGdeNQnF1WydbBPNW5qtyRV3H3k9kBF7v0wAFslUxnIeKS&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "G-Class Electric",
+     "trim": "Electric",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "",
+     "price": 31000000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "180",
+      "Boot": "620"
+     }
+    }
+   ]
+  },
+  {
+   "model": "G-Class",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/g-class/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/465310/X24/iris.png?q=COSY-EU-100-1713d0VXq4E7qtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtlaWtsd2H%25cUfgUfXGEzymJ0lcIhOB2PBqbApeIoI5usKDQC3UnpkzNL6Sm%25kbFDZEttsdB%25ycJtj9GXOcAyjJ0lCWVOB2vM%25bApLMXI5uazxQC3lQFkzN2Iwm7jyXZhKVUXd%25vq7BTyLRKnVYaxvk8rH1Lh%25n8wu84oiZ3HEM4FNxJTg9n626PDNcoSeWj%25jtsdXvdcUfrrkXGE9FwJ08xLdSQjuROxT4vPyPlYO2EW5WtVt4jU0i3gjaZHpQ6LGy&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "G-Class Diesel",
+     "trim": "Diesel",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "2989 cc",
+     "price": 29000000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "210",
+      "Boot": "640"
+     }
+    },
+    {
+     "name": "G-Class Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "2989 cc",
+     "price": 37400000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "210",
+      "Boot": "640"
+     }
+    }
+   ]
+  },
+  {
+   "model": "V-Class",
+   "body": "MUV / MPV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/van/v-class/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/447815/807_057/iris.png?q=COSY-EU-100-1713d0VXq7PLqtyO67PobzIr3eWsrrCsdRRzwQZYkHlGE1UHFm9mjP9QCc3eDkzy6gWm7YqWdhKrqRfld9PsgBxxXGIl21ZxveOwF1duIZbAyssFI5YR59QCrZ2DkznFDWm7oGFdhKzhKf%25va%25FEyLHCUlYa8DK2rHiKfpn84vpuoigKi3M4aMONTgH%256j6P8HtVSei8dqts4u9RcUgEUxXGPfl1J0eeawOBI9wZbA6pLFI5Sui9QCt3eDkzckgWm7Xm%25dhKJt4f%25vOfvEyLbrBlYajQl2rH3rGpn8N9Buoij9z3M4V94NTgqDSj6PRjAVSexugqtsytCRcUYwvxXGr2V1J0n30wOBoNHZbAMjQFI5TVP9QC6qADkzSMDWm7tN7dhKcpKf%25v91YEyLDLKlYaW5n2rHdaspn85nauoiCui3M4zn6NTg3%25Kj6PNdZVSejf3qtsVEXRcUqhzxXGR%25W1J0xy0wOB1YHZbAwkEFI5Zm19QCF92Dkz9DZWm7DWCdhKWFef%25vdY0EyLfrKlYadYa2rHfrwpn8E9BuoilDT3M42E4NTg6jDj6PSXAVSetJFqtsc69RcUXgexXGJPl1J0aM1wOBHTIZbA8DAFI5iU19QC4y4DkzgDpWm7PaudhK7hyf%25vK%250EyLvXxlYaLza2rHa7Lpn83zUuoiN7z3M4WV4NTgaqpj6hzQipxBUCVzlKmR9MPDVeg8c8uAuyBM6%25GYBkvmsx2QT9&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "V-Class Diesel",
+     "trim": "Diesel",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 6,
+     "engine": "1950 cc",
+     "price": 14000000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "220",
+      "Boot": "5010"
+     }
+    },
+    {
+     "name": "V-Class Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 6,
+     "engine": "1950 cc",
+     "price": 14000000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "220",
+      "Boot": "5010"
+     }
+    }
+   ]
+  },
+  {
+   "model": "A-Class Hatchback",
+   "body": "Hatchback",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/hatchback/a-class/amg.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/177054/806_056/iris.png?q=COSY-EU-100-1713d0VXqNpFqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtGyUtsd2HdcUfp8qXGEubmJ0l3IJOB2NMcbApjTlI5uVcZQC31sTkzNwtnm7jA6ZhKV5Kh%25vqCJjyLRgcDYaxPXSrH1eJ1n8ws8WoiZUkpM4FGTJTg9ozZ6PDMcbSeWza3tsd7oTcUfKM0XGE4yBJ0lg0VOB2PSObApet9I5usQMQC3UvWkzNLPKm7jaSthymI9WFlccUfAyYXOcVD0JbX5YJOB2gz1bAp4dDI5uBmMQC3AE1kzNW2Mm7jKevhKVvXt%25vqLukyLRaQDYaxHrqrHAlGqhTWFEnlA9BbpG1JnwxV4V%25d%25CWLH59zW0uBZTmGaX&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "A-Class Hatchback Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1991 cc",
+     "price": 8700000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "270",
+      "Boot": "370"
+     }
+    }
+   ]
+  },
+  {
+   "model": "CLE Coupé",
+   "body": "Coupe / Convertible",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/coupe/cle/amg.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/236362/805/iris.png?q=COSY-EU-100-1713d0VXq0EFqtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtlaWtsd2HVcUfpOkXGEubSJ0l3IrOB2NS1bApj7oI5ux5xQC31CWkzNwPnm7jZeDhKVFpR%25vqCtTyLRzLyYax7oxrH1Kj1n8wsOcoiZUidM4FGTlTg90k26PDBIsSeWzy3tsd7oTcUfKM0XGEv5RJ0lgYxOB2PBqbApedlI5usQYQC3UkTkzNGLnm7j0ajhKVBHE%25vq8JcyLRiXJYnymdEWuOOB2znobQOxf5Ikb7oYQC3sE3kzNelfm7jC2ZhKVzc6%25vq7ptyLRKScYax23rrH18Bin8wizwoiZ46pM4FgSjTg9PY26PDeSFSeWymjtsLV79MOuljcVGytiBFdhcfWF0FT3THuPsa28uKxvEOo7em&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "CLE Coupé Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 4,
+     "engine": "2999 cc",
+     "price": 13250000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "410"
+     }
+    }
+   ]
+  },
+  {
+   "model": "E-Class Sedan",
+   "body": "Sedan",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/saloon/e-class/amg.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/214063/806_056/iris.png?q=COSY-EU-100-1713d0VXqNEFqtyO67PobzIr3eWsrrCsdRRzwQZgZGZbMw3SGtGyUtsd1h9cUfp8cXGEubmJ0l3DAOB2NS1bApj7pI5ux5IQC31CWkzNwPnm7jZeDhKV5YV%25vqCuqyLRgc6YaxPa9rH1eCRn8wsTfoiZU6oM4FGQPTg90be6PDMIsSeWzyStsd7YNcUfKM6XGEvhdJ0lgYAOB2PBqbApeixI5usf2QC3UXQkzNGm6m7j0aohKVHtc%25YhQDd92XXGE5YrJbXqWBOIJCr%25bAp4dDI5uBfxQC3A6okzN5ETm7jCM6hKVf2R%25vqLvcyLRaGHYaxH5xrH18Mln8wiT3oiZ4kEM4FgylTg9P6Z6PD%25kNSevjzFoJpENtjUTg%250DWmtdDZGZMuMapgeLlHp7RKfJnzPk&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "E-Class Sedan Hybrid",
+     "trim": "Hybrid",
+     "fuel": "Hybrid",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "2999 cc",
+     "price": 14500000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "370"
+     }
+    }
+   ]
+  },
+  {
+   "model": "GLC Coupé",
+   "body": "Coupe / Convertible",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/glc-coupe/amg.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/254387/805/iris.png?q=COSY-EU-100-1713d0VXqNEFqtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtxX2tsd1opcUfp%25kXGEuy3J0l34lOB2Ng1bApjkyI5uVmJQC3qhQkzNRtbm7jxcvhKV1XN%25vqwIdyLRZY2YaxF4YrH1dJZn8wf8foiZEioM4Fl4PTg92gk6PDp7bSeWuKjtsd3vpcUfN8yXGEjbRJ0lVohOB2qM1bApRdwI5uxfDQC31EjkzNwmbm7jA7mhKV5sM%25vqCrqyLRzOXYax7NxrH1Kmln8wsOfoiZUbXM4FG4fTg90zZ6PDBSpSeWAtRtsd6vDcUfSANXGEvaXJ0lLHqOB2aScbApHtCI5u8KZQC3inQkzNGT9m7j07ZhKVBYL%25vqAJTyLR53VYaxCkYrH1zmin8w7oboiZKeEM4FvsJTg9LUT6PDaGDSeWH0Rtsd9h3cUfD%25kXGEWbSJ0lCYhOB2zBcbAp7ToI5uKMTQmIJwF1d66PDGmhSc63ZstXS0h3cUf8FfXGEH9ZJ0lU0ZOB2Gg1bAp0k9I5uBmMQC3ASQkzN5lwm7jCOohKVztZ%25vq7ifyLRKucYaxvtXrH1pJtn8wus8oiZ4bXM4Fg4lTg9Pgk6PDe7oSeWsKUtsdUHdcUfG8qXGE0bRJ0lBIZOB2ASqbAp5IlI5u6oZQCPFi2J%25xVZkF7NAG3z3MkNulKlO1OsxACeqUx4Wgj%25Xi5o&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "GLC Coupé Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1991 cc",
+     "price": 9985000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "545"
+     }
+    }
+   ]
+  },
+  {
+   "model": "GLE Coupé",
+   "body": "Coupe / Convertible",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/gle-coupe/amg.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/167361/805/iris.png?q=COSY-EU-100-1713d0VXqrpeqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtlaWtsd2HVcUfpOkXGEunSJ0l36xOB2qB%25bApUnyI5uG5IQC30EQkzNBm6m7j86ZhKViSM%25vq4vZyLRgnyYaxPrSrH1enun8wYAxoiZr6XM4FAC2Tg95Yn6PDakNSeWHeutsd8JGcUfiMfXGE4TBJ0lgOrOB2PzqbApe79I5uloYQC3vC7kzNL6Sm%25kbFDZEttsdB%25ycJtj9GXOcAymJ0l4IAOB2iW9bAp0A9I5uB4YQC3AE1kzN5lNm7jd8thKVvSt%25vqLvlyLRaGmYaxH08rH18Mdn8wiT2oiZ46NM4FgmlTg9P6n6PDeSFSevjzFoJpENtjvaK80pWmtdDZGZMuMapgeLlHp7RKfJnzPk&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "GLE Coupé Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "2999 cc",
+     "price": 15200000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "655"
+     }
+    }
+   ]
+  },
+  {
+   "model": "Mercedes AMG GT Coupé",
+   "body": "Coupe / Convertible",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/coupe/amg-gt-2-door/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/192388/806/iris.png?q=COSY-EU-100-1713d0VXqrWLqtyO67PobzIr3eWsrrCsdRRzwQZUnRZbMw3SGtlaWtsd2oVcUfNrkXGEPymJ0le4fOB2sQObApvnyI5uL5qQC3aSFkzNHmum7j8MvhKVkTL%25vqeUDyLRsQyYaxUtqrH1zJin8w78foiZK%25oM4FvsJTg9LbZ6PDGkqSeW0KUtsdBvDcUfAyYXOc6VRjZrrH1gObnMrEqioTnPbEM4FKylTg9iv26PD4hQSeWqA5tsdUJVcUfGFyXGE05EJ08xLdSQjuROx8bjPlKlYO2EW5WtVt4jU0i3gjaZHpQ6LGy&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "Mercedes AMG GT Coupé Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 2,
+     "engine": "3982 cc",
+     "price": 30000000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "317",
+      "Boot": "321"
+     }
+    }
+   ]
+  },
+  {
+   "model": "Mercedes-Maybach EQS SUV",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/maybach-eqs/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/296955/805_055/iris.png?q=COSY-EU-100-1713d0VXqbhFqtyO67PobzIr3eWsrrCsdRRzwQZ6ZHZbMw3SGtGyjtsd1HpcUfwOuXGEZ9WJ0lFDNOB29SjbApjAwI5uV5zQC3qg3kzNRPxm7jxGmhKV10W%25vqwBayLRZn6YaxFohrH19Mrn8wDQyoiZWqYM4FdRPTg9fYn6PDErNSeWltMtsd2B3cUfpA6XGEu5XJ0l3ClOB2NznbApRnXI5uxo2QC31MTkzNwzdm7jZeohKVFsV%25vq9JTyLRDOfYaxWNErH1djun8wvOcoiZLioM4FaKJTg9HtT6PD8cNSeWiXRtsd4YTcUfgMqXGEPJYJ0l7YVOB2KrObApvAbI5uLeZQC3ahQkzNHtnm7j82ohKVi%25M%25vq4y%25yLRgY2YaxP4WrH1eOtn8wY8WoiZr51M4Fny2Tg9o6p6PDC7qSeWzK3tsd7oNcUfKXjXGEvhSJ0lgYxOB2PBqbApePxI5usmzQC3UhwkzNGtNm7j02ZhKVBbM%25vqAIayLR5QVYaxCrhrH1znrn8w7oboiZKeEM4FvsJTg9LUe6PDaGqSeWH09tsd9hTcUfDAIXGE5GSJ0lCoJOB2zMnbAp7oMIkbX1ZxWTTg9Ukm6tTuweSc6GmItsdLvycUfeU1XGEsajJ0lUHhOB2G82bAp0koI5uB6IQC3AkOkzN5S1m7jCt8hKVztZ%25vq7cNyLRKpdYax2XSrH18Jtn8wi8foiZ4iZM4Fg4QTg9Pz36PDecmSeWsy9tsLV79MOuljcVGXt5RPdhcfWF0FT3THuPsa28uKxvEOo7em&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "Mercedes-Maybach EQS SUV Electric",
+     "trim": "Electric",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 4,
+     "engine": "",
+     "price": 24000000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "210",
+      "Boot": "440"
+     }
+    }
+   ]
+  },
+  {
+   "model": "Mercedes-Maybach S-Class",
+   "body": "Sedan",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/saloon-long/mercedes-maybach-s-class/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/223976/804/iris.png?q=COSY-EU-100-1713d0VXqbS7qtyO67PobzIr3eWsrrCsdRRzwQZv9IZbMw3SGtlKStsd2HtcUfp80XGEubYJ0l36xOB2NS5bApj7bI5uVKDQC31MrkzNwTbm7jZ6vhKVFKE%25vq9UTyLRDGmYaxWbSrH1KJtn8wvOyoiZLbgM4Fa4MTg9Hvn6PD8LmSeWiXStsd4JxcUfgr6XGEPnXJ0l7YhOB2KQqbApvkbI5uLfYQC3aEOkzNHmbm7j8hfhKViTQ%25vqmJZyLRhYWYaxU0hrH1GBfn8w0z2oiZB%25lM4FAT2Tg9LQ96PDaPbSeWHyWtsd8ZDcUfiMfXGE4TdJ0lgOhOB2PbnbApe7yI5usK2QC32M7kzNpTdm7juyIhKVHSW%25vq8cXyr%25kWfDpJJ0lCrnOIJRdAbQOznyI5uecZQC3Pg6kzN5Pnm7jCcmhKVf0t%25vqLtlyLRaLRYaxH0ErH18Cln8520R%256d9lo24JlsjbwOoZ1qgqyfyzda8CD7dB3AF6h0HJ&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "Mercedes-Maybach S-Class Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "3982 cc",
+     "price": 28750000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250"
+     }
+    }
+   ]
+  },
+  {
+   "model": "Mercedes-Maybach GLS",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/mercedes-maybach-gls/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/167987/806/iris.png?q=COSY-EU-100-1713d0VXqbSdqtyO67PobzIr3eWsrrCsdRR%25wQZxevZbMMlSGtx0RtsLSy89ikpOiZbmjn4FIhe0g9Q%25K8PDkyJdeWmY86sdhr2XUf%25TvJGEy6Lh0lYSlKB2rtN8Apnf8L5uoEi0C3Ml3CzNT2fV7j6pE%25KVSuayvqt3HULRcNB7axXjAaH1JV6H8wOqiAiZbRWy4FIE5Yg9QlCBPDk2UPeWmps5sdhuUgUf%253GJGEysxh0lYU5KB2rxwcApn1DO5uowUJC3MZqczNTEgV7j6lU6KVS2ACvqtp5tLRcuC1axX3H0H1JN9h8wOjDMiZbVWJ4FIJ50g9QOC8PDkbzPeWmlWfsdh2bSUf%25pLaGBUPSc6bHH1J9BA84HytZig8DAb4FIl30g9Q2KgPDkRDAeWmqVvsdhDdXUf%25WRTGEydx70lYfkYB2rE8eApnIgA5uo3iaC3MN3MzNTjvQ7j6VUbKVSqn4vqtRLzLRl%25d6ziQOha%25lpE9cxcUaXtTwT7k7pQVR2buQfrEJiCdqs&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "Mercedes-Maybach GLS Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 7,
+     "engine": "2989 cc",
+     "price": 27500000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "355"
+     }
+    }
+   ]
+  },
+  {
+   "model": "Mercedes-Maybach SL Monogram Series",
+   "body": "Coupe / Convertible",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/cabriolet-roadster/mercedes-maybach-sl/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/232981/805_055/iris.png?q=COSY-EU-100-1713d0VXqbWdqtyO67PobzIr3eWsrrCsdRRzwQZvkwZbMw3SGtGyjtsd2hQcUfp8cXGEuiRJ0l3IJOB2NQnbApjdCI5uVcZQC3qvTkzNwT6m7jZ73hKVFsM%25vq9UlyLRDGFYaxWbErH1djln8wfPboiZLbXM4FaIMTg9HzO6PD8LFSeWiXStsd4ZdcUfgF1XGEPTjJ0le6xOB2sSnbApvnRI5uLoYQC3agpkzNH%25km7j8cohKVi%25M%25vqmtZyLRhSyYaxU0VrH1GIin8w0QEoiZB%25lM4FvIuTg9LgO6PDa1FSeWHnItsd8odcUfiXkXGE4JYJ0lgChOB2PzObApe79I5ulmJQC3vM7kzNLtnm7jaSthymI9WFlccUfAyYXOcVD0JbX5YVOB2i8obAp0iRI5uBmMQC3ASQkzN5lNm7jCSwhKVzt3%25vq7coyLRKpWYax20JrH18Hdn8wi8woiZ4iIM4FgCuTg9Pv36PDe1pSevjzFoJpENtjU%25pAWpWmtdDZGZMuMapgeLlHp7RKfJnzPk&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040,DZO&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "Mercedes-Maybach SL Monogram Series Petrol",
+     "trim": "Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 2,
+     "engine": "3982 cc",
+     "price": 43000000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "260",
+      "Boot": "240"
+     }
+    }
+   ]
+  }
+ ],
+ "log": []
+}
