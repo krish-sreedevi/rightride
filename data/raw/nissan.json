@@ -1,0 +1,488 @@
+{
+ "brand": "Nissan",
+ "scrapedAt": "2026-09-30T07:12:22.213Z",
+ "source": "https://www.nissan.in/prices-list.html",
+ "models": [
+  {
+   "model": "Tekton",
+   "url": "https://www.nissan.in/vehicles/new/nissan-tekton.html",
+   "variants": [
+    {
+     "name": "TEKTON VISIA T160 MT",
+     "trim": "VISIA T160 MT",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 1049000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "TEKTON VISIA+ T160 MT",
+     "trim": "VISIA+ T160 MT",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 1114000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "TEKTON ACENTA T160 MT",
+     "trim": "ACENTA T160 MT",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 1179000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "TEKTON N-CONNECTA T160 MT",
+     "trim": "N-CONNECTA T160 MT",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 1369000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "TEKTON N-CONNECTA T280 MT",
+     "trim": "N-CONNECTA T280 MT",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 1499000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "TEKTON TEKNA T160 MT",
+     "trim": "TEKNA T160 MT",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 1539000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "TEKTON TEKNA T280 MT",
+     "trim": "TEKNA T280 MT",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 1639000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "TEKTON TEKNA+ T160 MT",
+     "trim": "TEKNA+ T160 MT",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 1649000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "TEKTON ACENTA T280 DCT",
+     "trim": "ACENTA T280 DCT",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 1499000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "TEKTON N-CONNECTA T280 DCT",
+     "trim": "N-CONNECTA T280 DCT",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 1649000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "TEKTON TEKNA T280 DCT",
+     "trim": "TEKNA T280 DCT",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 1779000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "TEKTON TEKNA+ T280 DCT",
+     "trim": "TEKNA+ T280 DCT",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 1859000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "Gravite",
+   "url": "https://www.nissan.in/vehicles/new/nissan-gravite.html",
+   "variants": [
+    {
+     "name": "Gravite Visia MT",
+     "trim": "Visia MT",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 573400,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Gravite Acenta MT",
+     "trim": "Acenta MT",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 668400,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Gravite N-Connecta MT",
+     "trim": "N-Connecta MT",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 738400,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Gravite Tekna MT",
+     "trim": "Tekna MT",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 808000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Gravite Tekna Launch Edition MT",
+     "trim": "Tekna Launch Edition MT",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 852500,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Gravite N-Connecta EZ Shift",
+     "trim": "N-Connecta EZ Shift",
+     "fuel": "Petrol",
+     "transmission": "",
+     "engine": "",
+     "price": 795000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Gravite Tekna EZ Shift",
+     "trim": "Tekna EZ Shift",
+     "fuel": "Petrol",
+     "transmission": "",
+     "engine": "",
+     "price": 864000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Gravite Tekna Launch Edition EZ Shift",
+     "trim": "Tekna Launch Edition EZ Shift",
+     "fuel": "Petrol",
+     "transmission": "",
+     "engine": "",
+     "price": 908500,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "Magnite",
+   "url": "https://www.nissan.in/vehicles/new/nissan-magnite.html",
+   "variants": [
+    {
+     "name": "MAGNITE MT Kuro Edition",
+     "trim": "MT Kuro Edition",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 781000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "MAGNITE EZ-SHIFT Kuro Edition",
+     "trim": "EZ-SHIFT Kuro Edition",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 836000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "MAGNITE Turbo MT Kuro Edition",
+     "trim": "Turbo MT Kuro Edition",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 912000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "MAGNITE Turbo CVT Kuro Edition",
+     "trim": "Turbo CVT Kuro Edition",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 999400,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite MT VISIA",
+     "trim": "MT VISIA",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 568000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite MT VISIA+",
+     "trim": "MT VISIA+",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 622000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite MT ACENTA",
+     "trim": "MT ACENTA",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 683000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite MT N-CONNECTA",
+     "trim": "MT N-CONNECTA",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 746000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite MT TEKNA",
+     "trim": "MT TEKNA",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 839000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite MT TEKNA+",
+     "trim": "MT TEKNA+",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 872000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite TURBO MT N-CONNECTA",
+     "trim": "TURBO MT N-CONNECTA",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 877000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite TURBO MT TEKNA",
+     "trim": "TURBO MT TEKNA",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 957000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite TURBO MT TEKNA+",
+     "trim": "TURBO MT TEKNA+",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 991000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite EZ-SHIFT VISIA",
+     "trim": "EZ-SHIFT VISIA",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 627000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite EZ-SHIFT ACENTA",
+     "trim": "EZ-SHIFT ACENTA",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 738000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite EZ-SHIFT N-CONNECTA",
+     "trim": "EZ-SHIFT N-CONNECTA",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 801000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite EZ-SHIFT TEKNA",
+     "trim": "EZ-SHIFT TEKNA",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 894000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite EZ-SHIFT TEKNA+",
+     "trim": "EZ-SHIFT TEKNA+",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 927000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite Turbo X-TRONIC CVT ACENTA",
+     "trim": "Turbo X-TRONIC CVT ACENTA",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 926000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite Turbo X-TRONIC CVT N-CONNECTA",
+     "trim": "Turbo X-TRONIC CVT N-CONNECTA",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 970000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite Turbo X-TRONIC CVT TEKNA",
+     "trim": "Turbo X-TRONIC CVT TEKNA",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 1065000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Magnite Turbo X-TRONIC CVT TEKNA+",
+     "trim": "Turbo X-TRONIC CVT TEKNA+",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 1099000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  }
+ ],
+ "log": []
+}

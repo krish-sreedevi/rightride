@@ -1,0 +1,2818 @@
+{
+ "brand": "Renault",
+ "scrapedAt": "2026-09-30T07:12:32.613Z",
+ "source": "https://www.renault.co.in/",
+ "models": [
+  {
+   "model": "Duster",
+   "url": "https://www.renault.co.in/cars/renault-duster.html",
+   "variants": [
+    {
+     "name": "authentic TCe 100 MT",
+     "trim": "authentic",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "Turbo TCe 100 6-speed MT",
+     "price": 1049000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "eco LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "17.78cm (7’’) TFT driver display",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED daytime running lights",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "evolution TCe 100 MT",
+     "trim": "evolution",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "Turbo TCe 100 6-speed MT",
+     "price": 1169000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "eco LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "17.78cm (7’’) TFT driver display",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED daytime running lights",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED horizontal rear light bar",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "black fixed longitudinal roof bars",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "evolution TCe 160 MT",
+     "trim": "evolution",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "Turbo TCe 160 6-speed MT",
+     "price": 1299000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "eco LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "17.78cm (7’’) TFT driver display",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED daytime running lights",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED horizontal rear light bar",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "black fixed longitudinal roof bars",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "evolution TCe 160 DCT",
+     "trim": "evolution",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "Turbo TCe 160 6-speed DCT",
+     "price": 1449000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "eco LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "17.78cm (7’’) TFT driver display",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED daytime running lights",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED horizontal rear light bar",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "black fixed longitudinal roof bars",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "adventure TCe 100 MT",
+     "trim": "adventure",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "Turbo TCe 100 6-speed MT",
+     "price": 1299000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "eco LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "17.78cm (7’’) TFT driver display",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED daytime running lights",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED horizontal rear light bar",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "black fixed longitudinal roof bars",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "full LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric panoramic sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric powered tailgate",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "connected car services with my Renault app",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "adventure TCe 160 MT",
+     "trim": "adventure",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "Turbo TCe 160 6-speed MT",
+     "price": 1399000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "eco LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "17.78cm (7’’) TFT driver display",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED daytime running lights",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED horizontal rear light bar",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "black fixed longitudinal roof bars",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "full LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric panoramic sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric powered tailgate",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "connected car services with my Renault app",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "adventure TCe 160 DCT",
+     "trim": "adventure",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "Turbo TCe 160 6-speed DCT",
+     "price": 1539000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "eco LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "17.78cm (7’’) TFT driver display",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED daytime running lights",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED horizontal rear light bar",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "black fixed longitudinal roof bars",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "full LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric panoramic sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric powered tailgate",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "connected car services with my Renault app",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "techno+ TCe 160 MT",
+     "trim": "techno+",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "Turbo TCe 160 6-speed MT",
+     "price": 1529000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "eco LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "17.78cm (7’’) TFT driver display",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED daytime running lights",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED horizontal rear light bar",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "black fixed longitudinal roof bars",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "full LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric panoramic sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric powered tailgate",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "connected car services with my Renault app",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "26.03cm (10.25’’) TFT driver diplay",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "blind spot warning",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "front parking assist",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "side parking assist",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "techno+ TCe 160 DCT",
+     "trim": "techno+",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "Turbo TCe 160 6-speed DCT",
+     "price": 1669000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "eco LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "17.78cm (7’’) TFT driver display",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED daytime running lights",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED horizontal rear light bar",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "black fixed longitudinal roof bars",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "full LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric panoramic sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric powered tailgate",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "connected car services with my Renault app",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "26.03cm (10.25’’) TFT driver diplay",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "blind spot warning",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "front parking assist",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "side parking assist",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "iconic TCe 160 MT",
+     "trim": "iconic",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "Turbo TCe 160 6-speed MT",
+     "price": 1699000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "eco LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "17.78cm (7’’) TFT driver display",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED daytime running lights",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED horizontal rear light bar",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "black fixed longitudinal roof bars",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "full LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric panoramic sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric powered tailgate",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "connected car services with my Renault app",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "26.03cm (10.25’’) TFT driver diplay",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "blind spot warning",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "front parking assist",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "side parking assist",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system with Google built-in",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "front ventilated seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric front seats with 6 way adjust - Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "360° around view 3D camera ​",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "iconic TCe 160 DCT",
+     "trim": "iconic",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "Turbo TCe 160 6-speed DCT",
+     "price": 1849000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "eco LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "17.78cm (7’’) TFT driver display",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED daytime running lights",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED horizontal rear light bar",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "black fixed longitudinal roof bars",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "full LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric panoramic sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric powered tailgate",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "connected car services with my Renault app",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "26.03cm (10.25’’) TFT driver diplay",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "blind spot warning",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "front parking assist",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "side parking assist",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system with Google built-in",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "front ventilated seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric front seats with 6 way adjust - Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "360° around view 3D camera ​",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "iconic launch edition TCe 160 MT",
+     "trim": "iconic launch edition",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "Turbo TCe 160 6-speed MT",
+     "price": 1719000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "eco LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "17.78cm (7’’) TFT driver display",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED daytime running lights",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED horizontal rear light bar",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "black fixed longitudinal roof bars",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "full LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric panoramic sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric powered tailgate",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "connected car services with my Renault app",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "26.03cm (10.25’’) TFT driver diplay",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "blind spot warning",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "front parking assist",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "side parking assist",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system with Google built-in",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "front ventilated seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric front seats with 6 way adjust - Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "360° around view 3D camera ​",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "himalayan inspired side embellisher",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "specific iconic yellow door decal",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "specific iconic yellow Duster decal on roof bar",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "iconic launch edition TCe 160 DCT",
+     "trim": "iconic launch edition",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "Turbo TCe 160 6-speed DCT",
+     "price": 1869000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "eco LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "17.78cm (7’’) TFT driver display",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED daytime running lights",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED horizontal rear light bar",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "black fixed longitudinal roof bars",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "full LED headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric panoramic sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric powered tailgate",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "connected car services with my Renault app",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "26.03cm (10.25’’) TFT driver diplay",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "blind spot warning",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "front parking assist",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "side parking assist",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "25.65cm (10.1'') openR link multimedia system with Google built-in",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "front ventilated seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "electric front seats with 6 way adjust - Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "360° around view 3D camera ​",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "himalayan inspired side embellisher",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "specific iconic yellow door decal",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "specific iconic yellow Duster decal on roof bar",
+       "value": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "model": "Triber",
+   "url": "https://www.renault.co.in/cars/renault-triber.html",
+   "variants": [
+    {
+     "name": "AUTHENTIC",
+     "trim": "authentic",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L manual",
+     "price": 580875,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "2nd row - one touch fold & tumble",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "2nd row - slide & recline",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "removable 3rd row easy fix seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rear power windows",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "EVOLUTION",
+     "trim": "evolution",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L manual",
+     "price": 673605,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "2nd row - one touch fold & tumble",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "2nd row - slide & recline",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "removable 3rd row easy fix seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rear power windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32cm display link floating touch screen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rear camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "steering mounted audio & phone controls",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "independent rear AC with 2nd & 3rd row vents",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "EVOLUTION TURBO",
+     "trim": "evolution",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L turbo manual",
+     "price": 784900,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "2nd row - one touch fold & tumble",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "2nd row - slide & recline",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "removable 3rd row easy fix seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rear power windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32cm display link floating touch screen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rear camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "steering mounted audio & phone controls",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "independent rear AC with 2nd & 3rd row vents",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "TECHNO",
+     "trim": "techno",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L manual",
+     "price": 744120,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "2nd row - one touch fold & tumble",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "2nd row - slide & recline",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "removable 3rd row easy fix seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rear power windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32cm display link floating touch screen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rear camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "steering mounted audio & phone controls",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "independent rear AC with 2nd & 3rd row vents",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "ORVM - electric adjust & fold",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "driver seat arm rest",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "roof rails with load carrying capacity upto 50 Kg",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "TECHNO TURBO",
+     "trim": "techno",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L turbo manual",
+     "price": 853900,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "2nd row - one touch fold & tumble",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "2nd row - slide & recline",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "removable 3rd row easy fix seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rear power windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32cm display link floating touch screen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rear camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "steering mounted audio & phone controls",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "independent rear AC with 2nd & 3rd row vents",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "ORVM - electric adjust & fold",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "driver seat arm rest",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "roof rails with load carrying capacity upto 50 Kg",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "EMOTION AMT",
+     "trim": "emotion",
+     "fuel": "Petrol",
+     "transmission": "AMT",
+     "engine": "1L AMT",
+     "price": 852950,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "2nd row - one touch fold & tumble",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "2nd row - slide & recline",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "removable 3rd row easy fix seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rear power windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32cm display link floating touch screen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rear camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "steering mounted audio & phone controls",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "independent rear AC with 2nd & 3rd row vents",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "ORVM - electric adjust & fold",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "driver seat arm rest",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "roof rails with load carrying capacity upto 50 Kg",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "auto head lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "cruise control",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "auto A/C",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rain sensing wipers",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "EMOTION TURBO",
+     "trim": "emotion",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L turbo manual",
+     "price": 899900,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "2nd row - one touch fold & tumble",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "2nd row - slide & recline",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "removable 3rd row easy fix seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rear power windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32cm display link floating touch screen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rear camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "steering mounted audio & phone controls",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "independent rear AC with 2nd & 3rd row vents",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "ORVM - electric adjust & fold",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "driver seat arm rest",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "roof rails with load carrying capacity upto 50 Kg",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "auto head lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "cruise control",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "auto A/C",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rain sensing wipers",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "EMOTION",
+     "trim": "emotion",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L manual",
+     "price": 805350,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "2nd row - one touch fold & tumble",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "2nd row - slide & recline",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "removable 3rd row easy fix seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rear power windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32cm display link floating touch screen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rear camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "steering mounted audio & phone controls",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "independent rear AC with 2nd & 3rd row vents",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "LED tail lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "ORVM - electric adjust & fold",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "driver seat arm rest",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "roof rails with load carrying capacity upto 50 Kg",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "auto head lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "cruise control",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "auto A/C",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "rain sensing wipers",
+       "value": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "model": "Kiger",
+   "url": "https://www.renault.co.in/cars/renault-kiger.html",
+   "variants": [
+    {
+     "name": "AUTHENTIC",
+     "trim": "authentic",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L manual",
+     "price": 581000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "Side airbag Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Curtain Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear Power Windows",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "EVOLUTION",
+     "trim": "evolution",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L manual",
+     "price": 659000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "Side airbag Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Curtain Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear Power Windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm DisplayLink Floating Touchscreen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear View Camera and Sensors",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "USB Smartphone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear airconditioning vents",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "EVOLUTION AMT",
+     "trim": "evolution",
+     "fuel": "Petrol",
+     "transmission": "AMT",
+     "engine": "1L AMT",
+     "price": 703000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "Side airbag Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Curtain Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear Power Windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm DisplayLink Floating Touchscreen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear View Camera and Sensors",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "USB Smartphone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear airconditioning vents",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "EVOLUTION+ AMT",
+     "trim": "evolution+",
+     "fuel": "Petrol",
+     "transmission": "AMT",
+     "engine": "1L AMT",
+     "price": 749000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "Side airbag Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Curtain Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear Power Windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm DisplayLink Floating Touchscreen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear View Camera and Sensors",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "USB Smartphone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear airconditioning vents",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Tri-Octa LED Pure Vision Headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Auto AC",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Wireless Smart Phone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Smart Access Card & Push Start/Stop",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "EVOLUTION+",
+     "trim": "evolution+",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L manual",
+     "price": 703000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "Side airbag Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Curtain Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear Power Windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm DisplayLink Floating Touchscreen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear View Camera and Sensors",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "USB Smartphone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear airconditioning vents",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Tri-Octa LED Pure Vision Headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Auto AC",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Wireless Smart Phone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Smart Access Card & Push Start/Stop",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "EVOLUTION+ TURBO",
+     "trim": "evolution+",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L turbo manual",
+     "price": 793000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "Side airbag Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Curtain Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear Power Windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm DisplayLink Floating Touchscreen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear View Camera and Sensors",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "USB Smartphone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear airconditioning vents",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Tri-Octa LED Pure Vision Headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Auto AC",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Wireless Smart Phone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Smart Access Card & Push Start/Stop",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "TECHNO TURBO CVT",
+     "trim": "techno",
+     "fuel": "Petrol",
+     "transmission": "CVT",
+     "engine": "1L turbo CVT",
+     "price": 940000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "Side airbag Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Curtain Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear Power Windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm DisplayLink Floating Touchscreen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear View Camera and Sensors",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "USB Smartphone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear airconditioning vents",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Tri-Octa LED Pure Vision Headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Auto AC",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Wireless Smart Phone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Smart Access Card & Push Start/Stop",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Ventilated Front Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "40.64 cm Diamond Cut Alloys",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Multi View Camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Multi-Sense Driving Modes",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "techno TURBO",
+     "trim": "techno",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L turbo manual",
+     "price": 850000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "Side airbag Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Curtain Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear Power Windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm DisplayLink Floating Touchscreen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear View Camera and Sensors",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "USB Smartphone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear airconditioning vents",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Tri-Octa LED Pure Vision Headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Auto AC",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Wireless Smart Phone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Smart Access Card & Push Start/Stop",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Ventilated Front Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "40.64 cm Diamond Cut Alloys",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Multi View Camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Multi-Sense Driving Modes",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "TECHNO AMT",
+     "trim": "techno",
+     "fuel": "Petrol",
+     "transmission": "AMT",
+     "engine": "1L AMT",
+     "price": 810000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "Side airbag Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Curtain Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear Power Windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm DisplayLink Floating Touchscreen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear View Camera and Sensors",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "USB Smartphone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear airconditioning vents",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Tri-Octa LED Pure Vision Headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Auto AC",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Wireless Smart Phone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Smart Access Card & Push Start/Stop",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Ventilated Front Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "40.64 cm Diamond Cut Alloys",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Multi View Camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Multi-Sense Driving Modes",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "TECHNO",
+     "trim": "techno",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L manual",
+     "price": 760000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "Side airbag Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Curtain Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear Power Windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm DisplayLink Floating Touchscreen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear View Camera and Sensors",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "USB Smartphone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear airconditioning vents",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Tri-Octa LED Pure Vision Headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Auto AC",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Wireless Smart Phone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Smart Access Card & Push Start/Stop",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Ventilated Front Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "40.64 cm Diamond Cut Alloys",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Multi View Camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Multi-Sense Driving Modes",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "EMOTION TURBO CVT",
+     "trim": "emotion",
+     "fuel": "Petrol",
+     "transmission": "CVT",
+     "engine": "1L turbo CVT",
+     "price": 1040000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "Side airbag Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Curtain Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear Power Windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm DisplayLink Floating Touchscreen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear View Camera and Sensors",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "USB Smartphone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear airconditioning vents",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Tri-Octa LED Pure Vision Headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Auto AC",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Wireless Smart Phone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Smart Access Card & Push Start/Stop",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Ventilated Front Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "40.64 cm Diamond Cut Alloys",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Multi View Camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Multi-Sense Driving Modes",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm DisplayLink Floating Touchscreen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Auto AC",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Smart Access Card & Push Start/Stop",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Wireless Smart Phone Replication",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "EMOTION TURBO",
+     "trim": "emotion",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L turbo manual",
+     "price": 940000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "Side airbag Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Curtain Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear Power Windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm DisplayLink Floating Touchscreen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear View Camera and Sensors",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "USB Smartphone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear airconditioning vents",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Tri-Octa LED Pure Vision Headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Auto AC",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Wireless Smart Phone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Smart Access Card & Push Start/Stop",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Ventilated Front Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "40.64 cm Diamond Cut Alloys",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Multi View Camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Multi-Sense Driving Modes",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm DisplayLink Floating Touchscreen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Auto AC",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Smart Access Card & Push Start/Stop",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Wireless Smart Phone Replication",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "EMOTION",
+     "trim": "emotion",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L manual",
+     "price": 850000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "Side airbag Driver & Passenger",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Curtain Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear Power Windows",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm DisplayLink Floating Touchscreen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear View Camera and Sensors",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "USB Smartphone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Rear airconditioning vents",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Tri-Octa LED Pure Vision Headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Auto AC",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Wireless Smart Phone Replication",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Smart Access Card & Push Start/Stop",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Ventilated Front Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "40.64 cm Diamond Cut Alloys",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Multi View Camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Multi-Sense Driving Modes",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm DisplayLink Floating Touchscreen",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Auto AC",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Smart Access Card & Push Start/Stop",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Wireless Smart Phone Replication",
+       "value": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "model": "Kwid",
+   "url": "https://www.renault.co.in/cars/renault-kwid.html",
+   "variants": [
+    {
+     "name": "Evolution AMT",
+     "trim": "evolution",
+     "fuel": "Petrol",
+     "transmission": "AMT",
+     "engine": "1L AMT",
+     "price": 489900,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "LED DRL's",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm Touchscreen MediaNAV Evolution",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote keyless entry with central locking",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Hill start assist",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Evolution",
+     "trim": "evolution",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L manual",
+     "price": 452900,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "LED DRL's",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm Touchscreen MediaNAV Evolution",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote keyless entry with central locking",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Hill start assist",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Climber AMT",
+     "trim": "climber",
+     "fuel": "Petrol",
+     "transmission": "AMT",
+     "engine": "1L AMT",
+     "price": 560900,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "LED DRL's",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm Touchscreen MediaNAV Evolution",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote keyless entry with central locking",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Hill start assist",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Electric ORVM with Turn Indicators",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Reverse Parking Camera with guidelines",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Steering mounted audio controls",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Dual-tone styled wheel cover",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Climber",
+     "trim": "climber",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1L manual",
+     "price": 514900,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Key features",
+       "label": "LED DRL's",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "20.32 cm Touchscreen MediaNAV Evolution",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Remote keyless entry with central locking",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Hill start assist",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Electric ORVM with Turn Indicators",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Reverse Parking Camera with guidelines",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Steering mounted audio controls",
+       "value": "Yes"
+      },
+      {
+       "group": "Key features",
+       "label": "Dual-tone styled wheel cover",
+       "value": "Yes"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "log": []
+}
