@@ -1,0 +1,35 @@
+name: Refresh car data
+on:
+  schedule:
+    - cron: '30 21 * * 0'   # every Monday 03:00 IST
+  workflow_dispatch:
+    inputs:
+      brands:
+        description: 'Space-separated adapter names (blank = all)'
+        required: false
+        default: ''
+permissions:
+  contents: write
+concurrency: { group: scrape, cancel-in-progress: false }
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Scrape manufacturer sites
+        run: node scraper/run.mjs ${{ github.event.inputs.brands }}
+        continue-on-error: true
+      - name: Build cars.json
+        run: node scraper/normalize.mjs
+      - name: Commit data
+        run: |
+          git config user.name "rightride-bot"
+          git config user.email "rightride-bot@users.noreply.github.com"
+          git add data site/data
+          git commit -m "Data refresh $(date -u +%Y-%m-%d)" || echo "no changes"
+          git pull --rebase origin main && git push origin main
