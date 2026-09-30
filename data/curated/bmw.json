@@ -1,0 +1,341 @@
+{
+ "brand": "BMW",
+ "curated": true,
+ "updated": "2026-09-30",
+ "source": "https://www.bmw.in/en/all-models.html",
+ "models": [
+  {
+   "model": "iX1 LWB",
+   "body": "SUV",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "iX1 eDrive20L M Sport",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "price": 5270000,
+     "seats": 5
+    }
+   ]
+  },
+  {
+   "model": "i7",
+   "body": "Sedan",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "i7 xDrive50",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 19500000,
+     "seats": 5
+    }
+   ]
+  },
+  {
+   "model": "i5",
+   "body": "Sedan",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "i5 M60 xDrive",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 11950000,
+     "seats": 5
+    }
+   ]
+  },
+  {
+   "model": "i5 LWB",
+   "body": "Sedan",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "i5 eDrive35L M Sport",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "price": 7960000,
+     "seats": 5
+    }
+   ]
+  },
+  {
+   "model": "M5",
+   "body": "Sedan",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "M5",
+     "fuel": "PHEV",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 21150000,
+     "seats": 5
+    }
+   ]
+  },
+  {
+   "model": "X7",
+   "body": "SUV",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "X7 xDrive40i",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 13340000,
+     "seats": 7
+    },
+    {
+     "name": "X7 xDrive40d DPE 7 Seater",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 13070000,
+     "seats": 7
+    },
+    {
+     "name": "X7 xDrive40d",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 13710000,
+     "seats": 7
+    }
+   ]
+  },
+  {
+   "model": "X6",
+   "body": "SUV",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "X6 M60i xDrive",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 17790000,
+     "seats": 5
+    }
+   ]
+  },
+  {
+   "model": "X5",
+   "body": "SUV",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "X5 xDrive40i",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 9690000,
+     "seats": 5
+    },
+    {
+     "name": "X5 xDrive30d",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 9890000,
+     "seats": 5
+    }
+   ]
+  },
+  {
+   "model": "X3",
+   "body": "SUV",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "X3 xDrive20 M Sport",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 7620000,
+     "seats": 5
+    },
+    {
+     "name": "X3 30 xDrive M Sport Pro",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 7620000,
+     "seats": 5
+    },
+    {
+     "name": "X3 xDrive20d M Sport",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 7820000,
+     "seats": 5
+    }
+   ]
+  },
+  {
+   "model": "X1 LWB",
+   "body": "SUV",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "X1 LWB",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "price": 4990000,
+     "seats": 5
+    }
+   ]
+  },
+  {
+   "model": "X1",
+   "body": "SUV",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "X1 sDrive18d M Sport",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "",
+     "price": 5290000,
+     "seats": 5
+    }
+   ]
+  },
+  {
+   "model": "7 Series",
+   "body": "Sedan",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "740 M Sport",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "price": 19500000,
+     "seats": 5
+    }
+   ]
+  },
+  {
+   "model": "5 Series LWB",
+   "body": "Sedan",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "530Li M Sport",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "price": 7660000,
+     "seats": 5
+    }
+   ]
+  },
+  {
+   "model": "4 Series",
+   "body": "Coupe / Convertible",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "M440i xDrive Convertible",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 10900000,
+     "seats": 4
+    }
+   ]
+  },
+  {
+   "model": "M4",
+   "body": "Coupe / Convertible",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "M4 Competition M xDrive",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 16050000,
+     "seats": 4
+    }
+   ]
+  },
+  {
+   "model": "3 Series",
+   "body": "Sedan",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "M340i xDrive",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 7710000,
+     "seats": 5
+    }
+   ]
+  },
+  {
+   "model": "3 Series LWB",
+   "body": "Sedan",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "330Li M Sport",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "price": 6270000,
+     "seats": 5
+    },
+    {
+     "name": "320Ld M Sport",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "",
+     "price": 6420000,
+     "seats": 5
+    }
+   ]
+  },
+  {
+   "model": "M2",
+   "body": "Coupe / Convertible",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "M2 Coupe",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "price": 10650000,
+     "seats": 4
+    }
+   ]
+  },
+  {
+   "model": "2 Series Gran Coupe",
+   "body": "Sedan",
+   "url": "https://www.bmw.in/en/all-models.html",
+   "variants": [
+    {
+     "name": "218 M Sport",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "price": 4580000,
+     "seats": 5
+    }
+   ]
+  }
+ ]
+}

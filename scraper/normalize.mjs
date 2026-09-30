@@ -168,7 +168,7 @@ function RR_variant(name, model, rawModel) {
     if (!m) continue;
     s = s.replace(new RegExp('(^|\\s)' + m.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?=\\s|$)', 'ig'), ' ');
   }
-  s = s.replace(/\s+/g, ' ').trim();
+  s = s.replace(/,\s*(petrol|diesel|bi-fuel cng|cng|petrol\/ethanol|electric)\s*$/i, '').replace(/\s+/g, ' ').trim();
   return s || name;
 }
 
@@ -190,10 +190,10 @@ export function normalize() {
   const rawDir = path.join(ROOT, 'data/raw');
   const curDir = path.join(ROOT, 'data/curated');
   const rawFiles = fs.existsSync(rawDir) ? fs.readdirSync(rawDir).filter((f) => f.endsWith('.json') && !f.startsWith('_')).map((f) => path.join(rawDir, f)) : [];
-  const rawBrands = new Set(rawFiles.map((f) => JSON.parse(fs.readFileSync(f, 'utf8')).brand));
-  // curated snapshots are only used for brands the scrapers could not fetch
+  const rawNames = new Set(rawFiles.map((f) => path.basename(f)));
+  // a curated snapshot (data/curated/x.json) is only used when the scraper for x produced nothing
   const curFiles = (fs.existsSync(curDir) ? fs.readdirSync(curDir).filter((f) => f.endsWith('.json')).map((f) => path.join(curDir, f)) : [])
-    .filter((f) => !rawBrands.has(JSON.parse(fs.readFileSync(f, 'utf8')).brand));
+    .filter((f) => !rawNames.has(path.basename(f)));
   const files = [...rawFiles, ...curFiles];
   const cars = [];
   const brands = {};
@@ -212,7 +212,7 @@ export function normalize() {
         const fuel = normFuel(v.fuel, `${v.name} ${m.model}`);
         const { transmission, transType } = normTrans(v.transmission, v.name, fuel);
         const { f, airbags } = mapFeatures(v.features || [], complete && (v.features || []).length > 0);
-        if (v.featureFlags) Object.assign(f, v.featureFlags); // curated
+        if (v.featureFlags) Object.assign(f, v.featureFlags); // curated / pre-mapped
         const specs = v.specs || {};
         const sn = `${v.name} ${m.model}`.match(/\b([4-9])\s*-?\s*(s|str|seater|seats?)\b|\[([4-9])s\]|\(([4-9])s\)/i);
         const seats = (sn && Number(sn[1] || sn[3] || sn[4])) || v.seats || num(specOf(specs, /seat(ing)? capacity|seats/i)) || (m.seats ?? null);
@@ -229,7 +229,7 @@ export function normalize() {
           cc: num(v.engine && /cc|\d{3,4}/.test(v.engine) ? v.engine : specOf(specs, /displacement|engine capacity|cubic/i)),
           mileage: num(v.mileage || specOf(specs, /fuel efficiency|mileage|arai|km\/l/i)) || null,
           range: fuel === 'Electric' ? num(specOf(specs, /range|mid[c]?/i)) : null,
-          airbags, f, featureCount: (v.features || []).length,
+          airbags: airbags ?? v.airbags ?? null, f, featureCount: (v.features || []).length || (v.featureFlags ? Object.values(v.featureFlags).filter(Boolean).length : 0),
           url: m.url, image: v.image || m.image || null,
           src: raw.curated ? 'curated' : 'official',
         });
