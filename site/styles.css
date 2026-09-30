@@ -1,35 +1,35 @@
 :root {
-  --bg: #f6f7f9; --panel: #ffffff; --text: #111827; --muted: #6b7280; --line: #e5e7eb;
-  --brand: #0f766e; --brand-2: #0d9488; --brand-soft: #e6f4f2; --warn: #b45309; --warn-soft: #fef3c7;
+  --bg: #f7f7f7; --panel: #ffffff; --text: #111111; --muted: #6b7280; --line: #e5e7eb;
+  --brand: #E10600; --brand-2: #b80500; --brand-soft: #fdecea; --warn: #b45309; --warn-soft: #fef3c7;
   --no: #b91c1c; --yes: #047857; --chip: #f3f4f6; --shadow: 0 1px 2px rgba(0,0,0,.05), 0 4px 16px rgba(0,0,0,.04);
   --radius: 14px;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0b0f14; --panel: #121821; --text: #e5e7eb; --muted: #9ca3af; --line: #1f2937;
-    --brand: #2dd4bf; --brand-2: #5eead4; --brand-soft: #0f2a2a; --warn: #fbbf24; --warn-soft: #3a2a07;
-    --no: #f87171; --yes: #34d399; --chip: #1b2330; --shadow: none;
+    --bg: #0c0c0c; --panel: #161616; --text: #f2f2f2; --muted: #a3a3a3; --line: #2a2a2a;
+    --brand: #FF3B30; --brand-2: #ff6a61; --brand-soft: #3a1210; --warn: #fbbf24; --warn-soft: #3a2a07;
+    --no: #f87171; --yes: #34d399; --chip: #222222; --shadow: none;
   }
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html, body { margin: 0; }
-body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.45; }
+body { font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.45; }
 a { color: var(--brand); }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .muted { color: var(--muted); }
-h1 { font-size: 1.35rem; margin: 0; letter-spacing: -.01em; }
+h1 { font-size: 1.3rem; margin: 0; font-weight: 800; letter-spacing: .01em; }
 h2 { font-size: 1.05rem; margin: 0; }
 h3 { font-size: .95rem; margin: 0; }
 
 .topbar { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: 12px; padding: 10px 20px; background: var(--panel); border-bottom: 1px solid var(--line); }
-.logo { display: flex; align-items: center; gap: 8px; color: var(--brand); text-decoration: none; font-size: 1.2rem; font-weight: 500; }
-.logo span { color: var(--text); } .logo b { color: var(--brand); }
+.logo { display: flex; align-items: center; padding: 4px 0; }
+.logo img { height: 54px; width: auto; display: block; }
 .loc { margin-left: auto; display: flex; gap: 8px; align-items: center; }
 select { font: inherit; color: inherit; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; max-width: 220px; }
 .btn { font: inherit; border: 1px solid var(--line); background: var(--panel); color: var(--text); padding: 8px 14px; border-radius: 10px; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; justify-content: center; }
 .btn.primary { background: var(--brand); border-color: var(--brand); color: #fff; font-weight: 600; }
-@media (prefers-color-scheme: dark) { .btn.primary { color: #042f2e; } }
+
 .btn.ghost:hover { border-color: var(--brand); }
 .btn.block { width: 100%; margin-top: 12px; }
 .link { background: none; border: 0; color: var(--brand); cursor: pointer; font: inherit; padding: 0; }
@@ -50,7 +50,7 @@ select { font: inherit; color: inherit; background: var(--panel); border: 1px so
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip { border: 1px solid var(--line); background: var(--chip); color: var(--text); border-radius: 999px; padding: 5px 11px; font: inherit; font-size: .85rem; cursor: pointer; }
 .chip[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: #fff; }
-@media (prefers-color-scheme: dark) { .chip[aria-pressed="true"] { color: #042f2e; } }
+
 .range { display: flex; gap: 8px; align-items: center; }
 .range input { width: 100%; font: inherit; color: inherit; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 7px 9px; }
 .toggle { display: flex; align-items: center; gap: 8px; font-size: .9rem; margin-top: 8px; cursor: pointer; }

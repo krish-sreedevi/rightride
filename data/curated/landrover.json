@@ -1,0 +1,192 @@
+{
+ "brand": "Land Rover",
+ "curated": true,
+ "updated": "2026-09-30",
+ "source": "landrover.in and rangerover.com/en-in model pages (\"Price from\" ex-showroom; per-model starting price, shown for each fuel offered)",
+ "models": [
+  {
+   "model": "Defender 90",
+   "body": "SUV",
+   "url": "https://www.landrover.in/defender/defender-90/index.html",
+   "variants": [
+    {
+     "name": "Defender 90 Petrol (from)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 14290000
+    },
+    {
+     "name": "Defender 90 Diesel (from)",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 14290000
+    }
+   ]
+  },
+  {
+   "model": "Defender 110",
+   "body": "SUV",
+   "url": "https://www.landrover.in/defender/defender-110/index.html",
+   "variants": [
+    {
+     "name": "Defender 110 Petrol (from)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 10700000
+    },
+    {
+     "name": "Defender 110 Diesel (from)",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 10700000
+    }
+   ]
+  },
+  {
+   "model": "Defender 130",
+   "body": "SUV",
+   "url": "https://www.landrover.in/defender/defender-130/index.html",
+   "variants": [
+    {
+     "name": "Defender 130 Petrol (from)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 8,
+     "price": 14600000
+    },
+    {
+     "name": "Defender 130 Diesel (from)",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 8,
+     "price": 14600000
+    }
+   ]
+  },
+  {
+   "model": "Discovery Sport",
+   "body": "SUV",
+   "url": "https://www.landrover.in/discovery-sport/index.html",
+   "variants": [
+    {
+     "name": "Discovery Sport Petrol (from)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 7,
+     "price": 6337000
+    },
+    {
+     "name": "Discovery Sport Diesel (from)",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 7,
+     "price": 6337000
+    }
+   ]
+  },
+  {
+   "model": "Range Rover",
+   "body": "SUV",
+   "url": "https://www.rangerover.com/en-in/range-rover/index.html",
+   "variants": [
+    {
+     "name": "Range Rover Petrol (from)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 24000000
+    },
+    {
+     "name": "Range Rover Diesel (from)",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 24000000
+    }
+   ]
+  },
+  {
+   "model": "Range Rover Sport",
+   "body": "SUV",
+   "url": "https://www.rangerover.com/en-in/range-rover-sport/index.html",
+   "variants": [
+    {
+     "name": "Range Rover Sport Petrol (from)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 14300000
+    },
+    {
+     "name": "Range Rover Sport Diesel (from)",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 14300000
+    }
+   ]
+  },
+  {
+   "model": "Range Rover Velar",
+   "body": "SUV",
+   "url": "https://www.rangerover.com/en-in/range-rover-velar/index.html",
+   "variants": [
+    {
+     "name": "Range Rover Velar Petrol (from)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 8850000
+    },
+    {
+     "name": "Range Rover Velar Diesel (from)",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 8850000
+    }
+   ]
+  },
+  {
+   "model": "Range Rover Evoque",
+   "body": "SUV",
+   "url": "https://www.rangerover.com/en-in/range-rover-evoque/index.html",
+   "variants": [
+    {
+     "name": "Range Rover Evoque Petrol (from)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 6486000
+    },
+    {
+     "name": "Range Rover Evoque Diesel (from)",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 6486000
+    }
+   ]
+  }
+ ]
+}

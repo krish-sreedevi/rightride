@@ -1,0 +1,143 @@
+{
+ "brand": "Audi",
+ "curated": true,
+ "updated": "2026-09-30",
+ "source": "https://myaudi.in/en/vehiclePrices (starting ex-showroom price per model)",
+ "models": [
+  {
+   "model": "A4",
+   "body": "Sedan",
+   "url": "https://myaudi.in/en/vehiclePrices",
+   "variants": [
+    {
+     "name": "A4 (starting)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 4688000
+    }
+   ]
+  },
+  {
+   "model": "A6",
+   "body": "Sedan",
+   "url": "https://myaudi.in/en/vehiclePrices",
+   "variants": [
+    {
+     "name": "A6 (starting)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 6481000
+    }
+   ]
+  },
+  {
+   "model": "Q3",
+   "body": "SUV",
+   "url": "https://myaudi.in/en/vehiclePrices",
+   "variants": [
+    {
+     "name": "Q3 (starting)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 4367000
+    }
+   ]
+  },
+  {
+   "model": "Q3 Sportback",
+   "body": "SUV",
+   "url": "https://myaudi.in/en/vehiclePrices",
+   "variants": [
+    {
+     "name": "Q3 Sportback (starting)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 5425001
+    }
+   ]
+  },
+  {
+   "model": "Q5",
+   "body": "SUV",
+   "url": "https://myaudi.in/en/vehiclePrices",
+   "variants": [
+    {
+     "name": "Q5 (starting)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 6555000
+    }
+   ]
+  },
+  {
+   "model": "Q7",
+   "body": "SUV",
+   "url": "https://myaudi.in/en/vehiclePrices",
+   "variants": [
+    {
+     "name": "Q7 (starting)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 7,
+     "price": 8716999
+    }
+   ]
+  },
+  {
+   "model": "Q8",
+   "body": "SUV",
+   "url": "https://myaudi.in/en/vehiclePrices",
+   "variants": [
+    {
+     "name": "Q8 (starting)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 11310000
+    }
+   ]
+  },
+  {
+   "model": "SQ8",
+   "body": "SUV",
+   "url": "https://myaudi.in/en/vehiclePrices",
+   "variants": [
+    {
+     "name": "SQ8 (starting)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 18123000
+    }
+   ]
+  },
+  {
+   "model": "RS Q8",
+   "body": "SUV",
+   "url": "https://myaudi.in/en/vehiclePrices",
+   "variants": [
+    {
+     "name": "RS Q8 (starting)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 23383000
+    }
+   ]
+  }
+ ]
+}
