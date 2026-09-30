@@ -50,15 +50,15 @@ export const FEATURES = {
   driveModes: ['Comfort & Convenience', 'Drive modes', /drive mode|driving mode|terrain mode|traction mode|eco\s*\/\s*normal|multi[\s-]*drive/i],
   rearArmrest: ['Comfort & Convenience', 'Rear centre armrest', /rear[\w\s]*arm\s*rest/i],
   tiltTelescopic: ['Comfort & Convenience', 'Tilt & telescopic steering', /telescopic/i],
-  powerTailgate: ['Comfort & Convenience', 'Powered tailgate', /power(ed)? (tail\s*gate|boot|back door)|electric (tail\s*gate|boot)|hands[\s-]*free (tail|boot)/i],
+  powerTailgate: ['Comfort & Convenience', 'Powered tailgate', /power(ed)? (tail\s*gate|boot|back door)|electric (tail\s*gate|boot)|hands[\s-]*free (tail|boot)|smart (power )?tail\s*gate/i, /release|opener|open(ing)? switch/i],
   // Premium / "fancy"
   sunroof: ['Premium & Fancy', 'Sunroof (any)', /sun\s*roof|moon\s*roof|sky\s*roof|glass roof/i],
   panoramic: ['Premium & Fancy', 'Panoramic sunroof', /panoram|sky\s*roof|skyroof|infinity roof/i],
   camera360: ['Premium & Fancy', '360° camera', /360|surround view|around view|panoramic view monitor/i, /360\s*(view)?\s*(showroom|spin)/i],
   dashcam: ['Premium & Fancy', 'Built-in dashcam', /dash\s*cam|dashboard camera|dual camera recorder|\bdvr\b/i],
-  ambient: ['Premium & Fancy', 'Ambient lighting', /ambient|mood light|mood lamp/i],
+  ambient: ['Premium & Fancy', 'Ambient lighting', /ambient|mood light|mood lamp/i, /sound|meter/i],
   leather: ['Premium & Fancy', 'Leather / leatherette seats', /leather|leatherette|artificial leather|vegan leather|napa|nappa/i, /steering|gear|knob|wrapped|door (trim|pad)|armrest/i],
-  airPurifier: ['Premium & Fancy', 'Air purifier', /air purifier|air cleaner|pm\s*2\.5|ionizer|nanoe/i],
+  airPurifier: ['Premium & Fancy', 'Air purifier', /air purifier|air cleaner|pm\s*2\.5|ionizer|nanoe/i, /filter/i],
   massage: ['Premium & Fancy', 'Massage seats', /massag/i],
   captainSeats: ['Premium & Fancy', 'Captain seats (2nd row)', /captain/i],
   // Exterior & lighting
@@ -88,11 +88,13 @@ function parseAirbags(features) {
   let n = 0;
   for (const f of features) {
     const t = `${f.label} ${f.value}`;
-    if (!/airbag/i.test(t) || !truthy(f.value)) continue;
+    const isBag = /airbag|srs/i.test(t) || (/curtain/i.test(f.label) && !/air curtain/i.test(f.label));
+    if (!isBag || !truthy(f.value)) continue;
     const m = t.match(/(\d+)\s*(\(.*?\))?\s*airbags?/i) || t.match(/airbags?\s*[:=-]?\s*(\d+)/i);
     if (m) n = Math.max(n, Number(m[1]));
     else if (/curtain/i.test(t)) n = Math.max(n, 6);
     else if (/side/i.test(t)) n = Math.max(n, 4);
+    else if (/knee/i.test(t)) n = Math.max(n, 2);
     else if (/driver|passenger|dual|front/i.test(t)) n = Math.max(n, 2);
   }
   return n || null;
@@ -160,6 +162,16 @@ function bodyOf(brand, model, given) {
   return 'SUV';
 }
 
+function RR_variant(name, model, rawModel) {
+  let s = String(name);
+  for (const m of new Set([model, rawModel, rawModel.replace(/^(all[\s-]+)?new\s+/i, '')])) {
+    if (!m) continue;
+    s = s.replace(new RegExp('(^|\\s)' + m.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?=\\s|$)', 'ig'), ' ');
+  }
+  s = s.replace(/\s+/g, ' ').trim();
+  return s || name;
+}
+
 function num(s) { const m = String(s ?? '').replace(/,/g, '').match(/\d+(\.\d+)?/); return m ? Number(m[0]) : null; }
 
 function specOf(specs, re) { for (const [k, v] of Object.entries(specs || {})) if (re.test(k)) return v; return null; }
@@ -168,17 +180,21 @@ function cleanModelName(brand, m) {
   let s = String(m).replace(/^(all[\s-]+)?new\s+/i, '').replace(/^the\s+/i, '').replace(/^(volkswagen|vw|kia|nissan|renault|tata|hyundai|honda|skoda|škoda|mg|toyota|mahindra|jeep|audi|bmw|mercedes-benz)\s+/i, '').trim();
   if (brand === 'Volkswagen') s = s.replace(/\s+(anniversary edition|chrome|sport)$/i, '');
   if (brand === 'Mahindra') s = s.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase()).replace(/\bXuv\b/g, 'XUV').replace(/\b(\d)xo\b/i, '$1XO').replace(/Og$/, 'OG');
-  if (brand === 'Tata') s = s.replace(/\bEv\b/, 'EV');
+  const KEEP = /^(IONIQ|XUV\d*|XUV|CNG|EV\d*|GT|RS|ZS|AMG|GLA|GLC|GLE|GLS|CLA|CLE|EQS|EQA|EQB|EQE|XL6|SUV|MPV|OG|N|TSI|TDI)$/;
+  s = s.split(/\s+/).map((w) => (/^[A-Z]{3,}$/.test(w) && !KEEP.test(w) ? w[0] + w.slice(1).toLowerCase() : w)).join(' ');
+  s = s.replace(/\bEv\b/g, 'EV').replace(/\bXuv(\d*)\b/g, 'XUV$1').replace(/\bPhev\b/g, 'PHEV').replace(/^E Vitara$/i, 'e Vitara').replace(/\bNios\b/, 'Nios');
   return s;
 }
 
 export function normalize() {
   const rawDir = path.join(ROOT, 'data/raw');
   const curDir = path.join(ROOT, 'data/curated');
-  const files = [
-    ...fs.readdirSync(rawDir).filter((f) => f.endsWith('.json') && !f.startsWith('_')).map((f) => path.join(rawDir, f)),
-    ...(fs.existsSync(curDir) ? fs.readdirSync(curDir).filter((f) => f.endsWith('.json')).map((f) => path.join(curDir, f)) : []),
-  ];
+  const rawFiles = fs.existsSync(rawDir) ? fs.readdirSync(rawDir).filter((f) => f.endsWith('.json') && !f.startsWith('_')).map((f) => path.join(rawDir, f)) : [];
+  const rawBrands = new Set(rawFiles.map((f) => JSON.parse(fs.readFileSync(f, 'utf8')).brand));
+  // curated snapshots are only used for brands the scrapers could not fetch
+  const curFiles = (fs.existsSync(curDir) ? fs.readdirSync(curDir).filter((f) => f.endsWith('.json')).map((f) => path.join(curDir, f)) : [])
+    .filter((f) => !rawBrands.has(JSON.parse(fs.readFileSync(f, 'utf8')).brand));
+  const files = [...rawFiles, ...curFiles];
   const cars = [];
   const brands = {};
   const seen = new Set();
@@ -198,13 +214,14 @@ export function normalize() {
         const { f, airbags } = mapFeatures(v.features || [], complete && (v.features || []).length > 0);
         if (v.featureFlags) Object.assign(f, v.featureFlags); // curated
         const specs = v.specs || {};
-        const seats = v.seats || num(specOf(specs, /seat(ing)? capacity|seats/i)) || (m.seats ?? null);
+        const sn = `${v.name} ${m.model}`.match(/\b([4-9])\s*-?\s*(s|str|seater|seats?)\b|\[([4-9])s\]|\(([4-9])s\)/i);
+        const seats = (sn && Number(sn[1] || sn[3] || sn[4])) || v.seats || num(specOf(specs, /seat(ing)? capacity|seats/i)) || (m.seats ?? null);
         const id = `${brand}|${model}|${v.name}|${fuel}|${transType}`.toLowerCase().replace(/[^a-z0-9|+]+/g, '-');
         if (seen.has(id)) continue; seen.add(id);
         const prices = {};
         for (const [k, p] of Object.entries(v.prices || {})) if (p && Math.abs(p - v.price) / v.price < 0.25) prices[k] = Math.round(p);
         cars.push({
-          id, brand, model, variant: v.name.replace(new RegExp('^' + model.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*', 'i'), '') || v.name,
+          id, brand, model, variant: RR_variant(v.name, model, m.model),
           body: bodyOf(brand, model, m.body || v.body), fuel, transmission, transType,
           drive: /awd|4x4|4wd|quattro|xdrive|4matic|4motion/i.test(`${v.name} ${v.drive || ''} ${m.model}`) ? 'AWD/4x4' : '2WD',
           seats: seats ? Math.round(seats) : null,
@@ -224,10 +241,13 @@ export function normalize() {
   // fill unknown seats from same model
   const seatsByModel = {};
   for (const c of cars) if (c.seats) seatsByModel[c.brand + c.model] = seatsByModel[c.brand + c.model] || c.seats;
-  for (const c of cars) if (!c.seats) c.seats = seatsByModel[c.brand + c.model] || 5;
+  for (const c of cars) if (!c.seats) c.seats = seatsByModel[c.brand + c.model] || (c.body === 'MUV / MPV' ? 7 : 5);
   cars.sort((a, b) => a.brand.localeCompare(b.brand) || a.model.localeCompare(b.model) || a.price - b.price);
-  const featureMeta = Object.fromEntries(Object.entries(FEATURES).map(([k, [b, l]]) => [k, { bucket: b, label: l }]));
-  return { generated: new Date().toISOString(), buckets: BUCKETS, features: featureMeta, brands: Object.values(brands), cars };
+  const keys = Object.keys(FEATURES);
+  const featureMeta = keys.map((k) => ({ key: k, bucket: FEATURES[k][0], label: FEATURES[k][1] }));
+  // compact: one char per feature, '1' yes, '0' no, '?' unknown
+  for (const c of cars) { c.fs = keys.map((k) => (c.f[k] === true ? '1' : c.f[k] === false ? '0' : '?')).join(''); delete c.f; }
+  return { generated: new Date().toISOString(), buckets: BUCKETS, features: featureMeta, brands: Object.values(brands).filter((b) => b.variants), cars };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

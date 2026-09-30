@@ -1,1 +1,78 @@
-<!doctype html><title>RightRide</title><p>Coming soon</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RightRide — find the right car for you</title>
+  <meta name="description" content="Pick the features you want and see every matching car variant sold in India, with on-road prices for your state.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Cpath d='M14 38l5-12c1-3 3-4 6-4h14c3 0 5 1 6 4l5 12v8h-5v-3H19v3h-5z' fill='%23fff'/%3E%3Ccircle cx='22' cy='38' r='3' fill='%230f766e'/%3E%3Ccircle cx='42' cy='38' r='3' fill='%230f766e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="./" aria-label="RightRide home">
+      <svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><rect width="64" height="64" rx="14" fill="currentColor"/><path d="M14 38l5-12c1-3 3-4 6-4h14c3 0 5 1 6 4l5 12v8h-5v-3H19v3h-5z" fill="#fff"/></svg>
+      <span>Right<b>Ride</b></span>
+    </a>
+    <div class="loc">
+      <label for="state" class="sr">Your state</label>
+      <select id="state" title="Prices are calculated for this state"></select>
+      <button id="detect" class="btn ghost" type="button" title="Detect my state">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 2v3m0 14v3M2 12h3m14 0h3"/><circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
+        <span>Detect</span>
+      </button>
+    </div>
+    <button id="openFilters" class="btn primary only-mobile" type="button">Filters <span id="filterCount"></span></button>
+  </header>
+
+  <main class="layout">
+    <aside id="filters" class="filters" aria-label="Filters">
+      <div class="filters-head">
+        <h2>What do you need?</h2>
+        <button id="reset" class="link" type="button">Reset</button>
+        <button id="closeFilters" class="btn ghost only-mobile" type="button" aria-label="Close filters">✕</button>
+      </div>
+      <div id="filterBody"></div>
+      <button id="applyMobile" class="btn primary block only-mobile" type="button">Show results</button>
+    </aside>
+
+    <section class="results" aria-live="polite">
+      <div class="results-head">
+        <div>
+          <h1 id="resultTitle">Loading cars…</h1>
+          <p id="resultSub" class="muted"></p>
+        </div>
+        <div class="sort">
+          <label for="sort" class="muted">Sort</label>
+          <select id="sort">
+            <option value="price">On-road price: low to high</option>
+            <option value="priceDesc">On-road price: high to low</option>
+            <option value="match">Most features matched</option>
+            <option value="features">Most features overall</option>
+            <option value="mileage">Best mileage</option>
+          </select>
+        </div>
+      </div>
+      <div id="activeChips" class="active-chips"></div>
+      <div id="list" class="list"></div>
+      <button id="more" class="btn ghost block" type="button" hidden>Show more models</button>
+    </section>
+  </main>
+
+  <div id="compareBar" class="compare-bar" hidden>
+    <span id="compareText"></span>
+    <button id="compareGo" class="btn primary" type="button">Compare</button>
+    <button id="compareClear" class="link" type="button">Clear</button>
+  </div>
+
+  <dialog id="modal"><div id="modalBody"></div></dialog>
+
+  <footer class="foot">
+    <p>Prices and features are collected automatically from each manufacturer's official website and refreshed every week. On-road prices are <b>estimates</b> (road tax, registration, insurance, FASTag, TCS); confirm with your dealer before booking. <a href="#" id="aboutLink">Data sources &amp; coverage</a></p>
+    <p class="muted" id="updated"></p>
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+</html>

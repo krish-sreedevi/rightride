@@ -1,6 +1,8 @@
 export default {
   brand: 'Tata',
   origin: 'https://tata.cars/',
+  headful: true,
+  settle: 8000,
   // also used by tata-ev.js with a different origin/segment
   async run(opts = {}) {
     const seg = location.host.startsWith('ev.') ? 'ev' : 'ice';

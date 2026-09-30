@@ -14,13 +14,17 @@ const helpers = fs.readFileSync(path.join(ROOT, 'scraper/helpers.js'), 'utf8');
 fs.mkdirSync(path.join(ROOT, 'data/raw'), { recursive: true });
 
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36';
-const browser = await chromium.launch({ args: ['--disable-blink-features=AutomationControlled'] });
+const launchArgs = ['--disable-blink-features=AutomationControlled'];
+const browser = await chromium.launch({ args: launchArgs });
+let headfulBrowser = null; // some sites block headless browsers; run those headful (needs xvfb in CI)
 const summary = [];
 
 for (const b of todo) {
   const t0 = Date.now();
   const { default: ad } = await import(path.join(ROOT, 'scraper/adapters', b + '.js'));
-  const ctx = await browser.newContext({ userAgent: UA, locale: 'en-IN', timezoneId: 'Asia/Kolkata', viewport: { width: 1366, height: 900 }, bypassCSP: true });
+  const br = ad.headful && process.env.DISPLAY ? (headfulBrowser = headfulBrowser || (await chromium.launch({ headless: false, args: launchArgs }))) : browser;
+  const ctx = await br.newContext({ userAgent: UA, locale: 'en-IN', timezoneId: 'Asia/Kolkata', viewport: { width: 1366, height: 900 }, bypassCSP: true });
+  await ctx.addInitScript(() => { Object.defineProperty(navigator, 'webdriver', { get: () => undefined }); });
   const page = await ctx.newPage();
   page.setDefaultTimeout(120000);
   let result, error;
@@ -45,4 +49,5 @@ for (const b of todo) {
   }
 }
 await browser.close();
+if (headfulBrowser) await headfulBrowser.close();
 fs.writeFileSync(path.join(ROOT, 'data/raw/_summary.json'), JSON.stringify({ at: new Date().toISOString(), summary }, null, 1));

@@ -1,0 +1,450 @@
+{
+ "brand": "Mercedes-Benz",
+ "curated": true,
+ "updated": "2026-09-30",
+ "source": "https://www.mercedes-benz.co.in (model price API snapshot; starting price per fuel)",
+ "models": [
+  {
+   "model": "CLA",
+   "body": "Sedan",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/saloon/cla-electric/overview.html",
+   "variants": [
+    {
+     "name": "CLA Electric",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "engine": "",
+     "price": 5650000
+    }
+   ]
+  },
+  {
+   "model": "CLE Cabriolet",
+   "body": "Coupe / Convertible",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/cabriolet-roadster/cle/overview.html",
+   "variants": [
+    {
+     "name": "CLE Cabriolet Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 4,
+     "engine": "1999 cc",
+     "price": 11500000
+    }
+   ]
+  },
+  {
+   "model": "C-Class",
+   "body": "Sedan",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/saloon/c-class/overview.html",
+   "variants": [
+    {
+     "name": "C-Class Diesel",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "engine": "1496 cc",
+     "price": 6120000
+    },
+    {
+     "name": "C-Class Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "engine": "1496 cc",
+     "price": 6120000
+    },
+    {
+     "name": "Mercedes-AMG C 63 S E Performance",
+     "fuel": "PHEV",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1991 cc",
+     "price": 19090909
+    }
+   ]
+  },
+  {
+   "model": "EQS",
+   "body": "Sedan",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/saloon/eqs/overview.html",
+   "variants": [
+    {
+     "name": "EQS Electric",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "",
+     "price": 13000000
+    }
+   ]
+  },
+  {
+   "model": "EQS SUV",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/eqs/overview.html",
+   "variants": [
+    {
+     "name": "EQS SUV Electric",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 7,
+     "engine": "",
+     "price": 13350000
+    }
+   ]
+  },
+  {
+   "model": "E-Class",
+   "body": "Sedan",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/saloon/e-class/overview.html",
+   "variants": [
+    {
+     "name": "E-Class LWB Diesel",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1993 cc",
+     "price": 8350000
+    },
+    {
+     "name": "E-Class LWB Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1993 cc",
+     "price": 8150000
+    },
+    {
+     "name": "Mercedes-AMG E 53 Hybrid",
+     "fuel": "PHEV",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "2999 cc",
+     "price": 14500000
+    }
+   ]
+  },
+  {
+   "model": "S-Class",
+   "body": "Sedan",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/saloon-long/s-class/overview.html",
+   "variants": [
+    {
+     "name": "S-Class Hybrid",
+     "fuel": "Hybrid",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "engine": "2999 cc",
+     "price": 22000000
+    }
+   ]
+  },
+  {
+   "model": "GLA",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/gla/overview.html",
+   "variants": [
+    {
+     "name": "GLA Diesel",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1332 cc",
+     "price": 5300000
+    },
+    {
+     "name": "GLA Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "engine": "1332 cc",
+     "price": 5180000
+    }
+   ]
+  },
+  {
+   "model": "GLC",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/glc/overview.html",
+   "variants": [
+    {
+     "name": "GLC Diesel",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1993 cc",
+     "price": 7700000
+    },
+    {
+     "name": "GLC Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1999 cc",
+     "price": 7700000
+    }
+   ]
+  },
+  {
+   "model": "GLE",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/gle/overview.html",
+   "variants": [
+    {
+     "name": "GLE Diesel",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1993 cc",
+     "price": 10000000
+    },
+    {
+     "name": "GLE Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "2999 cc",
+     "price": 11150000
+    }
+   ]
+  },
+  {
+   "model": "GLS",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/gls/overview.html",
+   "variants": [
+    {
+     "name": "GLS Diesel",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 7,
+     "engine": "2989 cc",
+     "price": 13970000
+    },
+    {
+     "name": "GLS Petrol",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 7,
+     "engine": "2999 cc",
+     "price": 13750000
+    }
+   ]
+  },
+  {
+   "model": "G-Class",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/g-class/overview.html",
+   "variants": [
+    {
+     "name": "G 450d",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "2989 cc",
+     "price": 29000000
+    },
+    {
+     "name": "Mercedes-AMG G 63",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "3982 cc",
+     "price": 37400000
+    },
+    {
+     "name": "G 580 with EQ Technology",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "",
+     "price": 31000000
+    }
+   ]
+  },
+  {
+   "model": "V-Class",
+   "body": "MUV / MPV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/van/v-class/overview.html",
+   "variants": [
+    {
+     "name": "V-Class Diesel",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 6,
+     "engine": "1950 cc",
+     "price": 14000000
+    }
+   ]
+  },
+  {
+   "model": "A-Class",
+   "body": "Hatchback",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/hatchback/a-class/amg.html",
+   "variants": [
+    {
+     "name": "Mercedes-AMG A 45 S",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1991 cc",
+     "price": 8700000
+    }
+   ]
+  },
+  {
+   "model": "CLE Coupe",
+   "body": "Coupe / Convertible",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/coupe/cle/amg.html",
+   "variants": [
+    {
+     "name": "Mercedes-AMG CLE 53",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 4,
+     "engine": "2999 cc",
+     "price": 13250000
+    }
+   ]
+  },
+  {
+   "model": "GLC Coupe",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/glc-coupe/amg.html",
+   "variants": [
+    {
+     "name": "Mercedes-AMG GLC 43 Coupe",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "1991 cc",
+     "price": 9985000
+    }
+   ]
+  },
+  {
+   "model": "GLE Coupe",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/gle-coupe/amg.html",
+   "variants": [
+    {
+     "name": "Mercedes-AMG GLE 53 Coupe",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "2999 cc",
+     "price": 15200000
+    }
+   ]
+  },
+  {
+   "model": "AMG GT Coupe",
+   "body": "Coupe / Convertible",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/coupe/amg-gt-2-door/overview.html",
+   "variants": [
+    {
+     "name": "Mercedes-AMG GT 63",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 4,
+     "engine": "3982 cc",
+     "price": 30000000
+    }
+   ]
+  },
+  {
+   "model": "Maybach EQS SUV",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/maybach-eqs/overview.html",
+   "variants": [
+    {
+     "name": "Maybach EQS 680 SUV",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 4,
+     "engine": "",
+     "price": 24000000
+    }
+   ]
+  },
+  {
+   "model": "Maybach S-Class",
+   "body": "Sedan",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/saloon-long/mercedes-maybach-s-class/overview.html",
+   "variants": [
+    {
+     "name": "Maybach S 580",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "3982 cc",
+     "price": 28750000
+    }
+   ]
+  },
+  {
+   "model": "Maybach GLS",
+   "body": "SUV",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/suv/mercedes-maybach-gls/overview.html",
+   "variants": [
+    {
+     "name": "Maybach GLS 600",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 4,
+     "engine": "3982 cc",
+     "price": 27500000
+    }
+   ]
+  },
+  {
+   "model": "Maybach SL",
+   "body": "Coupe / Convertible",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/cabriolet-roadster/mercedes-maybach-sl/overview.html",
+   "variants": [
+    {
+     "name": "Maybach SL 680 Monogram Series",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 2,
+     "engine": "3982 cc",
+     "price": 43000000
+    }
+   ]
+  }
+ ]
+}

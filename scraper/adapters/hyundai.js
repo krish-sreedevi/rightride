@@ -30,6 +30,8 @@ export default {
       let trims = [], feats = []; // feats: {group,label, values:[per trim]}
       try {
         const doc = await RR.fetchDoc(`https://www.hyundai.com/in/en/find-a-car/${slug}/features`);
+        const og = doc.querySelector('meta[property="og:image"]')?.content;
+        if (og) model.image = new URL(og, location.origin).href;
         const tables = [...doc.querySelectorAll('table')];
         for (const t of tables) {
           const rows = RR.tableRows(t);

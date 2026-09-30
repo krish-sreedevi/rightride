@@ -22,7 +22,7 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - name: Scrape manufacturer sites
-        run: node scraper/run.mjs ${{ github.event.inputs.brands }}
+        run: xvfb-run -a node scraper/run.mjs ${{ github.event.inputs.brands }}
         continue-on-error: true
       - name: Build cars.json
         run: node scraper/normalize.mjs
