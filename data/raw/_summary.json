@@ -1,28 +1,12 @@
 {
- "at": "2026-09-30T07:19:38.260Z",
+ "at": "2026-09-30T12:08:56.252Z",
  "summary": [
   {
-   "brand": "Tata",
-   "key": "tata",
-   "models": 0,
-   "variants": 0,
-   "seconds": 25,
-   "error": "Error: page.evaluate: Error: HTTP 403 https://tata.cars/\n    at Object.fetchText (eval at evaluate (:234:30), <anonymous>:14:26)\n    at async Object.fetchDoc (eval at evaluate (:234:30), <anonymous>:29:18)\n    at async run (eval at evaluate (:234:30), <anonymous>:3:18)\n    at async <anonymous>:260:30"
-  },
-  {
-   "brand": "Hyundai",
-   "key": "hyundai",
-   "models": 13,
-   "variants": 221,
-   "seconds": 20,
-   "log": []
-  },
-  {
-   "brand": "Mercedes-Benz",
-   "key": "mercedes",
-   "models": 24,
-   "variants": 33,
-   "seconds": 8,
+   "brand": "Jeep",
+   "key": "jeep",
+   "models": 4,
+   "variants": 18,
+   "seconds": 4,
    "log": []
   }
  ]

@@ -1,0 +1,1770 @@
+{
+ "brand": "Jeep",
+ "scrapedAt": "2026-09-30T12:08:56.224Z",
+ "source": "jeep-india.com model pages (trim highlights, starting ex-showroom)",
+ "models": [
+  {
+   "model": "Compass",
+   "body": "SUV",
+   "url": "https://www.jeep-india.com/new-compass.html",
+   "variants": [
+    {
+     "name": "Compass Sport",
+     "trim": "Sport",
+     "fuel": "Diesel",
+     "transmission": "",
+     "drive": "",
+     "seats": 5,
+     "price": 1799000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "Uconnect™  with 21.3 cm (8.4) Touchscreen Display",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Android Auto & Apple Car Play (Wireless)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Frequency Selective Damping Suspension",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dynamic Steering Torque (DST)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Electrically Adjustable Door Mirrors",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Cruise Control (AT Variants only)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Engine Stop Start System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Electronic Parking Brake (EPB)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Hill Start Assist (HSA)",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Compass Longitude",
+     "trim": "Longitude",
+     "fuel": "Diesel",
+     "transmission": "",
+     "drive": "",
+     "seats": 5,
+     "price": 2130000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "Uconnect™  with 21.3 cm (8.4) Touchscreen Display",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Android Auto & Apple Car Play (Wireless)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Frequency Selective Damping Suspension",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dynamic Steering Torque (DST)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Electrically Adjustable Door Mirrors",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Cruise Control (AT Variants only)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Engine Stop Start System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Electronic Parking Brake (EPB)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Hill Start Assist (HSA)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "7” (17.78cm) Color Instrument Cluster",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dual Zone Automatic Climate control",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Remote Keyless entry with Push button start (PEPS)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Steel Grey Techno leather interiors with Vinyl insert on Door & Intrument Panel",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Auto Folding Outside rear view mirror",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "LED Front Fog lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dual-Pane Panoramic Sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Uconnect™ with 25.6 cm (10.1) Touchscreen Display",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Wireless Charger",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Compass Limited",
+     "trim": "Limited",
+     "fuel": "Diesel",
+     "transmission": "",
+     "drive": "",
+     "seats": 5,
+     "price": 2483000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "Uconnect™  with 21.3 cm (8.4) Touchscreen Display",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Android Auto & Apple Car Play (Wireless)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Frequency Selective Damping Suspension",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dynamic Steering Torque (DST)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Electrically Adjustable Door Mirrors",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Cruise Control (AT Variants only)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Engine Stop Start System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Electronic Parking Brake (EPB)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Hill Start Assist (HSA)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "7” (17.78cm) Color Instrument Cluster",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dual Zone Automatic Climate control",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Remote Keyless entry with Push button start (PEPS)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Steel Grey Techno leather interiors with Vinyl insert on Door & Intrument Panel",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Auto Folding Outside rear view mirror",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "LED Front Fog lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dual-Pane Panoramic Sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Uconnect™ with 25.6 cm (10.1) Touchscreen Display",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Wireless Charger",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Uconnect™  with 25.6 cm (10.1) Touchscreen Display",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Android Auto & Apple Car Play (Wireless)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "45.72 cm (R18) Alloy Wheels",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Automatic Headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Rain Sensing Front Wipers",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dual-Pane Panoramic Sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Power Liftgate",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "8 way power Driver Seat - With Memory Function",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Premium Dual Tone Steel Grey & Brown Interior",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Compass Model-S",
+     "trim": "Model-S",
+     "fuel": "Diesel",
+     "transmission": "",
+     "drive": "",
+     "seats": 5,
+     "price": 2670000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "Uconnect™  with 21.3 cm (8.4) Touchscreen Display",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Android Auto & Apple Car Play (Wireless)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Frequency Selective Damping Suspension",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dynamic Steering Torque (DST)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Electrically Adjustable Door Mirrors",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Cruise Control (AT Variants only)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Engine Stop Start System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Electronic Parking Brake (EPB)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Hill Start Assist (HSA)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "7” (17.78cm) Color Instrument Cluster",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dual Zone Automatic Climate control",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Remote Keyless entry with Push button start (PEPS)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Steel Grey Techno leather interiors with Vinyl insert on Door & Intrument Panel",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Auto Folding Outside rear view mirror",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "LED Front Fog lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dual-Pane Panoramic Sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Uconnect™ with 25.6 cm (10.1) Touchscreen Display",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Wireless Charger",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Uconnect™  with 25.6 cm (10.1) Touchscreen Display",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Android Auto & Apple Car Play (Wireless)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "45.72 cm (R18) Alloy Wheels",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Automatic Headlamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Rain Sensing Front Wipers",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dual-Pane Panoramic Sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Power Liftgate",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "8 way power Driver Seat - With Memory Function",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Premium Dual Tone Steel Grey & Brown Interior",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Uconnect™  with 25.6 cm (10.1) Touchscreen Display",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Android Auto & Apple Car Play (Wireless)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "45.72 cm (R18) Alloy Wheels",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Automatic Headlamps and Rain-Sensing Wipers",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dual-Pane Panoramic Sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Power Liftgate",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "8 way Power Driver & Passenger Seat",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Luxurious All Black Interiors",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "360 Degree Camera System",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Compass Track Edition",
+     "trim": "Track Edition",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 2695000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "Ultra-Luxe Interior Highlights",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Interior New tupelo seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dual-Pane Panoramic Sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "UConnect™️Infotainment (10.1) with 9 Alpine Speakers",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Distinct Track-Inspired Livery",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Powerful 9-Speed Automatic Gearbox",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Exclusive Track Edition Badge",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Expansive Digital Instrument Cluster 25.9cm",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Compass 85th Anniversary Edition",
+     "trim": "85th Anniversary Edition",
+     "fuel": "Diesel",
+     "transmission": "",
+     "drive": "",
+     "seats": 5,
+     "price": 2670000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "Immersive Sky Lounge",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Signature Ambient and Sunroof Lighting",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Refined Mayan Gold Accents",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Commanding Black Leatherette Seats with Mayan gold stitching",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Bold 18\" Gloss Black Alloy Wheels",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Plush Ventilated Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Plush Ventilated Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Advanced Digital IRVM with Dashcam",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Celebratory 85th Anniversary Edition Decal",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Compass Trail Edition",
+     "trim": "Trail Edition",
+     "fuel": "Diesel",
+     "transmission": "",
+     "drive": "",
+     "seats": 5,
+     "price": 2366000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "Accentuated Dashboard",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Black Seats with Red Stitching",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Exclusive Trail Edition Camo Livery",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Exclusive Trail Edition Badge",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Spacious 5-Seater Trim with 438L Boot space",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Advanced 25.6cm (10.1) Uconnect Infotainment System with inbuilt navigation",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "High-performance 6 Speaker Audio System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dynamic Dual-Zone Automatic Climate Control System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Performance LED Auto Projector Headlamps and Taillamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Distinctive 18-inch Alloy Wheels in a Granite Metallic Satin Gloss Finish",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Effortless Passive Keyless Entry",
+       "value": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "model": "Meridian",
+   "body": "SUV",
+   "url": "https://www.jeep-india.com/new-jeep-meridian.html",
+   "variants": [
+    {
+     "name": "Meridian Longitude",
+     "trim": "Longitude",
+     "fuel": "Diesel",
+     "transmission": "",
+     "drive": "",
+     "seats": 5,
+     "price": 2333000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "Spacious 5-Seater Trim with 670L boot space",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Brand new Seal Grey Upholstery",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Advanced 25.6cm (10.1) Uconnect Infotainment System with inbuilt navigation",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "High-performance 6 Speaker Audio System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dynamic Dual-Zone Automatic Climate Control System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Performance LED Auto Projector Headlamps and Taillamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Auto Rain Sensing Wipers",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "60+ Safety Features including Standard 6-Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Distinct 18-Inch Diamond Cut Alloy Wheels",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Effortless Passive Keyless Entry",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Meridian Longitude Plus",
+     "trim": "Longitude Plus",
+     "fuel": "Diesel",
+     "transmission": "",
+     "drive": "",
+     "seats": 7,
+     "price": 2630000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "Spacious 5-Seater Trim with 670L boot space",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Brand new Seal Grey Upholstery",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Advanced 25.6cm (10.1) Uconnect Infotainment System with inbuilt navigation",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "High-performance 6 Speaker Audio System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dynamic Dual-Zone Automatic Climate Control System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Performance LED Auto Projector Headlamps and Taillamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Auto Rain Sensing Wipers",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "60+ Safety Features including Standard 6-Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Distinct 18-Inch Diamond Cut Alloy Wheels",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Effortless Passive Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Versatile 7-Seater Option with 2nd row 40/60 fold and tumble",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Expansive Dual-Pane Panoramic Sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Wireless Charging on the go",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Polished Leather Wrapped Steering Wheel",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Smart Auto Dimming IRVM",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Efficient Solar Controlled Glass",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Integrated Active Turn Fog Lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Distinct Dual-Tone roof",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Precision-guided Rear-Camera with ParkSense",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Engine Auto Stop/Start",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Meridian Limited (O)",
+     "trim": "Limited (O)",
+     "fuel": "Diesel",
+     "transmission": "",
+     "drive": "",
+     "seats": 7,
+     "price": 3045000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "Spacious 5-Seater Trim with 670L boot space",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Brand new Seal Grey Upholstery",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Advanced 25.6cm (10.1) Uconnect Infotainment System with inbuilt navigation",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "High-performance 6 Speaker Audio System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dynamic Dual-Zone Automatic Climate Control System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Performance LED Auto Projector Headlamps and Taillamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Auto Rain Sensing Wipers",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "60+ Safety Features including Standard 6-Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Distinct 18-Inch Diamond Cut Alloy Wheels",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Effortless Passive Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Versatile 7-Seater Option with 2nd row 40/60 fold and tumble",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Expansive Dual-Pane Panoramic Sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Wireless Charging on the go",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Polished Leather Wrapped Steering Wheel",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Smart Auto Dimming IRVM",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Efficient Solar Controlled Glass",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Integrated Active Turn Fog Lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Distinct Dual-Tone roof",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Precision-guided Rear-Camera with ParkSense",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Engine Auto Stop/Start",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "2nd Row Sliding Seat",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Opulent Wicker Beige Vegan Leather Upholstery",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Advanced Uconnect connectivity System with 30+ features including Auto SOS, Remote Engine Start/Stop with AC Pre-Conditioning and Alexa Home to Vehicle Assistance",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "12-Way Powered Front Seats with Lumbar Support",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Smart Ventilated Front Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "High Performance 9 Speaker Alpine Audio System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Smart 3rd Row Cooling with Controls",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Advanced 360-Degree View Camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Power Tailgate",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "10.25” digital driver information system",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Key Synchronised Personal Settings including Memory Seat and Infotainment System",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Meridian Track Edition",
+     "trim": "Track Edition",
+     "fuel": "Diesel",
+     "transmission": "",
+     "drive": "",
+     "seats": 7,
+     "price": 3639000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "Second-Row Sliding Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Ultra-Luxe Interior Highlights",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "‘1941’ Embossed Arm Rest",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dual-Pane Panoramic Sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Distinct Track-Inspired Livery",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Exclusive Track Edition Badge",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Meridian 85th Anniversary Edition",
+     "trim": "85th Anniversary Edition",
+     "fuel": "Diesel",
+     "transmission": "",
+     "drive": "",
+     "seats": 7,
+     "price": 3605000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "Immersive Sky Lounge",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Signature Ambient Lighting",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Signature Sunroof Lighting",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Intelligent In-Car Assistant-CARA",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Commanding Black Seats with Suede Inserts",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Exclusive 85th Edition Badge",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Refined Mayan Gold Accents",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Intricate Mayan Gold Seat Stitching",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Commanding Black Seats with Suede Inserts",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Bold 18” Gloss Black Alloys Wheels",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Meridian Overland",
+     "trim": "Overland",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "4x4",
+     "seats": 7,
+     "price": 3605000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "Spacious 5-Seater Trim with 670L boot space",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Brand new Seal Grey Upholstery",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Advanced 25.6cm (10.1) Uconnect Infotainment System with inbuilt navigation",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "High-performance 6 Speaker Audio System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dynamic Dual-Zone Automatic Climate Control System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Performance LED Auto Projector Headlamps and Taillamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Auto Rain Sensing Wipers",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "60+ Safety Features including Standard 6-Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Distinct 18-Inch Diamond Cut Alloy Wheels",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Effortless Passive Keyless Entry",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Versatile 7-Seater Option with 2nd row 40/60 fold and tumble",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Expansive Dual-Pane Panoramic Sunroof",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Wireless Charging on the go",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Polished Leather Wrapped Steering Wheel",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Smart Auto Dimming IRVM",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Efficient Solar Controlled Glass",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Integrated Active Turn Fog Lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Distinct Dual-Tone roof",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Precision-guided Rear-Camera with ParkSense",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Engine Auto Stop/Start",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "2nd Row Sliding Seat",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Opulent Wicker Beige Vegan Leather Upholstery",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Advanced Uconnect connectivity System with 30+ features including Auto SOS, Remote Engine Start/Stop with AC Pre-Conditioning and Alexa Home to Vehicle Assistance",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "12-Way Powered Front Seats with Lumbar Support",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Smart Ventilated Front Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "High Performance 9 Speaker Alpine Audio System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Smart 3rd Row Cooling with Controls",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Advanced 360-Degree View Camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Power Tailgate",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "10.25” digital driver information system",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Key Synchronised Personal Settings including Memory Seat and Infotainment System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "2nd Row Sliding Seat",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Tupelo Vegan Leather Upholstery",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Intelligent Camera and Radar guided ADAS Suite with 10+ Features",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Distinct Suede Inserts on Dashboard, Door Trims and Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Premium Copper Tracer",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Sleek Body Colour Lowers and Fender Extensions",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Distinct Diamond-Cut Dual-Tone 18” Alloy Wheels with Grey Pockets",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Iconic Hot-stamped 7-Slot Grille",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Physical Switch Access to Turn Off Active Lane Management",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Jeep 4x4 System with Selec-Terrain®",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "ORVM integrated puddle lamps",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Meridian Trail Edition",
+     "trim": "Trail Edition",
+     "fuel": "Diesel",
+     "transmission": "",
+     "drive": "",
+     "seats": 7,
+     "price": 3039000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "Spacious 7-Seater Trim with 481L Boot space",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Brand new Black Upholstery & Red Stitching",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Advanced 25.6cm (10.1) Uconnect Infotainment System with inbuilt navigation",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "High-performance 9 Speaker Audio System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Dynamic Dual-Zone Automatic Climate Control System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Performance LED Auto Projector Headlamps and Taillamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Auto Rain Sensing Wipers",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "60+ Safety Features including Standard 6-Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Distinctive 18-inch Alloy Wheels in a Granite Metallic Satin Gloss Finish",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Effortless Passive Keyless Entry",
+       "value": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "model": "Wrangler",
+   "body": "SUV",
+   "url": "https://www.jeep-india.com/wrangler-jl.html",
+   "variants": [
+    {
+     "name": "Wrangler 1941 Willys Edition",
+     "trim": "1941 Willys Edition",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "4x4",
+     "seats": 5,
+     "price": 7280000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "Exclusive 1941 Willys-inspired colour",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Secured side ladder with roof carrier (O)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Quick-flip sun rider rooftop (O)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Sturdy motorized side-step",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Integrated Off-Road Camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Heavy-Duty Dana 44HD Full-Float Rear Axle",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Advanced Driver Assistance System (ADAS)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Ultra Luxurious Nappa Leather Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "9-Speaker Premium Alpine Audio with Subwoofer",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Wrangler Unlimited",
+     "trim": "Unlimited",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "4x4",
+     "seats": 5,
+     "price": 6620000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "New 18” Wheels",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "India’s First Corning Gorilla Windshield",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Advanced Driver Assistance Systems (ADAS)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "31.2 CMS (12.3) Touchscreen Infotainment",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Standard Side and Curtain Airbags  (6-Airbags)",
+       "value": "Yes"
+      }
+     ]
+    },
+    {
+     "name": "Wrangler Rubicon",
+     "trim": "Rubicon",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "4x4",
+     "seats": 5,
+     "price": 7080000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "New 18” Wheels",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "India’s First Corning Gorilla Windshield",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Advanced Driver Assistance Systems (ADAS)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "31.2 CMS (12.3) Touchscreen Infotainment",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Standard Side and Curtain Airbags  (6-Airbags)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Integrated Off-Road Camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Heavy-Duty Dana 44HD Full-Float Rear Axle",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Advanced Driver Assistance System (ADAS)",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Ultra Luxurious Nappa Leather Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "9-Speaker Premium Alpine Audio with Subwoofer",
+       "value": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "model": "Grand Cherokee",
+   "body": "SUV",
+   "url": "https://www.jeep-india.com/new-grand-cherokee.html",
+   "variants": [
+    {
+     "name": "Grand Cherokee Limited (O)",
+     "trim": "Limited (O)",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "4x4",
+     "seats": 5,
+     "price": 6300000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [
+      {
+       "group": "Highlights",
+       "label": "LED Reflector headlights",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "LED Fog Lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "20” Alloy Wheels",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "LED Tail Lamps",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Capri leather Seats with perforated inserts",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Pur wrapped instrument panel",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Ambient LED interior Lights",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Passenger Ent. Screen",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Heads up Display",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Ventilated Seats",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Surround view camera",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Auto Folding Mirrors",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "10.2” Instrument Cluster",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Auto high beam headlamp",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "10.1 R1 High Radio",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Integrated Voice Command",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Navigation",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Apple Car Play & Android Auto",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "9 speaker amplified system",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "ABS with EBD",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "TCS, ESC, HSA",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Electronic Parking  Brake",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "8 Airbags",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Reverse Parking Camera with sensors",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "TPMS",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "ADAS",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "4x4",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Selec Terrain 4x4 System",
+       "value": "Yes"
+      },
+      {
+       "group": "Highlights",
+       "label": "Speed Control (Speed Limiter)",
+       "value": "Yes"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "log": []
+}
