@@ -26,6 +26,10 @@ jobs:
         continue-on-error: true
       - name: Build cars.json
         run: node scraper/normalize.mjs
+      - name: Expert reviews (Autocar India)
+        if: ${{ github.event.inputs.brands == '' || github.event.inputs.brands == null || contains(github.event.inputs.brands, 'expert') }}
+        run: node scraper/expert.mjs && node scraper/normalize.mjs
+        continue-on-error: true
       - name: Commit data
         run: |
           git config user.name "rightride-bot"

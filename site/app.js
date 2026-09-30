@@ -15,7 +15,7 @@
     budgetMin: '', budgetMax: '',
     body: new Set(), seats: new Set(), brand: new Set(), fuel: new Set(), trans: new Set(), transType: new Set(), drive: new Set(),
     feats: new Set(), allowUnknown: true, closeMatches: true, sort: 'price', page: 1,
-    compare: new Set(), open: new Set(),
+    compare: new Set(), open: new Set(), rec: null,
   };
   const PAGE = 20;
 
@@ -118,8 +118,10 @@
       m.mileage = Math.max(0, ...m.vs.map((x) => x.c.mileage || 0));
     }
     const s = state.sort;
+    if (s === 'rec' && state.rec) scoreRecs(list);
     list.sort((a, b) => {
       if (a.tier !== b.tier) return a.tier - b.tier; // confirmed matches, then unconfirmed, then near-misses
+      if (s === 'rec' && state.rec) return b.match - a.match;
       if (s === 'priceDesc') return b.best.c.orTotal - a.best.c.orTotal;
       if (s === 'match') return b.score - a.score || a.best.c.orTotal - b.best.c.orTotal;
       if (s === 'features') return b.maxFeat - a.maxFeat;
@@ -204,7 +206,11 @@
     $('#activeChips').innerHTML = act.join('');
     $('#filterCount').textContent = act.length ? `(${act.length})` : '';
     const shown = list.slice(0, state.page * PAGE);
-    $('#list').innerHTML = shown.length ? shown.map(card).join('') : `<div class="empty"><h2>Nothing matches every filter</h2><p class="muted">Try raising the budget, removing a feature, or ticking "also show cars missing 1 feature".</p></div>`;
+    recBar();
+    const recMode = state.sort === 'rec' && state.rec;
+    if (recMode && list.length) $('#resultTitle').textContent = `${list.length} model${list.length > 1 ? 's' : ''} ranked for you`;
+    if (recMode) $('#resultSub').textContent = `Ranked on your priorities using Autocar India expert scores plus our specs data. Click a car to watch its Autocar India video review.`;
+    $('#list').innerHTML = shown.length ? shown.map((m, i) => (recMode ? recCard(m, i + 1) : card(m))).join('') : `<div class="empty"><h2>Nothing matches every filter</h2><p class="muted">Try raising the budget, removing a feature, or ticking "also show cars missing 1 feature".</p>${state.rec ? '<button class="btn primary" type="button" data-rec="edit">Change my answers</button>' : ''}</div>`;
     $('#more').hidden = list.length <= shown.length;
     updateCompareBar();
   }
@@ -223,6 +229,7 @@
       state.feats.size && m.confirmed ? `<span class="tag good">All ${state.feats.size} features ✓</span>` : '',
       partial ? `<span class="tag warn">Missing: ${esc(m.best.ev.miss.map(FLABEL).join(', '))}</span>` : '',
       unknown ? `<span class="tag warn">${unknown} not confirmed</span>` : '',
+      expertOf(m) && expertOf(m).s ? `<span class="tag xtag" title="Autocar India expert score">Autocar ${esc(expertOf(m).s)}/10</span>` : '',
     ].join('');
     const img = m.image ? `<img loading="lazy" src="${esc(m.image)}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'ph',textContent:'${esc(m.model[0])}'}))">` : `<span class="ph">${esc(m.model[0])}</span>`;
     return `<article class="card" data-key="${esc(key)}">
@@ -244,7 +251,7 @@
         <td>${esc(c.fuel)}</td><td>${esc(c.transType && c.transType !== 'MT' ? c.transType : c.transmission || '')}</td>
         <td class="num hide-sm">${lakh(c.or.ex)}</td><td class="num"><b>${lakh(c.orTotal)}</b></td>
       </tr>`).join('');
-    return `<div class="variants"><table><thead><tr><th></th><th>Variant</th><th>Fuel</th><th>Gearbox</th><th class="num hide-sm">Ex-showroom</th><th class="num">On-road*</th></tr></thead><tbody>${rows}</tbody></table><p class="muted">Jaguar currently has no models on sale in India (jaguar.in redirects to the global site while the brand moves to its new electric range), so there is nothing to list yet. Curated brands show the starting ex-showroom price per model; their features are not yet published variant-by-variant, so they appear as "not confirmed" when you filter by features.</p></div>`;
+    return `<div class="variants"><table><thead><tr><th></th><th>Variant</th><th>Fuel</th><th>Gearbox</th><th class="num hide-sm">Ex-showroom</th><th class="num">On-road*</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }
 
   // ---------------- detail & compare ----------------
@@ -301,6 +308,206 @@
     $('#modal').showModal();
   }
 
+  // ---------------- personalised recommendations ----------------
+  const PRIO = { features: 'Features', mileage: 'Mileage', comfort: 'Comfort', value: 'Value for money' };
+  const PRIO_HINT = { features: 'Tech, safety and convenience kit', mileage: 'Fuel efficiency / range', comfort: 'Space, seats and ride quality', value: 'Most car for the money' };
+  const BODY_OPTS = { small: { label: 'Small car', sub: 'Hatchbacks — easy to park', bodies: ['Hatchback'] }, sedan: { label: 'Sedan', sub: 'Boot, comfort, highway manners', bodies: ['Sedan'] }, suv: { label: 'SUV', sub: 'SUVs and 7-seat MUVs', bodies: ['SUV', 'MUV / MPV'] } };
+  const expertOf = (m) => (DATA.experts || {})[m.brand + '|' + m.model] || null;
+  const ytUrl = (m) => { const x = expertOf(m); return x && x.yt ? `https://www.youtube.com/watch?v=${x.yt}` : `https://www.youtube.com/results?search_query=${encodeURIComponent(`Autocar India ${m.brand} ${m.model} review`)}`; };
+  const onesOf = (c) => (/[01]/.test(c.fs) ? c.fs.split('1').length - 1 : null);
+
+  function pickVariant(m) {
+    const p = state.rec.prio[0], vs = m.vs.map((x) => x.c);
+    const cheap = (a, b) => a.orTotal - b.orTotal;
+    if (p === 'value') return vs.slice().sort(cheap)[0];
+    if (p === 'mileage') return vs.slice().sort((a, b) => (b.mileage || 0) - (a.mileage || 0) || cheap(a, b))[0];
+    // features / comfort first: the best-equipped variant that fits the budget
+    return vs.slice().sort((a, b) => (onesOf(b) ?? 0) - (onesOf(a) ?? 0) || b.orTotal - a.orTotal)[0];
+  }
+  function scoreRecs(list) {
+    const pct = (arr, v) => (v == null || !arr.length ? null : arr.filter((x) => x <= v).length / arr.length);
+    for (const m of list) m.pick = pickVariant(m);
+    const feats = list.map((m) => onesOf(m.pick)).filter((x) => x != null).sort((a, b) => a - b);
+    const miles = list.map((m) => (m.pick.fuel === 'Electric' ? null : m.pick.mileage)).filter(Boolean).sort((a, b) => a - b);
+    const budget = state.rec.budget * 1e5;
+    const w = [0.4, 0.3, 0.2, 0.1];
+    for (const m of list) {
+      const x = expertOf(m), sc = (x && x.sc) || {}, base = x && x.s ? x.s : null;
+      const mix = (a, b) => (a != null && b != null ? 0.6 * a + 0.4 * b : a ?? b ?? base ?? 6);
+      const fN = pct(feats, onesOf(m.pick)), mN = m.pick.fuel === 'Electric' ? 0.95 : pct(miles, m.pick.mileage);
+      const priceN = Math.max(0, Math.min(1, 1 - m.pick.orTotal / budget + 0.3));
+      m.sub = {
+        features: mix(sc.features, fN == null ? null : 3 + fN * 7),
+        mileage: mix(sc.mileage, mN == null ? null : 3 + mN * 7),
+        comfort: sc.comfort ?? base ?? 6,
+        value: mix(sc.value, 3 + priceN * 7),
+      };
+      const t = state.rec.prio.reduce((s, k, i) => s + w[i] * m.sub[k], 0);
+      m.match = Math.round((0.85 * t + 0.15 * (base ?? 6)) * 10) / 10;
+      m.expert = x;
+    }
+  }
+  function recBar() {
+    const r = state.rec, bar = $('#recBar');
+    if (!r) { bar.hidden = true; return; }
+    bar.hidden = false;
+    bar.innerHTML = `<div class="rec-sum"><span class="rec-k">Picked for you</span>
+      <span class="chip">${esc(BODY_OPTS[r.body].label)}</span><span class="chip">Up to ₹${esc(r.budget)} L on-road</span><span class="chip">${esc(r.trans === 'Either' ? 'Any gearbox' : r.trans)}</span>
+      <span class="rec-prio">${r.prio.map((k, i) => `<b>${i + 1}</b> ${esc(PRIO[k])}`).join('<span class="sep">›</span>')}</span></div>
+      <div class="rec-actions"><button class="btn ghost" type="button" data-rec="edit">Edit answers</button><button class="link" type="button" data-rec="exit">Browse all cars</button></div>`;
+  }
+  function applyRec(r) {
+    state.rec = r; store.set('rec', r);
+    for (const k of SETS) state[k].clear();
+    BODY_OPTS[r.body].bodies.forEach((b) => state.body.add(b));
+    if (r.trans !== 'Either') state.trans.add(r.trans);
+    state.budgetMin = ''; state.budgetMax = String(r.budget);
+    state.sort = 'rec'; $('#sort').value = 'rec'; $('#sort option[value="rec"]').hidden = false;
+    state.page = 1; state.open.clear();
+    saveFilters(); buildFilters(); render(); window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function exitRec() {
+    state.rec = null; store.set('rec', null);
+    for (const k of SETS) state[k].clear(); state.budgetMin = state.budgetMax = '';
+    state.sort = 'price'; $('#sort').value = 'price'; $('#sort option[value="rec"]').hidden = true;
+    saveFilters(); buildFilters(); render();
+  }
+  const bar10 = (v) => `<span class="sbar"><i style="width:${Math.max(4, Math.min(100, v * 10))}%"></i></span>`;
+  function recCard(m, rank) {
+    const c = m.pick, x = m.expert, key = m.brand + '|' + m.model, open = state.open.has(key);
+    const img = m.image ? `<img loading="lazy" src="${esc(m.image)}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'ph',textContent:'${esc(m.model[0])}'}))">` : `<span class="ph">${esc(m.model[0])}</span>`;
+    const pros = x ? x.like.map((t) => `<li class="pro">${esc(t)}</li>`).join('') + x.dislike.map((t) => `<li class="con">${esc(t)}</li>`).join('') : '';
+    return `<article class="card rec-card" data-yt="${esc(ytUrl(m))}" data-key="${esc(key)}">
+      <div class="card-main">
+        <div class="thumb">${img}<span class="rank">#${rank}</span></div>
+        <div>
+          <div class="brand">${esc(m.brand)}</div><h3>${esc(m.model)}</h3>
+          <div class="meta"><span class="tag">${esc(c.variant)}</span><span class="tag">${esc(c.fuel)}</span><span class="tag">${esc(c.transType && c.transType !== 'MT' ? c.transType : c.transmission)}</span>${c.mileage && c.fuel !== 'Electric' ? `<span class="tag hide-sm">${c.mileage} km/l</span>` : ''}</div>
+          <div class="subs">${state.rec.prio.map((k) => `<div class="sub"><span>${esc(PRIO[k])}</span>${bar10(m.sub[k])}<b>${m.sub[k].toFixed(1)}</b></div>`).join('')}</div>
+        </div>
+        <div class="price"><div class="match"><b>${m.match.toFixed(1)}</b><span>/10 match</span></div><div class="big">${lakh(c.orTotal)}</div><div class="small">on-road · ex-showroom ${lakh(c.or.ex)}</div></div>
+      </div>
+      ${x ? `<div class="expert"><div class="xs"><span class="xbadge">Autocar ${x.s ? esc(x.s) + '/10' : 'review'}</span>${x.basedOn ? `<span class="muted"> (review of the ${esc(x.basedOn)})</span>` : ''}</div><ul class="pc">${pros}</ul></div>` : `<div class="expert"><span class="muted">No Autocar India expert review yet — ranked on specs.</span></div>`}
+      <div class="card-foot"><a class="watch" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>${x && x.yt ? 'Watch the Autocar India review' : 'Find the Autocar India video'}</a>
+        <span class="foot-links">${x && x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">Expert review ↗</a>` : ''}<button class="link" data-toggle="${esc(key)}">${open ? 'Hide' : 'See'} ${m.vs.length} variant${m.vs.length > 1 ? 's' : ''}</button></span></div>
+      ${open ? variantTable(m) : ''}
+    </article>`;
+  }
+
+  // ---- welcome question + 4-step builder ----
+  const wz = { step: 0, a: null };
+  const defaults = () => ({ body: null, budget: '', trans: null, prio: ['features', 'mileage', 'comfort', 'value'] });
+  function openWizard(step = 0) {
+    wz.a = Object.assign(defaults(), state.rec ? JSON.parse(JSON.stringify(state.rec)) : {});
+    wz.step = step; drawWizard();
+    const d = $('#wizard'); if (!d.open) d.showModal();
+  }
+  function closeWizard() { $('#wizard').close(); }
+  function drawWizard() {
+    const a = wz.a, s = wz.step, W = $('#wizardBody');
+    const dots = s ? `<div class="wz-steps" aria-label="Step ${s} of 4">${[1, 2, 3, 4].map((i) => `<span class="${i < s ? 'done' : i === s ? 'on' : ''}"></span>`).join('')}<em>Step ${s} of 4</em></div>` : '';
+    const close = `<button class="wz-x" type="button" data-wz="close" aria-label="Close">✕</button>`;
+    let body = '', canNext = true;
+    if (s === 0) {
+      body = `<img class="wz-mark" src="brand/logo-red-black.svg" alt="Right Ride"><h2 id="wzTitle" class="display">What can we help you with?</h2>
+        <div class="wz-choices two">
+          <button class="wz-opt" type="button" data-wz="browse"><b>Just browsing</b><span>Explore every car, variant and on-road price</span></button>
+          <button class="wz-opt primary" type="button" data-wz="start" autofocus><b>Find the Right Ride for me!</b><span>Personalised recommendations in 4 quick steps</span></button>
+        </div>`;
+    } else if (s === 1) {
+      canNext = !!a.body;
+      body = `<h2 id="wzTitle" class="display">Small car, Sedan, or SUV?</h2>
+        <div class="wz-choices three">${Object.entries(BODY_OPTS).map(([k, o]) => `<button class="wz-opt${a.body === k ? ' sel' : ''}" type="button" data-body="${k}" aria-pressed="${a.body === k}">${bodyIcon(k)}<b>${o.label}</b><span>${o.sub}</span></button>`).join('')}</div>`;
+    } else if (s === 2) {
+      const v = Number(a.budget); canNext = v >= 3 && v <= 500;
+      body = `<h2 id="wzTitle" class="display">What's your budget?</h2><p class="muted">Your maximum on-road price in lakhs, for ${esc(RTO.states[state.st].name)}.</p>
+        <label class="wz-money"><span>₹</span><input id="wzBudget" inputmode="decimal" autocomplete="off" placeholder="e.g. 12" value="${esc(a.budget)}"><span>lakh</span></label>
+        <div class="chips wz-quick">${[6, 8, 10, 12, 15, 20, 25, 35, 50].map((n) => `<button class="chip" type="button" data-budget="${n}" aria-pressed="${Number(a.budget) === n}">₹${n} L</button>`).join('')}</div>
+        ${a.budget && !canNext ? '<p class="wz-err">Enter an amount between 3 and 500 lakh.</p>' : ''}`;
+    } else if (s === 3) {
+      canNext = !!a.trans;
+      const T = { Automatic: 'Two pedals — AT, CVT, DCT or AMT', Manual: 'Clutch and gear lever', Either: 'Show me both' };
+      body = `<h2 id="wzTitle" class="display">Automatic or Manual?</h2>
+        <div class="wz-choices three">${Object.entries(T).map(([k, sub]) => `<button class="wz-opt${a.trans === k ? ' sel' : ''}" type="button" data-trans="${k}" aria-pressed="${a.trans === k}"><b>${k === 'Either' ? 'No preference' : k}</b><span>${sub}</span></button>`).join('')}</div>`;
+    } else if (s === 4) {
+      body = `<h2 id="wzTitle" class="display">What matters most?</h2><p class="muted">Drag to put them in your order — most important at the top.</p>
+        <ol class="prio" id="prioList">${a.prio.map((k, i) => `<li class="prio-item" data-k="${k}" tabindex="0"><span class="grip" aria-hidden="true">⋮⋮</span><span class="pn">${i + 1}</span><span class="pt"><b>${PRIO[k]}</b><small>${PRIO_HINT[k]}</small></span><span class="pm"><button type="button" data-move="-1" aria-label="Move ${PRIO[k]} up" ${i ? '' : 'disabled'}>▲</button><button type="button" data-move="1" aria-label="Move ${PRIO[k]} down" ${i < 3 ? '' : 'disabled'}>▼</button></span></li>`).join('')}</ol>`;
+    }
+    const nav = s ? `<div class="wz-nav"><button class="btn ghost" type="button" data-wz="back">Back</button><button class="btn primary" type="button" data-wz="next" ${canNext ? '' : 'disabled'}>${s === 4 ? 'Show my matches' : 'Next'}</button></div>` : '';
+    W.innerHTML = `${close}${dots}<div class="wz-body">${body}</div>${nav}`;
+    if (s === 2) { const i = $('#wzBudget'); i.focus(); i.setSelectionRange(i.value.length, i.value.length); }
+    if (s === 4) wirePrio();
+  }
+  function bodyIcon(k) {
+    const P = { small: 'M6 30h52M10 30l6-10h22l10 10M16 20v10', sedan: 'M4 30h56M8 30l8-9h26l12 9M20 21l-2 9M36 21v9', suv: 'M4 30h56M6 30V20l6-8h30l10 8 6 2v8M12 12v18M30 12v18' }[k];
+    return `<svg class="wz-ico" viewBox="0 0 64 40" aria-hidden="true"><path d="${P}" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="31" r="4.5" fill="var(--panel)" stroke="currentColor" stroke-width="2.4"/><circle cx="46" cy="31" r="4.5" fill="var(--panel)" stroke="currentColor" stroke-width="2.4"/></svg>`;
+  }
+  function readPrio() { wz.a.prio = $$('#prioList .prio-item').map((li) => li.dataset.k); }
+  function renumber() { $$('#prioList .prio-item').forEach((li, i) => { li.querySelector('.pn').textContent = i + 1; const [u, d] = li.querySelectorAll('[data-move]'); u.disabled = !i; d.disabled = i === 3; }); }
+  function wirePrio() {
+    const L = $('#prioList');
+    let drag = null;
+    L.addEventListener('pointerdown', (e) => {
+      const li = e.target.closest('.prio-item'); if (!li || e.target.closest('button')) return;
+      drag = { li, id: e.pointerId, y0: e.clientY }; li.classList.add('dragging'); li.setPointerCapture(e.pointerId); e.preventDefault();
+    });
+    L.addEventListener('pointermove', (e) => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const items = $$('.prio-item', L).filter((x) => x !== drag.li);
+      const after = items.find((x) => { const r = x.getBoundingClientRect(); return e.clientY < r.top + r.height / 2; });
+      after ? L.insertBefore(drag.li, after) : L.appendChild(drag.li);
+      renumber();
+    });
+    const end = () => { if (!drag) return; drag.li.classList.remove('dragging'); drag = null; readPrio(); };
+    L.addEventListener('pointerup', end); L.addEventListener('pointercancel', end);
+    L.addEventListener('keydown', (e) => {
+      const li = e.target.closest('.prio-item'); if (!li || !['ArrowUp', 'ArrowDown'].includes(e.key)) return;
+      e.preventDefault(); move(li, e.key === 'ArrowUp' ? -1 : 1); li.focus();
+    });
+  }
+  function move(li, dir) {
+    const L = li.parentElement;
+    if (dir < 0 && li.previousElementSibling) L.insertBefore(li, li.previousElementSibling);
+    if (dir > 0 && li.nextElementSibling) L.insertBefore(li.nextElementSibling, li);
+    renumber(); readPrio();
+  }
+  function wireWizard() {
+    const W = $('#wizardBody');
+    W.addEventListener('click', (e) => {
+      const b = e.target.closest('button'); if (!b) return;
+      const a = wz.a;
+      if (b.dataset.wz === 'close') return closeWizard();
+      if (b.dataset.wz === 'browse') { closeWizard(); return; }
+      if (b.dataset.wz === 'start') { wz.step = 1; return drawWizard(); }
+      if (b.dataset.wz === 'back') { wz.step = Math.max(0, wz.step - 1); return drawWizard(); }
+      if (b.dataset.wz === 'next') {
+        if (wz.step < 4) { wz.step++; return drawWizard(); }
+        closeWizard(); applyRec({ body: a.body, budget: Number(a.budget), trans: a.trans, prio: a.prio.slice() }); return;
+      }
+      if (b.dataset.body) { a.body = b.dataset.body; wz.step = 2; return drawWizard(); }
+      if (b.dataset.trans) { a.trans = b.dataset.trans; wz.step = 4; return drawWizard(); }
+      if (b.dataset.budget) { a.budget = b.dataset.budget; return drawWizard(); }
+      if (b.dataset.move) move(b.closest('.prio-item'), Number(b.dataset.move));
+    });
+    W.addEventListener('input', (e) => {
+      if (e.target.id !== 'wzBudget') return;
+      wz.a.budget = e.target.value.replace(/[^\d.]/g, '');
+      const v = Number(wz.a.budget), ok = v >= 3 && v <= 500;
+      $('[data-wz="next"]', W).disabled = !ok;
+      $$('.wz-quick .chip', W).forEach((c) => c.setAttribute('aria-pressed', Number(c.dataset.budget) === v));
+    });
+    W.addEventListener('keydown', (e) => { if (e.key === 'Enter' && e.target.id === 'wzBudget') { const n = $('[data-wz="next"]', W); if (!n.disabled) n.click(); } });
+    $('#wizard').addEventListener('click', (e) => { if (e.target.id === 'wizard' && wz.step === 0) closeWizard(); });
+  }
+  function maybeWelcome() {
+    let seen = false; try { seen = !!sessionStorage.getItem('rr-welcome'); sessionStorage.setItem('rr-welcome', '1'); } catch (e) {}
+    const force = /[?&]intro\b/.test(location.search);
+    if ((seen && !force) || (!force && /[?&](body|feats|brand|fuel|min|max)=/.test(location.search))) return;
+    const intro = document.getElementById('rr-intro');
+    if (intro && !intro.classList.contains('rr-done')) document.addEventListener('rr-intro-done', () => setTimeout(() => openWizard(0), 350), { once: true });
+    else openWizard(0);
+  }
+
   // ---------------- state / location ----------------
   function fillStates() {
     const opts = Object.entries(RTO.states).sort((a, b) => a[1].name.localeCompare(b[1].name)).map(([k, v]) => `<option value="${k}">${esc(v.name)}</option>`).join('');
@@ -338,6 +545,10 @@
     for (const k of SETS) { const v = q.get(k) || (o && o[k] && o[k].join(',')); if (v) v.split(',').filter(Boolean).forEach((x) => state[k].add(x)); }
     state.budgetMin = q.get('min') || (o && o.budgetMin) || ''; state.budgetMax = q.get('max') || (o && o.budgetMax) || '';
     if (o) { state.allowUnknown = o.allowUnknown ?? true; state.closeMatches = o.closeMatches ?? true; state.sort = o.sort || 'price'; }
+    state.rec = store.get('rec', null);
+    if (state.rec && !BODY_OPTS[state.rec.body]) state.rec = null;
+    if (state.sort === 'rec' && !state.rec) state.sort = 'price';
+    $('#sort option[value="rec"]').hidden = !state.rec;
     $('#sort').value = state.sort;
   }
 
@@ -362,13 +573,21 @@
       if (t) { const k = t.dataset.toggle; state.open.has(k) ? state.open.delete(k) : state.open.add(k); render(); return; }
       const box = e.target.closest('.cmp-box');
       if (box) { box.checked ? (state.compare.size < 4 ? state.compare.add(box.dataset.id) : (box.checked = false)) : state.compare.delete(box.dataset.id); updateCompareBar(); return; }
-      const tr = e.target.closest('tr.v'); if (tr) detail(tr.dataset.id);
+      const tr = e.target.closest('tr.v'); if (tr) { detail(tr.dataset.id); return; }
+      if (e.target.closest('a, button, input, .variants')) return;
+      const rc = e.target.closest('.rec-card'); if (rc) window.open(rc.dataset.yt, '_blank', 'noopener');
     });
+    document.addEventListener('click', (e) => {
+      const r = e.target.closest('[data-rec]'); if (!r) return;
+      if (r.dataset.rec === 'edit') openWizard(1); else exitRec();
+    });
+    $('#findBtn').addEventListener('click', () => openWizard(state.rec ? 1 : 0));
+    wireWizard();
     $('#more').addEventListener('click', () => { state.page++; render(); });
     $('#sort').addEventListener('change', (e) => { state.sort = e.target.value; saveFilters(); render(); });
     $('#state').addEventListener('change', (e) => setState(e.target.value));
     $('#detect').addEventListener('click', detect);
-    $('#reset').addEventListener('click', () => { for (const k of SETS) state[k].clear(); state.budgetMin = state.budgetMax = ''; saveFilters(); buildFilters(); render(); });
+    $('#reset').addEventListener('click', () => { if (state.rec) return exitRec(); for (const k of SETS) state[k].clear(); state.budgetMin = state.budgetMax = ''; saveFilters(); buildFilters(); render(); });
     $('#compareGo').addEventListener('click', compareView);
     $('#compareClear').addEventListener('click', () => { state.compare.clear(); render(); });
     $('#modal').addEventListener('click', (e) => { if (e.target.closest('[data-close]') || e.target.id === 'modal') $('#modal').close(); });
@@ -385,7 +604,7 @@
     } catch (e) {
       $('#resultTitle').textContent = 'Could not load car data. Please refresh.'; return;
     }
-    fillStates(); loadFilters(); prep(); buildFilters(); wire(); render();
+    fillStates(); loadFilters(); prep(); buildFilters(); wire(); render(); maybeWelcome();
     $('#updated').textContent = `Data updated ${new Date(DATA.generated).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} · ${DATA.cars.length} variants from ${DATA.brands.length} brands`;
     if (!store.get('state', null) && navigator.permissions) navigator.permissions.query({ name: 'geolocation' }).then((p) => { if (p.state === 'granted') detect(); }).catch(() => {});
   }

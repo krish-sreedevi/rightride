@@ -9,7 +9,8 @@ const args = process.argv.slice(2);
 const only = (args.find((a) => a.startsWith('--only=')) || '').slice(7) || undefined;
 const all = fs.readdirSync(path.join(ROOT, 'scraper/adapters')).filter((f) => f.endsWith('.js')).map((f) => f.slice(0, -3));
 const brands = args.filter((a) => !a.startsWith('--'));
-const todo = brands.length ? brands : all;
+const named = brands.filter((b) => all.includes(b));
+const todo = brands.length ? named : all;
 const helpers = fs.readFileSync(path.join(ROOT, 'scraper/helpers.js'), 'utf8');
 fs.mkdirSync(path.join(ROOT, 'data/raw'), { recursive: true });
 

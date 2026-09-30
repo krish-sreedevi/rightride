@@ -247,7 +247,18 @@ export function normalize() {
   const featureMeta = keys.map((k) => ({ key: k, bucket: FEATURES[k][0], label: FEATURES[k][1] }));
   // compact: one char per feature, '1' yes, '0' no, '?' unknown
   for (const c of cars) { c.fs = keys.map((k) => (c.f[k] === true ? '1' : c.f[k] === false ? '0' : '?')).join(''); delete c.f; }
-  return { generated: new Date().toISOString(), buckets: BUCKETS, features: featureMeta, brands: Object.values(brands).filter((b) => b.variants), cars };
+  // expert opinion (Autocar India) per model, from scraper/expert.mjs
+  const experts = {};
+  const xf = path.join(ROOT, 'data/expert.json');
+  if (fs.existsSync(xf)) {
+    const X = JSON.parse(fs.readFileSync(xf, 'utf8')).models || {};
+    const have = new Set(cars.map((c) => `${c.brand}|${c.model}`));
+    for (const [k, v] of Object.entries(X)) {
+      if (!have.has(k)) continue;
+      experts[k] = { s: v.score || null, sc: v.scores || null, like: (v.like || []).slice(0, 3), dislike: (v.dislike || []).slice(0, 3), yt: v.video ? v.video.id : null, ytT: v.video ? v.video.title : null, url: v.url || null, rv: v.review ? v.review.title : null, basedOn: v.basedOn || null };
+    }
+  }
+  return { generated: new Date().toISOString(), buckets: BUCKETS, features: featureMeta, brands: Object.values(brands).filter((b) => b.variants), cars, experts };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

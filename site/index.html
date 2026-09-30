@@ -9,10 +9,11 @@
   <link rel="apple-touch-icon" href="brand/app-icon.svg">
   <meta name="theme-color" content="#E10600">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <script src="rr-intro.js"></script>
   <header class="topbar">
     <a class="logo" href="./" aria-label="Right Ride home">
       <picture>
@@ -28,7 +29,8 @@
         <span>Detect</span>
       </button>
     </div>
-    <button id="openFilters" class="btn primary only-mobile" type="button">Filters <span id="filterCount"></span></button>
+    <button id="findBtn" class="btn primary find-btn" type="button">Find my Right Ride</button>
+    <button id="openFilters" class="btn ghost only-mobile" type="button">Filters <span id="filterCount"></span></button>
   </header>
 
   <main class="layout">
@@ -51,6 +53,7 @@
         <div class="sort">
           <label for="sort" class="muted">Sort</label>
           <select id="sort">
+            <option value="rec" hidden>Best match for you</option>
             <option value="price">On-road price: low to high</option>
             <option value="priceDesc">On-road price: high to low</option>
             <option value="match">Most features matched</option>
@@ -59,6 +62,7 @@
           </select>
         </div>
       </div>
+      <div id="recBar" class="rec-bar" hidden></div>
       <div id="activeChips" class="active-chips"></div>
       <div id="list" class="list"></div>
       <button id="more" class="btn ghost block" type="button" hidden>Show more models</button>
@@ -72,6 +76,7 @@
   </div>
 
   <dialog id="modal"><div id="modalBody"></div></dialog>
+  <dialog id="wizard" class="wizard" aria-labelledby="wzTitle"><div id="wizardBody"></div></dialog>
 
   <footer class="foot">
     <p>Prices and features are collected automatically from each manufacturer's official website and refreshed every week. On-road prices are <b>estimates</b> (road tax, registration, insurance, FASTag, TCS); confirm with your dealer before booking. <a href="#" id="aboutLink">Data sources &amp; coverage</a></p>
