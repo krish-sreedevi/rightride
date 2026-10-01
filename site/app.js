@@ -333,14 +333,15 @@
     const w = [0.4, 0.3, 0.2, 0.1];
     for (const m of list) {
       const x = expertOf(m), sc = (x && x.sc) || {}, base = x && x.s ? x.s : null;
-      const mix = (a, b) => (a != null && b != null ? 0.6 * a + 0.4 * b : a ?? b ?? base ?? 6);
+      m.est = {};
+      const mix = (a, b, k) => { if (a == null && b == null) m.est[k] = true; return a != null && b != null ? 0.6 * a + 0.4 * b : a ?? b ?? (base ?? 6) - 0.5; }; // unrated: a little below the overall score
       const fN = pct(feats, onesOf(m.pick)), mN = m.pick.fuel === 'Electric' ? 0.95 : pct(miles, m.pick.mileage);
       const priceN = Math.max(0, Math.min(1, 1 - m.pick.orTotal / budget + 0.3));
       m.sub = {
-        features: mix(sc.features, fN == null ? null : 3 + fN * 7),
-        mileage: mix(sc.mileage, mN == null ? null : 3 + mN * 7),
-        comfort: sc.comfort ?? base ?? 6,
-        value: mix(sc.value, 3 + priceN * 7),
+        features: mix(sc.features, fN == null ? null : 3 + fN * 7, 'features'),
+        mileage: mix(sc.mileage, mN == null ? null : 3 + mN * 7, 'mileage'),
+        comfort: mix(sc.comfort, null, 'comfort'),
+        value: mix(sc.value, 3 + priceN * 7, 'value'),
       };
       const t = state.rec.prio.reduce((s, k, i) => s + w[i] * m.sub[k], 0);
       m.match = Math.round((0.85 * t + 0.15 * (base ?? 6)) * 10) / 10;
@@ -383,7 +384,7 @@
         <div>
           <div class="brand">${esc(m.brand)}</div><h3>${esc(m.model)}</h3>
           <div class="meta"><span class="tag">${esc(c.variant)}</span><span class="tag">${esc(c.fuel)}</span><span class="tag">${esc(c.transType && c.transType !== 'MT' ? c.transType : c.transmission)}</span>${c.mileage && c.fuel !== 'Electric' ? `<span class="tag hide-sm">${c.mileage} km/l</span>` : ''}</div>
-          <div class="subs">${state.rec.prio.map((k) => `<div class="sub"><span>${esc(PRIO[k])}</span>${bar10(m.sub[k])}<b>${m.sub[k].toFixed(1)}</b></div>`).join('')}</div>
+          <div class="subs">${state.rec.prio.map((k) => `<div class="sub${m.est[k] ? ' est' : ''}"${m.est[k] ? ' title="Not rated separately by Autocar India and not published by the maker; estimated from the overall score"' : ''}><span>${esc(PRIO[k])}</span>${bar10(m.sub[k])}<b>${m.est[k] ? '~' : ''}${m.sub[k].toFixed(1)}</b></div>`).join('')}</div>
         </div>
         <div class="price"><div class="match"><b>${m.match.toFixed(1)}</b><span>/10 match</span></div><div class="big">${lakh(c.orTotal)}</div><div class="small">on-road · ex-showroom ${lakh(c.or.ex)}</div></div>
       </div>
@@ -482,7 +483,14 @@
       if (b.dataset.wz === 'back') { wz.step = Math.max(0, wz.step - 1); return drawWizard(); }
       if (b.dataset.wz === 'next') {
         if (wz.step < 4) { wz.step++; return drawWizard(); }
-        closeWizard(); applyRec({ body: a.body, budget: Number(a.budget), trans: a.trans, prio: a.prio.slice() }); return;
+        closeWizard();
+        const r = { body: a.body, budget: Number(a.budget), trans: a.trans, prio: a.prio.slice() };
+        const L = window.RRLoader, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!L) { applyRec(r); return; }
+        L.show('Finding your Right Ride…');
+        setTimeout(() => applyRec(r), reduce ? 600 : 2200); // results render just before the loader fades out
+        setTimeout(() => L.hide(), reduce ? 800 : 2500);
+        return;
       }
       if (b.dataset.body) { a.body = b.dataset.body; wz.step = 2; return drawWizard(); }
       if (b.dataset.trans) { a.trans = b.dataset.trans; wz.step = 4; return drawWizard(); }
