@@ -818,7 +818,7 @@
       B.classList.remove('leaving', 'to-cars', 'to-home');
       B.dataset.page = next;
       window.scrollTo({ top: 0, behavior: 'instant' });
-      if (next === 'cars') render(); else requestAnimationFrame(placeHorizon);
+      if (next === 'cars') render(); else { requestAnimationFrame(placeHorizon); startLanes(); }
       if (animate && prev && !reduce) { void B.offsetWidth; B.classList.add(next === 'cars' ? 'to-cars' : 'to-home'); clearTimeout(showPage.t); showPage.t = setTimeout(() => B.classList.remove('to-cars', 'to-home'), 1100); }
     };
     if (animate && prev && !reduce && window.scrollY < 400) { B.classList.add('leaving'); clearTimeout(showPage.l); showPage.l = setTimeout(swap, 330); }
@@ -829,15 +829,58 @@
     if (location.hash !== h) location.hash = h; else showPage(next);
   }
   function route(animate) { showPage(/^#\/cars/.test(location.hash) ? 'cars' : 'home', animate); }
-  // keep the home buttons exactly on the horizon of the sunrise scene (viewBox 1360×860, horizon y=470, 'slice' scaling)
-  function placeHorizon() {
-    const h = $('#hero'); if (!h) return;
-    const W = h.clientWidth, H = h.clientHeight; if (!W || !H) return;
-    const k = Math.max(W / 1360, H / 860), y = (H - 860 * k) / 2 + 470 * k;
-    h.style.setProperty('--hz', y + 'px');
+  // ---------------- home scene: sunrise over a road drawn in true perspective ----------------
+  // scene units: 860 tall (always fully visible), width grows with the window; horizon at y=500
+  const SC = { VH: 860, HZ: 500, F: 360, B: 0.32, HW: 0.62, ZMIN: 0.92, DL: 0.42, DG: 0.62 };
+  const scx = (z) => 680 - SC.F * SC.B + SC.F * SC.B * Math.pow(1 - 1 / z, 2) + SC.F * 0.06 * Math.sin(Math.min(1, 1 / z) * 3.2) * (1 - 1 / z);
+  const syz = (z) => SC.HZ + SC.F / z;
+  function sband(o1, o2, from, to, n) {
+    const pts = (off) => { const o = []; for (let i = 0; i <= n; i++) { const u = 1 / from + (1 / to - 1 / from) * i / n, z = 1 / u; o.push((scx(z) + SC.F * off / z).toFixed(1) + ',' + syz(z).toFixed(1)); } return o; };
+    return 'M' + pts(o1).join(' L') + ' L' + pts(o2).reverse().join(' L') + 'Z';
   }
+  function drawRoad() {
+    const g = $('#road'); if (!g) return;
+    const { HW, ZMIN } = SC, far = 400;
+    g.innerHTML = `<path class="shoulder" d="${sband(-HW * 1.14, HW * 1.14, ZMIN, far, 140)}"/>
+      <path d="${sband(-HW, HW, ZMIN, far, 140)}" fill="url(#asph)"/>
+      <path class="grain" d="${sband(-HW, HW, ZMIN, far, 140)}" fill="#fff" filter="url(#grain)"/>
+      <path class="edge" d="${sband(-HW + 0.05, -HW + 0.09, ZMIN, far, 140)}"/><path class="edge" d="${sband(HW - 0.09, HW - 0.05, ZMIN, far, 140)}"/>
+      <g id="dashes"></g>`;
+    drawDashes(0);
+  }
+  function drawDashes(phase) {
+    const g = document.getElementById('dashes'); if (!g) return;
+    const { ZMIN, DL, DG } = SC, hw = 0.022; let o = '';
+    for (let z = ZMIN - DL - DG + phase; z < 140; z += DL + DG) {
+      const z1 = Math.max(z, ZMIN), z2 = z + DL; if (z2 <= ZMIN) continue;
+      o += `<path d="${sband(-hw, hw, z1, z2, 8)}"/>`;
+    }
+    g.innerHTML = o;
+  }
+  // keep the home buttons exactly on the horizon, and the scene framed so the sun never reaches the headline
+  function placeHorizon() {
+    const h = $('#hero'), svg = $('#scene'); if (!h || !svg) return;
+    const W = h.clientWidth, H = h.clientHeight; if (!W || !H) return;
+    const VW = SC.VH * W / H, X0 = (1360 - VW) / 2;
+    svg.setAttribute('viewBox', `${X0.toFixed(1)} 0 ${VW.toFixed(1)} ${SC.VH}`);
+    h.style.setProperty('--hz', (SC.HZ * H / SC.VH) + 'px');
+  }
+  let laneRAF = 0, laneT0 = 0;
+  function laneLoop(t) {
+    if (page !== 'home' || document.hidden) { laneRAF = 0; return; }
+    if (!laneT0) laneT0 = t;
+    const per = SC.DL + SC.DG, speed = 0.55; // scene units per second, towards the viewer
+    drawDashes(per - (((t - laneT0) / 1000 * speed) % per));
+    laneRAF = requestAnimationFrame(laneLoop);
+  }
+  function startLanes() {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches || laneRAF) return;
+    laneRAF = requestAnimationFrame(laneLoop);
+  }
+
   function wirePages() {
-    window.addEventListener('resize', placeHorizon); placeHorizon();
+    drawRoad(); window.addEventListener('resize', placeHorizon); placeHorizon();
+    document.addEventListener('visibilitychange', () => { if (!document.hidden && page === 'home') startLanes(); });
     window.addEventListener('hashchange', () => route(true));
     document.addEventListener('click', (e) => {
       const a = e.target.closest('[data-go]'); if (!a) return;
