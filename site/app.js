@@ -102,10 +102,12 @@
     if (state.drive.size && !state.drive.has(c.drive)) return null;
     if (state.seats.size && !state.seats.has(seatGroup(c.seats))) return null;
     let miss = [], unk = [];
-    for (const k of state.feats) { const v = c.feat(k); if (v === '0') miss.push(k); else if (v === '?') unk.push(k); }
+    const fo = featsOn();
+    for (const k of fo) { const v = c.feat(k); if (v === '0') miss.push(k); else if (v === '?') unk.push(k); }
     if (miss.length > (state.closeMatches ? 1 : 0)) return null;
+    if (state.qf && state.qf.feats.some((k) => miss.includes(k))) return null; // features typed in the search are must-haves
     if (unk.length && !state.allowUnknown) return null;
-    return { miss, unk, score: state.feats.size - miss.length - unk.length * 0.5 };
+    return { miss, unk, score: fo.size - miss.length - unk.length * 0.5 };
   }
 
   function results() {
@@ -133,7 +135,7 @@
       m.maxFeat = Math.max(...m.vs.map((x) => x.c.fs.split('1').length - 1));
       m.mileage = Math.max(0, ...m.vs.map((x) => x.c.mileage || 0));
     }
-    const s = state.sort;
+    const s = (state.qf && state.qf.sort && state.sort !== 'rec') ? state.qf.sort : state.sort;
     if (s === 'rec' && state.rec) scoreRecs(list);
     list.sort((a, b) => {
       if (a.tier !== b.tier) return a.tier - b.tier; // confirmed matches, then unconfirmed, then near-misses
@@ -308,7 +310,8 @@
     const x = expertOf(m);
     const key = m.brand + '|' + m.model;
     const sub = opts.stat ? opts.stat(m) : (x && x.like && x.like[0]) || `${m.fuels.join(' · ')}`;
-    const warn = state.feats.size && m.best ? (m.best.ev.miss.length ? `<span class="tw miss">Missing ${m.best.ev.miss.length}</span>` : m.best.ev.unk.length ? `<span class="tw unk">${m.best.ev.unk.length} unconfirmed</span>` : `<span class="tw ok">All ${state.feats.size} ✓</span>`) : '';
+    const nF = featsOn().size;
+    const warn = nF && m.best ? (m.best.ev.miss.length ? `<span class="tw miss">Missing ${m.best.ev.miss.length}</span>` : m.best.ev.unk.length ? `<span class="tw unk">${m.best.ev.unk.length} unconfirmed</span>` : `<span class="tw ok">${nF === 1 ? esc(FLABEL([...featsOn()][0]).replace(/ \(.*\)$/, '')) : 'All ' + nF} ✓</span>`) : '';
     return `<article class="tile${opts.big ? ' big' : ''}" data-key="${esc(key)}" tabindex="0" role="button" aria-label="${esc(m.brand + ' ' + m.model)}">
       ${x && x.s ? `<span class="sc">${esc(x.s)}/10</span>` : ''}<span class="pr">${lakh(m.min)}</span>
       <div class="timg">${carImg(m, opts.big ? '(max-width: 900px) 86vw, 560px' : '(max-width: 900px) 70vw, 280px')}</div>
@@ -325,39 +328,140 @@
     }).join('');
   }
 
-  // natural-language search → filters
+  // natural-language search → filters ("SUV with sunroof", "automatic under 12 lakh with 360 camera", "safest 7 seater")
   const BRANDS = () => [...new Set(DATA.cars.map((c) => c.brand))];
+  const FEAT_WORDS = [
+    ['panoramic', 'panoramic|pano(?:ramic)?\\s*(?:sun|moon)?\\s*roof|big sun\\s*roof|dual.?pane sunroof'],
+    ['sunroof', 'sun\\s*-?roofs?|moon\\s*-?roofs?'],
+    ['camera360', '360(?:\\s*(?:°|deg(?:ree)?s?|-degree))?(?:\\s*(?:camera|cam|view))?|surround\\s*(?:view\\s*)?camera|bird.?s.?eye'],
+    ['adas', 'adas|level\\s*-?\\s*2|auto(?:nomous)?\\s*(?:emergency\\s*)?brak\\w*|lane\\s*(?:keep\\w*|assist)|adaptive cruise'],
+    ['ventilated', 'ventilated(?:\\s*seats?)?|cooled seats?|cooling seats?'],
+    ['wirelessCharger', 'wireless\\s*(?:phone\\s*)?charg\\w*|wireless pad'],
+    ['wirelessAA', 'wireless\\s*(?:android\\s*auto|apple\\s*car\\s*play|car\\s*play)'],
+    ['androidAuto', 'android\\s*auto|apple\\s*car\\s*play|car\\s*play'],
+    ['touchscreen', 'touch\\s*screens?|infotainment|big screen'],
+    ['rearCamera', '(?:rear|reverse|reversing|back(?:up)?|parking)\\s*cam(?:era)?s?'],
+    ['frontSensors', 'front\\s*(?:parking\\s*)?sensors?'],
+    ['rearSensors', '(?:rear\\s*)?parking\\s*sensors?|reverse\\s*sensors?'],
+    ['cruise', 'cruise(?:\\s*control)?'],
+    ['airbags6', '(?:6|six)\\s*-?\\s*air\\s*bags?'],
+    ['isofix', 'isofix|child\\s*seat\\s*mounts?'],
+    ['hud', 'hud|head\\s*-?\\s*up(?:\\s*display)?'],
+    ['dualZone', 'dual\\s*-?\\s*zone(?:\\s*(?:climate|ac|a/c))?'],
+    ['autoClimate', 'auto(?:matic)?\\s*(?:climate(?:\\s*control)?|ac|a/c)|climate\\s*control'],
+    ['rearAC', 'rear\\s*(?:ac|a/c)(?:\\s*vents?)?|rear\\s*vents?'],
+    ['pushStart', 'push\\s*-?\\s*(?:button\\s*)?start|keyless\\s*(?:go|start)'],
+    ['keyless', 'keyless(?:\\s*entry)?|smart\\s*key'],
+    ['poweredSeat', '(?:powered|power|electric(?:ally)?(?:\\s*adjustable)?)\\s*(?:driver\\s*)?seats?'],
+    ['connected', 'connected(?:\\s*car(?:\\s*tech)?)?|app\\s*control|remote\\s*start'],
+    ['digitalCluster', 'digital\\s*(?:instrument\\s*)?(?:cluster|dials?|display|dash(?:board)?)'],
+    ['premiumAudio', '(?:premium|branded|bose|jbl|harman(?:\\s*kardon)?|sony|infinity|arkamys|burmester|bang\\s*(?:&|and)\\s*olufsen)(?:\\s*(?:sound(?:\\s*system)?|audio|speakers?|music))?'],
+    ['ambient', 'ambient(?:\\s*light\\w*)?|mood\\s*light\\w*'],
+    ['leather', 'leather(?:ette)?(?:\\s*seats?|\\s*upholstery)?'],
+    ['airPurifier', 'air\\s*purifier'],
+    ['massage', 'massag\\w*(?:\\s*seats?)?'],
+    ['captainSeats', 'captain(?:\\s*seats?|\\s*chairs?)?'],
+    ['paddleShifters', 'paddle\\s*shift\\w*|paddles'],
+    ['driveModes', 'drive\\s*modes?|terrain\\s*modes?'],
+    ['epb', 'electronic\\s*parking\\s*brake|epb|auto\\s*hold'],
+    ['powerTailgate', '(?:power(?:ed)?|electric|hands\\s*-?\\s*free)\\s*(?:tailgate|boot)'],
+    ['dashcam', 'dash\\s*-?\\s*cam(?:era)?'],
+    ['blindSpot', 'blind\\s*-?\\s*spot(?:\\s*(?:monitor|camera|view))?'],
+    ['tpms', 'tpms|tyre\\s*pressure(?:\\s*monitor\\w*)?|tire\\s*pressure'],
+    ['esc', 'esc|esp|stability\\s*control'],
+    ['hillDescent', 'hill\\s*descent(?:\\s*control)?'],
+    ['hillAssist', 'hill\\s*(?:start|hold)(?:\\s*assist)?'],
+    ['rearDisc', '(?:rear|all.?wheel|four)\\s*disc(?:\\s*brakes?)?|disc\\s*brakes'],
+    ['rainWipers', 'rain\\s*-?\\s*sensing(?:\\s*wipers?)?|auto(?:matic)?\\s*wipers?'],
+    ['autoHeadlamps', 'auto(?:matic)?\\s*head\\s*(?:lamps?|lights?)'],
+    ['ledHeadlamps', 'led\\s*head\\s*(?:lamps?|lights?)|led\\s*lights?'],
+    ['ledDRL', 'drls?|day\\s*time\\s*running(?:\\s*lights?)?'],
+    ['alloys', 'alloys?(?:\\s*wheels?)?'],
+    ['fogLamps', 'fog\\s*(?:lamps?|lights?)'],
+    ['roofRails', 'roof\\s*rails?'],
+    ['rearArmrest', 'rear\\s*(?:centre\\s*|center\\s*)?arm\\s*rest'],
+    ['tiltTelescopic', 'telescopic(?:\\s*steering)?|tilt\\s*(?:&|and)\\s*telescopic'],
+  ].map(([k, re]) => [k, new RegExp('(?:^|\\s)(?:' + re + ')(?=\\s|$)')]);
+  const STOP = /\b(cars?|vehicles?|models?|with|w\/|and|or|for|the|a|an|in|of|me|show|find|give|i|want|need|looking|that|has|have|having|which|good|new|options?|lakhs?|lacs?|lac|rs|inr|price|priced|budget|range|plus|\+|&)\b/g;
+  const SORTS = { price: 'cheapest first', mileage: 'best mileage first', expert: 'top rated first' };
   function parseQuery(q) {
-    let t = ' ' + q.toLowerCase().replace(/₹|rs\.?/g, ' ') + ' ';
-    const f = { body: null, fuel: null, trans: null, seats: null, min: null, max: null, brand: null, words: [] };
-    const take = (re, fn) => { const m = t.match(re); if (m) { fn(m); t = t.replace(m[0], ' '); } };
-    take(/(\d+(?:\.\d+)?)\s*(?:-|to)\s*(\d+(?:\.\d+)?)\s*(?:l|lakh|lakhs|lac)?\b/, (m) => { f.min = +m[1]; f.max = +m[2]; });
-    take(/(?:under|below|less than|upto|up to|within|<)\s*(\d+(?:\.\d+)?)\s*(?:l|lakh|lakhs|lac)?\b/, (m) => { f.max = +m[1]; });
-    take(/(?:above|over|more than|>)\s*(\d+(?:\.\d+)?)\s*(?:l|lakh|lakhs|lac)?\b/, (m) => { f.min = +m[1]; });
-    take(/\b(suvs?|crossover)\b/, () => (f.body = 'SUV'));
-    take(/\b(hatch|hatchbacks?|small car)\b/, () => (f.body = 'Hatchback'));
-    take(/\b(sedans?|saloon)\b/, () => (f.body = 'Sedan'));
-    take(/\b(muvs?|mpvs?|people mover)\b/, () => (f.body = 'MUV / MPV'));
-    take(/\b(evs?|electric)\b/, () => (f.fuel = 'Electric'));
-    take(/\b(diesel)\b/, () => (f.fuel = 'Diesel'));
-    take(/\b(petrol)\b/, () => (f.fuel = 'Petrol'));
+    let t = ' ' + q.toLowerCase().replace(/₹/g, ' ').replace(/[’',!?]/g, ' ').replace(/\s+/g, ' ') + ' ';
+    const f = { body: null, fuel: null, trans: null, seats: null, min: null, max: null, brand: null, drive: null, safe: null, sort: null, feats: [], words: [], ignored: [] };
+    const take = (re, fn) => { const m = t.match(re); if (m) { fn(m); t = t.replace(m[0], ' '); return true; } return false; };
+    // features first, so "android auto" or "automatic climate" aren't read as a gearbox
+    for (const [k, re] of FEAT_WORDS) if (FIDX[k] != null && take(re, () => {})) { if (!f.feats.includes(k)) f.feats.push(k); if (k === 'panoramic') f.feats = f.feats.filter((x) => x !== 'sunroof'); }
+    if (f.feats.includes('panoramic')) f.feats = f.feats.filter((x) => x !== 'sunroof');
+    const amt = (n, unit) => (/^(cr|crore|crores)$/.test(unit || '') ? +n * 100 : +n);
+    const U = '\\s*(l|lakh|lakhs|lac|lacs|cr|crore|crores|k)?\\b';
+    take(new RegExp('(\\d+(?:\\.\\d+)?)' + U + '\\s*(?:-|to|and)\\s*(\\d+(?:\\.\\d+)?)' + U), (m) => { f.min = amt(m[1], m[2] || m[4]); f.max = amt(m[3], m[4]); });
+    take(new RegExp('(?:under|below|less than|upto|up to|within|max(?:imum)?|<|not more than|cheaper than)\\s*(?:rs\\.?\\s*)?(\\d+(?:\\.\\d+)?)' + U), (m) => { f.max = amt(m[1], m[2]); });
+    take(new RegExp('(?:above|over|more than|>|min(?:imum)?|at least|starting)\\s*(?:rs\\.?\\s*)?(\\d+(?:\\.\\d+)?)' + U), (m) => { f.min = amt(m[1], m[2]); });
+    take(new RegExp('(?:around|about|approx(?:imately)?|~|near|close to)\\s*(?:rs\\.?\\s*)?(\\d+(?:\\.\\d+)?)' + U), (m) => { const v = amt(m[1], m[2]); f.min = Math.round(v * 0.85 * 10) / 10; f.max = Math.round(v * 1.15 * 10) / 10; });
+    take(/\b(\d+(?:\.\d+)?)\s*(l|lakh|lakhs|lac|lacs|cr|crore|crores)\b/, (m) => { f.max = amt(m[1], m[2]); });
+    take(/\b(suvs?|crossovers?|compact suvs?|jeeps?)\b/, () => (f.body = 'SUV'));
+    take(/\b(hatch|hatchbacks?|hatches|small cars?|city cars?)\b/, () => (f.body = 'Hatchback'));
+    take(/\b(sedans?|saloons?)\b/, () => (f.body = 'Sedan'));
+    take(/\b(muvs?|mpvs?|people movers?|vans?)\b/, () => (f.body = 'MUV / MPV'));
+    take(/\b(evs?|electric|battery|ev cars?)\b/, () => (f.fuel = 'Electric'));
+    take(/\b(diesels?)\b/, () => (f.fuel = 'Diesel'));
+    take(/\b(petrols?|gasoline|turbo petrol)\b/, () => (f.fuel = 'Petrol'));
     take(/\b(cng)\b/, () => (f.fuel = 'CNG'));
-    take(/\b(hybrid|phev)\b/, () => (f.fuel = 'Hybrid'));
-    take(/\b(automatic|auto|amt|cvt|dct|at)\b/, () => (f.trans = 'Automatic'));
-    take(/\b(manual|mt)\b/, () => (f.trans = 'Manual'));
-    take(/\b([67])\s*-?\s*seat(?:er|s)?\b/, () => (f.seats = '6–7'));
-    take(/\b([45])\s*-?\s*seat(?:er|s)?\b/, () => (f.seats = '4–5'));
-    for (const b of BRANDS()) { const bl = b.toLowerCase(), alias = { 'maruti suzuki': 'maruti', 'mercedes-benz': 'mercedes|benz', 'land rover': 'land rover|range rover' }[bl]; const re = new RegExp('\\b(' + bl.replace(/[-]/g, '.') + (alias ? '|' + alias : '') + ')\\b'); if (re.test(t)) { f.brand = b; t = t.replace(re, ' '); break; } }
-    f.words = t.replace(/\b(cars?|with|and|for|the|a|an|in|of|me|show|best|good|new|lakhs?|lac|l)\b/g, ' ').split(/\s+/).filter((w) => w.length > 1);
+    take(/\b(hybrids?|phev|plug.?in)\b/, () => (f.fuel = 'Hybrid'));
+    take(/\b(automatics?|auto|amt|cvt|dct|dsg|at|ivt|torque converter|two pedal|clutchless|no clutch)\b/, () => (f.trans = 'Automatic'));
+    take(/\b(manuals?|mt|stick shift|stick)\b/, () => (f.trans = 'Manual'));
+    take(/\b([67]|six|seven)\s*-?\s*seat(?:er|ers|s)?\b|\b(third row|3rd row|three rows?|7 seats|big family)\b/, () => (f.seats = '6–7'));
+    take(/\b([45]|four|five)\s*-?\s*seat(?:er|ers|s)?\b/, () => (f.seats = '4–5'));
+    take(/\b(4x4|4wd|awd|all.?wheel drive|four.?wheel drive|off.?road(?:er|ing)?)\b/, () => (f.drive = true));
+    take(/\b(5|five)\s*-?\s*star(?:\s*(?:safety|rated|rating|ncap))?\b/, () => (f.safe = 5));
+    take(/\b(safest|safe|safety|ncap|crash.?tested)\b/, () => (f.safe = f.safe || 4));
+    take(/\b(cheapest|cheap|affordable|budget friendly|low cost|lowest price|value)\b/, () => (f.sort = 'price'));
+    take(/\b(best mileage|mileage|fuel efficient|economical|efficient|frugal)\b/, () => (f.sort = 'mileage'));
+    take(/\b(best|top rated|top|highest rated|recommended|popular)\b/, () => (f.sort = f.sort || 'expert'));
+    for (const b of BRANDS()) { const bl = b.toLowerCase(), alias = { 'maruti suzuki': 'maruti suzuki|maruti|suzuki|nexa', 'mercedes-benz': 'mercedes-benz|mercedes benz|mercedes|benz|merc', 'land rover': 'land rover|range rover|landrover', volkswagen: 'volkswagen|vw', 'mg': 'mg|morris garages' }[bl]; const re = new RegExp('\\b(' + (alias || bl.replace(/[-]/g, '.')) + ')\\b'); if (re.test(t)) { f.brand = b; t = t.replace(re, ' '); break; } }
+    // anything left must match a model/variant name; words that match no car at all are ignored (and shown as ignored)
+    const hayAll = DATA.cars.map((c) => `${c.brand} ${c.model} ${c.variant}`.toLowerCase());
+    for (const w of t.replace(STOP, ' ').split(/\s+/).filter((w) => w.length > 1)) {
+      const w2 = w.replace(/s$/, '');
+      if (hayAll.some((h) => h.includes(w))) f.words.push(w); else if (w2.length > 1 && hayAll.some((h) => h.includes(w2))) f.words.push(w2); else f.ignored.push(w);
+    }
     return f;
   }
+  // what the search understood, as removable chips
+  function queryParts(f) {
+    if (!f) return [];
+    const p = [];
+    if (f.brand) p.push(['brand', f.brand]);
+    if (f.words.length) p.push(['words', '“' + f.words.join(' ') + '”']);
+    if (f.body) p.push(['body', { SUV: 'SUVs', Hatchback: 'Hatchbacks', Sedan: 'Sedans', 'MUV / MPV': 'MUVs / MPVs' }[f.body] || f.body]);
+    if (f.fuel) p.push(['fuel', f.fuel]);
+    if (f.trans) p.push(['trans', f.trans]);
+    if (f.seats) p.push(['seats', f.seats + ' seats']);
+    if (f.drive) p.push(['drive', '4x4 / AWD']);
+    if (f.safe) p.push(['safe', f.safe === 5 ? '5-star safety' : '4★+ safety rating']);
+    if (f.min || f.max) p.push(['budget', f.min && f.max ? `₹${f.min}–${f.max} L` : f.max ? `Under ₹${f.max} L` : `Over ₹${f.min} L`]);
+    for (const k of f.feats) p.push(['feat:' + k, 'With ' + FLABEL(k).replace(/ \(any\)$/, '')]);
+    if (f.sort) p.push(['sort', SORTS[f.sort]]);
+    return p;
+  }
+  function qfWithout(f, part) {
+    const g = { ...f, feats: f.feats.slice(), words: f.words.slice() };
+    if (part.startsWith('feat:')) g.feats = g.feats.filter((k) => k !== part.slice(5));
+    else if (part === 'budget') g.min = g.max = null;
+    else if (part === 'words') g.words = [];
+    else g[part] = null;
+    return queryParts(g).length ? g : null;
+  }
+  const featsOn = () => (state.qf && state.qf.feats.length ? new Set([...state.feats, ...state.qf.feats]) : state.feats);
   function queryMatch(c) {
     const f = state.qf; if (!f) return true;
+    if (!queryParts(f).length) return false; // nothing in the search was understood
     if (f.body && c.body !== f.body) return false;
     if (f.fuel && c.fuel !== f.fuel) return false;
     if (f.trans && c.transmission !== f.trans) return false;
     if (f.seats && seatGroup(c.seats) !== f.seats) return false;
     if (f.brand && c.brand !== f.brand) return false;
+    if (f.drive && !/4x4|4wd|awd|all/i.test(c.drive || '')) return false;
+    if (f.safe && !(((DATA.ncap || {})[c.brand + '|' + c.model] || {}).stars >= f.safe)) return false;
     if (f.max && c.orTotal > f.max * L) return false;
     if (f.min && c.orTotal < f.min * L) return false;
     if (f.words.length) { const hay = `${c.brand} ${c.model} ${c.variant}`.toLowerCase(); if (!f.words.every((w) => hay.includes(w))) return false; }
@@ -367,7 +471,13 @@
     state.q = q.trim();
     state.qf = state.q ? parseQuery(state.q) : null;
     if (state.q && state.tab === 'foryou') state.tab = 'all';
-    state.page = 1; render();
+    state.page = 1; render(); drawHints();
+  }
+  const HINTS = ['SUV with sunroof', 'Automatic under 10 lakh', 'Safest 7 seater', 'Electric SUV with 360 camera', 'Diesel with ventilated seats', 'Best mileage hatchback', 'Creta'];
+  function drawHints() {
+    const h = $('#qHints'); if (!h) return;
+    h.hidden = !!state.q;
+    h.innerHTML = `<span class="muted">Try</span>${HINTS.map((x) => `<button type="button" class="q-hint" data-q="${esc(x)}">${esc(x)}</button>`).join('')}`;
   }
   function wireShowroom() {
     $('#tabs').addEventListener('click', (e) => {
@@ -380,6 +490,8 @@
       const t = e.target.closest('.tile'); if (t) openCar(t.dataset.key);
     });
     $('#shelves').addEventListener('keydown', (e) => { const t = e.target.closest('.tile'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openCar(t.dataset.key); } });
+    $('#qHints').addEventListener('click', (e) => { const b = e.target.closest('[data-q]'); if (!b) return; $('#q').value = b.dataset.q; runSearch(b.dataset.q); });
+    drawHints();
     let qt; $('#q').addEventListener('input', (e) => { clearTimeout(qt); qt = setTimeout(() => runSearch(e.target.value), 250); });
     $('#q').addEventListener('keydown', (e) => { if (e.key === 'Enter') { clearTimeout(qt); runSearch(e.target.value); e.target.blur(); } });
     $('#scrim').addEventListener('click', closeDrawer);
@@ -406,7 +518,12 @@
     const nV = list.reduce((s, m) => s + m.vs.length, 0);
     const stName = RTO.states[state.st].name;
     $('#resultTitle').textContent = list.length ? `${list.length} model${list.length > 1 ? 's' : ''} · ${nV} variants match` : 'No cars match';
-    $('#resultSub').textContent = `On-road prices estimated for ${stName}.` + (state.feats.size ? ' Cars with every selected feature are listed first.' : ' Use the filters to narrow down.');
+    if (list.length && featsOn().size) {
+      const ok = list.filter((m) => m.tier === 0).length, rest = list.length - ok;
+      $('#resultTitle').textContent = ok ? `${ok} model${ok > 1 ? 's' : ''} match` : 'No confirmed matches';
+      if (rest) $('#resultTitle').insertAdjacentHTML('beforeend', `<span class="rt-more"> + ${rest} more to check</span>`);
+    }
+    $('#resultSub').textContent = `On-road prices estimated for ${stName}.` + (featsOn().size ? ' Confirmed matches first, then cars to check (makers that don\'t publish features by variant).' : ' Use the filters to narrow down.') + (state.qf && state.qf.ignored.length ? ` Ignored: ${state.qf.ignored.join(', ')}.` : '');
     $('#activeChips').innerHTML = activeFilters().map(([spec, label]) => `<button class="chip" data-rm="${esc(spec)}">${esc(label)} ✕</button>`).join('');
     const shown = list.slice(0, state.page * PAGE);
     recBar();
@@ -415,7 +532,7 @@
     if (recMode && list.length) $('#resultTitle').textContent = `${list.length} model${list.length > 1 ? 's' : ''} ranked for you`;
     if (recMode) $('#resultSub').textContent = `Ranked on your priorities using Autocar India expert scores plus our specs data. Click a car for its variants, safety rating and nearby showrooms.`;
     $('#list').className = recMode ? 'list' : 'tile-grid';
-    $('#list').innerHTML = shown.length ? shown.map((m, i) => (recMode ? recCard(m, i + 1) : tile(m))).join('') : sorry();
+    $('#list').innerHTML = shown.length ? shown.map((m, i) => (!recMode && featsOn().size && m.tier > 0 && (i === 0 || shown[i - 1].tier === 0) ? `<div class="grid-split"><b>More to check</b><span class="muted">Not confirmed: the maker doesn't list features by variant online, or a feature is missing. Open a car to see its variants.</span></div>` : '') + (recMode ? recCard(m, i + 1) : tile(m))).join('') : sorry();
     $('#more').hidden = list.length <= shown.length;
     updateCompareBar();
   }
@@ -516,7 +633,8 @@
   // ---------------- active filters, removing one, and the "sorry" state ----------------
   function activeFilters() {
     const out = [];
-    if (state.q) out.push(['q:', `“${state.q}”`]);
+    for (const [part, label] of queryParts(state.qf)) out.push(['qp:' + part, label]);
+    if (state.q && !queryParts(state.qf).length) out.push(['q:', `“${state.q}”`]);
     if (state.budgetMin || state.budgetMax) out.push(['budget:', state.budgetMin && state.budgetMax ? `₹${state.budgetMin}–${state.budgetMax} L` : state.budgetMax ? `Under ₹${state.budgetMax} L` : `Over ₹${state.budgetMin} L`]);
     for (const n of ['body', 'fuel', 'trans', 'seats', 'brand']) for (const v of state[n]) out.push([`${n}:${v}`, n === 'seats' ? `${v} seats` : v]);
     for (const k of state.feats) out.push([`feats:${k}`, FLABEL(k)]);
@@ -526,6 +644,7 @@
     const [k, v] = spec.split(/:(.*)/s);
     if (k === 'budget') state.budgetMin = state.budgetMax = '';
     else if (k === 'q') { state.q = ''; state.qf = null; }
+    else if (k === 'qp') { state.qf = state.qf && qfWithout(state.qf, v); if (!state.qf) state.q = ''; }
     else if (state[k] instanceof Set) state[k].delete(v);
   }
   // how many models would show if each filter were removed on its own

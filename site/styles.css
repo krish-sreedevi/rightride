@@ -365,7 +365,11 @@ body.to-home .hero-inner > :nth-child(2) { animation-delay: .06s; } body.to-home
 .layout { display: block; max-width: 1400px; padding: 0 0 20px; }
 body.rec-mode .layout { padding-top: 0; }
 .results { min-width: 0; }
-.shop-top { padding: 22px 40px 6px; display: flex; justify-content: center; }
+.shop-top { padding: 22px 40px 6px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.q-hints { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; justify-content: center; width: min(760px, 100%); font-size: .82rem; }
+.q-hints[hidden] { display: none; }
+.q-hint { border: 0; background: none; color: var(--brand); font: inherit; font-weight: 500; padding: 4px 10px; border-radius: 999px; cursor: pointer; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--brand) 25%, transparent); transition: background .2s var(--ease); }
+.q-hint:hover { background: var(--brand-soft); }
 .search { display: flex; align-items: center; gap: 10px; width: min(640px, 100%); background: var(--chip); border-radius: 16px; padding: 0 16px; color: var(--muted); transition: box-shadow .25s var(--ease), background .25s var(--ease); }
 .search:focus-within { background: var(--panel); box-shadow: 0 0 0 2px var(--brand), var(--shadow); }
 .search input { flex: 1; min-width: 0; border: 0; background: transparent; font: inherit; font-size: .98rem; color: var(--text); padding: 13px 0; outline: none; }
@@ -460,6 +464,8 @@ body.drawer-open { overflow: hidden; }
 }
 @media (max-width: 900px) {
   .shop-top { padding: 14px 16px 4px; }
+  .q-hints { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; scrollbar-width: none; }
+  .q-hint { white-space: nowrap; }
   .tabs { padding: 0 16px; top: 108px; gap: 10px; }
   .tab-row { gap: 20px; }
   .shelf-head { padding: 0 16px 10px; }
@@ -661,3 +667,7 @@ body[data-page="car"] .hero, body[data-page="car"] .layout, body[data-page="car"
   .nc-bars > div { grid-template-columns: 100px 1fr auto; }
   .pr-hint { display: none; }
 }
+
+.rt-more { font-size: .55em; color: var(--muted); font-family: Inter, sans-serif; letter-spacing: 0; font-weight: 500; }
+.grid-split { grid-column: 1 / -1; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; padding: 18px 2px 4px; border-top: 1px solid var(--line); margin-top: 6px; font-size: .9rem; }
+.grid-split b { font-size: 1.05rem; }
