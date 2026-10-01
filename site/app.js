@@ -15,7 +15,7 @@
     budgetMin: '', budgetMax: '',
     body: new Set(), seats: new Set(), brand: new Set(), fuel: new Set(), trans: new Set(), transType: new Set(), drive: new Set(),
     feats: new Set(), allowUnknown: true, closeMatches: true, sort: 'price', page: 1,
-    compare: new Set(), open: new Set(), rec: null,
+    compare: new Set(), open: new Set(), rec: null, tab: 'foryou', q: '', qf: null,
   };
   const PAGE = 20;
 
@@ -93,6 +93,7 @@
     const lo = state.budgetMin ? Number(state.budgetMin) * 1e5 : 0;
     const hi = state.budgetMax ? Number(state.budgetMax) * 1e5 : Infinity;
     if (c.orTotal < lo || c.orTotal > hi) return null;
+    if (!queryMatch(c)) return null;
     if (state.body.size && !state.body.has(c.body)) return null;
     if (state.brand.size && !state.brand.has(c.brand)) return null;
     if (state.fuel.size && !state.fuel.has(c.fuel)) return null;
@@ -141,6 +142,7 @@
       if (s === 'match') return b.score - a.score || a.best.c.orTotal - b.best.c.orTotal;
       if (s === 'features') return b.maxFeat - a.maxFeat;
       if (s === 'mileage') return b.mileage - a.mileage;
+      if (s === 'expert') { const xa = (expertOf(a) || {}).s || 0, xb = (expertOf(b) || {}).s || 0; return xb - xa || a.best.c.orTotal - b.best.c.orTotal; }
       return a.best.c.orTotal - b.best.c.orTotal;
     });
     return list;
@@ -211,10 +213,10 @@
     return `<svg class="sil" viewBox="0 0 120 60" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="34" cy="46" r="7" fill="var(--panel)" stroke="currentColor" stroke-width="2.2"/><circle cx="88" cy="46" r="7" fill="var(--panel)" stroke="currentColor" stroke-width="2.2"/></svg>`;
   }
   const sized = (u, w) => (/asset\.autocarindia\.com/.test(u) ? `${u}?w=${w}` : u);
-  function carImg(m) {
+  function carImg(m, sizes = '(max-width: 900px) 120px, 200px') {
     if (!m.image) return silhouette(m.body);
     const alt = `${m.brand} ${m.model}`;
-    const set = /asset\.autocarindia\.com/.test(m.image) ? ` srcset="${esc(sized(m.image, 320))} 320w, ${esc(sized(m.image, 480))} 480w, ${esc(sized(m.image, 720))} 720w" sizes="(max-width: 900px) 120px, 200px"` : '';
+    const set = /asset\.autocarindia\.com/.test(m.image) ? ` srcset="${esc(sized(m.image, 320))} 320w, ${esc(sized(m.image, 480))} 480w, ${esc(sized(m.image, 720))} 720w" sizes="${sizes}"` : '';
     return `<img loading="lazy" decoding="async" src="${esc(sized(m.image, 480))}"${set} alt="${esc(alt)}" data-alt2="${esc(m.image2 || '')}" data-body="${esc(m.body)}" onerror="window.__rrImgErr&&window.__rrImgErr(this)">`;
   }
   window.__rrImgErr = (img) => {
@@ -223,9 +225,204 @@
     const t = document.createElement('template'); t.innerHTML = silhouette(img.dataset.body); img.replaceWith(t.content.firstChild);
   };
 
+  // ---------------- showroom: tabs, shelves, tiles, model sheet, search ----------------
+  const TABS = [
+    { id: 'picks', label: 'Your picks', when: () => !!state.rec },
+    { id: 'foryou', label: 'For you' },
+    { id: 'suv', label: 'SUVs', set: { body: ['SUV'] } },
+    { id: 'hatch', label: 'Hatchbacks', set: { body: ['Hatchback'] } },
+    { id: 'sedan', label: 'Sedans', set: { body: ['Sedan'] } },
+    { id: 'muv', label: 'MUVs', set: { body: ['MUV / MPV'] } },
+    { id: 'ev', label: 'Electric', set: { fuel: ['Electric'] } },
+    { id: 'u10', label: 'Under ₹10 L', max: 10 },
+    { id: 'top', label: 'Top rated', sort: 'expert' },
+    { id: 'all', label: 'All cars' },
+  ];
+  function drawTabs() {
+    const n = activeCount();
+    $('#tabs').innerHTML = `<div class="tab-row">${TABS.filter((t) => !t.when || t.when()).map((t) => `<button type="button" class="tab${state.tab === t.id ? ' on' : ''}" data-tab="${t.id}">${esc(t.label)}</button>`).join('')}</div>
+      <button type="button" id="openFilters" class="filter-btn${n ? ' has' : ''}"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Filters <span id="filterCount">${n ? n : ''}</span></button>`;
+  }
+  const activeCount = () => state.feats.size + ['body', 'fuel', 'trans', 'seats', 'brand'].reduce((s, k) => s + state[k].size, 0) + (state.budgetMin || state.budgetMax ? 1 : 0);
+  function clearFilters() { for (const k of SETS) state[k].clear(); state.budgetMin = state.budgetMax = ''; state.q = ''; state.qf = null; const q = $('#q'); if (q) q.value = ''; }
+  function setTab(id, opts = {}) {
+    const t = TABS.find((x) => x.id === id) || TABS[1];
+    if (id === 'picks' && state.rec) { state.tab = 'picks'; applyRec(state.rec, true); return; }
+    state.tab = t.id;
+    if (t.id !== 'foryou' && !opts.keep) {
+      clearFilters();
+      for (const [k, vals] of Object.entries(t.set || {})) vals.forEach((v) => state[k].add(v));
+      if (t.max) state.budgetMax = String(t.max);
+      state.sort = t.sort || (state.sort === 'rec' ? 'price' : state.sort === 'expert' && !t.sort ? 'price' : state.sort);
+      $('#sort').value = state.sort;
+    }
+    state.page = 1; store.set('tab', state.tab);
+    saveFilters(); buildFilters(); render();
+    if (!opts.noScroll) window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // every model with all its variants (shelves ignore the filters)
+  function groupAll() {
+    const g = new Map();
+    for (const c of DATA.cars) {
+      const k = c.brand + '|' + c.model;
+      if (!g.has(k)) g.set(k, { brand: c.brand, model: c.model, body: c.body, url: c.url, image: c.image, image2: c.image2, vs: [] });
+      g.get(k).vs.push({ c, ev: { miss: [], unk: [], score: 0 } });
+    }
+    for (const m of g.values()) {
+      m.min = Math.min(...m.vs.map((x) => x.c.orTotal)); m.max = Math.max(...m.vs.map((x) => x.c.orTotal));
+      m.fuels = [...new Set(m.vs.map((x) => x.c.fuel))];
+      m.trans = [...new Set(m.vs.map((x) => x.c.transmission).filter(Boolean))];
+      m.mileage = Math.max(0, ...m.vs.map((x) => (x.c.fuel === 'Electric' ? 0 : x.c.mileage || 0)));
+      m.seatsMax = Math.max(0, ...m.vs.map((x) => x.c.seats || 0));
+      m.x = expertOf(m); m.s = (m.x && m.x.s) || 0;
+    }
+    return [...g.values()];
+  }
+  const L = 1e5;
+  const byScore = (a, b) => b.s - a.s || a.min - b.min;
+  const SHELVES = [
+    { id: 'top', title: 'Top rated by experts', sub: 'Autocar India\'s highest-scoring cars on sale right now', pick: (ms) => ms.filter((m) => m.s).sort(byScore), feature: true, see: { tab: 'top' } },
+    { id: 'value', title: 'Best value under ₹10 L', sub: 'Expert favourites that won\'t stretch the budget', pick: (ms) => ms.filter((m) => m.min <= 10 * L).sort(byScore), see: { tab: 'u10', sort: 'expert' } },
+    { id: 'csuv', title: 'Compact SUVs under ₹15 L', sub: 'India\'s favourite kind of car', pick: (ms) => ms.filter((m) => m.body === 'SUV' && m.min <= 15 * L).sort(byScore), see: { set: { body: ['SUV'] }, max: 15, sort: 'expert' } },
+    { id: 'family', title: 'Family 7-seaters', sub: 'Room for everyone — SUVs and MUVs with three rows', pick: (ms) => ms.filter((m) => m.seatsMax >= 6).sort(byScore), see: { set: { seats: ['6–7'] }, sort: 'expert' } },
+    { id: 'auto12', title: 'Automatics under ₹12 L', sub: 'Two pedals, no clutch, sensible money', pick: (ms) => ms.filter((m) => m.vs.some((x) => x.c.transmission === 'Automatic' && x.c.orTotal <= 12 * L)).sort(byScore), see: { set: { trans: ['Automatic'] }, max: 12, sort: 'expert' } },
+    { id: 'ev', title: 'Go electric', sub: 'Every EV on sale, priced for your state', pick: (ms) => ms.filter((m) => m.fuels.includes('Electric')).sort(byScore), see: { tab: 'ev' } },
+    { id: 'mileage', title: 'Mileage champions', sub: 'The most kilometres per litre', pick: (ms) => ms.filter((m) => m.mileage).sort((a, b) => b.mileage - a.mileage), stat: (m) => `${m.mileage} km/l`, see: { sort: 'mileage' } },
+    { id: 'hatch', title: 'City hatchbacks', sub: 'Easy to park, easy on the wallet', pick: (ms) => ms.filter((m) => m.body === 'Hatchback').sort(byScore), see: { tab: 'hatch' } },
+    { id: 'sedan', title: 'Sedans', sub: 'Boot space and highway comfort', pick: (ms) => ms.filter((m) => m.body === 'Sedan').sort(byScore), see: { tab: 'sedan' } },
+    { id: 'lux', title: 'Luxury', sub: 'From ₹50 lakh and up', pick: (ms) => ms.filter((m) => m.min >= 50 * L).sort(byScore), see: { min: 50, sort: 'expert' } },
+  ];
+  function seeAll(id) {
+    const sh = SHELVES.find((x) => x.id === id); if (!sh) return;
+    const see = sh.see || {};
+    if (see.tab) { setTab(see.tab); if (see.sort) { state.sort = see.sort; $('#sort').value = see.sort; saveFilters(); render(); } return; }
+    clearFilters();
+    for (const [k, vals] of Object.entries(see.set || {})) vals.forEach((v) => state[k].add(v));
+    if (see.max) state.budgetMax = String(see.max);
+    if (see.min) state.budgetMin = String(see.min);
+    state.sort = see.sort || 'price'; $('#sort').value = state.sort;
+    state.tab = 'all'; state.page = 1; saveFilters(); buildFilters(); render(); window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function tile(m, opts = {}) {
+    const x = expertOf(m);
+    const key = m.brand + '|' + m.model;
+    const sub = opts.stat ? opts.stat(m) : (x && x.like && x.like[0]) || `${m.fuels.join(' · ')}`;
+    const warn = state.feats.size && m.best ? (m.best.ev.miss.length ? `<span class="tw miss">Missing ${m.best.ev.miss.length}</span>` : m.best.ev.unk.length ? `<span class="tw unk">${m.best.ev.unk.length} unconfirmed</span>` : `<span class="tw ok">All ${state.feats.size} ✓</span>`) : '';
+    return `<article class="tile${opts.big ? ' big' : ''}" data-key="${esc(key)}" tabindex="0" role="button" aria-label="${esc(m.brand + ' ' + m.model)}">
+      ${x && x.s ? `<span class="sc">${esc(x.s)}/10</span>` : ''}<span class="pr">${lakh(m.min)}</span>
+      <div class="timg">${carImg(m, opts.big ? '(max-width: 900px) 86vw, 560px' : '(max-width: 900px) 70vw, 280px')}</div>
+      <div class="tt"><h3>${opts.big ? esc(m.brand) + ' ' : ''}${esc(m.model)}</h3><div class="m">${opts.big ? esc(sub) : `${esc(m.brand)} · ${esc(sub)}`}</div>${warn}</div>
+    </article>`;
+  }
+  function drawShelves() {
+    const ms = groupAll();
+    $('#shelves').innerHTML = SHELVES.map((sh) => {
+      const items = sh.pick(ms).slice(0, 12);
+      if (!items.length) return '';
+      return `<section class="shelf" data-shelf="${sh.id}"><div class="shelf-head"><div><h2 class="display">${esc(sh.title)}</h2><p>${esc(sh.sub)}</p></div><button class="see" type="button" data-see="${sh.id}">See all <span aria-hidden="true">›</span></button></div>
+        <div class="rail-wrap"><button class="rail-btn prev" type="button" aria-label="Scroll left">‹</button><div class="rail">${items.map((m, i) => tile(m, { big: sh.feature && i === 0, stat: sh.stat })).join('')}</div><button class="rail-btn next" type="button" aria-label="Scroll right">›</button></div></section>`;
+    }).join('');
+  }
+
+  // model sheet: big picture, expert view, video, every variant
+  function modelSheet(key) {
+    let m = results().find((x) => x.brand + '|' + x.model === key) || groupAll().find((x) => x.brand + '|' + x.model === key);
+    if (!m) return;
+    const x = expertOf(m);
+    const pros = x ? x.like.map((t) => `<li class="pro">${esc(t)}</li>`).join('') + x.dislike.map((t) => `<li class="con">${esc(t)}</li>`).join('') : '';
+    $('#modalBody').innerHTML = `<div class="modal-head"><div><div class="brand muted">${esc(m.brand)} · ${esc(m.body)}</div><h2>${esc(m.model)}</h2></div><button class="btn ghost" data-close aria-label="Close">✕</button></div>
+      <div class="modal-body sheet">
+        <div class="sheet-hero"><div class="sheet-img">${carImg(m, '(max-width: 900px) 92vw, 560px')}</div>
+          <div class="sheet-info"><div class="muted small">On-road in ${esc(RTO.states[state.st].name)}</div><div class="sheet-price">${lakh(Math.min(...m.vs.map((v) => v.c.orTotal)))}${m.vs.length > 1 ? ` <span>– ${lakh(Math.max(...m.vs.map((v) => v.c.orTotal)))}</span>` : ''}</div>
+            ${x && x.s ? `<div class="xline"><span class="xbadge">Autocar ${esc(x.s)}/10</span>${x.basedOn ? `<span class="muted small"> review of the ${esc(x.basedOn)}</span>` : ''}</div>` : ''}
+            ${pros ? `<ul class="pc">${pros}</ul>` : ''}
+            <div class="sheet-cta"><a class="btn primary" href="${esc(ytUrl(m))}" target="_blank" rel="noopener">▶ Watch the review</a>${x && x.url ? `<a class="btn ghost" href="${esc(x.url)}" target="_blank" rel="noopener">Expert review ↗</a>` : ''}<a class="btn ghost" href="${esc(m.url)}" target="_blank" rel="noopener">Official site ↗</a></div>
+          </div></div>
+        <h3 style="margin:22px 0 8px">${m.vs.length} variant${m.vs.length > 1 ? 's' : ''}${state.feats.size || activeCount() ? ' matching your filters' : ''}</h3>
+        ${variantTable(m)}
+        <p class="hint">Tap a variant for its full price break-up and feature list. Tick up to 4 to compare.</p>
+      </div>`;
+    if (!$('#modal').open) $('#modal').showModal();
+  }
+
+  // natural-language search → filters
+  const BRANDS = () => [...new Set(DATA.cars.map((c) => c.brand))];
+  function parseQuery(q) {
+    let t = ' ' + q.toLowerCase().replace(/₹|rs\.?/g, ' ') + ' ';
+    const f = { body: null, fuel: null, trans: null, seats: null, min: null, max: null, brand: null, words: [] };
+    const take = (re, fn) => { const m = t.match(re); if (m) { fn(m); t = t.replace(m[0], ' '); } };
+    take(/(\d+(?:\.\d+)?)\s*(?:-|to)\s*(\d+(?:\.\d+)?)\s*(?:l|lakh|lakhs|lac)?\b/, (m) => { f.min = +m[1]; f.max = +m[2]; });
+    take(/(?:under|below|less than|upto|up to|within|<)\s*(\d+(?:\.\d+)?)\s*(?:l|lakh|lakhs|lac)?\b/, (m) => { f.max = +m[1]; });
+    take(/(?:above|over|more than|>)\s*(\d+(?:\.\d+)?)\s*(?:l|lakh|lakhs|lac)?\b/, (m) => { f.min = +m[1]; });
+    take(/\b(suvs?|crossover)\b/, () => (f.body = 'SUV'));
+    take(/\b(hatch|hatchbacks?|small car)\b/, () => (f.body = 'Hatchback'));
+    take(/\b(sedans?|saloon)\b/, () => (f.body = 'Sedan'));
+    take(/\b(muvs?|mpvs?|people mover)\b/, () => (f.body = 'MUV / MPV'));
+    take(/\b(evs?|electric)\b/, () => (f.fuel = 'Electric'));
+    take(/\b(diesel)\b/, () => (f.fuel = 'Diesel'));
+    take(/\b(petrol)\b/, () => (f.fuel = 'Petrol'));
+    take(/\b(cng)\b/, () => (f.fuel = 'CNG'));
+    take(/\b(hybrid|phev)\b/, () => (f.fuel = 'Hybrid'));
+    take(/\b(automatic|auto|amt|cvt|dct|at)\b/, () => (f.trans = 'Automatic'));
+    take(/\b(manual|mt)\b/, () => (f.trans = 'Manual'));
+    take(/\b([67])\s*-?\s*seat(?:er|s)?\b/, () => (f.seats = '6–7'));
+    take(/\b([45])\s*-?\s*seat(?:er|s)?\b/, () => (f.seats = '4–5'));
+    for (const b of BRANDS()) { const bl = b.toLowerCase(), alias = { 'maruti suzuki': 'maruti', 'mercedes-benz': 'mercedes|benz', 'land rover': 'land rover|range rover' }[bl]; const re = new RegExp('\\b(' + bl.replace(/[-]/g, '.') + (alias ? '|' + alias : '') + ')\\b'); if (re.test(t)) { f.brand = b; t = t.replace(re, ' '); break; } }
+    f.words = t.replace(/\b(cars?|with|and|for|the|a|an|in|of|me|show|best|good|new|lakhs?|lac|l)\b/g, ' ').split(/\s+/).filter((w) => w.length > 1);
+    return f;
+  }
+  function queryMatch(c) {
+    const f = state.qf; if (!f) return true;
+    if (f.body && c.body !== f.body) return false;
+    if (f.fuel && c.fuel !== f.fuel) return false;
+    if (f.trans && c.transmission !== f.trans) return false;
+    if (f.seats && seatGroup(c.seats) !== f.seats) return false;
+    if (f.brand && c.brand !== f.brand) return false;
+    if (f.max && c.orTotal > f.max * L) return false;
+    if (f.min && c.orTotal < f.min * L) return false;
+    if (f.words.length) { const hay = `${c.brand} ${c.model} ${c.variant}`.toLowerCase(); if (!f.words.every((w) => hay.includes(w))) return false; }
+    return true;
+  }
+  function runSearch(q) {
+    state.q = q.trim();
+    state.qf = state.q ? parseQuery(state.q) : null;
+    if (state.q && state.tab === 'foryou') state.tab = 'all';
+    state.page = 1; render();
+  }
+  function wireShowroom() {
+    $('#tabs').addEventListener('click', (e) => {
+      const t = e.target.closest('[data-tab]'); if (t) return setTab(t.dataset.tab);
+      if (e.target.closest('#openFilters')) openDrawer();
+    });
+    $('#shelves').addEventListener('click', (e) => {
+      const s = e.target.closest('[data-see]'); if (s) return seeAll(s.dataset.see);
+      const rb = e.target.closest('.rail-btn'); if (rb) { const r = rb.parentElement.querySelector('.rail'); r.scrollBy({ left: (rb.classList.contains('next') ? 1 : -1) * r.clientWidth * 0.85, behavior: 'smooth' }); return; }
+      const t = e.target.closest('.tile'); if (t) modelSheet(t.dataset.key);
+    });
+    $('#shelves').addEventListener('keydown', (e) => { const t = e.target.closest('.tile'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); modelSheet(t.dataset.key); } });
+    let qt; $('#q').addEventListener('input', (e) => { clearTimeout(qt); qt = setTimeout(() => runSearch(e.target.value), 250); });
+    $('#q').addEventListener('keydown', (e) => { if (e.key === 'Enter') { clearTimeout(qt); runSearch(e.target.value); e.target.blur(); } });
+    $('#scrim').addEventListener('click', closeDrawer);
+    $('#modal').addEventListener('click', (e) => {
+      const box = e.target.closest('.cmp-box');
+      if (box) { box.checked ? (state.compare.size < 4 ? state.compare.add(box.dataset.id) : (box.checked = false)) : state.compare.delete(box.dataset.id); updateCompareBar(); return; }
+      const tr = e.target.closest('tr.v'); if (tr && !e.target.closest('input')) detail(tr.dataset.id);
+    });
+  }
+  function openDrawer() { $('#filters').classList.add('open'); $('#scrim').hidden = false; document.body.classList.add('drawer-open'); }
+  function closeDrawer() { $('#filters').classList.remove('open'); $('#scrim').hidden = true; document.body.classList.remove('drawer-open'); }
+
   // ---------------- UI: results ----------------
   const FLABEL = (k) => DATA.features[FIDX[k]].label;
   function render() {
+    if ((activeCount() || state.q) && state.tab === 'foryou') state.tab = 'all';
+    if (state.tab === 'picks' && !(state.sort === 'rec' && state.rec)) state.tab = 'all';
+    drawTabs();
+    const shelvesView = state.tab === 'foryou';
+    $('#shelves').hidden = !shelvesView; $('#gridView').hidden = shelvesView;
+    document.body.classList.toggle('rec-mode', !!(state.sort === 'rec' && state.rec));
+    if (shelvesView) { drawShelves(); updateCompareBar(); return; }
     const list = results();
     const nV = list.reduce((s, m) => s + m.vs.length, 0);
     const stName = RTO.states[state.st].name;
@@ -235,15 +432,16 @@
     for (const k of state.feats) act.push(`<button class="chip" data-rm="feats:${k}">${esc(FLABEL(k))} ✕</button>`);
     for (const n of ['body', 'fuel', 'trans', 'seats', 'brand']) for (const v of state[n]) act.push(`<button class="chip" data-rm="${n}:${esc(v)}">${esc(TTYPES[v] && n === 'transType' ? TTYPES[v] : v)} ✕</button>`);
     if (state.budgetMin || state.budgetMax) act.push(`<button class="chip" data-rm="budget:">₹${state.budgetMin || 0}–${state.budgetMax || '∞'} L ✕</button>`);
+    if (state.q) act.unshift(`<button class="chip" data-rm="q:">“${esc(state.q)}” ✕</button>`);
     $('#activeChips').innerHTML = act.join('');
-    $('#filterCount').textContent = act.length ? `(${act.length})` : '';
     const shown = list.slice(0, state.page * PAGE);
     recBar();
     document.body.classList.toggle('rec-mode', !!(state.sort === 'rec' && state.rec));
     const recMode = state.sort === 'rec' && state.rec;
     if (recMode && list.length) $('#resultTitle').textContent = `${list.length} model${list.length > 1 ? 's' : ''} ranked for you`;
     if (recMode) $('#resultSub').textContent = `Ranked on your priorities using Autocar India expert scores plus our specs data. Click a car to watch its Autocar India video review.`;
-    $('#list').innerHTML = shown.length ? shown.map((m, i) => (recMode ? recCard(m, i + 1) : card(m))).join('') : `<div class="empty"><h2>Nothing matches every filter</h2><p class="muted">Try raising the budget, removing a feature, or ticking "also show cars missing 1 feature".</p>${state.rec ? '<button class="btn primary" type="button" data-rec="edit">Change my answers</button>' : ''}</div>`;
+    $('#list').className = recMode ? 'list' : 'tile-grid';
+    $('#list').innerHTML = shown.length ? shown.map((m, i) => (recMode ? recCard(m, i + 1) : tile(m))).join('') : `<div class="empty"><h2>Nothing matches every filter</h2><p class="muted">Try raising the budget, removing a feature, or ticking "also show cars missing 1 feature".</p>${state.rec ? '<button class="btn primary" type="button" data-rec="edit">Change my answers</button>' : ''}</div>`;
     $('#more').hidden = list.length <= shown.length;
     updateCompareBar();
   }
@@ -391,7 +589,7 @@
       <div class="rec-actions"><button class="btn ghost" type="button" data-rec="edit">Edit answers</button><button class="link" type="button" data-rec="exit">Browse all cars</button></div>`;
   }
   function applyRec(r) {
-    state.rec = r; store.set('rec', r);
+    state.rec = r; store.set('rec', r); state.tab = 'picks'; state.q = ''; state.qf = null; if ($('#q')) $('#q').value = '';
     for (const k of SETS) state[k].clear();
     BODY_OPTS[r.body].bodies.forEach((b) => state.body.add(b));
     if (r.trans !== 'Either') state.trans.add(r.trans);
@@ -402,7 +600,7 @@
     saveFilters(); buildFilters(); render(); go('cars'); window.scrollTo({ top: 0, behavior: 'instant' });
   }
   function exitRec() {
-    state.rec = null; store.set('rec', null);
+    state.rec = null; store.set('rec', null); state.tab = 'foryou';
     for (const k of SETS) state[k].clear(); state.budgetMin = state.budgetMax = '';
     state.sort = 'price'; $('#sort').value = 'price'; $('#sort option[value="rec"]').hidden = true;
     saveFilters(); buildFilters(); render();
@@ -679,7 +877,7 @@
     $('#activeChips').addEventListener('click', (e) => {
       const b = e.target.closest('[data-rm]'); if (!b) return;
       const [k, v] = b.dataset.rm.split(/:(.*)/s);
-      if (k === 'budget') { state.budgetMin = state.budgetMax = ''; } else state[k].delete(v);
+      if (k === 'budget') { state.budgetMin = state.budgetMax = ''; } else if (k === 'q') { state.q = ''; state.qf = null; $('#q').value = ''; } else state[k].delete(v);
       saveFilters(); buildFilters(); render();
     });
     $('#list').addEventListener('click', (e) => {
@@ -689,11 +887,12 @@
       if (box) { box.checked ? (state.compare.size < 4 ? state.compare.add(box.dataset.id) : (box.checked = false)) : state.compare.delete(box.dataset.id); updateCompareBar(); return; }
       const tr = e.target.closest('tr.v'); if (tr) { detail(tr.dataset.id); return; }
       if (e.target.closest('a, button, input, .variants')) return;
-      const rc = e.target.closest('.rec-card'); if (rc) window.open(rc.dataset.yt, '_blank', 'noopener');
+      const rc = e.target.closest('.rec-card'); if (rc) { window.open(rc.dataset.yt, '_blank', 'noopener'); return; }
+      const tl = e.target.closest('.tile'); if (tl) modelSheet(tl.dataset.key);
     });
     document.addEventListener('click', (e) => {
       const r = e.target.closest('[data-rec]'); if (!r) return;
-      if (r.dataset.rec === 'edit') openWizard(1); else exitRec();
+      if (r.dataset.rec === 'edit') openWizard(1); else { $('#sort option[value="rec"]').hidden = true; setTab('foryou'); }
     });
     $('#findBtn').addEventListener('click', () => openWizard(1));
     document.addEventListener('click', (e) => { if (e.target.closest('[data-open-finder]')) openWizard(1); });
@@ -707,14 +906,15 @@
       else if (b.dataset.loc === 'pick') { hideLocToast(); const s = $('#state'); s.focus(); s.classList.add('nudge'); setTimeout(() => s.classList.remove('nudge'), 1200); try { s.showPicker(); } catch (err) {} }
       else hideLocToast();
     });
-    $('#reset').addEventListener('click', () => { if (state.rec) return exitRec(); for (const k of SETS) state[k].clear(); state.budgetMin = state.budgetMax = ''; saveFilters(); buildFilters(); render(); });
+    $('#reset').addEventListener('click', () => { clearFilters(); if (state.sort === 'rec') { state.sort = 'price'; $('#sort').value = 'price'; } saveFilters(); buildFilters(); render(); });
     $('#compareGo').addEventListener('click', compareView);
     $('#compareClear').addEventListener('click', () => { state.compare.clear(); render(); });
     $('#modal').addEventListener('click', (e) => { if (e.target.closest('[data-close]') || e.target.id === 'modal') $('#modal').close(); });
     $('#aboutLink').addEventListener('click', (e) => { e.preventDefault(); about(); });
-    $('#openFilters').addEventListener('click', () => $('#filters').classList.add('open'));
-    $('#closeFilters').addEventListener('click', () => $('#filters').classList.remove('open'));
-    $('#applyMobile').addEventListener('click', () => { $('#filters').classList.remove('open'); window.scrollTo(0, 0); });
+    $('#closeFilters').addEventListener('click', closeDrawer);
+    $('#applyMobile').addEventListener('click', () => { closeDrawer(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    $('#list').addEventListener('keydown', (e) => { const t = e.target.closest('.tile'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); modelSheet(t.dataset.key); } });
+    wireShowroom();
   }
 
   async function init() {
@@ -724,7 +924,7 @@
     } catch (e) {
       $('#resultTitle').textContent = 'Could not load car data. Please refresh.'; return;
     }
-    fillStates(); loadFilters(); prep(); buildFilters(); wire(); render(); wirePages(); autoLocate();
+    fillStates(); loadFilters(); state.tab = store.get('tab', null) || (state.rec && state.sort === 'rec' ? 'picks' : 'foryou'); prep(); buildFilters(); wire(); render(); wirePages(); autoLocate();
     $('#heroStats').textContent = `${DATA.cars.length.toLocaleString('en-IN')} variants of ${new Set(DATA.cars.map((c) => c.brand + c.model)).size} models from ${DATA.brands.length} brands — priced for your state and ranked with Autocar India's expert reviews.`;
     $('#updated').textContent = `Data updated ${new Date(DATA.generated).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} · ${DATA.cars.length} variants from ${DATA.brands.length} brands`;
   }
