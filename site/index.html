@@ -37,12 +37,36 @@
 
   <div id="locToast" class="loc-toast" role="status" hidden></div>
 
-  <section class="hero" id="hero"><div class="hero-inner">
-    <p class="eyebrow">Every car · Every variant · Real on-road prices</p>
-    <p class="hero-title">Find the Right Ride.</p>
-    <p class="lede" id="heroStats">Every new car sold in India, priced for your state and ranked with Autocar India's expert reviews.</p>
-    <div class="hero-cta"><button class="btn primary lg shimmer" type="button" data-open-finder>Find my Right Ride</button><a class="btn ghost lg" href="#/cars" data-go="cars">Browse all cars <span aria-hidden="true">→</span></a></div>
-  </div></section>
+  <section class="hero sunrise" id="hero">
+    <svg class="scene" viewBox="0 0 1360 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="sky0"/><stop offset=".72" class="sky1"/><stop offset="1" class="sky2"/></linearGradient>
+        <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="gr0"/><stop offset="1" class="gr1"/></linearGradient>
+        <radialGradient id="sunfill" cx="50%" cy="62%" r="60%"><stop offset="0" stop-color="#ff7a5c"/><stop offset=".55" stop-color="#E10600"/><stop offset="1" stop-color="#b10500"/></radialGradient>
+        <radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ff4b2b" stop-opacity=".35"/><stop offset="1" stop-color="#ff4b2b" stop-opacity="0"/></radialGradient>
+        <clipPath id="above"><rect width="1360" height="470"/></clipPath>
+      </defs>
+      <rect width="1360" height="470" fill="url(#sky)"/>
+      <rect y="470" width="1360" height="390" fill="url(#ground)"/>
+      <g clip-path="url(#above)"><g class="sun-rise">
+        <ellipse class="halo" cx="680" cy="470" rx="420" ry="300" fill="url(#halo)"/>
+        <circle cx="680" cy="470" r="190" fill="url(#sunfill)"/>
+      </g></g>
+      <line class="horizon" x1="0" y1="470" x2="1360" y2="470"/>
+      <g class="road">
+        <path class="asphalt" d="M671 470 C 671 548, 604 668, 440 860 L 774 860 C 726 668, 690 548, 689 470 Z"/>
+        <path class="lane" d="M680 474 C 682 560, 652 690, 600 860"/>
+      </g>
+    </svg>
+    <div class="sun-copy">
+      <p class="hero-title">Find the Right Ride.</p>
+      <p class="lede" id="heroStats">Every new car in India · real on-road prices · expert scores</p>
+    </div>
+    <div class="sun-cta"><div class="glass-pill">
+      <button class="btn primary lg shimmer" type="button" data-open-finder>Find my Right Ride <span aria-hidden="true">→</span></button>
+      <a class="btn lg plain" href="#/cars" data-go="cars">Browse all cars</a>
+    </div></div>
+  </section>
 
   <main class="layout">
     <aside id="filters" class="filters" aria-label="Filters">

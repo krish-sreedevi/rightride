@@ -818,7 +818,7 @@
       B.classList.remove('leaving', 'to-cars', 'to-home');
       B.dataset.page = next;
       window.scrollTo({ top: 0, behavior: 'instant' });
-      if (next === 'cars') render();
+      if (next === 'cars') render(); else requestAnimationFrame(placeHorizon);
       if (animate && prev && !reduce) { void B.offsetWidth; B.classList.add(next === 'cars' ? 'to-cars' : 'to-home'); clearTimeout(showPage.t); showPage.t = setTimeout(() => B.classList.remove('to-cars', 'to-home'), 1100); }
     };
     if (animate && prev && !reduce && window.scrollY < 400) { B.classList.add('leaving'); clearTimeout(showPage.l); showPage.l = setTimeout(swap, 330); }
@@ -829,7 +829,15 @@
     if (location.hash !== h) location.hash = h; else showPage(next);
   }
   function route(animate) { showPage(/^#\/cars/.test(location.hash) ? 'cars' : 'home', animate); }
+  // keep the home buttons exactly on the horizon of the sunrise scene (viewBox 1360×860, horizon y=470, 'slice' scaling)
+  function placeHorizon() {
+    const h = $('#hero'); if (!h) return;
+    const W = h.clientWidth, H = h.clientHeight; if (!W || !H) return;
+    const k = Math.max(W / 1360, H / 860), y = (H - 860 * k) / 2 + 470 * k;
+    h.style.setProperty('--hz', y + 'px');
+  }
   function wirePages() {
+    window.addEventListener('resize', placeHorizon); placeHorizon();
     window.addEventListener('hashchange', () => route(true));
     document.addEventListener('click', (e) => {
       const a = e.target.closest('[data-go]'); if (!a) return;
@@ -925,7 +933,7 @@
       $('#resultTitle').textContent = 'Could not load car data. Please refresh.'; return;
     }
     fillStates(); loadFilters(); state.tab = store.get('tab', null) || (state.rec && state.sort === 'rec' ? 'picks' : 'foryou'); prep(); buildFilters(); wire(); render(); wirePages(); autoLocate();
-    $('#heroStats').textContent = `${DATA.cars.length.toLocaleString('en-IN')} variants of ${new Set(DATA.cars.map((c) => c.brand + c.model)).size} models from ${DATA.brands.length} brands — priced for your state and ranked with Autocar India's expert reviews.`;
+    $('#heroStats').textContent = `${DATA.cars.length.toLocaleString('en-IN')} variants · ${new Set(DATA.cars.map((c) => c.brand + c.model)).size} models · ${DATA.brands.length} brands — priced for your state`;
     $('#updated').textContent = `Data updated ${new Date(DATA.generated).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} · ${DATA.cars.length} variants from ${DATA.brands.length} brands`;
   }
   init();

@@ -173,13 +173,10 @@ body[data-page="home"] .layout, body[data-page="home"] .foot, body[data-page="ho
 body[data-page="cars"] .hero { display: none; }
 
 /* home page: a calm, full-screen landing */
-.hero { min-height: calc(100svh - 66px); display: grid; place-items: center; padding: 40px 20px 80px; max-width: none; position: relative; overflow: hidden; }
-.hero::before { content: ''; position: absolute; inset: auto -20% -40% -20%; height: 80%; background: radial-gradient(closest-side, color-mix(in srgb, var(--brand) 14%, transparent), transparent 70%); pointer-events: none; animation: glow 6s ease-in-out infinite alternate; }
 @keyframes glow { from { opacity: .6; transform: translateY(10px) scale(1); } to { opacity: 1; transform: translateY(-10px) scale(1.06); } }
 .hero-inner { position: relative; max-width: 900px; text-align: center; }
 
 /* leaving a page */
-body.leaving[data-page="home"] .hero-inner { animation: page-out .34s var(--ease) both; }
 body.leaving[data-page="cars"] .layout, body.leaving[data-page="cars"] .foot { animation: page-out-down .34s var(--ease) both; }
 @keyframes page-out { to { opacity: 0; transform: translateY(-36px) scale(.94); filter: blur(6px); } }
 @keyframes page-out-down { to { opacity: 0; transform: translateY(24px); filter: blur(4px); } }
@@ -187,7 +184,6 @@ body.leaving[data-page="cars"] .layout, body.leaving[data-page="cars"] .foot { a
 body.to-cars .layout { animation: page-in .6s var(--ease) both; }
 body.to-cars .topbar .find-btn { animation: cta-arrive .9s var(--ease) .1s both, rr-spin 4s linear infinite; }
 body.to-cars .topbar::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: linear-gradient(90deg, transparent, var(--brand), transparent); animation: sweep .9s var(--ease) both; }
-body.to-home .hero-inner > * { animation: page-in .7s var(--ease) both; }
 body.to-home .hero-inner > :nth-child(2) { animation-delay: .06s; } body.to-home .hero-inner > :nth-child(3) { animation-delay: .12s; } body.to-home .hero-inner > :nth-child(4) { animation-delay: .18s; }
 @keyframes page-in { from { opacity: 0; transform: translateY(28px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
 @keyframes title-in { from { opacity: 0; transform: translate(-50%, 0); filter: blur(4px); } to { opacity: 1; transform: translate(-50%, -50%); filter: none; } }
@@ -324,7 +320,6 @@ body.to-home .hero-inner > :nth-child(2) { animation-delay: .06s; } body.to-home
 /* ---------- small screens ---------- */
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; padding: 4px 16px 16px; }
-  .hero { padding: 24px 16px 60px; min-height: calc(100svh - 110px); }
   .filters { position: fixed; inset: 0; top: 0; max-height: none; border-radius: 0; z-index: 40; transform: translateX(-100%); transition: transform .35s var(--ease); padding-top: 20px; }
   .filters.open { transform: none; }
   .only-mobile { display: inline-flex; }
@@ -482,3 +477,51 @@ body.drawer-open { overflow: hidden; }
   .sheet-hero { grid-template-columns: 1fr; }
   .sheet-img { height: 200px; }
 }
+
+/* =========================================================
+   Home: Sunrise
+   ========================================================= */
+body[data-page="home"] .topbar { position: fixed; left: 0; right: 0; background: transparent; border-bottom-color: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.sunrise { position: relative; height: 100svh; min-height: 560px; overflow: hidden; margin: 0; padding: 0; text-align: center; }
+.sunrise .scene { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sky0 { stop-color: #fff7f2; } .sky1 { stop-color: #ffd9c8; } .sky2 { stop-color: #ffb89c; }
+.gr0 { stop-color: #f1f1f4; } .gr1 { stop-color: #e4e4ea; }
+.horizon { stroke: rgba(160, 90, 70, .25); stroke-width: 1; }
+.asphalt { fill: #1d1d1f; }
+.lane { fill: none; stroke: #fff; stroke-width: 5; stroke-linecap: round; stroke-dasharray: 22 20; opacity: .92; animation: lane-flow 1.1s linear infinite; }
+@keyframes lane-flow { to { stroke-dashoffset: -42; } }
+.sun-rise { transform-box: view-box; transform-origin: 680px 470px; animation: sunrise 1.8s .15s cubic-bezier(.16,.84,.24,1) both; }
+@keyframes sunrise { from { transform: translateY(200px); } to { transform: none; } }
+.halo { animation: halo 5s 2s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
+@keyframes halo { to { transform: scale(1.08); opacity: .8; } }
+.road { transform-box: view-box; transform-origin: 680px 470px; animation: road-unroll 1.2s .9s cubic-bezier(.3,.7,.2,1) both; }
+@keyframes road-unroll { from { transform: scaleY(0); opacity: 0; } 20% { opacity: 1; } to { transform: none; } }
+.sun-copy { position: absolute; left: 0; right: 0; top: 15svh; z-index: 2; padding: 0 20px; }
+.sun-copy .hero-title { font-size: clamp(2.1rem, 5.6vw, 3.8rem); background: none; color: #1d1d1f; -webkit-background-clip: border-box; background-clip: border-box; animation: page-in .9s .3s var(--ease) both; }
+.sun-copy .lede { margin-top: 14px; color: #6e6e73; animation: page-in .9s .45s var(--ease) both; }
+.sun-cta { position: absolute; left: 0; right: 0; top: var(--hz, 54.6%); transform: translateY(-50%); z-index: 3; display: flex; justify-content: center; padding: 0 16px; }
+.sun-cta .glass-pill { animation: cta-horizon 1s 1.6s cubic-bezier(.2,.9,.25,1.15) both; }
+@keyframes cta-horizon { from { opacity: 0; transform: translateY(18px) scale(.92); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+.glass-pill { display: flex; gap: 8px; padding: 8px; border-radius: 999px; background: rgba(255,255,255,.6); -webkit-backdrop-filter: saturate(180%) blur(18px); backdrop-filter: saturate(180%) blur(18px); box-shadow: 0 12px 40px rgba(0,0,0,.12), inset 0 0 0 1px rgba(255,255,255,.6); }
+.btn.plain { background: transparent; color: #1d1d1f; }
+.btn.plain:hover { background: rgba(0,0,0,.06); }
+body.leaving[data-page="home"] .sun-copy, body.leaving[data-page="home"] .sun-cta .glass-pill { animation: page-out .34s var(--ease) both; }
+body.leaving[data-page="home"] .scene { animation: scene-out .4s var(--ease) both; }
+@keyframes scene-out { to { opacity: 0; transform: scale(1.04); filter: blur(4px); } }
+@media (prefers-color-scheme: dark) {
+  .sky0 { stop-color: #07070c; } .sky1 { stop-color: #2a0b10; } .sky2 { stop-color: #6a1408; }
+  .gr0 { stop-color: #111113; } .gr1 { stop-color: #060607; }
+  .horizon { stroke: rgba(255, 90, 60, .35); }
+  .asphalt { fill: #000; } .lane { stroke: #ff5a45; }
+  .sun-copy .hero-title { color: #f5f5f7; } .sun-copy .lede { color: #b8b8be; }
+  .glass-pill { background: rgba(30,30,32,.55); box-shadow: 0 12px 40px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.08); }
+  .btn.plain { color: #f5f5f7; } .btn.plain:hover { background: rgba(255,255,255,.08); }
+}
+@media (max-width: 600px) {
+  .sun-copy { top: 15svh; }
+  .glass-pill { gap: 4px; padding: 6px; }
+  .glass-pill .btn.lg { padding: 12px 16px; font-size: .9rem; }
+  body[data-page="home"] .topbar .loc { order: 0; width: auto; margin-left: auto; }
+  body[data-page="home"] .topbar .loc select { max-width: 170px; }
+}
+@media (prefers-reduced-motion: reduce) { .sun-rise, .road, .lane, .halo { animation: none !important; } }
