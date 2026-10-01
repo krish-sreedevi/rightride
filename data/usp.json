@@ -1,0 +1,1013 @@
+{
+ "note": "AI-compiled from Autocar India expert reviews (likes and review text); 3-5 per model",
+ "models": {
+  "Audi|A4": [
+   "Exceptionally refined 190hp turbo-petrol engine",
+   "Superb fit, finish and build quality",
+   "Soft, pliant ride suited to Indian roads",
+   "Quick 0-100kph in about 7.2 seconds",
+   "Responsive 10.1-inch MMI touchscreen"
+  ],
+  "Audi|A6": [
+   "Smooth, quiet 245hp turbo-petrol engine",
+   "Excellent ride comfort over poor roads",
+   "Comfortable rear seat for two",
+   "Four-zone climate control and window blinds",
+   "Large 530-litre boot with spare"
+  ],
+  "Audi|Q3": [
+   "Quattro all-wheel drive as standard",
+   "Punchy, refined 190hp turbo-petrol engine",
+   "Excellent ride comfort on poor roads",
+   "Large 530-litre boot with gesture tailgate",
+   "Robust, premium-feeling cabin"
+  ],
+  "Audi|Q3 Sportback": [
+   "Standout coupe-SUV styling",
+   "Quattro all-wheel drive with 190hp turbo-petrol",
+   "Smooth, quiet and refined powertrain",
+   "Premium cabin with excellent fit and finish",
+   "Well-judged ride for Indian conditions"
+  ],
+  "Audi|Q5": [
+   "Supremely comfortable ride with adaptive dampers",
+   "Smooth, refined 249hp turbo-petrol with Quattro",
+   "Excellent build quality and physical buttons",
+   "19-speaker Bang & Olufsen audio on top variants",
+   "Good rear seat space and comfort"
+  ],
+  "Audi|Q7": [
+   "Smooth, rapid 340hp V6 turbo-petrol",
+   "0-100kph in 5.6 seconds",
+   "Spacious middle row with four-zone climate",
+   "Soft air suspension excels on rough roads",
+   "Quattro all-wheel drive for steady grip"
+  ],
+  "Audi|Q8": [
+   "Striking coupe-SUV design with laser lights",
+   "Effortless 340hp V6 with 0-100kph in 5.6s",
+   "Generous rear space for a coupe-SUV",
+   "Practical 605-litre boot",
+   "Quiet, relaxed long-distance cruiser"
+  ],
+  "BMW|2 Series Gran Coupe": [
+   "Agile, fun-to-drive handling",
+   "Quality interior with plush padded dash",
+   "Sporty, supportive front seats",
+   "Frameless doors and coupe styling",
+   "Smooth, responsive 7-speed dual-clutch gearbox"
+  ],
+  "BMW|3 Series": [
+   "Stonking 374hp straight-six turbo-petrol",
+   "0-100kph in just 4.39 seconds tested",
+   "Adaptive M suspension with more pliant ride",
+   "xDrive AWD and launch control",
+   "16-speaker Harman Kardon audio and HUD"
+  ],
+  "BMW|3 Series Lwb": [
+   "Spacious, comfortable rear seat",
+   "Refined petrol engine",
+   "Long-wheelbase comfort in a 3 Series"
+  ],
+  "BMW|5 Series Lwb": [
+   "Expansive rear legroom for chauffeur use",
+   "Plush, calm ride over rough surfaces",
+   "Reclining rear seats with great thigh support",
+   "Exceptionally well-suppressed wind and road noise",
+   "Brisk 258hp turbo-petrol in 530Li"
+  ],
+  "BMW|7 Series": [
+   "One of the best rear seats on sale",
+   "31.3-inch 8K rear theatre screen",
+   "Adaptive air suspension with excellent ride",
+   "Punchy 381hp six-cylinder mild hybrid",
+   "Massage, ventilation and recline front and rear"
+  ],
+  "BMW|X1": [
+   "Generous rear seat space for the segment",
+   "Refined, efficient 2.0-litre diesel engine",
+   "Composed ride over Indian roads",
+   "Large 476-litre boot",
+   "Upscale cabin with solid switchgear"
+  ],
+  "BMW|X1 Lwb": [
+   "Excellent rear legroom with reclining backrest",
+   "Large 540-litre boot with space-saver spare",
+   "Panoramic glass roof and airy cabin",
+   "Reversing Assistant and sharp 360-degree camera",
+   "ADAS with AEB and lane assist"
+  ],
+  "BMW|X3": [
+   "Agile, composed BMW driving manners",
+   "Smooth engines with a quiet cabin",
+   "xDrive AWD and 8-speed auto as standard",
+   "Petrol, diesel and 258hp 30 xDrive options",
+   "Generous rear legroom and headroom"
+  ],
+  "BMW|X5": [
+   "Punchy, refined 286hp straight-six diesel",
+   "Impressively agile handling for a big SUV",
+   "Plush cabin with open-pore wood and leather",
+   "Over 900km range from diesel tank",
+   "Ventilated seats and 360-degree camera"
+  ],
+  "BMW|X6": [
+   "Ballistic, fast performance on tap",
+   "High-quality, premium-feeling cabin",
+   "Engaging to drive for an SUV"
+  ],
+  "BMW|X7": [
+   "Cavernous cabin usable by adults in all rows",
+   "Opulent, feature-packed interior",
+   "Mild-hybrid inline-six petrol and diesel engines",
+   "xDrive all-wheel drive as standard",
+   "Commanding road presence"
+  ],
+  "BMW|i5": [
+   "Staggering 601hp, 0-100kph in 3.8 seconds",
+   "Supple ride from adaptive air suspension",
+   "Rear-wheel steering for agility",
+   "Futuristic curved-display cabin with excellent quality",
+   "Bowers & Wilkins audio and full ADAS"
+  ],
+  "BMW|i5 Lwb": [
+   "Ferociously quick yet silent electric performance",
+   "Supple adaptive air suspension ride",
+   "Rear-wheel steering for easy manoeuvring",
+   "Tech-rich cabin with curved displays",
+   "Bowers & Wilkins audio and full ADAS"
+  ],
+  "BMW|i7": [
+   "Outstanding air-suspension ride comfort",
+   "31.3-inch 8K rear theatre screen",
+   "Rear seat relaxation mode with ottoman",
+   "Claimed WLTP range up to 728km",
+   "35-speaker Bowers & Wilkins Dolby Atmos audio"
+  ],
+  "BMW|iX1 Lwb": [
+   "Vast rear legroom with reclining backrest",
+   "Tailor-made for being chauffeur-driven",
+   "Absorbent ride, composed at high speeds",
+   "Certified range up to 531km",
+   "Attractive price for an electric BMW"
+  ],
+  "Honda|Amaze": [
+   "Class-leading 416-litre boot",
+   "Very user-friendly to drive",
+   "Smooth CVT ideal for city traffic",
+   "Comfort-oriented ride quality",
+   "Claimed efficiency up to 19.46kmpl (CVT)"
+  ],
+  "Honda|City": [
+   "Smooth, efficient strong-hybrid powertrain",
+   "Claimed 27.26kpl fuel economy",
+   "Spacious rear seat with great thigh support",
+   "Level 2 ADAS with adaptive cruise",
+   "Ventilated seats and 360-degree camera"
+  ],
+  "Honda|Elevate": [
+   "Spacious cabin with generous rear room",
+   "Well-sorted ride and handling",
+   "Large 458-litre boot",
+   "220mm ground clearance",
+   "Honda Sensing ADAS suite"
+  ],
+  "Hyundai|Alcazar": [
+   "Long, well-stocked equipment list",
+   "Comfort-focused ride, easy to drive",
+   "Refined diesel with strong economy",
+   "Upmarket cabin with soft-touch materials",
+   "Three-row seating for families"
+  ],
+  "Hyundai|Aura": [
+   "Smooth, refined 1.2-litre petrol engine",
+   "High cabin quality and fit-finish",
+   "Light controls for relaxed city driving",
+   "Six airbags standard",
+   "Practical 402-litre boot and CNG option"
+  ],
+  "Hyundai|Creta": [
+   "Punchy 160hp turbo-petrol engine option",
+   "Frugal diesel with around 21.8kmpl",
+   "Composed, comfortable ride",
+   "Level 2 ADAS on higher trims",
+   "Feature-packed with ventilated seats and panoramic sunroof"
+  ],
+  "Hyundai|Creta Electric": [
+   "Real-world range of around 426km",
+   "Brisk 171hp motor, 0-100kph in 8.2s",
+   "10-80% DC charge in 58 minutes",
+   "Five regen levels with one-pedal drive",
+   "Spacious cabin and practical boot"
+  ],
+  "Hyundai|Creta N Line": [
+   "160hp turbo-petrol with manual or DCT",
+   "Sport-tuned setup with communicative steering",
+   "Sporty touches like metal pedals",
+   "Level 2 ADAS with adaptive cruise",
+   "Feature-packed, roomy interior"
+  ],
+  "Hyundai|Grand i10 Nios": [
+   "Refined, easy-going 1.2-litre petrol",
+   "Good interior quality for the segment",
+   "Feature-rich for a city hatch",
+   "Light steering, easy to manoeuvre",
+   "Roomy rear seat for two adults"
+  ],
+  "Hyundai|IONIQ 5": [
+   "800V ultra-fast charging capability",
+   "Real-world range of 457km",
+   "Huge 3,000mm wheelbase and flat floor",
+   "Level 2 ADAS and 5-star Euro NCAP",
+   "Sliding, reclining rear seats and front ottomans"
+  ],
+  "Hyundai|Venue": [
+   "Dual 12.3-inch NVIDIA-powered screens",
+   "Level 2 ADAS SmartSense suite",
+   "Refined diesel with smooth automatic",
+   "Premium-feeling cabin with Bose audio",
+   "OTA updates on new K1 platform"
+  ],
+  "Hyundai|Venue N Line": [
+   "17-inch wheels with red brake calipers",
+   "All-black interior with red accents",
+   "Dual 12.3-inch NVIDIA-powered screens",
+   "Level 2 ADAS SmartSense suite",
+   "Ventilated seats and 8-speaker Bose audio"
+  ],
+  "Hyundai|i20": [
+   "Fit and finish above its price",
+   "Spacious, comfortable cabin for a hatch",
+   "Long equipment list with wireless charging",
+   "Choice of powertrains",
+   "Mature, upscale styling"
+  ],
+  "Hyundai|i20 N Line": [
+   "Sharper steering and damping tune",
+   "Sporty styling with 17-inch wheels",
+   "Red stitching, aluminium pedals, sport seats",
+   "Paddle shifters and unique drive modes",
+   "High-quality cabin materials"
+  ],
+  "Jeep|Compass": [
+   "Premium, high-quality redesigned interior",
+   "Excellent ride and confidence-inspiring handling",
+   "170hp 2.0-litre diesel with 4x4 option",
+   "Powered, cooled front seats with memory",
+   "360-degree camera and electric tailgate"
+  ],
+  "Jeep|Grand Cherokee": [
+   "Feels tough and solidly built",
+   "Attractively priced for what it offers",
+   "Rugged Jeep SUV character"
+  ],
+  "Jeep|Meridian": [
+   "Genuine 4x4 off-road capability",
+   "Outstanding ride and handling",
+   "Tough Jeep build with diesel power"
+  ],
+  "Jeep|Wrangler": [
+   "Iconic Jeep image and presence",
+   "Serious off-road ability",
+   "Unmistakable go-anywhere character"
+  ],
+  "Kia|Carens": [
+   "Feature-rich equipment list",
+   "Spacious, premium-feeling cabin",
+   "Practical three-row family MPV"
+  ],
+  "Kia|Carens Clavis": [
+   "Punchy 160hp turbo-petrol with 7-speed DCT",
+   "Comfortable seating in all three rows",
+   "Spacious and practical family interior",
+   "Soft, comfy ride over bumps",
+   "Wide choice of petrol and diesel powertrains"
+  ],
+  "Kia|Carens Clavis EV": [
+   "Brisk performance even with a full load",
+   "Quiet, serene and refined cabin",
+   "Up to 490km claimed range",
+   "Sliding middle row with powered seat tumble",
+   "Handy 25-litre frunk for charging cables"
+  ],
+  "Kia|Carnival": [
+   "Lavish second-row captain's chairs with ottoman",
+   "Spacious, flexible 2-2-3 seating layout",
+   "Strong 193hp diesel with highway pull",
+   "Powered sliding doors and twin curved screens",
+   "ADAS, eight airbags and Bose audio"
+  ],
+  "Kia|EV6": [
+   "Strong 325hp dual-motor AWD performance",
+   "Impressive 498km real-world range in testing",
+   "Ultra-fast 10-80% charging in 18 minutes",
+   "Premium, spacious cabin for three adults",
+   "Zero-gravity reclining front seats"
+  ],
+  "Kia|Seltos": [
+   "Smooth, strong 160hp turbo-petrol engine",
+   "Comfort-focused ride with tidy handling",
+   "Much improved rear legroom for six-footers",
+   "Generous 447-litre boot with full-size spare",
+   "Wide choice of powertrains"
+  ],
+  "Kia|Sonet": [
+   "Feature-loaded for a compact SUV",
+   "Nice to drive with tidy body control",
+   "Smooth, quiet diesel automatic",
+   "Commendable 385-litre boot for the class",
+   "Lively 1.0-litre turbo-petrol option"
+  ],
+  "Kia|Syros": [
+   "Very comfy sliding, reclining rear seats",
+   "Segment-first cooled rear seats",
+   "Stylish, high-quality interior",
+   "5-star BNCAP safety rating",
+   "OTA updates on a new platform"
+  ],
+  "Kia|Syros EV": [
+   "Brisk performance from 171hp Extended Range",
+   "Spacious cabin with sliding, reclining rear bench",
+   "Twin 12.3-inch screens and Harman Kardon audio",
+   "Level 2 ADAS and 360-degree camera on X-Line",
+   "Extra storage with 16-litre frunk"
+  ],
+  "Land Rover|Defender 110": [
+   "Serious off-road capability with modern refinement",
+   "Rugged yet luxurious cabin",
+   "Spacious, comfortable middle row",
+   "Refined 2.0-litre petrol with ZF automatic",
+   "Commanding seating position and excellent visibility"
+  ],
+  "Land Rover|Defender 130": [
+   "Seating for a big family with three rows",
+   "Generous, comfortable middle-row space",
+   "Rugged, upright design with real off-road ability",
+   "Refined petrol engine and smooth eight-speed auto",
+   "Surprisingly low wind and tyre noise"
+  ],
+  "Land Rover|Defender 90": [
+   "Iconic boxy design with short overhangs",
+   "Excellent visibility for city and trails",
+   "Stiff aluminium monocoque for on-road poise",
+   "Refined 2.0-litre petrol engine",
+   "Octa V8 option with 635hp"
+  ],
+  "Land Rover|Discovery Sport": [
+   "Tough Land Rover build",
+   "Spacious and flexible cabin",
+   "Practical seating for family duty"
+  ],
+  "Land Rover|Range Rover": [
+   "Limousine-like rear space in long-wheelbase SV",
+   "Executive rear seats with massage and cooling",
+   "Effortless 4.4-litre twin-turbo V8 performance",
+   "Supreme refinement and comfort",
+   "Bespoke SV interior themes and ceramic trim"
+  ],
+  "Land Rover|Range Rover Evoque": [
+   "Stylish, coupe-like design icon",
+   "Tough, premium build",
+   "Refined mild-hybrid engines with standard AWD",
+   "Minimalist cabin with 11.4-inch curved touchscreen",
+   "Mostly plush and controlled ride"
+  ],
+  "Land Rover|Range Rover Sport": [
+   "High-end, loaded interior",
+   "Strong road presence and distinctive design",
+   "Smooth six-cylinder petrol and torquey diesel",
+   "Very capable off-road with 900mm wading",
+   "Reliable ADAS and intuitive screens"
+  ],
+  "Land Rover|Range Rover Velar": [
+   "Gorgeous, handsome design",
+   "Comfy seats with good legroom",
+   "Excellent noise insulation",
+   "Air suspension with 600mm wading depth",
+   "Massage front seats and Meridian sound system"
+  ],
+  "MG|Astor": [
+   "Classy, premium cabin with soft-touch materials",
+   "Level 2 ADAS on top variants",
+   "Refined turbo-petrol engine",
+   "Comfort-oriented ride that soaks up bumps",
+   "Generously equipped with 360-degree camera"
+  ],
+  "MG|Comet EV": [
+   "Compact and easy to park",
+   "Tight 8.4m turning circle",
+   "Upmarket interior with twin 10.25-inch screens",
+   "Funky, distinctive cube-shaped styling",
+   "Low running costs for city commuting"
+  ],
+  "MG|Gloster": [
+   "Spacious and comfortable cabin",
+   "Feature-packed with ventilated, massage seats",
+   "Strong 215hp twin-turbo diesel for highways",
+   "Comfortable ride over rough roads",
+   "Large ladder-frame SUV with 4WD"
+  ],
+  "MG|Hector": [
+   "Spacious and comfortable cabin",
+   "Feature-packed with panoramic sunroof",
+   "Effective ADAS with adaptive cruise control",
+   "Plush ride when driven gently",
+   "Strong all-disc braking"
+  ],
+  "MG|Hector Plus 6 Seater": [
+   "Spacious, comfortable cabin for six",
+   "Improved interior quality",
+   "Well-working ADAS suite",
+   "360-degree camera with 3D view",
+   "Panoramic sunroof and Infinity sound system"
+  ],
+  "MG|Hector Tomahawk EV": [
+   "Excellent second-row legroom and cargo space",
+   "Large 69.2kWh battery with 204hp motor",
+   "Easy to drive for its size",
+   "Well equipped with 15.6-inch touchscreen",
+   "Undercuts similarly specified rivals on price"
+  ],
+  "MG|Majestor": [
+   "Strong road presence at over 5 metres",
+   "Feature-packed with dual 12.3-inch screens",
+   "Spacious second row, usable third row",
+   "Effortless 215hp twin-turbo diesel cruising",
+   "Comfortable ride on poor roads"
+  ],
+  "MG|Windsor EV": [
+   "Innovative reclining aero-lounge rear seat",
+   "Class-leading 604-litre boot",
+   "Relaxed, composed drive experience",
+   "Huge 15.6-inch touchscreen",
+   "Effective one-pedal driving with regen levels"
+  ],
+  "MG|Windsor Pro": [
+   "Comfy, reclining aero-lounge rear bench",
+   "Large, class-leading boot space",
+   "Excellent highway stability",
+   "Easy entry and exit with wide doors",
+   "Fantastic 9-speaker Infinity audio"
+  ],
+  "MG|ZS EV": [
+   "Refined, quiet and smooth electric drive",
+   "Strong, immediate acceleration",
+   "Practical cabin and family-friendly boot",
+   "Comfortable, composed ride on broken roads",
+   "Mature, premium-feeling interior"
+  ],
+  "Mahindra|Bolero": [
+   "Hardy, easy-to-fix build",
+   "Torquey diesel that's easy in traffic",
+   "Surprisingly refined, muted engine",
+   "Sub-4-metre size for lower tax"
+  ],
+  "Mahindra|Bolero Neo": [
+   "Tough-as-nails ladder-frame build",
+   "Smooth, refined 100hp diesel",
+   "Capable off-road with optional locking differential",
+   "Rear-wheel-drive seven-seater practicality",
+   "Better value than standard Bolero"
+  ],
+  "Mahindra|Bolero Neo Plus": [
+   "Feels built to last",
+   "Strong low-end driveability for rural use",
+   "Body-on-frame toughness for rough terrain",
+   "Light gear shifts and linear power",
+   "Easier cabin access from lower stance"
+  ],
+  "Mahindra|Scorpio Classic": [
+   "Refined, quieter 2.2-litre mHawk diesel",
+   "Iconic, tough boxy design",
+   "Strong low-end torque and brisk in-gear pace",
+   "Light clutch and smooth cable-shift gearbox",
+   "Durable body-on-frame chassis"
+  ],
+  "Mahindra|Scorpio-N": [
+   "Smooth, strong petrol and diesel automatics",
+   "Strong off-road ability with 4Xplor low-range",
+   "Big leap in premium interior quality",
+   "Ample middle-row space with captain's option",
+   "Wireless Android Auto, Apple CarPlay and Alexa"
+  ],
+  "Mahindra|Thar OG": [
+   "Light steering for easy manoeuvring",
+   "Improved stability on Gen 4 chassis",
+   "More powerful 152hp diesel",
+   "Electronic locking differential and terrain modes",
+   "Six airbags on top ZXT trim"
+  ],
+  "Mahindra|Thar Roxx": [
+   "Strong, smooth 2.2 diesel and 2.0 petrol",
+   "Much improved ride over the 3-door Thar",
+   "Huge panoramic sunroof with full-metal roof",
+   "ADAS and 360-degree camera on offer",
+   "Rugged body-on-frame build with real practicality"
+  ],
+  "Mahindra|XUV 3XO": [
+   "Three strong engines including punchy T-GDi petrol",
+   "Upmarket cabin with dual 10.25-inch screens",
+   "Class-leading rear shoulder room",
+   "Panoramic sunroof and Harman Kardon audio",
+   "Handles rough roads with good ground clearance"
+  ],
+  "Mahindra|XUV 7XO": [
+   "Punchy 203hp turbo-petrol and strong diesel",
+   "Comfortable ride with high-speed composure",
+   "Triple 12.3-inch screens as standard",
+   "1,400W 16-speaker Harman Kardon audio",
+   "Level 2 ADAS and knee airbag on top trim"
+  ],
+  "Mahindra|XUV400": [
+   "Spacious and comfortable cabin",
+   "Strong electric performance",
+   "Roomy SUV body for the money"
+  ],
+  "Maruti Suzuki|Alto K10": [
+   "Excellent fuel efficiency of around 24-25kpl",
+   "Perky 1.0-litre engine eager in city traffic",
+   "Painless, low-stress ownership experience",
+   "Surprisingly refined for a three-cylinder",
+   "Easy to drive with simple, clear controls"
+  ],
+  "Maruti Suzuki|Baleno": [
+   "Segment-first Level 2 ADAS",
+   "Spacious rear seat with excellent legroom",
+   "Refined Z-series engine with strong low-end response",
+   "Soft, comfortable ride over bumps",
+   "Ventilated seats, HUD and 360-degree camera"
+  ],
+  "Maruti Suzuki|Brezza": [
+   "Smooth new 110hp Boosterjet turbo-petrol",
+   "Light clutch and slick 6-speed manual",
+   "Seats five adults comfortably, 328-litre boot",
+   "5-star Bharat NCAP crash rating",
+   "Ventilated seats and cooled wireless charger"
+  ],
+  "Maruti Suzuki|Celerio": [
+   "Outstanding fuel economy up to 26.68kpl",
+   "Easy to drive with light, logical controls",
+   "Generous 313-litre boot for its size",
+   "Good rear headroom and knee room for two"
+  ],
+  "Maruti Suzuki|Dzire": [
+   "Excellent ride and handling balance",
+   "Smooth engine with good low-end response",
+   "Roomy rear seat with ample knee room",
+   "Generous boot space",
+   "Upgraded cabin with floating 9-inch touchscreen"
+  ],
+  "Maruti Suzuki|Ertiga": [
+   "Flexible seven-seat cabin with usable third row",
+   "Excellent CNG efficiency of 22.32km/kg tested",
+   "Spacious middle row with good recline",
+   "Strong value for a family MPV",
+   "Factory-fitted CNG retains three-row layout"
+  ],
+  "Maruti Suzuki|Fronx": [
+   "Appealing coupe-like crossover design",
+   "Comfortable cabin with good rear space",
+   "Comfort-focused ride that soaks potholes",
+   "Efficient petrol engines with turbo option",
+   "Generous ground clearance for broken roads"
+  ],
+  "Maruti Suzuki|Grand Vitara": [
+   "Strong hybrid returns over 20kpl real-world",
+   "Sorted ride and handling",
+   "Optional AllGrip AWD on mild hybrid",
+   "Silent EV-mode city driving in strong hybrid",
+   "Panoramic sunroof brightens the cabin"
+  ],
+  "Maruti Suzuki|Invicto": [
+   "186hp strong hybrid with silent EV mode",
+   "Among the most efficient MPVs, 23.24kpl claimed",
+   "Comfortable captain seats and usable third row",
+   "Upmarket cabin with panoramic sunroof",
+   "Absorbent ride and light, easy steering"
+  ],
+  "Maruti Suzuki|Jimny": [
+   "Exceptional off-road ability with low-range 4x4",
+   "Compact size for tight trails and cities",
+   "Oozing with retro boxy character",
+   "Impressive 36/47-degree approach and departure angles",
+   "Surprisingly good ride at city speeds"
+  ],
+  "Maruti Suzuki|S-Presso": [
+   "Airy cabin with generous headroom",
+   "Peppy engine suited to city driving",
+   "Tall SUV-like stance and ride height",
+   "Compliant ride over broken urban roads",
+   "High fuel efficiency for low running costs"
+  ],
+  "Maruti Suzuki|Swift": [
+   "Impressive fuel efficiency",
+   "Sporty, fun handling",
+   "Light, easy controls"
+  ],
+  "Maruti Suzuki|Victoris": [
+   "Strong hybrid with claimed 28.56kpl",
+   "Optional AWD with AllGrip off-road modes",
+   "Strong value for money",
+   "Good balance of ride and handling",
+   "Smooth EV-mode driving in the strong hybrid"
+  ],
+  "Maruti Suzuki|WagonR": [
+   "Roomy, airy cabin seating three at the back",
+   "Large 341-litre boot with 60:40 split seats",
+   "Lively 1.2-litre engine option",
+   "Excellent mileage, 33.47km/kg with CNG",
+   "Easy to drive in the city"
+  ],
+  "Maruti Suzuki|XL6": [
+   "Smooth, linear 1.5-litre mild-hybrid engine",
+   "Comfortable second-row captain's chairs",
+   "Ventilated seats and 360-degree camera",
+   "Practical, spacious six-seat MPV",
+   "Decent handling with reassuring steering"
+  ],
+  "Maruti Suzuki|e Vitara": [
+   "Claimed range of up to 543km",
+   "Smooth and progressive electric powertrain",
+   "Level 2 ADAS and 5-star Bharat NCAP rating",
+   "Easy to drive with physical AC controls",
+   "Premium soft-touch cabin with Infinity audio"
+  ],
+  "Mercedes-Benz|A-Class Hatchback": [
+   "Thrill-a-minute, engaging handling",
+   "Strong, exciting engine",
+   "Fun, driver-focused hatchback"
+  ],
+  "Mercedes-Benz|C-Class": [
+   "Strong 265hp 300d diesel, 0-100kph in 5.7s",
+   "S-Class-like cabin with 11.9-inch screen",
+   "Agile, precise handling and high-speed stability",
+   "Loaded with tech including Burmester 3D audio",
+   "48V mild hybrid across the range"
+  ],
+  "Mercedes-Benz|CLA": [
+   "Smooth and refined electric powertrain",
+   "Excellent efficiency with 0.21Cd aero shape",
+   "Good ride and handling balance",
+   "New MB.OS with AI virtual assistant",
+   "405-litre boot plus 101-litre front trunk"
+  ],
+  "Mercedes-Benz|CLE Cabriolet": [
+   "Elegant grand-tourer convertible styling",
+   "Quiet cabin with roof up",
+   "Roof opens in about 20 seconds",
+   "Refined 258hp turbo-petrol with mild hybrid",
+   "Heated and ventilated front seats with neck vents"
+  ],
+  "Mercedes-Benz|CLE Coupé": [
+   "435hp six-cylinder with 4MATIC+ AWD",
+   "Exploitable, engaging handling",
+   "Adaptive AMG Ride Control suspension",
+   "Luxurious AMG cabin with supportive sports seats",
+   "Usable as a daily grand tourer"
+  ],
+  "Mercedes-Benz|E-Class Sedan": [
+   "Excellent rear-seat comfort and space",
+   "Packed with MBUX tech",
+   "Quiet, luxurious, high-quality cabin",
+   "Composed ride and high-speed stability",
+   "Efficient E220d for long-distance driving"
+  ],
+  "Mercedes-Benz|E-Class Sedan Long": [
+   "Excellent rear-seat comfort and space",
+   "Packed with MBUX tech",
+   "Quiet, luxurious, high-quality cabin",
+   "Composed ride and high-speed stability",
+   "Efficient E220d for long-distance driving"
+  ],
+  "Mercedes-Benz|EQS": [
+   "Massive 857km ARAI-rated range",
+   "Refined 523hp dual-motor performance",
+   "Plush air suspension ride quality",
+   "Hyperscreen dashboard and massage seats",
+   "Agile thanks to rear-wheel steering"
+  ],
+  "Mercedes-Benz|GLA": [
+   "Spacious, well-built cabin for its class",
+   "Great ride and handling balance",
+   "Efficient 220d diesel with 4MATIC AWD",
+   "Good rear legroom and headroom",
+   "Unique kinetic seats and MBUX tech"
+  ],
+  "Mercedes-Benz|GLC": [
+   "Premium, well-finished interior",
+   "Enjoyable, composed dynamics",
+   "Generous rear space for adults",
+   "Refined petrol and torquey diesel engines",
+   "Smooth 9-speed automatic"
+  ],
+  "Mercedes-Benz|GLC Coupé": [
+   "421hp four-cylinder with AMG 4MATIC AWD",
+   "Sharp, engaging AMG handling",
+   "Strong, immediate acceleration",
+   "Supportive AMG sports seats",
+   "Elegant coupe-SUV styling"
+  ],
+  "Mercedes-Benz|GLE": [
+   "Excellent rear seat with powered recline and slide",
+   "Refined, smooth straight-six engines",
+   "Roomy, airy cabin with panoramic sunroof",
+   "Plush air suspension ride",
+   "Generous boot with powered seat fold"
+  ],
+  "Mercedes-Benz|GLE Coupé": [
+   "435hp inline-six, 0-100kph in 5 seconds",
+   "Agile and fun in Sport modes",
+   "Comfortable air suspension even on 21-inch wheels",
+   "Loaded with standard equipment",
+   "Strong head-turning road presence"
+  ],
+  "Mercedes-Benz|GLS": [
+   "Commanding road presence",
+   "Quiet, refined cabin",
+   "Spacious middle row with boss mode",
+   "Accessible third row with own climate zone",
+   "Strong 381hp mild-hybrid petrol"
+  ],
+  "Mercedes-Benz|S-Class": [
+   "Genuinely useful driver aids",
+   "Silky smooth engines",
+   "Top-class infotainment system"
+  ],
+  "Nissan|Magnite": [
+   "Punchy turbo-petrol performance",
+   "Strong value for money",
+   "Well equipped with wireless smartphone connectivity",
+   "336-litre boot expandable to 690 litres",
+   "Able highway cruiser with good ride"
+  ],
+  "Nissan|Tekton": [
+   "Excellent ride quality over bad roads",
+   "Enjoyable, confidence-inspiring handling",
+   "Class-leading boot space",
+   "5-star BNCAP rating with ADAS",
+   "Panoramic sunroof and ventilated powered seats"
+  ],
+  "Renault|Duster": [
+   "Outstanding ride comfort",
+   "Refined, punchy 163hp 1.3 turbo-petrol",
+   "Segment-best 518-litre boot",
+   "Level 2 ADAS, a first for Renault India",
+   "Long 7-year/1,50,000km warranty cover"
+  ],
+  "Renault|Kiger": [
+   "Sleek, distinctive French styling",
+   "Lively 100hp turbo-petrol with CVT option",
+   "Roomy rear seat for adults",
+   "405-litre boot among segment's largest",
+   "205mm ground clearance for rough roads"
+  ],
+  "Renault|Kwid": [
+   "Generous features for its class",
+   "Good space and practicality",
+   "Easy-to-use small car"
+  ],
+  "Renault|Triber": [
+   "Usable third row with AC vents",
+   "Sliding, reclining second-row seats",
+   "Punchy new 100hp turbo-petrol engine",
+   "Six airbags and composed road manners",
+   "625-litre boot with third row removed"
+  ],
+  "Skoda|Kodiaq": [
+   "Luxury-car-grade interior quality",
+   "Strong 204hp turbo-petrol with AWD",
+   "Third row adds seating flexibility",
+   "Ventilated, heated massage front seats",
+   "Refined, relaxed long-distance cruiser"
+  ],
+  "Skoda|Kodiaq RS": [
+   "Peppy 204hp turbo-petrol with 7-speed DSG",
+   "All-wheel drive as standard",
+   "Luxury-car-grade interior quality",
+   "Third row adds seating flexibility",
+   "Tidy, confidence-inspiring handling"
+  ],
+  "Skoda|Kushaq": [
+   "Smooth, quick-shifting new 8-speed automatic",
+   "Energetic 115hp and 150hp turbo-petrols",
+   "Good body control and high-speed manners",
+   "Segment-unique rear seat massagers",
+   "Improved fuel efficiency across the range"
+  ],
+  "Skoda|Kylaq": [
+   "Aggressively priced entry variant",
+   "Fun, agile driving manners",
+   "5-star safety rating",
+   "Peppy 1.0 turbo-petrol with paddle shifters",
+   "Kushaq-like experience at a lower price"
+  ],
+  "Skoda|Slavia": [
+   "Genuinely quick 150hp 1.5 TSI with DSG",
+   "Spacious rear seat with generous legroom",
+   "Large 521-litre boot",
+   "Comfortable ride and strong safety",
+   "Clean, elegant European design"
+  ],
+  "Tata|Altroz": [
+   "Absorbent suspension delivers great ride comfort",
+   "Class-leading features list",
+   "Upgraded interior ambience",
+   "Diesel option with excellent highway economy",
+   "Keenly priced among premium hatchbacks"
+  ],
+  "Tata|Curvv": [
+   "Distinctive concept-like coupe SUV design",
+   "Packed with features",
+   "Big 500-litre boot with full-size spare",
+   "Segment-first 7-speed DCT on diesel",
+   "Slick, responsive 12.3-inch touchscreen"
+  ],
+  "Tata|Curvv EV": [
+   "Quick 167hp motor, 9.6sec to 100kph",
+   "Real-world range of around 365km",
+   "70kW DC fast charging support",
+   "Feature-loaded cabin with panoramic sunroof",
+   "Impressive cabin insulation"
+  ],
+  "Tata|Harrier": [
+   "Smooth, effortless 1.5 turbo-petrol",
+   "Good ride quality and highway manners",
+   "14.53-inch Samsung Neo QLED screen on petrol",
+   "Level 2 ADAS on top trims",
+   "Powered, ventilated front seats with memory"
+  ],
+  "Tata|Nexon": [
+   "5-star Global NCAP and Bharat NCAP",
+   "Six airbags and ESP from base variant",
+   "Class-leading 208mm ground clearance",
+   "Twin 10.25-inch screens and 360-degree camera",
+   "Wide range: petrol, diesel and CNG"
+  ],
+  "Tata|Nexon EV": [
+   "Real-world range of about 350km (45kWh)",
+   "Quick, smooth 0-100kph in 9.3sec",
+   "Loaded with tech and features",
+   "Step up in interior design and quality",
+   "8-year/1,60,000km battery and motor warranty"
+  ],
+  "Tata|Punch": [
+   "Well-sorted ride and handling balance",
+   "Punchy new 120hp turbo-petrol",
+   "5-star Bharat NCAP rating",
+   "Six airbags standard and 360-degree camera",
+   "CNG-AMT option for low running costs"
+  ],
+  "Tata|Punch EV": [
+   "Strong, linear acceleration",
+   "Very comfortable ride",
+   "Quiet, refined electric drivetrain",
+   "Feature-packed with 360-degree camera",
+   "Up to 468km claimed range (40kWh)"
+  ],
+  "Tata|Safari": [
+   "Usable third row with good knee room",
+   "Smooth, effortless 1.5 turbo-petrol",
+   "Ventilated second-row captain's chairs option",
+   "Level 2 ADAS and seven airbags on top trims",
+   "Good ride quality and highway manners"
+  ],
+  "Tata|Sierra": [
+   "Striking retro-modern design",
+   "Refined 160hp turbo-petrol, quicker than Creta N Line",
+   "Excellent ride and handling",
+   "Triple screens and 12-speaker JBL audio",
+   "Longest wheelbase and widest in segment"
+  ],
+  "Tata|Sierra EV": [
+   "Bold look with immense road presence",
+   "Optional 306hp dual-motor AWD",
+   "Up to 665km claimed range",
+   "120kW DC fast charging, 20-80% in 26min",
+   "15-year battery warranty"
+  ],
+  "Tata|Tiago": [
+   "Richer, more premium cabin",
+   "Rare 360-degree camera and blind-spot monitor",
+   "10.25-inch touchscreen with wireless connectivity",
+   "Six airbags and ESP available",
+   "CNG-AMT for low running costs"
+  ],
+  "Tata|Tiago EV": [
+   "Plush low-speed ride quality",
+   "Light controls for easy city driving",
+   "Good all-round visibility"
+  ],
+  "Tata|Tigor EV": [
+   "Silent, vibration-free electric drivetrain",
+   "Brisk in Sport mode at city speeds",
+   "Excellent visibility from upright cabin",
+   "Zero-emission compact sedan",
+   "Neat, user-friendly cabin"
+  ],
+  "Toyota|Camry": [
+   "Exceptional rear seat comfort and features",
+   "Smooth, efficient 230hp hybrid powertrain",
+   "Claimed 25.49kmpl efficiency",
+   "Genuinely premium interior quality",
+   "Nearly silent low-speed driving"
+  ],
+  "Toyota|Fortuner": [
+   "Tough ladder-frame build",
+   "Strong image and road presence",
+   "Genuine go-anywhere 4x4 ability",
+   "Commanding seating position and visibility",
+   "Neo Drive 48V mild-hybrid diesel option"
+  ],
+  "Toyota|Glanza": [
+   "Smooth, refined 90hp petrol engine",
+   "Spacious interior with great ergonomics",
+   "Strong fuel efficiency",
+   "360-degree camera and head-up display",
+   "Six airbags and Toyota reliability"
+  ],
+  "Toyota|Hilux": [
+   "Excellent refinement with minimal vibrations",
+   "Strong 204hp, 500Nm diesel",
+   "Tough ladder frame for big imperfections",
+   "Generous load bed with side steps",
+   "Seven airbags and excellent off-road ability"
+  ],
+  "Toyota|Innova Crysta": [
+   "Peace-of-mind Toyota ownership",
+   "Superb second-row captain chairs",
+   "Roomy third row with easy access",
+   "Remarkable ride over bad roads",
+   "Strong, relaxed long-distance diesel"
+  ],
+  "Toyota|Innova Hycross": [
+   "Very spacious three-row cabin",
+   "Efficient hybrid, 16.1kpl on highway",
+   "Excellent air conditioning",
+   "Easy to manoeuvre for its size",
+   "Loaded hybrid with ADAS and panoramic sunroof"
+  ],
+  "Toyota|Land Cruiser 300": [
+   "Go-anywhere off-road ability",
+   "Massive road presence",
+   "Strong 309hp twin-turbo V6 diesel",
+   "Huge 1,131-litre boot",
+   "Ten airbags and four-zone climate control"
+  ],
+  "Toyota|Legender": [
+   "Aggressive front-end styling and dual-tone paint",
+   "Tough ladder-frame build",
+   "Strong image and road presence",
+   "Premium dual-tone upholstery",
+   "Genuine go-anywhere 4x4 ability"
+  ],
+  "Toyota|Rumion": [
+   "Easy to drive in the city",
+   "Spacious, comfortable three-row cabin",
+   "Third row usable for adults",
+   "Refined 1.5 mild-hybrid with 6-speed auto",
+   "Toyota badge and after-sales perception"
+  ],
+  "Toyota|Urban Cruiser Ebella": [
+   "Excellent interior fit, finish and quality",
+   "Smooth, predictable electric performance",
+   "Light steering, tight turning radius",
+   "Up to 543km claimed range",
+   "Level 2 ADAS and seven airbags"
+  ],
+  "Toyota|Urban Cruiser Hyryder": [
+   "Hugely efficient strong-hybrid powertrain",
+   "Excellent ride and handling balance",
+   "Class-leading 210mm ground clearance",
+   "AllGrip AWD option",
+   "Panoramic sunroof and head-up display"
+  ],
+  "Toyota|Urban Cruiser Taisor": [
+   "Toyota warranty coverage",
+   "Compact yet practical",
+   "Rev-happy turbo-petrol with paddle shifters",
+   "Spacious, comfortable rear seat",
+   "Head-up display and 360-degree camera"
+  ],
+  "Toyota|Vellfire": [
+   "Throne-like middle row with massage, legrests",
+   "Massive cabin with space in all rows",
+   "Efficient 250hp hybrid, claimed 19.28kpl",
+   "ADAS with adaptive cruise control",
+   "Peace-of-mind Toyota ownership"
+  ],
+  "Volkswagen|Taigun": [
+   "Rock-solid highway stability",
+   "Smooth-shifting new 8-speed automatic",
+   "Among the most engaging SUVs to drive",
+   "Strong, confidence-inspiring brakes",
+   "Light, direct steering for city driving"
+  ],
+  "Volkswagen|Virtus": [
+   "Tough, substantial build",
+   "Excellent ride and handling",
+   "Quick 150hp 1.5 TSI with DSG",
+   "Massive 521-litre boot",
+   "Comfortable rear seat with good thigh support"
+  ]
+ }
+}

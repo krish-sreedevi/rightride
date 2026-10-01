@@ -269,7 +269,11 @@ export function normalize() {
     c.image = slug ? `https://asset.autocarindia.com/static/car-images/${slug}.png` : own;
     c.image2 = slug ? own : null;
   }
-  return { generated: new Date().toISOString(), buckets: BUCKETS, features: featureMeta, brands: Object.values(brands).filter((b) => b.variants), cars, experts };
+  const rd = (f) => { const p = path.join(ROOT, 'data', f); return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')).models || {} : {}; };
+  const have = new Set(cars.map((c) => `${c.brand}|${c.model}`));
+  const pick = (o) => Object.fromEntries(Object.entries(o).filter(([k]) => have.has(k)));
+  const ncap = pick(rd('ncap.json')), usp = pick(rd('usp.json'));
+  return { generated: new Date().toISOString(), buckets: BUCKETS, features: featureMeta, brands: Object.values(brands).filter((b) => b.variants), cars, experts, ncap, usp };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

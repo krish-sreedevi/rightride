@@ -325,27 +325,6 @@
     }).join('');
   }
 
-  // model sheet: big picture, expert view, video, every variant
-  function modelSheet(key) {
-    let m = results().find((x) => x.brand + '|' + x.model === key) || groupAll().find((x) => x.brand + '|' + x.model === key);
-    if (!m) return;
-    const x = expertOf(m);
-    const pros = x ? x.like.map((t) => `<li class="pro">${esc(t)}</li>`).join('') + x.dislike.map((t) => `<li class="con">${esc(t)}</li>`).join('') : '';
-    $('#modalBody').innerHTML = `<div class="modal-head"><div><div class="brand muted">${esc(m.brand)} · ${esc(m.body)}</div><h2>${esc(m.model)}</h2></div><button class="btn ghost" data-close aria-label="Close">✕</button></div>
-      <div class="modal-body sheet">
-        <div class="sheet-hero"><div class="sheet-img">${carImg(m, '(max-width: 900px) 92vw, 560px')}</div>
-          <div class="sheet-info"><div class="muted small">On-road in ${esc(RTO.states[state.st].name)}</div><div class="sheet-price">${lakh(Math.min(...m.vs.map((v) => v.c.orTotal)))}${m.vs.length > 1 ? ` <span>– ${lakh(Math.max(...m.vs.map((v) => v.c.orTotal)))}</span>` : ''}</div>
-            ${x && x.s ? `<div class="xline"><span class="xbadge">Autocar ${esc(x.s)}/10</span>${x.basedOn ? `<span class="muted small"> review of the ${esc(x.basedOn)}</span>` : ''}</div>` : ''}
-            ${pros ? `<ul class="pc">${pros}</ul>` : ''}
-            <div class="sheet-cta"><a class="btn primary" href="${esc(ytUrl(m))}" target="_blank" rel="noopener">▶ Watch the review</a>${x && x.url ? `<a class="btn ghost" href="${esc(x.url)}" target="_blank" rel="noopener">Expert review ↗</a>` : ''}<a class="btn ghost" href="${esc(m.url)}" target="_blank" rel="noopener">Official site ↗</a></div>
-          </div></div>
-        <h3 style="margin:22px 0 8px">${m.vs.length} variant${m.vs.length > 1 ? 's' : ''}${state.feats.size || activeCount() ? ' matching your filters' : ''}</h3>
-        ${variantTable(m)}
-        <p class="hint">Tap a variant for its full price break-up and feature list. Tick up to 4 to compare.</p>
-      </div>`;
-    if (!$('#modal').open) $('#modal').showModal();
-  }
-
   // natural-language search → filters
   const BRANDS = () => [...new Set(DATA.cars.map((c) => c.brand))];
   function parseQuery(q) {
@@ -398,9 +377,9 @@
     $('#shelves').addEventListener('click', (e) => {
       const s = e.target.closest('[data-see]'); if (s) return seeAll(s.dataset.see);
       const rb = e.target.closest('.rail-btn'); if (rb) { const r = rb.parentElement.querySelector('.rail'); r.scrollBy({ left: (rb.classList.contains('next') ? 1 : -1) * r.clientWidth * 0.85, behavior: 'smooth' }); return; }
-      const t = e.target.closest('.tile'); if (t) modelSheet(t.dataset.key);
+      const t = e.target.closest('.tile'); if (t) openCar(t.dataset.key);
     });
-    $('#shelves').addEventListener('keydown', (e) => { const t = e.target.closest('.tile'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); modelSheet(t.dataset.key); } });
+    $('#shelves').addEventListener('keydown', (e) => { const t = e.target.closest('.tile'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openCar(t.dataset.key); } });
     let qt; $('#q').addEventListener('input', (e) => { clearTimeout(qt); qt = setTimeout(() => runSearch(e.target.value), 250); });
     $('#q').addEventListener('keydown', (e) => { if (e.key === 'Enter') { clearTimeout(qt); runSearch(e.target.value); e.target.blur(); } });
     $('#scrim').addEventListener('click', closeDrawer);
@@ -426,22 +405,17 @@
     const list = results();
     const nV = list.reduce((s, m) => s + m.vs.length, 0);
     const stName = RTO.states[state.st].name;
-    $('#resultTitle').textContent = list.length ? `${list.length} model${list.length > 1 ? 's' : ''} · ${nV} variants match` : 'No cars match yet';
+    $('#resultTitle').textContent = list.length ? `${list.length} model${list.length > 1 ? 's' : ''} · ${nV} variants match` : 'No cars match';
     $('#resultSub').textContent = `On-road prices estimated for ${stName}.` + (state.feats.size ? ' Cars with every selected feature are listed first.' : ' Use the filters to narrow down.');
-    const act = [];
-    for (const k of state.feats) act.push(`<button class="chip" data-rm="feats:${k}">${esc(FLABEL(k))} ✕</button>`);
-    for (const n of ['body', 'fuel', 'trans', 'seats', 'brand']) for (const v of state[n]) act.push(`<button class="chip" data-rm="${n}:${esc(v)}">${esc(TTYPES[v] && n === 'transType' ? TTYPES[v] : v)} ✕</button>`);
-    if (state.budgetMin || state.budgetMax) act.push(`<button class="chip" data-rm="budget:">₹${state.budgetMin || 0}–${state.budgetMax || '∞'} L ✕</button>`);
-    if (state.q) act.unshift(`<button class="chip" data-rm="q:">“${esc(state.q)}” ✕</button>`);
-    $('#activeChips').innerHTML = act.join('');
+    $('#activeChips').innerHTML = activeFilters().map(([spec, label]) => `<button class="chip" data-rm="${esc(spec)}">${esc(label)} ✕</button>`).join('');
     const shown = list.slice(0, state.page * PAGE);
     recBar();
     document.body.classList.toggle('rec-mode', !!(state.sort === 'rec' && state.rec));
     const recMode = state.sort === 'rec' && state.rec;
     if (recMode && list.length) $('#resultTitle').textContent = `${list.length} model${list.length > 1 ? 's' : ''} ranked for you`;
-    if (recMode) $('#resultSub').textContent = `Ranked on your priorities using Autocar India expert scores plus our specs data. Click a car to watch its Autocar India video review.`;
+    if (recMode) $('#resultSub').textContent = `Ranked on your priorities using Autocar India expert scores plus our specs data. Click a car for its variants, safety rating and nearby showrooms.`;
     $('#list').className = recMode ? 'list' : 'tile-grid';
-    $('#list').innerHTML = shown.length ? shown.map((m, i) => (recMode ? recCard(m, i + 1) : tile(m))).join('') : `<div class="empty"><h2>Nothing matches every filter</h2><p class="muted">Try raising the budget, removing a feature, or ticking "also show cars missing 1 feature".</p>${state.rec ? '<button class="btn primary" type="button" data-rec="edit">Change my answers</button>' : ''}</div>`;
+    $('#list').innerHTML = shown.length ? shown.map((m, i) => (recMode ? recCard(m, i + 1) : tile(m))).join('') : sorry();
     $('#more').hidden = list.length <= shown.length;
     updateCompareBar();
   }
@@ -539,6 +513,221 @@
     $('#modal').showModal();
   }
 
+  // ---------------- active filters, removing one, and the "sorry" state ----------------
+  function activeFilters() {
+    const out = [];
+    if (state.q) out.push(['q:', `“${state.q}”`]);
+    if (state.budgetMin || state.budgetMax) out.push(['budget:', state.budgetMin && state.budgetMax ? `₹${state.budgetMin}–${state.budgetMax} L` : state.budgetMax ? `Under ₹${state.budgetMax} L` : `Over ₹${state.budgetMin} L`]);
+    for (const n of ['body', 'fuel', 'trans', 'seats', 'brand']) for (const v of state[n]) out.push([`${n}:${v}`, n === 'seats' ? `${v} seats` : v]);
+    for (const k of state.feats) out.push([`feats:${k}`, FLABEL(k)]);
+    return out;
+  }
+  function rmFilter(spec) {
+    const [k, v] = spec.split(/:(.*)/s);
+    if (k === 'budget') state.budgetMin = state.budgetMax = '';
+    else if (k === 'q') { state.q = ''; state.qf = null; }
+    else if (state[k] instanceof Set) state[k].delete(v);
+  }
+  // how many models would show if each filter were removed on its own
+  function relaxOptions() {
+    const snap = { q: state.q, qf: state.qf, bmin: state.budgetMin, bmax: state.budgetMax, sort: state.sort, sets: SETS.map((k) => new Set(state[k])) };
+    const out = [];
+    state.sort = 'price';
+    for (const [spec, label] of activeFilters()) {
+      rmFilter(spec);
+      const n = results().length;
+      if (n) out.push({ spec, label, n });
+      state.q = snap.q; state.qf = snap.qf; state.budgetMin = snap.bmin; state.budgetMax = snap.bmax; SETS.forEach((k, i) => (state[k] = new Set(snap.sets[i])));
+    }
+    state.sort = snap.sort;
+    return out.sort((a, b) => b.n - a.n);
+  }
+  const SORRY_ICON = `<svg class="sorry-ico" viewBox="0 0 96 72" aria-hidden="true"><path d="M10 52h76M14 52V40l10-16h40l12 14c6 1 10 6 10 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30" cy="53" r="7" fill="var(--panel)" stroke="currentColor" stroke-width="3"/><circle cx="70" cy="53" r="7" fill="var(--panel)" stroke="currentColor" stroke-width="3"/><circle cx="41" cy="34" r="2" fill="currentColor"/><circle cx="55" cy="34" r="2" fill="currentColor"/><path d="M41 44c3-3.5 11-3.5 14 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>`;
+  function sorry() {
+    const opts = relaxOptions();
+    return `<div class="empty sorry">${SORRY_ICON}<h2>Sorry, no cars match all of that</h2>
+      ${opts.length ? `<p class="muted">Remove one of these to see cars that fit the rest:</p>
+      <div class="relax">${opts.map((o) => `<button class="relax-btn" type="button" data-rm="${esc(o.spec)}"><span>Remove <b>${esc(o.label)}</b></span><em>${o.n} car${o.n > 1 ? 's' : ''} <span aria-hidden="true">→</span></em></button>`).join('')}</div>` : '<p class="muted">Nothing comes up even with one filter removed.</p>'}
+      <button class="link" type="button" data-rm="*">Clear all filters</button></div>`;
+  }
+
+  // ---------------- car page: #/car/<brand-model> ----------------
+  const mslug = (b, m) => (b + ' ' + m).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const modelBySlug = (s) => groupAll().find((m) => mslug(m.brand, m.model) === s);
+  let navFromList = false;
+  function openCar(key) { const [b, m] = key.split('|'); navFromList = true; go('car', mslug(b, m)); }
+  const cp = { key: null, fuel: new Set(), gear: new Set(), need: new Set(), all: false };
+  const gearTxt = (c) => (c.transmission === 'Manual' ? 'Manual' : ({ AMT: 'AMT', AT: 'Automatic', CVT: 'CVT', 'e-CVT': 'e-CVT', DCT: 'DCT' }[c.transType] || c.transmission || '–'));
+  const STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6 6.5.8-4.8 4.5 1.2 6.5L12 17.3l-5.8 3.1 1.2-6.5L2.6 9.4l6.5-.8z"/></svg>';
+  const stars = (n) => `<span class="stars" aria-label="${n} out of 5 stars">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? 'on' : ''}">${STAR}</i>`).join('')}</span>`;
+  const ORIG_TITLE = document.title;
+
+  function renderCar(slug) {
+    const el = $('#carPage'), m = modelBySlug(slug);
+    if (!m) { el.innerHTML = `<div class="cp-wrap"><div class="empty sorry">${SORRY_ICON}<h2>Sorry, we couldn't find that car</h2><p class="muted">It may have been discontinued or renamed.</p><a class="btn primary" href="#/cars" data-go="cars">Browse all cars</a></div></div>`; return; }
+    const key = m.brand + '|' + m.model;
+    if (cp.key !== key) { cp.key = key; cp.fuel.clear(); cp.gear.clear(); cp.need.clear(); cp.all = false; cp.more = false; }
+    const x = expertOf(m), nc = (DATA.ncap || {})[key], usp = (DATA.usp || {})[key];
+    const st = RTO.states[state.st].name;
+    document.title = `${m.brand} ${m.model}: on-road price in ${st}, variants & showrooms · Right Ride`;
+    const seats = [...new Set(m.vs.map((v) => v.c.seats).filter(Boolean))].sort();
+    const tags = [...m.fuels, ...m.trans, seats.length ? seats.join(' / ') + ' seats' : '', `${m.vs.length} variant${m.vs.length > 1 ? 's' : ''}`].filter(Boolean);
+    const max = { 'Bharat NCAP': [32, 49], 'Global NCAP': [34, 49] }[nc && nc.by] || [null, null];
+    const safety = nc ? `<div class="nc-top">${stars(nc.stars)}<div><b>${nc.stars}-star</b> adult safety<div class="muted small">${esc(nc.by)}</div></div></div>
+        ${nc.aop != null || nc.cop != null ? `<div class="nc-bars">${nc.aop != null ? `<div><span>Adult occupant</span>${bar10(nc.aop / max[0] * 10)}<b>${nc.aop}${max[0] ? `<small>/${max[0]}</small>` : ''}</b></div>` : ''}${nc.cop != null ? `<div><span>Child occupant</span>${bar10(nc.cop / max[1] * 10)}<b>${nc.cop}${max[1] ? `<small>/${max[1]}</small>` : ''}</b></div>` : ''}</div>` : ''}
+        ${nc.note ? `<p class="note">${esc(nc.note)}</p>` : ''}`
+      : `<p class="muted">Not crash-tested by Bharat NCAP or Global NCAP yet. ${m.vs.some((v) => v.c.airbags) ? `Comes with up to ${Math.max(...m.vs.map((v) => v.c.airbags || 0))} airbags.` : ''}</p>`;
+    $('#carPage').innerHTML = `<div class="cp-wrap">
+      <button class="cp-back" type="button" data-back><span aria-hidden="true">‹</span> All cars</button>
+      <section class="cp-hero">
+        <div class="cp-img">${carImg(m, '(max-width: 900px) 92vw, 640px')}</div>
+        <div class="cp-info">
+          <div class="cp-eyebrow">${esc(m.brand)} · ${esc(m.body)}</div>
+          <h1 class="display cp-title">${esc(m.model)}</h1>
+          <div class="muted small">On-road price in ${esc(st)}</div>
+          <div class="cp-price">${lakh(m.min)}${m.max > m.min ? ` <span>– ${lakh(m.max)}</span>` : ''}</div>
+          <div class="cp-tags">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>
+          <div class="cp-badges">${x && x.s ? `<span class="cp-badge"><b>${esc(x.s)}</b><small>/10</small><span>Autocar India</span></span>` : ''}${nc ? `<a class="cp-badge nc" href="#cpSafety"><b>${nc.stars}★</b><span>${esc(nc.by)}</span></a>` : ''}</div>
+          <div class="sheet-cta"><a class="btn primary" href="#cpVariants" data-jump="cpVariants">Find my variant</a><a class="btn ghost" href="#cpDealers" data-jump="cpDealers">Showrooms near me</a></div>
+        </div>
+      </section>
+      ${usp && usp.length ? `<section class="cp-sec cp-usp"><div class="cp-sec-head"><h2 class="display">Why people pick it</h2><span class="ai-tag"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2l1.8 5.6L19.5 9l-5.7 1.6L12 16l-1.8-5.4L4.5 9l5.7-1.4zM19 15l.9 2.6 2.6.9-2.6.9L19 22l-.9-2.6-2.6-.9 2.6-.9z"/></svg>AI summary of expert reviews</span></div>
+        <ol class="usp">${usp.map((u) => `<li>${esc(u)}</li>`).join('')}</ol></section>` : ''}
+      <div class="cp-two">
+        <section class="cp-sec" id="cpSafety"><div class="cp-sec-head"><h2 class="display">Safety rating</h2></div>${safety}</section>
+        <section class="cp-sec"><div class="cp-sec-head"><h2 class="display">Expert view</h2>${x && x.s ? `<span class="xbadge">Autocar ${esc(x.s)}/10</span>` : ''}</div>
+          ${x ? `<ul class="pc">${x.like.map((t) => `<li class="pro">${esc(t)}</li>`).join('')}${x.dislike.map((t) => `<li class="con">${esc(t)}</li>`).join('')}</ul>${x.basedOn ? `<p class="muted small">From the review of the ${esc(x.basedOn)}.</p>` : ''}` : '<p class="muted">No Autocar India review yet.</p>'}
+          <div class="cp-links"><a class="watch" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>Watch the video review</a>${x && x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">Read the review ↗</a>` : ''}<a href="${esc(m.url)}" target="_blank" rel="noopener">Official site ↗</a></div>
+        </section>
+      </div>
+      <section class="cp-sec" id="cpVariants"></section>
+      <section class="cp-sec" id="cpDealers"></section>
+    </div>`;
+    drawVariants(m); drawDealers(m);
+  }
+
+  // variant helper: only what differs between variants, the cheapest one with everything you ticked
+  function drawVariants(m) {
+    const box = $('#cpVariants'); if (!box) return;
+    const all = m.vs.map((v) => v.c).sort((a, b) => a.orTotal - b.orTotal);
+    const fuels = [...new Set(all.map((c) => c.fuel))], gears = [...new Set(all.map((c) => c.transmission).filter(Boolean))];
+    const pool = all.filter((c) => (!cp.fuel.size || cp.fuel.has(c.fuel)) && (!cp.gear.size || cp.gear.has(c.transmission)));
+    const known = pool.filter((c) => /[01]/.test(c.fs));
+    const diff = DATA.features.filter((f) => { const v = known.map((c) => c.feat(f.key)); return v.includes('1') && v.some((x) => x !== '1'); });
+    const cell = (c, k) => { const v = c.feat(k); return v === '?' && diff.some((f) => f.key === k) ? '<span class="no" title="Not listed for this variant">–</span>' : mark(v); };
+    for (const k of [...cp.need]) if (!diff.some((f) => f.key === k)) cp.need.delete(k);
+    const ok = (c) => [...cp.need].every((k) => c.feat(k) === '1');
+    const match = pool.filter(ok), best = match[0];
+    if (cp.need.size) pool.sort((a, b) => ok(b) - ok(a) || a.orTotal - b.orTotal); // variants with everything you ticked come first
+    const rng = (c) => (c.fuel === 'Electric' ? (c.range ? c.range + ' km range' : '–') : c.mileage ? c.mileage + ' km/l' : '–');
+    const SPECS = [['Fuel', (c) => c.fuel], ['Gearbox', gearTxt], ['Drive', (c) => c.drive || '–'], ['Seats', (c) => c.seats || '–'], ['Airbags', (c) => c.airbags || '–'], ['Mileage', rng], ['Engine', (c) => (c.cc ? c.cc + ' cc' : '–')]];
+    const specs = cp.all ? SPECS : SPECS.filter(([, fn]) => new Set(pool.map(fn)).size > 1);
+    const rows = cp.all ? DATA.features.filter((f) => known.some((c) => c.feat(f.key) !== '?')) : diff;
+    const ordered = [...rows.filter((f) => cp.need.has(f.key)), ...rows.filter((f) => !cp.need.has(f.key))];
+    let pick = '';
+    if (best) {
+      const nxt = all.find((c) => c.orTotal > best.orTotal && c.fuel === best.fuel && c.transmission === best.transmission && /[01]/.test(c.fs));
+      const adds = nxt ? DATA.features.filter((f) => best.feat(f.key) !== '1' && nxt.feat(f.key) === '1') : [];
+      pick = `<div class="vh-pick"><div class="vh-pick-k">${cp.need.size ? 'Your Right variant' : 'Cheapest variant'}${cp.fuel.size || cp.gear.size ? ' for your choice' : ''}</div>
+        <div class="vh-pick-main"><div><h3>${esc(best.variant)}</h3><div class="muted small">${esc([best.fuel, gearTxt(best)].join(' · '))}${cp.need.size ? ` · has all ${cp.need.size} feature${cp.need.size > 1 ? 's' : ''} you picked` : ''}${match.length > 1 ? ` · ${match.length - 1} more variant${match.length > 2 ? 's' : ''} also fit` : ''}</div></div>
+        <div class="vh-pick-p"><b>${lakh(best.orTotal)}</b><span class="muted small">on-road · ex-showroom ${lakh(best.or.ex)}</span></div></div>
+        ${adds.length ? `<div class="vh-up">Step up to <b>${esc(nxt.variant)}</b> (+${lakh(nxt.orTotal - best.orTotal).replace('₹', '₹')}) for ${esc(adds.slice(0, 5).map((f) => f.label).join(', '))}${adds.length > 5 ? ` and ${adds.length - 5} more` : ''}.</div>` : ''}
+        <button class="link" type="button" data-vid="${esc(best.id)}">Price break-up and all features ›</button></div>`;
+    } else pick = `<div class="vh-pick none">${SORRY_ICON}<div><b>Sorry, no ${esc(m.model)} variant has all of that.</b><div class="muted small">Untick a feature to see the closest variants.</div></div></div>`;
+    const grp = (name, vals, set) => vals.length > 1 ? `<div class="group"><div class="label">${name}</div><div class="chips">${vals.map((v) => `<button type="button" class="chip" data-cpf="${name === 'Fuel' ? 'fuel' : 'gear'}" data-v="${esc(v)}" aria-pressed="${set.has(v)}">${esc(v)}</button>`).join('')}</div></div>` : '';
+    const cnt = (k) => known.filter((c) => c.feat(k) === '1').length;
+    box.innerHTML = `<div class="cp-sec-head"><div><h2 class="display">Find your variant</h2><p class="muted">${all.length} variant${all.length > 1 ? 's' : ''}. Tick what you care about. We only show what changes between them.</p></div></div>
+      ${all.length > 1 ? `<div class="vh-filters">${grp('Fuel', fuels, cp.fuel)}${grp('Gearbox', gears, cp.gear)}</div>
+      ${diff.length ? `<div class="group"><div class="label">Features that differ <span class="muted">· tap the ones you want</span></div><div class="chips vh-need">${(cp.more ? diff : diff.filter((f, i) => i < 12 || cp.need.has(f.key))).map((f) => `<button type="button" class="chip" data-need="${f.key}" aria-pressed="${cp.need.has(f.key)}">${esc(f.label)}<small>${cnt(f.key)}/${known.length}</small></button>`).join('')}${diff.length > 12 ? `<button type="button" class="chip more" data-more>${cp.more ? 'Fewer' : `+${diff.filter((f, i) => i >= 12 && !cp.need.has(f.key)).length} more`}</button>` : ''}</div></div>`
+        : known.length ? '<p class="muted">These variants have the same feature list.</p>' : `<div class="note">${esc(m.brand)} doesn't publish a variant-wise feature list, so we can only compare prices and specs here.</div>`}` : ''}
+      ${pick}
+      <div class="vh-scroll"><table class="vh-table"><thead><tr><th class="vh-c0">Variant</th>${pool.map((c) => `<th class="${c === best ? 'best' : ok(c) ? '' : 'off'}"><button type="button" data-vid="${esc(c.id)}"><span class="vh-vn">${esc(c.variant)}</span><b>${lakh(c.orTotal)}</b>${c === best ? '<em>Best fit</em>' : ''}</button></th>`).join('')}</tr></thead>
+        <tbody>${specs.map(([l, fn]) => `<tr class="spec"><td class="vh-c0">${l}</td>${pool.map((c) => `<td class="${c === best ? 'best' : ok(c) ? '' : 'off'}">${esc(fn(c))}</td>`).join('')}</tr>`).join('')}
+        ${ordered.map((f) => `<tr class="${cp.need.has(f.key) ? 'want' : ''}"><td class="vh-c0">${esc(f.label)}</td>${pool.map((c) => `<td class="${c === best ? 'best' : ok(c) ? '' : 'off'}">${cell(c, f.key)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+      ${known.length ? `<label class="toggle vh-all"><input type="checkbox" data-cpall ${cp.all ? 'checked' : ''}> Also show features every variant shares</label>` : ''}`;
+  }
+
+  // dealers: nearest showrooms of this brand, from OpenStreetMap, each linked to its Google Maps page
+  let DEALERS = null;
+  const loadDealers = () => DEALERS || (DEALERS = fetch('data/dealers.json').then((r) => (r.ok ? r.json() : [])).catch(() => []));
+  const kmBetween = (a, b, c, d) => { const r = Math.PI / 180, h = Math.sin((c - a) * r / 2) ** 2 + Math.cos(a * r) * Math.cos(c * r) * Math.sin((d - b) * r / 2) ** 2; return 12742 * Math.asin(Math.sqrt(h)); };
+  const nearestCity = (la, lo) => { let best = null, bd = Infinity; for (const [name, , a, b] of RTO.cities) { const d = kmBetween(la, lo, a, b); if (d < bd) { bd = d; best = name; } } return best; };
+  const PHONE = '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>';
+  const PIN = '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>';
+  function drawDealers(m) {
+    const box = $('#cpDealers'); if (!box) return;
+    const geo = store.get('geo', null);
+    box.innerHTML = `<div class="cp-sec-head"><div><h2 class="display">${esc(m.brand)} showrooms near you</h2><p class="muted">Nearest first, with phone numbers where they're listed. Open any of them on Google Maps for reviews, ratings and opening hours.</p></div></div>
+      <form class="dl-find" data-dlform><button type="button" class="btn ghost" data-dl="geo">${PIN} Use my location</button><span class="muted">or</span>
+        <input class="dl-pin" name="pin" inputmode="numeric" autocomplete="postal-code" maxlength="6" pattern="[1-9][0-9]{5}" placeholder="Enter pincode" aria-label="Pincode"><button class="btn primary" type="submit">Find</button></form>
+      <div id="dlList" aria-live="polite"></div>`;
+    if (geo) listDealers(m, geo);
+  }
+  async function listDealers(m, geo) {
+    const out = $('#dlList'); if (!out) return;
+    out.innerHTML = `<p class="muted">Looking for ${esc(m.brand)} showrooms near ${esc(geo.label)}…</p>`;
+    const all = await loadDealers();
+    if (!$('#dlList') || cp.key !== m.brand + '|' + m.model) return;
+    const near = all.filter((d) => d.b === m.brand).map((d) => ({ ...d, km: kmBetween(geo.la, geo.lo, d.la, d.lo) })).filter((d) => d.km <= 120).sort((a, b) => a.km - b.km).slice(0, 8);
+    const gAll = `https://www.google.com/maps/search/${encodeURIComponent(m.brand + ' showroom')}/@${geo.la.toFixed(5)},${geo.lo.toFixed(5)},12z`;
+    out.innerHTML = `<div class="dl-where">${PIN} Near <b>${esc(geo.label)}</b> <button class="link" type="button" data-dl="change">Change</button></div>
+      ${near.length ? `<ol class="dl-list">${near.map(dealerCard).join('')}</ol>` : `<p class="muted">We don't have any ${esc(m.brand)} showrooms on our map within 120 km yet.</p>`}
+      <a class="btn ghost dl-all" href="${gAll}" target="_blank" rel="noopener">See every ${esc(m.brand)} showroom near ${esc(geo.label)} on Google Maps ↗</a>
+      <p class="hint">Showroom list from OpenStreetMap, refreshed weekly. Call ahead to check stock and test-drive cars.</p>`;
+  }
+  function dealerCard(d) {
+    const area = d.c || nearestCity(d.la, d.lo);
+    const addr = [d.a, area, d.p].filter(Boolean).join(', ');
+    const gm = `https://www.google.com/maps/search/${encodeURIComponent(d.n + (area ? ', ' + area : ''))}/@${d.la},${d.lo},17z`;
+    const dir = `https://www.google.com/maps/dir/?api=1&destination=${d.la},${d.lo}`;
+    const tel = d.t ? d.t.replace(/[^\d+]/g, '') : '';
+    return `<li class="dl"><div class="dl-main"><b class="dl-n">${esc(d.n)}</b><div class="dl-a">${esc(addr || 'Address not listed')}</div>
+      <div class="dl-meta"><span class="dl-km">${d.km < 10 ? d.km.toFixed(1) : Math.round(d.km)} km away</span>${tel ? `<a class="dl-tel" href="tel:${esc(tel)}">${PHONE} ${esc(d.t)}</a>` : '<span class="muted">Phone number on Google Maps</span>'}</div></div>
+      <div class="dl-act"><a class="btn primary" href="${esc(gm)}" target="_blank" rel="noopener">Google Maps ↗</a><a class="link" href="${esc(dir)}" target="_blank" rel="noopener">Directions</a></div></li>`;
+  }
+  async function pinToGeo(pin) {
+    try {
+      const r = await fetch(`https://nominatim.openstreetmap.org/search?postalcode=${pin}&country=India&format=json&limit=1&addressdetails=0`, { headers: { 'Accept-Language': 'en' } });
+      const j = await r.json();
+      if (j && j[0]) { const place = j[0].display_name.split(',').map((t) => t.trim()).find((t) => !/^\d+$/.test(t)); return { la: +j[0].lat, lo: +j[0].lon, label: pin + (place ? ` (${place})` : '') }; }
+    } catch (e) {}
+    const all = await loadDealers();
+    for (const n of [6, 5, 4, 3]) { const h = all.filter((d) => d.p && d.p.slice(0, n) === pin.slice(0, n)); if (h.length) { const la = h.reduce((s, d) => s + d.la, 0) / h.length, lo = h.reduce((s, d) => s + d.lo, 0) / h.length; return { la, lo, label: `${pin} (${nearestCity(la, lo)})` }; } }
+    return null;
+  }
+  function wireCarPage() {
+    const P = $('#carPage');
+    P.addEventListener('click', (e) => {
+      const m = modelBySlug(carSlug); if (!m) return;
+      if (e.target.closest('[data-back]')) { if (navFromList && history.length > 1) history.back(); else go('cars'); return; }
+      const j = e.target.closest('[data-jump]'); if (j) { e.preventDefault(); $('#' + j.dataset.jump).scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+      const v = e.target.closest('[data-vid]'); if (v) { detail(v.dataset.vid); return; }
+      const f = e.target.closest('[data-cpf]'); if (f) { const set = cp[f.dataset.cpf]; set.has(f.dataset.v) ? set.delete(f.dataset.v) : set.add(f.dataset.v); return keepY(() => drawVariants(m)); }
+      if (e.target.closest('[data-more]')) { cp.more = !cp.more; return keepY(() => drawVariants(m)); }
+      const n = e.target.closest('[data-need]'); if (n) { cp.need.has(n.dataset.need) ? cp.need.delete(n.dataset.need) : cp.need.add(n.dataset.need); return keepY(() => drawVariants(m)); }
+      const d = e.target.closest('[data-dl]');
+      if (d && d.dataset.dl === 'change') { store.set('geo', null); drawDealers(m); $('.dl-pin').focus(); return; }
+      if (d && d.dataset.dl === 'geo') {
+        if (!navigator.geolocation) { $('#dlList').innerHTML = '<p class="muted">Location isn\'t available in this browser. Enter your pincode instead.</p>'; return; }
+        $('#dlList').innerHTML = '<p class="muted">Finding you…</p>';
+        navigator.geolocation.getCurrentPosition((p) => { const g = { la: p.coords.latitude, lo: p.coords.longitude }; g.label = nearestCity(g.la, g.lo) || 'you'; store.set('geo', g); listDealers(m, g); },
+          () => { $('#dlList').innerHTML = '<p class="muted">We couldn\'t get your location. Enter your pincode instead.</p>'; $('.dl-pin').focus(); }, { timeout: 12000, maximumAge: 3600e3 });
+      }
+    });
+    P.addEventListener('change', (e) => { if (e.target.matches('[data-cpall]')) { cp.all = e.target.checked; const m = modelBySlug(carSlug); if (m) keepY(() => drawVariants(m)); } });
+    P.addEventListener('submit', async (e) => {
+      if (!e.target.matches('[data-dlform]')) return; e.preventDefault();
+      const m = modelBySlug(carSlug), pin = (e.target.pin.value || '').replace(/\D/g, '');
+      if (!/^[1-9]\d{5}$/.test(pin)) { $('#dlList').innerHTML = '<p class="muted">Please enter a 6-digit pincode.</p>'; return; }
+      $('#dlList').innerHTML = `<p class="muted">Looking up ${pin}…</p>`;
+      const g = await pinToGeo(pin);
+      if (!g) { $('#dlList').innerHTML = `<p class="muted">We couldn't find pincode ${pin}. <a href="https://www.google.com/maps/search/${encodeURIComponent(m.brand + ' showroom near ' + pin)}" target="_blank" rel="noopener">Search Google Maps for ${esc(m.brand)} showrooms near ${pin} ↗</a></p>`; return; }
+      store.set('geo', g); listDealers(m, g);
+    });
+  }
+  // redraw part of the page without the page jumping
+  function keepY(fn) { const y = window.scrollY; fn(); window.scrollTo({ top: y, behavior: 'instant' }); }
+
   // ---------------- personalised recommendations ----------------
   const PRIO = { features: 'Features', mileage: 'Mileage', comfort: 'Comfort', value: 'Value for money' };
   const PRIO_HINT = { features: 'Tech, safety and convenience kit', mileage: 'Fuel efficiency / range', comfort: 'Space, seats and ride quality', value: 'Most car for the money' };
@@ -579,14 +768,46 @@
       m.expert = x;
     }
   }
+  // Priorities: the only thing shown above the ranked list, and it can be reordered at any time
   function recBar() {
     const r = state.rec, bar = $('#recBar');
     if (!r) { bar.hidden = true; return; }
     bar.hidden = false;
-    bar.innerHTML = `<div class="rec-sum"><span class="rec-k">Picked for you</span>
-      <span class="chip">${esc(BODY_OPTS[r.body].label)}</span><span class="chip">Up to ₹${esc(r.budget)} L on-road</span><span class="chip">${esc(!r.fuel || r.fuel === 'Any' ? 'Any fuel' : r.fuel)}</span><span class="chip">${esc(r.trans === 'Either' ? 'Any gearbox' : r.trans)}</span>
-      <span class="rec-prio">${r.prio.map((k, i) => `<b>${i + 1}</b> ${esc(PRIO[k])}`).join('<span class="sep">›</span>')}</span></div>
-      <div class="rec-actions"><button class="btn ghost" type="button" data-rec="edit">Edit answers</button><button class="link" type="button" data-rec="exit">Browse all cars</button></div>`;
+    bar.innerHTML = `<span class="rec-k">Priorities</span>
+      <ol class="pr-row" id="prRow" aria-label="Your priorities, most important first">${r.prio.map((k, i) => `<li class="pr-pill" data-k="${k}" tabindex="0" title="Drag to reorder"><span class="pn">${i + 1}</span><span class="pr-t">${esc(PRIO[k])}</span><span class="pr-mv"><button type="button" data-pmove="-1" aria-label="Move ${esc(PRIO[k])} up" ${i ? '' : 'disabled'}>‹</button><button type="button" data-pmove="1" aria-label="Move ${esc(PRIO[k])} down" ${i < 3 ? '' : 'disabled'}>›</button></span></li>`).join('')}</ol>
+      <span class="pr-hint muted">Drag or tap the arrows to reorder — the ranking updates instantly</span>`;
+  }
+  function setPrio(order) {
+    if (!state.rec || order.join() === state.rec.prio.join()) return;
+    state.rec.prio = order; store.set('rec', state.rec); render();
+    const row = $('#prRow'); if (row) row.classList.add('changed');
+  }
+  function wirePrioBar() {
+    const bar = $('#recBar'); let drag = null;
+    bar.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-pmove]'); if (!b || !state.rec) return;
+      const k = b.closest('.pr-pill').dataset.k, o = state.rec.prio.slice(), i = o.indexOf(k), j = i + Number(b.dataset.pmove);
+      if (j < 0 || j > 3) return; [o[i], o[j]] = [o[j], o[i]]; setPrio(o);
+      const f = $(`.pr-pill[data-k="${k}"] [data-pmove="${b.dataset.pmove}"]`); (f && !f.disabled ? f : $(`.pr-pill[data-k="${k}"]`)).focus();
+    });
+    bar.addEventListener('keydown', (e) => {
+      const li = e.target.closest('.pr-pill'); if (!li || !['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) return;
+      e.preventDefault(); const d = /Left|Up/.test(e.key) ? -1 : 1, k = li.dataset.k, o = state.rec.prio.slice(), i = o.indexOf(k), j = i + d;
+      if (j < 0 || j > 3) return; [o[i], o[j]] = [o[j], o[i]]; setPrio(o); $(`.pr-pill[data-k="${k}"]`).focus();
+    });
+    bar.addEventListener('pointerdown', (e) => {
+      const li = e.target.closest('.pr-pill'); if (!li || e.target.closest('button')) return;
+      drag = { li, id: e.pointerId }; li.classList.add('dragging'); li.setPointerCapture(e.pointerId); e.preventDefault();
+    });
+    bar.addEventListener('pointermove', (e) => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const row = drag.li.parentElement, items = $$('.pr-pill', row).filter((x) => x !== drag.li);
+      const before = items.find((x) => { const r = x.getBoundingClientRect(); return e.clientY < r.top || (e.clientY <= r.bottom && e.clientX < r.left + r.width / 2); });
+      before ? row.insertBefore(drag.li, before) : row.appendChild(drag.li);
+      $$('.pr-pill', row).forEach((x, i) => (x.querySelector('.pn').textContent = i + 1));
+    });
+    const end = () => { if (!drag) return; drag.li.classList.remove('dragging'); const o = $$('.pr-pill', drag.li.parentElement).map((x) => x.dataset.k); drag = null; setPrio(o); };
+    bar.addEventListener('pointerup', end); bar.addEventListener('pointercancel', end);
   }
   function applyRec(r) {
     state.rec = r; store.set('rec', r); state.tab = 'picks'; state.q = ''; state.qf = null; if ($('#q')) $('#q').value = '';
@@ -765,7 +986,7 @@
   function setState(code, manual) {
     state.st = code; store.set('state', code);
     if (manual != null) store.set('stateManual', manual);
-    $('#state').value = code; recalc(); render();
+    $('#state').value = code; recalc(); render(); if (page === 'car') keepY(() => renderCar(carSlug));
   }
   let locating = false;
   function detect(auto) {
@@ -778,7 +999,7 @@
       const { latitude: la, longitude: lo } = p.coords;
       let best = null, bd = Infinity;
       for (const [name, st, a, b] of RTO.cities) { const d = (a - la) ** 2 + ((b - lo) * Math.cos(la * Math.PI / 180)) ** 2; if (d < bd) { bd = d; best = [name, st]; } }
-      if (best) { fillStates(best[0]); setState(best[1], false); sel.classList.add('located'); setTimeout(() => sel.classList.remove('located'), 1600); }
+      if (best) { store.set('geo', { la, lo, label: best[0] }); fillStates(best[0]); setState(best[1], false); sel.classList.add('located'); setTimeout(() => sel.classList.remove('located'), 1600); }
     }, (err) => {
       locating = false; sel.classList.remove('locating'); fillStates(); $('#state').value = state.st;
       if (auto === true) return; // silent attempt — don't nag
@@ -809,26 +1030,33 @@
   }
 
   // ---------------- two pages: home (#/) and cars (#/cars) ----------------
-  let page = null;
-  function showPage(next, animate = true) {
-    if (next === page) return;
+  let page = null, carSlug = null, carsY = 0;
+  function showPage(next, animate = true, arg = null) {
+    if (next === page && (next !== 'car' || arg === carSlug)) return;
     const prev = page; page = next;
+    if (prev === 'cars') carsY = window.scrollY;
     const B = document.body, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
     const swap = () => {
-      B.classList.remove('leaving', 'to-cars', 'to-home');
+      B.classList.remove('leaving', 'to-cars', 'to-home', 'to-car');
       B.dataset.page = next;
-      window.scrollTo({ top: 0, behavior: 'instant' });
-      if (next === 'cars') render(); else { requestAnimationFrame(placeHorizon); startLanes(); }
-      if (animate && prev && !reduce) { void B.offsetWidth; B.classList.add(next === 'cars' ? 'to-cars' : 'to-home'); clearTimeout(showPage.t); showPage.t = setTimeout(() => B.classList.remove('to-cars', 'to-home'), 1100); }
+      if (next !== 'car') { document.title = ORIG_TITLE; navFromList = navFromList && next === 'cars'; }
+      if (next === 'car') { carSlug = arg; renderCar(arg); window.scrollTo({ top: 0, behavior: 'instant' }); }
+      else if (next === 'cars') { render(); window.scrollTo({ top: prev === 'car' ? carsY : 0, behavior: 'instant' }); }
+      else { window.scrollTo({ top: 0, behavior: 'instant' }); requestAnimationFrame(placeHorizon); startLanes(); }
+      if (animate && prev && !reduce) { void B.offsetWidth; B.classList.add('to-' + next); clearTimeout(showPage.t); showPage.t = setTimeout(() => B.classList.remove('to-cars', 'to-home', 'to-car'), 1100); }
     };
-    if (animate && prev && !reduce && window.scrollY < 400) { B.classList.add('leaving'); clearTimeout(showPage.l); showPage.l = setTimeout(swap, 330); }
+    if (animate && prev && !reduce && window.scrollY < 400 && prev !== 'car' && next !== 'car') { B.classList.add('leaving'); clearTimeout(showPage.l); showPage.l = setTimeout(swap, 330); }
     else swap();
   }
-  function go(next) {
-    const h = next === 'cars' ? '#/cars' : '#/';
-    if (location.hash !== h) location.hash = h; else showPage(next);
+  function go(next, arg) {
+    const h = next === 'cars' ? '#/cars' : next === 'car' ? '#/car/' + arg : '#/';
+    if (location.hash !== h) location.hash = h; else showPage(next, true, arg);
   }
-  function route(animate) { showPage(/^#\/cars/.test(location.hash) ? 'cars' : 'home', animate); }
+  function route(animate) {
+    const c = location.hash.match(/^#\/car\/([\w-]+)/);
+    if (c) return showPage('car', animate, c[1]);
+    showPage(/^#\/cars/.test(location.hash) ? 'cars' : 'home', animate);
+  }
   // ---------------- home scene: sunrise over a road drawn in true perspective ----------------
   // scene units: 860 tall (always fully visible), width grows with the window; horizon at y=500
   const SC = { VH: 860, HZ: 500, F: 360, B: 0.32, HW: 0.62, ZMIN: 0.92, DL: 0.42, DG: 0.62 };
@@ -925,21 +1153,22 @@
       if (e.target.id === 'closeMatches') state.closeMatches = e.target.checked;
       state.page = 1; saveFilters(); clearTimeout(wire.t); wire.t = setTimeout(render, 200);
     });
-    $('#activeChips').addEventListener('click', (e) => {
-      const b = e.target.closest('[data-rm]'); if (!b) return;
-      const [k, v] = b.dataset.rm.split(/:(.*)/s);
-      if (k === 'budget') { state.budgetMin = state.budgetMax = ''; } else if (k === 'q') { state.q = ''; state.qf = null; $('#q').value = ''; } else state[k].delete(v);
-      saveFilters(); buildFilters(); render();
-    });
+    const onRm = (e) => {
+      const b = e.target.closest('[data-rm]'); if (!b) return false;
+      if (b.dataset.rm === '*') { clearFilters(); if (state.sort === 'rec') { state.sort = 'price'; $('#sort').value = 'price'; } }
+      else { rmFilter(b.dataset.rm); if (!state.q) $('#q').value = ''; }
+      state.page = 1; saveFilters(); buildFilters(); render(); return true;
+    };
+    $('#activeChips').addEventListener('click', onRm);
     $('#list').addEventListener('click', (e) => {
+      if (onRm(e)) { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
       const t = e.target.closest('[data-toggle]');
       if (t) { const k = t.dataset.toggle; state.open.has(k) ? state.open.delete(k) : state.open.add(k); render(); return; }
       const box = e.target.closest('.cmp-box');
       if (box) { box.checked ? (state.compare.size < 4 ? state.compare.add(box.dataset.id) : (box.checked = false)) : state.compare.delete(box.dataset.id); updateCompareBar(); return; }
       const tr = e.target.closest('tr.v'); if (tr) { detail(tr.dataset.id); return; }
       if (e.target.closest('a, button, input, .variants')) return;
-      const rc = e.target.closest('.rec-card'); if (rc) { window.open(rc.dataset.yt, '_blank', 'noopener'); return; }
-      const tl = e.target.closest('.tile'); if (tl) modelSheet(tl.dataset.key);
+      const rc = e.target.closest('.rec-card, .tile'); if (rc) openCar(rc.dataset.key);
     });
     document.addEventListener('click', (e) => {
       const r = e.target.closest('[data-rec]'); if (!r) return;
@@ -964,8 +1193,8 @@
     $('#aboutLink').addEventListener('click', (e) => { e.preventDefault(); about(); });
     $('#closeFilters').addEventListener('click', closeDrawer);
     $('#applyMobile').addEventListener('click', () => { closeDrawer(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
-    $('#list').addEventListener('keydown', (e) => { const t = e.target.closest('.tile'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); modelSheet(t.dataset.key); } });
-    wireShowroom();
+    $('#list').addEventListener('keydown', (e) => { const t = e.target.closest('.tile'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openCar(t.dataset.key); } });
+    wireShowroom(); wirePrioBar(); wireCarPage();
   }
 
   async function init() {
