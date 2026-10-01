@@ -695,7 +695,7 @@
       const r = e.target.closest('[data-rec]'); if (!r) return;
       if (r.dataset.rec === 'edit') openWizard(1); else exitRec();
     });
-    $('#findBtn').addEventListener('click', () => openWizard(state.rec ? 1 : 0));
+    $('#findBtn').addEventListener('click', () => openWizard(1));
     document.addEventListener('click', (e) => { if (e.target.closest('[data-open-finder]')) openWizard(1); });
     wireWizard();
     $('#more').addEventListener('click', () => { state.page++; render(); });
