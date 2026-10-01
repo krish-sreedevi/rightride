@@ -33,6 +33,13 @@
     <button id="openFilters" class="btn ghost only-mobile" type="button">Filters <span id="filterCount"></span></button>
   </header>
 
+  <section class="hero" id="hero">
+    <p class="eyebrow">Every car · Every variant · Real on-road prices</p>
+    <p class="hero-title">Find the right ride.</p>
+    <p class="lede" id="heroStats">Every new car sold in India, priced for your state and ranked with Autocar India's expert reviews.</p>
+    <div class="hero-cta"><button class="btn primary lg" type="button" data-open-finder>Find my Right Ride</button><a class="btn ghost lg" href="#results">Browse all cars</a></div>
+  </section>
+
   <main class="layout">
     <aside id="filters" class="filters" aria-label="Filters">
       <div class="filters-head">
@@ -44,7 +51,7 @@
       <button id="applyMobile" class="btn primary block only-mobile" type="button">Show results</button>
     </aside>
 
-    <section class="results" aria-live="polite">
+    <section class="results" id="results" aria-live="polite">
       <div class="results-head">
         <div>
           <h1 id="resultTitle">Loading cars…</h1>

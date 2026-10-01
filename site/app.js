@@ -61,12 +61,27 @@
   }
 
   // ---------------- data prep ----------------
-  const FUELS = ['Petrol', 'Diesel', 'CNG', 'Hybrid', 'PHEV', 'Electric'];
+  const FUELS = ['Petrol', 'Diesel', 'CNG', 'Hybrid', 'Electric'];
+  // filters we deliberately don't offer (data is still shown on each car's detail page)
+  const HIDE_BUCKETS = new Set(['Safety', 'Exterior & Lighting']);
+  const HIDE_FEATS = new Set(['digitalCluster', 'premiumAudio', 'voiceCommands', 'dualZone', 'rearAC', 'cruise', 'autoIRVM', 'paddleShifters', 'driveModes', 'rearArmrest', 'tiltTelescopic', 'powerTailgate', 'panoramic', 'dashcam', 'leather', 'airPurifier', 'massage', 'captainSeats']);
+  const filterable = (f) => !HIDE_BUCKETS.has(f.bucket) && !HIDE_FEATS.has(f.key);
+  const BODY_MAP = { 'Coupe / Convertible': 'Sedan', Pickup: 'SUV' };
+  const seatGroup = (n) => (!n ? null : n <= 5 ? '4–5' : '6–7');
   const TTYPES = { MT: 'Manual', AMT: 'AMT', AT: 'Torque converter (AT)', CVT: 'CVT / IVT', 'e-CVT': 'e-CVT (hybrid)', DCT: 'Dual-clutch (DCT/DSG)' };
   function prep() {
     FKEYS = DATA.features.map((f) => f.key);
     DATA.features.forEach((f, i) => (FIDX[f.key] = i));
-    for (const c of DATA.cars) c.feat = (k) => c.fs[FIDX[k]];
+    for (const c of DATA.cars) {
+      c.feat = (k) => c.fs[FIDX[k]];
+      if (BODY_MAP[c.body]) c.body = BODY_MAP[c.body];
+      if (c.fuel === 'PHEV') c.fuel = 'Hybrid';
+    }
+    for (const k of [...state.feats]) if (FIDX[k] == null || !filterable(DATA.features[FIDX[k]])) state.feats.delete(k);
+    for (const v of [...state.seats]) if (!['4–5', '6–7'].includes(v)) state.seats.delete(v);
+    for (const v of [...state.body]) if (BODY_MAP[v]) { state.body.delete(v); state.body.add(BODY_MAP[v]); }
+    if (state.fuel.delete('PHEV')) state.fuel.add('Hybrid');
+    state.transType.clear(); state.drive.clear();
     recalc();
   }
   function recalc() {
@@ -84,7 +99,7 @@
     if (state.trans.size && !state.trans.has(c.transmission)) return null;
     if (state.transType.size && !state.transType.has(c.transType)) return null;
     if (state.drive.size && !state.drive.has(c.drive)) return null;
-    if (state.seats.size) { const s = c.seats >= 8 ? '8+' : String(c.seats); if (!state.seats.has(s)) return null; }
+    if (state.seats.size && !state.seats.has(seatGroup(c.seats))) return null;
     let miss = [], unk = [];
     for (const k of state.feats) { const v = c.feat(k); if (v === '0') miss.push(k); else if (v === '?') unk.push(k); }
     if (miss.length > (state.closeMatches ? 1 : 0)) return null;
@@ -140,28 +155,24 @@
     const bodies = Object.keys(countBy((c) => c.body)).sort();
     const brands = Object.keys(countBy((c) => c.brand)).sort();
     const fuels = FUELS.filter((f) => DATA.cars.some((c) => c.fuel === f));
-    const ttypes = Object.keys(TTYPES).filter((t) => DATA.cars.some((c) => c.transType === t));
     const byBucket = {};
     for (const f of DATA.features) (byBucket[f.bucket] = byBucket[f.bucket] || []).push(f);
     const featCount = (k) => DATA.cars.filter((c) => c.feat(k) === '1').length;
     let html = `
       <details class="bucket" open><summary>Budget &amp; basics</summary>
-        <div class="group"><div class="label">On-road budget (₹ lakh)</div>
-          <div class="range"><input id="bmin" inputmode="decimal" placeholder="Min" value="${esc(state.budgetMin)}"><span class="muted">to</span><input id="bmax" inputmode="decimal" placeholder="Max" value="${esc(state.budgetMax)}"></div>
-          <div class="chips" style="margin-top:6px">${[[0, 8], [8, 12], [12, 18], [18, 25], [25, 40], [40, 80], [80, '']].map(([a, b]) => `<button type="button" class="chip" data-budget="${a},${b}">${b === '' ? a + 'L+' : (a ? a + '–' : 'Under ') + b + 'L'}</button>`).join('')}</div>
+        <div class="group"><div class="label">On-road budget</div>
+          <div class="range"><label class="money"><span>₹</span><input id="bmin" inputmode="decimal" placeholder="Min" value="${esc(state.budgetMin)}" aria-label="Minimum budget in lakh"><em>L</em></label><span class="muted">–</span><label class="money"><span>₹</span><input id="bmax" inputmode="decimal" placeholder="Max" value="${esc(state.budgetMax)}" aria-label="Maximum budget in lakh"><em>L</em></label></div>
         </div>
-        <div class="group"><div class="label">Body type</div>${chips('body', bodies, state.body)}</div>
-        <div class="group"><div class="label">Seats</div>${chips('seats', ['4', '5', '6', '7', '8+'], state.seats)}</div>
+        <div class="group"><div class="label">Body type</div>${chips('body', ['Hatchback', 'Sedan', 'SUV', 'MUV / MPV'].filter((x) => bodies.includes(x)), state.body)}</div>
+        <div class="group"><div class="label">Seats</div>${chips('seats', ['4–5', '6–7'], state.seats)}</div>
         <div class="group"><div class="label">Brand</div>${chips('brand', brands, state.brand)}</div>
       </details>
-      <details class="bucket" open><summary>Fuel &amp; transmission</summary>
+      <details class="bucket" open><summary>Fuel &amp; gearbox</summary>
         <div class="group"><div class="label">Fuel type</div>${chips('fuel', fuels, state.fuel)}</div>
         <div class="group"><div class="label">Transmission</div>${chips('trans', ['Manual', 'Automatic'], state.trans)}</div>
-        <div class="group"><div class="label">Automatic type</div>${chips('transType', ttypes.filter((t) => t !== 'MT'), state.transType, TTYPES)}</div>
-        <div class="group"><div class="label">Drive</div>${chips('drive', ['2WD', 'AWD/4x4'], state.drive)}</div>
       </details>`;
     for (const b of DATA.buckets) {
-      const fs = (byBucket[b] || []).filter((f) => featCount(f.key) > 0);
+      const fs = (byBucket[b] || []).filter((f) => filterable(f) && featCount(f.key) > 0);
       if (!fs.length) continue;
       const on = fs.filter((f) => state.feats.has(f.key)).length;
       html += `<details class="bucket"${on ? ' open' : ''}><summary>${esc(b)}<span class="count">${on ? on + ' selected' : ''}</span></summary>
@@ -198,15 +209,16 @@
     const nV = list.reduce((s, m) => s + m.vs.length, 0);
     const stName = RTO.states[state.st].name;
     $('#resultTitle').textContent = list.length ? `${list.length} model${list.length > 1 ? 's' : ''} · ${nV} variants match` : 'No cars match yet';
-    $('#resultSub').textContent = `On-road prices estimated for ${stName}.` + (state.feats.size ? ' Cars with every selected feature are listed first.' : ' Pick features on the left to narrow down.');
+    $('#resultSub').textContent = `On-road prices estimated for ${stName}.` + (state.feats.size ? ' Cars with every selected feature are listed first.' : ' Use the filters to narrow down.');
     const act = [];
     for (const k of state.feats) act.push(`<button class="chip" data-rm="feats:${k}">${esc(FLABEL(k))} ✕</button>`);
-    for (const n of ['body', 'fuel', 'trans', 'transType', 'drive', 'seats', 'brand']) for (const v of state[n]) act.push(`<button class="chip" data-rm="${n}:${esc(v)}">${esc(TTYPES[v] && n === 'transType' ? TTYPES[v] : v)} ✕</button>`);
+    for (const n of ['body', 'fuel', 'trans', 'seats', 'brand']) for (const v of state[n]) act.push(`<button class="chip" data-rm="${n}:${esc(v)}">${esc(TTYPES[v] && n === 'transType' ? TTYPES[v] : v)} ✕</button>`);
     if (state.budgetMin || state.budgetMax) act.push(`<button class="chip" data-rm="budget:">₹${state.budgetMin || 0}–${state.budgetMax || '∞'} L ✕</button>`);
     $('#activeChips').innerHTML = act.join('');
     $('#filterCount').textContent = act.length ? `(${act.length})` : '';
     const shown = list.slice(0, state.page * PAGE);
     recBar();
+    document.body.classList.toggle('rec-mode', !!(state.sort === 'rec' && state.rec));
     const recMode = state.sort === 'rec' && state.rec;
     if (recMode && list.length) $('#resultTitle').textContent = `${list.length} model${list.length > 1 ? 's' : ''} ranked for you`;
     if (recMode) $('#resultSub').textContent = `Ranked on your priorities using Autocar India expert scores plus our specs data. Click a car to watch its Autocar India video review.`;
@@ -353,7 +365,7 @@
     if (!r) { bar.hidden = true; return; }
     bar.hidden = false;
     bar.innerHTML = `<div class="rec-sum"><span class="rec-k">Picked for you</span>
-      <span class="chip">${esc(BODY_OPTS[r.body].label)}</span><span class="chip">Up to ₹${esc(r.budget)} L on-road</span><span class="chip">${esc(r.trans === 'Either' ? 'Any gearbox' : r.trans)}</span>
+      <span class="chip">${esc(BODY_OPTS[r.body].label)}</span><span class="chip">Up to ₹${esc(r.budget)} L on-road</span><span class="chip">${esc(!r.fuel || r.fuel === 'Any' ? 'Any fuel' : r.fuel)}</span><span class="chip">${esc(r.trans === 'Either' ? 'Any gearbox' : r.trans)}</span>
       <span class="rec-prio">${r.prio.map((k, i) => `<b>${i + 1}</b> ${esc(PRIO[k])}`).join('<span class="sep">›</span>')}</span></div>
       <div class="rec-actions"><button class="btn ghost" type="button" data-rec="edit">Edit answers</button><button class="link" type="button" data-rec="exit">Browse all cars</button></div>`;
   }
@@ -362,6 +374,7 @@
     for (const k of SETS) state[k].clear();
     BODY_OPTS[r.body].bodies.forEach((b) => state.body.add(b));
     if (r.trans !== 'Either') state.trans.add(r.trans);
+    if (r.fuel && r.fuel !== 'Any') state.fuel.add(r.fuel);
     state.budgetMin = ''; state.budgetMax = String(r.budget);
     state.sort = 'rec'; $('#sort').value = 'rec'; $('#sort option[value="rec"]').hidden = false;
     state.page = 1; state.open.clear();
@@ -397,7 +410,7 @@
 
   // ---- welcome question + 4-step builder ----
   const wz = { step: 0, a: null };
-  const defaults = () => ({ body: null, budget: '', trans: null, prio: ['features', 'mileage', 'comfort', 'value'] });
+  const defaults = () => ({ body: null, budget: '', fuel: null, trans: null, prio: ['features', 'mileage', 'comfort', 'value'] });
   function openWizard(step = 0) {
     wz.a = Object.assign(defaults(), state.rec ? JSON.parse(JSON.stringify(state.rec)) : {});
     wz.step = step; drawWizard();
@@ -406,14 +419,14 @@
   function closeWizard() { $('#wizard').close(); }
   function drawWizard() {
     const a = wz.a, s = wz.step, W = $('#wizardBody');
-    const dots = s ? `<div class="wz-steps" aria-label="Step ${s} of 4">${[1, 2, 3, 4].map((i) => `<span class="${i < s ? 'done' : i === s ? 'on' : ''}"></span>`).join('')}<em>Step ${s} of 4</em></div>` : '';
+    const dots = s ? `<div class="wz-steps" aria-label="Step ${s} of 5">${[1, 2, 3, 4, 5].map((i) => `<span class="${i < s ? 'done' : i === s ? 'on' : ''}"></span>`).join('')}<em>Step ${s} of 5</em></div>` : '';
     const close = `<button class="wz-x" type="button" data-wz="close" aria-label="Close">✕</button>`;
     let body = '', canNext = true;
     if (s === 0) {
       body = `<img class="wz-mark" src="brand/logo-red-black.svg" alt="Right Ride"><h2 id="wzTitle" class="display">What can we help you with?</h2>
         <div class="wz-choices two">
           <button class="wz-opt" type="button" data-wz="browse"><b>Just browsing</b><span>Explore every car, variant and on-road price</span></button>
-          <button class="wz-opt primary" type="button" data-wz="start" autofocus><b>Find the Right Ride for me!</b><span>Personalised recommendations in 4 quick steps</span></button>
+          <button class="wz-opt primary" type="button" data-wz="start" autofocus><b>Find the Right Ride for me!</b><span>Personalised recommendations in 5 quick steps</span></button>
         </div>`;
     } else if (s === 1) {
       canNext = !!a.body;
@@ -426,18 +439,23 @@
         <div class="chips wz-quick">${[6, 8, 10, 12, 15, 20, 25, 35, 50].map((n) => `<button class="chip" type="button" data-budget="${n}" aria-pressed="${Number(a.budget) === n}">₹${n} L</button>`).join('')}</div>
         ${a.budget && !canNext ? '<p class="wz-err">Enter an amount between 3 and 500 lakh.</p>' : ''}`;
     } else if (s === 3) {
+      canNext = !!a.fuel;
+      const F = { Petrol: 'Simple, widely available', Diesel: 'Torque and long-distance economy', CNG: 'Lowest running cost', Hybrid: 'Petrol + electric, incl. plug-in', Electric: 'Zero tailpipe emissions', Any: 'Show me everything' };
+      body = `<h2 id="wzTitle" class="display">Which fuel type?</h2>
+        <div class="wz-choices three">${Object.entries(F).map(([k, sub]) => `<button class="wz-opt${a.fuel === k ? ' sel' : ''}" type="button" data-fuel="${k}" aria-pressed="${a.fuel === k}"><b>${k === 'Any' ? 'No preference' : k}</b><span>${sub}</span></button>`).join('')}</div>`;
+    } else if (s === 4) {
       canNext = !!a.trans;
       const T = { Automatic: 'Two pedals — AT, CVT, DCT or AMT', Manual: 'Clutch and gear lever', Either: 'Show me both' };
       body = `<h2 id="wzTitle" class="display">Automatic or Manual?</h2>
         <div class="wz-choices three">${Object.entries(T).map(([k, sub]) => `<button class="wz-opt${a.trans === k ? ' sel' : ''}" type="button" data-trans="${k}" aria-pressed="${a.trans === k}"><b>${k === 'Either' ? 'No preference' : k}</b><span>${sub}</span></button>`).join('')}</div>`;
-    } else if (s === 4) {
+    } else if (s === 5) {
       body = `<h2 id="wzTitle" class="display">What matters most?</h2><p class="muted">Drag to put them in your order — most important at the top.</p>
         <ol class="prio" id="prioList">${a.prio.map((k, i) => `<li class="prio-item" data-k="${k}" tabindex="0"><span class="grip" aria-hidden="true">⋮⋮</span><span class="pn">${i + 1}</span><span class="pt"><b>${PRIO[k]}</b><small>${PRIO_HINT[k]}</small></span><span class="pm"><button type="button" data-move="-1" aria-label="Move ${PRIO[k]} up" ${i ? '' : 'disabled'}>▲</button><button type="button" data-move="1" aria-label="Move ${PRIO[k]} down" ${i < 3 ? '' : 'disabled'}>▼</button></span></li>`).join('')}</ol>`;
     }
-    const nav = s ? `<div class="wz-nav"><button class="btn ghost" type="button" data-wz="back">Back</button><button class="btn primary" type="button" data-wz="next" ${canNext ? '' : 'disabled'}>${s === 4 ? 'Show my matches' : 'Next'}</button></div>` : '';
+    const nav = s ? `<div class="wz-nav"><button class="btn ghost" type="button" data-wz="back">Back</button><button class="btn primary" type="button" data-wz="next" ${canNext ? '' : 'disabled'}>${s === 5 ? 'Show my matches' : 'Next'}</button></div>` : '';
     W.innerHTML = `${close}${dots}<div class="wz-body">${body}</div>${nav}`;
     if (s === 2) { const i = $('#wzBudget'); i.focus(); i.setSelectionRange(i.value.length, i.value.length); }
-    if (s === 4) wirePrio();
+    if (s === 5) wirePrio();
   }
   function bodyIcon(k) {
     const P = { small: 'M6 30h52M10 30l6-10h22l10 10M16 20v10', sedan: 'M4 30h56M8 30l8-9h26l12 9M20 21l-2 9M36 21v9', suv: 'M4 30h56M6 30V20l6-8h30l10 8 6 2v8M12 12v18M30 12v18' }[k];
@@ -480,11 +498,11 @@
       if (b.dataset.wz === 'close') return closeWizard();
       if (b.dataset.wz === 'browse') { closeWizard(); return; }
       if (b.dataset.wz === 'start') { wz.step = 1; return drawWizard(); }
-      if (b.dataset.wz === 'back') { wz.step = Math.max(0, wz.step - 1); return drawWizard(); }
+      if (b.dataset.wz === 'back') { wz.step = wz.step === 5 && a.fuel === 'Electric' ? 3 : Math.max(0, wz.step - 1); return drawWizard(); }
       if (b.dataset.wz === 'next') {
-        if (wz.step < 4) { wz.step++; return drawWizard(); }
+        if (wz.step < 5) { wz.step = wz.step === 3 && a.fuel === 'Electric' ? 5 : wz.step + 1; return drawWizard(); }
         closeWizard();
-        const r = { body: a.body, budget: Number(a.budget), trans: a.trans, prio: a.prio.slice() };
+        const r = { body: a.body, budget: Number(a.budget), fuel: a.fuel || 'Any', trans: a.trans, prio: a.prio.slice() };
         const L = window.RRLoader, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (!L) { applyRec(r); return; }
         L.show('Finding your Right Ride…');
@@ -493,7 +511,8 @@
         return;
       }
       if (b.dataset.body) { a.body = b.dataset.body; wz.step = 2; return drawWizard(); }
-      if (b.dataset.trans) { a.trans = b.dataset.trans; wz.step = 4; return drawWizard(); }
+      if (b.dataset.fuel) { a.fuel = b.dataset.fuel; if (a.fuel === 'Electric') { a.trans = 'Either'; wz.step = 5; } else wz.step = 4; return drawWizard(); }
+      if (b.dataset.trans) { a.trans = b.dataset.trans; wz.step = 5; return drawWizard(); }
       if (b.dataset.budget) { a.budget = b.dataset.budget; return drawWizard(); }
       if (b.dataset.move) move(b.closest('.prio-item'), Number(b.dataset.move));
     });
@@ -590,6 +609,7 @@
       if (r.dataset.rec === 'edit') openWizard(1); else exitRec();
     });
     $('#findBtn').addEventListener('click', () => openWizard(state.rec ? 1 : 0));
+    document.addEventListener('click', (e) => { if (e.target.closest('[data-open-finder]')) openWizard(state.rec ? 1 : 1); });
     wireWizard();
     $('#more').addEventListener('click', () => { state.page++; render(); });
     $('#sort').addEventListener('change', (e) => { state.sort = e.target.value; saveFilters(); render(); });
@@ -613,6 +633,7 @@
       $('#resultTitle').textContent = 'Could not load car data. Please refresh.'; return;
     }
     fillStates(); loadFilters(); prep(); buildFilters(); wire(); render(); maybeWelcome();
+    $('#heroStats').textContent = `${DATA.cars.length.toLocaleString('en-IN')} variants of ${new Set(DATA.cars.map((c) => c.brand + c.model)).size} models from ${DATA.brands.length} brands — priced for your state and ranked with Autocar India's expert reviews.`;
     $('#updated').textContent = `Data updated ${new Date(DATA.generated).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} · ${DATA.cars.length} variants from ${DATA.brands.length} brands`;
     if (!store.get('state', null) && navigator.permissions) navigator.permissions.query({ name: 'geolocation' }).then((p) => { if (p.state === 'granted') detect(); }).catch(() => {});
   }
