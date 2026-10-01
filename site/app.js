@@ -523,7 +523,7 @@
       $('#resultTitle').textContent = ok ? `${ok} model${ok > 1 ? 's' : ''} match` : 'No confirmed matches';
       if (rest) $('#resultTitle').insertAdjacentHTML('beforeend', `<span class="rt-more"> + ${rest} more to check</span>`);
     }
-    $('#resultSub').textContent = `On-road prices estimated for ${stName}.` + (featsOn().size ? ' Confirmed matches first, then cars to check (makers that don\'t publish features by variant).' : ' Use the filters to narrow down.') + (state.qf && state.qf.ignored.length ? ` Ignored: ${state.qf.ignored.join(', ')}.` : '');
+    $('#resultSub').textContent = `On-road prices estimated for ${stName}.` + (featsOn().size ? ' Confirmed matches first.' : ' Use the filters to narrow down.') + (state.qf && state.qf.ignored.length ? ` Ignored: ${state.qf.ignored.join(', ')}.` : '');
     $('#activeChips').innerHTML = activeFilters().map(([spec, label]) => `<button class="chip" data-rm="${esc(spec)}">${esc(label)} ✕</button>`).join('');
     const shown = list.slice(0, state.page * PAGE);
     recBar();
@@ -532,7 +532,7 @@
     if (recMode && list.length) $('#resultTitle').textContent = `${list.length} model${list.length > 1 ? 's' : ''} ranked for you`;
     if (recMode) $('#resultSub').textContent = `Ranked on your priorities using Autocar India expert scores plus our specs data. Click a car for its variants, safety rating and nearby showrooms.`;
     $('#list').className = recMode ? 'list' : 'tile-grid';
-    $('#list').innerHTML = shown.length ? shown.map((m, i) => (!recMode && featsOn().size && m.tier > 0 && (i === 0 || shown[i - 1].tier === 0) ? `<div class="grid-split"><b>More to check</b><span class="muted">Not confirmed: the maker doesn't list features by variant online, or a feature is missing. Open a car to see its variants.</span></div>` : '') + (recMode ? recCard(m, i + 1) : tile(m))).join('') : sorry();
+    $('#list').innerHTML = shown.length ? shown.map((m, i) => (!recMode && featsOn().size && m.tier > 0 && (i === 0 || shown[i - 1].tier === 0) ? `<div class="grid-split"><b>More to check</b><span class="muted">We couldn't confirm every feature for these yet. Open a car to see its variants.</span></div>` : '') + (recMode ? recCard(m, i + 1) : tile(m))).join('') : sorry();
     $('#more').hidden = list.length <= shown.length;
     updateCompareBar();
   }
@@ -755,7 +755,7 @@
     } else pick = `<div class="vh-pick none">${SORRY_ICON}<div><b>Sorry, no ${esc(m.model)} variant has all of that.</b><div class="muted small">Untick a feature to see the closest variants.</div></div></div>`;
     const grp = (name, vals, set) => vals.length > 1 ? `<div class="group"><div class="label">${name}</div><div class="chips">${vals.map((v) => `<button type="button" class="chip" data-cpf="${name === 'Fuel' ? 'fuel' : 'gear'}" data-v="${esc(v)}" aria-pressed="${set.has(v)}">${esc(v)}</button>`).join('')}</div></div>` : '';
     const cnt = (k) => known.filter((c) => c.feat(k) === '1').length;
-    box.innerHTML = `<div class="cp-sec-head"><div><h2 class="display">Find your variant</h2><p class="muted">${all.length} variant${all.length > 1 ? 's' : ''}. Tick what you care about. We only show what changes between them.</p></div></div>
+    box.innerHTML = `<div class="cp-sec-head"><div><h2 class="display">Find your variant</h2><p class="muted">${all.length} variant${all.length > 1 ? 's' : ''}. Tick what you care about. We only show what changes between them.${all.some((c) => c.fsrc === 'autocar') ? ' Feature lists from Autocar India.' : ''}</p></div></div>
       ${all.length > 1 ? `<div class="vh-filters">${grp('Fuel', fuels, cp.fuel)}${grp('Gearbox', gears, cp.gear)}</div>
       ${diff.length ? `<div class="group"><div class="label">Features that differ <span class="muted">· tap the ones you want</span></div><div class="chips vh-need">${(cp.more ? diff : diff.filter((f, i) => i < 12 || cp.need.has(f.key))).map((f) => `<button type="button" class="chip" data-need="${f.key}" aria-pressed="${cp.need.has(f.key)}">${esc(f.label)}<small>${cnt(f.key)}/${known.length}</small></button>`).join('')}${diff.length > 12 ? `<button type="button" class="chip more" data-more>${cp.more ? 'Fewer' : `+${diff.filter((f, i) => i >= 12 && !cp.need.has(f.key)).length} more`}</button>` : ''}</div></div>`
         : known.length ? '<p class="muted">These variants have the same feature list.</p>' : `<div class="note">${esc(m.brand)} doesn't publish a variant-wise feature list, so we can only compare prices and specs here.</div>`}` : ''}

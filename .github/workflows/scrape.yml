@@ -14,7 +14,7 @@ concurrency: { group: scrape, cancel-in-progress: false }
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -29,6 +29,10 @@ jobs:
       - name: Expert reviews (Autocar India)
         if: ${{ github.event.inputs.brands == '' || github.event.inputs.brands == null || contains(github.event.inputs.brands, 'expert') }}
         run: node scraper/expert.mjs && node scraper/normalize.mjs
+        continue-on-error: true
+      - name: Feature lists from Autocar India (makers that don't publish them)
+        if: ${{ github.event.inputs.brands == '' || github.event.inputs.brands == null || contains(github.event.inputs.brands, 'features') }}
+        run: node scraper/autocar-features.mjs && node scraper/normalize.mjs
         continue-on-error: true
       - name: Dealers (OpenStreetMap)
         if: ${{ github.event.inputs.brands == '' || github.event.inputs.brands == null || contains(github.event.inputs.brands, 'dealers') }}

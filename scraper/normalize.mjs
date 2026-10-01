@@ -2,6 +2,7 @@
 // Canonical feature catalogue, grouped into buckets for the filter UI.
 import fs from 'fs';
 import path from 'path';
+import { matchVariant } from './autocar-features.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 
@@ -246,6 +247,25 @@ export function normalize() {
   const keys = Object.keys(FEATURES);
   const featureMeta = keys.map((k) => ({ key: k, bucket: FEATURES[k][0], label: FEATURES[k][1] }));
   // compact: one char per feature, '1' yes, '0' no, '?' unknown
+  // fill features the maker doesn't publish from Autocar India's variant pages (data/autocar-features.json)
+  const AF = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data/autocar-features.json'), 'utf8')).models || {}; } catch (e) { return {}; } })();
+  const afByModel = {};
+  for (const c of cars) (afByModel[c.brand + '|' + c.model] = afByModel[c.brand + '|' + c.model] || []).push(c);
+  let afFilled = 0;
+  for (const [k, list] of Object.entries(afByModel)) {
+    const m = AF[k]; if (!m) continue;
+    const todo = list.filter((c) => !Object.values(c.f).some((v) => v === true || v === false));
+    const single = todo.length === 1 && list.length === 1 && /starting/i.test(todo[0].variant);
+    for (const c of todo) {
+      const a = single ? m.variants.slice().sort((x, y) => (x.p || 9e9) - (y.p || 9e9))[0] : matchVariant(c, m.variants, false);
+      if (!a) continue;
+      for (const kk of a.y) if (c.f[kk] == null) c.f[kk] = true;
+      for (const kk of a.no) if (c.f[kk] == null) c.f[kk] = false;
+      if (c.airbags == null && a.airbags) c.airbags = a.airbags;
+      c.fsrc = 'autocar'; afFilled++;
+    }
+  }
+  console.log(`features from Autocar India: ${afFilled} variants`);
   for (const c of cars) { c.fs = keys.map((k) => (c.f[k] === true ? '1' : c.f[k] === false ? '0' : '?')).join(''); delete c.f; }
   // expert opinion (Autocar India) per model, from scraper/expert.mjs
   const experts = {};
