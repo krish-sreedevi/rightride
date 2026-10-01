@@ -249,13 +249,24 @@ export function normalize() {
   for (const c of cars) { c.fs = keys.map((k) => (c.f[k] === true ? '1' : c.f[k] === false ? '0' : '?')).join(''); delete c.f; }
   // expert opinion (Autocar India) per model, from scraper/expert.mjs
   const experts = {};
+  // keep pros/cons short and consistent: at most 3 each, de-duplicated, curated short wording for long lines
+  const SHORT = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data/expert-short.json'), 'utf8')).map || {}; } catch (e) { return {}; } })();
+  const tidy = (arr) => {
+    const out = [];
+    for (let t of arr || []) {
+      t = String(t).trim(); t = SHORT[t] || t;
+      if (t.length > 42) t = t.split(/;|\. | – | — |, which| but /)[0].replace(/\.$/, '').trim();
+      if (t && !out.some((o) => o.toLowerCase() === t.toLowerCase())) out.push(t);
+    }
+    return out.slice(0, 3);
+  };
   const xf = path.join(ROOT, 'data/expert.json');
   if (fs.existsSync(xf)) {
     const X = JSON.parse(fs.readFileSync(xf, 'utf8')).models || {};
     const have = new Set(cars.map((c) => `${c.brand}|${c.model}`));
     for (const [k, v] of Object.entries(X)) {
       if (!have.has(k)) continue;
-      experts[k] = { s: v.score || null, sc: v.scores || null, like: (v.like || []).slice(0, 3), dislike: (v.dislike || []).slice(0, 3), yt: v.video ? v.video.id : null, ytT: v.video ? v.video.title : null, url: v.url || null, rv: v.review ? v.review.title : null, basedOn: v.basedOn || null };
+      experts[k] = { s: v.score || null, sc: v.scores || null, like: tidy(v.like), dislike: tidy(v.dislike), yt: v.video ? v.video.id : null, ytT: v.video ? v.video.title : null, url: v.url || null, rv: v.review ? v.review.title : null, basedOn: v.basedOn || null };
     }
   }
   // one consistent, transparent studio image per model (Autocar India's CDN, resized on the fly);
