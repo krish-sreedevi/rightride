@@ -21,24 +21,23 @@
         <img src="brand/logo-red-black.svg" alt="Right Ride" width="150" height="46">
       </picture>
     </a>
+    <span class="bar-title" aria-hidden="true">Find the right ride.</span>
     <div class="loc">
       <label for="state" class="sr">Your state</label>
       <select id="state" title="Prices are calculated for this state"></select>
-      <button id="detect" class="btn ghost" type="button" title="Detect my state">
-        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 2v3m0 14v3M2 12h3m14 0h3"/><circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
-        <span>Detect</span>
-      </button>
     </div>
     <button id="findBtn" class="btn primary find-btn" type="button">Find my Right Ride</button>
     <button id="openFilters" class="btn ghost only-mobile" type="button">Filters <span id="filterCount"></span></button>
   </header>
 
-  <section class="hero" id="hero">
+  <div id="locToast" class="loc-toast" role="status" hidden></div>
+
+  <section class="hero" id="hero"><div class="hero-inner">
     <p class="eyebrow">Every car · Every variant · Real on-road prices</p>
     <p class="hero-title">Find the right ride.</p>
     <p class="lede" id="heroStats">Every new car sold in India, priced for your state and ranked with Autocar India's expert reviews.</p>
     <div class="hero-cta"><button class="btn primary lg" type="button" data-open-finder>Find my Right Ride</button><a class="btn ghost lg" href="#results">Browse all cars</a></div>
-  </section>
+  </div></section>
 
   <main class="layout">
     <aside id="filters" class="filters" aria-label="Filters">

@@ -391,7 +391,7 @@
       <div class="rec-actions"><button class="btn ghost" type="button" data-rec="edit">Edit answers</button><button class="link" type="button" data-rec="exit">Browse all cars</button></div>`;
   }
   function applyRec(r) {
-    state.rec = r; store.set('rec', r);
+    state.rec = r; store.set('rec', r); collapseHero(true);
     for (const k of SETS) state[k].clear();
     BODY_OPTS[r.body].bodies.forEach((b) => state.body.add(b));
     if (r.trans !== 'Either') state.trans.add(r.trans);
@@ -557,23 +557,95 @@
   }
 
   // ---------------- state / location ----------------
-  function fillStates() {
+  const DETECT = '__detect';
+  function fillStates(detectedCity) {
     const opts = Object.entries(RTO.states).sort((a, b) => a[1].name.localeCompare(b[1].name)).map(([k, v]) => `<option value="${k}">${esc(v.name)}</option>`).join('');
-    $('#state').innerHTML = opts;
+    $('#state').innerHTML = `<option value="${DETECT}">${detectedCity ? `◎ Near ${esc(detectedCity)} · detect again` : '◎ Use my current location'}</option><option disabled>──────────</option>` + opts;
     if (!RTO.states[state.st]) state.st = 'DL';
     $('#state').value = state.st;
   }
-  function setState(code) { state.st = code; store.set('state', code); $('#state').value = code; recalc(); render(); }
-  function detect() {
-    const btn = $('#detect'); const label = btn.querySelector('span');
-    if (!navigator.geolocation) { label.textContent = 'Not supported'; return; }
-    label.textContent = 'Locating…';
+  function setState(code, manual) {
+    state.st = code; store.set('state', code);
+    if (manual != null) store.set('stateManual', manual);
+    $('#state').value = code; recalc(); render();
+  }
+  let locating = false;
+  function detect(auto) {
+    hideLocToast();
+    if (!navigator.geolocation) { if (!auto) locToast('Location isn\'t available in this browser. Please choose your state.', false); return; }
+    if (locating) return; locating = true;
+    const sel = $('#state'); sel.classList.add('locating'); sel.options[0].textContent = '◎ Finding you…'; sel.value = DETECT;
     navigator.geolocation.getCurrentPosition((p) => {
+      locating = false; sel.classList.remove('locating');
       const { latitude: la, longitude: lo } = p.coords;
       let best = null, bd = Infinity;
       for (const [name, st, a, b] of RTO.cities) { const d = (a - la) ** 2 + ((b - lo) * Math.cos(la * Math.PI / 180)) ** 2; if (d < bd) { bd = d; best = [name, st]; } }
-      if (best) { setState(best[1]); label.textContent = best[0]; }
-    }, () => { label.textContent = 'Denied'; setTimeout(() => (label.textContent = 'Detect'), 2500); }, { timeout: 10000, maximumAge: 3600e3 });
+      if (best) { fillStates(best[0]); setState(best[1], false); sel.classList.add('located'); setTimeout(() => sel.classList.remove('located'), 1600); }
+    }, (err) => {
+      locating = false; sel.classList.remove('locating'); fillStates(); $('#state').value = state.st;
+      locToast(err.code === 1 ? 'Allow location access to price cars for your state automatically, or choose your state.' : 'We couldn\'t find your location. Please choose your state.', err.code === 1);
+    }, { timeout: 12000, maximumAge: 3600e3 });
+  }
+  function hideLocToast() { const t = $('#locToast'); if (t) t.hidden = true; }
+  function locToast(msg, canRetry) {
+    const show = () => {
+      const t = $('#locToast');
+      t.innerHTML = `<span class="lt-ico" aria-hidden="true">◎</span><span class="lt-msg">${esc(msg)}</span><span class="lt-act">${canRetry ? '<button class="btn ghost" type="button" data-loc="retry">Allow location</button>' : ''}<button class="btn primary" type="button" data-loc="pick">Choose state</button><button class="lt-x" type="button" data-loc="close" aria-label="Dismiss">✕</button></span>`;
+      t.hidden = false; clearTimeout(locToast.t); locToast.t = setTimeout(hideLocToast, 15000);
+    };
+    const w = $('#wizard');
+    if (w && w.open) w.addEventListener('close', () => setTimeout(show, 400), { once: true }); else show();
+  }
+  function autoLocate() {
+    if (store.get('stateManual', false)) return; // they picked a state themselves — respect it
+    const go = () => detect(true);
+    if (navigator.permissions && navigator.permissions.query) {
+      navigator.permissions.query({ name: 'geolocation' }).then((p) => {
+        if (p.state === 'denied') locToast('Location access is blocked for this site. Choose your state, or allow location in your browser settings.', false);
+        else go();
+      }).catch(go);
+    } else go();
+  }
+
+  // ---------------- hero → top bar ----------------
+  let heroDone = false;
+  function collapseHero(instant) {
+    const hero = $('#hero');
+    document.documentElement.style.setProperty('--hp', 1);
+    if (heroDone || !hero) { document.body.classList.add('hero-done'); return; }
+    heroDone = true;
+    const h = hero.offsetHeight, y = window.scrollY, past = y >= h;
+    hero.remove();
+    document.body.classList.add('hero-done');
+    if (!instant) document.body.classList.add('hero-just-done');
+    window.scrollTo({ top: past ? y - h : 0, behavior: 'instant' });
+    try { sessionStorage.setItem('rr-hero', '1'); } catch (e) {}
+    setTimeout(() => document.body.classList.remove('hero-just-done'), 900);
+  }
+  function wireHero() {
+    let seen = false; try { seen = !!sessionStorage.getItem('rr-hero'); } catch (e) {}
+    if (seen || state.rec) return collapseHero(true);
+    const hero = $('#hero');
+    let ticking = false;
+    const update = () => {
+      ticking = false; if (heroDone) return;
+      const range = Math.max(120, hero.offsetHeight - 40);
+      const p = Math.min(1, Math.max(0, window.scrollY / range));
+      document.documentElement.style.setProperty('--hp', p.toFixed(3));
+      if (p >= 1) collapseHero();
+    };
+    // if the visitor stops part-way, glide the rest of the way into the top bar
+    let idle;
+    const settle = () => {
+      if (heroDone) return;
+      const range = Math.max(120, hero.offsetHeight - 40), y = window.scrollY;
+      if (y > range * 0.35 && y < range) window.scrollTo({ top: range + 2, behavior: 'smooth' });
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+      clearTimeout(idle); idle = setTimeout(settle, 160);
+    }, { passive: true });
+    update();
   }
 
   // ---------------- persistence ----------------
@@ -634,8 +706,13 @@
     wireWizard();
     $('#more').addEventListener('click', () => { state.page++; render(); });
     $('#sort').addEventListener('change', (e) => { state.sort = e.target.value; saveFilters(); render(); });
-    $('#state').addEventListener('change', (e) => setState(e.target.value));
-    $('#detect').addEventListener('click', detect);
+    $('#state').addEventListener('change', (e) => { if (e.target.value === DETECT) { store.set('stateManual', false); detect(false); } else { hideLocToast(); setState(e.target.value, true); } });
+    $('#locToast').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-loc]'); if (!b) return;
+      if (b.dataset.loc === 'retry') { store.set('stateManual', false); detect(false); }
+      else if (b.dataset.loc === 'pick') { hideLocToast(); const s = $('#state'); s.focus(); s.classList.add('nudge'); setTimeout(() => s.classList.remove('nudge'), 1200); try { s.showPicker(); } catch (err) {} }
+      else hideLocToast();
+    });
     $('#reset').addEventListener('click', () => { if (state.rec) return exitRec(); for (const k of SETS) state[k].clear(); state.budgetMin = state.budgetMax = ''; saveFilters(); buildFilters(); render(); });
     $('#compareGo').addEventListener('click', compareView);
     $('#compareClear').addEventListener('click', () => { state.compare.clear(); render(); });
@@ -653,10 +730,9 @@
     } catch (e) {
       $('#resultTitle').textContent = 'Could not load car data. Please refresh.'; return;
     }
-    fillStates(); loadFilters(); prep(); buildFilters(); wire(); render(); maybeWelcome();
+    fillStates(); loadFilters(); prep(); buildFilters(); wire(); render(); wireHero(); maybeWelcome(); autoLocate();
     $('#heroStats').textContent = `${DATA.cars.length.toLocaleString('en-IN')} variants of ${new Set(DATA.cars.map((c) => c.brand + c.model)).size} models from ${DATA.brands.length} brands — priced for your state and ranked with Autocar India's expert reviews.`;
     $('#updated').textContent = `Data updated ${new Date(DATA.generated).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} · ${DATA.cars.length} variants from ${DATA.brands.length} brands`;
-    if (!store.get('state', null) && navigator.permissions) navigator.permissions.query({ name: 'geolocation' }).then((p) => { if (p.state === 'granted') detect(); }).catch(() => {});
   }
   init();
 })();

@@ -166,6 +166,34 @@ dialog[open] { animation: pop .4s var(--ease); }
 .only-mobile { display: none; }
 .find-btn { white-space: nowrap; }
 
+/* ---------- hero collapses into the top bar ---------- */
+.bar-title { font-family: Michroma, Inter, sans-serif; font-size: .82rem; letter-spacing: .02em; white-space: nowrap; color: var(--text); padding-left: 14px; margin-left: 4px; border-left: 1px solid var(--line-2);
+  opacity: clamp(0, calc((var(--hp, 0) - .5) * 2.5), 1); transform: translateY(calc((1 - var(--hp, 0)) * 12px)); }
+.topbar .find-btn { opacity: clamp(0, calc((var(--hp, 0) - .35) * 2.2), 1); transform: translateY(calc((1 - var(--hp, 0)) * 14px)) scale(calc(.9 + var(--hp, 0) * .1)); pointer-events: none; }
+body.hero-done .bar-title, body.hero-done .topbar .find-btn { opacity: 1; transform: none; pointer-events: auto; }
+body.hero-just-done .bar-title { animation: slide-in .7s var(--ease) both; }
+body.hero-just-done .topbar .find-btn { animation: btn-pop .8s var(--ease) both; }
+body.hero-just-done .topbar::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: linear-gradient(90deg, transparent, var(--brand), transparent); animation: sweep .9s var(--ease) both; }
+@keyframes slide-in { from { opacity: 0; transform: translateY(10px); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes btn-pop { 0% { transform: scale(.85); box-shadow: 0 0 0 0 color-mix(in srgb, var(--brand) 50%, transparent); } 55% { transform: scale(1.06); } 100% { transform: none; box-shadow: 0 0 0 14px transparent; } }
+@keyframes sweep { from { transform: scaleX(0); opacity: 1; } 70% { opacity: 1; } to { transform: scaleX(1); opacity: 0; } }
+.hero-inner { transform-origin: 50% 0; will-change: transform, opacity;
+  transform: translateY(calc(var(--hp, 0) * -48px)) scale(calc(1 - var(--hp, 0) * .32)); opacity: calc(1 - var(--hp, 0) * 1.25); filter: blur(calc(var(--hp, 0) * 5px)); }
+
+/* ---------- state picker + location ---------- */
+#state.locating { animation: pulse 1.2s ease-in-out infinite; }
+#state.located { box-shadow: 0 0 0 2px var(--yes); transition: box-shadow .3s; }
+#state.nudge { animation: nudge .6s var(--ease) 2; }
+@keyframes pulse { 50% { background-color: var(--brand-soft); } }
+@keyframes nudge { 0%, 100% { box-shadow: 0 0 0 0 transparent; } 50% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 45%, transparent); } }
+.loc-toast { position: fixed; top: 78px; left: 50%; transform: translateX(-50%); z-index: 35; display: flex; align-items: center; gap: 12px; max-width: min(720px, calc(100vw - 24px)); padding: 10px 10px 10px 16px; border-radius: 18px; background: var(--glass); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border: 1px solid var(--line); box-shadow: var(--shadow-lg); font-size: .88rem; animation: toast-in .45s var(--ease) both; }
+.lt-ico { color: var(--brand); font-size: 1.1rem; }
+.lt-msg { flex: 1; }
+.lt-act { display: flex; gap: 6px; align-items: center; flex: none; }
+.lt-act .btn { padding: 7px 14px; font-size: .85rem; }
+.lt-x { border: 0; background: none; color: var(--muted); cursor: pointer; padding: 6px; }
+@keyframes toast-in { from { opacity: 0; transform: translate(-50%, -12px); } to { opacity: 1; transform: translate(-50%, 0); } }
+
 /* ---------- welcome + builder ---------- */
 .wizard { width: min(640px, calc(100vw - 24px)); border-radius: 28px; overflow: visible; }
 #wizardBody { position: relative; padding: 34px 34px 28px; }
@@ -259,11 +287,15 @@ dialog[open] { animation: pop .4s var(--ease); }
   .topbar { padding: 8px 16px; flex-wrap: wrap; }
   .logo img { height: 40px; }
   .find-btn { margin-left: auto; }
+  .bar-title { display: none; }
+  .loc-toast { top: 112px; left: 12px; right: 12px; transform: none; max-width: none; flex-wrap: wrap; animation-name: toast-in-m; }
+  @keyframes toast-in-m { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: none; } }
+  .lt-msg { flex: 1 1 calc(100% - 40px); }
+  .lt-act { width: 100%; justify-content: flex-end; }
   .topbar .loc { order: 3; flex: none; width: calc(100% - 112px); margin: 0; }
   .loc select { flex: 1; max-width: none; min-width: 0; }
   .loc .btn { flex: none; }
   #openFilters { order: 4; margin-left: 0; width: 100px; flex: none; }
-  #detect span { display: none; }
   .card-main { grid-template-columns: 92px 1fr; gap: 14px; padding: 16px; }
   .thumb { width: 92px; height: 64px; border-radius: 12px; }
   .price { grid-column: 1 / -1; text-align: left; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
