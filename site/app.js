@@ -391,7 +391,7 @@
       <div class="rec-actions"><button class="btn ghost" type="button" data-rec="edit">Edit answers</button><button class="link" type="button" data-rec="exit">Browse all cars</button></div>`;
   }
   function applyRec(r) {
-    state.rec = r; store.set('rec', r); collapseHero(true);
+    state.rec = r; store.set('rec', r);
     for (const k of SETS) state[k].clear();
     BODY_OPTS[r.body].bodies.forEach((b) => state.body.add(b));
     if (r.trans !== 'Either') state.trans.add(r.trans);
@@ -399,7 +399,7 @@
     state.budgetMin = ''; state.budgetMax = String(r.budget);
     state.sort = 'rec'; $('#sort').value = 'rec'; $('#sort option[value="rec"]').hidden = false;
     state.page = 1; state.open.clear();
-    saveFilters(); buildFilters(); render(); window.scrollTo({ top: 0, behavior: 'smooth' });
+    saveFilters(); buildFilters(); render(); go('cars'); window.scrollTo({ top: 0, behavior: 'instant' });
   }
   function exitRec() {
     state.rec = null; store.set('rec', null);
@@ -519,7 +519,7 @@
       if (b.dataset.wz === 'close') return closeWizard();
       if (b.dataset.wz === 'browse') { closeWizard(); return; }
       if (b.dataset.wz === 'start') { wz.step = 1; return drawWizard(); }
-      if (b.dataset.wz === 'back') { wz.step = wz.step === 5 && a.fuel === 'Electric' ? 3 : Math.max(0, wz.step - 1); return drawWizard(); }
+      if (b.dataset.wz === 'back') { if (wz.step <= 1) return closeWizard(); wz.step = wz.step === 5 && a.fuel === 'Electric' ? 3 : wz.step - 1; return drawWizard(); }
       if (b.dataset.wz === 'next') {
         if (wz.step < 5) { wz.step = wz.step === 3 && a.fuel === 'Electric' ? 5 : wz.step + 1; return drawWizard(); }
         closeWizard();
@@ -583,6 +583,7 @@
       if (best) { fillStates(best[0]); setState(best[1], false); sel.classList.add('located'); setTimeout(() => sel.classList.remove('located'), 1600); }
     }, (err) => {
       locating = false; sel.classList.remove('locating'); fillStates(); $('#state').value = state.st;
+      if (auto === true) return; // silent attempt — don't nag
       locToast(err.code === 1 ? 'Allow location access to price cars for your state automatically, or choose your state.' : 'We couldn\'t find your location. Please choose your state.', err.code === 1);
     }, { timeout: 12000, maximumAge: 3600e3 });
   }
@@ -598,54 +599,47 @@
   }
   function autoLocate() {
     if (store.get('stateManual', false)) return; // they picked a state themselves — respect it
-    const go = () => detect(true);
+    const asked = store.get('locAsked', false);
+    const go = () => { store.set('locAsked', true); detect(asked); }; // after the first time, fail quietly
     if (navigator.permissions && navigator.permissions.query) {
       navigator.permissions.query({ name: 'geolocation' }).then((p) => {
-        if (p.state === 'denied') locToast('Location access is blocked for this site. Choose your state, or allow location in your browser settings.', false);
-        else go();
-      }).catch(go);
-    } else go();
+        if (p.state === 'granted') detect(true);            // already allowed: no prompt, just locate
+        else if (p.state === 'prompt' && !asked) go();       // ask once, ever
+        else if (p.state === 'denied' && !asked) { store.set('locAsked', true); locToast('Location access is blocked for this site. Choose your state, or allow location in your browser settings.', false); }
+      }).catch(() => { if (!asked) go(); });
+    } else if (!asked) go();
   }
 
-  // ---------------- hero → top bar ----------------
-  let heroDone = false;
-  function collapseHero(instant) {
-    const hero = $('#hero');
-    document.documentElement.style.setProperty('--hp', 1);
-    if (heroDone || !hero) { document.body.classList.add('hero-done'); return; }
-    heroDone = true;
-    const h = hero.offsetHeight, y = window.scrollY, past = y >= h;
-    hero.remove();
-    document.body.classList.add('hero-done');
-    if (!instant) document.body.classList.add('hero-just-done');
-    window.scrollTo({ top: past ? y - h : 0, behavior: 'instant' });
-    try { sessionStorage.setItem('rr-hero', '1'); } catch (e) {}
-    setTimeout(() => document.body.classList.remove('hero-just-done'), 900);
+  // ---------------- two pages: home (#/) and cars (#/cars) ----------------
+  let page = null;
+  function showPage(next, animate = true) {
+    if (next === page) return;
+    const prev = page; page = next;
+    const B = document.body, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const swap = () => {
+      B.classList.remove('leaving', 'to-cars', 'to-home');
+      B.dataset.page = next;
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      if (next === 'cars') render();
+      if (animate && prev && !reduce) { void B.offsetWidth; B.classList.add(next === 'cars' ? 'to-cars' : 'to-home'); clearTimeout(showPage.t); showPage.t = setTimeout(() => B.classList.remove('to-cars', 'to-home'), 1100); }
+    };
+    if (animate && prev && !reduce && window.scrollY < 400) { B.classList.add('leaving'); clearTimeout(showPage.l); showPage.l = setTimeout(swap, 330); }
+    else swap();
   }
-  function wireHero() {
-    let seen = false; try { seen = !!sessionStorage.getItem('rr-hero'); } catch (e) {}
-    if (seen || state.rec) return collapseHero(true);
-    const hero = $('#hero');
-    let ticking = false;
-    const update = () => {
-      ticking = false; if (heroDone) return;
-      const range = Math.max(120, hero.offsetHeight - 40);
-      const p = Math.min(1, Math.max(0, window.scrollY / range));
-      document.documentElement.style.setProperty('--hp', p.toFixed(3));
-      if (p >= 1) collapseHero();
-    };
-    // if the visitor stops part-way, glide the rest of the way into the top bar
-    let idle;
-    const settle = () => {
-      if (heroDone) return;
-      const range = Math.max(120, hero.offsetHeight - 40), y = window.scrollY;
-      if (y > range * 0.35 && y < range) window.scrollTo({ top: range + 2, behavior: 'smooth' });
-    };
-    window.addEventListener('scroll', () => {
-      if (!ticking) { ticking = true; requestAnimationFrame(update); }
-      clearTimeout(idle); idle = setTimeout(settle, 160);
-    }, { passive: true });
-    update();
+  function go(next) {
+    const h = next === 'cars' ? '#/cars' : '#/';
+    if (location.hash !== h) location.hash = h; else showPage(next);
+  }
+  function route(animate) { showPage(/^#\/cars/.test(location.hash) ? 'cars' : 'home', animate); }
+  function wirePages() {
+    window.addEventListener('hashchange', () => route(true));
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('[data-go]'); if (!a) return;
+      e.preventDefault(); go(a.dataset.go);
+    });
+    // a shared link with filters, or a saved recommendation, opens straight on the cars page
+    if (!location.hash && (state.rec || /[?&](body|feats|brand|fuel|min|max|seats|trans)=/.test(location.search))) history.replaceState(null, '', location.pathname + location.search + '#/cars');
+    route(false);
   }
 
   // ---------------- persistence ----------------
@@ -657,7 +651,7 @@
     const q = new URLSearchParams();
     for (const k of SETS) if (state[k].size) q.set(k, [...state[k]].join(','));
     if (state.budgetMin) q.set('min', state.budgetMin); if (state.budgetMax) q.set('max', state.budgetMax);
-    history.replaceState(null, '', q.toString() ? '?' + q : location.pathname);
+    history.replaceState(null, '', location.pathname + (q.toString() ? '?' + q : '') + location.hash);
   }
   function loadFilters() {
     const q = new URLSearchParams(location.search);
@@ -702,7 +696,7 @@
       if (r.dataset.rec === 'edit') openWizard(1); else exitRec();
     });
     $('#findBtn').addEventListener('click', () => openWizard(state.rec ? 1 : 0));
-    document.addEventListener('click', (e) => { if (e.target.closest('[data-open-finder]')) openWizard(state.rec ? 1 : 1); });
+    document.addEventListener('click', (e) => { if (e.target.closest('[data-open-finder]')) openWizard(1); });
     wireWizard();
     $('#more').addEventListener('click', () => { state.page++; render(); });
     $('#sort').addEventListener('change', (e) => { state.sort = e.target.value; saveFilters(); render(); });
@@ -730,7 +724,7 @@
     } catch (e) {
       $('#resultTitle').textContent = 'Could not load car data. Please refresh.'; return;
     }
-    fillStates(); loadFilters(); prep(); buildFilters(); wire(); render(); wireHero(); maybeWelcome(); autoLocate();
+    fillStates(); loadFilters(); prep(); buildFilters(); wire(); render(); wirePages(); autoLocate();
     $('#heroStats').textContent = `${DATA.cars.length.toLocaleString('en-IN')} variants of ${new Set(DATA.cars.map((c) => c.brand + c.model)).size} models from ${DATA.brands.length} brands — priced for your state and ranked with Autocar India's expert reviews.`;
     $('#updated').textContent = `Data updated ${new Date(DATA.generated).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} · ${DATA.cars.length} variants from ${DATA.brands.length} brands`;
   }

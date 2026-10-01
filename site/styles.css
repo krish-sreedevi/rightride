@@ -55,13 +55,12 @@ select:hover { background-color: var(--chip-hover); }
 .link:hover { text-decoration: underline; }
 
 /* ---------- hero ---------- */
-.hero { text-align: center; padding: 64px 20px 40px; max-width: 900px; margin: 0 auto; animation: rise .8s var(--ease) both; }
+.hero { text-align: center; margin: 0 auto; }
 .eyebrow { margin: 0 0 14px; font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--brand); }
 .hero-title { font-family: Michroma, Inter, sans-serif; font-size: clamp(2rem, 5.4vw, 3.6rem); line-height: 1.12; margin: 0; letter-spacing: -.01em;
   background: linear-gradient(180deg, var(--text) 30%, color-mix(in srgb, var(--text) 55%, transparent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .lede { font-size: clamp(1rem, 1.6vw, 1.2rem); color: var(--muted); max-width: 640px; margin: 18px auto 0; }
 .hero-cta { display: flex; gap: 12px; justify-content: center; margin-top: 28px; flex-wrap: wrap; }
-body.rec-mode .hero { display: none; }
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 
 /* ---------- layout ---------- */
@@ -166,19 +165,42 @@ dialog[open] { animation: pop .4s var(--ease); }
 .only-mobile { display: none; }
 .find-btn { white-space: nowrap; }
 
-/* ---------- hero collapses into the top bar ---------- */
-.bar-title { font-family: Michroma, Inter, sans-serif; font-size: .82rem; letter-spacing: .02em; white-space: nowrap; color: var(--text); padding-left: 14px; margin-left: 4px; border-left: 1px solid var(--line-2);
-  opacity: clamp(0, calc((var(--hp, 0) - .5) * 2.5), 1); transform: translateY(calc((1 - var(--hp, 0)) * 12px)); }
-.topbar .find-btn { opacity: clamp(0, calc((var(--hp, 0) - .35) * 2.2), 1); transform: translateY(calc((1 - var(--hp, 0)) * 14px)) scale(calc(.9 + var(--hp, 0) * .1)); pointer-events: none; }
-body.hero-done .bar-title, body.hero-done .topbar .find-btn { opacity: 1; transform: none; pointer-events: auto; }
-body.hero-just-done .bar-title { animation: slide-in .7s var(--ease) both; }
-body.hero-just-done .topbar .find-btn { animation: btn-pop .8s var(--ease) both; }
-body.hero-just-done .topbar::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: linear-gradient(90deg, transparent, var(--brand), transparent); animation: sweep .9s var(--ease) both; }
-@keyframes slide-in { from { opacity: 0; transform: translateY(10px); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
-@keyframes btn-pop { 0% { transform: scale(.85); box-shadow: 0 0 0 0 color-mix(in srgb, var(--brand) 50%, transparent); } 55% { transform: scale(1.06); } 100% { transform: none; box-shadow: 0 0 0 14px transparent; } }
+/* ---------- two pages: home ↔ cars ---------- */
+.bar-title { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: Michroma, Inter, sans-serif; font-size: .9rem; letter-spacing: .03em; white-space: nowrap; color: var(--text); text-decoration: none; transition: opacity .4s var(--ease), transform .5s var(--ease); }
+body[data-page="home"] .bar-title { opacity: 0; transform: translate(-50%, 0); pointer-events: none; }
+body[data-page="home"] .topbar .find-btn, body[data-page="home"] #openFilters { opacity: 0; transform: translateY(10px) scale(.9); pointer-events: none; }
+.topbar .find-btn, #openFilters { transition: opacity .4s var(--ease), transform .5s var(--ease), background .2s; }
+body[data-page="home"] .layout, body[data-page="home"] .foot, body[data-page="home"] .compare-bar { display: none !important; }
+body[data-page="cars"] .hero { display: none; }
+
+/* home page: a calm, full-screen landing */
+.hero { min-height: calc(100svh - 66px); display: grid; place-items: center; padding: 40px 20px 80px; max-width: none; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: auto -20% -40% -20%; height: 80%; background: radial-gradient(closest-side, color-mix(in srgb, var(--brand) 14%, transparent), transparent 70%); pointer-events: none; animation: glow 6s ease-in-out infinite alternate; }
+@keyframes glow { from { opacity: .6; transform: translateY(10px) scale(1); } to { opacity: 1; transform: translateY(-10px) scale(1.06); } }
+.hero-inner { position: relative; max-width: 900px; text-align: center; }
+
+/* leaving a page */
+body.leaving[data-page="home"] .hero-inner { animation: page-out .34s var(--ease) both; }
+body.leaving[data-page="cars"] .layout, body.leaving[data-page="cars"] .foot { animation: page-out-down .34s var(--ease) both; }
+@keyframes page-out { to { opacity: 0; transform: translateY(-36px) scale(.94); filter: blur(6px); } }
+@keyframes page-out-down { to { opacity: 0; transform: translateY(24px); filter: blur(4px); } }
+/* arriving */
+body.to-cars .layout { animation: page-in .6s var(--ease) both; }
+body.to-cars .bar-title { animation: title-in .7s var(--ease) both; }
+body.to-cars .topbar .find-btn { animation: btn-pop .8s var(--ease) .15s both; }
+body.to-cars .topbar::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: linear-gradient(90deg, transparent, var(--brand), transparent); animation: sweep .9s var(--ease) both; }
+body.to-home .hero-inner > * { animation: page-in .7s var(--ease) both; }
+body.to-home .hero-inner > :nth-child(2) { animation-delay: .06s; } body.to-home .hero-inner > :nth-child(3) { animation-delay: .12s; } body.to-home .hero-inner > :nth-child(4) { animation-delay: .18s; }
+@keyframes page-in { from { opacity: 0; transform: translateY(28px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes title-in { from { opacity: 0; transform: translate(-50%, 0); filter: blur(4px); } to { opacity: 1; transform: translate(-50%, -50%); filter: none; } }
+@keyframes btn-pop { 0% { opacity: 0; transform: scale(.85); } 55% { opacity: 1; transform: scale(1.06); } 100% { transform: none; } }
 @keyframes sweep { from { transform: scaleX(0); opacity: 1; } 70% { opacity: 1; } to { transform: scaleX(1); opacity: 0; } }
-.hero-inner { transform-origin: 50% 0; will-change: transform, opacity;
-  transform: translateY(calc(var(--hp, 0) * -48px)) scale(calc(1 - var(--hp, 0) * .32)); opacity: calc(1 - var(--hp, 0) * 1.25); filter: blur(calc(var(--hp, 0) * 5px)); }
+
+/* shimmer on the main call to action */
+.shimmer { position: relative; overflow: hidden; isolation: isolate; }
+.shimmer::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(105deg, transparent 35%, rgba(255,255,255,.55) 50%, transparent 65%); transform: translateX(-130%); animation: shimmer 2.6s ease-in-out infinite; pointer-events: none; }
+.shimmer { z-index: 0; }
+@keyframes shimmer { 0% { transform: translateX(-130%); } 55%, 100% { transform: translateX(130%); } }
 
 /* ---------- state picker + location ---------- */
 #state.locating { animation: pulse 1.2s ease-in-out infinite; }
@@ -280,7 +302,7 @@ body.hero-just-done .topbar::after { content: ''; position: absolute; left: 0; r
 /* ---------- small screens ---------- */
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; padding: 4px 16px 16px; }
-  .hero { padding: 40px 16px 26px; }
+  .hero { padding: 24px 16px 60px; min-height: calc(100svh - 110px); }
   .filters { position: fixed; inset: 0; top: 0; max-height: none; border-radius: 0; z-index: 40; transform: translateX(-100%); transition: transform .35s var(--ease); padding-top: 20px; }
   .filters.open { transform: none; }
   .only-mobile { display: inline-flex; }

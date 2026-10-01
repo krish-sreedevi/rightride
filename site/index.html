@@ -12,21 +12,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="home">
+  <script>document.body.dataset.page = /^#\/cars/.test(location.hash) || /[?&](body|feats|brand|fuel|min|max|seats|trans)=/.test(location.search) ? 'cars' : 'home';</script>
   <script src="rr-intro.js"></script>
   <header class="topbar">
-    <a class="logo" href="./" aria-label="Right Ride home">
+    <a class="logo" href="#/" data-go="home" aria-label="Right Ride home">
       <picture>
         <source srcset="brand/logo-red-white.svg" media="(prefers-color-scheme: dark)">
         <img src="brand/logo-red-black.svg" alt="Right Ride" width="150" height="46">
       </picture>
     </a>
-    <span class="bar-title" aria-hidden="true">Find the right ride.</span>
+    <a class="bar-title" href="#/" data-go="home" tabindex="-1" aria-hidden="true">Find the Right Ride</a>
     <div class="loc">
       <label for="state" class="sr">Your state</label>
       <select id="state" title="Prices are calculated for this state"></select>
     </div>
-    <button id="findBtn" class="btn primary find-btn" type="button">Find my Right Ride</button>
+    <button id="findBtn" class="btn primary find-btn shimmer" type="button">Find my Right Ride</button>
     <button id="openFilters" class="btn ghost only-mobile" type="button">Filters <span id="filterCount"></span></button>
   </header>
 
@@ -34,9 +35,9 @@
 
   <section class="hero" id="hero"><div class="hero-inner">
     <p class="eyebrow">Every car · Every variant · Real on-road prices</p>
-    <p class="hero-title">Find the right ride.</p>
+    <p class="hero-title">Find the Right Ride.</p>
     <p class="lede" id="heroStats">Every new car sold in India, priced for your state and ranked with Autocar India's expert reviews.</p>
-    <div class="hero-cta"><button class="btn primary lg" type="button" data-open-finder>Find my Right Ride</button><a class="btn ghost lg" href="#results">Browse all cars</a></div>
+    <div class="hero-cta"><button class="btn primary lg shimmer" type="button" data-open-finder>Find my Right Ride</button><a class="btn ghost lg" href="#/cars" data-go="cars">Browse all cars <span aria-hidden="true">→</span></a></div>
   </div></section>
 
   <main class="layout">
