@@ -113,7 +113,7 @@
       const ev = evaluate(c);
       if (!ev) continue;
       const key = c.brand + '|' + c.model;
-      if (!models.has(key)) models.set(key, { brand: c.brand, model: c.model, body: c.body, url: c.url, image: c.image, vs: [] });
+      if (!models.has(key)) models.set(key, { brand: c.brand, model: c.model, body: c.body, url: c.url, image: c.image, image2: c.image2, vs: [] });
       models.get(key).vs.push({ c, ev });
     }
     const list = [...models.values()];
@@ -202,6 +202,27 @@
     state.page = 1; saveFilters(); render();
   }
 
+
+  // ---------------- car images ----------------
+  // every model has a picture: Autocar India studio shot (resized by its CDN) → maker's image → drawn silhouette
+  const SIL = { Hatchback: 'M14 46h92M20 46c0-14 6-20 18-22l14-10h26l16 12c6 2 10 8 10 20M40 24h46', Sedan: 'M8 46h104M14 46c0-10 4-14 14-16l18-12h30l18 12c10 1 16 6 16 16M44 30h50', SUV: 'M10 46h100M14 46V30l10-14h56l12 14c8 1 12 6 12 16M28 16v14h64', 'MUV / MPV': 'M10 46h100M14 46V28l12-12h60l12 12c6 2 10 8 10 18M30 16v12h60' };
+  function silhouette(body) {
+    const d = SIL[body] || SIL.SUV;
+    return `<svg class="sil" viewBox="0 0 120 60" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="34" cy="46" r="7" fill="var(--panel)" stroke="currentColor" stroke-width="2.2"/><circle cx="88" cy="46" r="7" fill="var(--panel)" stroke="currentColor" stroke-width="2.2"/></svg>`;
+  }
+  const sized = (u, w) => (/asset\.autocarindia\.com/.test(u) ? `${u}?w=${w}` : u);
+  function carImg(m) {
+    if (!m.image) return silhouette(m.body);
+    const alt = `${m.brand} ${m.model}`;
+    const set = /asset\.autocarindia\.com/.test(m.image) ? ` srcset="${esc(sized(m.image, 320))} 320w, ${esc(sized(m.image, 480))} 480w, ${esc(sized(m.image, 720))} 720w" sizes="(max-width: 900px) 120px, 200px"` : '';
+    return `<img loading="lazy" decoding="async" src="${esc(sized(m.image, 480))}"${set} alt="${esc(alt)}" data-alt2="${esc(m.image2 || '')}" data-body="${esc(m.body)}" onerror="window.__rrImgErr&&window.__rrImgErr(this)">`;
+  }
+  window.__rrImgErr = (img) => {
+    const alt = img.dataset.alt2;
+    if (alt) { img.dataset.alt2 = ''; img.removeAttribute('srcset'); img.src = alt; return; }
+    const t = document.createElement('template'); t.innerHTML = silhouette(img.dataset.body); img.replaceWith(t.content.firstChild);
+  };
+
   // ---------------- UI: results ----------------
   const FLABEL = (k) => DATA.features[FIDX[k]].label;
   function render() {
@@ -243,7 +264,7 @@
       unknown ? `<span class="tag warn">${unknown} not confirmed</span>` : '',
       expertOf(m) && expertOf(m).s ? `<span class="tag xtag" title="Autocar India expert score">Autocar ${esc(expertOf(m).s)}/10</span>` : '',
     ].join('');
-    const img = m.image ? `<img loading="lazy" src="${esc(m.image)}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'ph',textContent:'${esc(m.model[0])}'}))">` : `<span class="ph">${esc(m.model[0])}</span>`;
+    const img = carImg(m);
     return `<article class="card" data-key="${esc(key)}">
       <div class="card-main">
         <div class="thumb">${img}</div>
@@ -389,7 +410,7 @@
   const bar10 = (v) => `<span class="sbar"><i style="width:${Math.max(4, Math.min(100, v * 10))}%"></i></span>`;
   function recCard(m, rank) {
     const c = m.pick, x = m.expert, key = m.brand + '|' + m.model, open = state.open.has(key);
-    const img = m.image ? `<img loading="lazy" src="${esc(m.image)}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'ph',textContent:'${esc(m.model[0])}'}))">` : `<span class="ph">${esc(m.model[0])}</span>`;
+    const img = carImg(m);
     const pros = x ? x.like.map((t) => `<li class="pro">${esc(t)}</li>`).join('') + x.dislike.map((t) => `<li class="con">${esc(t)}</li>`).join('') : '';
     return `<article class="card rec-card" data-yt="${esc(ytUrl(m))}" data-key="${esc(key)}">
       <div class="card-main">

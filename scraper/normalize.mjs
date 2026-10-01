@@ -258,6 +258,17 @@ export function normalize() {
       experts[k] = { s: v.score || null, sc: v.scores || null, like: (v.like || []).slice(0, 3), dislike: (v.dislike || []).slice(0, 3), yt: v.video ? v.video.id : null, ytT: v.video ? v.video.title : null, url: v.url || null, rv: v.review ? v.review.title : null, basedOn: v.basedOn || null };
     }
   }
+  // one consistent, transparent studio image per model (Autocar India's CDN, resized on the fly);
+  // the maker's own image stays as a fallback
+  const imf = path.join(ROOT, 'data/images.json');
+  const IMG = fs.existsSync(imf) ? JSON.parse(fs.readFileSync(imf, 'utf8')).models || {} : {};
+  const XIMG = fs.existsSync(xf) ? JSON.parse(fs.readFileSync(xf, 'utf8')).models || {} : {};
+  for (const c of cars) {
+    const k = `${c.brand}|${c.model}`, slug = IMG[k] || (XIMG[k] && XIMG[k].image) || null;
+    const own = c.image && /^https?:\/\//.test(c.image) && !/open-graph|home-hero|banner/i.test(c.image) ? c.image : null;
+    c.image = slug ? `https://asset.autocarindia.com/static/car-images/${slug}.png` : own;
+    c.image2 = slug ? own : null;
+  }
   return { generated: new Date().toISOString(), buckets: BUCKETS, features: featureMeta, brands: Object.values(brands).filter((b) => b.variants), cars, experts };
 }
 

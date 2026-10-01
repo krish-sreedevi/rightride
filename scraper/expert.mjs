@@ -129,6 +129,18 @@ async function youtubeReview(brand, model) {
   return ok[0] ? { id: ok[0].id, title: ok[0].t, ago: ok[0].ago, src: 'youtube' } : null;
 }
 
+// Autocar India's transparent studio image for a model page slug like "hyundai/creta"
+async function imageFor(slug) {
+  const [b, m] = slug.split('/');
+  for (const name of [...new Set([m, m.replace(/^new-/, '')])]) {
+    try {
+      const r = await fetch(`https://asset.autocarindia.com/static/car-images/${b}_${name}.png?w=64`, { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(15000) });
+      if (r.ok && /image/.test(r.headers.get('content-type') || '')) return `${b}_${name}`;
+    } catch (e) {}
+  }
+  return null;
+}
+
 const cars = JSON.parse(fs.readFileSync(path.join(ROOT, 'site/data/cars.json'), 'utf8')).cars;
 const allModels = [...new Set(cars.map((c) => `${c.brand}|${c.model}`))];
 // EXPERT_SLICE=start:end processes part of the list (the rest keeps its previous data)
@@ -159,8 +171,9 @@ const work = models.map((key) => async () => {
   if (res && res.err) { if (prev[key]) out.models[key] = prev[key]; n++; return; } // keep last good data on network errors
   const url = res ? `${BASE}/cars/${res.slug}/expert-reviews` : null;
   const yv = await youtubeReview(brand, model).catch(() => null);
-  if (res && !res.none) out.models[key] = { ...res, url, video: yv || res.video || null };
-  else if (res || yv) out.models[key] = { slug: res ? res.slug : null, url, video: yv };
+  const image = res && res.slug ? await imageFor(res.slug) : null;
+  if (res && !res.none) out.models[key] = { ...res, url, video: yv || res.video || null, image };
+  else if (res || yv) out.models[key] = { slug: res ? res.slug : null, url, video: yv, image };
   n++;
 });
 // small worker pool, polite to the site
