@@ -499,12 +499,11 @@ body[data-page="home"] .topbar { position: fixed; left: 0; right: 0; background:
 .sun-copy .hero-title { font-size: clamp(1.5rem, min(7.2vw, 7.2vh), 3.8rem); padding: 0 8px; background: none; color: #1d1d1f; -webkit-background-clip: border-box; background-clip: border-box; animation: page-in .9s .3s var(--ease) both; }
 .sun-copy .lede { margin-top: 14px; color: #6e6e73; animation: page-in .9s .45s var(--ease) both; }
 .sun-cta { position: absolute; left: 0; right: 0; top: var(--hz, 54.6%); transform: translateY(-50%); z-index: 3; display: flex; justify-content: center; padding: 0 16px; }
-.sun-cta .glass-pill { animation: cta-horizon 1s 1.6s cubic-bezier(.2,.9,.25,1.15) both; }
 @keyframes cta-horizon { from { opacity: 0; transform: translateY(18px) scale(.92); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
 .glass-pill { display: flex; gap: 8px; padding: 8px; border-radius: 999px; background: rgba(255,255,255,.6); -webkit-backdrop-filter: saturate(180%) blur(18px); backdrop-filter: saturate(180%) blur(18px); box-shadow: 0 12px 40px rgba(0,0,0,.12), inset 0 0 0 1px rgba(255,255,255,.6); }
 .btn.plain { background: transparent; color: #1d1d1f; }
 .btn.plain:hover { background: rgba(0,0,0,.06); }
-body.leaving[data-page="home"] .sun-copy, body.leaving[data-page="home"] .sun-cta .glass-pill { animation: page-out .34s var(--ease) both; }
+body.leaving[data-page="home"] .sun-copy { animation: page-out .34s var(--ease) both; }
 body.leaving[data-page="home"] .scene { animation: scene-out .4s var(--ease) both; }
 @keyframes scene-out { to { opacity: 0; transform: scale(1.04); filter: blur(4px); } }
 @media (prefers-color-scheme: dark) {
