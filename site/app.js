@@ -690,7 +690,16 @@
     const el = $('#carPage'), m = modelBySlug(slug);
     if (!m) { el.innerHTML = `<div class="cp-wrap"><div class="empty sorry">${SORRY_ICON}<h2>Sorry, we couldn't find that car</h2><p class="muted">It may have been discontinued or renamed.</p><a class="btn primary" href="#/cars" data-go="cars">Browse all cars</a></div></div>`; return; }
     const key = m.brand + '|' + m.model;
-    if (cp.key !== key) { gal.mode = 'colors'; gal.i = 0; cp.key = key; cp.fuel.clear(); cp.gear.clear(); cp.need.clear(); cp.all = false; cp.more = false; }
+    if (cp.key !== key) {
+      gal.i = 0; cp.key = key; cp.fuel.clear(); cp.gear.clear(); cp.need.clear(); cp.all = false; cp.more = false;
+      // carry over what was chosen on the cars page (filters, search, finder answers) where this model offers it
+      const vs = m.vs.map((v) => v.c), q = state.qf || {};
+      const fuels = new Set([...state.fuel, q.fuel].filter(Boolean)), gears = new Set([...state.trans, q.trans].filter(Boolean));
+      for (const f of fuels) if (vs.some((c) => c.fuel === f)) cp.fuel.add(f);
+      for (const g of gears) if (vs.some((c) => c.transmission === g)) cp.gear.add(g);
+      for (const k of featsOn()) if (vs.some((c) => c.feat(k) === '1')) cp.need.add(k);
+      cp.carried = cp.fuel.size + cp.gear.size + cp.need.size;
+    }
     const x = expertOf(m), nc = (DATA.ncap || {})[key], usp = (DATA.usp || {})[key];
     const st = RTO.states[state.st].name;
     document.title = `${m.brand} ${m.model}: on-road price in ${st}, variants & showrooms · Right Ride`;
@@ -704,7 +713,7 @@
     $('#carPage').innerHTML = `<div class="cp-wrap">
       <button class="cp-back" type="button" data-back><span aria-hidden="true">‹</span> All cars</button>
       <section class="cp-hero">
-        <div class="cp-img">${carImg(m, '(max-width: 900px) 92vw, 640px')}</div>
+        <div class="cp-media"><div class="cp-img" id="heroGal">${carImg(m, '(max-width: 900px) 92vw, 640px')}</div><div class="hg-strip" id="heroStrip"></div></div>
         <div class="cp-info">
           <div class="cp-eyebrow">${esc(m.brand)} · ${esc(m.body)}</div>
           <h1 class="display cp-title">${esc(m.model)}</h1>
@@ -715,7 +724,6 @@
           <div class="sheet-cta"><a class="btn primary" href="#cpVariants" data-jump="cpVariants">Find my variant</a><a class="btn ghost" href="#cpDealers" data-jump="cpDealers">Showrooms near me</a></div>
         </div>
       </section>
-      <section class="cp-sec cp-gallery" id="cpGallery" hidden></section>
       <section class="cp-sec" id="cpMetrics" hidden></section>
       ${usp && usp.length ? `<section class="cp-sec cp-usp"><div class="cp-sec-head"><h2 class="display">Why people pick it</h2><span class="ai-tag"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2l1.8 5.6L19.5 9l-5.7 1.6L12 16l-1.8-5.4L4.5 9l5.7-1.4zM19 15l.9 2.6 2.6.9-2.6.9L19 22l-.9-2.6-2.6-.9 2.6-.9z"/></svg>AI summary of expert reviews</span></div>
         <ol class="usp">${usp.map((u) => `<li>${esc(u)}</li>`).join('')}</ol></section>` : ''}
@@ -730,44 +738,86 @@
       <section class="cp-sec" id="cpDealers"></section>
     </div>`;
     drawVariants(m); drawDealers(m);
-    loadExtras().then((X) => { if (cp.key !== key) return; const e = X[key]; if (e) { drawGallery(m, e); drawMetrics(m, e); } });
+    loadExtras().then((X) => { if (cp.key !== key) return; const e = X[key]; if (e) { drawHeroGallery(m, e); drawMetrics(m, e); } });
   }
 
   // ---- photos (colours, interior) and ownership metrics, from site/data/extras.json ----
   let EXTRAS = null;
   const loadExtras = () => EXTRAS || (EXTRAS = fetch('data/extras.json').then((r) => (r.ok ? r.json() : { models: {} })).then((d) => d.models || {}).catch(() => ({})));
   const pic = (u, w) => encodeURI(u.split('?')[0]) + (/autocarindia\.com/.test(u) ? `?w=${w}` : '');
-  const gal = { mode: 'colors', i: 0 };
-  function drawGallery(m, e) {
-    const box = $('#cpGallery'); if (!box) return;
-    const has = { colors: e.colors.length > 0, interior: e.interior.length > 0 };
-    if (!has.colors && !has.interior) { box.hidden = true; return; }
-    if (!has[gal.mode]) gal.mode = has.colors ? 'colors' : 'interior';
-    const items = gal.mode === 'colors' ? e.colors.map((c) => ({ img: c.img, cap: c.name, sw: c.sw })) : e.interior.map((c) => ({ img: c.img, cap: c.cap }));
-    gal.i = Math.min(gal.i, items.length - 1);
-    box.hidden = false;
-    box.innerHTML = `<div class="cp-sec-head"><h2 class="display">${gal.mode === 'colors' ? `${e.colors.length} colour${e.colors.length > 1 ? 's' : ''}` : 'Inside the cabin'}</h2>
-        <div class="seg" role="tablist">${has.colors ? `<button type="button" role="tab" data-gm="colors" aria-selected="${gal.mode === 'colors'}">Colours</button>` : ''}${has.interior ? `<button type="button" role="tab" data-gm="interior" aria-selected="${gal.mode === 'interior'}">Interior</button>` : ''}</div></div>
-      <div class="gal">
-        <div class="gal-track" id="galTrack" tabindex="0" aria-label="${gal.mode === 'colors' ? 'Colours' : 'Interior photos'}">${items.map((x, i) => `<figure class="gal-slide" data-i="${i}"><img loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async" src="${esc(pic(x.img, 960))}" srcset="${esc(pic(x.img, 640))} 640w, ${esc(pic(x.img, 960))} 960w, ${esc(pic(x.img, 1400))} 1400w" sizes="(max-width: 900px) 92vw, 1100px" alt="${esc(m.brand + ' ' + m.model + ' ' + x.cap)}" onerror="this.closest('figure').classList.add('broken')"></figure>`).join('')}</div>
-        <button class="gal-btn prev" type="button" data-gs="-1" aria-label="Previous photo">‹</button><button class="gal-btn next" type="button" data-gs="1" aria-label="Next photo">›</button>
-        <div class="gal-cap" id="galCap" aria-live="polite"></div>
-      </div>
-      ${gal.mode === 'colors' ? `<div class="sw-row" role="tablist" aria-label="Choose a colour">${items.map((x, i) => `<button type="button" class="sw" data-gi="${i}" aria-label="${esc(x.cap)}" title="${esc(x.cap)}"><span style="background:${x.sw.length > 1 ? `linear-gradient(135deg, ${x.sw[0]} 50%, ${x.sw[1]} 50%)` : x.sw[0]}"></span></button>`).join('')}</div>`
-        : `<div class="th-row">${items.map((x, i) => `<button type="button" class="th" data-gi="${i}" aria-label="${esc(x.cap)}"><img loading="lazy" src="${esc(pic(x.img, 240))}" alt=""></button>`).join('')}</div>`}
-      <p class="hint">Photos: Autocar India.</p>`;
-    const T = $('#galTrack');
-    const sync = () => {
-      const i = Math.round(T.scrollLeft / T.clientWidth); gal.i = Math.max(0, Math.min(items.length - 1, i));
-      $('#galCap').textContent = `${items[gal.i].cap}  ·  ${gal.i + 1} / ${items.length}`;
-      $$('[data-gi]', box).forEach((b) => b.setAttribute('aria-current', Number(b.dataset.gi) === gal.i));
-      $('.gal-btn.prev', box).disabled = gal.i === 0; $('.gal-btn.next', box).disabled = gal.i === items.length - 1;
-    };
-    let st; T.addEventListener('scroll', () => { cancelAnimationFrame(st); st = requestAnimationFrame(sync); }, { passive: true });
-    T.addEventListener('keydown', (ev) => { if (ev.key === 'ArrowRight' || ev.key === 'ArrowLeft') { ev.preventDefault(); goSlide(gal.i + (ev.key === 'ArrowRight' ? 1 : -1)); } });
-    T.scrollLeft = gal.i * T.clientWidth; sync();
+  // hero photo carousel: studio shot, every colour, then the cabin; tap to open full screen
+  const gal = { i: 0, slides: [] };
+  function heroSlides(m, e) {
+    const out = [];
+    if (m.image) out.push({ img: m.image, cap: `${m.brand} ${m.model}`, kind: 'main' });
+    for (const c of e.colors) out.push({ img: c.img, cap: c.name, kind: 'color', sw: c.sw });
+    for (const c of e.interior) out.push({ img: c.img, cap: c.cap, kind: 'interior' });
+    return out;
   }
-  function goSlide(i) { const T = $('#galTrack'); if (!T) return; const n = T.children.length; i = Math.max(0, Math.min(n - 1, i)); T.scrollTo({ left: i * T.clientWidth, behavior: 'smooth' }); }
+  const swStyle = (sw) => (sw.length > 1 ? `linear-gradient(135deg, ${sw[0]} 50%, ${sw[1]} 50%)` : sw[0]);
+  function slideImg(m, x, i, w, sizes) {
+    return `<img loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async" src="${esc(pic(x.img, w))}" srcset="${esc(pic(x.img, 640))} 640w, ${esc(pic(x.img, 1000))} 1000w, ${esc(pic(x.img, 1600))} 1600w" sizes="${sizes}" alt="${esc(m.brand + ' ' + m.model + ' – ' + x.cap)}" onerror="this.closest('[data-slide]').classList.add('broken')">`;
+  }
+  function drawHeroGallery(m, e) {
+    const H = $('#heroGal'), S = $('#heroStrip'); if (!H || !S) return;
+    gal.slides = heroSlides(m, e); gal.i = 0; gal.m = m;
+    if (gal.slides.length < 2) return;
+    const firstColor = gal.slides.findIndex((x) => x.kind === 'color'), firstInt = gal.slides.findIndex((x) => x.kind === 'interior');
+    H.classList.add('hg');
+    H.innerHTML = `<div class="hg-track" id="hgTrack" tabindex="0" aria-label="Photos of the ${esc(m.model)}">${gal.slides.map((x, i) => `<button type="button" class="hg-slide ${x.kind}" data-slide data-open="${i}" aria-label="Open photo ${i + 1} of ${gal.slides.length}: ${esc(x.cap)}">${x.kind === 'main' ? carImg(m, '(max-width: 900px) 92vw, 640px') : slideImg(m, x, i, 1000, '(max-width: 900px) 92vw, 680px')}</button>`).join('')}</div>
+      <button class="gal-btn prev" type="button" data-hs="-1" aria-label="Previous photo">‹</button><button class="gal-btn next" type="button" data-hs="1" aria-label="Next photo">›</button>
+      <div class="hg-cap" id="hgCap" aria-live="polite"></div><span class="hg-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>`;
+    S.innerHTML = `${firstColor >= 0 ? `<div class="hg-sws" role="group" aria-label="Colours">${gal.slides.map((x, i) => x.kind === 'color' ? `<button type="button" class="sw" data-hi="${i}" title="${esc(x.cap)}" aria-label="${esc(x.cap)}"><span style="background:${swStyle(x.sw)}"></span></button>` : '').join('')}</div>` : ''}
+      ${firstInt >= 0 ? `<button type="button" class="hg-int" data-hi="${firstInt}"><img src="${esc(pic(gal.slides[firstInt].img, 160))}" alt="" loading="lazy"><span>Interior<em>${gal.slides.filter((x) => x.kind === 'interior').length} photos</em></span></button>` : ''}`;
+    const T = $('#hgTrack');
+    const sync = () => {
+      gal.i = Math.max(0, Math.min(gal.slides.length - 1, Math.round(T.scrollLeft / (T.clientWidth || 1)) || 0));
+      const x = gal.slides[gal.i];
+      $('#hgCap').textContent = `${x.kind === 'interior' ? 'Interior · ' : ''}${x.cap}  ·  ${gal.i + 1}/${gal.slides.length}`;
+      $$('[data-hi]', S).forEach((b) => b.setAttribute('aria-current', Number(b.dataset.hi) === gal.i || (b.classList.contains('hg-int') && x.kind === 'interior')));
+      $('.gal-btn.prev', H).disabled = gal.i === 0; $('.gal-btn.next', H).disabled = gal.i === gal.slides.length - 1;
+    };
+    let raf; T.addEventListener('scroll', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(sync); }, { passive: true });
+    T.addEventListener('keydown', (ev) => { if (ev.key === 'ArrowRight' || ev.key === 'ArrowLeft') { ev.preventDefault(); heroGo(gal.i + (ev.key === 'ArrowRight' ? 1 : -1)); } });
+    sync();
+  }
+  function heroGo(i, smooth = true) { const T = $('#hgTrack'); if (!T) return; i = Math.max(0, Math.min(gal.slides.length - 1, i)); T.scrollTo({ left: i * T.clientWidth, behavior: smooth ? 'smooth' : 'instant' }); }
+  // full-screen viewer
+  function openLightbox(start) {
+    let L = $('#lightbox');
+    if (!L) { L = document.createElement('dialog'); L.id = 'lightbox'; L.className = 'lb'; document.body.appendChild(L); wireLightbox(L); }
+    const m = gal.m, n = gal.slides.length;
+    L.innerHTML = `<div class="lb-top"><div class="lb-title"><b>${esc(m.brand)} ${esc(m.model)}</b><span id="lbCap"></span></div><button type="button" class="lb-x" data-lbx aria-label="Close">✕</button></div>
+      <div class="lb-stage"><div class="lb-track" id="lbTrack" tabindex="0">${gal.slides.map((x, i) => `<figure class="lb-slide" data-slide>${x.kind === 'main' ? carImg(m, '100vw') : slideImg(m, x, Math.abs(i - start) < 2 ? 0 : 9, 1600, '100vw')}</figure>`).join('')}</div>
+        <button class="gal-btn prev lb-btn" type="button" data-lbs="-1" aria-label="Previous photo">‹</button><button class="gal-btn next lb-btn" type="button" data-lbs="1" aria-label="Next photo">›</button></div>
+      <div class="lb-thumbs" id="lbThumbs">${gal.slides.map((x, i) => `<button type="button" class="lb-th${x.kind === 'color' ? ' c' : ''}" data-lbi="${i}" aria-label="${esc(x.cap)}">${x.kind === 'main' ? carImg(m, '96px') : `<img src="${esc(pic(x.img, 200))}" alt="" loading="lazy">`}${x.kind === 'color' ? `<i style="background:${swStyle(x.sw)}"></i>` : ''}</button>`).join('')}</div>`;
+    if (!L.open) L.showModal();
+    document.body.classList.add('lb-open');
+    const T = $('#lbTrack');
+    requestAnimationFrame(() => { T.scrollLeft = start * T.clientWidth; lbSync(); });
+    T.addEventListener('scroll', () => { cancelAnimationFrame(lbSync.r); lbSync.r = requestAnimationFrame(lbSync); }, { passive: true });
+    T.focus({ preventScroll: true });
+  }
+  function lbSync() {
+    const T = $('#lbTrack'); if (!T) return;
+    const i = Math.max(0, Math.min(gal.slides.length - 1, Math.round(T.scrollLeft / (T.clientWidth || 1)) || 0)), x = gal.slides[i]; if (!x) return;
+    $('#lbCap').textContent = `${x.kind === 'interior' ? 'Interior · ' : x.kind === 'color' ? 'Colour · ' : ''}${x.cap}  ·  ${i + 1} of ${gal.slides.length}`;
+    $$('[data-lbi]').forEach((b) => b.setAttribute('aria-current', Number(b.dataset.lbi) === i));
+    const th = $(`[data-lbi="${i}"]`); if (th) th.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+    $('.lb-btn.prev').disabled = i === 0; $('.lb-btn.next').disabled = i === gal.slides.length - 1;
+    lbSync.i = i;
+  }
+  function lbGo(i) { const T = $('#lbTrack'); if (!T) return; i = Math.max(0, Math.min(gal.slides.length - 1, i)); T.scrollTo({ left: i * T.clientWidth, behavior: 'smooth' }); }
+  function wireLightbox(L) {
+    L.addEventListener('click', (e) => {
+      if (e.target.closest('[data-lbx]')) return L.close();
+      const s = e.target.closest('[data-lbs]'); if (s) return lbGo((lbSync.i || 0) + Number(s.dataset.lbs));
+      const t = e.target.closest('[data-lbi]'); if (t) return lbGo(Number(t.dataset.lbi));
+      if (e.target.classList.contains('lb-slide') || e.target.classList.contains('lb-stage')) L.close(); // tap outside the photo
+    });
+    L.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); lbGo((lbSync.i || 0) + (e.key === 'ArrowRight' ? 1 : -1)); } });
+    L.addEventListener('close', () => { document.body.classList.remove('lb-open'); heroGo(lbSync.i || 0, false); });
+  }
   const fmtL = (n) => (n >= 1e7 ? `₹${(n / 1e7).toFixed(2)} Cr` : `₹${(n / 1e5).toFixed(1)} L`);
   const SRC = { autocar: 'Autocar India', zigwheels: 'ZigWheels', carwale: 'CarWale', cardekho: 'CarDekho' };
   function drawMetrics(m, e) {
@@ -820,7 +870,9 @@
     const known = pool.filter((c) => /[01]/.test(c.fs));
     const diff = DATA.features.filter((f) => { const v = known.map((c) => c.feat(f.key)); return v.includes('1') && v.some((x) => x !== '1'); });
     const cell = (c, k) => { const v = c.feat(k); return v === '?' && diff.some((f) => f.key === k) ? '<span class="no" title="Not listed for this variant">–</span>' : mark(v); };
-    for (const k of [...cp.need]) if (!diff.some((f) => f.key === k)) cp.need.delete(k);
+    // a ticked feature that every remaining variant has stays ticked (shown as a note); one that none has is dropped
+    const allHave = [...cp.need].filter((k) => !diff.some((f) => f.key === k) && known.length && known.every((c) => c.feat(k) === '1'));
+    for (const k of [...cp.need]) if (!diff.some((f) => f.key === k) && !allHave.includes(k)) cp.need.delete(k);
     const ok = (c) => [...cp.need].every((k) => c.feat(k) === '1');
     const match = pool.filter(ok), best = match[0];
     if (cp.need.size) pool.sort((a, b) => ok(b) - ok(a) || a.orTotal - b.orTotal); // variants with everything you ticked come first
@@ -841,10 +893,11 @@
     } else pick = `<div class="vh-pick none">${SORRY_ICON}<div><b>Sorry, no ${esc(m.model)} variant has all of that.</b><div class="muted small">Untick a feature to see the closest variants.</div></div></div>`;
     const grp = (name, vals, set) => vals.length > 1 ? `<div class="group"><div class="label">${name}</div><div class="chips">${vals.map((v) => `<button type="button" class="chip" data-cpf="${name === 'Fuel' ? 'fuel' : 'gear'}" data-v="${esc(v)}" aria-pressed="${set.has(v)}">${esc(v)}</button>`).join('')}</div></div>` : '';
     const cnt = (k) => known.filter((c) => c.feat(k) === '1').length;
-    box.innerHTML = `<div class="cp-sec-head"><div><h2 class="display">Find your variant</h2><p class="muted">${all.length} variant${all.length > 1 ? 's' : ''}. Tick what you care about. We only show what changes between them.${all.some((c) => c.fsrc === 'autocar' || c.zw) ? ` Some details from ${[all.some((c) => c.fsrc === 'autocar') && 'Autocar India', all.some((c) => c.zw) && 'ZigWheels'].filter(Boolean).join(' and ')}.` : ''}</p></div></div>
+    box.innerHTML = `<div class="cp-sec-head"><div><h2 class="display">Find your variant</h2><p class="muted">${all.length} variant${all.length > 1 ? 's' : ''}. Tick what you care about. We only show what changes between them.${cp.carried ? ' Your choices from the search are already ticked.' : ''}${all.some((c) => c.fsrc === 'autocar' || c.zw) ? ` Some details from ${[all.some((c) => c.fsrc === 'autocar') && 'Autocar India', all.some((c) => c.zw) && 'ZigWheels'].filter(Boolean).join(' and ')}.` : ''}</p></div></div>
       ${all.length > 1 ? `<div class="vh-filters">${grp('Fuel', fuels, cp.fuel)}${grp('Gearbox', gears, cp.gear)}</div>
       ${diff.length ? `<div class="group"><div class="label">Features that differ <span class="muted">· tap the ones you want</span></div><div class="chips vh-need">${(cp.more ? diff : diff.filter((f, i) => i < 12 || cp.need.has(f.key))).map((f) => `<button type="button" class="chip" data-need="${f.key}" aria-pressed="${cp.need.has(f.key)}">${esc(f.label)}<small>${cnt(f.key)}/${known.length}</small></button>`).join('')}${diff.length > 12 ? `<button type="button" class="chip more" data-more>${cp.more ? 'Fewer' : `+${diff.filter((f, i) => i >= 12 && !cp.need.has(f.key)).length} more`}</button>` : ''}</div></div>`
         : known.length ? '<p class="muted">These variants have the same feature list.</p>' : `<div class="note">${esc(m.brand)} doesn't publish a variant-wise feature list, so we can only compare prices and specs here.</div>`}` : ''}
+      ${allHave.length ? `<p class="vh-all-have">✓ Every variant here has ${esc(allHave.map((k) => FLABEL(k).replace(/ \(.*\)$/, '')).join(', '))}</p>` : ''}
       ${pick}
       <div class="vh-scroll"><table class="vh-table"><thead><tr><th class="vh-c0">Variant</th>${pool.map((c) => `<th class="${c === best ? 'best' : ok(c) ? '' : 'off'}"><button type="button" data-vid="${esc(c.id)}"><span class="vh-vn">${esc(c.variant)}</span><b>${lakh(c.orTotal)}</b>${c === best ? '<em>Best fit</em>' : ''}</button></th>`).join('')}</tr></thead>
         <tbody>${specs.map(([l, fn]) => `<tr class="spec"><td class="vh-c0">${l}</td>${pool.map((c) => `<td class="${c === best ? 'best' : ok(c) ? '' : 'off'}">${esc(fn(c))}</td>`).join('')}</tr>`).join('')}
@@ -907,9 +960,9 @@
       if (e.target.closest('[data-back]')) { if (navFromList && history.length > 1) history.back(); else go('cars'); return; }
       const ni = e.target.closest('[data-ncinfo]'); if (ni) { const box = $('#ncInfo'), open = box.hidden; box.hidden = !open; ni.setAttribute('aria-expanded', open); return; }
       const j = e.target.closest('[data-jump]'); if (j) { e.preventDefault(); $('#' + j.dataset.jump).scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
-      const gm = e.target.closest('[data-gm]'); if (gm) { gal.mode = gm.dataset.gm; gal.i = 0; loadExtras().then((X) => drawGallery(m, X[cp.key])); return; }
-      const gs = e.target.closest('[data-gs]'); if (gs) { goSlide(gal.i + Number(gs.dataset.gs)); return; }
-      const gi = e.target.closest('[data-gi]'); if (gi) { goSlide(Number(gi.dataset.gi)); return; }
+      const hs = e.target.closest('[data-hs]'); if (hs) { heroGo(gal.i + Number(hs.dataset.hs)); return; }
+      const hi = e.target.closest('[data-hi]'); if (hi) { heroGo(Number(hi.dataset.hi)); return; }
+      const op = e.target.closest('[data-open]'); if (op) { openLightbox(Number(op.dataset.open)); return; }
       const v = e.target.closest('[data-vid]'); if (v) { detail(v.dataset.vid); return; }
       const f = e.target.closest('[data-cpf]'); if (f) { const set = cp[f.dataset.cpf]; set.has(f.dataset.v) ? set.delete(f.dataset.v) : set.add(f.dataset.v); return keepY(() => drawVariants(m)); }
       if (e.target.closest('[data-more]')) { cp.more = !cp.more; return keepY(() => drawVariants(m)); }
@@ -988,8 +1041,14 @@
   }
   function setPrio(order) {
     if (!state.rec || order.join() === state.rec.prio.join()) return;
+    const before = new Map($$('.pr-pill').map((x) => { const r = x.getBoundingClientRect(); return [x.dataset.k, [r.left, r.top]]; }));
+    const movedK = order.find((k, i) => state.rec.prio[i] !== k && state.rec.prio.indexOf(k) > i) || order[0];
     state.rec.prio = order; store.set('rec', state.rec); render();
-    const row = $('#prRow'); if (row) row.classList.add('changed');
+    for (const x of $$('.pr-pill')) { // glide the pills to their new places so the change is easy to follow
+      const b = before.get(x.dataset.k); if (!b) continue; const r = x.getBoundingClientRect(), dx = b[0] - r.left, dy = b[1] - r.top; if (!dx && !dy) continue;
+      const lift = x.dataset.k === movedK;
+      x.animate([{ transform: `translate(${dx}px, ${dy}px)` }, { transform: `translate(${dx / 2}px, ${dy / 2 - (lift ? 10 : 0)}px) scale(${lift ? 1.08 : 0.96})`, offset: 0.45 }, { transform: 'none' }], { duration: 700, easing: 'cubic-bezier(.45,.05,.25,1)' });
+    }
   }
   function wirePrioBar() {
     const bar = $('#recBar'); let drag = null, barDragged = false;
@@ -1128,17 +1187,30 @@
   const UP_ICO = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg>';
   const DN_ICO = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 10l6 6 6-6"/></svg>';
   const ttRows = (o) => o.map((k, i) => `<li data-k="${k}" tabindex="0" aria-label="${PRIO[k]}, number ${i + 1}"><span class="pn">${i + 1}</span><span class="pt"><b>${PRIO[k]}${i ? '' : '<em class="tt-top">Most important</em>'}</b><small>${PRIO_HINT[k]}</small></span><span class="tt-mv"><button type="button" data-tm="-1" aria-label="Move ${PRIO[k]} up" ${i ? '' : 'disabled'}>${UP_ICO}</button><button type="button" data-tm="1" aria-label="Move ${PRIO[k]} down" ${i < o.length - 1 ? '' : 'disabled'}>${DN_ICO}</button></span></li>`).join('');
-  function flipList(L, fn, skip) {
+  function flipList(L, fn, skip, moved) {
     const before = new Map($$('li', L).map((c) => [c.dataset.k, c.getBoundingClientRect().top]));
     fn();
-    for (const c of $$('li', L)) { if (c === skip) continue; const d = (before.get(c.dataset.k) ?? 0) - c.getBoundingClientRect().top; if (d) c.animate([{ transform: `translateY(${d}px)` }, { transform: 'none' }], { duration: 320, easing: 'cubic-bezier(.2,.8,.2,1)' }); }
+    for (const c of $$('li', L)) {
+      if (c === skip) continue;
+      const d = (before.get(c.dataset.k) ?? 0) - c.getBoundingClientRect().top; if (!d) continue;
+      if (moved && c.dataset.k === moved) { // the card you moved lifts off, glides and settles
+        c.style.zIndex = 3;
+        c.animate([
+          { transform: `translateY(${d}px) scale(1)`, boxShadow: '0 0 0 rgba(0,0,0,0)' },
+          { transform: `translateY(${d * 0.5}px) scale(1.04)`, boxShadow: '0 18px 40px rgba(0,0,0,.22), inset 0 0 0 2px var(--brand)', offset: 0.45 },
+          { transform: 'translateY(0) scale(1)', boxShadow: '0 0 0 rgba(0,0,0,0)' },
+        ], { duration: 720, easing: 'cubic-bezier(.45,.05,.25,1)' }).onfinish = () => { c.style.zIndex = ''; };
+      } else {
+        c.animate([{ transform: `translateY(${d}px)`, opacity: 1 }, { transform: `translateY(${d * 0.5}px) scale(.98)`, opacity: .7, offset: 0.45 }, { transform: 'none', opacity: 1 }], { duration: 720, easing: 'cubic-bezier(.45,.05,.25,1)' });
+      }
+    }
   }
   function wireTT(L, get, set) {
     if (!L) return;
     const move = (k, d, focusBtn) => {
       const o = get().slice(), i = o.indexOf(k), j = i + d; if (j < 0 || j >= o.length) return;
       [o[i], o[j]] = [o[j], o[i]]; set(o);
-      flipList(L, () => { L.innerHTML = ttRows(o); });
+      flipList(L, () => { L.innerHTML = ttRows(o); }, null, k);
       const li = $(`li[data-k="${k}"]`, L); if (!li) return;
       const btn = focusBtn && $(`[data-tm="${d}"]`, li);
       (btn && !btn.disabled ? btn : li).focus({ preventScroll: true });
