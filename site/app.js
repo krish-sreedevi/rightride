@@ -681,6 +681,11 @@
   const stars = (n) => `<span class="stars" aria-label="${n} out of 5 stars">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? 'on' : ''}">${STAR}</i>`).join('')}</span>`;
   const ORIG_TITLE = document.title;
 
+  const NCAP_INFO = {
+    'Global NCAP': '<b>Global NCAP</b> is an independent crash-test programme, run by a UK-based charity, that buys cars sold in India and crash-tests them under its "Safer Cars for India" campaign. Cars get separate star ratings for adult and child protection. Since 2022 its tests are stricter: they add a side impact and need electronic stability control (ESC) for top marks. Adult protection is scored out of 34 and child protection out of 49.',
+    'Bharat NCAP': '<b>Bharat NCAP</b> is India\'s own crash-test programme, run by the Ministry of Road Transport and Highways since late 2023. It crash-tests cars from the front, the side and against a pole, and gives star ratings for adult and child protection. Adult protection is scored out of 32 and child protection out of 49.',
+  };
+  const ncapInfo = (by) => `<div class="nc-info" id="ncInfo" hidden><p>${NCAP_INFO[by] || ''}</p><p class="muted small">More stars means better protection in a crash. Ratings apply to the version that was tested; newer or facelifted versions may differ.</p></div>`;
   function renderCar(slug) {
     const el = $('#carPage'), m = modelBySlug(slug);
     if (!m) { el.innerHTML = `<div class="cp-wrap"><div class="empty sorry">${SORRY_ICON}<h2>Sorry, we couldn't find that car</h2><p class="muted">It may have been discontinued or renamed.</p><a class="btn primary" href="#/cars" data-go="cars">Browse all cars</a></div></div>`; return; }
@@ -692,7 +697,7 @@
     const seats = [...new Set(m.vs.map((v) => v.c.seats).filter(Boolean))].sort();
     const tags = [...m.fuels, ...m.trans, seats.length ? seats.join(' / ') + ' seats' : '', `${m.vs.length} variant${m.vs.length > 1 ? 's' : ''}`].filter(Boolean);
     const max = { 'Bharat NCAP': [32, 49], 'Global NCAP': [34, 49] }[nc && nc.by] || [null, null];
-    const safety = nc ? `<div class="nc-top">${stars(nc.stars)}<div><b>${nc.stars}-star</b> adult safety<div class="muted small">${esc(nc.by)}</div></div></div>
+    const safety = nc ? `<div class="nc-top">${stars(nc.stars)}<div><b>${nc.stars}-star</b> adult safety<div class="muted small nc-by">${esc(nc.by)}<button type="button" class="info-btn" data-ncinfo aria-expanded="false" aria-controls="ncInfo" aria-label="What is ${esc(nc.by)}?">i</button></div></div></div>${ncapInfo(nc.by)}
         ${nc.aop != null || nc.cop != null ? `<div class="nc-bars">${nc.aop != null ? `<div><span>Adult occupant</span>${bar10(nc.aop / max[0] * 10)}<b>${nc.aop}${max[0] ? `<small>/${max[0]}</small>` : ''}</b></div>` : ''}${nc.cop != null ? `<div><span>Child occupant</span>${bar10(nc.cop / max[1] * 10)}<b>${nc.cop}${max[1] ? `<small>/${max[1]}</small>` : ''}</b></div>` : ''}</div>` : ''}
         ${nc.note ? `<p class="note">${esc(nc.note)}</p>` : ''}`
       : `<p class="muted">Not crash-tested by Bharat NCAP or Global NCAP yet. ${m.vs.some((v) => v.c.airbags) ? `Comes with up to ${Math.max(...m.vs.map((v) => v.c.airbags || 0))} airbags.` : ''}</p>`;
@@ -819,6 +824,7 @@
     P.addEventListener('click', (e) => {
       const m = modelBySlug(carSlug); if (!m) return;
       if (e.target.closest('[data-back]')) { if (navFromList && history.length > 1) history.back(); else go('cars'); return; }
+      const ni = e.target.closest('[data-ncinfo]'); if (ni) { const box = $('#ncInfo'), open = box.hidden; box.hidden = !open; ni.setAttribute('aria-expanded', open); return; }
       const j = e.target.closest('[data-jump]'); if (j) { e.preventDefault(); $('#' + j.dataset.jump).scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
       const v = e.target.closest('[data-vid]'); if (v) { detail(v.dataset.vid); return; }
       const f = e.target.closest('[data-cpf]'); if (f) { const set = cp[f.dataset.cpf]; set.has(f.dataset.v) ? set.delete(f.dataset.v) : set.add(f.dataset.v); return keepY(() => drawVariants(m)); }
@@ -893,8 +899,8 @@
     if (!r) { bar.hidden = true; return; }
     bar.hidden = false;
     bar.innerHTML = `<span class="rec-k">Priorities</span>
-      <ol class="pr-row" id="prRow" aria-label="Your priorities, most important first">${r.prio.map((k, i) => `<li class="pr-pill" data-k="${k}" tabindex="0" title="${i ? 'Tap to make this #1' : 'Most important'}" role="button"><span class="pn">${i + 1}</span><span class="pr-t">${esc(PRIO[k])}</span></li>`).join('')}</ol>
-      <span class="pr-hint muted">Tap one to make it #1. The ranking updates instantly</span>`;
+      <ol class="pr-row" id="prRow" aria-label="Your priorities, most important first">${r.prio.map((k, i) => `<li class="pr-pill" data-k="${k}" tabindex="0" title="${i ? '' : 'Most important'}"><span class="pn">${i + 1}</span><span class="pr-t">${esc(PRIO[k])}</span><span class="pr-mv"><button type="button" data-pmove="-1" aria-label="Move ${esc(PRIO[k])} up" ${i ? '' : 'disabled'}>‹</button><button type="button" data-pmove="1" aria-label="Move ${esc(PRIO[k])} down" ${i < 3 ? '' : 'disabled'}>›</button></span></li>`).join('')}</ol>
+      <span class="pr-hint muted">Use the arrows to reorder. The ranking updates instantly</span>`;
   }
   function setPrio(order) {
     if (!state.rec || order.join() === state.rec.prio.join()) return;
@@ -904,10 +910,10 @@
   function wirePrioBar() {
     const bar = $('#recBar'); let drag = null, barDragged = false;
     bar.addEventListener('click', (e) => {
-      if (barDragged) return;
-      const li = e.target.closest('.pr-pill'); if (!li || !state.rec) return;
-      const k = li.dataset.k, o = [k, ...state.rec.prio.filter((x) => x !== k)]; setPrio(o);
-      const f = $(`.pr-pill[data-k="${k}"]`); if (f) f.focus();
+      const b = e.target.closest('[data-pmove]'); if (!b || !state.rec) return;
+      const k = b.closest('.pr-pill').dataset.k, o = state.rec.prio.slice(), i = o.indexOf(k), j = i + Number(b.dataset.pmove);
+      if (j < 0 || j > 3) return; [o[i], o[j]] = [o[j], o[i]]; setPrio(o);
+      const f = $(`.pr-pill[data-k="${k}"] [data-pmove="${b.dataset.pmove}"]`); (f && !f.disabled ? f : $(`.pr-pill[data-k="${k}"]`)).focus();
     });
     bar.addEventListener('keydown', (e) => {
       const li = e.target.closest('.pr-pill'); if (!li || !['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) return;
@@ -1010,7 +1016,7 @@
       body = `<h2 id="wzTitle" class="display">Automatic or Manual?</h2>
         <div class="wz-choices three">${Object.entries(T).map(([k, sub]) => `<button class="wz-opt${a.trans === k ? ' sel' : ''}" type="button" data-trans="${k}" aria-pressed="${a.trans === k}"><b>${k === 'Either' ? 'No preference' : k}</b><span>${sub}</span></button>`).join('')}</div>`;
     } else if (s === 5) {
-      body = `<h2 id="wzTitle" class="display">What matters most?</h2><p class="muted">Tap one to move it to the top. Most important first.</p>
+      body = `<h2 id="wzTitle" class="display">What matters most?</h2><p class="muted">Use the arrows to put the most important at the top.</p>
         <ol class="tt" id="prioList" aria-label="Your priorities, most important first">${ttRows(a.prio)}</ol>`;
     }
     const nav = s ? `<div class="wz-nav"><button class="btn ghost" type="button" data-wz="back">Back</button><button class="btn primary" type="button" data-wz="next" ${canNext ? '' : 'disabled'}>${s === 5 ? 'Show my matches' : 'Next'}</button></div>` : '';
@@ -1019,8 +1025,9 @@
     if (s === 2) { const i = $('#wzBudget'); i.focus(); i.setSelectionRange(i.value.length, i.value.length); }
   }
   // priorities list: tap a row to move it to the top; rows can also be dragged
-  const UP_ICO = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg>';
-  const ttRows = (o) => o.map((k, i) => `<li data-k="${k}" tabindex="0" role="button" aria-label="${PRIO[k]}, number ${i + 1}${i ? '. Move to top' : ''}"><span class="pn">${i + 1}</span><span class="pt"><b>${PRIO[k]}</b><small>${PRIO_HINT[k]}</small></span><span class="tt-up">${i ? UP_ICO + 'Move to top' : 'Most important'}</span></li>`).join('');
+  const UP_ICO = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg>';
+  const DN_ICO = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 10l6 6 6-6"/></svg>';
+  const ttRows = (o) => o.map((k, i) => `<li data-k="${k}" tabindex="0" aria-label="${PRIO[k]}, number ${i + 1}"><span class="pn">${i + 1}</span><span class="pt"><b>${PRIO[k]}${i ? '' : '<em class="tt-top">Most important</em>'}</b><small>${PRIO_HINT[k]}</small></span><span class="tt-mv"><button type="button" data-tm="-1" aria-label="Move ${PRIO[k]} up" ${i ? '' : 'disabled'}>${UP_ICO}</button><button type="button" data-tm="1" aria-label="Move ${PRIO[k]} down" ${i < o.length - 1 ? '' : 'disabled'}>${DN_ICO}</button></span></li>`).join('');
   function flipList(L, fn, skip) {
     const before = new Map($$('li', L).map((c) => [c.dataset.k, c.getBoundingClientRect().top]));
     fn();
@@ -1028,33 +1035,19 @@
   }
   function wireTT(L, get, set) {
     if (!L) return;
-    const redraw = (o, focusK) => { set(o); flipList(L, () => { L.innerHTML = ttRows(o); }); if (focusK) { const f = $(`li[data-k="${focusK}"]`, L); if (f) f.focus({ preventScroll: true }); } };
-    const toTop = (k) => { const o = get().filter((x) => x !== k); o.unshift(k); redraw(o, k); };
-    let drag = null, justDragged = false;
-    L.addEventListener('click', (e) => { if (justDragged) return; const li = e.target.closest('li'); if (li) toTop(li.dataset.k); });
+    const move = (k, d, focusBtn) => {
+      const o = get().slice(), i = o.indexOf(k), j = i + d; if (j < 0 || j >= o.length) return;
+      [o[i], o[j]] = [o[j], o[i]]; set(o);
+      flipList(L, () => { L.innerHTML = ttRows(o); });
+      const li = $(`li[data-k="${k}"]`, L); if (!li) return;
+      const btn = focusBtn && $(`[data-tm="${d}"]`, li);
+      (btn && !btn.disabled ? btn : li).focus({ preventScroll: true });
+    };
+    L.addEventListener('click', (e) => { const b = e.target.closest('[data-tm]'); if (b) move(b.closest('li').dataset.k, Number(b.dataset.tm), true); });
     L.addEventListener('keydown', (e) => {
-      const li = e.target.closest('li'); if (!li) return;
-      const o = get().slice(), i = o.indexOf(li.dataset.k);
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toTop(li.dataset.k); }
-      else if ((e.key === 'ArrowUp' && i > 0) || (e.key === 'ArrowDown' && i < o.length - 1)) { e.preventDefault(); const j = i + (e.key === 'ArrowUp' ? -1 : 1); [o[i], o[j]] = [o[j], o[i]]; redraw(o, li.dataset.k); }
+      const li = e.target.closest('li'); if (!li || !['ArrowUp', 'ArrowDown'].includes(e.key) || e.target.closest('button')) return;
+      e.preventDefault(); move(li.dataset.k, e.key === 'ArrowUp' ? -1 : 1, false);
     });
-    L.addEventListener('pointerdown', (e) => { const li = e.target.closest('li'); if (!li) return; drag = { li, y0: e.clientY, moved: false, id: e.pointerId }; li.setPointerCapture(e.pointerId); });
-    L.addEventListener('pointermove', (e) => {
-      if (!drag || e.pointerId !== drag.id) return;
-      const dy = e.clientY - drag.y0; if (!drag.moved && Math.abs(dy) < 6) return;
-      drag.moved = true; drag.li.classList.add('lift'); drag.li.style.transform = `translateY(${dy}px) scale(1.02)`;
-      const r = drag.li.getBoundingClientRect(), cy = r.top + r.height / 2, items = $$('li', L).filter((x) => x !== drag.li);
-      let idx = items.findIndex((x) => { const q = x.getBoundingClientRect(); return cy < q.top + q.height / 2; }); if (idx < 0) idx = items.length;
-      const next = [...items.slice(0, idx).map((x) => x.dataset.k), drag.li.dataset.k, ...items.slice(idx).map((x) => x.dataset.k)];
-      if (next.join() !== get().join()) {
-        const top0 = r.top - dy; set(next);
-        flipList(L, () => { for (const k of next) L.appendChild($(`li[data-k="${k}"]`, L)); }, drag.li);
-        drag.li.style.transform = ''; const top1 = drag.li.getBoundingClientRect().top; drag.y0 += top1 - top0; drag.li.style.transform = `translateY(${e.clientY - drag.y0}px) scale(1.02)`;
-        $$('li', L).forEach((x, i) => (x.querySelector('.pn').textContent = i + 1));
-      }
-    });
-    const end = () => { if (!drag) return; const d = drag; drag = null; d.li.classList.remove('lift'); d.li.style.transform = ''; if (d.moved) { justDragged = true; setTimeout(() => (justDragged = false), 50); L.innerHTML = ttRows(get()); } };
-    L.addEventListener('pointerup', end); L.addEventListener('pointercancel', end);
   }
   function bodyIcon(k) {
     const P = { small: 'M6 30h52M10 30l6-10h22l10 10M16 20v10', sedan: 'M4 30h56M8 30l8-9h26l12 9M20 21l-2 9M36 21v9', suv: 'M4 30h56M6 30V20l6-8h30l10 8 6 2v8M12 12v18M30 12v18' }[k];
