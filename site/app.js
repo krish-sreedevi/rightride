@@ -690,7 +690,7 @@
     const el = $('#carPage'), m = modelBySlug(slug);
     if (!m) { el.innerHTML = `<div class="cp-wrap"><div class="empty sorry">${SORRY_ICON}<h2>Sorry, we couldn't find that car</h2><p class="muted">It may have been discontinued or renamed.</p><a class="btn primary" href="#/cars" data-go="cars">Browse all cars</a></div></div>`; return; }
     const key = m.brand + '|' + m.model;
-    if (cp.key !== key) { cp.key = key; cp.fuel.clear(); cp.gear.clear(); cp.need.clear(); cp.all = false; cp.more = false; }
+    if (cp.key !== key) { gal.mode = 'colors'; gal.i = 0; cp.key = key; cp.fuel.clear(); cp.gear.clear(); cp.need.clear(); cp.all = false; cp.more = false; }
     const x = expertOf(m), nc = (DATA.ncap || {})[key], usp = (DATA.usp || {})[key];
     const st = RTO.states[state.st].name;
     document.title = `${m.brand} ${m.model}: on-road price in ${st}, variants & showrooms · Right Ride`;
@@ -715,6 +715,8 @@
           <div class="sheet-cta"><a class="btn primary" href="#cpVariants" data-jump="cpVariants">Find my variant</a><a class="btn ghost" href="#cpDealers" data-jump="cpDealers">Showrooms near me</a></div>
         </div>
       </section>
+      <section class="cp-sec cp-gallery" id="cpGallery" hidden></section>
+      <section class="cp-sec" id="cpMetrics" hidden></section>
       ${usp && usp.length ? `<section class="cp-sec cp-usp"><div class="cp-sec-head"><h2 class="display">Why people pick it</h2><span class="ai-tag"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2l1.8 5.6L19.5 9l-5.7 1.6L12 16l-1.8-5.4L4.5 9l5.7-1.4zM19 15l.9 2.6 2.6.9-2.6.9L19 22l-.9-2.6-2.6-.9 2.6-.9z"/></svg>AI summary of expert reviews</span></div>
         <ol class="usp">${usp.map((u) => `<li>${esc(u)}</li>`).join('')}</ol></section>` : ''}
       <div class="cp-two">
@@ -728,6 +730,85 @@
       <section class="cp-sec" id="cpDealers"></section>
     </div>`;
     drawVariants(m); drawDealers(m);
+    loadExtras().then((X) => { if (cp.key !== key) return; const e = X[key]; if (e) { drawGallery(m, e); drawMetrics(m, e); } });
+  }
+
+  // ---- photos (colours, interior) and ownership metrics, from site/data/extras.json ----
+  let EXTRAS = null;
+  const loadExtras = () => EXTRAS || (EXTRAS = fetch('data/extras.json').then((r) => (r.ok ? r.json() : { models: {} })).then((d) => d.models || {}).catch(() => ({})));
+  const pic = (u, w) => encodeURI(u.split('?')[0]) + (/autocarindia\.com/.test(u) ? `?w=${w}` : '');
+  const gal = { mode: 'colors', i: 0 };
+  function drawGallery(m, e) {
+    const box = $('#cpGallery'); if (!box) return;
+    const has = { colors: e.colors.length > 0, interior: e.interior.length > 0 };
+    if (!has.colors && !has.interior) { box.hidden = true; return; }
+    if (!has[gal.mode]) gal.mode = has.colors ? 'colors' : 'interior';
+    const items = gal.mode === 'colors' ? e.colors.map((c) => ({ img: c.img, cap: c.name, sw: c.sw })) : e.interior.map((c) => ({ img: c.img, cap: c.cap }));
+    gal.i = Math.min(gal.i, items.length - 1);
+    box.hidden = false;
+    box.innerHTML = `<div class="cp-sec-head"><h2 class="display">${gal.mode === 'colors' ? `${e.colors.length} colour${e.colors.length > 1 ? 's' : ''}` : 'Inside the cabin'}</h2>
+        <div class="seg" role="tablist">${has.colors ? `<button type="button" role="tab" data-gm="colors" aria-selected="${gal.mode === 'colors'}">Colours</button>` : ''}${has.interior ? `<button type="button" role="tab" data-gm="interior" aria-selected="${gal.mode === 'interior'}">Interior</button>` : ''}</div></div>
+      <div class="gal">
+        <div class="gal-track" id="galTrack" tabindex="0" aria-label="${gal.mode === 'colors' ? 'Colours' : 'Interior photos'}">${items.map((x, i) => `<figure class="gal-slide" data-i="${i}"><img loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async" src="${esc(pic(x.img, 960))}" srcset="${esc(pic(x.img, 640))} 640w, ${esc(pic(x.img, 960))} 960w, ${esc(pic(x.img, 1400))} 1400w" sizes="(max-width: 900px) 92vw, 1100px" alt="${esc(m.brand + ' ' + m.model + ' ' + x.cap)}" onerror="this.closest('figure').classList.add('broken')"></figure>`).join('')}</div>
+        <button class="gal-btn prev" type="button" data-gs="-1" aria-label="Previous photo">‹</button><button class="gal-btn next" type="button" data-gs="1" aria-label="Next photo">›</button>
+        <div class="gal-cap" id="galCap" aria-live="polite"></div>
+      </div>
+      ${gal.mode === 'colors' ? `<div class="sw-row" role="tablist" aria-label="Choose a colour">${items.map((x, i) => `<button type="button" class="sw" data-gi="${i}" aria-label="${esc(x.cap)}" title="${esc(x.cap)}"><span style="background:${x.sw.length > 1 ? `linear-gradient(135deg, ${x.sw[0]} 50%, ${x.sw[1]} 50%)` : x.sw[0]}"></span></button>`).join('')}</div>`
+        : `<div class="th-row">${items.map((x, i) => `<button type="button" class="th" data-gi="${i}" aria-label="${esc(x.cap)}"><img loading="lazy" src="${esc(pic(x.img, 240))}" alt=""></button>`).join('')}</div>`}
+      <p class="hint">Photos: Autocar India.</p>`;
+    const T = $('#galTrack');
+    const sync = () => {
+      const i = Math.round(T.scrollLeft / T.clientWidth); gal.i = Math.max(0, Math.min(items.length - 1, i));
+      $('#galCap').textContent = `${items[gal.i].cap}  ·  ${gal.i + 1} / ${items.length}`;
+      $$('[data-gi]', box).forEach((b) => b.setAttribute('aria-current', Number(b.dataset.gi) === gal.i));
+      $('.gal-btn.prev', box).disabled = gal.i === 0; $('.gal-btn.next', box).disabled = gal.i === items.length - 1;
+    };
+    let st; T.addEventListener('scroll', () => { cancelAnimationFrame(st); st = requestAnimationFrame(sync); }, { passive: true });
+    T.addEventListener('keydown', (ev) => { if (ev.key === 'ArrowRight' || ev.key === 'ArrowLeft') { ev.preventDefault(); goSlide(gal.i + (ev.key === 'ArrowRight' ? 1 : -1)); } });
+    T.scrollLeft = gal.i * T.clientWidth; sync();
+  }
+  function goSlide(i) { const T = $('#galTrack'); if (!T) return; const n = T.children.length; i = Math.max(0, Math.min(n - 1, i)); T.scrollTo({ left: i * T.clientWidth, behavior: 'smooth' }); }
+  const fmtL = (n) => (n >= 1e7 ? `₹${(n / 1e7).toFixed(2)} Cr` : `₹${(n / 1e5).toFixed(1)} L`);
+  const SRC = { autocar: 'Autocar India', zigwheels: 'ZigWheels', carwale: 'CarWale', cardekho: 'CarDekho' };
+  function drawMetrics(m, e) {
+    const box = $('#cpMetrics'); if (!box) return;
+    const tiles = [];
+    // maintenance
+    if (e.service) {
+      const s = e.service, yr = (v) => Math.round(v / 5 / 100) * 100;
+      tiles.push(`<div class="mt"><div class="mt-k">Average maintenance cost</div><div class="mt-v">₹${yr(s.lo).toLocaleString('en-IN')}${s.hi > s.lo * 1.05 ? `–${yr(s.hi).toLocaleString('en-IN')}` : ''}<small>/year</small></div>
+        <div class="mt-s">${s.est ? `Our estimate for routine servicing over 5 years (about ₹${Math.round(s.lo / 1000)}k in all)` : `Routine servicing, about ₹${Math.round(s.lo / 1000)}k${s.hi > s.lo * 1.05 ? `–${Math.round(s.hi / 1000)}k` : ''} over 5 years or 50,000 km. <a href="${esc(s.url)}" target="_blank" rel="noopener">V3Cars ↗</a>`}</div>
+        <div class="mt-tag">${s.est ? 'Estimate' : 'Service schedule'}</div></div>`);
+    }
+    // real-world mileage
+    const ml = e.mileage || [];
+    const unit = (x) => (x.ev ? ' km' : x.fuel === 'CNG' ? ' km/kg' : ' km/l');
+    const pick = ml.filter((x) => (x.ev ? x.evRange : x.tested || x.user || x.arai));
+    if (pick.length) {
+      const val = (x) => (x.ev ? x.evRange : x.tested || x.user || (x.arai ? Math.round(x.arai * 0.8 * 10) / 10 : null));
+      const src = (x) => (x.ev ? 'Autocar India tested range' : x.tested ? 'Autocar India tested' : x.user ? 'Owner-reported' : 'Estimate (80% of ARAI)');
+      const best = pick.find((x) => x.tested || x.evRange) || pick.find((x) => x.user) || pick[0];
+      const rows = pick.slice(0, 4).map((x) => `<li><span>${esc([x.fuel, x.tr].filter(Boolean).join(' · '))}</span><b>${val(x) ?? '–'}${val(x) ? unit(x) : ''}</b><em>${x.tested ? 'tested' : x.user ? 'owners' : x.ev ? 'tested' : 'est.'}</em></li>`).join('');
+      tiles.push(`<div class="mt"><div class="mt-k">Real-world mileage</div><div class="mt-v">${val(best)}<small>${unit(best)}</small></div>
+        <div class="mt-s">${src(best)}${best.city && best.hwy ? ` · city ${best.city}, highway ${best.hwy}` : ''}${best.arai && !best.ev ? ` · ARAI ${best.arai}` : ''}</div>${pick.length > 1 ? `<ul class="mt-list">${rows}</ul>` : ''}
+        <div class="mt-tag">${best.tested || best.evRange ? 'Road-tested' : best.user ? 'Owner data' : 'Estimate'}</div></div>`);
+    }
+    // resale
+    if (e.resale) {
+      const r = e.resale;
+      tiles.push(`<div class="mt"><div class="mt-k">Resale value in 5 years</div><div class="mt-v">${fmtL(r.lo)}<small> – ${fmtL(r.hi)}</small></div>
+        <div class="mt-s">About ${r.pct}% of today's ex-showroom price, based on how ${esc(m.brand)} ${esc(m.body === 'MUV / MPV' ? 'MUVs' : m.body + 's')} usually hold value. Condition, kilometres and city all matter.</div><div class="mt-tag">Estimate</div></div>`);
+    }
+    // user satisfaction
+    if (e.rating) {
+      const g = e.rating;
+      tiles.push(`<div class="mt"><div class="mt-k">Average user satisfaction</div><div class="mt-v">${g.avg.toFixed(1)}<small>/5</small> ${stars(Math.round(g.avg))}</div>
+        <div class="mt-s">From ${g.count.toLocaleString('en-IN')} owner ratings across ${Object.keys(g.sources).length} sites</div>
+        <ul class="mt-src">${Object.entries(g.sources).map(([s, v]) => `<li><a href="${esc(v.url)}" target="_blank" rel="noopener">${SRC[s]}</a><b>${v.r.toFixed(1)}</b><em>${v.n ? v.n.toLocaleString('en-IN') : ''}</em></li>`).join('')}</ul></div>`);
+    }
+    if (!tiles.length) { box.hidden = true; return; }
+    box.hidden = false;
+    box.innerHTML = `<div class="cp-sec-head"><h2 class="display">Owning one</h2></div><div class="mt-grid">${tiles.join('')}</div>`;
   }
 
   // variant helper: only what differs between variants, the cheapest one with everything you ticked
@@ -826,6 +907,9 @@
       if (e.target.closest('[data-back]')) { if (navFromList && history.length > 1) history.back(); else go('cars'); return; }
       const ni = e.target.closest('[data-ncinfo]'); if (ni) { const box = $('#ncInfo'), open = box.hidden; box.hidden = !open; ni.setAttribute('aria-expanded', open); return; }
       const j = e.target.closest('[data-jump]'); if (j) { e.preventDefault(); $('#' + j.dataset.jump).scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+      const gm = e.target.closest('[data-gm]'); if (gm) { gal.mode = gm.dataset.gm; gal.i = 0; loadExtras().then((X) => drawGallery(m, X[cp.key])); return; }
+      const gs = e.target.closest('[data-gs]'); if (gs) { goSlide(gal.i + Number(gs.dataset.gs)); return; }
+      const gi = e.target.closest('[data-gi]'); if (gi) { goSlide(Number(gi.dataset.gi)); return; }
       const v = e.target.closest('[data-vid]'); if (v) { detail(v.dataset.vid); return; }
       const f = e.target.closest('[data-cpf]'); if (f) { const set = cp[f.dataset.cpf]; set.has(f.dataset.v) ? set.delete(f.dataset.v) : set.add(f.dataset.v); return keepY(() => drawVariants(m)); }
       if (e.target.closest('[data-more]')) { cp.more = !cp.more; return keepY(() => drawVariants(m)); }
@@ -980,7 +1064,7 @@
   const defaults = () => ({ body: null, budget: '', fuel: null, trans: null, prio: ['features', 'mileage', 'comfort', 'value'] });
   function openWizard(step = 0) {
     wz.a = Object.assign(defaults(), state.rec ? JSON.parse(JSON.stringify(state.rec)) : {});
-    wz.step = step; drawWizard();
+    wz.step = step; wz.shown = null; drawWizard();
     const d = $('#wizard'); if (!d.open) d.showModal();
   }
   function closeWizard() { $('#wizard').close(); }
@@ -1020,7 +1104,23 @@
         <ol class="tt" id="prioList" aria-label="Your priorities, most important first">${ttRows(a.prio)}</ol>`;
     }
     const nav = s ? `<div class="wz-nav"><button class="btn ghost" type="button" data-wz="back">Back</button><button class="btn primary" type="button" data-wz="next" ${canNext ? '' : 'disabled'}>${s === 5 ? 'Show my matches' : 'Next'}</button></div>` : '';
+    // soft transition between steps: old step fades and drifts out, new one drifts in, the card eases to its new height
+    const prev = wz.shown; wz.shown = s;
+    const soft = prev != null && prev !== s && $('#wizard').open && !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let h0 = 0, ghost = null;
+    if (soft) {
+      h0 = W.offsetHeight;
+      const ob = $('.wz-body', W);
+      if (ob) { ghost = ob.cloneNode(true); ghost.removeAttribute('id'); $$('[id]', ghost).forEach((x) => x.removeAttribute('id')); ghost.classList.add('wz-ghost'); ghost.setAttribute('aria-hidden', 'true'); Object.assign(ghost.style, { top: ob.offsetTop + 'px', left: ob.offsetLeft + 'px', width: ob.offsetWidth + 'px' }); }
+    }
     W.innerHTML = `${close}${dots}<div class="wz-body">${body}</div>${nav}`;
+    if (soft) {
+      const dir = s > prev ? 1 : -1, nb = $('.wz-body', W), ease = 'cubic-bezier(.22,.8,.24,1)';
+      if (ghost) { W.appendChild(ghost); ghost.animate([{ opacity: 1, transform: 'none', filter: 'blur(0)' }, { opacity: 0, transform: `translateX(${-dir * 32}px) scale(.985)`, filter: 'blur(4px)' }], { duration: 260, easing: 'cubic-bezier(.4,0,.6,1)', fill: 'forwards' }).onfinish = () => ghost.remove(); }
+      if (nb) nb.animate([{ opacity: 0, transform: `translateX(${dir * 32}px) scale(.985)`, filter: 'blur(4px)' }, { opacity: 1, transform: 'none', filter: 'blur(0)' }], { duration: 460, delay: 140, easing: ease, fill: 'backwards' });
+      const h1 = W.offsetHeight;
+      if (Math.abs(h1 - h0) > 2) { W.style.overflow = 'hidden'; W.animate([{ height: h0 + 'px' }, { height: h1 + 'px' }], { duration: 420, easing: ease }).onfinish = () => { W.style.overflow = ''; }; }
+    }
     if (s === 5) wireTT($('#prioList'), () => wz.a.prio, (o) => { wz.a.prio = o; });
     if (s === 2) { const i = $('#wzBudget'); i.focus(); i.setSelectionRange(i.value.length, i.value.length); }
   }

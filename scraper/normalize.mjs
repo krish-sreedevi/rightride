@@ -325,11 +325,72 @@ export function normalize() {
   return { generated: new Date().toISOString(), buckets: BUCKETS, features: featureMeta, brands: Object.values(brands).filter((b) => b.variants), cars, experts, ncap, usp };
 }
 
+// ---- car page extras: photos, real-world mileage, ratings, maintenance and resale (site/data/extras.json) ----
+// 5-year retained value (share of ex-showroom) by brand: a typical-market estimate, adjusted for fuel and body type
+const RETAIN = { 'Maruti Suzuki': 60, Toyota: 62, Honda: 52, Hyundai: 55, Kia: 52, Mahindra: 55, Tata: 47, MG: 42, Renault: 40, Nissan: 38, Skoda: 45, Volkswagen: 45, Jeep: 45, 'Mercedes-Benz': 45, BMW: 42, Audi: 40, 'Land Rover': 48 };
+function buildExtras(out) {
+  const raw = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data/extras.json'), 'utf8')).models || {}; } catch (e) { return {}; } })();
+  const byModel = {};
+  for (const c of out.cars) (byModel[c.brand + '|' + c.model] = byModel[c.brand + '|' + c.model] || []).push(c);
+  const minPrice = (k) => Math.min(...byModel[k].map((c) => c.price));
+  // maintenance: fit log(5-yr cost) ~ a + b·log(price) on the V3Cars models, plus a brand offset where we have 2+ models
+  const pts = [];
+  for (const [k, x] of Object.entries(raw)) if (x.service && byModel[k] && x.service.list.length) pts.push({ b: k.split('|')[0], x: Math.log(minPrice(k)), y: Math.log(Math.min(...x.service.list.map((l) => l.y5))) });
+  const n = pts.length, mx = pts.reduce((s, p) => s + p.x, 0) / n, my = pts.reduce((s, p) => s + p.y, 0) / n;
+  const B = n > 2 ? pts.reduce((s, p) => s + (p.x - mx) * (p.y - my), 0) / pts.reduce((s, p) => s + (p.x - mx) ** 2, 0) : 0.5;
+  const A = my - B * mx;
+  const off = {};
+  for (const b of new Set(pts.map((p) => p.b))) { const r = pts.filter((p) => p.b === b).map((p) => p.y - (A + B * p.x)); if (r.length >= 2) off[b] = r.sort((a, c) => a - c)[Math.floor(r.length / 2)]; }
+  const models = {};
+  for (const [k, list] of Object.entries(byModel)) {
+    const [brand] = k.split('|'); const x = raw[k] || {};
+    const fuels = [...new Set(list.map((c) => c.fuel))], body = list[0].body, pMin = minPrice(k), pMax = Math.max(...list.map((c) => c.price));
+    // ratings: weighted by number of ratings (each source capped at 1,000 so one site can't drown the rest)
+    const R = x.ratings || {}; let sw = 0, sv = 0, cnt = 0;
+    for (const v of Object.values(R)) if (v && v.r) { const w = Math.min(v.n || 1, 1000); sw += w; sv += v.r * w; cnt += v.n || 0; }
+    const rating = sw ? { avg: Math.round((sv / sw) * 10) / 10, count: cnt, sources: Object.fromEntries(Object.entries(R).filter(([, v]) => v && v.r).map(([s, v]) => [s, { r: v.r, n: v.n, url: v.url }])) } : null;
+    // maintenance
+    let service;
+    if (x.service && x.service.list.length) {
+      const y5 = x.service.list.map((l) => l.y5);
+      service = { lo: Math.min(...y5), hi: Math.max(...y5), src: 'V3Cars', url: x.service.url, list: x.service.list };
+    } else {
+      const ev = fuels.every((f) => f === 'Electric');
+      const lux = ['BMW', 'Audi', 'Mercedes-Benz', 'Land Rover', 'Volvo', 'Porsche', 'Lexus'].includes(brand);
+      const est = (lux ? pMin * 0.03 : Math.exp(A + B * Math.log(pMin) + (off[brand] || 0))) * (ev ? 0.6 : 1); // luxury: ~0.6% of the price a year
+      service = { lo: Math.round(est / 500) * 500, hi: Math.round(est / 500) * 500, est: true };
+    }
+    // resale
+    let pct = RETAIN[brand] ?? 45;
+    if (fuels.every((f) => f === 'Electric')) pct -= 10; else if (fuels.every((f) => f === 'CNG')) pct -= 2;
+    if (body === 'SUV' || body === 'MUV / MPV') pct += 3; else if (body === 'Sedan') pct -= 3;
+    pct = Math.max(30, Math.min(68, pct));
+    const resale = { pct, lo: Math.round(pMin * (pct - 4) / 100), hi: Math.round(pMax * (pct + 4) / 100) };
+    // real-world mileage per powertrain
+    const mileage = (x.mileage || []).map((m) => ({ fuel: m.fuel, tr: m.tr, cc: m.cc, ev: m.ev, arai: m.arai, user: m.user, tested: m.tested || (m.city && m.hwy ? Math.round(((m.city + m.hwy) / 2) * 100) / 100 : m.city || m.hwy || null), city: m.city, hwy: m.hwy, evRange: m.evRange }));
+    const swatch = (name) => {
+      const n = name.toLowerCase(); const M = [[/white|pearl white|snow|arctic|polar|ivory|alpine/, '#f2f2f0'], [/black|onyx|obsidian|abyss|midnight|night|carbon|cosmic/, '#16171a'], [/silver|sleek|platinum|steel|chrome|metal/, '#b9bcc2'], [/grey|gray|graphite|gunmetal|titan|slate|smoke|ash|stealth/, '#6c7076'], [/red|ruby|crimson|fiery|flame|scarlet|maroon|wine|burgundy|cherry/, '#b3241c'], [/blue|navy|ocean|aqua|sapphire|azure|cobalt|teal|marina|sky/, '#2e5d93'], [/green|emerald|olive|lime|forest|jungle|tropical|teal/, '#3f6b4a'], [/orange|tangerine|sunset|copper/, '#d4692a'], [/yellow|gold|sun|amber|mustard/, '#d8b23a'], [/brown|bronze|khaki|desert|sand|beige|tan|mocha|coffee|earth|copper/, '#8a7356'], [/purple|violet|plum|magenta/, '#5d3a7a']];
+      const parts = n.split(/\+| with | and |\//);
+      const cols = parts.map((p) => (M.find(([re]) => re.test(p)) || [null, null])[1]).filter(Boolean);
+      return cols.length ? [...new Set(cols)].slice(0, 2) : ['#9a9ca1'];
+    };
+    models[k] = {
+      colors: (x.colors || []).slice(0, 14).map((c) => ({ name: c.name, img: c.img, sw: swatch(c.name) })),
+      interior: (x.interior || []).slice(0, 8),
+      mileage, rating, service, resale,
+    };
+  }
+  return { updated: new Date().toISOString(), models };
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
   const out = normalize();
   const dest = path.join(ROOT, 'site/data');
   fs.mkdirSync(dest, { recursive: true });
   fs.writeFileSync(path.join(dest, 'cars.json'), JSON.stringify(out));
+  const ex = buildExtras(out);
+  fs.writeFileSync(path.join(dest, 'extras.json'), JSON.stringify(ex));
+  console.log(`extras.json: ${Object.keys(ex.models).length} models`);
   console.log(`cars.json: ${out.cars.length} variants, ${out.brands.length} brands`);
   for (const b of out.brands) console.log(`  ${b.brand}: ${b.models} models / ${b.variants} variants${b.curated ? ' (curated)' : ''}`);
 }

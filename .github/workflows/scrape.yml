@@ -38,6 +38,10 @@ jobs:
         if: ${{ github.event.inputs.brands == '' || github.event.inputs.brands == null || contains(github.event.inputs.brands, 'features') }}
         run: node scraper/zigwheels-features.mjs && node scraper/normalize.mjs
         continue-on-error: true
+      - name: Photos, real-world mileage, ratings and service costs (Autocar India, ZigWheels, CarWale, CarDekho, V3Cars)
+        if: ${{ github.event.inputs.brands == '' || github.event.inputs.brands == null || contains(github.event.inputs.brands, 'extras') }}
+        run: node scraper/model-extras.mjs && node scraper/normalize.mjs
+        continue-on-error: true
       - name: Dealers (OpenStreetMap)
         if: ${{ github.event.inputs.brands == '' || github.event.inputs.brands == null || contains(github.event.inputs.brands, 'dealers') }}
         run: node scraper/dealers.mjs
