@@ -920,7 +920,7 @@
       const kind = rowsM.some((r) => r.x.tested) ? 'Road-tested' : rowsM.some((r) => r.x.user) ? 'Owner data' : 'Estimate';
       const how = (g) => (g.every((r) => r.x.tested) ? 'tested' : g.some((r) => r.x.tested || r.x.user) ? 'real' : 'est.');
       tiles.push(`<div class="mt"><div class="mt-k">Real-world mileage</div><div class="mt-v">${head}<small>${cngOnly ? ' km/kg' : ' km/l'} average</small></div>
-        <div class="mt-s">Across ${rowsM.length} engine and gearbox combination${rowsM.length > 1 ? 's' : ''}, from Autocar India road tests and owner reports${rowsM.some((r) => !r.x.tested && !r.x.user) ? ' (80% of the official figure where neither exists)' : ''}.</div>
+        <div class="mt-s">Road tests and owner reports</div>
         <ul class="mt-list">${groups.map(([n, g]) => `<li><span>${n}</span><b>${avg(g)}${n === 'CNG' ? ' km/kg' : ' km/l'}</b><em>${how(g)}</em></li>`).join('')}${evs.length ? `<li><span>Electric range</span><b>${Math.round(evs.reduce((t, x) => t + x.evRange, 0) / evs.length)} km</b><em>tested</em></li>` : ''}</ul>
         <div class="mt-tag">${kind}</div></div>`);
     } else if (evs.length) {
