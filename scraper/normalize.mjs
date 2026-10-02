@@ -266,6 +266,24 @@ export function normalize() {
     }
   }
   console.log(`features from Autocar India: ${afFilled} variants`);
+  // then anything still unknown from ZigWheels variant pages (data/zigwheels-features.json)
+  const ZW = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data/zigwheels-features.json'), 'utf8')).models || {}; } catch (e) { return {}; } })();
+  let zwFilled = 0, zwFixed = 0;
+  for (const [k, list] of Object.entries(afByModel)) {
+    const m = ZW[k]; if (!m) continue;
+    const single = list.length === 1 && /starting|from/i.test(list[0].variant);
+    for (const c of list) {
+      const a = single ? m.variants.slice().sort((x, y) => (x.p || 9e18) - (y.p || 9e18))[0] : matchVariant(c, m.variants, false);
+      if (!a) continue;
+      let n = 0;
+      // a second source saying "yes" also corrects a "no" from the maker's site (their lists often omit features rather than deny them)
+      for (const kk of a.y) if (c.f[kk] == null) { c.f[kk] = true; n++; } else if (c.f[kk] === false) { c.f[kk] = true; n++; zwFixed++; }
+      for (const kk of a.no) if (c.f[kk] == null) { c.f[kk] = false; n++; }
+      if (c.airbags == null && a.airbags) c.airbags = a.airbags;
+      if (n) { c.zw = 1; zwFilled++; }
+    }
+  }
+  console.log(`gaps filled from ZigWheels: ${zwFilled} variants (${zwFixed} "no"s corrected to "yes")`);
   for (const c of cars) { c.fs = keys.map((k) => (c.f[k] === true ? '1' : c.f[k] === false ? '0' : '?')).join(''); delete c.f; }
   // expert opinion (Autocar India) per model, from scraper/expert.mjs
   const experts = {};

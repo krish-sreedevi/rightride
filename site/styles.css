@@ -639,7 +639,8 @@ body[data-page="car"] .hero, body[data-page="car"] .layout, body[data-page="car"
 .pr-row { list-style: none; margin: 0; padding: 0; display: flex; gap: 8px; flex-wrap: wrap; }
 .pr-row.changed .pr-pill { animation: pr-flash .5s var(--ease); }
 @keyframes pr-flash { from { transform: scale(.96); } }
-.pr-pill { display: inline-flex; align-items: center; gap: 8px; padding: 5px 6px 5px 6px; border-radius: 999px; background: var(--chip); cursor: grab; user-select: none; touch-action: none; font-weight: 500; font-size: .9rem; transition: background .2s var(--ease), box-shadow .2s var(--ease); }
+.pr-pill:not(:first-child):hover { box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--brand) 40%, transparent); }
+.pr-pill { display: inline-flex; align-items: center; gap: 8px; padding: 5px 14px 5px 6px; border-radius: 999px; background: var(--chip); cursor: pointer; user-select: none; touch-action: pan-y; font-weight: 500; font-size: .9rem; transition: background .2s var(--ease), box-shadow .2s var(--ease); }
 .pr-pill:first-child { background: var(--brand-soft); }
 .pr-pill .pn { width: 22px; height: 22px; font-size: .74rem; }
 .pr-pill.dragging { cursor: grabbing; background: var(--panel); box-shadow: var(--shadow-lg), inset 0 0 0 1.5px var(--brand); position: relative; z-index: 2; }
@@ -671,3 +672,16 @@ body[data-page="car"] .hero, body[data-page="car"] .layout, body[data-page="car"
 .rt-more { font-size: .55em; color: var(--muted); font-family: Inter, sans-serif; letter-spacing: 0; font-weight: 500; }
 .grid-split { grid-column: 1 / -1; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; padding: 18px 2px 4px; border-top: 1px solid var(--line); margin-top: 6px; font-size: .9rem; }
 .grid-split b { font-size: 1.05rem; }
+
+/* finder step 5: tap a row to move it to the top */
+.tt { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 8px; }
+.tt li { display: flex; align-items: center; gap: 12px; padding: 12px 14px 12px 12px; border-radius: 16px; background: var(--chip); cursor: pointer; user-select: none; touch-action: pan-x; position: relative; transition: box-shadow .2s var(--ease), background .2s var(--ease); }
+.tt li:first-child { background: var(--brand-soft); }
+.tt li:hover:not(:first-child) { box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--brand) 40%, transparent); }
+.tt li:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.tt li .pn { width: 26px; height: 26px; flex: none; }
+.tt li:nth-child(2) .pn { opacity: .85; } .tt li:nth-child(3) .pn { opacity: .7; } .tt li:nth-child(4) .pn { opacity: .55; }
+.tt .pt { flex: 1; min-width: 0; display: grid; } .tt .pt b { font-size: .98rem; } .tt .pt small { color: var(--muted); font-size: .8rem; }
+.tt-up { flex: none; display: inline-flex; align-items: center; gap: 4px; font-size: .78rem; font-weight: 600; color: var(--brand); }
+.tt li:first-child .tt-up { color: var(--muted); font-weight: 500; }
+.tt li.lift { background: var(--panel); box-shadow: var(--shadow-lg), inset 0 0 0 1.5px var(--brand); z-index: 3; transition: none; cursor: grabbing; }

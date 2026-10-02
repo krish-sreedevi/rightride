@@ -755,7 +755,7 @@
     } else pick = `<div class="vh-pick none">${SORRY_ICON}<div><b>Sorry, no ${esc(m.model)} variant has all of that.</b><div class="muted small">Untick a feature to see the closest variants.</div></div></div>`;
     const grp = (name, vals, set) => vals.length > 1 ? `<div class="group"><div class="label">${name}</div><div class="chips">${vals.map((v) => `<button type="button" class="chip" data-cpf="${name === 'Fuel' ? 'fuel' : 'gear'}" data-v="${esc(v)}" aria-pressed="${set.has(v)}">${esc(v)}</button>`).join('')}</div></div>` : '';
     const cnt = (k) => known.filter((c) => c.feat(k) === '1').length;
-    box.innerHTML = `<div class="cp-sec-head"><div><h2 class="display">Find your variant</h2><p class="muted">${all.length} variant${all.length > 1 ? 's' : ''}. Tick what you care about. We only show what changes between them.${all.some((c) => c.fsrc === 'autocar') ? ' Feature lists from Autocar India.' : ''}</p></div></div>
+    box.innerHTML = `<div class="cp-sec-head"><div><h2 class="display">Find your variant</h2><p class="muted">${all.length} variant${all.length > 1 ? 's' : ''}. Tick what you care about. We only show what changes between them.${all.some((c) => c.fsrc === 'autocar' || c.zw) ? ` Some details from ${[all.some((c) => c.fsrc === 'autocar') && 'Autocar India', all.some((c) => c.zw) && 'ZigWheels'].filter(Boolean).join(' and ')}.` : ''}</p></div></div>
       ${all.length > 1 ? `<div class="vh-filters">${grp('Fuel', fuels, cp.fuel)}${grp('Gearbox', gears, cp.gear)}</div>
       ${diff.length ? `<div class="group"><div class="label">Features that differ <span class="muted">· tap the ones you want</span></div><div class="chips vh-need">${(cp.more ? diff : diff.filter((f, i) => i < 12 || cp.need.has(f.key))).map((f) => `<button type="button" class="chip" data-need="${f.key}" aria-pressed="${cp.need.has(f.key)}">${esc(f.label)}<small>${cnt(f.key)}/${known.length}</small></button>`).join('')}${diff.length > 12 ? `<button type="button" class="chip more" data-more>${cp.more ? 'Fewer' : `+${diff.filter((f, i) => i >= 12 && !cp.need.has(f.key)).length} more`}</button>` : ''}</div></div>`
         : known.length ? '<p class="muted">These variants have the same feature list.</p>' : `<div class="note">${esc(m.brand)} doesn't publish a variant-wise feature list, so we can only compare prices and specs here.</div>`}` : ''}
@@ -893,8 +893,8 @@
     if (!r) { bar.hidden = true; return; }
     bar.hidden = false;
     bar.innerHTML = `<span class="rec-k">Priorities</span>
-      <ol class="pr-row" id="prRow" aria-label="Your priorities, most important first">${r.prio.map((k, i) => `<li class="pr-pill" data-k="${k}" tabindex="0" title="Drag to reorder"><span class="pn">${i + 1}</span><span class="pr-t">${esc(PRIO[k])}</span><span class="pr-mv"><button type="button" data-pmove="-1" aria-label="Move ${esc(PRIO[k])} up" ${i ? '' : 'disabled'}>‹</button><button type="button" data-pmove="1" aria-label="Move ${esc(PRIO[k])} down" ${i < 3 ? '' : 'disabled'}>›</button></span></li>`).join('')}</ol>
-      <span class="pr-hint muted">Drag or tap the arrows to reorder — the ranking updates instantly</span>`;
+      <ol class="pr-row" id="prRow" aria-label="Your priorities, most important first">${r.prio.map((k, i) => `<li class="pr-pill" data-k="${k}" tabindex="0" title="${i ? 'Tap to make this #1' : 'Most important'}" role="button"><span class="pn">${i + 1}</span><span class="pr-t">${esc(PRIO[k])}</span></li>`).join('')}</ol>
+      <span class="pr-hint muted">Tap one to make it #1. The ranking updates instantly</span>`;
   }
   function setPrio(order) {
     if (!state.rec || order.join() === state.rec.prio.join()) return;
@@ -902,12 +902,12 @@
     const row = $('#prRow'); if (row) row.classList.add('changed');
   }
   function wirePrioBar() {
-    const bar = $('#recBar'); let drag = null;
+    const bar = $('#recBar'); let drag = null, barDragged = false;
     bar.addEventListener('click', (e) => {
-      const b = e.target.closest('[data-pmove]'); if (!b || !state.rec) return;
-      const k = b.closest('.pr-pill').dataset.k, o = state.rec.prio.slice(), i = o.indexOf(k), j = i + Number(b.dataset.pmove);
-      if (j < 0 || j > 3) return; [o[i], o[j]] = [o[j], o[i]]; setPrio(o);
-      const f = $(`.pr-pill[data-k="${k}"] [data-pmove="${b.dataset.pmove}"]`); (f && !f.disabled ? f : $(`.pr-pill[data-k="${k}"]`)).focus();
+      if (barDragged) return;
+      const li = e.target.closest('.pr-pill'); if (!li || !state.rec) return;
+      const k = li.dataset.k, o = [k, ...state.rec.prio.filter((x) => x !== k)]; setPrio(o);
+      const f = $(`.pr-pill[data-k="${k}"]`); if (f) f.focus();
     });
     bar.addEventListener('keydown', (e) => {
       const li = e.target.closest('.pr-pill'); if (!li || !['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) return;
@@ -916,16 +916,17 @@
     });
     bar.addEventListener('pointerdown', (e) => {
       const li = e.target.closest('.pr-pill'); if (!li || e.target.closest('button')) return;
-      drag = { li, id: e.pointerId }; li.classList.add('dragging'); li.setPointerCapture(e.pointerId); e.preventDefault();
+      drag = { li, id: e.pointerId, x0: e.clientX, y0: e.clientY, moved: false }; li.setPointerCapture(e.pointerId);
     });
     bar.addEventListener('pointermove', (e) => {
       if (!drag || e.pointerId !== drag.id) return;
+      if (!drag.moved) { if (Math.hypot(e.clientX - drag.x0, e.clientY - drag.y0) < 6) return; drag.moved = true; drag.li.classList.add('dragging'); }
       const row = drag.li.parentElement, items = $$('.pr-pill', row).filter((x) => x !== drag.li);
       const before = items.find((x) => { const r = x.getBoundingClientRect(); return e.clientY < r.top || (e.clientY <= r.bottom && e.clientX < r.left + r.width / 2); });
       before ? row.insertBefore(drag.li, before) : row.appendChild(drag.li);
       $$('.pr-pill', row).forEach((x, i) => (x.querySelector('.pn').textContent = i + 1));
     });
-    const end = () => { if (!drag) return; drag.li.classList.remove('dragging'); const o = $$('.pr-pill', drag.li.parentElement).map((x) => x.dataset.k); drag = null; setPrio(o); };
+    const end = () => { if (!drag) return; drag.li.classList.remove('dragging'); const o = $$('.pr-pill', drag.li.parentElement).map((x) => x.dataset.k); const moved = drag.moved; drag = null; if (moved) { barDragged = true; setTimeout(() => (barDragged = false), 50); setPrio(o); } };
     bar.addEventListener('pointerup', end); bar.addEventListener('pointercancel', end);
   }
   function applyRec(r) {
@@ -968,7 +969,8 @@
   }
 
   // ---- welcome question + 4-step builder ----
-  const wz = { step: 0, a: null };
+  const wz = { step: 0, a: null, picked: [] };
+
   const defaults = () => ({ body: null, budget: '', fuel: null, trans: null, prio: ['features', 'mileage', 'comfort', 'value'] });
   function openWizard(step = 0) {
     wz.a = Object.assign(defaults(), state.rec ? JSON.parse(JSON.stringify(state.rec)) : {});
@@ -1008,46 +1010,55 @@
       body = `<h2 id="wzTitle" class="display">Automatic or Manual?</h2>
         <div class="wz-choices three">${Object.entries(T).map(([k, sub]) => `<button class="wz-opt${a.trans === k ? ' sel' : ''}" type="button" data-trans="${k}" aria-pressed="${a.trans === k}"><b>${k === 'Either' ? 'No preference' : k}</b><span>${sub}</span></button>`).join('')}</div>`;
     } else if (s === 5) {
-      body = `<h2 id="wzTitle" class="display">What matters most?</h2><p class="muted">Drag to put them in your order — most important at the top.</p>
-        <ol class="prio" id="prioList">${a.prio.map((k, i) => `<li class="prio-item" data-k="${k}" tabindex="0"><span class="grip" aria-hidden="true">⋮⋮</span><span class="pn">${i + 1}</span><span class="pt"><b>${PRIO[k]}</b><small>${PRIO_HINT[k]}</small></span><span class="pm"><button type="button" data-move="-1" aria-label="Move ${PRIO[k]} up" ${i ? '' : 'disabled'}>▲</button><button type="button" data-move="1" aria-label="Move ${PRIO[k]} down" ${i < 3 ? '' : 'disabled'}>▼</button></span></li>`).join('')}</ol>`;
+      body = `<h2 id="wzTitle" class="display">What matters most?</h2><p class="muted">Tap one to move it to the top. Most important first.</p>
+        <ol class="tt" id="prioList" aria-label="Your priorities, most important first">${ttRows(a.prio)}</ol>`;
     }
     const nav = s ? `<div class="wz-nav"><button class="btn ghost" type="button" data-wz="back">Back</button><button class="btn primary" type="button" data-wz="next" ${canNext ? '' : 'disabled'}>${s === 5 ? 'Show my matches' : 'Next'}</button></div>` : '';
     W.innerHTML = `${close}${dots}<div class="wz-body">${body}</div>${nav}`;
+    if (s === 5) wireTT($('#prioList'), () => wz.a.prio, (o) => { wz.a.prio = o; });
     if (s === 2) { const i = $('#wzBudget'); i.focus(); i.setSelectionRange(i.value.length, i.value.length); }
-    if (s === 5) wirePrio();
+  }
+  // priorities list: tap a row to move it to the top; rows can also be dragged
+  const UP_ICO = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg>';
+  const ttRows = (o) => o.map((k, i) => `<li data-k="${k}" tabindex="0" role="button" aria-label="${PRIO[k]}, number ${i + 1}${i ? '. Move to top' : ''}"><span class="pn">${i + 1}</span><span class="pt"><b>${PRIO[k]}</b><small>${PRIO_HINT[k]}</small></span><span class="tt-up">${i ? UP_ICO + 'Move to top' : 'Most important'}</span></li>`).join('');
+  function flipList(L, fn, skip) {
+    const before = new Map($$('li', L).map((c) => [c.dataset.k, c.getBoundingClientRect().top]));
+    fn();
+    for (const c of $$('li', L)) { if (c === skip) continue; const d = (before.get(c.dataset.k) ?? 0) - c.getBoundingClientRect().top; if (d) c.animate([{ transform: `translateY(${d}px)` }, { transform: 'none' }], { duration: 320, easing: 'cubic-bezier(.2,.8,.2,1)' }); }
+  }
+  function wireTT(L, get, set) {
+    if (!L) return;
+    const redraw = (o, focusK) => { set(o); flipList(L, () => { L.innerHTML = ttRows(o); }); if (focusK) { const f = $(`li[data-k="${focusK}"]`, L); if (f) f.focus({ preventScroll: true }); } };
+    const toTop = (k) => { const o = get().filter((x) => x !== k); o.unshift(k); redraw(o, k); };
+    let drag = null, justDragged = false;
+    L.addEventListener('click', (e) => { if (justDragged) return; const li = e.target.closest('li'); if (li) toTop(li.dataset.k); });
+    L.addEventListener('keydown', (e) => {
+      const li = e.target.closest('li'); if (!li) return;
+      const o = get().slice(), i = o.indexOf(li.dataset.k);
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toTop(li.dataset.k); }
+      else if ((e.key === 'ArrowUp' && i > 0) || (e.key === 'ArrowDown' && i < o.length - 1)) { e.preventDefault(); const j = i + (e.key === 'ArrowUp' ? -1 : 1); [o[i], o[j]] = [o[j], o[i]]; redraw(o, li.dataset.k); }
+    });
+    L.addEventListener('pointerdown', (e) => { const li = e.target.closest('li'); if (!li) return; drag = { li, y0: e.clientY, moved: false, id: e.pointerId }; li.setPointerCapture(e.pointerId); });
+    L.addEventListener('pointermove', (e) => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const dy = e.clientY - drag.y0; if (!drag.moved && Math.abs(dy) < 6) return;
+      drag.moved = true; drag.li.classList.add('lift'); drag.li.style.transform = `translateY(${dy}px) scale(1.02)`;
+      const r = drag.li.getBoundingClientRect(), cy = r.top + r.height / 2, items = $$('li', L).filter((x) => x !== drag.li);
+      let idx = items.findIndex((x) => { const q = x.getBoundingClientRect(); return cy < q.top + q.height / 2; }); if (idx < 0) idx = items.length;
+      const next = [...items.slice(0, idx).map((x) => x.dataset.k), drag.li.dataset.k, ...items.slice(idx).map((x) => x.dataset.k)];
+      if (next.join() !== get().join()) {
+        const top0 = r.top - dy; set(next);
+        flipList(L, () => { for (const k of next) L.appendChild($(`li[data-k="${k}"]`, L)); }, drag.li);
+        drag.li.style.transform = ''; const top1 = drag.li.getBoundingClientRect().top; drag.y0 += top1 - top0; drag.li.style.transform = `translateY(${e.clientY - drag.y0}px) scale(1.02)`;
+        $$('li', L).forEach((x, i) => (x.querySelector('.pn').textContent = i + 1));
+      }
+    });
+    const end = () => { if (!drag) return; const d = drag; drag = null; d.li.classList.remove('lift'); d.li.style.transform = ''; if (d.moved) { justDragged = true; setTimeout(() => (justDragged = false), 50); L.innerHTML = ttRows(get()); } };
+    L.addEventListener('pointerup', end); L.addEventListener('pointercancel', end);
   }
   function bodyIcon(k) {
     const P = { small: 'M6 30h52M10 30l6-10h22l10 10M16 20v10', sedan: 'M4 30h56M8 30l8-9h26l12 9M20 21l-2 9M36 21v9', suv: 'M4 30h56M6 30V20l6-8h30l10 8 6 2v8M12 12v18M30 12v18' }[k];
     return `<svg class="wz-ico" viewBox="0 0 64 40" aria-hidden="true"><path d="${P}" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="31" r="4.5" fill="var(--panel)" stroke="currentColor" stroke-width="2.4"/><circle cx="46" cy="31" r="4.5" fill="var(--panel)" stroke="currentColor" stroke-width="2.4"/></svg>`;
-  }
-  function readPrio() { wz.a.prio = $$('#prioList .prio-item').map((li) => li.dataset.k); }
-  function renumber() { $$('#prioList .prio-item').forEach((li, i) => { li.querySelector('.pn').textContent = i + 1; const [u, d] = li.querySelectorAll('[data-move]'); u.disabled = !i; d.disabled = i === 3; }); }
-  function wirePrio() {
-    const L = $('#prioList');
-    let drag = null;
-    L.addEventListener('pointerdown', (e) => {
-      const li = e.target.closest('.prio-item'); if (!li || e.target.closest('button')) return;
-      drag = { li, id: e.pointerId, y0: e.clientY }; li.classList.add('dragging'); li.setPointerCapture(e.pointerId); e.preventDefault();
-    });
-    L.addEventListener('pointermove', (e) => {
-      if (!drag || e.pointerId !== drag.id) return;
-      const items = $$('.prio-item', L).filter((x) => x !== drag.li);
-      const after = items.find((x) => { const r = x.getBoundingClientRect(); return e.clientY < r.top + r.height / 2; });
-      after ? L.insertBefore(drag.li, after) : L.appendChild(drag.li);
-      renumber();
-    });
-    const end = () => { if (!drag) return; drag.li.classList.remove('dragging'); drag = null; readPrio(); };
-    L.addEventListener('pointerup', end); L.addEventListener('pointercancel', end);
-    L.addEventListener('keydown', (e) => {
-      const li = e.target.closest('.prio-item'); if (!li || !['ArrowUp', 'ArrowDown'].includes(e.key)) return;
-      e.preventDefault(); move(li, e.key === 'ArrowUp' ? -1 : 1); li.focus();
-    });
-  }
-  function move(li, dir) {
-    const L = li.parentElement;
-    if (dir < 0 && li.previousElementSibling) L.insertBefore(li, li.previousElementSibling);
-    if (dir > 0 && li.nextElementSibling) L.insertBefore(li.nextElementSibling, li);
-    renumber(); readPrio();
   }
   function wireWizard() {
     const W = $('#wizardBody');
@@ -1073,7 +1084,6 @@
       if (b.dataset.fuel) { a.fuel = b.dataset.fuel; if (a.fuel === 'Electric') { a.trans = 'Either'; wz.step = 5; } else wz.step = 4; return drawWizard(); }
       if (b.dataset.trans) { a.trans = b.dataset.trans; wz.step = 5; return drawWizard(); }
       if (b.dataset.budget) { a.budget = b.dataset.budget; return drawWizard(); }
-      if (b.dataset.move) move(b.closest('.prio-item'), Number(b.dataset.move));
     });
     W.addEventListener('input', (e) => {
       if (e.target.id !== 'wzBudget') return;
