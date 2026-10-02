@@ -391,6 +391,18 @@
     // features first, so "android auto" or "automatic climate" aren't read as a gearbox
     for (const [k, re] of FEAT_WORDS) if (FIDX[k] != null && take(re, () => {})) { if (!f.feats.includes(k)) f.feats.push(k); if (k === 'panoramic') f.feats = f.feats.filter((x) => x !== 'sunroof'); }
     if (f.feats.includes('panoramic')) f.feats = f.feats.filter((x) => x !== 'sunroof');
+    // car names: "creta", "tata nexon", "scorpio n", "xuv700"-style spellings and small typos
+    f.models = [];
+    {
+      const idx = modelIndex(), toks = t.replace(STOP, ' ').split(/\s+/).filter((x) => x && !/^\d+(\.\d+)?$/.test(x) && !/^(under|below|above|over|seater|seats?|lakhs?|crore|cr|cars?|suv|suvs|sedan|hatchback|muv|diesel|petrol|cng|manual|automatic|auto)$/.test(x));
+      for (let i = 0; i < toks.length; i++) {
+        for (let n = Math.min(4, toks.length - i); n >= 1; n--) {
+          const g = toks.slice(i, i + n).join(''); if (g.length < 2) continue;
+          const sc = idx.map((m) => [m, matchName(m, g)]), top = Math.max(0, ...sc.map((x) => x[1])), hits = top ? sc.filter((x) => x[1] === top).map((x) => x[0]) : [];
+          if (hits.length) { hits.forEach((m) => f.models.includes(m.key) || f.models.push(m.key)); const re = new RegExp('\\b' + toks.slice(i, i + n).map((x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('\\s+') + '\\b'); t = t.replace(re, ' '); i += n - 1; break; }
+        }
+      }
+    }
     const amt = (n, unit) => (/^(cr|crore|crores)$/.test(unit || '') ? +n * 100 : +n);
     const U = '\\s*(l|lakh|lakhs|lac|lacs|cr|crore|crores|k)?\\b';
     take(new RegExp('(\\d+(?:\\.\\d+)?)' + U + '\\s*(?:-|to|and)\\s*(\\d+(?:\\.\\d+)?)' + U), (m) => { f.min = amt(m[1], m[2] || m[4]); f.max = amt(m[3], m[4]); });
@@ -417,7 +429,7 @@
     take(/\b(cheapest|cheap|affordable|budget friendly|low cost|lowest price|value)\b/, () => (f.sort = 'price'));
     take(/\b(best mileage|mileage|fuel efficient|economical|efficient|frugal)\b/, () => (f.sort = 'mileage'));
     take(/\b(best|top rated|top|highest rated|recommended|popular)\b/, () => (f.sort = f.sort || 'expert'));
-    for (const b of BRANDS()) { const bl = b.toLowerCase(), alias = { 'maruti suzuki': 'maruti suzuki|maruti|suzuki|nexa', 'mercedes-benz': 'mercedes-benz|mercedes benz|mercedes|benz|merc', 'land rover': 'land rover|range rover|landrover', volkswagen: 'volkswagen|vw', 'mg': 'mg|morris garages' }[bl]; const re = new RegExp('\\b(' + (alias || bl.replace(/[-]/g, '.')) + ')\\b'); if (re.test(t)) { f.brand = b; t = t.replace(re, ' '); break; } }
+    if (!f.models.length) for (const b of BRANDS()) { const bl = b.toLowerCase(), alias = { 'maruti suzuki': 'maruti suzuki|maruti|suzuki|nexa', 'mercedes-benz': 'mercedes-benz|mercedes benz|mercedes|benz|merc', 'land rover': 'land rover|range rover|landrover', volkswagen: 'volkswagen|vw', 'mg': 'mg|morris garages' }[bl]; const re = new RegExp('\\b(' + (alias || bl.replace(/[-]/g, '.')) + ')\\b'); if (re.test(t)) { f.brand = b; t = t.replace(re, ' '); break; } }
     // anything left must match a model/variant name; words that match no car at all are ignored (and shown as ignored)
     const hayAll = DATA.cars.map((c) => `${c.brand} ${c.model} ${c.variant}`.toLowerCase());
     for (const w of t.replace(STOP, ' ').split(/\s+/).filter((w) => w.length > 1)) {
@@ -426,11 +438,36 @@
     }
     return f;
   }
+  // model name index for search and suggestions
+  let MIDX = null;
+  const compact = (x) => x.toLowerCase().replace(/[^a-z0-9]/g, '');
+  function modelIndex() {
+    if (MIDX) return MIDX;
+    const g = new Map();
+    for (const c of DATA.cars) { const k = c.brand + '|' + c.model; if (!g.has(k)) g.set(k, { key: k, brand: c.brand, model: c.model, body: c.body, image: c.image, min: Infinity }); const m = g.get(k); m.min = Math.min(m.min, c.price); }
+    MIDX = [...g.values()].map((m) => { const w = m.model.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean); return { ...m, c: compact(m.model), bc: compact(m.brand) + compact(m.model), suf: w.map((_, i) => w.slice(i).join('')), w0: w[0] }; });
+    return MIDX;
+  }
+  function lev(a, b, max) {
+    if (Math.abs(a.length - b.length) > max) return max + 1;
+    let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+    for (let i = 1; i <= a.length; i++) { const cur = [i]; let best = i; for (let j = 1; j <= b.length; j++) { cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); best = Math.min(best, cur[j]); } if (best > max) return max + 1; prev = cur; }
+    return prev[b.length];
+  }
+  // does the typed text g (letters/digits only) name this model? exact, family prefix ("thar" → Thar OG, Thar Roxx), tail ("evoque"), brand+model, or a small typo
+  // how well does typed text g (letters/digits only) name this model? 3 exact/brand+model/tail, 2 family prefix ("thar" → Thar OG, Thar Roxx), 1 small typo
+  function matchName(m, g) {
+    if (m.c === g || m.bc === g || m.suf.includes(g)) return 3;
+    if (g.length >= 3 && (m.c.startsWith(g) || m.bc.startsWith(g) && g.length > compact(m.brand).length + 1)) return 2;
+    if (g.length >= 5) { const tol = g.length >= 8 ? 2 : 1; if (lev(g, m.c, tol) <= tol || (m.w0.length >= 5 && lev(g, m.w0, tol) <= tol)) return 1; }
+    return 0;
+  }
   // what the search understood, as removable chips
   function queryParts(f) {
     if (!f) return [];
     const p = [];
     if (f.brand) p.push(['brand', f.brand]);
+    if (f.models && f.models.length) p.push(['models', f.models.map((k) => k.split('|')[1]).join(', ')]);
     if (f.words.length) p.push(['words', '“' + f.words.join(' ') + '”']);
     if (f.body) p.push(['body', { SUV: 'SUVs', Hatchback: 'Hatchbacks', Sedan: 'Sedans', 'MUV / MPV': 'MUVs / MPVs' }[f.body] || f.body]);
     if (f.fuel) p.push(['fuel', f.fuel]);
@@ -444,10 +481,11 @@
     return p;
   }
   function qfWithout(f, part) {
-    const g = { ...f, feats: f.feats.slice(), words: f.words.slice() };
+    const g = { ...f, feats: f.feats.slice(), words: f.words.slice(), models: (f.models || []).slice() };
     if (part.startsWith('feat:')) g.feats = g.feats.filter((k) => k !== part.slice(5));
     else if (part === 'budget') g.min = g.max = null;
     else if (part === 'words') g.words = [];
+    else if (part === 'models') g.models = [];
     else g[part] = null;
     return queryParts(g).length ? g : null;
   }
@@ -460,6 +498,7 @@
     if (f.trans && c.transmission !== f.trans) return false;
     if (f.seats && seatGroup(c.seats) !== f.seats) return false;
     if (f.brand && c.brand !== f.brand) return false;
+    if (f.models && f.models.length && !f.models.includes(c.brand + '|' + c.model)) return false;
     if (f.drive && !/4x4|4wd|awd|all/i.test(c.drive || '')) return false;
     if (f.safe && !(((DATA.ncap || {})[c.brand + '|' + c.model] || {}).stars >= f.safe)) return false;
     if (f.max && c.orTotal > f.max * L) return false;
@@ -479,6 +518,35 @@
     h.hidden = !!state.q;
     h.innerHTML = `<span class="muted">Try</span>${HINTS.map((x) => `<button type="button" class="q-hint" data-q="${esc(x)}">${esc(x)}</button>`).join('')}`;
   }
+  // car-name suggestions under the search box
+  const sug = { i: -1 };
+  function suggest(q) {
+    const g = compact(q); if (g.length < 2) return [];
+    const idx = modelIndex(), sc = [];
+    for (const m of idx) {
+      let v = 0;
+      if (m.c === g || m.bc === g) v = 100;
+      else if (m.c.startsWith(g) || m.bc.startsWith(g)) v = 80 - (m.c.length - g.length) * 0.5;
+      else if (m.suf.some((x) => x.startsWith(g))) v = 60;
+      else if (g.length >= 3 && (m.c.includes(g) || m.bc.includes(g))) v = 40;
+      else if (g.length >= 4) { const d = Math.min(lev(g, m.c.slice(0, g.length + 1), 2), lev(g, m.c, 2)); if (d <= (g.length >= 7 ? 2 : 1)) v = 30 - d * 5; }
+      if (!v) { // the last word or two of a longer query ("show me creta")
+        const toks = q.toLowerCase().split(/\s+/).filter(Boolean);
+        for (const n of [2, 1]) { const tail = compact(toks.slice(-n).join('')); if (tail.length >= 3 && (m.c.startsWith(tail) || m.suf.includes(tail))) { v = 25; break; } }
+      }
+      if (v) sc.push([v, m]);
+    }
+    return sc.sort((a, b) => b[0] - a[0] || a[1].min - b[1].min).slice(0, 6).map((x) => x[1]);
+  }
+  function drawSug(q) {
+    const box = $('#qSug'), list = suggest(q || '');
+    sug.i = -1;
+    if (!list.length) return hideSug();
+    const orMin = (k) => Math.min(...DATA.cars.filter((c) => c.brand + '|' + c.model === k).map((c) => c.orTotal));
+    box.innerHTML = list.map((m, i) => `<div class="sug" role="option" id="sug${i}" data-sug="${esc(m.key)}" aria-selected="false"><span class="sug-img">${carImg(m, '72px')}</span><span class="sug-t"><b>${esc(m.model)}</b><small>${esc(m.brand)} · ${esc(m.body)}</small></span><span class="sug-p">from ${lakh(orMin(m.key))}</span></div>`).join('') + `<div class="sug-foot">Press Enter to search for “${esc(q.trim())}”</div>`;
+    box.hidden = false; $('#q').setAttribute('aria-expanded', 'true');
+  }
+  function hideSug() { const box = $('#qSug'); if (box) box.hidden = true; const q = $('#q'); if (q) { q.setAttribute('aria-expanded', 'false'); q.removeAttribute('aria-activedescendant'); } sug.i = -1; }
   function wireShowroom() {
     $('#tabs').addEventListener('click', (e) => {
       const t = e.target.closest('[data-tab]'); if (t) return setTab(t.dataset.tab);
@@ -492,8 +560,16 @@
     $('#shelves').addEventListener('keydown', (e) => { const t = e.target.closest('.tile'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openCar(t.dataset.key); } });
     $('#qHints').addEventListener('click', (e) => { const b = e.target.closest('[data-q]'); if (!b) return; $('#q').value = b.dataset.q; runSearch(b.dataset.q); });
     drawHints();
-    let qt; $('#q').addEventListener('input', (e) => { clearTimeout(qt); qt = setTimeout(() => runSearch(e.target.value), 250); });
-    $('#q').addEventListener('keydown', (e) => { if (e.key === 'Enter') { clearTimeout(qt); runSearch(e.target.value); e.target.blur(); } });
+    let qt; $('#q').addEventListener('input', (e) => { clearTimeout(qt); drawSug(e.target.value); qt = setTimeout(() => runSearch(e.target.value), 250); });
+    $('#q').addEventListener('keydown', (e) => {
+      const box = $('#qSug'), rows = $$('[data-sug]', box), open = !box.hidden && rows.length;
+      if (open && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) { e.preventDefault(); const n = rows.length; sug.i = e.key === 'ArrowDown' ? (sug.i + 1 > n - 1 ? -1 : sug.i + 1) : (sug.i - 1 < -1 ? n - 1 : sug.i - 1); rows.forEach((r, i) => r.setAttribute('aria-selected', i === sug.i)); if (sug.i >= 0) e.target.setAttribute('aria-activedescendant', rows[sug.i].id); return; }
+      if (e.key === 'Escape') { hideSug(); return; }
+      if (e.key === 'Enter') { clearTimeout(qt); if (open && sug.i >= 0) { const k = rows[sug.i].dataset.sug; hideSug(); e.target.blur(); openCar(k); return; } hideSug(); runSearch(e.target.value); e.target.blur(); }
+    });
+    $('#q').addEventListener('focus', (e) => drawSug(e.target.value));
+    $('#q').addEventListener('blur', () => setTimeout(hideSug, 150));
+    $('#qSug').addEventListener('mousedown', (e) => { const r = e.target.closest('[data-sug]'); if (!r) return; e.preventDefault(); hideSug(); $('#q').blur(); openCar(r.dataset.sug); });
     $('#scrim').addEventListener('click', closeDrawer);
     $('#modal').addEventListener('click', (e) => {
       const box = e.target.closest('.cmp-box');
@@ -685,6 +761,7 @@
     'Global NCAP': '<b>Global NCAP</b> is an independent crash-test programme, run by a UK-based charity, that buys cars sold in India and crash-tests them under its "Safer Cars for India" campaign. Cars get separate star ratings for adult and child protection. Since 2022 its tests are stricter: they add a side impact and need electronic stability control (ESC) for top marks. Adult protection is scored out of 34 and child protection out of 49.',
     'Bharat NCAP': '<b>Bharat NCAP</b> is India\'s own crash-test programme, run by the Ministry of Road Transport and Highways since late 2023. It crash-tests cars from the front, the side and against a pole, and gives star ratings for adult and child protection. Adult protection is scored out of 32 and child protection out of 49.',
   };
+  NCAP_INFO['ASEAN NCAP'] = '<b>ASEAN NCAP</b> is the crash-test programme for Southeast Asia (Malaysia, Thailand, Indonesia and neighbours), run from Malaysia. We show its rating only when a car has no Bharat NCAP or Global NCAP result, so the car tested is the Southeast Asian version, which can differ from the Indian one in airbags and other kit. Since 2021 it scores adult protection out of 40, child protection out of 20 and safety assist systems out of 20; older tests used different rules.';
   const ncapInfo = (by) => `<div class="nc-info" id="ncInfo" hidden><p>${NCAP_INFO[by] || ''}</p><p class="muted small">More stars means better protection in a crash. Ratings apply to the version that was tested; newer or facelifted versions may differ.</p></div>`;
   function renderCar(slug) {
     const el = $('#carPage'), m = modelBySlug(slug);
@@ -705,9 +782,9 @@
     document.title = `${m.brand} ${m.model}: on-road price in ${st}, variants & showrooms · Right Ride`;
     const seats = [...new Set(m.vs.map((v) => v.c.seats).filter(Boolean))].sort();
     const tags = [...m.fuels, ...m.trans, seats.length ? seats.join(' / ') + ' seats' : '', `${m.vs.length} variant${m.vs.length > 1 ? 's' : ''}`].filter(Boolean);
-    const max = { 'Bharat NCAP': [32, 49], 'Global NCAP': [34, 49] }[nc && nc.by] || [null, null];
-    const safety = nc ? `<div class="nc-top">${stars(nc.stars)}<div><b>${nc.stars}-star</b> adult safety<div class="muted small nc-by">${esc(nc.by)}<button type="button" class="info-btn" data-ncinfo aria-expanded="false" aria-controls="ncInfo" aria-label="What is ${esc(nc.by)}?">i</button></div></div></div>${ncapInfo(nc.by)}
-        ${nc.aop != null || nc.cop != null ? `<div class="nc-bars">${nc.aop != null ? `<div><span>Adult occupant</span>${bar10(nc.aop / max[0] * 10)}<b>${nc.aop}${max[0] ? `<small>/${max[0]}</small>` : ''}</b></div>` : ''}${nc.cop != null ? `<div><span>Child occupant</span>${bar10(nc.cop / max[1] * 10)}<b>${nc.cop}${max[1] ? `<small>/${max[1]}</small>` : ''}</b></div>` : ''}</div>` : ''}
+    const max = (nc && nc.max) || { 'Bharat NCAP': [32, 49], 'Global NCAP': [34, 49] }[nc && nc.by] || [null, null];
+    const safety = nc ? `<div class="nc-top">${stars(nc.stars)}<div><b>${nc.stars}-star</b> ${nc.by === 'ASEAN NCAP' ? 'overall safety' : 'adult safety'}<div class="muted small nc-by">${esc(nc.by)}${nc.year ? ` · ${nc.year}` : ''}<button type="button" class="info-btn" data-ncinfo aria-expanded="false" aria-controls="ncInfo" aria-label="What is ${esc(nc.by)}?">i</button></div></div></div>${ncapInfo(nc.by)}
+        ${nc.aop != null || nc.cop != null ? `<div class="nc-bars">${nc.aop != null ? `<div><span>Adult occupant</span>${bar10(nc.aop / max[0] * 10)}<b>${nc.aop}${max[0] ? `<small>/${max[0]}</small>` : ''}</b></div>` : ''}${nc.cop != null ? `<div><span>Child occupant</span>${bar10(nc.cop / max[1] * 10)}<b>${nc.cop}${max[1] ? `<small>/${max[1]}</small>` : ''}</b></div>` : ''}${nc.sa != null ? `<div><span>Safety assist</span>${bar10(nc.sa / max[2] * 10)}<b>${nc.sa}${max[2] ? `<small>/${max[2]}</small>` : ''}</b></div>` : ''}</div>` : ''}
         ${nc.note ? `<p class="note">${esc(nc.note)}</p>` : ''}`
       : `<p class="muted">Not crash-tested by Bharat NCAP or Global NCAP yet. ${m.vs.some((v) => v.c.airbags) ? `Comes with up to ${Math.max(...m.vs.map((v) => v.c.airbags || 0))} airbags.` : ''}</p>`;
     $('#carPage').innerHTML = `<div class="cp-wrap">
@@ -830,18 +907,25 @@
         <div class="mt-s">${s.est ? `Our estimate for routine servicing over 5 years (about ₹${Math.round(s.lo / 1000)}k in all)` : `Routine servicing, about ₹${Math.round(s.lo / 1000)}k${s.hi > s.lo * 1.05 ? `–${Math.round(s.hi / 1000)}k` : ''} over 5 years or 50,000 km. <a href="${esc(s.url)}" target="_blank" rel="noopener">V3Cars ↗</a>`}</div>
         <div class="mt-tag">${s.est ? 'Estimate' : 'Service schedule'}</div></div>`);
     }
-    // real-world mileage
-    const ml = e.mileage || [];
-    const unit = (x) => (x.ev ? ' km' : x.fuel === 'CNG' ? ' km/kg' : ' km/l');
-    const pick = ml.filter((x) => (x.ev ? x.evRange : x.tested || x.user || x.arai));
-    if (pick.length) {
-      const val = (x) => (x.ev ? x.evRange : x.tested || x.user || (x.arai ? Math.round(x.arai * 0.8 * 10) / 10 : null));
-      const src = (x) => (x.ev ? 'Autocar India tested range' : x.tested ? 'Autocar India tested' : x.user ? 'Owner-reported' : 'Estimate (80% of ARAI)');
-      const best = pick.find((x) => x.tested || x.evRange) || pick.find((x) => x.user) || pick[0];
-      const rows = pick.slice(0, 4).map((x) => `<li><span>${esc([x.fuel, x.tr].filter(Boolean).join(' · '))}</span><b>${val(x) ?? '–'}${val(x) ? unit(x) : ''}</b><em>${x.tested ? 'tested' : x.user ? 'owners' : x.ev ? 'tested' : 'est.'}</em></li>`).join('');
-      tiles.push(`<div class="mt"><div class="mt-k">Real-world mileage</div><div class="mt-v">${val(best)}<small>${unit(best)}</small></div>
-        <div class="mt-s">${src(best)}${best.city && best.hwy ? ` · city ${best.city}, highway ${best.hwy}` : ''}${best.arai && !best.ev ? ` · ARAI ${best.arai}` : ''}</div>${pick.length > 1 ? `<ul class="mt-list">${rows}</ul>` : ''}
-        <div class="mt-tag">${best.tested || best.evRange ? 'Road-tested' : best.user ? 'Owner data' : 'Estimate'}</div></div>`);
+    // real-world mileage: overall average, then averages by fuel and by gearbox
+    const ml = (e.mileage || []).filter((x) => !x.ev);
+    const val = (x) => x.tested || x.user || (x.arai ? Math.round(x.arai * 0.8 * 10) / 10 : null);
+    const rowsM = ml.map((x) => ({ x, v: val(x), auto: !/manual/i.test(x.tr || '') })).filter((r) => r.v);
+    const evs = (e.mileage || []).filter((x) => x.ev && x.evRange);
+    const avg = (arr) => (arr.length ? Math.round((arr.reduce((t, r) => t + r.v, 0) / arr.length) * 10) / 10 : null);
+    if (rowsM.length) {
+      const liquid = rowsM.filter((r) => r.x.fuel !== 'CNG');
+      const head = avg(liquid.length ? liquid : rowsM), cngOnly = !liquid.length;
+      const groups = [['Petrol', rowsM.filter((r) => r.x.fuel === 'Petrol')], ['Diesel', rowsM.filter((r) => r.x.fuel === 'Diesel')], ['CNG', rowsM.filter((r) => r.x.fuel === 'CNG')], ['Hybrid', rowsM.filter((r) => /hybrid/i.test(r.x.fuel))], ['Automatic', liquid.filter((r) => r.auto)], ['Manual', liquid.filter((r) => !r.auto)]].filter(([, g]) => g.length);
+      const kind = rowsM.some((r) => r.x.tested) ? 'Road-tested' : rowsM.some((r) => r.x.user) ? 'Owner data' : 'Estimate';
+      const how = (g) => (g.every((r) => r.x.tested) ? 'tested' : g.some((r) => r.x.tested || r.x.user) ? 'real' : 'est.');
+      tiles.push(`<div class="mt"><div class="mt-k">Real-world mileage</div><div class="mt-v">${head}<small>${cngOnly ? ' km/kg' : ' km/l'} average</small></div>
+        <div class="mt-s">Across ${rowsM.length} engine and gearbox combination${rowsM.length > 1 ? 's' : ''}, from Autocar India road tests and owner reports${rowsM.some((r) => !r.x.tested && !r.x.user) ? ' (80% of the official figure where neither exists)' : ''}.</div>
+        <ul class="mt-list">${groups.map(([n, g]) => `<li><span>${n}</span><b>${avg(g)}${n === 'CNG' ? ' km/kg' : ' km/l'}</b><em>${how(g)}</em></li>`).join('')}${evs.length ? `<li><span>Electric range</span><b>${Math.round(evs.reduce((t, x) => t + x.evRange, 0) / evs.length)} km</b><em>tested</em></li>` : ''}</ul>
+        <div class="mt-tag">${kind}</div></div>`);
+    } else if (evs.length) {
+      const r = Math.round(evs.reduce((t, x) => t + x.evRange, 0) / evs.length);
+      tiles.push(`<div class="mt"><div class="mt-k">Real-world range</div><div class="mt-v">${r}<small> km</small></div><div class="mt-s">Autocar India tested range on a full charge</div><div class="mt-tag">Road-tested</div></div>`);
     }
     // resale
     if (e.resale) {

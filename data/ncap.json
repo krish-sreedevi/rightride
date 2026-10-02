@@ -229,6 +229,77 @@
   "Renault|Kwid": {
    "stars": 1,
    "by": "Global NCAP"
+  },
+  "Maruti Suzuki|Fronx": {
+   "stars": 5,
+   "by": "ASEAN NCAP",
+   "year": 2025,
+   "aop": 36.71,
+   "cop": 15.27,
+   "sa": 15.71,
+   "max": [
+    40,
+    20,
+    20
+   ],
+   "note": "Tested in 2025 as the Suzuki Fronx sold in Southeast Asia."
+  },
+  "Toyota|Urban Cruiser Taisor": {
+   "stars": 5,
+   "by": "ASEAN NCAP",
+   "year": 2025,
+   "aop": 36.71,
+   "cop": 15.27,
+   "sa": 15.71,
+   "max": [
+    40,
+    20,
+    20
+   ],
+   "note": "Based on the Suzuki Fronx, which ASEAN NCAP tested in 2025. The Taisor itself has not been tested."
+  },
+  "Toyota|Fortuner": {
+   "stars": 5,
+   "by": "ASEAN NCAP",
+   "year": 2020,
+   "note": "Tested in 2020 as the Fortuner sold in Southeast Asia, under ASEAN NCAP's older 2017–2020 rules."
+  },
+  "Toyota|Legender": {
+   "stars": 5,
+   "by": "ASEAN NCAP",
+   "year": 2020,
+   "note": "Based on the Fortuner, which ASEAN NCAP tested in 2020 under its older 2017–2020 rules."
+  },
+  "Toyota|Hilux": {
+   "stars": 5,
+   "by": "ASEAN NCAP",
+   "year": 2020,
+   "note": "Tested in 2020 as the Hilux sold in Southeast Asia, under ASEAN NCAP's older 2017–2020 rules."
+  },
+  "Toyota|Innova Crysta": {
+   "stars": 5,
+   "by": "ASEAN NCAP",
+   "year": 2020,
+   "note": "Tested in 2020 as the Innova sold in Southeast Asia (same generation as the Crysta), under ASEAN NCAP's older 2017–2020 rules."
+  },
+  "Toyota|Rumion": {
+   "stars": 4,
+   "by": "ASEAN NCAP",
+   "year": 2019,
+   "note": "Based on the Suzuki Ertiga, which ASEAN NCAP tested in 2019 under its older 2017–2020 rules."
+  },
+  "Maruti Suzuki|Ciaz": {
+   "stars": 3,
+   "by": "ASEAN NCAP",
+   "year": 2016,
+   "note": "Tested in 2016 as the Suzuki Ciaz sold in Southeast Asia, under ASEAN NCAP's much older rules."
+  },
+  "BMW|3 Series": {
+   "stars": 4,
+   "by": "ASEAN NCAP",
+   "year": 2019,
+   "note": "Tested in 2019 as the BMW 318i sold in Southeast Asia, under ASEAN NCAP's older 2017–2020 rules."
   }
- }
+ },
+ "note": " ASEAN NCAP ratings (aseancap.org) are used only where a model has no Bharat NCAP or Global NCAP result."
 }
