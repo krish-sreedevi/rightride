@@ -1,0 +1,420 @@
+{
+ "brand": "BMW",
+ "scrapedAt": "2026-10-05T00:02:44.046Z",
+ "source": "https://www.bmw.in/en/all-models.html",
+ "models": [
+  {
+   "model": "i7",
+   "body": "Sedan",
+   "url": "https://configure.bmw.in/en_IN/configure/G70/67HYZLLV",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr6ILnyXqyFExSVWNRW6s1hPox9syh3b4gZqmazOSFbZWHkJEKG%25tQABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB98uHLcgXmvE70gp2XHXTxv6jQ%25ohq2YDafHS6jmqn1%25JHDyLOEfurqTJIs8NpL3uBrU1kJdSeZGjNuzVMRpD9SkNh56khVA0ogYjWNF4HvmnU0Kc%252yOn4WxfjTN2cP81D30zxbUEqdrV89GsLzZjUiprJ8ysGw6ZuUqCptYRSGxO67m5Vp8tYCygN6CzmlTv0YxeyX324m8tTQdjcyUR3azDxT7ddnkq83CEzOALUd1XkIFJGzhWABKupkHaFeWS6A%25KKMPVYFf7WhbNmK1YPo90yWUvbHi4TP7Y9%25wc3bH5iftxd9%25sw178zifxtECUkw117slGAtMRCrXpF7hclZQ6KColXRaYWlOwQ5nmPkMRagOybAwBnvIT9FqTO2B3iKL%25IjedwWJVBDMztPOpeqhk7bvZMLoAC1wkhJHFlEttou%25KXs0KHSfWQr4e%25V1PaZoffNEbnR8M10s9O5R8E4riIg6dscZwB6nSrxRteYAZZ857M51TRUgChgE55Gvlovfdgp2XH2Vcv6jQ%25jvW2YDafDE7jmqn1qYSDyLOELmiqTJIsdbWL3uBrzCVJdSeZk32uzVMRAd0SkNh5fSYVAfPnQm2apRBT5R",
+   "variants": [
+    {
+     "name": "BMW i7 50 xDrive",
+     "trim": "BMW i7 50 xDrive",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "engine": "",
+     "price": 19500000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "i5",
+   "body": "Sedan",
+   "url": "https://configure.bmw.in/en_IN/configure/G60/42FK",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr4VOfyXqyFExSVWNRWlz1hPox9syh3b4gZqmazOSFbZWHkJEKG%25XOABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB98uHLcgXmvE70gp2XHhDMv6jQ%25oqQ2YDafHLcjmqn1cH3DyLOExguqTJIs8TfL3uBrUDlJdSeZGp6uzVMRpo0SkNh56HlVA0ogS8cNF4HvVJt0Kc%252NuF4Wxfj0WBcP81D4JlxbUEqcuo89GsLxFUUiprJ8z0Gw6ZuUXdptYRSGKv67m5Vp3JYCygN6dYmlTv0YCCyX324mbnTQdjcy9R3azDxTi3dnkq83FYzOALU0bnkIFJG4YWABKupcoCFeWS6xkpKMPVY8AaWhbNmtfkPo90y712bHi4TCED9%25wc3lL5iftxdXJuw178zQRotECUkaQp7slGAnMjCrXpFOhGlZQ6KjkfXRaYWD9EQ5nmPqEEagOybLcnnvIT9JP8O2B3iuz6IjedweQBBDMztMl0eqhk7hrgMLoACoXchJHFlHQ3ou%25KX%25JYHSfWQNe%25%25V1Pa06GfNEbn4VM10s9OcNZE4riIx0ascZwBlJ7rxl59kE29t8YgM1NSc9PlyO2kLG8stUfbYZ9b",
+   "variants": [
+    {
+     "name": "BMW i5 M60",
+     "trim": "BMW i5 M60",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "engine": "",
+     "price": 11950000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "i5 LWB",
+   "body": "Sedan",
+   "url": "https://configure.bmw.in/en_IN/configure/G68/77FMZLI1/FKSJM,P0C1M,S0212,S02VB,S0300,S0316,S0322,S032X,S033C,S03CL,S03DN,S03GQ,S03MB,S0407,S0423,S0428,S043H,S0453,S0456,S0459,S04A2,S04FL,S04NB,S04NR,S04T8,S04U9,S04UR,S0548,S0552,S05AL,S05AS,S05AT,S05DW,S06AC,S06AE,S06AK,S06C3,S06CP,S06F4,S06NX,S06PA,S06U2,S0710,S0823,S0825,S0853,S0880,S08LA,S08TD,S08TF,S08WM,S0993,S09C2,S09T1,S0ZL1",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr7VONyXqyFExSVWNRWlzPYPox9syh3b4gZqmazOSFbZWHkJEKG%25xUABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB9BrE1VJdSeZsNEuzVMRpcmSkNh56rKVA0ogYLcNF4HvmJf0Kc%252yK%254WxfjTIYcP81D30zxbUEqdzZ89GsLzZjUiprJ8ysGw6ZuUcnptYRSGxw67m5Vp70YCygN6cBmlTv0YxayX324m8ZTQdjcyIk3azDxTePdnkq83K4zOALUdWzkIFJGzOOABKupkCjFeWS6AlFKMPVY8teWhbNmU3iPo90yG1lbHi4TpEn9%25wc36sRiftxdYbJw178zQZ8tECUkaRb7slGAn5SCrXpFONDlZQ6KI04XRaYWBjEQ5nmPeBTagOybMu0nvIT9h1eO2B3iuPZIjedweQNBDMztMaeeqhk7hX4MLoACoZvhJHFlHhpou%25KX%25JsHSfWQfum%25V1Pa1UQfNEbn4Yp10s9OczZE4riIx0oscZwBlsHrxlpKAuhFqIbVBI",
+   "variants": [
+    {
+     "name": "i5 eDrive35L M Sport",
+     "trim": "i5 eDrive35L M Sport",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "engine": "",
+     "price": 7960000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "M5",
+   "body": "Sedan",
+   "url": "https://configure.bmw.in/en_IN/configure/G90/82FK",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr8VOfyXqyFExSVWNRW8eEoPox9syh3b4gZqmazOSFbZWHkJEKG%259BABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB9BrBDtJdSeZeptuzVMRrD9SkNh5ZzTVA0ogRkZNF4Hv5xR0Kc%252g8%254WxfjTg9cP81D3VGxbUEqdNr89GsLzchUiprJkRGGw6ZuA5MptYRSGxO67m5Vp8tYCygN6C1mlTv0YxeyX324m8ZTQdjcybX3azDxT%25Cdnkq83MbzOALUd7SkIFJGzSrABKupkb8FeWS6A9FKMPVYFXeWhbNmKQLPo90yWaPbHi4TPtA9%25wc36XHiftxdYACw178zmZBtECUkyih7slGAn59CrXpFOgSlZQ6KIvNXRaYWB4LQ5nmPecxagOybMqrnvIT9hMdO2B3ioVcIjedwHsNBDMztV9zeqhk7NggMLoAC06hhJHFl4W3ou%25KX%25BHHSfWQfOD%25V1Pa1IGfNEbnE2L10s9OsGnE4riIreYscZwBZMWrxRteRckZ857M5yVRUgChpE55Gvlo6kdgp2XHOvSv6jNjBvSswUrobJscCRbz1vbwx65efVubxXM7nvzqUxEw8%25P6rbP",
+   "variants": [
+    {
+     "name": "The M5",
+     "trim": "The M5",
+     "fuel": "PHEV",
+     "transmission": "Automatic",
+     "drive": "",
+     "engine": "",
+     "price": 21150000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "X7",
+   "body": "SUV",
+   "url": "https://configure.bmw.in/en_IN/configure/G07/27EMZKMH",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr2vVNyXqyFExSVWNRWJjPlPox9syh3b4gZqmazOSFbZWHkJEKG%25YAABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB9BrBC1JdSeZeljuzVMRMLCSkNh5hPmVA0ogRATNF4Hv5D00Kc%252g7Q4WxfjvKgcP81D2GvxbUEqjpE89GsLzm6UiprJk4YGw6ZuAcnptYRSFxw67m5VKQOYCygNWpbmlTv0PjSyX324mAvTQdjcyN23azDxT0Qdnkq83mCzOALUdy%25kIFJGzTOABKupkiZFeWS6AyEKMPVYFTHWhbNmKfiPo90yWUvbHi4TPGY9%25wc3b8iiftxd9l3w178zifxtECUkwet7slGATOECrXpF3gplZQ6KdveXRaYWz2RQ5nmPkjfagOybAD3nvIT9FQ8O2B3io7RIjedwHJQBDMzt%25uUeqhk7fSpMLoAC1Y2hJHFlE0Oou%25KXsEPHSfWQrUY%25V1PaZ2GfNEbnRjV10s9OGBDE4riIrgoscZwBZhmrxRteRLVZ857M5mkRUgChgH35Gvlov%25igp2XH2jzv6jQ%25jDH2YDafyRjjmqn1KvDDyLOEWfgqTJxJoq45lYg1tN5Ga2tKZqtlpTjHrc0Etz%25eeqKSYpRl6swTgtw",
+   "variants": [
+    {
+     "name": "BMW X7 xDrive40i",
+     "trim": "BMW X7 xDrive40i",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "engine": "",
+     "price": 13490000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "BMW X7 xDrive40d DPE 7 Seater",
+     "trim": "BMW X7 xDrive40d DPE 7 Seater",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "engine": "",
+     "price": 13220000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "BMW X7 xDrive40d",
+     "trim": "BMW X7 xDrive40d",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "engine": "",
+     "price": 13860000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "X5",
+   "body": "SUV",
+   "url": "https://configure.bmw.in/en_IN/configure/G05/27EUZK8Q/FKPRI,P0A96,S01CE,S01CR,S01DM,S01XD,S0212,S0255,S0258,S02T4,S02TB,S02VB,S02VR,S0300,S0322,S0328,S03AT,S03AW,S03E3,S03MB,S0402,S0417,S0423,S0428,S0456,S0494,S04FL,S04KR,S04NB,S04T8,S04UR,S0548,S05AC,S05AL,S05AS,S05DW,S0688,S06AC,S06AE,S06AK,S06BC,S06C3,S06CP,S06NX,S06PA,S06U2,S0701,S0823,S0825,S0853,S0880,S08KM,S08LA,S08TD,S0925,S0993,S09C2,S0ZKQ",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr2IVlyXqyFExSVWNRWlhTGPox9syh3b4gZqmazOSFbZWHkJEKGQEMABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB98uHLcgXmvE70gp2XHXbrv6jQ%25Q9v2YDafag%25jmqn1n7SDyLOEf%25uqTJIs1RLL3uBrE5TJdSeZs3muzVMRrdsSkNh5Z4rVA0ogRcVNF4HvmU30Kc%252yu84WxfjTSKcP81D3wCxbUEqdte89GsLzDQUiprJkRDGw6ZuUTmptYRSGLZ67m5Vp8IYCygN6U7mlTv0YxayX324motTQdjcyBW3azDxTM3dnkq83K4zOALUdnnkIFJGz7kABKupciIFeWS6xHSKMPVY8%257WhbNmUfQPo90yGKDbHi4TCao9%25wc3lsciftxdXrWw178zQZJtECUkaUU7slGAnVjCrXpFON0lZQ6KIOmXRaYWBLVQ5nmPe%25IagOybLM7nvIT9IlSO2B3iBXIIjedweCNBDMztMs5eqhk7hNtMLoACoMGhJHFlHLEou%25KXVBHHSfWQNpU%25V1Pa03sfNEbntUw10t8kdqBz2aKJna",
+   "variants": [
+    {
+     "name": "X5 xDrive40i",
+     "trim": "X5 xDrive40i",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "engine": "",
+     "price": 9690000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "X5 xDrive30d",
+     "trim": "X5 xDrive30d",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "engine": "",
+     "price": 9890000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "X3",
+   "body": "SUV",
+   "url": "https://configure.bmw.in/en_IN/configure/G45/27JAZKX0",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr5VbEyXqyFExSVWNRWlzP4Pox9syh3b4gZqmazOSFbZWHkJEKG7bXABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB9BrBC2JdSeZeqruzVMRrs0SkNh5ZqiVA0ogRkLNF4Hv5xR0Kc%252g864WxfjTpzcP81D3VGxbUEqdNr89GsLz9EUiprJkiDGw6ZuA8HptYRSFjG67m5VKvTYCygNW2HmlTv0YkdyX324mVvTQdjcy6h3azDxTYQdnkq83nZzOALUd6%25kIFJGzY2ABKupkQFFeWS6AC3KMPVYFleWhbNmK1CPo90yWnxbHi4TP7b9%25wc3bHHiftxd9Iiw178zm1otECUkyn17slGATWQCrXpF3gjlZQ6Kd7%25XRaYWBoZQ5nmPejmagOybMDCnvIT9hMdO2B3ioVcIjedwHsNBDMztV95eqhk7NggMLoAC06hhJHFl47mou%25KXcPdHSfWQfeU%25V1Pa1MffNEbnEBL10s9Ose6E4riIrDuscZwBZ6IrxRteRrzZ857M5obRUgChg8D5Gvlov3hgp2XHYAzv6jQ%25m9q2YDafy6Zjmqn1TYJDyLOE3m9qTJIsdyfL3uBroK6JdSUS%25JxvQy2sC4v6OTib419Vo7xHo",
+   "variants": [
+    {
+     "name": "BMW X3 30 xDrive M Sport Pro",
+     "trim": "BMW X3 30 xDrive M Sport Pro",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "engine": "",
+     "price": 7690000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "X3 xDrive20 M Sport",
+     "trim": "X3 xDrive20 M Sport",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "engine": "",
+     "price": 7690000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "X3 xDrive20d M Sport",
+     "trim": "X3 xDrive20d M Sport",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "engine": "",
+     "price": 7820000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "X1 LWB",
+   "body": "SUV",
+   "url": "https://configure.bmw.in/en_IN/configure/U12/37HNZLI4/FKUIC,P0A96,S01AG,S01CR,S01DM,S01LX,S02TF,S02VB,S02VG,S0300,S0313,S0316,S0322,S03AT,S03MB,S0428,S0430,S0459,S0481,S04H2,S04NW,S0534,S0548,S0552,S05AC,S05AS,S05DN,S0674,S06AC,S06AE,S06NX,S06PA,S06U2,S0710,S0823,S0825,S0853,S0880,S08KM,S08LA,S08SD,S08TD,S08TF,S0993,S09C2,S09T1,S0ZL4",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr3IL9yXqyFExSVWNRWl9VNPox9syh3b4gZqmazOSFbZWHkJEKG%25RkABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB98uHLcgXmvE70gp2XHXgav6jQ%25oqh2YDafHLajmqn1cHFDyLOExguqTJIsDTpL3uBrq5QJdSeZL%25NuzVMRJpdSkNh5u6OVA0ogScqNF4HvrGA0Kc%252Zq84WxfjRifcP81D5w3xbUEqg4D89GsLmeKUiprJyCrGw6ZuTlcptYRS3Tg67m5VnJbYCygNyUBmlTv0TGyyX32438MTQdjcdbt3azDxzQKdnkq8kaszOALUAHCkIFJGeEfABKupMgPFeWS6hB3KM4bJgAwJVh19mkOaJJty9GwglHhFVozL1WJL",
+   "variants": [
+    {
+     "name": "BMW X1 LWB",
+     "trim": "BMW X1 LWB",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "engine": "",
+     "price": 4990000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "7 Series",
+   "body": "Sedan",
+   "url": "https://configure.bmw.in/en_IN/configure/G70/57HZZLLS",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr5ILYyXqyFExSVWNRW6sMcPox9syh3b4gZqmazOSFbZWHkJEKGzxMABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB98uHLcgXmvE70gp2XHXbrv6jQ%25Q5H2YDafadUjmqn1%25HJDyLOEfNmqTJIs1yfL3uBrEV1JdSeZsN5uzVMRpcmSkNh56rKVA0ogYLcNF4HvmJt0Kc%252yK%254WxfjTL9cP81D3B6xbUEqdeB89GsLzcqUiprJkxFGw6ZuA54ptYRSFgL67m5VpdRYCygN6uQmlTv0YGeyX324mplTQdjcyQF3azDxTGodnkq83plzOALUd6vkIFJGzXAABKupkQZFeWS6ArnKMPVYF%259WhbNmK1IPo90yWEbbHi4TPsX9%25wc3brTiftxd96Dw178ziXTtECUkw1Z7slGAtEUCrXpF7sslZQ6KColXRaYWzeZQ5nmPkiIagOybADynvIT9FqHO2B3iKLSIjedwWnGBDMzt%259deqhk7fiiMLoAC1VAhJHFlENIou%25KXsMHHSfWQrcB%25V1PaZrcfNEbnRGT10s9OGQJE4riIpzsscZwBZ%25mrxRteRfZZ857M5HNRUgChg%2535GvlovS4gp2XH23ov6jQ%25jvW2YDafDE7jmqn1qLSDyLOELmVqTJIsJywL3uBrz9PJdSeZklNuzVMRAdjSkNh5Fz4VA0og1VYNF1bOayjn65e3g5",
+   "variants": [
+    {
+     "name": "BMW 740 M Sport",
+     "trim": "BMW 740 M Sport",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "engine": "",
+     "price": 19500000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "5 LWB",
+   "body": "Sedan",
+   "url": "https://configure.bmw.in/en_IN/configure/G68/27FMZK8N",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr2IONyXqyFExSVWNRWlzPYPox9syh3b4gZqmazOSFbZWHkJEKG%25YAABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB9BrBC2JdSeZeqruzVMRrs0SkNh5ZzqVA0ogRcZNF4HvmU30Kc%252y5b4WxfjTSUcP81D3VsxbUEqdbE89GsLzMTUiprJkxFGw6ZuAFiptYRSFgL67m5VpdRYCygN6UBmlTv0YGCyX324mXxTQdjcyUh3azDxTGIdnkq83pgzOALUdMKkIFJGzoiABKupkb8FeWS6A9FKMPVYFeeWhbNmKQWPo90yGChbHi4Tpzt9%25wc36sQiftxdYr5w178zm9utECUkaRU7slGAn59CrXpFOgVlZQ6KI0qXRaYWB4cQ5nmPeDsagOybMe3nvIT9hS4O2B3ioEMIjedwSbRBDMztMa0eqhk7hnMMLoACoQchJHFlHR2ou%25KX%25clHSfWQfHY%25V1Pa1EZfNEbnEVR10s9OsN3E4riIxyYscZwB84HrxRteXWCZ85J5aZq%25P4fBFj%25VicdTjO3gXAqQX",
+   "variants": [
+    {
+     "name": "BMW 530Li M Sport LWB",
+     "trim": "BMW 530Li M Sport LWB",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "engine": "",
+     "price": 7700000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "4 Series",
+   "body": "Coupe / Convertible",
+   "url": "https://configure.bmw.in/en_IN/configure/G23/72DBZK7Y",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr4vOEyXqyFExSVWNRWZI4hPox9syh3b4gZqmazOSFbZWHkJEKG7bXABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB9BrBH0JdSeZs05uzVMRr97SkNh5ZzrVA0ogRcZNF4Hv5xQ0Kc%252g864WxfjTpUcP81D3VGxbUEqdb189GsLz9jUiprJkzsGw6ZuAPeptYRSGxw67m5Vp7bYCygN6K7mlTv0YheyX324mOzTQdjcyB83azDxTS6dnkq83KGzOALUdWRkIFJGz7XABKupkCAFeWS6xenKMPVY8T9WhbNmUfhPo90yGKvbHi4TpWI9%25wc3lkMiftxdXO%25w178zQuotECUkaQp7slGAnjJCrXpFOhDlZQ6KID6XRaYWDA1Q5nmPqFaagOybLssnvzBYcQhYT2JeiXZsCYVwWWhcfD2aTjl6JOY6",
+   "variants": [
+    {
+     "name": "M440i xDrive",
+     "trim": "M440i xDrive",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "engine": "",
+     "price": 11065000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "M4",
+   "body": "Coupe / Convertible",
+   "url": "https://configure.bmw.in/en_IN/configure/G82/32HKZITZ",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr3vLfyXqyFExSVWNRW8eaPPox9syh3b4gZqmazOSFbZWHkJEKG%259BABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB9BrBC1JdSeZeq7uzVMRMddSkNh5ZHxVA0ogRk3NF4Hv5AR0Kc%252g854WxfjvUncP81D3VGxbUEqcNP89GsLx9FUiprJ8i0Gw6ZuUNfptYRSGP667m5VpFtYCygN6MBmlTv0YhwyX324m9qTQdjcyqj3azDxTi3dnkq8NnlzOALU0bXkIFJG49OABKupcmPFeWS6xHSKMPVY8%257WhbNmUfaPo90yGKmbHi4TCao9%25wc3lsKiftxdXrqw178zQZJtECUkaS27slGAnVNCrXpFOnYlZQ6KIqSXRaYWBHLQ5nmPeIFagOybLKBnvIT9JrrO2B3iu8IIjedwSkYBDMztMaeeqhk7hXgMLoACoQchJHFlHR2ou%25KX%25CmHSfWQfxX%25V1Pa1OGfNEbnEIA10s9OsN3E4riIr6gscZwBZYIrxRteUfZZ857MGdTRUgChaV85GvSvO5J19xEMWq10t8kdqBz2aKJna",
+   "variants": [
+    {
+     "name": "M4 Competition M xDrive",
+     "trim": "M4 Competition M xDrive",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "engine": "",
+     "price": 16290000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "3 Series",
+   "body": "Sedan",
+   "url": "https://configure.bmw.in/en_IN/configure/G20/87FVZJG6",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr8IObyXqyFExSVWNRWZIwCPox9syh3b4gZqmazOSFbZWHkJEKG%259ZABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB98uHLcgXmvE70gp2XHXbrv6jQ%25Q5H2YDafaemjmqn1%25rYDyLOEfmpqTJIs1yfL3uBrEV1JdSeZsN7uzVMRr08SkNh56xyVA0ogYLcNF4HvmFR0Kc%252y184WxfjTEncP81D46lxbUEqcNX89GsLx0bUiprJ8iKGw6ZuUw4ptYRSG0167m5VpbYYCygN6K8mlTv0YhUyX324moMTQdjcyiL3azDxTLDdnkq83wCzOALUdtzkIFJG4IQABKupciaFeWS6xwBKMPVY8T9WhbNmUfNPo90yGKObHi4TCao9%25wc3lsciftxdXrWw178zQZJtECUkaS27slGAnVNCrXpFOnYlZQ6KIoqXRaYWBOAQ5nmPqFaagOybLwrnvIT9JrrO2B3iu8IIjedwSkYBDMztMa0eqhk7hnMMLoACoQvhJHFlHaxou%25KX%255jHSfWQfly%25V1Pa18QfNEbnEfy10s9Osr6E4riIrZgscZwBZ4zrxRteRmBZ857MGdTRUgChpW25GvlonNPgpny9P0fbShtcoh",
+   "variants": [
+    {
+     "name": "BMW M340i xDrive",
+     "trim": "BMW M340i xDrive",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "engine": "",
+     "price": 7780000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "3 LWB",
+   "body": "Sedan",
+   "url": "https://configure.bmw.in/en_IN/configure/G28/27FHZJG7",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr2IOcyXqyFExSVWNRWZIrcPox9syh3b4gZqmazOSFbZWHkJEKG%259ZABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB9BrBDsJdSeZe5muzVMRrvdSkNh5ZzrVA0ogRcZNF4HvmU30Kc%252y5b4WxfjTSUcP81D3svxbUEqcYp89GsLx0QUiprJ849Gw6ZuUwWptYRSGtc67m5Vp4EYCygN6MBmlTv0Ym9yX324mkETQdjcy9t3azDxTi3dnkq8NWazOALU0OXkIFJG49QABKupciIFeWS6xybKMPVY8%25VWhbNmUfQPo90yGKObHi4TCao9%25wc3lsciftxdXrWw178zQZJtECUkaS27slGAnVNCrXpFOnYlZQ6KIonXRaYWBOAQ5nmPeLmagOybLKsnvIT9JWOO2B3iBPIIjedweQNBDMztMaeeqhk7hXgMLoACoQchJHFlHR2ou%25KX%25CmHSfWQfxX%25V1Pa1%25mfNEbnEsR10s9OsN5E4riIr0dscZwB8TmrxRteUFgZ857MQRtRUgugnRLfbc1eKDfNwxz3DIdvQFLaQ",
+   "variants": [
+    {
+     "name": "330Li M Sport",
+     "trim": "330Li M Sport",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "engine": "",
+     "price": 6270000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "320Ld M Sport",
+     "trim": "320Ld M Sport",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "",
+     "engine": "",
+     "price": 6420000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "M2",
+   "body": "Coupe / Convertible",
+   "url": "https://configure.bmw.in/en_IN/configure/G87/22DM",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr2V6NyXqyFExSVWNRWZIWrPox9syh3b4gZqmazOSFbZWHkJEKG%259gABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB9BrO2B3i3axIjedwd9LBDMztzA9eqhk7wFfMLoACtq2hJHFl7Ltou%25KXC17HSfWQlEW%25V1PaXsyfNEbnjhr10s9Ofo6E4riI1H0scZwBEcSrxRtesx%25Z857Mr8kRUgChZ%2595GvloR4ggp2XH5VGv6jQ%25gFk2YDafvcIjmqn12j8DyLcLhD0RC65fwVRUQvwFrDwCGy2os4NwwsjRBDFu6GZCpEiy5wi",
+   "variants": [
+    {
+     "name": "M2 Coupé",
+     "trim": "M2 Coupé",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "engine": "",
+     "price": 10650000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "2 Series",
+   "body": "Coupe / Convertible",
+   "url": "https://configure.bmw.in/en_IN/configure/F74/17GGZK9N",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr1IbXyXqyFExSVWNRWl94fPox9syh3b4gZqmazOSFbZWHkJEKG7bXABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB9BrBDsJdSeZe%25uuzVMRrs0SkNh5ZqVVA0ogRkLNF4Hv5xR0Kc%252g8W4WxfjTpzcP81D3VGxbUEqdNr89GsLz9EUiprJkChGw6ZuUTmptYRSGxw67m5Vp7bYCygN6C8mlTv0YllyX324m8ZTQdjcybp3azDxTF3dnkq8NnlzOALU0bnkIFJG4YWABKupcouFeWS6xHlKMPVY8A6WhbNmt2IPo90y710bHi4TCEF9%25wc3lC8iftxdXgDw178zQBltECUkg3o7slGAvHHCrXpF2VllZQ6KjAHXRaYWatLQ5nmPn7aagOybOwsnvIT9ItSO2B3iB18IjedweJJBDMztMVweqhk7heUMLoACoXThJHFlHLEou%25KX%25JYHSfWQNpU%25V1Pa0SefNEbn4Vr10s9O7GLE4rDrlE2hFVonzghJPNyYgQmZ7d2C7",
+   "variants": [
+    {
+     "name": "218 M Sport",
+     "trim": "218 M Sport",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "engine": "",
+     "price": 4580000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "X1",
+   "body": "SUV",
+   "url": "https://configure.bmw.in/en_IN/configure/U11/17EGZGSH",
+   "image": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9Y3BUO30pQGC7sYEBQanCpLb8fnh6TvqFhdnuUswTgt9%25UIDOPkIENu44Ws1Bo%25fA3FSr1IVGyXqyFExSVWNRWlXwCPox9syh3b4gZqmazOSFbZWHkJEKG%25YhABN745UXgtUDpdvxKM4adOKU2JBzcbt3aJTcA3YdqfS8jmBLz5hFUHsQ4proKPbABNuiLB98uHLcgXmvE70gp2XHXy6v6jQ%25Q5H2YDafa2Ojmqn1%25HJDyLOEfgqqTJIs1yvL3uBrEV1JdSeZsNzuzVMRpcmSkNh56rKVA0ogYLcNF4HvmFo0Kc%252y9O4WxfjTEfcP81D46GxbUEqcNP89GsLx9FUiprJ8i0Gw6ZuUNfptYRSGAc67m5VpadYCygN6q3mlTv0Yz1yX324uXtTQdjcSKX3azDxVGAdnkq8NeqzOALU038kIFJGbRQABKup9ouFeWS6iHdKMPVYwi0WhbNmtQiPo90ys6IbHi4TrBB9%25wc3ZqiiftxdRTBw178z7PvtECUkCb77slGAlWHCrXpFXPDlZQ6KQhfXRaYWao0Q5nmPnqWagOybOa0nvIT9IwpO2B3iBeoIjedwe2HBDMztMjUeqhk7Jx4MLoACuY%25hJHFlSLOou%25KXVJ1HSfWQi2o%25VicdTjO3gXAqQX",
+   "variants": [
+    {
+     "name": "BMW X1 sDrive18d M Sport",
+     "trim": "BMW X1 sDrive18d M Sport",
+     "fuel": "Diesel",
+     "transmission": "Automatic",
+     "drive": "",
+     "engine": "",
+     "price": 5290000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  }
+ ],
+ "log": []
+}

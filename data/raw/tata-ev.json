@@ -1,6 +1,6 @@
 {
  "brand": "Tata",
- "scrapedAt": "2026-09-30T07:12:53.342Z",
+ "scrapedAt": "2026-10-05T00:07:59.611Z",
  "source": "https://ev.tata.cars/",
  "models": [
   {
@@ -8639,7 +8639,6 @@
       "Multi Drive Modes": "Yes",
       "Charger Option": "3.3 kW AC Charger Box",
       "Thermal Management": "Liquid cooled",
-      "Ingress protection for motor & battery pack": "IP 67",
       "Acceleration": "0-100 km/h in 8.9s",
       "Emission": "Zero Tailpipe Emission",
       "Drivetrain": "Motor 106 kW and Torque 215 Nm"
@@ -8823,7 +8822,7 @@
       {
        "group": "Comfort and Convenience",
        "label": "Rear 60:40 Seat Split Fold",
-       "value": "Yes"
+       "value": "No"
       },
       {
        "group": "Comfort and Convenience",
@@ -9377,8 +9376,8 @@
      ]
     },
     {
-     "name": "Empowered+ A 45 DK, Electric",
-     "trim": "Empowered+ A 45 DK",
+     "name": "Empowered+ A 45 RDK, Electric",
+     "trim": "Empowered+ A 45 RDK",
      "fuel": "Electric",
      "transmission": "",
      "engine": "",
@@ -9761,8 +9760,8 @@
      ]
     },
     {
-     "name": "Empowered+ A 45 RDK, Electric",
-     "trim": "Empowered+ A 45 RDK",
+     "name": "Empowered+ A 45 DK, Electric",
+     "trim": "Empowered+ A 45 DK",
      "fuel": "Electric",
      "transmission": "",
      "engine": "",
@@ -18464,7 +18463,7 @@
       {
        "group": "Interior",
        "label": "Upholstery",
-       "value": "Leatherette"
+       "value": "Fabric"
       },
       {
        "group": "Comfort and Convenience",

@@ -1,6 +1,6 @@
 {
  "brand": "Nissan",
- "scrapedAt": "2026-09-30T07:12:22.213Z",
+ "scrapedAt": "2026-10-05T00:07:17.486Z",
  "source": "https://www.nissan.in/prices-list.html",
  "models": [
   {
@@ -245,7 +245,7 @@
      "fuel": "Petrol",
      "transmission": "Manual",
      "engine": "",
-     "price": 781000,
+     "price": 785000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -256,7 +256,7 @@
      "fuel": "Petrol",
      "transmission": "Automatic",
      "engine": "",
-     "price": 836000,
+     "price": 840000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -267,7 +267,7 @@
      "fuel": "Petrol",
      "transmission": "Manual",
      "engine": "",
-     "price": 912000,
+     "price": 916000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -289,7 +289,7 @@
      "fuel": "Petrol",
      "transmission": "Manual",
      "engine": "",
-     "price": 568000,
+     "price": 569400,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -300,7 +300,7 @@
      "fuel": "Petrol",
      "transmission": "Manual",
      "engine": "",
-     "price": 622000,
+     "price": 626000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -311,7 +311,7 @@
      "fuel": "Petrol",
      "transmission": "Manual",
      "engine": "",
-     "price": 683000,
+     "price": 687000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -322,7 +322,7 @@
      "fuel": "Petrol",
      "transmission": "Manual",
      "engine": "",
-     "price": 746000,
+     "price": 750000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -333,7 +333,7 @@
      "fuel": "Petrol",
      "transmission": "Manual",
      "engine": "",
-     "price": 839000,
+     "price": 843000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -344,7 +344,7 @@
      "fuel": "Petrol",
      "transmission": "Manual",
      "engine": "",
-     "price": 872000,
+     "price": 876000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -355,7 +355,7 @@
      "fuel": "Petrol",
      "transmission": "Manual",
      "engine": "",
-     "price": 877000,
+     "price": 881000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -366,7 +366,7 @@
      "fuel": "Petrol",
      "transmission": "Manual",
      "engine": "",
-     "price": 957000,
+     "price": 961000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -377,7 +377,7 @@
      "fuel": "Petrol",
      "transmission": "Manual",
      "engine": "",
-     "price": 991000,
+     "price": 995000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -388,7 +388,7 @@
      "fuel": "Petrol",
      "transmission": "Automatic",
      "engine": "",
-     "price": 627000,
+     "price": 630000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -399,7 +399,7 @@
      "fuel": "Petrol",
      "transmission": "Automatic",
      "engine": "",
-     "price": 738000,
+     "price": 742000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -410,7 +410,7 @@
      "fuel": "Petrol",
      "transmission": "Automatic",
      "engine": "",
-     "price": 801000,
+     "price": 805000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -421,7 +421,7 @@
      "fuel": "Petrol",
      "transmission": "Automatic",
      "engine": "",
-     "price": 894000,
+     "price": 898000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -432,7 +432,7 @@
      "fuel": "Petrol",
      "transmission": "Automatic",
      "engine": "",
-     "price": 927000,
+     "price": 931000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -443,7 +443,7 @@
      "fuel": "Petrol",
      "transmission": "Automatic",
      "engine": "",
-     "price": 926000,
+     "price": 930000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -454,7 +454,7 @@
      "fuel": "Petrol",
      "transmission": "Automatic",
      "engine": "",
-     "price": 970000,
+     "price": 974000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []
@@ -465,7 +465,7 @@
      "fuel": "Petrol",
      "transmission": "Automatic",
      "engine": "",
-     "price": 1065000,
+     "price": 1069000,
      "priceCity": "Delhi",
      "prices": {},
      "features": []

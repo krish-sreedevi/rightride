@@ -1,6 +1,6 @@
 {
  "brand": "Mercedes-Benz",
- "scrapedAt": "2026-09-30T07:19:38.065Z",
+ "scrapedAt": "2026-10-05T00:06:11.233Z",
  "source": "https://www.mercedes-benz.co.in/passengercars/models.html?group=all",
  "models": [
   {
@@ -68,23 +68,6 @@
      "seats": 5,
      "engine": "1496 cc",
      "price": 6120000,
-     "priceCity": "Delhi",
-     "prices": {},
-     "features": [],
-     "specs": {
-      "Top speed": "250",
-      "Boot": "455"
-     }
-    },
-    {
-     "name": "C-Class Hybrid",
-     "trim": "Hybrid",
-     "fuel": "Hybrid",
-     "transmission": "Automatic",
-     "drive": "",
-     "seats": 5,
-     "engine": "1496 cc",
-     "price": 19090909,
      "priceCity": "Delhi",
      "prices": {},
      "features": [],
@@ -677,30 +660,6 @@
      "specs": {
       "Top speed": "210",
       "Boot": "440"
-     }
-    }
-   ]
-  },
-  {
-   "model": "Mercedes-Maybach S-Class",
-   "body": "Sedan",
-   "url": "https://www.mercedes-benz.co.in/passengercars/models/saloon-long/mercedes-maybach-s-class/overview.html",
-   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/223976/804/iris.png?q=COSY-EU-100-1713d0VXqbS7qtyO67PobzIr3eWsrrCsdRRzwQZv9IZbMw3SGtlKStsd2HtcUfp80XGEubYJ0l36xOB2NS5bApj7bI5uVKDQC31MrkzNwTbm7jZ6vhKVFKE%25vq9UTyLRDGmYaxWbSrH1KJtn8wvOyoiZLbgM4Fa4MTg9Hvn6PD8LmSeWiXStsd4JxcUfgr6XGEPnXJ0l7YhOB2KQqbApvkbI5uLfYQC3aEOkzNHmbm7j8hfhKViTQ%25vqmJZyLRhYWYaxU0hrH1GBfn8w0z2oiZB%25lM4FAT2Tg9LQ96PDaPbSeWHyWtsd8ZDcUfiMfXGE4TdJ0lgOhOB2PbnbApe7yI5usK2QC32M7kzNpTdm7juyIhKVHSW%25vq8cXyr%25kWfDpJJ0lCrnOIJRdAbQOznyI5uecZQC3Pg6kzN5Pnm7jCcmhKVf0t%25vqLtlyLRaLRYaxH0ErH18Cln8520R%256d9lo24JlsjbwOoZ1qgqyfyzda8CD7dB3AF6h0HJ&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
-   "variants": [
-    {
-     "name": "Mercedes-Maybach S-Class Petrol",
-     "trim": "Petrol",
-     "fuel": "Petrol",
-     "transmission": "Automatic",
-     "drive": "AWD",
-     "seats": 5,
-     "engine": "3982 cc",
-     "price": 28750000,
-     "priceCity": "Delhi",
-     "prices": {},
-     "features": [],
-     "specs": {
-      "Top speed": "250"
      }
     }
    ]

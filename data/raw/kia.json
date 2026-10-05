@@ -1,6 +1,6 @@
 {
  "brand": "Kia",
- "scrapedAt": "2026-09-30T07:11:00.610Z",
+ "scrapedAt": "2026-10-05T00:05:15.551Z",
  "source": "https://www.kia.com/in/our-vehicles/seltos/showroom.html",
  "models": [
   {
@@ -2096,7 +2096,7 @@
      "fuel": "",
      "transmission": "",
      "engine": "",
-     "price": 1099900,
+     "price": 1124900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -3204,138 +3204,6 @@
       {
        "group": "Highlights",
        "label": "Relaxation Power Driver Seat (One Touch with Memory)",
-       "value": "Yes"
-      }
-     ],
-     "cumulativeFeatures": true
-    },
-    {
-     "name": "X-Line",
-     "trim": "X-Line",
-     "fuel": "",
-     "transmission": "",
-     "engine": "",
-     "price": 1871900,
-     "priceCity": "Delhi",
-     "prices": {},
-     "specs": {
-      "Overall Length": "4460mm",
-      "Overall Height": "1635mm"
-     },
-     "features": [
-      {
-       "group": "Highlights",
-       "label": "Ice Cube LED Projection Headlamps with Dynamic Welcome Function",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Star Map LED DRLs with Integrated Turn Signal",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Kia Digital Tiger Face with Dark Gunmetal Accents",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Glossy Black Front Bumper and Cladding",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Robust Front & Rear Skid Plate with Dark Gunmetal Finish",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Side Door Garnish with Body Color Accents",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "R18- 46.20 cm (18”) Sporty Crystal Cut Alloy Wheels",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Neon Brake Calipers (Only for GT-Line)",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Mudflaps (Fr + Rr)",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "LED Reverse Lamps",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Smoky Black & White Two-Tone Interiors with White Accents",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Smoky Black & White Leatherette Seats",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "10-Way Power Driver Seat with Power Lumbar Adjust",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Integrated Memory System (Driver Seat & ORVM)",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Driver Seat Welcome Retract Function",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Auto Reverse ORVM",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Relaxation Power Driver Seat (One Touch with Memory)",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Robust Front & Rear Skid Plate with Black High Glossy Finish",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Side Door Garnish with Dark Gunmetal Accents",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Smoky Black & Hunter Green Two Tone Interiors with Satin Metal Accents",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Smoky Black & Hunter Green Leatherette Seats",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "R18- 46.20 cm (18”) Black Painted Alloy Wheels",
-       "value": "Yes"
-      },
-      {
-       "group": "Highlights",
-       "label": "Exterior Color Options : Xclusive Matte Graphite & Aurora Black Pearl",
        "value": "Yes"
       }
      ],
@@ -8777,7 +8645,7 @@
      "fuel": "",
      "transmission": "",
      "engine": "",
-     "price": 740900,
+     "price": 744900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -8843,7 +8711,7 @@
      "fuel": "",
      "transmission": "",
      "engine": "",
-     "price": 783900,
+     "price": 787900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -8919,7 +8787,7 @@
      "fuel": "",
      "transmission": "",
      "engine": "",
-     "price": 884900,
+     "price": 888900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -9000,7 +8868,7 @@
      "fuel": "",
      "transmission": "",
      "engine": "",
-     "price": 923900,
+     "price": 927900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -9066,7 +8934,7 @@
      "fuel": "",
      "transmission": "",
      "engine": "",
-     "price": 971900,
+     "price": 975900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -9132,7 +9000,7 @@
      "fuel": "",
      "transmission": "",
      "engine": "",
-     "price": 1150900,
+     "price": 1159900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -9203,7 +9071,7 @@
      "fuel": "",
      "transmission": "",
      "engine": "",
-     "price": 1365900,
+     "price": 1374900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -9294,7 +9162,7 @@
      "fuel": "",
      "transmission": "",
      "engine": "",
-     "price": 1379900,
+     "price": 1388900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {

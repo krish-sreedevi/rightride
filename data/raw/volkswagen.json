@@ -1,6 +1,6 @@
 {
  "brand": "Volkswagen",
- "scrapedAt": "2026-09-30T07:14:28.462Z",
+ "scrapedAt": "2026-10-05T00:09:22.024Z",
  "source": "https://www.volkswagen.co.in/en.html",
  "models": [
   {
@@ -48,7 +48,7 @@
      "fuel": "Petrol",
      "transmission": "Manual",
      "engine": "1.0L TSI MT",
-     "price": 1269900,
+     "price": 1299900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -82,7 +82,7 @@
      "fuel": "Petrol",
      "transmission": "Automatic",
      "engine": "1.0L TSI AT",
-     "price": 1379900,
+     "price": 1409900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -116,7 +116,7 @@
      "fuel": "Petrol",
      "transmission": "Manual",
      "engine": "1.0L TSI MT",
-     "price": 1429900,
+     "price": 1441900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -150,7 +150,7 @@
      "fuel": "Petrol",
      "transmission": "Automatic",
      "engine": "1.0L TSI AT",
-     "price": 1544900,
+     "price": 1556900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -184,7 +184,7 @@
      "fuel": "Petrol",
      "transmission": "Manual",
      "engine": "1.0L TSI MT",
-     "price": 1599900,
+     "price": 1621900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -218,7 +218,7 @@
      "fuel": "Petrol",
      "transmission": "Automatic",
      "engine": "1.0L TSI AT",
-     "price": 1717500,
+     "price": 1737900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -252,7 +252,7 @@
      "fuel": "Petrol",
      "transmission": "Manual",
      "engine": "1.0L TSI MT",
-     "price": 1459900,
+     "price": 1471900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -286,7 +286,7 @@
      "fuel": "Petrol",
      "transmission": "Automatic",
      "engine": "1.0L TSI AT",
-     "price": 1574900,
+     "price": 1586900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -320,7 +320,7 @@
      "fuel": "Petrol",
      "transmission": "Automatic",
      "engine": "1.5L TSI DSG",
-     "price": 1899900,
+     "price": 1916900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -354,7 +354,7 @@
      "fuel": "Petrol",
      "transmission": "Automatic",
      "engine": "1.5L TSI DSG",
-     "price": 1929900,
+     "price": 1946900,
      "priceCity": "Delhi",
      "prices": {},
      "specs": {
@@ -385,64 +385,9 @@
    ]
   },
   {
-   "model": "Volkswagen Virtus Anniversary Edition",
-   "url": "https://www.volkswagen.co.in/en/models/virtus-sport.html",
-   "image": "https://assets.volkswagen.com/is/image/volkswagenag/virtus-sport-og-image?Zml0PWNyb3AlMkMxJndpZD0xMjAwJmhlaT02MDAmZm10PWpwZWcmcWx0PTc5JmJmYz1vZmYmNzY1Nw==",
-   "variants": [
-    {
-     "name": "Virtus GT Line 1.0 TSI MT",
-     "trim": "Virtus GT Line",
-     "fuel": "Petrol",
-     "transmission": "Manual",
-     "engine": "",
-     "price": 1434900,
-     "priceCity": "Delhi",
-     "prices": {},
-     "specs": {},
-     "features": []
-    },
-    {
-     "name": "Virtus GT Line 1.0 TSI AT",
-     "trim": "Virtus GT Line",
-     "fuel": "Petrol",
-     "transmission": "Automatic",
-     "engine": "",
-     "price": 1524900,
-     "priceCity": "Delhi",
-     "prices": {},
-     "specs": {},
-     "features": []
-    },
-    {
-     "name": "Virtus GT Plus Sport 1.5 TSI DSG",
-     "trim": "Virtus GT Plus Sport",
-     "fuel": "Petrol",
-     "transmission": "Automatic",
-     "engine": "",
-     "price": 1919900,
-     "priceCity": "Delhi",
-     "prices": {},
-     "specs": {},
-     "features": []
-    },
-    {
-     "name": "Virtus GT Plus Sport 1.5 TSI DSG - Anniversary Edition",
-     "trim": "Virtus GT Plus Sport",
-     "fuel": "Petrol",
-     "transmission": "Automatic",
-     "engine": "",
-     "price": 1919900,
-     "priceCity": "Delhi",
-     "prices": {},
-     "specs": {},
-     "features": []
-    }
-   ]
-  },
-  {
-   "model": "VW Virtus Chrome",
-   "url": "https://www.volkswagen.co.in/en/models/virtus-chrome.html",
-   "image": "https://assets.volkswagen.com/is/image/volkswagenag/virtus-chrome-og-image?Zml0PWNyb3AlMkMxJndpZD0xMjAwJmhlaT02MDAmZm10PWpwZWcmcWx0PTc5JmJmYz1vZmYmNzY1Nw==",
+   "model": "VW Virtus",
+   "url": "https://www.volkswagen.co.in/en/models/virtus.html",
+   "image": "https://www.volkswagen.co.in/etc.clientlibs/clientlibs/vwa-ngw18/ngw18-frontend/apps/resources/statics/img/vw-logo-2x.png",
    "variants": [
     {
      "name": "Virtus 1.0 TSI MT Comfortline",
