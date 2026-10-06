@@ -1,35 +1,7 @@
 {
  "source": "autocarindia.com expert reviews",
- "updated": "2026-10-05T00:09:23.142Z",
+ "updated": "2026-10-06T18:46:18.245Z",
  "models": {
-  "Audi|A4": {
-   "slug": "audi/a4",
-   "score": 8,
-   "scores": {
-    "features": 6,
-    "mileage": 7,
-    "comfort": 8,
-    "value": 8,
-    "performance": 9,
-    "design": 7
-   },
-   "like": [
-    "Incredibly refined engine",
-    "Premium and well built interiors",
-    "Premium cabin feel"
-   ],
-   "dislike": [
-    "Rear-seat backrest a bit upright",
-    "Rear seat access isn’t best"
-   ],
-   "video": null,
-   "review": {
-    "title": "2021 Audi A4 facelift review, test drive",
-    "url": "https://www.autocarindia.com/car-reviews/2021-audi-a4-facelift-review-test-drive-419539"
-   },
-   "url": "https://www.autocarindia.com/cars/audi/a4/expert-reviews",
-   "image": "audi_a4"
-  },
   "Audi|Q3": {
    "slug": "audi/q3",
    "score": 8,
@@ -49,7 +21,12 @@
     "No diesel option",
     "Expensive"
    ],
-   "video": null,
+   "video": {
+    "id": "K3hRPk8L1XE",
+    "title": "2022 Audi Q3 review - Lovable Audi junior SUV is back with a bang | First Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "2026 Audi Q3 review: Good things come in small packages",
     "url": "https://www.autocarindia.com/car-reviews/2026-audi-q3-review-good-things-come-in-small-packages-437469"
@@ -78,8 +55,9 @@
    ],
    "video": {
     "id": "VqbB9Hp-888",
-    "title": "Audi A6 long term video review",
-    "year": 2026
+    "title": "Audi A6 - Living with it | Long Termer | Autocar India",
+    "ago": "6 mo ago",
+    "src": "youtube"
    },
    "review": {
     "title": "2019 Audi A6 review: Understated elegance",
@@ -87,60 +65,6 @@
    },
    "url": "https://www.autocarindia.com/cars/audi/a6/expert-reviews",
    "image": "audi_a6"
-  },
-  "Audi|Q5": {
-   "slug": "audi/q5",
-   "score": 7,
-   "scores": {
-    "features": 7,
-    "mileage": 6,
-    "comfort": 7.5,
-    "value": 7,
-    "performance": 7,
-    "design": 6
-   },
-   "like": [
-    "Ride comfort ",
-    "Refinement"
-   ],
-   "dislike": [
-    "On the pricey side",
-    "Familiar looks"
-   ],
-   "video": null,
-   "review": {
-    "title": "2021 Audi Q5 facelift India review, test drive",
-    "url": "https://www.autocarindia.com/car-reviews/2021-audi-q5-facelift-india-review-test-drive-422412"
-   },
-   "url": "https://www.autocarindia.com/cars/audi/q5/expert-reviews",
-   "image": "audi_q5"
-  },
-  "Audi|Q7": {
-   "slug": "audi/q7",
-   "score": 7,
-   "scores": {
-    "features": 7,
-    "mileage": 7,
-    "comfort": 7.5,
-    "value": 7,
-    "performance": 8,
-    "design": 7
-   },
-   "like": [
-    "Ride quality",
-    "Refinement"
-   ],
-   "dislike": [
-    "Fuel economy",
-    "Spare wheel compromised"
-   ],
-   "video": null,
-   "review": {
-    "title": "2022 Audi Q7 facelift review, test drive",
-    "url": "https://www.autocarindia.com/car-reviews/2022-audi-q7-facelift-review-test-drive-423269"
-   },
-   "url": "https://www.autocarindia.com/cars/audi/q7/expert-reviews",
-   "image": "audi_q7"
   },
   "Audi|Q3 Sportback": {
    "slug": "audi/q3-sportback",
@@ -160,13 +84,46 @@
    "dislike": [
     "Rear headroom"
    ],
-   "video": null,
+   "video": {
+    "id": "ZK1NNJisoLI",
+    "title": "2023 Audi Q3 Sportback review - Compact Coupe SUV | First Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "Audi Q3 Sportback review: The downsized Q8",
     "url": "https://www.autocarindia.com/car-reviews/audi-q3-sportback-review-the-downsized-q8-427214"
    },
    "url": "https://www.autocarindia.com/cars/audi/q3-sportback/expert-reviews",
    "image": "audi_q3-sportback"
+  },
+  "Audi|A4": {
+   "slug": "audi/a4",
+   "score": 8,
+   "scores": {
+    "features": 6,
+    "mileage": 7,
+    "comfort": 8,
+    "value": 8,
+    "performance": 9,
+    "design": 7
+   },
+   "like": [
+    "Incredibly refined engine",
+    "Premium and well built interiors",
+    "Premium cabin feel"
+   ],
+   "dislike": [
+    "Rear-seat backrest a bit upright",
+    "Rear seat access isn’t best"
+   ],
+   "video": null,
+   "review": {
+    "title": "2021 Audi A4 facelift review, test drive",
+    "url": "https://www.autocarindia.com/car-reviews/2021-audi-a4-facelift-review-test-drive-419539"
+   },
+   "url": "https://www.autocarindia.com/cars/audi/a4/expert-reviews",
+   "image": "audi_a4"
   },
   "Audi|Q8": {
    "slug": "audi/q8",
@@ -188,7 +145,12 @@
     "No diesel option",
     "No diesel option"
    ],
-   "video": null,
+   "video": {
+    "id": "jdb-yglQrGE",
+    "title": "2024 Audi Q8 review - Bold in gold | First Drive | Autocar India",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "Audi SQ8 review: The 500hp sweet spot",
     "url": "https://www.autocarindia.com/car-reviews/audi-sq8-review-the-500hp-sweet-spot-440374"
@@ -196,23 +158,124 @@
    "url": "https://www.autocarindia.com/cars/audi/q8/expert-reviews",
    "image": "audi_q8"
   },
-  "Audi|SQ8": {
-   "slug": "audi/new-sq8",
-   "url": "https://www.autocarindia.com/cars/audi/new-sq8/expert-reviews",
-   "video": null,
-   "image": null
+  "Audi|Q7": {
+   "slug": "audi/q7",
+   "score": 7,
+   "scores": {
+    "features": 7,
+    "mileage": 7,
+    "comfort": 7.5,
+    "value": 7,
+    "performance": 8,
+    "design": 7
+   },
+   "like": [
+    "Ride quality",
+    "Refinement"
+   ],
+   "dislike": [
+    "Fuel economy",
+    "Spare wheel compromised"
+   ],
+   "video": {
+    "id": "iV8vvIFOeVA",
+    "title": "Audi Q7 facelift review - New set of updates for Audi’s luxury 7-seater | First Drive |Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2022 Audi Q7 facelift review, test drive",
+    "url": "https://www.autocarindia.com/car-reviews/2022-audi-q7-facelift-review-test-drive-423269"
+   },
+   "url": "https://www.autocarindia.com/cars/audi/q7/expert-reviews",
+   "image": "audi_q7"
+  },
+  "Audi|Q5": {
+   "slug": "audi/q5",
+   "score": 7,
+   "scores": {
+    "features": 7,
+    "mileage": 6,
+    "comfort": 7.5,
+    "value": 7,
+    "performance": 7,
+    "design": 6
+   },
+   "like": [
+    "Ride comfort ",
+    "Refinement"
+   ],
+   "dislike": [
+    "On the pricey side",
+    "Familiar looks"
+   ],
+   "video": {
+    "id": "8SjrAZsHb9E",
+    "title": "2026 Audi Q5 review – Back to business | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2021 Audi Q5 facelift India review, test drive",
+    "url": "https://www.autocarindia.com/car-reviews/2021-audi-q5-facelift-india-review-test-drive-422412"
+   },
+   "url": "https://www.autocarindia.com/cars/audi/q5/expert-reviews",
+   "image": "audi_q5"
   },
   "Audi|RS Q8": {
    "slug": "audi/new-rs-q8",
    "url": "https://www.autocarindia.com/cars/audi/new-rs-q8/expert-reviews",
+   "video": {
+    "id": "QTocaJyW8A0",
+    "title": "2025 Audi RS Q8 Performance review - V8 power for the win! | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
+   "image": null
+  },
+  "Audi|S5 Sportback": {
+   "slug": "audi/new-s5-sportback",
+   "url": "https://www.autocarindia.com/cars/audi/new-s5-sportback/expert-reviews",
    "video": null,
    "image": null
   },
-  "BMW|2 Series": {
-   "slug": "bmw/new-2-series",
-   "url": "https://www.autocarindia.com/cars/bmw/new-2-series/expert-reviews",
-   "video": null,
+  "Audi|SQ8": {
+   "slug": "audi/new-sq8",
+   "url": "https://www.autocarindia.com/cars/audi/new-sq8/expert-reviews",
+   "video": {
+    "id": "9ycYSNrIyuw",
+    "title": "Audi SQ8 review - The 500hp sweet spot | First Drive | Autocar India",
+    "ago": "6 mo ago",
+    "src": "youtube"
+   },
    "image": null
+  },
+  "BMW|2 Series Gran Coupe": {
+   "slug": "bmw/2-series-gran-coupe",
+   "score": 7,
+   "scores": {
+    "features": 8,
+    "mileage": 8,
+    "comfort": 7,
+    "value": 7,
+    "performance": 6,
+    "design": 9
+   },
+   "like": [
+    "Quality interiors",
+    "Fun to drive"
+   ],
+   "dislike": [
+    "Cramped rear space",
+    "Expensive"
+   ],
+   "video": null,
+   "review": {
+    "title": "2025 BMW 2 Series Gran Coupe 218 review: 2 to Tango",
+    "url": "https://www.autocarindia.com/car-reviews/2025-bmw-2-series-gran-coupe-218-review-2-to-tango-436066"
+   },
+   "url": "https://www.autocarindia.com/cars/bmw/2-series-gran-coupe/expert-reviews",
+   "image": "bmw_2-series-gran-coupe"
   },
   "BMW|3 Series": {
    "slug": "bmw/3-series",
@@ -232,7 +295,12 @@
    "dislike": [
     "Cluttered touchscreen interface"
    ],
-   "video": null,
+   "video": {
+    "id": "E8h_7VFAz_A",
+    "title": "2023 BMW 3 Series Gran Limousine review - Comfort and Driving Pleasure | First Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "2025 BMW M340i review: Comfortable enough for daily driving",
     "url": "https://www.autocarindia.com/car-reviews/2025-bmw-m340i-review-comfortable-enough-for-daily-driving-434928"
@@ -240,22 +308,37 @@
    "url": "https://www.autocarindia.com/cars/bmw/3-series/expert-reviews",
    "image": "bmw_3-series"
   },
-  "BMW|3 Lwb": {
-   "slug": "bmw/3",
-   "url": "https://www.autocarindia.com/cars/bmw/3/expert-reviews",
+  "BMW|3 Series Lwb": {
+   "slug": "bmw/3-series-lwb",
+   "score": 9,
+   "scores": {
+    "features": 8,
+    "mileage": 7,
+    "comfort": 9,
+    "value": 8,
+    "performance": 8,
+    "design": 8
+   },
+   "like": [
+    "Rear seat space and comfort",
+    "Refinement (petrol)"
+   ],
+   "dislike": [
+    "Not as engaging as regular 3 Series",
+    "Price"
+   ],
    "video": {
     "id": "E8h_7VFAz_A",
     "title": "2023 BMW 3 Series Gran Limousine review - Comfort and Driving Pleasure | First Drive | Autocar India",
     "ago": "3 yr ago",
     "src": "youtube"
    },
-   "image": null
-  },
-  "BMW|4 Series": {
-   "slug": "bmw/new-4-series",
-   "url": "https://www.autocarindia.com/cars/bmw/new-4-series/expert-reviews",
-   "video": null,
-   "image": null
+   "review": {
+    "title": "2023 BMW 3 Series Gran Limousine review: The Long and Short of it",
+    "url": "https://www.autocarindia.com/car-reviews/2023-bmw-3-series-gran-limousine-review-the-long-and-short-of-it-426881"
+   },
+   "url": "https://www.autocarindia.com/cars/bmw/3-series-lwb/expert-reviews",
+   "image": "bmw_3-series-lwb"
   },
   "BMW|7 Series": {
    "slug": "bmw/7-series",
@@ -276,7 +359,12 @@
     "Polarising looks",
     "Expensive"
    ],
-   "video": null,
+   "video": {
+    "id": "5kiOJOVMVEM",
+    "title": "BMW 7 Series 740i review - Best of Luxe | First Drive | Autocar India",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "BMW 7 Series India review: Seventh Heaven",
     "url": "https://www.autocarindia.com/car-reviews/bmw-7-series-india-review-seventh-heaven-430526"
@@ -284,11 +372,32 @@
    "url": "https://www.autocarindia.com/cars/bmw/7-series/expert-reviews",
    "image": "bmw_7-series"
   },
-  "BMW|5 Lwb": {
-   "slug": "bmw/5",
-   "url": "https://www.autocarindia.com/cars/bmw/5/expert-reviews",
+  "BMW|5 Series Lwb": {
+   "slug": "bmw/5-series-lwb",
+   "score": 8,
+   "scores": {
+    "features": 8,
+    "mileage": 8,
+    "comfort": 7,
+    "value": 8,
+    "performance": 9,
+    "design": 7
+   },
+   "like": [
+    "Plush ride",
+    "Space and comfort"
+   ],
+   "dislike": [
+    "Does not feel athletic like old 5s",
+    "Missing some features"
+   ],
    "video": null,
-   "image": null
+   "review": {
+    "title": "BMW 5 Series LWB review: The 5 goes XL",
+    "url": "https://www.autocarindia.com/car-reviews/bmw-5-series-lwb-review-the-5-goes-xl-432280"
+   },
+   "url": "https://www.autocarindia.com/cars/bmw/5-series-lwb/expert-reviews",
+   "image": "bmw_5-series-lwb"
   },
   "BMW|i5": {
    "slug": "bmw/i5",
@@ -308,13 +417,24 @@
    "dislike": [
     "Polarising styling"
    ],
-   "video": null,
+   "video": {
+    "id": "DvhL-sm62_8",
+    "title": "BMW i5 M60 review - 601hp electric M5 | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "BMW i5 review: Silent M5",
     "url": "https://www.autocarindia.com/car-reviews/bmw-i5-review-silent-m5-433898"
    },
    "url": "https://www.autocarindia.com/cars/bmw/i5/expert-reviews",
    "image": "bmw_i5"
+  },
+  "BMW|4 Series": {
+   "slug": "bmw/new-4-series",
+   "url": "https://www.autocarindia.com/cars/bmw/new-4-series/expert-reviews",
+   "video": null,
+   "image": null
   },
   "BMW|i5 Lwb": {
    "slug": "bmw/i5",
@@ -367,7 +487,12 @@
     "Boot space compromised by spare tyre",
     "Infotainment is still fiddly to use"
    ],
-   "video": null,
+   "video": {
+    "id": "c_RQcn_Oarg",
+    "title": "2023 BMW i7 India review - The loudest thing about it is its styling! | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "2026 BMW i7 facelift review – All the luxury you need",
     "url": "https://www.autocarindia.com/car-reviews/bmw-i7-50-xdrive-review-all-the-luxury-you-need-440578"
@@ -375,11 +500,23 @@
    "url": "https://www.autocarindia.com/cars/bmw/i7/expert-reviews",
    "image": "bmw_i7"
   },
+  "BMW|M2": {
+   "slug": "bmw/new-m2",
+   "url": "https://www.autocarindia.com/cars/bmw/new-m2/expert-reviews",
+   "video": null,
+   "image": null
+  },
   "BMW|M4": {
    "slug": "bmw/new-m4",
    "url": "https://www.autocarindia.com/cars/bmw/new-m4/expert-reviews",
    "video": null,
    "image": null
+  },
+  "BMW|M5": {
+   "slug": "bmw/new-m5",
+   "url": "https://www.autocarindia.com/cars/bmw/new-m5/expert-reviews",
+   "video": null,
+   "image": "bmw_m5"
   },
   "BMW|X1": {
    "slug": "bmw/x1",
@@ -394,7 +531,12 @@
    },
    "like": [],
    "dislike": [],
-   "video": null,
+   "video": {
+    "id": "2Mm-8vKdZfo",
+    "title": "2023 BMW X1 review - Best selling luxury SUV takes a big step forward | First Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "2023 BMW X1 review: The All-rounder",
     "url": "https://www.autocarindia.com/car-reviews/2023-bmw-x1-review-the-all-rounder-428555"
@@ -402,11 +544,37 @@
    "url": "https://www.autocarindia.com/cars/bmw/x1/expert-reviews",
    "image": "bmw_x1"
   },
-  "BMW|M2": {
-   "slug": "bmw/new-m2",
-   "url": "https://www.autocarindia.com/cars/bmw/new-m2/expert-reviews",
-   "video": null,
-   "image": null
+  "BMW|iX1 Lwb": {
+   "slug": "bmw/ix1-lwb",
+   "score": 7,
+   "scores": {
+    "features": 7,
+    "mileage": 8,
+    "comfort": 8,
+    "value": 9,
+    "performance": 7,
+    "design": 7
+   },
+   "like": [
+    "Attractive price",
+    "Rear-seat space"
+   ],
+   "dislike": [
+    "Unexciting to drive",
+    "Misses key features"
+   ],
+   "video": {
+    "id": "kOqE5imZEGw",
+    "title": "BMW iX1 review - This all-electric X1 is the most powerful X1 | First Drive | @autocarindia1",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "BMW iX1 LWB review: Space over pace",
+    "url": "https://www.autocarindia.com/car-reviews/bmw-ix1-lwb-review-space-over-pace-434439"
+   },
+   "url": "https://www.autocarindia.com/cars/bmw/ix1-lwb/expert-reviews",
+   "image": "bmw_ix1-lwb"
   },
   "BMW|X1 Lwb": {
    "slug": "bmw/x1-lwb",
@@ -440,11 +608,70 @@
    "url": "https://www.autocarindia.com/cars/bmw/x1-lwb/expert-reviews",
    "image": "bmw_x1-lwb"
   },
-  "BMW|M5": {
-   "slug": "bmw/new-m5",
-   "url": "https://www.autocarindia.com/cars/bmw/new-m5/expert-reviews",
-   "video": null,
-   "image": "bmw_m5"
+  "BMW|X5": {
+   "slug": "bmw/x5",
+   "score": 8,
+   "scores": {
+    "features": 8,
+    "mileage": 7,
+    "comfort": 8.5,
+    "value": 8,
+    "performance": 8,
+    "design": 9
+   },
+   "like": [
+    "Plush interior",
+    "Performance"
+   ],
+   "dislike": [
+    "Pricey",
+    "Not as sharp as earlier models"
+   ],
+   "video": {
+    "id": "imW2tu4EPX8",
+    "title": "2023 BMW X5 facelift review – Scalpel or Sledgehammer? | First Drive | @autocarindia1",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2023 BMW X5 facelift review: X5 marks the spot",
+    "url": "https://www.autocarindia.com/car-reviews/2023-bmw-x5-facelift-review-xtra-premium-429669"
+   },
+   "url": "https://www.autocarindia.com/cars/bmw/x5/expert-reviews",
+   "image": "bmw_x5"
+  },
+  "BMW|X6": {
+   "slug": "bmw/x6",
+   "score": 9,
+   "scores": {
+    "features": null,
+    "mileage": null,
+    "comfort": null,
+    "value": null,
+    "performance": null,
+    "design": null
+   },
+   "like": [
+    "Ballistic performance",
+    "High-quality cabin",
+    "Engaging to drive"
+   ],
+   "dislike": [
+    "Relatively small boot",
+    "Low-set rear seat"
+   ],
+   "video": {
+    "id": "bTIZlLIAnVg",
+    "title": "2026 BMW X6 M60i review - Back with a V8 | First Drive | Autocar India",
+    "ago": "3 mo ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "BMW X6 M60i xDrive review: V8-engined brute",
+    "url": "https://www.autocarindia.com/car-reviews/bmw-x6-m60i-xdrive-review-v8-engined-brute-440468"
+   },
+   "url": "https://www.autocarindia.com/cars/bmw/x6/expert-reviews",
+   "image": "bmw_x6"
   },
   "BMW|X7": {
    "slug": "bmw/x7",
@@ -465,13 +692,147 @@
     "Feels its size in town",
     "Styling not to all tastes"
    ],
-   "video": null,
+   "video": {
+    "id": "qNMzP80ll7c",
+    "title": "2023 BMW X7 review - Face Value | First Drive | @autocarindia1",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "BMW X7 facelift review: New face, new heart ",
     "url": "https://www.autocarindia.com/car-reviews/bmw-x7-facelift-review-new-face-new-heart-429675"
    },
    "url": "https://www.autocarindia.com/cars/bmw/x7/expert-reviews",
    "image": "bmw_x7"
+  },
+  "BYD|Atto 3": {
+   "slug": "byd/atto-3",
+   "score": 7,
+   "scores": {
+    "features": 8,
+    "mileage": 8,
+    "comfort": 7.5,
+    "value": 8,
+    "performance": 7,
+    "design": 7
+   },
+   "like": [
+    "Comes with robust battery tech",
+    "Feels easy and relaxed to drive",
+    "Comfortable and uniquely styled cabin"
+   ],
+   "dislike": [
+    "Small dealer network",
+    "Expensive compared to rivals"
+   ],
+   "video": {
+    "id": "pdx5gYTk4OM",
+    "title": "2022 BYD Atto 3 review - Real world range test | Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "BYD Atto 3 review: Characterful and slick to drive",
+    "url": "https://www.autocarindia.com/car-reviews/byd-atto-3-review-characterful-and-slick-to-drive-426560"
+   },
+   "url": "https://www.autocarindia.com/cars/byd/atto-3/expert-reviews",
+   "image": "byd_atto-3"
+  },
+  "BYD|eMAX 7": {
+   "slug": "byd/emax-7",
+   "score": 7,
+   "scores": {
+    "features": 8,
+    "mileage": 8,
+    "comfort": 7,
+    "value": 8,
+    "performance": 7,
+    "design": 6
+   },
+   "like": [
+    "Comfortable ride",
+    "Spacious, user-friendly cabin"
+   ],
+   "dislike": [
+    "Small aftersales network",
+    "Limited thigh support"
+   ],
+   "video": {
+    "id": "_xPUpS_4Hdc",
+    "title": "BYD eMax 7 review - Can it be an all-electric alternative to a Toyota Innova? | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "BYD eMax 7 review: Max comfort?",
+    "url": "https://www.autocarindia.com/car-reviews/byd-emax-7-review-max-comfort-433337"
+   },
+   "url": "https://www.autocarindia.com/cars/byd/emax-7/expert-reviews",
+   "image": "byd_emax-7"
+  },
+  "BYD|Seal": {
+   "slug": "byd/seal",
+   "score": 9,
+   "scores": {
+    "features": 9,
+    "mileage": 7,
+    "comfort": 8,
+    "value": 9,
+    "performance": 9,
+    "design": 9
+   },
+   "like": [
+    "Luxury, Comfort and Features",
+    "Price, Performance"
+   ],
+   "dislike": [
+    "Ground clearance",
+    "Limited dealer network"
+   ],
+   "video": {
+    "id": "fi3NEYxR5Kk",
+    "title": "BYD Seal India Review - Still want that luxury sedan? | @autocarindia1",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2024 BYD Seal review: Still want that luxury sedan?",
+    "url": "https://www.autocarindia.com/car-reviews/byd-seal-india-review-still-want-that-luxury-sedan-430910"
+   },
+   "url": "https://www.autocarindia.com/cars/byd/seal/expert-reviews",
+   "image": "byd_seal"
+  },
+  "BYD|Sealion 7": {
+   "slug": "byd/sealion-7",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 7,
+    "comfort": 8,
+    "value": 9,
+    "performance": 8,
+    "design": 8
+   },
+   "like": [
+    "Interior design: Modern, practical, tech laden and high on quality",
+    "Powertrain: Smooth, strong and progressive, making it enjoyable"
+   ],
+   "dislike": [
+    "Road and wind noise can be heard in the cabin at highway speeds",
+    "Distracting driver's display and HUD cram too much info in a small space"
+   ],
+   "video": {
+    "id": "eRtvmyosPWk",
+    "title": "2025 BYD Sealion 7 review - Sportscar performance, SUV practicality | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2025 BYD Sealion 7 review: Tech laden luxury electric SUV",
+    "url": "https://www.autocarindia.com/car-reviews/2025-byd-sealion-7-review-tech-laden-luxury-electric-suv-434585"
+   },
+   "url": "https://www.autocarindia.com/cars/byd/sealion-7/expert-reviews",
+   "image": "byd_sealion-7"
   },
   "BMW|X3": {
    "slug": "bmw/x3",
@@ -494,15 +855,72 @@
    ],
    "video": {
     "id": "ZBBBHXqvK18",
-    "title": "2026 BMW X3 30 xDrive video review",
-    "year": 2026
+    "title": "2026 BMW X3 30 xDrive review - Petrol engine now packs a punch | First Drive | Autocar India",
+    "ago": "7 mo ago",
+    "src": "youtube"
    },
    "review": {
     "title": "BMW X3 30 xDrive review: The engine it deserves",
     "url": "https://www.autocarindia.com/car-reviews/bmw-x3-30-xdrive-review-the-engine-it-deserves-440330"
    },
    "url": "https://www.autocarindia.com/cars/bmw/x3/expert-reviews",
-   "image": "bmw_x3"
+   "image": null
+  },
+  "Citroën|AircrossX": {
+   "slug": "citroen/new-aircrossx",
+   "url": "https://www.autocarindia.com/cars/citroen/new-aircrossx/expert-reviews",
+   "video": null,
+   "image": null
+  },
+  "Citroën|BasaltX": {
+   "slug": "citroen/new-basaltx",
+   "url": "https://www.autocarindia.com/cars/citroen/new-basaltx/expert-reviews",
+   "video": null,
+   "image": null
+  },
+  "Citroën|C5 Aircross": {
+   "slug": "citroen/c5-aircross",
+   "score": 7,
+   "scores": {
+    "features": 6,
+    "mileage": 8,
+    "comfort": 8,
+    "value": 6,
+    "performance": 8,
+    "design": 8
+   },
+   "like": [
+    "Plush ride, space and comfort",
+    "Chic, standout style"
+   ],
+   "dislike": [
+    "Missing some equipment",
+    "Individual rear seats not ideal"
+   ],
+   "video": {
+    "id": "nq9-RnBEq-A",
+    "title": "2022 Citroen C5 Aircross review - French Connection | First Drive | Autocar India",
+    "ago": "4 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Citroen C5 Aircross facelift review: New hits, old misses",
+    "url": "https://www.autocarindia.com/car-reviews/citroen-c5-aircross-facelift-review-new-hits-old-misses-425699"
+   },
+   "url": "https://www.autocarindia.com/cars/citroen/c5-aircross/expert-reviews",
+   "image": "citroen_c5-aircross"
+  },
+  "Citroën|C3X": {
+   "slug": "citroen/new-c3x",
+   "url": "https://www.autocarindia.com/cars/citroen/new-c3x/expert-reviews",
+   "video": null,
+   "image": null
+  },
+  "Citroën|ë-C3X": {
+   "slug": "citroen/new-e-c3x",
+   "url": "https://www.autocarindia.com/cars/citroen/new-e-c3x/expert-reviews",
+   "video": null,
+   "image": null
   },
   "Honda|Amaze": {
    "slug": "honda/amaze",
@@ -536,59 +954,105 @@
    "url": "https://www.autocarindia.com/cars/honda/amaze/expert-reviews",
    "image": "honda_amaze"
   },
-  "BMW|X5": {
-   "slug": "bmw/x5",
-   "score": 8,
-   "scores": {
-    "features": 8,
-    "mileage": 7,
-    "comfort": 8.5,
-    "value": 8,
-    "performance": 8,
-    "design": 9
-   },
-   "like": [
-    "Plush interior",
-    "Performance"
-   ],
-   "dislike": [
-    "Pricey",
-    "Not as sharp as earlier models"
-   ],
+  "Force Motors|Gurkha 3-Door": {
+   "slug": "force-motors/new-gurkha-3-door",
+   "url": "https://www.autocarindia.com/cars/force-motors/new-gurkha-3-door/expert-reviews",
    "video": null,
-   "review": {
-    "title": "2023 BMW X5 facelift review: X5 marks the spot",
-    "url": "https://www.autocarindia.com/car-reviews/2023-bmw-x5-facelift-review-xtra-premium-429669"
-   },
-   "url": "https://www.autocarindia.com/cars/bmw/x5/expert-reviews",
-   "image": "bmw_x5"
+   "image": null
+  },
+  "Force Motors|Gurkha 5-Door": {
+   "slug": "force-motors/new-gurkha-5-door",
+   "url": "https://www.autocarindia.com/cars/force-motors/new-gurkha-5-door/expert-reviews",
+   "video": null,
+   "image": null
   },
   "Honda|Elevate": {
    "slug": "honda/elevate",
-   "score": 8,
+   "score": null,
    "scores": {
-    "features": 7,
-    "mileage": 7,
-    "comfort": 8,
-    "value": 8,
-    "performance": 7,
-    "design": 8
+    "features": 0,
+    "mileage": 0,
+    "comfort": 0,
+    "value": 0,
+    "performance": 0,
+    "design": 0
    },
-   "like": [
-    "Space and comfort",
-    "Ride and handling"
-   ],
-   "dislike": [
-    "Features not up to class standards",
-    "Needs a turbo or hybrid engine option"
-   ],
+   "like": [],
+   "dislike": [],
    "video": null,
-   "review": {
-    "title": "Honda Elevate road test, review",
-    "url": "https://www.autocarindia.com/car-reviews/honda-elevate-road-test-review-429807"
-   },
+   "review": null,
    "url": "https://www.autocarindia.com/cars/honda/elevate/expert-reviews",
    "image": "honda_elevate"
+  },
+  "Honda|City": {
+   "slug": "honda/city",
+   "score": 7,
+   "scores": {
+    "features": 7,
+    "mileage": 8,
+    "comfort": 8,
+    "value": 6,
+    "performance": 7,
+    "design": 7
+   },
+   "like": [
+    "Smooth and efficient hybrid powertrain",
+    "Spacious and comfortable cabin"
+   ],
+   "dislike": [
+    "Expensive at the top end",
+    "Basic-looking screen that’s hard to read in sunlight"
+   ],
+   "video": {
+    "id": "qbuvTb4EWCQ",
+    "title": "2026 Honda City facelift review – Sensible sedan gets a shot of attitude |First Drive| Autocar India",
+    "ago": "4 mo ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2026 Honda City hybrid review: Incremental changes",
+    "url": "https://www.autocarindia.com/car-reviews/2026-honda-city-hybrid-review-incremental-changes-440435"
+   },
+   "url": "https://www.autocarindia.com/cars/honda/city/expert-reviews",
+   "image": "honda_city"
+  },
+  "Honda|ZR-V": {
+   "slug": "honda/zr-v",
+   "score": 6,
+   "scores": {
+    "features": 6,
+    "mileage": 8,
+    "comfort": 7,
+    "value": 5,
+    "performance": 8,
+    "design": 7
+   },
+   "like": [
+    "Powertrain is punchy and refined",
+    "Comfy, well-finished interior"
+   ],
+   "dislike": [
+    "Misses some features",
+    "Lacks road presence"
+   ],
+   "video": {
+    "id": "hywVgZ-Yb7E",
+    "title": "Honda ZR-V track drive review - Best of both worlds? | First Drive | Autocar India",
+    "ago": "2 mo ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Honda ZR-V track drive review: Best of both worlds?",
+    "url": "https://www.autocarindia.com/car-reviews/honda-zr-v-track-drive-review-best-of-both-worlds-440491"
+   },
+   "url": "https://www.autocarindia.com/cars/honda/zr-v/expert-reviews",
+   "image": "honda_zr-v"
+  },
+  "Honda|City e:HEV": {
+   "slug": "honda/new-city-e-hev",
+   "url": "https://www.autocarindia.com/cars/honda/new-city-e-hev/expert-reviews",
+   "video": null,
+   "image": null
   },
   "Hyundai|Alcazar": {
    "slug": "hyundai/alcazar",
@@ -609,7 +1073,12 @@
     "Seating 6/7 is a compromise",
     "Diesel engine could do with more punch"
    ],
-   "video": null,
+   "video": {
+    "id": "XBvcvHP5xjY",
+    "title": "2024 Hyundai Alcazar facelift review - New look, better comfort | First Drive | Autocar India",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "Hyundai Alcazar diesel review: The one to buy?",
     "url": "https://www.autocarindia.com/car-reviews/hyundai-alcazar-diesel-review-the-one-to-buy-433836"
@@ -636,72 +1105,18 @@
    "dislike": [
     "Not as spacious as rivals"
    ],
-   "video": null,
+   "video": {
+    "id": "V28ho4WZKts",
+    "title": "2023 Hyundai Aura review - More Style, More Safety | First Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "Hyundai Aura facelift review: More style, more safety",
     "url": "https://www.autocarindia.com/car-reviews/hyundai-aura-facelift-review-more-style-more-safety-427391"
    },
    "url": "https://www.autocarindia.com/cars/hyundai/aura/expert-reviews",
    "image": "hyundai_aura"
-  },
-  "Hyundai|Creta": {
-   "slug": "hyundai/creta",
-   "score": 9,
-   "scores": {
-    "features": 9,
-    "mileage": 7,
-    "comfort": 8.5,
-    "value": 9,
-    "performance": 8,
-    "design": 8
-   },
-   "like": [
-    "Feature-packed",
-    "Roomy interior"
-   ],
-   "dislike": [
-    "Top versions are pricey",
-    "Some plastics could be better"
-   ],
-   "video": {
-    "id": "nkR5gqHWZIM",
-    "title": "2024 Hyundai Creta facelift review - Still the mid-size SUV to buy? | First Drive |@autocarindia1",
-    "ago": "2 yr ago",
-    "src": "youtube"
-   },
-   "review": {
-    "title": "Hyundai Creta facelift review: Even more wholesome now",
-    "url": "https://www.autocarindia.com/car-reviews/2024-hyundai-creta-facelift-review-even-more-wholesome-now-430368"
-   },
-   "url": "https://www.autocarindia.com/cars/hyundai/creta/expert-reviews",
-   "image": "hyundai_creta"
-  },
-  "Honda|City": {
-   "slug": "honda/city",
-   "score": 7,
-   "scores": {
-    "features": 7,
-    "mileage": 8,
-    "comfort": 8,
-    "value": 6,
-    "performance": 7,
-    "design": 7
-   },
-   "like": [
-    "Smooth and efficient hybrid powertrain",
-    "Spacious and comfortable cabin"
-   ],
-   "dislike": [
-    "Expensive at the top end",
-    "Basic-looking screen that’s hard to read in sunlight"
-   ],
-   "video": null,
-   "review": {
-    "title": "2026 Honda City hybrid review: Incremental changes",
-    "url": "https://www.autocarindia.com/car-reviews/2026-honda-city-hybrid-review-incremental-changes-440435"
-   },
-   "url": "https://www.autocarindia.com/cars/honda/city/expert-reviews",
-   "image": "honda_city"
   },
   "Hyundai|Creta Electric": {
    "slug": "hyundai/creta-electric",
@@ -756,7 +1171,12 @@
     "Top versions are pricey",
     "Some plastics could be better"
    ],
-   "video": null,
+   "video": {
+    "id": "KYgZbHFnHGo",
+    "title": "Hyundai Creta N Line review - The Creta with masala  | First Drive | @autocarindia1",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "Hyundai Creta facelift review: Even more wholesome now",
     "url": "https://www.autocarindia.com/car-reviews/2024-hyundai-creta-facelift-review-even-more-wholesome-now-430368"
@@ -778,7 +1198,12 @@
    },
    "like": [],
    "dislike": [],
-   "video": null,
+   "video": {
+    "id": "HFXtm4xEoeA",
+    "title": "Hyundai Exter review - Feature-packed Tata Punch rival | First Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "Hyundai Exter review: Punches above its weight",
     "url": "https://www.autocarindia.com/car-reviews/hyundai-exter-review-punches-above-its-weight-428754"
@@ -805,12 +1230,7 @@
     "Low rear seat",
     "Unexciting to drive"
    ],
-   "video": {
-    "id": "MBv-pH-KJik",
-    "title": "2023 Hyundai Grand i10 Nios review - A bit more flash for a bit more cash | Autocar India",
-    "ago": "3 yr ago",
-    "src": "youtube"
-   },
+   "video": null,
    "review": {
     "title": "Hyundai Grand i10 Nios facelift review: The sensible city car",
     "url": "https://www.autocarindia.com/car-reviews/hyundai-grand-i10-nios-facelift-review-the-sensible-city-car-427103"
@@ -876,6 +1296,38 @@
    "url": "https://www.autocarindia.com/cars/hyundai/i20/expert-reviews",
    "image": "hyundai_i20"
   },
+  "Hyundai|Creta": {
+   "slug": "hyundai/creta",
+   "score": 9,
+   "scores": {
+    "features": 9,
+    "mileage": 7,
+    "comfort": 8.5,
+    "value": 9,
+    "performance": 8,
+    "design": 8
+   },
+   "like": [
+    "Feature-packed",
+    "Roomy interior"
+   ],
+   "dislike": [
+    "Top versions are pricey",
+    "Some plastics could be better"
+   ],
+   "video": {
+    "id": "nkR5gqHWZIM",
+    "title": "2024 Hyundai Creta facelift review - Still the mid-size SUV to buy? | First Drive |@autocarindia1",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Hyundai Creta facelift review: Even more wholesome now",
+    "url": "https://www.autocarindia.com/car-reviews/2024-hyundai-creta-facelift-review-even-more-wholesome-now-430368"
+   },
+   "url": "https://www.autocarindia.com/cars/hyundai/creta/expert-reviews",
+   "image": "hyundai_creta"
+  },
   "Hyundai|IONIQ 5": {
    "slug": "hyundai/ioniq-5",
    "score": 9,
@@ -889,13 +1341,105 @@
    },
    "like": [],
    "dislike": [],
-   "video": null,
+   "video": {
+    "id": "6Lxk_18aNrE",
+    "title": "Hyundai Ioniq 5 review - This electric car is VFM at Rs 45 lakh! | Drive| Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "Hyundai Ioniq 5 N review: N-thusiasts assemble",
     "url": "https://www.autocarindia.com/car-reviews/hyundai-ioniq-5-n-review-n-thusiasts-assemble-429958"
    },
    "url": "https://www.autocarindia.com/cars/hyundai/ioniq-5/expert-reviews",
    "image": "hyundai_ioniq-5"
+  },
+  "Hyundai|Venue N Line": {
+   "slug": "hyundai/venue",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 8,
+    "comfort": 7.5,
+    "value": 8,
+    "performance": 8,
+    "design": 9
+   },
+   "like": [
+    "Cabin looks and feels premium",
+    "Slick infotainment system",
+    "Refined diesel and smooth auto combo."
+   ],
+   "dislike": [
+    "Ride still has an underlying firmness",
+    "N Line mechanically identical to standard version."
+   ],
+   "video": {
+    "id": "MkXSWXyDDNY",
+    "title": "2022 Hyundai Venue N-Line review - Sporting Spirit | First Drive | Autocar India",
+    "ago": "4 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "New Hyundai Venue review: All grown up",
+    "url": "https://www.autocarindia.com/car-reviews/new-hyundai-venue-review-all-grown-up-438733"
+   },
+   "basedOn": "Venue",
+   "url": "https://www.autocarindia.com/cars/hyundai/venue/expert-reviews",
+   "image": "hyundai_venue"
+  },
+  "Hyundai|Verna": {
+   "slug": "hyundai/verna",
+   "score": 8,
+   "scores": {
+    "features": null,
+    "mileage": null,
+    "comfort": null,
+    "value": null,
+    "performance": null,
+    "design": null
+   },
+   "like": [],
+   "dislike": [],
+   "video": {
+    "id": "p1lv10Ri7bY",
+    "title": "2023 Hyundai Verna review - Moving up a notch | First Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2023 Hyundai Verna review: Moving up a notch",
+    "url": "https://www.autocarindia.com/car-reviews/2023-hyundai-verna-review-moving-up-a-notch-427643"
+   },
+   "url": "https://www.autocarindia.com/cars/hyundai/verna/expert-reviews",
+   "image": "hyundai_verna"
+  },
+  "Isuzu|D-Max V-Cross": {
+   "slug": "isuzu/d-max-v-cross",
+   "score": 7,
+   "scores": {
+    "features": 6,
+    "mileage": 7,
+    "comfort": 6,
+    "value": 6,
+    "performance": 6,
+    "design": 8
+   },
+   "like": [
+    "Good load-carrying ability",
+    "Feels tough"
+   ],
+   "dislike": [
+    "Pricey, as far as pick-ups go",
+    "Cumbersome to drive in town"
+   ],
+   "video": null,
+   "review": {
+    "title": "2019 Isuzu D-Max V-Cross Z-Prestige review, test drive",
+    "url": "https://www.autocarindia.com/car-reviews/2019-isuzu-d-max-v-cross-z-prestige-review-test-drive-414237"
+   },
+   "url": "https://www.autocarindia.com/cars/isuzu/d-max-v-cross/expert-reviews",
+   "image": "isuzu_d-max-v-cross"
   },
   "Hyundai|Venue": {
    "slug": "hyundai/venue",
@@ -930,34 +1474,98 @@
    "url": "https://www.autocarindia.com/cars/hyundai/venue/expert-reviews",
    "image": "hyundai_venue"
   },
-  "Hyundai|Venue N Line": {
-   "slug": "hyundai/venue",
-   "score": 8,
+  "Isuzu|MU-X": {
+   "slug": "isuzu/mu-x",
+   "score": 5,
    "scores": {
-    "features": 9,
-    "mileage": 8,
-    "comfort": 7.5,
-    "value": 8,
-    "performance": 8,
-    "design": 9
+    "features": 4,
+    "mileage": 6,
+    "comfort": 6.5,
+    "value": 7,
+    "performance": 7,
+    "design": 6
    },
    "like": [
-    "Cabin looks and feels premium",
-    "Slick infotainment system",
-    "Refined diesel and smooth auto combo."
+    "Spacious cabin",
+    "Feels tough"
    ],
    "dislike": [
-    "Ride still has an underlying firmness",
-    "N Line mechanically identical to standard version."
+    "Loud engine",
+    "Heavy steering"
    ],
    "video": null,
    "review": {
-    "title": "New Hyundai Venue review: All grown up",
-    "url": "https://www.autocarindia.com/car-reviews/new-hyundai-venue-review-all-grown-up-438733"
+    "title": "2017 Isuzu MUX review: Plain but purposeful",
+    "url": "https://www.autocarindia.com/car-reviews/2017-isuzu-mu-x-review-test-drive-404894"
    },
-   "basedOn": "Venue",
-   "url": "https://www.autocarindia.com/cars/hyundai/venue/expert-reviews",
-   "image": "hyundai_venue"
+   "url": "https://www.autocarindia.com/cars/isuzu/mu-x/expert-reviews",
+   "image": "isuzu_mu-x"
+  },
+  "Jaguar|F-PACE": {
+   "slug": "jaguar/f-pace",
+   "score": 7,
+   "scores": {
+    "features": 7,
+    "mileage": 7,
+    "comfort": 8,
+    "value": 8,
+    "performance": 7,
+    "design": 9
+   },
+   "like": [
+    "Driving dynamics",
+    "Stunning exterior",
+    "Luxurious interior"
+   ],
+   "dislike": [
+    "Fiddly touch switches",
+    "Low-speed ride",
+    "Road noise"
+   ],
+   "video": null,
+   "review": {
+    "title": "2021 Jaguar F Pace Facelift Review: Inside Job",
+    "url": "https://www.autocarindia.com/car-reviews/2021-jaguar-f-pace-facelift-review-test-drive-421508"
+   },
+   "url": "https://www.autocarindia.com/cars/jaguar/f-pace/expert-reviews",
+   "image": "jaguar_f-pace"
+  },
+  "Isuzu|Hi-Lander": {
+   "slug": "isuzu/new-hi-lander",
+   "url": "https://www.autocarindia.com/cars/isuzu/new-hi-lander/expert-reviews",
+   "video": null,
+   "image": null
+  },
+  "Jeep|Grand Cherokee": {
+   "slug": "jeep/grand-cherokee",
+   "score": 7,
+   "scores": {
+    "features": 8,
+    "mileage": 5,
+    "comfort": 8,
+    "value": 9,
+    "performance": 7,
+    "design": 8
+   },
+   "like": [
+    "Feels tough",
+    "Price"
+   ],
+   "dislike": [
+    "No diesel engine"
+   ],
+   "video": {
+    "id": "tCfPEBsbv8w",
+    "title": "2022 Jeep Grand Cherokee review - Can it be your mobile office? | First Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "New Jeep Grand Cherokee India review: Tough Love",
+    "url": "https://www.autocarindia.com/car-reviews/new-jeep-grand-cherokee-india-review-tough-love-426431"
+   },
+   "url": "https://www.autocarindia.com/cars/jeep/grand-cherokee/expert-reviews",
+   "image": "jeep_grand-cherokee"
   },
   "Jeep|Compass": {
    "slug": "jeep/compass",
@@ -992,85 +1600,6 @@
    "url": "https://www.autocarindia.com/cars/jeep/compass/expert-reviews",
    "image": "jeep_compass"
   },
-  "Jeep|Meridian": {
-   "slug": "jeep/meridian",
-   "score": 8,
-   "scores": {
-    "features": 8,
-    "mileage": 6,
-    "comfort": 7,
-    "value": 6,
-    "performance": 6,
-    "design": 8
-   },
-   "like": [
-    "4X4 capability",
-    "Outstanding ride and handling"
-   ],
-   "dislike": [
-    "No petrol option",
-    "Cramped third row"
-   ],
-   "video": null,
-   "review": {
-    "title": "2022 Jeep Meridian review, test drive",
-    "url": "https://www.autocarindia.com/car-reviews/2022-jeep-meridian-review-test-drive-424148"
-   },
-   "url": "https://www.autocarindia.com/cars/jeep/meridian/expert-reviews",
-   "image": "jeep_meridian"
-  },
-  "Jeep|Grand Cherokee": {
-   "slug": "jeep/grand-cherokee",
-   "score": 7,
-   "scores": {
-    "features": 8,
-    "mileage": 5,
-    "comfort": 8,
-    "value": 9,
-    "performance": 7,
-    "design": 8
-   },
-   "like": [
-    "Feels tough",
-    "Price"
-   ],
-   "dislike": [
-    "No diesel engine"
-   ],
-   "video": null,
-   "review": {
-    "title": "New Jeep Grand Cherokee India review: Tough Love",
-    "url": "https://www.autocarindia.com/car-reviews/new-jeep-grand-cherokee-india-review-tough-love-426431"
-   },
-   "url": "https://www.autocarindia.com/cars/jeep/grand-cherokee/expert-reviews",
-   "image": "jeep_grand-cherokee"
-  },
-  "Hyundai|Verna": {
-   "slug": "hyundai/verna",
-   "score": 8,
-   "scores": {
-    "features": null,
-    "mileage": null,
-    "comfort": null,
-    "value": null,
-    "performance": null,
-    "design": null
-   },
-   "like": [],
-   "dislike": [],
-   "video": {
-    "id": "p1lv10Ri7bY",
-    "title": "2023 Hyundai Verna review - Moving up a notch | First Drive | Autocar India",
-    "ago": "3 yr ago",
-    "src": "youtube"
-   },
-   "review": {
-    "title": "2023 Hyundai Verna review: Moving up a notch",
-    "url": "https://www.autocarindia.com/car-reviews/2023-hyundai-verna-review-moving-up-a-notch-427643"
-   },
-   "url": "https://www.autocarindia.com/cars/hyundai/verna/expert-reviews",
-   "image": "hyundai_verna"
-  },
   "Jeep|Wrangler": {
    "slug": "jeep/wrangler",
    "score": 7,
@@ -1090,13 +1619,50 @@
     "No diesel option",
     "Expensive"
    ],
-   "video": null,
+   "video": {
+    "id": "fST3XudDROA",
+    "title": "2024 Jeep Wrangler Rubicon - Off-road King | First Drive | @autocarindia1",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "Jeep Wrangler Rubicon facelift review: The OG SUV",
     "url": "https://www.autocarindia.com/car-reviews/jeep-wrangler-rubicon-facelift-review-the-og-suv-431349"
    },
    "url": "https://www.autocarindia.com/cars/jeep/wrangler/expert-reviews",
    "image": "jeep_wrangler"
+  },
+  "Jeep|Meridian": {
+   "slug": "jeep/meridian",
+   "score": 8,
+   "scores": {
+    "features": 8,
+    "mileage": 6,
+    "comfort": 7,
+    "value": 6,
+    "performance": 6,
+    "design": 8
+   },
+   "like": [
+    "4X4 capability",
+    "Outstanding ride and handling"
+   ],
+   "dislike": [
+    "No petrol option",
+    "Cramped third row"
+   ],
+   "video": {
+    "id": "Qr5PVMK-Dgs",
+    "title": "2022 Jeep Meridian review - 7 seat Jeep Compass derivative to rival the Fortuner | Autocar India",
+    "ago": "4 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2022 Jeep Meridian review, test drive",
+    "url": "https://www.autocarindia.com/car-reviews/2022-jeep-meridian-review-test-drive-424148"
+   },
+   "url": "https://www.autocarindia.com/cars/jeep/meridian/expert-reviews",
+   "image": "jeep_meridian"
   },
   "Kia|Carens": {
    "slug": "kia/carens",
@@ -1129,6 +1695,38 @@
    },
    "url": "https://www.autocarindia.com/cars/kia/carens/expert-reviews",
    "image": "kia_carens"
+  },
+  "Kia|Carens Clavis": {
+   "slug": "kia/carens-clavis",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 8,
+    "comfort": 7.5,
+    "value": 7,
+    "performance": 7,
+    "design": 8
+   },
+   "like": [
+    "Spacious and practical interior",
+    " Comfortable in all three rows of seats"
+   ],
+   "dislike": [
+    "Diesel auto lacks punch",
+    "Engines audible inside"
+   ],
+   "video": {
+    "id": "R3s1OlYuM0Q",
+    "title": "2025 Kia Carens Clavis review - Carens goes upmarket | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Kia Carens Clavis 1.5 petrol review: The Value Pick",
+    "url": "https://www.autocarindia.com/car-reviews/kia-carens-clavis-15-petrol-review-the-value-pick-440204"
+   },
+   "url": "https://www.autocarindia.com/cars/kia/carens-clavis/expert-reviews",
+   "image": "kia_carens-clavis"
   },
   "Kia|Carens Clavis EV": {
    "slug": "kia/carens-clavis-ev",
@@ -1222,37 +1820,6 @@
    "url": "https://www.autocarindia.com/cars/kia/ev9/expert-reviews",
    "image": "kia_ev9"
   },
-  "Kia|Carens Clavis": {
-   "slug": "kia/carens-clavis",
-   "score": 8,
-   "scores": {
-    "features": 9,
-    "mileage": 8,
-    "comfort": 7.5,
-    "value": 7,
-    "performance": 7,
-    "design": 8
-   },
-   "like": [
-    "Spacious and practical interior",
-    " Comfortable in all three rows of seats"
-   ],
-   "dislike": [
-    "Diesel auto lacks punch",
-    "Engines audible inside"
-   ],
-   "video": {
-    "id": "migp_xLvDVs",
-    "title": "Kia Carens Clavis 1.5 Petrol video review",
-    "year": 2026
-   },
-   "review": {
-    "title": "Kia Carens Clavis 1.5 petrol review: The Value Pick",
-    "url": "https://www.autocarindia.com/car-reviews/kia-carens-clavis-15-petrol-review-the-value-pick-440204"
-   },
-   "url": "https://www.autocarindia.com/cars/kia/carens-clavis/expert-reviews",
-   "image": "kia_carens-clavis"
-  },
   "Kia|Sonet": {
    "slug": "kia/sonet",
    "score": 8,
@@ -1272,40 +1839,18 @@
     "Rear seat space ",
     "Top versions are expensive"
    ],
-   "video": null,
+   "video": {
+    "id": "5a2U4VycU1s",
+    "title": "2024 Kia Sonet facelift review - Feature perfect | First Drive | Autocar India",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "2024 Kia Sonet facelift review: Feature perfect",
     "url": "https://www.autocarindia.com/car-reviews/2024-kia-sonet-facelift-review-feature-perfect-430266"
    },
    "url": "https://www.autocarindia.com/cars/kia/sonet/expert-reviews",
    "image": "kia_sonet"
-  },
-  "Kia|Carnival": {
-   "slug": "kia/carnival",
-   "score": 7,
-   "scores": {
-    "features": 9,
-    "mileage": 6,
-    "comfort": 8,
-    "value": 7,
-    "performance": 8,
-    "design": 9
-   },
-   "like": [
-    "Second-row comfort",
-    "Spacious, flexible interior"
-   ],
-   "dislike": [
-    "Engine noise",
-    "Price"
-   ],
-   "video": null,
-   "review": {
-    "title": "2024 Kia Carnival review: Manners make the van",
-    "url": "https://www.autocarindia.com/car-reviews/2024-kia-carnival-review-manners-make-the-van-433289"
-   },
-   "url": "https://www.autocarindia.com/cars/kia/carnival/expert-reviews",
-   "image": "kia_carnival"
   },
   "Kia|Seltos": {
    "slug": "kia/seltos",
@@ -1339,15 +1884,73 @@
    "url": "https://www.autocarindia.com/cars/kia/seltos/expert-reviews",
    "image": "kia_seltos"
   },
+  "Kia|Carnival": {
+   "slug": "kia/carnival",
+   "score": 7,
+   "scores": {
+    "features": 9,
+    "mileage": 6,
+    "comfort": 8,
+    "value": 7,
+    "performance": 8,
+    "design": 9
+   },
+   "like": [
+    "Second-row comfort",
+    "Spacious, flexible interior"
+   ],
+   "dislike": [
+    "Engine noise",
+    "Price"
+   ],
+   "video": {
+    "id": "JezNMaw0C20",
+    "title": "2024 Kia Carnival review - More tech & features for (a lot) more money | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2024 Kia Carnival review: Manners make the van",
+    "url": "https://www.autocarindia.com/car-reviews/2024-kia-carnival-review-manners-make-the-van-433289"
+   },
+   "url": "https://www.autocarindia.com/cars/kia/carnival/expert-reviews",
+   "image": "kia_carnival"
+  },
+  "Kia|Syros": {
+   "slug": "kia/syros",
+   "score": 9,
+   "scores": {
+    "features": 9,
+    "mileage": 6,
+    "comfort": 9,
+    "value": 8,
+    "performance": 8,
+    "design": 7
+   },
+   "like": [
+    "Stylish, high-quality interiors",
+    "Very comfy and spacious rear seats"
+   ],
+   "dislike": [
+    "High NVH levels in both petrol and diesel"
+   ],
+   "video": {
+    "id": "_LxKA23Os-I",
+    "title": "2025 Kia Syros review - All-in-one Kia to take on SUVs | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Kia Syros review: Ace of Space",
+    "url": "https://www.autocarindia.com/car-reviews/kia-syros-review-ace-of-space-434379"
+   },
+   "url": "https://www.autocarindia.com/cars/kia/syros/expert-reviews",
+   "image": "kia_syros"
+  },
   "Kia|Sorento": {
    "slug": "kia/new-sorento",
    "url": "https://www.autocarindia.com/cars/kia/new-sorento/expert-reviews",
-   "video": {
-    "id": "j253C-sEfdI",
-    "title": "Kia Sorento review - Kia’s big SUV with big appeal | First Drive | Autocar India",
-    "ago": "1 day ago",
-    "src": "youtube"
-   },
+   "video": null,
    "image": "kia_sorento"
   },
   "Kia|Syros EV": {
@@ -1369,7 +1972,12 @@
    "dislike": [
     "Pricey at the top end"
    ],
-   "video": null,
+   "video": {
+    "id": "PvQoUYY9lQI",
+    "title": "Kia Syros EV review - The best EV under Rs 20 lakh? | First Drive | Autocar India",
+    "ago": "2 mo ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "Kia Syros EV: Born to be electric",
     "url": "https://www.autocarindia.com/car-reviews/kia-syros-ev-born-to-be-electric-440499"
@@ -1400,49 +2008,32 @@
    "url": "https://www.autocarindia.com/cars/land-rover/defender/expert-reviews",
    "image": "land-rover_defender"
   },
-  "Kia|Syros": {
-   "slug": "kia/syros",
-   "score": 9,
+  "Land Rover|Discovery": {
+   "slug": "land-rover/discovery",
+   "score": 7,
    "scores": {
-    "features": 9,
-    "mileage": 6,
-    "comfort": 9,
-    "value": 8,
+    "features": 7,
+    "mileage": 5,
+    "comfort": 7,
+    "value": 6,
     "performance": 8,
     "design": 7
    },
    "like": [
-    "Stylish, high-quality interiors",
-    "Very comfy and spacious rear seats"
+    "Practicality",
+    "All-round ability"
    ],
    "dislike": [
-    "High NVH levels in both petrol and diesel"
+    "Petrols are thirsty",
+    "Expensive"
    ],
    "video": null,
    "review": {
-    "title": "Kia Syros review: Ace of Space",
-    "url": "https://www.autocarindia.com/car-reviews/kia-syros-review-ace-of-space-434379"
+    "title": "2017 Land Rover Discovery review, test drive",
+    "url": "https://www.autocarindia.com/car-reviews/2017-land-rover-discovery-review-test-drive-406166"
    },
-   "url": "https://www.autocarindia.com/cars/kia/syros/expert-reviews",
-   "image": "kia_syros"
-  },
-  "Land Rover|Defender 110": {
-   "slug": "land-rover/defender",
-   "score": 9,
-   "scores": {
-    "features": 8,
-    "mileage": 6,
-    "comfort": 7.5,
-    "value": 8,
-    "performance": 8,
-    "design": 9
-   },
-   "like": [],
-   "dislike": [],
-   "video": null,
-   "review": null,
-   "url": "https://www.autocarindia.com/cars/land-rover/defender/expert-reviews",
-   "image": "land-rover_defender"
+   "url": "https://www.autocarindia.com/cars/land-rover/discovery/expert-reviews",
+   "image": "land-rover_discovery"
   },
   "Land Rover|Defender 90": {
    "slug": "land-rover/defender",
@@ -1461,33 +2052,6 @@
    "review": null,
    "url": "https://www.autocarindia.com/cars/land-rover/defender/expert-reviews",
    "image": "land-rover_defender"
-  },
-  "Land Rover|Discovery Sport": {
-   "slug": "land-rover/discovery-sport",
-   "score": 8,
-   "scores": {
-    "features": 7,
-    "mileage": 7,
-    "comfort": 8,
-    "value": 8,
-    "performance": 7,
-    "design": 7
-   },
-   "like": [
-    "Tough build",
-    "Spacious and flexible cabin"
-   ],
-   "dislike": [
-    "Diesel engine isn’t best",
-    "Cabin lacks wow factor"
-   ],
-   "video": null,
-   "review": {
-    "title": "2016 Land Rover Discovery Sport 2.0 petrol review, test drive",
-    "url": "https://www.autocarindia.com/car-reviews/2016-land-rover-discovery-sport-20-petrol-review-test-drive-402923"
-   },
-   "url": "https://www.autocarindia.com/cars/land-rover/discovery-sport/expert-reviews",
-   "image": "land-rover_discovery-sport"
   },
   "Land Rover|Range Rover": {
    "slug": "land-rover/range-rover",
@@ -1516,32 +2080,23 @@
    "url": "https://www.autocarindia.com/cars/land-rover/range-rover/expert-reviews",
    "image": "land-rover_range-rover"
   },
-  "Land Rover|Range Rover Sport": {
-   "slug": "land-rover/range-rover-sport",
-   "score": 8,
+  "Land Rover|Defender 110": {
+   "slug": "land-rover/defender",
+   "score": 9,
    "scores": {
     "features": 8,
     "mileage": 6,
-    "comfort": 8,
-    "value": 7,
+    "comfort": 7.5,
+    "value": 8,
     "performance": 8,
-    "design": 8
+    "design": 9
    },
-   "like": [
-    "High-end interior",
-    "Road presence"
-   ],
-   "dislike": [
-    "Busy low speed ride",
-    "Expensive"
-   ],
+   "like": [],
+   "dislike": [],
    "video": null,
-   "review": {
-    "title": "2025 Range Rover Sport SV India review: Peaky Blinder",
-    "url": "https://www.autocarindia.com/car-reviews/2025-range-rover-sport-sv-india-review-peaky-blinder-436579"
-   },
-   "url": "https://www.autocarindia.com/cars/land-rover/range-rover-sport/expert-reviews",
-   "image": "land-rover_range-rover-sport"
+   "review": null,
+   "url": "https://www.autocarindia.com/cars/land-rover/defender/expert-reviews",
+   "image": "land-rover_defender"
   },
   "Land Rover|Range Rover Evoque": {
    "slug": "land-rover/range-rover-evoque",
@@ -1562,7 +2117,12 @@
     "Cabin has started to show its age",
     "Gearbox could be smoother"
    ],
-   "video": null,
+   "video": {
+    "id": "Kh1yZQS8XOs",
+    "title": "2024 Range Rover Evoque review - Style Icon | First Drive | Autocar India",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "Range Rover Evoque facelift review: Style Icon",
     "url": "https://www.autocarindia.com/car-reviews/land-rover-range-rover-evoque-facelift-review-style-icon-430520"
@@ -1597,6 +2157,180 @@
    "url": "https://www.autocarindia.com/cars/land-rover/range-rover-velar/expert-reviews",
    "image": "land-rover_range-rover-velar"
   },
+  "Land Rover|Discovery Sport": {
+   "slug": "land-rover/discovery-sport",
+   "score": 8,
+   "scores": {
+    "features": 7,
+    "mileage": 7,
+    "comfort": 8,
+    "value": 8,
+    "performance": 7,
+    "design": 7
+   },
+   "like": [
+    "Tough build",
+    "Spacious and flexible cabin"
+   ],
+   "dislike": [
+    "Diesel engine isn’t best",
+    "Cabin lacks wow factor"
+   ],
+   "video": null,
+   "review": {
+    "title": "2016 Land Rover Discovery Sport 2.0 petrol review, test drive",
+    "url": "https://www.autocarindia.com/car-reviews/2016-land-rover-discovery-sport-20-petrol-review-test-drive-402923"
+   },
+   "url": "https://www.autocarindia.com/cars/land-rover/discovery-sport/expert-reviews",
+   "image": "land-rover_discovery-sport"
+  },
+  "Lexus|ES": {
+   "slug": "lexus/es",
+   "score": 8,
+   "scores": {
+    "features": null,
+    "mileage": null,
+    "comfort": null,
+    "value": null,
+    "performance": null,
+    "design": null
+   },
+   "like": [],
+   "dislike": [],
+   "video": {
+    "id": "jRQEt4zlBjA",
+    "title": "New Lexus ES 350h and 500e review - Larger, quieter, plusher | First Drive | Autocar India",
+    "ago": "1 mo ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2018 Lexus ES 300h review, test drive",
+    "url": "https://www.autocarindia.com/car-reviews/2018-lexus-es-300h-review-test-drive-409657"
+   },
+   "url": "https://www.autocarindia.com/cars/lexus/es/expert-reviews",
+   "image": "lexus_es"
+  },
+  "Land Rover|Range Rover Sport": {
+   "slug": "land-rover/range-rover-sport",
+   "score": 8,
+   "scores": {
+    "features": 8,
+    "mileage": 6,
+    "comfort": 8,
+    "value": 7,
+    "performance": 8,
+    "design": 8
+   },
+   "like": [
+    "High-end interior",
+    "Road presence"
+   ],
+   "dislike": [
+    "Busy low speed ride",
+    "Expensive"
+   ],
+   "video": {
+    "id": "R2yPkTcFHmQ",
+    "title": "2023 Range Rover Sport review - Big on price, bigger on desirability | First Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2025 Range Rover Sport SV India review: Peaky Blinder",
+    "url": "https://www.autocarindia.com/car-reviews/2025-range-rover-sport-sv-india-review-peaky-blinder-436579"
+   },
+   "url": "https://www.autocarindia.com/cars/land-rover/range-rover-sport/expert-reviews",
+   "image": "land-rover_range-rover-sport"
+  },
+  "Lexus|NX": {
+   "slug": "lexus/nx",
+   "score": 7,
+   "scores": {
+    "features": 8,
+    "mileage": 9,
+    "comfort": 7.5,
+    "value": 7,
+    "performance": 7,
+    "design": 8
+   },
+   "like": [
+    "Ride and handling balance",
+    "Good fuel efficiency"
+   ],
+   "dislike": [
+    "Rear seating area doesn’t feel special",
+    "Sedate power delivery"
+   ],
+   "video": {
+    "id": "Bi_WiSNe4Bo",
+    "title": "2022 Lexus NX review - Hybrid Theory | First Drive | Autocar India",
+    "ago": "4 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2022 Lexus NX review: The only Strong Hybrid in its class",
+    "url": "https://www.autocarindia.com/car-reviews/2022-lexus-nx-review-the-only-strong-hybrid-in-its-class-423887"
+   },
+   "url": "https://www.autocarindia.com/cars/lexus/nx/expert-reviews",
+   "image": "lexus_nx"
+  },
+  "Lexus|LM": {
+   "slug": "lexus/lm",
+   "score": 7,
+   "scores": {
+    "features": null,
+    "mileage": null,
+    "comfort": null,
+    "value": null,
+    "performance": null,
+    "design": null
+   },
+   "like": [
+    "Luxurious cabin",
+    "First-class rear seats"
+   ],
+   "dislike": [
+    "Small dealer network",
+    "Price"
+   ],
+   "video": null,
+   "review": null,
+   "url": "https://www.autocarindia.com/cars/lexus/lm/expert-reviews",
+   "image": "lexus_lm"
+  },
+  "Lexus|LX": {
+   "slug": "lexus/lx",
+   "score": 7,
+   "scores": {
+    "features": 7,
+    "mileage": 6,
+    "comfort": 7,
+    "value": null,
+    "performance": 7,
+    "design": 9
+   },
+   "like": [
+    "Road presence",
+    "Built to last"
+   ],
+   "dislike": [
+    "Rear seat space",
+    "Overpriced"
+   ],
+   "video": null,
+   "review": {
+    "title": "Lexus LX500d review: Position of power",
+    "url": "https://www.autocarindia.com/car-reviews/lexus-lx500d-review-position-of-power-428994"
+   },
+   "url": "https://www.autocarindia.com/cars/lexus/lx/expert-reviews",
+   "image": "lexus_lx"
+  },
+  "Mahindra|BE 6 Sporteq": {
+   "slug": "mahindra/new-be-6-sporteq",
+   "url": "https://www.autocarindia.com/cars/mahindra/new-be-6-sporteq/expert-reviews",
+   "video": null,
+   "image": "mahindra_be-6-sporteq"
+  },
   "Mahindra|Bolero": {
    "slug": "mahindra/bolero",
    "score": 6,
@@ -1616,7 +2350,12 @@
     "Outdated",
     "Crude"
    ],
-   "video": null,
+   "video": {
+    "id": "7nFBGj_wz2c",
+    "title": "2026 Mahindra Bolero review - The OG gets an update | First Drive | Autocar India",
+    "ago": "4 mo ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "2025 Mahindra Bolero review: Rough and ready",
     "url": "https://www.autocarindia.com/car-reviews/2025-mahindra-bolero-review-rough-and-ready-440412"
@@ -1624,7 +2363,35 @@
    "url": "https://www.autocarindia.com/cars/mahindra/bolero/expert-reviews",
    "image": "mahindra_bolero"
   },
-  "Mahindra|Bolero Neo Plus": {
+  "Lexus|RX": {
+   "slug": "lexus/rx",
+   "score": 7,
+   "scores": {
+    "features": 8,
+    "mileage": 8,
+    "comfort": 8,
+    "value": 6,
+    "performance": 8,
+    "design": 9
+   },
+   "like": [
+    "Fuel level hardly drops",
+    "Feels quick to respond and agile",
+    "Comfy and superbly built cabin"
+   ],
+   "dislike": [
+    "No six-cylinder option",
+    "Engine noisy at high revs"
+   ],
+   "video": null,
+   "review": {
+    "title": "Lexus RX 350h review: New age luxury",
+    "url": "https://www.autocarindia.com/car-reviews/lexus-rx-350h-review-new-age-luxury-430065"
+   },
+   "url": "https://www.autocarindia.com/cars/lexus/rx/expert-reviews",
+   "image": "lexus_rx"
+  },
+  "Mahindra|Bolero Neo": {
    "slug": "mahindra/bolero-neo",
    "score": 6,
    "scores": {
@@ -1648,9 +2415,107 @@
     "title": "Mahindra Bolero Neo review, test drive",
     "url": "https://www.autocarindia.com/car-reviews/mahindra-bolero-neo-review-test-drive-421430"
    },
+   "url": "https://www.autocarindia.com/cars/mahindra/bolero-neo/expert-reviews",
+   "image": "mahindra_bolero-neo"
+  },
+  "Mahindra|Bolero Neo Plus": {
+   "slug": "mahindra/bolero-neo",
+   "score": 6,
+   "scores": {
+    "features": 5,
+    "mileage": 7,
+    "comfort": 6,
+    "value": 6,
+    "performance": 7,
+    "design": 6
+   },
+   "like": [
+    "Tough-as-nails",
+    "Feels built to last"
+   ],
+   "dislike": [
+    "Not refined like other compact SUVs",
+    "Some missing features"
+   ],
+   "video": {
+    "id": "edpOTGI59yw",
+    "title": "Mahindra Bolero Neo Plus review - 9-seater Diesel SUV | First Drive | Autocar India",
+    "ago": "7 mo ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Mahindra Bolero Neo review, test drive",
+    "url": "https://www.autocarindia.com/car-reviews/mahindra-bolero-neo-review-test-drive-421430"
+   },
    "basedOn": "Bolero Neo",
    "url": "https://www.autocarindia.com/cars/mahindra/bolero-neo/expert-reviews",
    "image": "mahindra_bolero-neo"
+  },
+  "Mahindra|Scorpio Classic": {
+   "slug": "mahindra/scorpio-classic",
+   "score": 6,
+   "scores": {
+    "features": 5,
+    "mileage": 7,
+    "comfort": 5.5,
+    "value": 6,
+    "performance": 7,
+    "design": 7
+   },
+   "like": [
+    "Refined engine",
+    "Tough appeal",
+    "Tough appeal",
+    "Refined engine"
+   ],
+   "dislike": [
+    "Lacks features",
+    "Flawed dynamics"
+   ],
+   "video": {
+    "id": "nxXM6YU7r3c",
+    "title": "2022 Mahindra Scorpio Classic review - Tough Love | First Drive | Autocar India",
+    "ago": "4 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "New Mahindra Scorpio Classic review: Old School ",
+    "url": "https://www.autocarindia.com/car-reviews/new-mahindra-scorpio-classic-review-old-school-425601"
+   },
+   "url": "https://www.autocarindia.com/cars/mahindra/scorpio-classic/expert-reviews",
+   "image": "mahindra_scorpio-classic"
+  },
+  "Mahindra|Thar OG": {
+   "slug": "mahindra/thar-og",
+   "score": 7,
+   "scores": {
+    "features": 7,
+    "mileage": null,
+    "comfort": 6.5,
+    "value": 8,
+    "performance": 8,
+    "design": 9
+   },
+   "like": [
+    "Light steering",
+    "Improved stability"
+   ],
+   "dislike": [
+    "Lack of space",
+    "Plastic quality"
+   ],
+   "video": {
+    "id": "MHWKteqP80g",
+    "title": "Mahindra Thar OG review - Big upgrade with no compromise | First Drive | Autocar India",
+    "ago": "10 days ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2026 Mahindra Thar OG review: Modern tech, classic look",
+    "url": "https://www.autocarindia.com/car-reviews/2026-mahindra-thar-og-modern-tech-classic-look-440582"
+   },
+   "url": "https://www.autocarindia.com/cars/mahindra/thar-og/expert-reviews",
+   "image": "mahindra_thar-og"
   },
   "Mahindra|Scorpio-N": {
    "slug": "mahindra/scorpio-n",
@@ -1684,61 +2549,39 @@
    "url": "https://www.autocarindia.com/cars/mahindra/scorpio-n/expert-reviews",
    "image": "mahindra_scorpio-n"
   },
-  "Mahindra|Scorpio Classic": {
-   "slug": "mahindra/scorpio-classic",
-   "score": 6,
+  "Mahindra|XEV 9e": {
+   "slug": "mahindra/xev-9e",
+   "score": 8,
    "scores": {
-    "features": 5,
-    "mileage": 7,
-    "comfort": 5.5,
-    "value": 6,
-    "performance": 7,
+    "features": 9,
+    "mileage": 9,
+    "comfort": 8.5,
+    "value": 8,
+    "performance": 10,
     "design": 7
    },
    "like": [
-    "Refined engine",
-    "Tough appeal",
-    "Tough appeal",
-    "Refined engine"
+    "Dazzling array of tech",
+    "Great to drive",
+    "World-class refinement"
    ],
    "dislike": [
-    "Lacks features",
-    "Flawed dynamics"
+    "Ergonomic flaws",
+    "Very restricted rear view",
+    "Confusing infotainment interface"
    ],
-   "video": null,
+   "video": {
+    "id": "VGUwsBIrHlQ",
+    "title": "Mahindra XEV 9e review - Tech-loaded electric SUV that's great to drive | First Drive| Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
    "review": {
-    "title": "New Mahindra Scorpio Classic review: Old School ",
-    "url": "https://www.autocarindia.com/car-reviews/new-mahindra-scorpio-classic-review-old-school-425601"
+    "title": "Mahindra XEV 9e road test review",
+    "url": "https://www.autocarindia.com/car-reviews/mahindra-xev-9e-road-test-review-436362"
    },
-   "url": "https://www.autocarindia.com/cars/mahindra/scorpio-classic/expert-reviews",
-   "image": "mahindra_scorpio-classic"
-  },
-  "Mahindra|Bolero Neo": {
-   "slug": "mahindra/bolero-neo",
-   "score": 6,
-   "scores": {
-    "features": 5,
-    "mileage": 7,
-    "comfort": 6,
-    "value": 6,
-    "performance": 7,
-    "design": 6
-   },
-   "like": [
-    "Tough-as-nails",
-    "Feels built to last"
-   ],
-   "dislike": [
-    "Not refined like other compact SUVs",
-    "Some missing features"
-   ],
-   "video": null,
-   "review": {
-    "title": "Mahindra Bolero Neo review, test drive",
-    "url": "https://www.autocarindia.com/car-reviews/mahindra-bolero-neo-review-test-drive-421430"
-   },
-   "url": "https://www.autocarindia.com/cars/mahindra/bolero-neo/expert-reviews",
-   "image": "mahindra_bolero-neo"
+   "url": "https://www.autocarindia.com/cars/mahindra/xev-9e/expert-reviews",
+   "image": "mahindra_xev-9e"
   },
   "Mahindra|Thar Roxx": {
    "slug": "mahindra/thar-roxx",
@@ -1772,65 +2615,6 @@
    "url": "https://www.autocarindia.com/cars/mahindra/thar-roxx/expert-reviews",
    "image": "mahindra_thar-roxx"
   },
-  "Mahindra|Thar OG": {
-   "slug": "mahindra/thar-og",
-   "score": 7,
-   "scores": {
-    "features": 7,
-    "mileage": null,
-    "comfort": 6.5,
-    "value": 8,
-    "performance": 8,
-    "design": 9
-   },
-   "like": [
-    "Light steering",
-    "Improved stability"
-   ],
-   "dislike": [
-    "Lack of space",
-    "Plastic quality"
-   ],
-   "video": {
-    "id": "MHWKteqP80g",
-    "title": "Mahindra Thar OG review - Big upgrade with no compromise | First Drive | Autocar India",
-    "ago": "8 days ago",
-    "src": "youtube"
-   },
-   "review": {
-    "title": "2026 Mahindra Thar OG review: Modern tech, classic look",
-    "url": "https://www.autocarindia.com/car-reviews/2026-mahindra-thar-og-modern-tech-classic-look-440582"
-   },
-   "url": "https://www.autocarindia.com/cars/mahindra/thar-og/expert-reviews",
-   "image": "mahindra_thar-og"
-  },
-  "Mahindra|XUV400": {
-   "slug": "mahindra/xuv400",
-   "score": 7,
-   "scores": {
-    "features": 7,
-    "mileage": 6,
-    "comfort": 7.5,
-    "value": 6,
-    "performance": 8,
-    "design": 6
-   },
-   "like": [
-    "Spacious and comfortable cabin",
-    "Strong performance"
-   ],
-   "dislike": [
-    "Small boot",
-    "Still misses some features"
-   ],
-   "video": null,
-   "review": {
-    "title": "2022 Mahindra XUV400 EV review &#8211; A competitive electric SUV",
-    "url": "https://www.autocarindia.com/car-reviews/2022-mahindra-xuv400-ev-review-test-drive-425681"
-   },
-   "url": "https://www.autocarindia.com/cars/mahindra/xuv400/expert-reviews",
-   "image": "mahindra_xuv400"
-  },
   "Mahindra|XUV 3XO": {
    "slug": "mahindra/xuv-3xo",
    "score": 8,
@@ -1849,13 +2633,51 @@
    "dislike": [
     "Boot space"
    ],
-   "video": null,
+   "video": {
+    "id": "ubLVIn2Q4pQ",
+    "title": "Mahindra XUV 3XO review - Here to take on the Tata Nexon | First Drive | Autocar India",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "Mahindra XUV 3XO vs Tata Nexon diesel comparison",
     "url": "https://www.autocarindia.com/car-reviews/mahindra-xuv-3xo-vs-tata-nexon-diesel-comparison-433597"
    },
    "url": "https://www.autocarindia.com/cars/mahindra/xuv-3xo/expert-reviews",
    "image": "mahindra_xuv-3xo"
+  },
+  "Mahindra|XEV 9S": {
+   "slug": "mahindra/xev-9s",
+   "score": 9,
+   "scores": {
+    "features": 9,
+    "mileage": 8,
+    "comfort": 8,
+    "value": 10,
+    "performance": 9,
+    "design": 8
+   },
+   "like": [
+    "Strong performance",
+    "Feature packed",
+    "Value for money"
+   ],
+   "dislike": [
+    "Ergonomic flaws",
+    "Infotainment not intuitive to use"
+   ],
+   "video": {
+    "id": "6JW21NRzL-o",
+    "title": "Mahindra XEV 9S review - Best of XUV 700 meets best of XEV 9E  | Autocar India",
+    "ago": "10 mo ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Mahindra XEV 9S review: Real steal",
+    "url": "https://www.autocarindia.com/car-reviews/mahindra-xev-9s-review-real-steal-439405"
+   },
+   "url": "https://www.autocarindia.com/cars/mahindra/xev-9s/expert-reviews",
+   "image": null
   },
   "Mahindra|XUV 7XO": {
    "slug": "mahindra/xuv-7xo",
@@ -1890,6 +2712,56 @@
    "url": "https://www.autocarindia.com/cars/mahindra/xuv-7xo/expert-reviews",
    "image": "mahindra_xuv-7xo"
   },
+  "Mahindra|XUV 3XO EV": {
+   "slug": "mahindra/xuv-3xo-ev",
+   "score": 8,
+   "scores": {
+    "features": null,
+    "mileage": null,
+    "comfort": null,
+    "value": null,
+    "performance": null,
+    "design": null
+   },
+   "like": [],
+   "dislike": [],
+   "video": null,
+   "review": null,
+   "url": "https://www.autocarindia.com/cars/mahindra/xuv-3xo-ev/expert-reviews",
+   "image": "mahindra_xuv-3xo-ev"
+  },
+  "Mahindra|XUV400": {
+   "slug": "mahindra/xuv400",
+   "score": 7,
+   "scores": {
+    "features": 7,
+    "mileage": 6,
+    "comfort": 7.5,
+    "value": 6,
+    "performance": 8,
+    "design": 6
+   },
+   "like": [
+    "Spacious and comfortable cabin",
+    "Strong performance"
+   ],
+   "dislike": [
+    "Small boot",
+    "Still misses some features"
+   ],
+   "video": {
+    "id": "lsrHq0mInX0",
+    "title": "2022 Mahindra XUV400 review - Mahindra's first electric SUV | First Drive | Autocar India",
+    "ago": "4 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2022 Mahindra XUV400 EV review &#8211; A competitive electric SUV",
+    "url": "https://www.autocarindia.com/car-reviews/2022-mahindra-xuv400-ev-review-test-drive-425681"
+   },
+   "url": "https://www.autocarindia.com/cars/mahindra/xuv400/expert-reviews",
+   "image": "mahindra_xuv400"
+  },
   "Maruti Suzuki|Alto K10": {
    "slug": "maruti-suzuki/alto-k10",
    "score": 8,
@@ -1921,6 +2793,37 @@
    },
    "url": "https://www.autocarindia.com/cars/maruti-suzuki/alto-k10/expert-reviews",
    "image": "maruti-suzuki_alto-k10"
+  },
+  "Maruti Suzuki|Baleno": {
+   "slug": "maruti-suzuki/baleno",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 9,
+    "comfort": 8,
+    "value": 8,
+    "performance": 8,
+    "design": 7
+   },
+   "like": [
+    "Z-series engine’s drivability and low-end response",
+    "Spacious and comfy cabin"
+   ],
+   "dislike": [
+    "AMT gearbox feels hesitant"
+   ],
+   "video": {
+    "id": "O384UwOzkNs",
+    "title": "2026 Maruti Suzuki Baleno facelift review - Change of heart | First Drive | Autocar India",
+    "ago": "4 wk ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Maruti Suzuki Baleno facelift review: Change of heart",
+    "url": "https://www.autocarindia.com/car-reviews/maruti-suzuki-baleno-facelift-review-change-of-heart-440547"
+   },
+   "url": "https://www.autocarindia.com/cars/maruti-suzuki/baleno/expert-reviews",
+   "image": "maruti-suzuki_baleno"
   },
   "Maruti Suzuki|Brezza": {
    "slug": "maruti-suzuki/brezza",
@@ -1975,82 +2878,18 @@
     "Rear seat comfort not great",
     "Pricier than rivals"
    ],
-   "video": null,
+   "video": {
+    "id": "IpkO3WufTcM",
+    "title": "2021 Maruti Suzuki Celerio review - India's most fuel efficient petrol car | Drive| Autocar India",
+    "ago": "4 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "New Maruti Suzuki Celerio review, test drive",
     "url": "https://www.autocarindia.com/car-reviews/new-maruti-suzuki-celerio-review-test-drive-422638"
    },
    "url": "https://www.autocarindia.com/cars/maruti-suzuki/celerio/expert-reviews",
    "image": "maruti-suzuki_celerio"
-  },
-  "Maruti Suzuki|Ciaz": {
-   "slug": "maruti-suzuki/new-ciaz",
-   "url": "https://www.autocarindia.com/cars/maruti-suzuki/new-ciaz/expert-reviews",
-   "video": null,
-   "image": "maruti-suzuki_ciaz"
-  },
-  "Maruti Suzuki|Baleno": {
-   "slug": "maruti-suzuki/baleno",
-   "score": 8,
-   "scores": {
-    "features": 9,
-    "mileage": 9,
-    "comfort": 8,
-    "value": 8,
-    "performance": 8,
-    "design": 7
-   },
-   "like": [
-    "Z-series engine’s drivability and low-end response",
-    "Spacious and comfy cabin"
-   ],
-   "dislike": [
-    "AMT gearbox feels hesitant"
-   ],
-   "video": {
-    "id": "O384UwOzkNs",
-    "title": "2026 Maruti Suzuki Baleno facelift review - Change of heart | First Drive | Autocar India",
-    "ago": "3 wk ago",
-    "src": "youtube"
-   },
-   "review": {
-    "title": "Maruti Suzuki Baleno facelift review: Change of heart",
-    "url": "https://www.autocarindia.com/car-reviews/maruti-suzuki-baleno-facelift-review-change-of-heart-440547"
-   },
-   "url": "https://www.autocarindia.com/cars/maruti-suzuki/baleno/expert-reviews",
-   "image": "maruti-suzuki_baleno"
-  },
-  "Maruti Suzuki|Dzire": {
-   "slug": "maruti-suzuki/dzire",
-   "score": 8,
-   "scores": {
-    "features": 9,
-    "mileage": 8,
-    "comfort": 8.5,
-    "value": 9,
-    "performance": 7,
-    "design": 8
-   },
-   "like": [
-    "Good low-end response",
-    "Excellent ride and handling balance"
-   ],
-   "dislike": [
-    "Features like cooled seats missing",
-    "Tight rear headroom"
-   ],
-   "video": {
-    "id": "0mITJ8zBVR0",
-    "title": "Maruti Suzuki Dzire review - New identity for Maruti's best-selling sedan | Autocar India",
-    "ago": "1 yr ago",
-    "src": "youtube"
-   },
-   "review": {
-    "title": "2024 Maruti Suzuki Dzire review: India's favourite sedan massively updated",
-    "url": "https://www.autocarindia.com/car-reviews/2024-maruti-suzuki-dzire-review-massive-update-for-indias-favourite-sedan-433506"
-   },
-   "url": "https://www.autocarindia.com/cars/maruti-suzuki/dzire/expert-reviews",
-   "image": "maruti-suzuki_dzire"
   },
   "Maruti Suzuki|e Vitara": {
    "slug": "maruti-suzuki/e-vitara",
@@ -2072,7 +2911,12 @@
     "Busy ride",
     "Evident road and wind noise"
    ],
-   "video": null,
+   "video": {
+    "id": "_Y4AZZFtRlk",
+    "title": "Maruti Suzuki e Vitara review - Maruti finally gets its Green Card | Autocar India",
+    "ago": "9 mo ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "Maruti e Vitara review: The Maruti of EVs",
     "url": "https://www.autocarindia.com/car-reviews/maruti-suzuki-e-vitara-review-the-maruti-of-evs-440181"
@@ -2107,37 +2951,32 @@
    "url": "https://www.autocarindia.com/cars/maruti-suzuki/ertiga/expert-reviews",
    "image": "maruti-suzuki_ertiga"
   },
-  "Maruti Suzuki|Fronx": {
-   "slug": "maruti-suzuki/fronx",
-   "score": 8,
+  "Maruti Suzuki|Eeco": {
+   "slug": "maruti-suzuki/eeco",
+   "score": 4,
    "scores": {
-    "features": 7,
-    "mileage": 8,
-    "comfort": 8,
-    "value": 8,
-    "performance": 8,
-    "design": 9
+    "features": null,
+    "mileage": null,
+    "comfort": null,
+    "value": null,
+    "performance": null,
+    "design": null
    },
    "like": [
-    "Space and comfort",
-    "Appealing design"
+    "Luggage space",
+    "Low running costs"
    ],
    "dislike": [
-    "Some popular features missing",
-    "Boosterjet not as punchy as expected"
+    "Basic in every way",
+    "Taxi image"
    ],
-   "video": {
-    "id": "HqKwYOVBzb8",
-    "title": "Maruti Suzuki Fronx review - Baleno on stilts? Or coupe SUV? | First Drive | Autocar India",
-    "ago": "3 yr ago",
-    "src": "youtube"
-   },
+   "video": null,
    "review": {
-    "title": "Maruti Suzuki Fronx 1.2 petrol review: People’s choice",
-    "url": "https://www.autocarindia.com/car-reviews/maruti-suzuki-fronx-12-petrol-review-peoples-choice-428773"
+    "title": "Maruti Suzuki Eeco",
+    "url": "https://www.autocarindia.com/car-reviews/maruti-suzuki-eeco-269284"
    },
-   "url": "https://www.autocarindia.com/cars/maruti-suzuki/fronx/expert-reviews",
-   "image": "maruti-suzuki_fronx"
+   "url": "https://www.autocarindia.com/cars/maruti-suzuki/eeco/expert-reviews",
+   "image": "maruti-suzuki_eeco"
   },
   "Maruti Suzuki|Grand Vitara": {
    "slug": "maruti-suzuki/grand-vitara",
@@ -2172,6 +3011,65 @@
    "url": "https://www.autocarindia.com/cars/maruti-suzuki/grand-vitara/expert-reviews",
    "image": "maruti-suzuki_grand-vitara"
   },
+  "Maruti Suzuki|Fronx": {
+   "slug": "maruti-suzuki/fronx",
+   "score": 8,
+   "scores": {
+    "features": 7,
+    "mileage": 8,
+    "comfort": 8,
+    "value": 8,
+    "performance": 8,
+    "design": 9
+   },
+   "like": [
+    "Space and comfort",
+    "Appealing design"
+   ],
+   "dislike": [
+    "Some popular features missing",
+    "Boosterjet not as punchy as expected"
+   ],
+   "video": {
+    "id": "HqKwYOVBzb8",
+    "title": "Maruti Suzuki Fronx review - Baleno on stilts? Or coupe SUV? | First Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Maruti Suzuki Fronx 1.2 petrol review: People’s choice",
+    "url": "https://www.autocarindia.com/car-reviews/maruti-suzuki-fronx-12-petrol-review-peoples-choice-428773"
+   },
+   "url": "https://www.autocarindia.com/cars/maruti-suzuki/fronx/expert-reviews",
+   "image": "maruti-suzuki_fronx"
+  },
+  "Maruti Suzuki|Dzire": {
+   "slug": "maruti-suzuki/dzire",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 8,
+    "comfort": 8.5,
+    "value": 9,
+    "performance": 7,
+    "design": 8
+   },
+   "like": [
+    "Good low-end response",
+    "Excellent ride and handling balance"
+   ],
+   "dislike": [
+    "Features like cooled seats missing",
+    "Tight rear headroom"
+   ],
+   "video": null,
+   "review": {
+    "title": "2024 Maruti Suzuki Dzire review: India's favourite sedan massively updated",
+    "url": "https://www.autocarindia.com/car-reviews/2024-maruti-suzuki-dzire-review-massive-update-for-indias-favourite-sedan-433506"
+   },
+   "url": "https://www.autocarindia.com/cars/maruti-suzuki/dzire/expert-reviews",
+   "image": "maruti-suzuki_dzire"
+  },
   "Maruti Suzuki|Invicto": {
    "slug": "maruti-suzuki/invicto",
    "score": 8,
@@ -2198,11 +3096,92 @@
    "url": "https://www.autocarindia.com/cars/maruti-suzuki/invicto/expert-reviews",
    "image": "maruti-suzuki_invicto"
   },
-  "Maruti Suzuki|Ignis": {
-   "slug": "maruti-suzuki/new-ignis",
-   "url": "https://www.autocarindia.com/cars/maruti-suzuki/new-ignis/expert-reviews",
+  "Maruti Suzuki|S-Presso": {
+   "slug": "maruti-suzuki/s-presso",
+   "score": 6,
+   "scores": {
+    "features": 6,
+    "mileage": 8,
+    "comfort": 6.5,
+    "value": 8,
+    "performance": 8,
+    "design": 4
+   },
+   "like": [
+    "Airy cabin",
+    "Peppy engine"
+   ],
+   "dislike": [
+    "Looks not to all tastes",
+    "Light build"
+   ],
    "video": null,
-   "image": "maruti-suzuki_ignis"
+   "review": {
+    "title": "2019 Maruti Suzuki S-Presso review, test drive",
+    "url": "https://www.autocarindia.com/car-reviews/2019-maruti-suzuki-s-presso-review-test-drive-414287"
+   },
+   "url": "https://www.autocarindia.com/cars/maruti-suzuki/s-presso/expert-reviews",
+   "image": "maruti-suzuki_s-presso"
+  },
+  "Maruti Suzuki|Swift": {
+   "slug": "maruti-suzuki/swift",
+   "score": 8,
+   "scores": {
+    "features": 8,
+    "mileage": 9,
+    "comfort": 8.5,
+    "value": 7,
+    "performance": 8,
+    "design": 8
+   },
+   "like": [
+    "Light controls",
+    "Impressive fuel efficiency",
+    "Sporty handling"
+   ],
+   "dislike": [
+    "Engine's lacks punch",
+    "Priced too close to Baleno"
+   ],
+   "video": {
+    "id": "o2p3ytndMYU",
+    "title": "2024 Maruti Suzuki Swift review - Return to form for India’s favourite hatchback | @autocarindia1",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2024 Maruti Swift road test, review",
+    "url": "https://www.autocarindia.com/car-reviews/maruti-swift-road-test-review-432976"
+   },
+   "url": "https://www.autocarindia.com/cars/maruti-suzuki/swift/expert-reviews",
+   "image": "maruti-suzuki_swift"
+  },
+  "Maruti Suzuki|WagonR": {
+   "slug": "maruti-suzuki/wagon-r",
+   "score": 8,
+   "scores": {
+    "features": 7,
+    "mileage": 9,
+    "comfort": 7.5,
+    "value": 8,
+    "performance": 8,
+    "design": 7
+   },
+   "like": [
+    "Roomy cabin",
+    "Easy to drive"
+   ],
+   "dislike": [
+    "Light build",
+    "Not suited for highway use"
+   ],
+   "video": null,
+   "review": {
+    "title": "New 2019 Maruti Suzuki Wagon R review, test drive",
+    "url": "https://www.autocarindia.com/car-reviews/new-2019-maruti-suzuki-wagon-r-review-test-drive-411274"
+   },
+   "url": "https://www.autocarindia.com/cars/maruti-suzuki/wagon-r/expert-reviews",
+   "image": "maruti-suzuki_wagon-r"
   },
   "Maruti Suzuki|Jimny": {
    "slug": "maruti-suzuki/jimny",
@@ -2232,119 +3211,6 @@
    },
    "url": "https://www.autocarindia.com/cars/maruti-suzuki/jimny/expert-reviews",
    "image": "maruti-suzuki_jimny"
-  },
-  "Maruti Suzuki|Swift": {
-   "slug": "maruti-suzuki/swift",
-   "score": 8,
-   "scores": {
-    "features": 8,
-    "mileage": 9,
-    "comfort": 8.5,
-    "value": 7,
-    "performance": 8,
-    "design": 8
-   },
-   "like": [
-    "Light controls",
-    "Impressive fuel efficiency",
-    "Sporty handling"
-   ],
-   "dislike": [
-    "Engine's lacks punch",
-    "Priced too close to Baleno"
-   ],
-   "video": {
-    "id": "wMm284mKwNA",
-    "title": "Maruti Suzuki Swift long term video review ",
-    "year": 2025
-   },
-   "review": {
-    "title": "2024 Maruti Swift road test, review",
-    "url": "https://www.autocarindia.com/car-reviews/maruti-swift-road-test-review-432976"
-   },
-   "url": "https://www.autocarindia.com/cars/maruti-suzuki/swift/expert-reviews",
-   "image": "maruti-suzuki_swift"
-  },
-  "Maruti Suzuki|S-Presso": {
-   "slug": "maruti-suzuki/s-presso",
-   "score": 6,
-   "scores": {
-    "features": 6,
-    "mileage": 8,
-    "comfort": 6.5,
-    "value": 8,
-    "performance": 8,
-    "design": 4
-   },
-   "like": [
-    "Airy cabin",
-    "Peppy engine"
-   ],
-   "dislike": [
-    "Looks not to all tastes",
-    "Light build"
-   ],
-   "video": null,
-   "review": {
-    "title": "2019 Maruti Suzuki S-Presso review, test drive",
-    "url": "https://www.autocarindia.com/car-reviews/2019-maruti-suzuki-s-presso-review-test-drive-414287"
-   },
-   "url": "https://www.autocarindia.com/cars/maruti-suzuki/s-presso/expert-reviews",
-   "image": "maruti-suzuki_s-presso"
-  },
-  "Maruti Suzuki|WagonR": {
-   "slug": "maruti-suzuki/wagon-r",
-   "score": 8,
-   "scores": {
-    "features": 7,
-    "mileage": 9,
-    "comfort": 7.5,
-    "value": 8,
-    "performance": 8,
-    "design": 7
-   },
-   "like": [
-    "Roomy cabin",
-    "Easy to drive"
-   ],
-   "dislike": [
-    "Light build",
-    "Not suited for highway use"
-   ],
-   "video": null,
-   "review": {
-    "title": "New 2019 Maruti Suzuki Wagon R review, test drive",
-    "url": "https://www.autocarindia.com/car-reviews/new-2019-maruti-suzuki-wagon-r-review-test-drive-411274"
-   },
-   "url": "https://www.autocarindia.com/cars/maruti-suzuki/wagon-r/expert-reviews",
-   "image": "maruti-suzuki_wagon-r"
-  },
-  "Mercedes-Benz|A-Class Hatchback": {
-   "slug": "mercedes-benz/a-class-hatchback",
-   "score": 8,
-   "scores": {
-    "features": 8,
-    "mileage": 6,
-    "comfort": 7,
-    "value": 7,
-    "performance": 9,
-    "design": 9
-   },
-   "like": [
-    "Thrill a minute handling",
-    "Ripper of an engine"
-   ],
-   "dislike": [
-    "Stiff ride",
-    "Low ground clearance"
-   ],
-   "video": null,
-   "review": {
-    "title": "Mercedes-AMG A45 S review, test drive",
-    "url": "https://www.autocarindia.com/car-reviews/mercedes-amg-a45-s-review-test-drive-423158"
-   },
-   "url": "https://www.autocarindia.com/cars/mercedes-benz/a-class-hatchback/expert-reviews",
-   "image": "mercedes-benz_a-class-hatchback"
   },
   "Maruti Suzuki|Victoris": {
    "slug": "maruti-suzuki/victoris",
@@ -2380,38 +3246,10 @@
    "url": "https://www.autocarindia.com/cars/maruti-suzuki/victoris/expert-reviews",
    "image": "maruti-suzuki_victoris"
   },
-  "Mercedes-Benz|CLA": {
-   "slug": "mercedes-benz/cla",
-   "score": 8,
-   "scores": {
-    "features": 9,
-    "mileage": 9,
-    "comfort": 7,
-    "value": 8,
-    "performance": 9,
-    "design": 8
-   },
-   "like": [
-    "Smooth and refined powertrain",
-    "Excellent efficiency",
-    "Ride and handling balance"
-   ],
-   "dislike": [
-    "Cramped rear seat",
-    "Lack of physical controls",
-    "Rear AC isn’t strong enough"
-   ],
-   "video": {
-    "id": "DaWiczwucSg",
-    "title": "2026 Mercedes CLA review - Electric Luxury Sedan With 792km Range | First Drive | Autocar India",
-    "ago": "6 mo ago",
-    "src": "youtube"
-   },
-   "review": {
-    "title": "Mercedes-Benz CLA EV review: All Grown up ",
-    "url": "https://www.autocarindia.com/car-reviews/mercedes-benz-cla-ev-review-all-grown-up-440340"
-   },
-   "url": "https://www.autocarindia.com/cars/mercedes-benz/cla/expert-reviews",
+  "Mercedes-Benz|AMG GT Coupe": {
+   "slug": "mercedes-benz/new-amg-gt-coupe",
+   "url": "https://www.autocarindia.com/cars/mercedes-benz/new-amg-gt-coupe/expert-reviews",
+   "video": null,
    "image": null
   },
   "Mercedes-Benz|C-Class": {
@@ -2475,6 +3313,67 @@
    "url": "https://www.autocarindia.com/cars/maruti-suzuki/xl6/expert-reviews",
    "image": "maruti-suzuki_xl6"
   },
+  "Mercedes-Benz|A-Class": {
+   "slug": "mercedes-benz/a-class",
+   "score": 8,
+   "scores": {
+    "features": 8,
+    "mileage": 6,
+    "comfort": 7,
+    "value": 7,
+    "performance": 9,
+    "design": 9
+   },
+   "like": [
+    "Thrill a minute handling",
+    "Ripper of an engine"
+   ],
+   "dislike": [
+    "Stiff ride",
+    "Low ground clearance"
+   ],
+   "video": null,
+   "review": {
+    "title": "Mercedes-AMG A45 S review, test drive",
+    "url": "https://www.autocarindia.com/car-reviews/mercedes-amg-a45-s-review-test-drive-423158"
+   },
+   "url": "https://www.autocarindia.com/cars/mercedes-benz/a-class/expert-reviews",
+   "image": null
+  },
+  "Mercedes-Benz|CLA": {
+   "slug": "mercedes-benz/cla",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 9,
+    "comfort": 7,
+    "value": 8,
+    "performance": 9,
+    "design": 8
+   },
+   "like": [
+    "Smooth and refined powertrain",
+    "Excellent efficiency",
+    "Ride and handling balance"
+   ],
+   "dislike": [
+    "Cramped rear seat",
+    "Lack of physical controls",
+    "Rear AC isn’t strong enough"
+   ],
+   "video": {
+    "id": "DaWiczwucSg",
+    "title": "2026 Mercedes CLA review - Electric Luxury Sedan With 792km Range | First Drive | Autocar India",
+    "ago": "6 mo ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Mercedes-Benz CLA 250+ road test review",
+    "url": "https://www.autocarindia.com/car-reviews/mercedes-benz-cla-250-road-test-review-440575"
+   },
+   "url": "https://www.autocarindia.com/cars/mercedes-benz/cla/expert-reviews",
+   "image": null
+  },
   "Mercedes-Benz|CLE Cabriolet": {
    "slug": "mercedes-benz/cle-cabriolet",
    "score": 7,
@@ -2502,60 +3401,7 @@
    "url": "https://www.autocarindia.com/cars/mercedes-benz/cle-cabriolet/expert-reviews",
    "image": "mercedes-benz_cle-cabriolet"
   },
-  "Mercedes-Benz|CLE Coupé": {
-   "slug": "mercedes-benz/cle-coupe",
-   "score": 8,
-   "scores": {
-    "features": 9,
-    "mileage": 6,
-    "comfort": 8,
-    "value": 8,
-    "performance": 8,
-    "design": 8
-   },
-   "like": [
-    "Exploitable handling",
-    "Strong engine delivers exciting performance"
-   ],
-   "dislike": [
-    "Needs a louder soundtrack"
-   ],
-   "video": null,
-   "review": {
-    "title": "Mercedes-AMG CLE 53 Coupe review - Six (cylinder) appeal",
-    "url": "https://www.autocarindia.com/car-reviews/mercedes-amg-cle-53-coupe-review-six-cylinder-appeal-437008"
-   },
-   "url": "https://www.autocarindia.com/cars/mercedes-benz/cle-coupe/expert-reviews",
-   "image": "mercedes-benz_cle-coupe"
-  },
-  "Mercedes-Benz|E-Class Sedan Long": {
-   "slug": "mercedes-benz/e-class",
-   "score": 9,
-   "scores": {
-    "features": 9,
-    "mileage": 7,
-    "comfort": 9,
-    "value": 8,
-    "performance": 8,
-    "design": 8
-   },
-   "like": [
-    "Tech",
-    "Rear-seat comfort "
-   ],
-   "dislike": [
-    "Over-use of touch controls",
-    "Busy ride"
-   ],
-   "video": null,
-   "review": {
-    "title": "Mercedes-AMG E 53 Hybrid 4Matic+ review: Current Affair",
-    "url": "https://www.autocarindia.com/car-reviews/mercedes-amg-e53-hybrid-4matic-review-current-affair-440497"
-   },
-   "url": "https://www.autocarindia.com/cars/mercedes-benz/e-class/expert-reviews",
-   "image": "mercedes-benz_e-class"
-  },
-  "Mercedes-Benz|E-Class Sedan": {
+  "Mercedes-Benz|E-Class": {
    "slug": "mercedes-benz/e-class",
    "score": 9,
    "scores": {
@@ -2603,9 +3449,9 @@
     "Charging the big battery takes time"
    ],
    "video": {
-    "id": "OGA5NNWw1v4",
-    "title": "2022 Mercedes-Benz EQS 580 review - India's best EV? | First Drive | Autocar India",
-    "ago": "3 yr ago",
+    "id": "3C_VkDT5OZM",
+    "title": "Mercedes-Benz EQS - Pinnacle of EV luxury | First drive | Autocar India",
+    "ago": "4 yr ago",
     "src": "youtube"
    },
    "review": {
@@ -2614,72 +3460,6 @@
    },
    "url": "https://www.autocarindia.com/cars/mercedes-benz/eqs/expert-reviews",
    "image": "mercedes-benz_eqs"
-  },
-  "Mercedes-Benz|GLA": {
-   "slug": "mercedes-benz/gla",
-   "score": 7,
-   "scores": {
-    "features": 8,
-    "mileage": 7,
-    "comfort": 7,
-    "value": 6,
-    "performance": 7,
-    "design": 7
-   },
-   "like": [
-    "Spacious, well built cabin",
-    "Great ride and handling balance",
-    "Well-finished cabin "
-   ],
-   "dislike": [
-    "Some equipment missing",
-    "Diesel engine could be smoother",
-    "Diesel engines are noisy "
-   ],
-   "video": {
-    "id": "ebQWiP5IFe0",
-    "title": "2024 Mercedes-Benz GLA review - Diesel all-wheel drive hits the sweet spot  | @autocarindia1",
-    "ago": "2 yr ago",
-    "src": "youtube"
-   },
-   "review": {
-    "title": "2021 Mercedes-Benz GLA review, test drive",
-    "url": "https://www.autocarindia.com/car-reviews/2021-mercedes-benz-gla-review-test-drive-420472"
-   },
-   "url": "https://www.autocarindia.com/cars/mercedes-benz/gla/expert-reviews",
-   "image": "mercedes-benz_gla"
-  },
-  "Mercedes-Benz|GLC Coupé": {
-   "slug": "mercedes-benz/glc-coupe",
-   "score": 8,
-   "scores": {
-    "features": 9,
-    "mileage": 6,
-    "comfort": 7.5,
-    "value": 7,
-    "performance": 8,
-    "design": 9
-   },
-   "like": [
-    "Handling",
-    "Performance "
-   ],
-   "dislike": [
-    "Ride quality",
-    "Price"
-   ],
-   "video": {
-    "id": "q7GGLgebkik",
-    "title": "2024 Mercedes AMG GLC 43 Coupe review – All-weather sportscar | First Drive | @autocarindia1",
-    "ago": "2 yr ago",
-    "src": "youtube"
-   },
-   "review": {
-    "title": "Mercedes-AMG GLC 53 Coupe review: SUV with a big heart",
-    "url": "https://www.autocarindia.com/car-reviews/mercedes-amg-glc-53-coupe-review-suv-with-a-big-heart-440430"
-   },
-   "url": "https://www.autocarindia.com/cars/mercedes-benz/glc-coupe/expert-reviews",
-   "image": "mercedes-benz_glc-coupe"
   },
   "Mercedes-Benz|G-Class": {
    "slug": "mercedes-benz/g-class",
@@ -2702,7 +3482,115 @@
    "url": "https://www.autocarindia.com/cars/mercedes-benz/g-class/expert-reviews",
    "image": "mercedes-benz_g-class"
   },
-  "Mercedes-Benz|GLE Coupé": {
+  "Mercedes-Benz|CLE Coupe": {
+   "slug": "mercedes-benz/cle-coupe",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 6,
+    "comfort": 8,
+    "value": 8,
+    "performance": 8,
+    "design": 8
+   },
+   "like": [
+    "Exploitable handling",
+    "Strong engine delivers exciting performance"
+   ],
+   "dislike": [
+    "Needs a louder soundtrack"
+   ],
+   "video": null,
+   "review": {
+    "title": "Mercedes-AMG CLE 53 Coupe review - Six (cylinder) appeal",
+    "url": "https://www.autocarindia.com/car-reviews/mercedes-amg-cle-53-coupe-review-six-cylinder-appeal-437008"
+   },
+   "url": "https://www.autocarindia.com/cars/mercedes-benz/cle-coupe/expert-reviews",
+   "image": "mercedes-benz_cle-coupe"
+  },
+  "Mercedes-Benz|GLA": {
+   "slug": "mercedes-benz/gla",
+   "score": 7,
+   "scores": {
+    "features": 8,
+    "mileage": 7,
+    "comfort": 7,
+    "value": 6,
+    "performance": 7,
+    "design": 7
+   },
+   "like": [
+    "Spacious, well built cabin",
+    "Great ride and handling balance",
+    "Well-finished cabin "
+   ],
+   "dislike": [
+    "Some equipment missing",
+    "Diesel engine could be smoother",
+    "Diesel engines are noisy "
+   ],
+   "video": null,
+   "review": {
+    "title": "2021 Mercedes-Benz GLA review, test drive",
+    "url": "https://www.autocarindia.com/car-reviews/2021-mercedes-benz-gla-review-test-drive-420472"
+   },
+   "url": "https://www.autocarindia.com/cars/mercedes-benz/gla/expert-reviews",
+   "image": "mercedes-benz_gla"
+  },
+  "Mercedes-Benz|EQS SUV": {
+   "slug": "mercedes-benz/eqs-suv",
+   "score": 9,
+   "scores": {
+    "features": 9,
+    "mileage": 9,
+    "comfort": 7.5,
+    "value": 9,
+    "performance": 9,
+    "design": 7
+   },
+   "like": [],
+   "dislike": [],
+   "video": null,
+   "review": {
+    "title": "Mercedes EQS SUV review: High on EQ",
+    "url": "https://www.autocarindia.com/car-reviews/mercedes-eqs-suv-review-high-on-eq-432955"
+   },
+   "url": "https://www.autocarindia.com/cars/mercedes-benz/eqs-suv/expert-reviews",
+   "image": "mercedes-benz_eqs-suv"
+  },
+  "Mercedes-Benz|GLC": {
+   "slug": "mercedes-benz/glc",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 7,
+    "comfort": 8,
+    "value": 8,
+    "performance": 8,
+    "design": 8
+   },
+   "like": [
+    "Premium interior",
+    "Enjoyable dynamics"
+   ],
+   "dislike": [
+    "Fiddly touch-sensitive controls",
+    "Firm ride"
+   ],
+   "video": {
+    "id": "lJgJ1T9fxz8",
+    "title": "2023 Mercedes-Benz GLC review - Merc's best selling SUV in a new avatar | First Drive| Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2023 Mercedes-Benz GLC review: A star reborn?",
+    "url": "https://www.autocarindia.com/car-reviews/2023-mercedes-benz-glc-review-a-star-reborn-428964"
+   },
+   "url": "https://www.autocarindia.com/cars/mercedes-benz/glc/expert-reviews",
+   "image": "mercedes-benz_glc"
+  },
+  "Mercedes-Benz|GLE Coupe": {
    "slug": "mercedes-benz/gle-coupe",
    "score": 7,
    "scores": {
@@ -2758,32 +3646,43 @@
    "url": "https://www.autocarindia.com/cars/mercedes-benz/gle/expert-reviews",
    "image": "mercedes-benz_gle"
   },
-  "Mercedes-Benz|GLC": {
-   "slug": "mercedes-benz/glc",
+  "Mercedes-Benz|Maybach EQS SUV": {
+   "slug": "mercedes-benz/new-maybach-eqs-suv",
+   "url": "https://www.autocarindia.com/cars/mercedes-benz/new-maybach-eqs-suv/expert-reviews",
+   "video": {
+    "id": "BrNQHo43Czc",
+    "title": "Mercedes-Maybach EQS SUV review - The all-electric Maybach | First Drive Vlog | Autocar India",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
+   "image": null
+  },
+  "Mercedes-Benz|GLC Coupe": {
+   "slug": "mercedes-benz/glc-coupe",
    "score": 8,
    "scores": {
     "features": 9,
-    "mileage": 7,
-    "comfort": 8,
-    "value": 8,
+    "mileage": 6,
+    "comfort": 7.5,
+    "value": 7,
     "performance": 8,
-    "design": 8
+    "design": 9
    },
    "like": [
-    "Premium interior",
-    "Enjoyable dynamics"
+    "Handling",
+    "Performance "
    ],
    "dislike": [
-    "Fiddly touch-sensitive controls",
-    "Firm ride"
+    "Ride quality",
+    "Price"
    ],
    "video": null,
    "review": {
-    "title": "2023 Mercedes-Benz GLC review: A star reborn?",
-    "url": "https://www.autocarindia.com/car-reviews/2023-mercedes-benz-glc-review-a-star-reborn-428964"
+    "title": "Mercedes-AMG GLC 53 Coupe review: SUV with a big heart",
+    "url": "https://www.autocarindia.com/car-reviews/mercedes-amg-glc-53-coupe-review-suv-with-a-big-heart-440430"
    },
-   "url": "https://www.autocarindia.com/cars/mercedes-benz/glc/expert-reviews",
-   "image": "mercedes-benz_glc"
+   "url": "https://www.autocarindia.com/cars/mercedes-benz/glc-coupe/expert-reviews",
+   "image": "mercedes-benz_glc-coupe"
   },
   "Mercedes-Benz|GLS": {
    "slug": "mercedes-benz/gls",
@@ -2814,7 +3713,7 @@
    "url": "https://www.autocarindia.com/cars/mercedes-benz/gls/expert-reviews",
    "image": "mercedes-benz_gls"
   },
-  "Mercedes-Benz|Mercedes-Maybach GLS": {
+  "Mercedes-Benz|Maybach GLS": {
    "slug": "mercedes-benz/new-maybach-gls",
    "url": "https://www.autocarindia.com/cars/mercedes-benz/new-maybach-gls/expert-reviews",
    "video": {
@@ -2825,57 +3724,18 @@
    },
    "image": null
   },
-  "Mercedes-Benz|Mercedes-Maybach EQS SUV": {
-   "slug": "mercedes-benz/new-maybach-eqs-suv",
-   "url": "https://www.autocarindia.com/cars/mercedes-benz/new-maybach-eqs-suv/expert-reviews",
+  "Mercedes-Benz|Maybach S-Class": {
+   "slug": "mercedes-benz/new-maybach-s-class",
+   "url": "https://www.autocarindia.com/cars/mercedes-benz/new-maybach-s-class/expert-reviews",
    "video": {
-    "id": "BrNQHo43Czc",
-    "title": "Mercedes-Maybach EQS SUV review - The all-electric Maybach | First Drive Vlog | Autocar India",
-    "ago": "2 yr ago",
+    "id": "NKUrw2Yz5jU",
+    "title": "2022 Mercedes-Maybach S 580 review - The S-Class of S-Classes | First Drive | Autocar India",
+    "ago": "4 yr ago",
     "src": "youtube"
    },
    "image": null
   },
-  "Mercedes-Benz|Mercedes AMG GT Coupé": {
-   "slug": "mercedes-benz/new-gt-coupe",
-   "url": "https://www.autocarindia.com/cars/mercedes-benz/new-gt-coupe/expert-reviews",
-   "video": null,
-   "image": null
-  },
-  "Mercedes-Benz|S-Class": {
-   "slug": "mercedes-benz/s-class",
-   "score": 8,
-   "scores": {
-    "features": null,
-    "mileage": null,
-    "comfort": null,
-    "value": null,
-    "performance": null,
-    "design": null
-   },
-   "like": [
-    "Genuinely useful driver aids",
-    "Silky smooth engines",
-    "Top-class infotainment system"
-   ],
-   "dislike": [
-    "Digital overload for traditional buyers",
-    "Plug-in hybrid likely to be pricey"
-   ],
-   "video": {
-    "id": "tcEobjynXzs",
-    "title": "2026 Mercedes-Benz S-class facelift review - Bolder face, smarter brain | Drive | Autocar India",
-    "ago": "4 mo ago",
-    "src": "youtube"
-   },
-   "review": {
-    "title": "2026 Mercedes-Benz S-Class review: The best car in the world just got better ",
-    "url": "https://www.autocarindia.com/car-reviews/2026-mercedes-benz-s-class-review-the-best-car-in-the-world-just-got-better-440413"
-   },
-   "url": "https://www.autocarindia.com/cars/mercedes-benz/s-class/expert-reviews",
-   "image": "mercedes-benz_s-class"
-  },
-  "Mercedes-Benz|Mercedes-Maybach SL Monogram Series": {
+  "Mercedes-Benz|Maybach SL": {
    "slug": "mercedes-benz/new-maybach-sl",
    "url": "https://www.autocarindia.com/cars/mercedes-benz/new-maybach-sl/expert-reviews",
    "video": {
@@ -2885,6 +3745,17 @@
     "src": "youtube"
    },
    "image": null
+  },
+  "Mercedes-Benz|V-Class": {
+   "slug": "mercedes-benz/new-v-class",
+   "url": "https://www.autocarindia.com/cars/mercedes-benz/new-v-class/expert-reviews",
+   "video": {
+    "id": "kbYczxdzlQU",
+    "title": "2026 Mercedes-Benz V-Class review - The Rs 1.4 crore space ship | First Drive | Autocar India",
+    "ago": "2 mo ago",
+    "src": "youtube"
+   },
+   "image": "mercedes-benz_v-class"
   },
   "MG|Astor": {
    "slug": "mg/astor",
@@ -2905,7 +3776,12 @@
     "Unexciting handling",
     "Some equipment missing"
    ],
-   "video": null,
+   "video": {
+    "id": "HskTTkkeEQY",
+    "title": "MG Astor real world review - Performance, comfort, ADAS and more | Autocar India",
+    "ago": "4 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "MG Astor review: Real world test of tech laden Creta rival",
     "url": "https://www.autocarindia.com/car-reviews/mg-astor-review-real-world-test-of-tech-laden-creta-rival-423468"
@@ -2945,67 +3821,70 @@
    "url": "https://www.autocarindia.com/cars/mg/comet/expert-reviews",
    "image": "mg_comet"
   },
-  "Mercedes-Benz|V-Class": {
-   "slug": "mercedes-benz/new-v-class",
-   "url": "https://www.autocarindia.com/cars/mercedes-benz/new-v-class/expert-reviews",
-   "video": null,
-   "image": "mercedes-benz_v-class"
-  },
-  "MG|Hector": {
-   "slug": "mg/hector",
-   "score": 7,
+  "Mercedes-Benz|S-Class": {
+   "slug": "mercedes-benz/s-class",
+   "score": 8,
    "scores": {
-    "features": 8,
-    "mileage": 6,
-    "comfort": 7,
-    "value": 8,
-    "performance": 7,
-    "design": 7
+    "features": null,
+    "mileage": null,
+    "comfort": null,
+    "value": null,
+    "performance": null,
+    "design": null
    },
    "like": [
-    "Spacious and comfortable cabin",
-    "Improved interior quality",
-    "Feature-packed"
+    "Genuinely useful driver aids",
+    "Silky smooth engines",
+    "Top-class infotainment system"
    ],
    "dislike": [
-    "Not engaging enough to drive",
-    "High speed dynamics"
+    "Digital overload for traditional buyers",
+    "Plug-in hybrid likely to be pricey"
    ],
-   "video": null,
-   "review": {
-    "title": "MG Hector facelift review: Raising the bar",
-    "url": "https://www.autocarindia.com/car-reviews/mg-hector-facelift-review-raising-the-bar-427262"
+   "video": {
+    "id": "tcEobjynXzs",
+    "title": "2026 Mercedes-Benz S-class facelift review - Bolder face, smarter brain | Drive | Autocar India",
+    "ago": "4 mo ago",
+    "src": "youtube"
    },
-   "url": "https://www.autocarindia.com/cars/mg/hector/expert-reviews",
-   "image": "mg_hector"
+   "review": {
+    "title": "2026 Mercedes-Benz S-Class review: The best car in the world just got better ",
+    "url": "https://www.autocarindia.com/car-reviews/2026-mercedes-benz-s-class-review-the-best-car-in-the-world-just-got-better-440413"
+   },
+   "url": "https://www.autocarindia.com/cars/mercedes-benz/s-class/expert-reviews",
+   "image": "mercedes-benz_s-class"
   },
-  "MG|Hector Plus 6 Seater": {
-   "slug": "mg/hector-plus",
-   "score": 7,
+  "MG|Cyberster": {
+   "slug": "mg/cyberster",
+   "score": 8,
    "scores": {
     "features": 8,
-    "mileage": 6,
+    "mileage": 8,
     "comfort": 7,
-    "value": 8,
-    "performance": 7,
-    "design": 7
+    "value": 7,
+    "performance": 9,
+    "design": 8
    },
    "like": [
-    "Spacious and comfortable cabin",
-    "Improved interior quality",
-    "Feature-packed"
+    "Comfy, well-finished interior",
+    "Strong performance",
+    "Attractive, head-turning design"
    ],
    "dislike": [
-    "Not engaging enough to drive",
-    "High speed dynamics"
+    "Some missing features",
+    "Interior ergonomics and practicality"
    ],
-   "video": null,
-   "review": {
-    "title": "MG Hector facelift review: Raising the bar",
-    "url": "https://www.autocarindia.com/car-reviews/mg-hector-facelift-review-raising-the-bar-427262"
+   "video": {
+    "id": "E4i39xujaoA",
+    "title": "MG Cyberster driven on the Porvorim Elevated Corridor: video  ",
+    "year": 2026
    },
-   "url": "https://www.autocarindia.com/cars/mg/hector-plus/expert-reviews",
-   "image": null
+   "review": {
+    "title": "MG Cyberster track drive: Droptop delight",
+    "url": "https://www.autocarindia.com/car-reviews/mg-cyberster-track-drive-droptop-delight-436483"
+   },
+   "url": "https://www.autocarindia.com/cars/mg/cyberster/expert-reviews",
+   "image": "mg_cyberster"
   },
   "MG|Gloster": {
    "slug": "mg/gloster",
@@ -3034,36 +3913,38 @@
    "url": "https://www.autocarindia.com/cars/mg/gloster/expert-reviews",
    "image": "mg_gloster"
   },
-  "MG|Majestor": {
-   "slug": "mg/majestor",
-   "score": 8,
+  "MG|Hector": {
+   "slug": "mg/hector",
+   "score": 7,
    "scores": {
-    "features": 9,
+    "features": 8,
     "mileage": 6,
-    "comfort": 8.5,
+    "comfort": 7,
     "value": 8,
     "performance": 7,
-    "design": 8
+    "design": 7
    },
    "like": [
     "Spacious and comfortable cabin",
+    "Improved interior quality",
     "Feature-packed"
    ],
    "dislike": [
-    "Sluggish engine response",
-    "High ground clearance makes cabin access cumbersome"
+    "Not engaging enough to drive",
+    "High speed dynamics"
    ],
    "video": {
-    "id": "YFKp9oIuF1E",
-    "title": "2026 MG Majestor video review",
-    "year": 2026
+    "id": "_I4hwd9vzBU",
+    "title": "2023 MG Hector review - More bling, more tech | First Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
    },
    "review": {
-    "title": "2026 MG Majestor Review: Gloster hits the gym",
-    "url": "https://www.autocarindia.com/car-reviews/mgs-new-flagship-suv-gets-a-bunch-of-new-off-road-hardware-more-tech-and-big-changes-inside-and-out-440400"
+    "title": "MG Hector facelift review: Raising the bar",
+    "url": "https://www.autocarindia.com/car-reviews/mg-hector-facelift-review-raising-the-bar-427262"
    },
-   "url": "https://www.autocarindia.com/cars/mg/majestor/expert-reviews",
-   "image": "mg_majestor"
+   "url": "https://www.autocarindia.com/cars/mg/hector/expert-reviews",
+   "image": "mg_hector"
   },
   "MG|Hector Tomahawk EV": {
    "slug": "mg/hector-tomahawk-ev",
@@ -3105,32 +3986,69 @@
    "video": null,
    "image": "mg_hector-tomahawk-phev"
   },
-  "MG|ZS EV": {
-   "slug": "mg/zs-ev",
+  "MG|Majestor": {
+   "slug": "mg/majestor",
    "score": 8,
    "scores": {
-    "features": 7,
-    "mileage": 8,
-    "comfort": 7,
-    "value": 7,
-    "performance": 8,
-    "design": 6
+    "features": 9,
+    "mileage": 6,
+    "comfort": 8.5,
+    "value": 8,
+    "performance": 7,
+    "design": 8
    },
    "like": [
-    "Practicality",
-    "Range"
+    "Spacious and comfortable cabin",
+    "Feature-packed"
    ],
    "dislike": [
-    "Expensive ",
-    "Regen not too effective "
+    "Sluggish engine response",
+    "High ground clearance makes cabin access cumbersome"
    ],
-   "video": null,
-   "review": {
-    "title": "2022 MG ZS EV review: Current affair ",
-    "url": "https://www.autocarindia.com/car-reviews/2022-mg-zs-ev-review-current-affair-423944"
+   "video": {
+    "id": "YFKp9oIuF1E",
+    "title": "2026 MG Majestor review – The Tough with the Smooth | First Drive | Autocar India",
+    "ago": "5 mo ago",
+    "src": "youtube"
    },
-   "url": "https://www.autocarindia.com/cars/mg/zs-ev/expert-reviews",
-   "image": "mg_zs-ev"
+   "review": {
+    "title": "2026 MG Majestor Review: Gloster hits the gym",
+    "url": "https://www.autocarindia.com/car-reviews/mgs-new-flagship-suv-gets-a-bunch-of-new-off-road-hardware-more-tech-and-big-changes-inside-and-out-440400"
+   },
+   "url": "https://www.autocarindia.com/cars/mg/majestor/expert-reviews",
+   "image": "mg_majestor"
+  },
+  "MG|M9": {
+   "slug": "mg/m9",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 7,
+    "comfort": 8,
+    "value": 8,
+    "performance": 8,
+    "design": 7
+   },
+   "like": [
+    "Excellent refinement creates a calming ambience",
+    "Supremely comfortable middle row seats"
+   ],
+   "dislike": [
+    "Being an EV, it is not ideal for long distance travel",
+    "Low-speed ride comfort can feel busy"
+   ],
+   "video": {
+    "id": "QZnAZMev8JY",
+    "title": "MG M9 passenger review - The best seat in the house | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "MG M9 review: Your lounge on the go",
+    "url": "https://www.autocarindia.com/car-reviews/mg-m9-review-your-lounge-on-the-go-436052"
+   },
+   "url": "https://www.autocarindia.com/cars/mg/m9/expert-reviews",
+   "image": "mg_m9"
   },
   "MG|Windsor EV": {
    "slug": "mg/windsor",
@@ -3151,7 +4069,12 @@
     "Road noise at higher speeds",
     "Stiff ride over broken surfaces"
    ],
-   "video": null,
+   "video": {
+    "id": "42GHaT12PPY",
+    "title": "MG Windsor EV Pro review - Best Electric Vehicle under Rs 20 lakh? | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "MG Windsor road test review",
     "url": "https://www.autocarindia.com/car-reviews/mg-windsor-road-test-review-434546"
@@ -3159,69 +4082,65 @@
    "url": "https://www.autocarindia.com/cars/mg/windsor/expert-reviews",
    "image": "mg_windsor"
   },
-  "Nissan|Magnite": {
-   "slug": "nissan/magnite",
+  "MG|ZS EV": {
+   "slug": "mg/zs-ev",
    "score": 8,
+   "scores": {
+    "features": 7,
+    "mileage": 8,
+    "comfort": 7,
+    "value": 7,
+    "performance": 8,
+    "design": 6
+   },
+   "like": [
+    "Practicality",
+    "Range"
+   ],
+   "dislike": [
+    "Expensive ",
+    "Regen not too effective "
+   ],
+   "video": {
+    "id": "mviD0iADUlw",
+    "title": "2022 MG ZS EV review - Current Affair | First Drive | Autocar India",
+    "ago": "4 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2022 MG ZS EV review: Current affair ",
+    "url": "https://www.autocarindia.com/car-reviews/2022-mg-zs-ev-review-current-affair-423944"
+   },
+   "url": "https://www.autocarindia.com/cars/mg/zs-ev/expert-reviews",
+   "image": "mg_zs-ev"
+  },
+  "MG|Hector Plus 6 Seater": {
+   "slug": "mg/hector-plus",
+   "score": 7,
    "scores": {
     "features": 8,
-    "mileage": 8,
-    "comfort": 8,
-    "value": 9,
-    "performance": 8,
-    "design": 8
-   },
-   "like": [
-    "Performance (turbo-petrol)",
-    "Value for money"
-   ],
-   "dislike": [
-    "Visible cost-cutting",
-    "Refinement"
-   ],
-   "video": {
-    "id": "Ek9U_upnWp8",
-    "title": "Nissan Magnite facelift review - Fresh face, new features, same value | First Drive | Autocar India",
-    "ago": "1 yr ago",
-    "src": "youtube"
-   },
-   "review": {
-    "title": "Nissan Magnite facelift review: Small changes, big effect",
-    "url": "https://www.autocarindia.com/car-reviews/nissan-magnite-facelift-review-small-changes-big-effect-433259"
-   },
-   "url": "https://www.autocarindia.com/cars/nissan/magnite/expert-reviews",
-   "image": "nissan_magnite"
-  },
-  "Nissan|Tekton": {
-   "slug": "nissan/tekton",
-   "score": 8,
-   "scores": {
-    "features": 9,
     "mileage": 6,
-    "comfort": 8.5,
+    "comfort": 7,
     "value": 8,
     "performance": 7,
-    "design": 9
+    "design": 7
    },
    "like": [
-    "Excellent ride quality",
-    "Enjoyable driving dynamics",
-    "Class-leading boot space"
+    "Spacious and comfortable cabin",
+    "Improved interior quality",
+    "Feature-packed"
    ],
    "dislike": [
-    "Prominent turbo-lag with both engines"
+    "Not engaging enough to drive",
+    "High speed dynamics"
    ],
-   "video": {
-    "id": "1-3e6dZoMsc",
-    "title": "Nissan Tekton review - 700km drive in Ladakh | First Drive | Autocar India",
-    "ago": "2 mo ago",
-    "src": "youtube"
-   },
+   "video": null,
    "review": {
-    "title": "Nissan Tekton first drive review: Tough yet classy ",
-    "url": "https://www.autocarindia.com/car-reviews/nissan-tekton-first-drive-review-tough-yet-classy-440488"
+    "title": "MG Hector facelift review: Raising the bar",
+    "url": "https://www.autocarindia.com/car-reviews/mg-hector-facelift-review-raising-the-bar-427262"
    },
-   "url": "https://www.autocarindia.com/cars/nissan/tekton/expert-reviews",
-   "image": "nissan_tekton"
+   "url": "https://www.autocarindia.com/cars/mg/hector-plus/expert-reviews",
+   "image": null
   },
   "MG|Windsor Pro": {
    "slug": "mg/windsor",
@@ -3242,13 +4161,114 @@
     "Road noise at higher speeds",
     "Stiff ride over broken surfaces"
    ],
-   "video": null,
+   "video": {
+    "id": "42GHaT12PPY",
+    "title": "MG Windsor EV Pro review - Best Electric Vehicle under Rs 20 lakh? | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "MG Windsor road test review",
     "url": "https://www.autocarindia.com/car-reviews/mg-windsor-road-test-review-434546"
    },
    "url": "https://www.autocarindia.com/cars/mg/windsor/expert-reviews",
    "image": "mg_windsor"
+  },
+  "MINI|Countryman": {
+   "slug": "mini/countryman",
+   "score": 8,
+   "scores": {
+    "features": 8,
+    "mileage": 8,
+    "comfort": 7.5,
+    "value": 7,
+    "performance": 9,
+    "design": 9
+   },
+   "like": [
+    "Spacious cabin, practical nature",
+    "Strong engine performance",
+    "Charming, likeable persona"
+   ],
+   "dislike": [
+    "Pricing is a bit steep",
+    "Bolstering on front seats makes them snug",
+    "Suspension feels stiff for regular usage"
+   ],
+   "video": null,
+   "review": {
+    "title": "2026 Mini Countryman C Review – Can it be a serious luxury SUV?",
+    "url": "https://www.autocarindia.com/car-reviews/2026-mini-countryman-c-review-can-it-be-a-serious-luxury-suv-440513"
+   },
+   "url": "https://www.autocarindia.com/cars/mini/countryman/expert-reviews",
+   "image": "mini_countryman"
+  },
+  "MINI|Cooper Convertible": {
+   "slug": "mini/cooper-convertible",
+   "score": 8,
+   "scores": {
+    "features": 8,
+    "mileage": 8,
+    "comfort": 8.5,
+    "value": 8,
+    "performance": 8,
+    "design": 9
+   },
+   "like": [
+    "Top-down drive experience",
+    "Fun to drive"
+   ],
+   "dislike": [
+    "Missing paddle shifters",
+    "Lacks aural drama"
+   ],
+   "video": null,
+   "review": {
+    "title": "Mini Cooper S Convertible review: Hello, sunshine",
+    "url": "https://www.autocarindia.com/car-reviews/mini-cooper-s-convertible-review-hello-sunshine-439835"
+   },
+   "url": "https://www.autocarindia.com/cars/mini/cooper-convertible/expert-reviews",
+   "image": "mini_cooper-convertible"
+  },
+  "MINI|Cooper": {
+   "slug": "mini/cooper",
+   "score": 7,
+   "scores": {
+    "features": 7,
+    "mileage": 7,
+    "comfort": 7,
+    "value": 6,
+    "performance": 8,
+    "design": 9
+   },
+   "like": [
+    "Sizzling performance (Petrols)",
+    "Entertaining handling",
+    "Go-kart-like handling"
+   ],
+   "dislike": [
+    "Overpriced",
+    "Not very practical",
+    "Expensive"
+   ],
+   "video": {
+    "id": "26GKOKAyaHk",
+    "title": "2024 Mini Cooper S review - Good things come in small packages | First Drive | Autocar India",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2024 Mini Cooper S review: Legacy of fun",
+    "url": "https://www.autocarindia.com/car-reviews/2024-mini-cooper-s-review-legacy-of-fun-433186"
+   },
+   "url": "https://www.autocarindia.com/cars/mini/cooper/expert-reviews",
+   "image": null
+  },
+  "MINI|John Cooper Works Countryman": {
+   "slug": "mini/new-john-cooper-works-countryman",
+   "url": "https://www.autocarindia.com/cars/mini/new-john-cooper-works-countryman/expert-reviews",
+   "video": null,
+   "image": null
   },
   "Nissan|Gravite": {
    "slug": "nissan/gravite",
@@ -3284,32 +4304,216 @@
    "url": "https://www.autocarindia.com/cars/nissan/gravite/expert-reviews",
    "image": "nissan_gravite"
   },
-  "Renault|Kiger": {
-   "slug": "renault/kiger",
+  "Nissan|Tekton": {
+   "slug": "nissan/tekton",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 6,
+    "comfort": 8.5,
+    "value": 8,
+    "performance": 7,
+    "design": 9
+   },
+   "like": [
+    "Excellent ride quality",
+    "Enjoyable driving dynamics",
+    "Class-leading boot space"
+   ],
+   "dislike": [
+    "Prominent turbo-lag with both engines"
+   ],
+   "video": {
+    "id": "1-3e6dZoMsc",
+    "title": "Nissan Tekton review - 700km drive in Ladakh | First Drive | Autocar India",
+    "ago": "2 mo ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Nissan Tekton first drive review: Tough yet classy ",
+    "url": "https://www.autocarindia.com/car-reviews/nissan-tekton-first-drive-review-tough-yet-classy-440488"
+   },
+   "url": "https://www.autocarindia.com/cars/nissan/tekton/expert-reviews",
+   "image": "nissan_tekton"
+  },
+  "Nissan|Magnite": {
+   "slug": "nissan/magnite",
    "score": 8,
    "scores": {
     "features": 8,
-    "mileage": 7,
+    "mileage": 8,
     "comfort": 8,
+    "value": 9,
+    "performance": 8,
+    "design": 8
+   },
+   "like": [
+    "Performance (turbo-petrol)",
+    "Value for money"
+   ],
+   "dislike": [
+    "Visible cost-cutting",
+    "Refinement"
+   ],
+   "video": {
+    "id": "Ek9U_upnWp8",
+    "title": "Nissan Magnite facelift review - Fresh face, new features, same value | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Nissan Magnite facelift review: Small changes, big effect",
+    "url": "https://www.autocarindia.com/car-reviews/nissan-magnite-facelift-review-small-changes-big-effect-433259"
+   },
+   "url": "https://www.autocarindia.com/cars/nissan/magnite/expert-reviews",
+   "image": "nissan_magnite"
+  },
+  "Porsche|911": {
+   "slug": "porsche/911",
+   "score": 9,
+   "scores": {
+    "features": 7,
+    "mileage": 6,
+    "comfort": 9,
     "value": 7,
+    "performance": 10,
+    "design": 9
+   },
+   "like": [
+    "Everyday usability and reasonable practicality",
+    "Accessible performance even for novice drivers",
+    "Precise handling with balanced dynamics"
+   ],
+   "dislike": [
+    "Options can drive the cost up dramatically",
+    "Entire model range not available in India",
+    "Lacks drama compared to other sportscars"
+   ],
+   "video": {
+    "id": "EAZp6snr25E",
+    "title": "2025 Porsche 911 Carrera review – Who needs a GT3 RS! | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2025 Porsche 911 Turbo S review: The everyday supercar",
+    "url": "https://www.autocarindia.com/car-reviews/2025-porsche-911-turbo-s-review-the-everyday-supercar-438819"
+   },
+   "url": "https://www.autocarindia.com/cars/porsche/911/expert-reviews",
+   "image": "porsche_911"
+  },
+  "Nissan|X-Trail": {
+   "slug": "nissan/new-x-trail",
+   "url": "https://www.autocarindia.com/cars/nissan/new-x-trail/expert-reviews",
+   "video": {
+    "id": "rqQ0zqUaz_w",
+    "title": "2024 Nissan X Trail review: Better than the spec sheet suggests | First Drive | @autocarindia1",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
+   "image": null
+  },
+  "Porsche|Cayenne": {
+   "slug": "porsche/cayenne",
+   "score": 8,
+   "scores": {
+    "features": 7,
+    "mileage": 6,
+    "comfort": 8.5,
+    "value": 8,
     "performance": 8,
     "design": 7
    },
    "like": [
-    "Comfy seats",
-    "Lively engine response"
+    "Handling",
+    "Desirability"
    ],
    "dislike": [
-    "Touchscreen lacks sharpness",
-    "Cabin needs more insulation"
+    "Options are pricey",
+    "Limited engine options"
    ],
    "video": null,
    "review": {
-    "title": "2025 Renault Kiger review: French Flair ",
-    "url": "https://www.autocarindia.com/car-reviews/renault-kiger-review-french-flair-436911"
+    "title": "Porsche Cayenne facelift India review: Sporty yet sensible",
+    "url": "https://www.autocarindia.com/car-reviews/porsche-cayenne-facelift-india-review-sporty-yet-sensible-428856"
    },
-   "url": "https://www.autocarindia.com/cars/renault/kiger/expert-reviews",
-   "image": "renault_kiger"
+   "url": "https://www.autocarindia.com/cars/porsche/cayenne/expert-reviews",
+   "image": "porsche_cayenne"
+  },
+  "Porsche|Panamera": {
+   "slug": "porsche/panamera",
+   "score": 8,
+   "scores": {
+    "features": 7,
+    "mileage": 6,
+    "comfort": 8.5,
+    "value": 7,
+    "performance": 9,
+    "design": 8
+   },
+   "like": [
+    "Handles like a sportscar",
+    "Performance"
+   ],
+   "dislike": [
+    "Cabin doesn’t feel airy enough ",
+    "Only base V6 engine option"
+   ],
+   "video": null,
+   "review": {
+    "title": "New Porsche Panamera prototype review: Floats like a butterfly ",
+    "url": "https://www.autocarindia.com/car-reviews/new-porsche-panamera-prototype-review-floats-like-a-butterfly-429896"
+   },
+   "url": "https://www.autocarindia.com/cars/porsche/panamera/expert-reviews",
+   "image": "porsche_panamera"
+  },
+  "Porsche|Taycan": {
+   "slug": "porsche/taycan",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 8,
+    "comfort": 8,
+    "value": 8,
+    "performance": 9,
+    "design": 7
+   },
+   "like": [
+    "Comfy ride",
+    "Fun, playful handling"
+   ],
+   "dislike": [
+    "Not enough battery data on display",
+    "Over-reliance on touchscreens"
+   ],
+   "video": null,
+   "review": {
+    "title": "Porsche Taycan Turbo, Turbo S facelift review: Turbo-charged",
+    "url": "https://www.autocarindia.com/car-reviews/2025-porsche-taycan-turbo-turbo-s-facelift-review-turbo-charged-434832"
+   },
+   "url": "https://www.autocarindia.com/cars/porsche/taycan/expert-reviews",
+   "image": "porsche_taycan"
+  },
+  "Porsche|Cayenne Coupé": {
+   "slug": "porsche/cayenne-coupe",
+   "score": 8,
+   "scores": {
+    "features": 7,
+    "mileage": 6,
+    "comfort": 8.5,
+    "value": 8,
+    "performance": 8,
+    "design": 8
+   },
+   "like": [],
+   "dislike": [],
+   "video": null,
+   "review": {
+    "title": "Porsche Cayenne Coupe India review, test drive",
+    "url": "https://www.autocarindia.com/car-reviews/porsche-cayenne-coupe-review-test-drive-418684"
+   },
+   "url": "https://www.autocarindia.com/cars/porsche/cayenne-coupe/expert-reviews",
+   "image": "porsche_cayenne-coupe"
   },
   "Renault|Duster": {
    "slug": "renault/duster",
@@ -3347,6 +4551,33 @@
    "url": "https://www.autocarindia.com/cars/renault/duster/expert-reviews",
    "image": "renault_duster"
   },
+  "Porsche|Macan": {
+   "slug": "porsche/macan",
+   "score": 7,
+   "scores": {
+    "features": 7,
+    "mileage": 7,
+    "comfort": 7,
+    "value": 6,
+    "performance": 7,
+    "design": 7
+   },
+   "like": [
+    "Performance",
+    "Handling"
+   ],
+   "dislike": [
+    "Expensive for its size",
+    "Pricey options"
+   ],
+   "video": null,
+   "review": {
+    "title": "Porsche Macan GTS review: A practical sportscar",
+    "url": "https://www.autocarindia.com/car-reviews/porsche-macan-gts-review-a-practical-sportscar-427033"
+   },
+   "url": "https://www.autocarindia.com/cars/porsche/macan/expert-reviews",
+   "image": "porsche_macan"
+  },
   "Renault|Triber": {
    "slug": "renault/triber",
    "score": 8,
@@ -3371,7 +4602,7 @@
    "video": {
     "id": "rYHPjmkyO-M",
     "title": "2026 Renault Triber Turbo review – It feels complete now | First Drive | Autocar India",
-    "ago": "6 days ago",
+    "ago": "8 days ago",
     "src": "youtube"
    },
    "review": {
@@ -3380,35 +4611,6 @@
    },
    "url": "https://www.autocarindia.com/cars/renault/triber/expert-reviews",
    "image": "renault_triber"
-  },
-  "Skoda|Kodiaq": {
-   "slug": "skoda/kodiaq",
-   "score": 8,
-   "scores": {
-    "features": 8,
-    "mileage": 6,
-    "comfort": 8,
-    "value": 7,
-    "performance": 8,
-    "design": 7
-   },
-   "like": [
-    "Third row lends seating flexibility",
-    "Strong engine delivers peppy performance",
-    "Interior quality is at par with luxury cars"
-   ],
-   "dislike": [
-    "ADAS missing in otherwise well-specced package",
-    "No diesel or hybrid engine options (for now)",
-    "Expensive by premium SUV segment standards"
-   ],
-   "video": null,
-   "review": {
-    "title": "2025 Skoda Kodiaq review: Big 7 seat Skoda SUV for big money",
-    "url": "https://www.autocarindia.com/car-reviews/2025-skoda-kodiaq-review-big-7-seat-skoda-suv-for-big-money-435123"
-   },
-   "url": "https://www.autocarindia.com/cars/skoda/kodiaq/expert-reviews",
-   "image": "skoda_kodiaq"
   },
   "Renault|Kwid": {
    "slug": "renault/kwid",
@@ -3437,36 +4639,35 @@
    "url": "https://www.autocarindia.com/cars/renault/kwid/expert-reviews",
    "image": "renault_kwid"
   },
-  "Skoda|Kushaq": {
-   "slug": "skoda/kushaq",
-   "score": 7,
+  "Renault|Kiger": {
+   "slug": "renault/kiger",
+   "score": 8,
    "scores": {
     "features": 8,
     "mileage": 7,
-    "comfort": 7,
+    "comfort": 8,
     "value": 7,
-    "performance": 7,
-    "design": 8
+    "performance": 8,
+    "design": 7
    },
    "like": [
-    "Smooth 8-speed AT, that’s also quick to shift",
-    "Drivetrains feel quick and energetic",
-    "Good body control and high-speed manners"
+    "Comfy seats",
+    "Lively engine response"
    ],
    "dislike": [
-    "Ride has a firm edge at lower city speeds",
-    "Overall NVH needs improvement"
+    "Touchscreen lacks sharpness",
+    "Cabin needs more insulation"
    ],
    "video": null,
    "review": {
-    "title": "Skoda Kushaq Facelift review: More than skin deep",
-    "url": "https://www.autocarindia.com/car-reviews/skoda-kushaq-facelift-review-more-than-skin-deep-440358"
+    "title": "2025 Renault Kiger review: French Flair ",
+    "url": "https://www.autocarindia.com/car-reviews/renault-kiger-review-french-flair-436911"
    },
-   "url": "https://www.autocarindia.com/cars/skoda/kushaq/expert-reviews",
-   "image": "skoda_kushaq"
+   "url": "https://www.autocarindia.com/cars/renault/kiger/expert-reviews",
+   "image": "renault_kiger"
   },
-  "Skoda|Kodiaq RS": {
-   "slug": "skoda/kodiaq-rs",
+  "Skoda|Kodiaq": {
+   "slug": "skoda/kodiaq",
    "score": 8,
    "scores": {
     "features": 8,
@@ -3486,90 +4687,18 @@
     "No diesel or hybrid engine options (for now)",
     "Expensive by premium SUV segment standards"
    ],
-   "video": null,
+   "video": {
+    "id": "eIL2xSl0MKE",
+    "title": "2025 Skoda Kodiaq review - Big Skoda SUV for big money | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "2025 Skoda Kodiaq review: Big 7 seat Skoda SUV for big money",
     "url": "https://www.autocarindia.com/car-reviews/2025-skoda-kodiaq-review-big-7-seat-skoda-suv-for-big-money-435123"
    },
-   "url": "https://www.autocarindia.com/cars/skoda/kodiaq-rs/expert-reviews",
-   "image": "skoda_kodiaq-rs"
-  },
-  "Skoda|Slavia": {
-   "slug": "skoda/slavia",
-   "score": 8,
-   "scores": {
-    "features": 8,
-    "mileage": 7,
-    "comfort": 8,
-    "value": 7,
-    "performance": 8,
-    "design": 8
-   },
-   "like": [
-    "Performance (1.5)",
-    "Ride comfort, Safety"
-   ],
-   "dislike": [
-    "Expensive (1.5), Low-rev responses (1.0)",
-    "Quality not to European standards"
-   ],
-   "video": {
-    "id": "ZO2JfmU9aJw",
-    "title": "2026 Skoda Slavia facelift review - More frills, same thrills | First Drive | Autocar India",
-    "ago": "17 hr ago",
-    "src": "youtube"
-   },
-   "review": {
-    "title": "Skoda Slavia Monte Carlo track drive: Red Alert",
-    "url": "https://www.autocarindia.com/car-reviews/skoda-slavia-monte-carlo-track-drive-red-alert-432753"
-   },
-   "url": "https://www.autocarindia.com/cars/skoda/slavia/expert-reviews",
-   "image": "skoda_slavia"
-  },
-  "Tata|Aeris": {
-   "slug": "tata/aeris",
-   "score": null,
-   "scores": {
-    "features": 0,
-    "mileage": 0,
-    "comfort": 0,
-    "value": 0,
-    "performance": 0,
-    "design": 0
-   },
-   "like": [],
-   "dislike": [],
-   "video": null,
-   "review": null,
-   "url": "https://www.autocarindia.com/cars/tata/aeris/expert-reviews",
-   "image": "tata_aeris"
-  },
-  "Tata|Curvv": {
-   "slug": "tata/curvv",
-   "score": 6,
-   "scores": {
-    "features": 9,
-    "mileage": 7,
-    "comfort": 7.5,
-    "value": 6,
-    "performance": 6,
-    "design": 8
-   },
-   "like": [
-    "Packed with features",
-    "Smooth ride, Big boot"
-   ],
-   "dislike": [
-    "Snappy clutch (on manual)",
-    "Rear seat space, Ergonomic flaws"
-   ],
-   "video": null,
-   "review": {
-    "title": "Tata Curvv review: Ahead of the curve?",
-    "url": "https://www.autocarindia.com/car-reviews/tata-curvv-review-ahead-of-the-curve-432890"
-   },
-   "url": "https://www.autocarindia.com/cars/tata/curvv/expert-reviews",
-   "image": "tata_curvv"
+   "url": "https://www.autocarindia.com/cars/skoda/kodiaq/expert-reviews",
+   "image": "skoda_kodiaq"
   },
   "Skoda|Kylaq": {
    "slug": "skoda/kylaq",
@@ -3603,32 +4732,136 @@
    "url": "https://www.autocarindia.com/cars/skoda/kylaq/expert-reviews",
    "image": "skoda_kylaq"
   },
-  "Tata|Harrier": {
-   "slug": "tata/harrier",
+  "Tata|Aeris": {
+   "slug": "tata/aeris",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 0,
+    "comfort": 8,
+    "value": 8,
+    "performance": 6,
+    "design": 8
+   },
+   "like": [
+    "Modern exterior design and well-equipped interior",
+    "Practical dual-cylinder CNG setup",
+    "Excellent ride quality and handling manners"
+   ],
+   "dislike": [
+    "Poor NVH above 2,500rpm",
+    "Slow and jerky AMT responses"
+   ],
+   "video": {
+    "id": "lrDJr8OF0_0",
+    "title": "Tata Aeris review - More than just a Tigor with a new name | First Drive | Autocar India",
+    "ago": "10 hr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Tata Aeris iCNG AMT review: Fresh yet familiar",
+    "url": "https://www.autocarindia.com/car-reviews/tata-aeris-icng-amt-review-fresh-yet-familiar-440597"
+   },
+   "url": "https://www.autocarindia.com/cars/tata/aeris/expert-reviews",
+   "image": "tata_aeris"
+  },
+  "Skoda|Kushaq": {
+   "slug": "skoda/kushaq",
+   "score": 7,
+   "scores": {
+    "features": 8,
+    "mileage": 7,
+    "comfort": 7,
+    "value": 7,
+    "performance": 7,
+    "design": 8
+   },
+   "like": [
+    "Smooth 8-speed AT, that’s also quick to shift",
+    "Drivetrains feel quick and energetic",
+    "Good body control and high-speed manners"
+   ],
+   "dislike": [
+    "Ride has a firm edge at lower city speeds",
+    "Overall NVH needs improvement"
+   ],
+   "video": {
+    "id": "V52oCQ0yeIU",
+    "title": "2026 Skoda Kushaq facelift review - The changes add up | First Drive | Autocar India",
+    "ago": "6 mo ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Skoda Kushaq Facelift review: More than skin deep",
+    "url": "https://www.autocarindia.com/car-reviews/skoda-kushaq-facelift-review-more-than-skin-deep-440358"
+   },
+   "url": "https://www.autocarindia.com/cars/skoda/kushaq/expert-reviews",
+   "image": "skoda_kushaq"
+  },
+  "Skoda|Slavia": {
+   "slug": "skoda/slavia",
    "score": 8,
    "scores": {
     "features": 9,
     "mileage": 7,
-    "comfort": 8.5,
+    "comfort": 8,
     "value": 8,
     "performance": 8,
-    "design": 9
+    "design": 8
    },
    "like": [
-    "Petrol is smooth with effortless performance",
-    "Good ride quality and highway manners"
+    "Punchy engines, impressive high speed stability",
+    "New 8-speed AT has improved low speed drivability",
+    "Feature-rich"
    ],
    "dislike": [
-    "Ergonomic quirks persist",
-    "Gruff diesel engine"
+    "Low-speed ride has a firm edge",
+    "No manual option with the 1.5"
    ],
-   "video": null,
-   "review": {
-    "title": "Tata Harrier petrol review: Replacement for displacement",
-    "url": "https://www.autocarindia.com/car-reviews/tata-harrier-petrol-review-replacement-for-displacement-440281"
+   "video": {
+    "id": "ZO2JfmU9aJw",
+    "title": "2026 Skoda Slavia facelift review - More frills, same thrills | First Drive | Autocar India",
+    "ago": "2 days ago",
+    "src": "youtube"
    },
-   "url": "https://www.autocarindia.com/cars/tata/harrier/expert-reviews",
-   "image": "tata_harrier"
+   "review": {
+    "title": "Skoda Slavia facelift review: Small changes add up",
+    "url": "https://www.autocarindia.com/car-reviews/skoda-slavia-facelift-review-small-changes-add-up-440590"
+   },
+   "url": "https://www.autocarindia.com/cars/skoda/slavia/expert-reviews",
+   "image": "skoda_slavia"
+  },
+  "Tata|Curvv": {
+   "slug": "tata/curvv",
+   "score": 6,
+   "scores": {
+    "features": 9,
+    "mileage": 7,
+    "comfort": 7.5,
+    "value": 6,
+    "performance": 6,
+    "design": 8
+   },
+   "like": [
+    "Packed with features",
+    "Smooth ride, Big boot"
+   ],
+   "dislike": [
+    "Snappy clutch (on manual)",
+    "Rear seat space, Ergonomic flaws"
+   ],
+   "video": {
+    "id": "VS47A-vTZ34",
+    "title": "2024 Tata Curvv review - Petrol and diesel engines put to the test | First Drive | Autocar India",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Tata Curvv review: Ahead of the curve?",
+    "url": "https://www.autocarindia.com/car-reviews/tata-curvv-review-ahead-of-the-curve-432890"
+   },
+   "url": "https://www.autocarindia.com/cars/tata/curvv/expert-reviews",
+   "image": "tata_curvv"
   },
   "Tata|Altroz": {
    "slug": "tata/altroz",
@@ -3650,13 +4883,44 @@
     "No turbo-petrol option",
     "Road, wind and engine noise can get disturbing"
    ],
-   "video": null,
+   "video": {
+    "id": "jVNnnQkhxcE",
+    "title": "Tata Altroz facelift review - New face, new tech, same engines | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "2025 Tata Altroz facelift review: Sharp suiter",
     "url": "https://www.autocarindia.com/car-reviews/2025-tata-altroz-facelift-review-sharp-suiter-435512"
    },
    "url": "https://www.autocarindia.com/cars/tata/altroz/expert-reviews",
    "image": "tata_altroz"
+  },
+  "Tata|Harrier EV": {
+   "slug": "tata/harrier-ev",
+   "score": 8,
+   "scores": {
+    "features": 8,
+    "mileage": 8,
+    "comfort": 8.5,
+    "value": 8,
+    "performance": 9,
+    "design": 7
+   },
+   "like": [],
+   "dislike": [],
+   "video": {
+    "id": "I-8cUbClYzI",
+    "title": "Tata Harrier EV review - The 313hp all-electric Tata SUV | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Tata Harrier EV road test review",
+    "url": "https://www.autocarindia.com/car-reviews/tata-harrier-ev-road-test-review-437322"
+   },
+   "url": "https://www.autocarindia.com/cars/tata/harrier-ev/expert-reviews",
+   "image": "tata_harrier-ev"
   },
   "Tata|Curvv EV": {
    "slug": "tata/curvv-ev",
@@ -3684,6 +4948,38 @@
    },
    "url": "https://www.autocarindia.com/cars/tata/curvv-ev/expert-reviews",
    "image": "tata_curvv-ev"
+  },
+  "Tata|Harrier": {
+   "slug": "tata/harrier",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 7,
+    "comfort": 8.5,
+    "value": 8,
+    "performance": 8,
+    "design": 9
+   },
+   "like": [
+    "Petrol is smooth with effortless performance",
+    "Good ride quality and highway manners"
+   ],
+   "dislike": [
+    "Ergonomic quirks persist",
+    "Gruff diesel engine"
+   ],
+   "video": {
+    "id": "3PMhL_sdkmY",
+    "title": "Tata Harrier facelift review - Big Tata SUV takes a big leap forward | First Drive | Autocar India",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Tata Harrier petrol review: Replacement for displacement",
+    "url": "https://www.autocarindia.com/car-reviews/tata-harrier-petrol-review-replacement-for-displacement-440281"
+   },
+   "url": "https://www.autocarindia.com/cars/tata/harrier/expert-reviews",
+   "image": "tata_harrier"
   },
   "Tata|Nexon EV": {
    "slug": "tata/nexon-ev",
@@ -3742,13 +5038,52 @@
     "No accessible cup holders anywhere in the cabin. All holders are placed inside the glovebox.",
     "Diesel gearbox throws are long and the gate baulks when you shift in a hurry."
    ],
-   "video": null,
+   "video": {
+    "id": "rFR2gc1nLAo",
+    "title": "New Tata Nexon review - Fresh look, new interior, DCT gearbox | First Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "Mahindra XUV 3XO vs Tata Nexon diesel comparison",
     "url": "https://www.autocarindia.com/car-reviews/mahindra-xuv-3xo-vs-tata-nexon-diesel-comparison-433597"
    },
    "url": "https://www.autocarindia.com/cars/tata/nexon/expert-reviews",
    "image": "tata_nexon"
+  },
+  "Tata|Safari": {
+   "slug": "tata/safari",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 7,
+    "comfort": 8,
+    "value": 8,
+    "performance": 8,
+    "design": 9
+   },
+   "like": [
+    "Petrol is smooth with effortless performance",
+    "Good ride quality and highway manners",
+    "Feature packed",
+    "Usable third row"
+   ],
+   "dislike": [
+    "Ergonomic quirks persist",
+    "Gruff diesel engine"
+   ],
+   "video": {
+    "id": "ByLd66kztAc",
+    "title": "Tata Safari facelift review - Flagship SUV goes more upmarket | First Drive | Autocar India",
+    "ago": "2 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Tata Safari petrol review: Does size matter?",
+    "url": "https://www.autocarindia.com/car-reviews/tata-safari-petrol-review-does-size-matter-440283"
+   },
+   "url": "https://www.autocarindia.com/cars/tata/safari/expert-reviews",
+   "image": "tata_safari"
   },
   "Tata|Punch": {
    "slug": "tata/punch",
@@ -3777,34 +5112,6 @@
    },
    "url": "https://www.autocarindia.com/cars/tata/punch/expert-reviews",
    "image": "tata_punch"
-  },
-  "Tata|Punch EV": {
-   "slug": "tata/punch-ev",
-   "score": 9,
-   "scores": {
-    "features": 9,
-    "mileage": 8,
-    "comfort": 8,
-    "value": 9,
-    "performance": 9,
-    "design": 8
-   },
-   "like": [
-    "Strong and linear acceleration",
-    "Very comfy ride",
-    "Feature packed"
-   ],
-   "dislike": [
-    "Narrow rear seat",
-    "No spare tyre"
-   ],
-   "video": null,
-   "review": {
-    "title": "Tata Punch EV facelift review: More for less",
-    "url": "https://www.autocarindia.com/car-reviews/tata-punch-ev-facelift-review-more-for-less-440338"
-   },
-   "url": "https://www.autocarindia.com/cars/tata/punch-ev/expert-reviews",
-   "image": "tata_punch-ev"
   },
   "Tata|Sierra": {
    "slug": "tata/sierra",
@@ -3839,61 +5146,38 @@
    "url": "https://www.autocarindia.com/cars/tata/sierra/expert-reviews",
    "image": "tata_sierra"
   },
-  "Tata|Safari": {
-   "slug": "tata/safari",
-   "score": 8,
-   "scores": {
-    "features": 9,
-    "mileage": 7,
-    "comfort": 8,
-    "value": 8,
-    "performance": 8,
-    "design": 9
-   },
-   "like": [
-    "Petrol is smooth with effortless performance",
-    "Good ride quality and highway manners",
-    "Feature packed",
-    "Usable third row"
-   ],
-   "dislike": [
-    "Ergonomic quirks persist",
-    "Gruff diesel engine"
-   ],
-   "video": null,
-   "review": {
-    "title": "Tata Safari petrol review: Does size matter?",
-    "url": "https://www.autocarindia.com/car-reviews/tata-safari-petrol-review-does-size-matter-440283"
-   },
-   "url": "https://www.autocarindia.com/cars/tata/safari/expert-reviews",
-   "image": "tata_safari"
-  },
-  "Tata|Tiago EV": {
-   "slug": "tata/tiago-ev",
+  "Tata|Punch EV": {
+   "slug": "tata/punch-ev",
    "score": 9,
    "scores": {
-    "features": 8,
+    "features": 9,
     "mileage": 8,
-    "comfort": 8.5,
-    "value": 8,
-    "performance": 8,
-    "design": 7
+    "comfort": 8,
+    "value": 9,
+    "performance": 9,
+    "design": 8
    },
    "like": [
-    "Plush low-speed ride quality",
-    "Light controls, good visibility"
+    "Strong and linear acceleration",
+    "Very comfy ride",
+    "Feature packed"
    ],
    "dislike": [
-    "Top variant is pricier than base 30kWh Punch EV",
-    "No load-cell sensors for rear seats"
+    "Narrow rear seat",
+    "No spare tyre"
    ],
-   "video": null,
-   "review": {
-    "title": "2026 Tata Tiago EV review: City slicker",
-    "url": "https://www.autocarindia.com/car-reviews/2026-tata-tiago-ev-review-city-slicker-440448"
+   "video": {
+    "id": "w05eYM7EaJo",
+    "title": "2026 Tata Punch EV review - More for less | First Drive | Autocar India",
+    "ago": "7 mo ago",
+    "src": "youtube"
    },
-   "url": "https://www.autocarindia.com/cars/tata/tiago-ev/expert-reviews",
-   "image": "tata_tiago-ev"
+   "review": {
+    "title": "Tata Punch EV facelift review: More for less",
+    "url": "https://www.autocarindia.com/car-reviews/tata-punch-ev-facelift-review-more-for-less-440338"
+   },
+   "url": "https://www.autocarindia.com/cars/tata/punch-ev/expert-reviews",
+   "image": "tata_punch-ev"
   },
   "Tata|Sierra EV": {
    "slug": "tata/sierra-ev",
@@ -3929,32 +5213,103 @@
    "url": "https://www.autocarindia.com/cars/tata/sierra-ev/expert-reviews",
    "image": "tata_sierra-ev"
   },
-  "Toyota|Camry": {
-   "slug": "toyota/camry",
-   "score": 8,
+  "Tata|Tiago EV": {
+   "slug": "tata/tiago-ev",
+   "score": 9,
    "scores": {
     "features": 8,
-    "mileage": 9,
-    "comfort": 7.5,
+    "mileage": 8,
+    "comfort": 8.5,
     "value": 8,
-    "performance": 7,
-    "design": 8
+    "performance": 8,
+    "design": 7
    },
    "like": [
-    "Rear seat comfort",
-    "Smooth, efficient powertrain"
+    "Plush low-speed ride quality",
+    "Light controls, good visibility"
    ],
    "dislike": [
-    "Engine buzzy at higher revs",
-    "Unexciting to drive"
+    "Top variant is pricier than base 30kWh Punch EV",
+    "No load-cell sensors for rear seats"
    ],
-   "video": null,
-   "review": {
-    "title": "Toyota Camry road test review",
-    "url": "https://www.autocarindia.com/car-reviews/toyota-camry-road-test-review-440381"
+   "video": {
+    "id": "yDLLvLK056I",
+    "title": "2026 Tata Tiago EV review - Faster charging, better value? | First Drive | Autocar India",
+    "ago": "3 mo ago",
+    "src": "youtube"
    },
-   "url": "https://www.autocarindia.com/cars/toyota/camry/expert-reviews",
-   "image": "toyota_camry"
+   "review": {
+    "title": "2026 Tata Tiago EV review: City slicker",
+    "url": "https://www.autocarindia.com/car-reviews/2026-tata-tiago-ev-review-city-slicker-440448"
+   },
+   "url": "https://www.autocarindia.com/cars/tata/tiago-ev/expert-reviews",
+   "image": "tata_tiago-ev"
+  },
+  "Tata|Tiago": {
+   "slug": "tata/tiago",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 8,
+    "comfort": 8,
+    "value": 8,
+    "performance": 7,
+    "design": 9
+   },
+   "like": [
+    "Richer cabin experience",
+    "Remains a user-friendly city hatch"
+   ],
+   "dislike": [
+    "Petrol engine is not as refined as rivals",
+    "Missing rear head restraints, load-cell sensors"
+   ],
+   "video": {
+    "id": "cX7lJow6HV4",
+    "title": "2026 Tata Tiago facelift petrol & CNG review - Small Hatch, Big Appeal | First drive | Autocar India",
+    "ago": "4 mo ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2026 Tata Tiago review: Economical yet aspirational  ",
+    "url": "https://www.autocarindia.com/car-reviews/2026-tata-tiago-review-economical-yet-aspirational-440445"
+   },
+   "url": "https://www.autocarindia.com/cars/tata/tiago/expert-reviews",
+   "image": "tata_tiago"
+  },
+  "Tesla|Model Y": {
+   "slug": "tesla/model-y",
+   "score": 7,
+   "scores": {
+    "features": 8,
+    "mileage": 8,
+    "comfort": 7.5,
+    "value": 6,
+    "performance": 8,
+    "design": 5
+   },
+   "like": [
+    "Spacious for its size",
+    "Loaded with features",
+    "Slick touchscreen"
+   ],
+   "dislike": [
+    "Not enough physical controls",
+    "Oddball amorphous looks",
+    "Expensive, including options"
+   ],
+   "video": {
+    "id": "qZMHT2p_GiQ",
+    "title": "2026 Tesla Model Y Review - high-tech gadget disguised as a car | Autocar India",
+    "ago": "7 mo ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Tesla Model Y road test review",
+    "url": "https://www.autocarindia.com/car-reviews/tesla-model-y-road-test-review-440411"
+   },
+   "url": "https://www.autocarindia.com/cars/tesla/model-y/expert-reviews",
+   "image": "tesla_model-y"
   },
   "Tata|Tigor EV": {
    "slug": "tata/tigor-ev",
@@ -4015,32 +5370,69 @@
    "url": "https://www.autocarindia.com/cars/toyota/glanza/expert-reviews",
    "image": "toyota_glanza"
   },
-  "Tata|Tiago": {
-   "slug": "tata/tiago",
+  "Toyota|Camry": {
+   "slug": "toyota/camry",
    "score": 8,
    "scores": {
-    "features": 9,
-    "mileage": 8,
-    "comfort": 8,
+    "features": 8,
+    "mileage": 9,
+    "comfort": 7.5,
     "value": 8,
     "performance": 7,
-    "design": 9
+    "design": 8
    },
    "like": [
-    "Richer cabin experience",
-    "Remains a user-friendly city hatch"
+    "Rear seat comfort",
+    "Smooth, efficient powertrain"
    ],
    "dislike": [
-    "Petrol engine is not as refined as rivals",
-    "Missing rear head restraints, load-cell sensors"
+    "Engine buzzy at higher revs",
+    "Unexciting to drive"
    ],
-   "video": null,
-   "review": {
-    "title": "2026 Tata Tiago review: Economical yet aspirational  ",
-    "url": "https://www.autocarindia.com/car-reviews/2026-tata-tiago-review-economical-yet-aspirational-440445"
+   "video": {
+    "id": "GnhtS07b6Qo",
+    "title": "2025 Toyota Camry review – A Lexus for Less | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
    },
-   "url": "https://www.autocarindia.com/cars/tata/tiago/expert-reviews",
-   "image": "tata_tiago"
+   "review": {
+    "title": "Toyota Camry road test review",
+    "url": "https://www.autocarindia.com/car-reviews/toyota-camry-road-test-review-440381"
+   },
+   "url": "https://www.autocarindia.com/cars/toyota/camry/expert-reviews",
+   "image": "toyota_camry"
+  },
+  "Toyota|Hilux": {
+   "slug": "toyota/hilux",
+   "score": 7,
+   "scores": {
+    "features": 7,
+    "mileage": 8,
+    "comfort": 7,
+    "value": 7,
+    "performance": 9,
+    "design": 7
+   },
+   "like": [
+    "Excellent refinement with minimal noise and vibrations",
+    "Suspension can take a pounding from large imperfections"
+   ],
+   "dislike": [
+    "Misses key equipment along with goodies expected at this price",
+    "Bouncy ride, especially with the rear unloaded"
+   ],
+   "video": {
+    "id": "haEtosS2TIc",
+    "title": "Toyota Hilux review - The legendary Toyota pickup | First Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2026 Toyota Hilux review: Mr. Indestructible",
+    "url": "https://www.autocarindia.com/car-reviews/2026-toyota-hilux-review-mr-indestructible-440501"
+   },
+   "url": "https://www.autocarindia.com/cars/toyota/hilux/expert-reviews",
+   "image": "toyota_hilux"
   },
   "Toyota|Innova Crysta": {
    "slug": "toyota/innova-crysta",
@@ -4119,100 +5511,18 @@
     "Interior quality",
     "Premium pricing"
    ],
-   "video": null,
+   "video": {
+    "id": "yQaY3kPX5c0",
+    "title": "2022 Toyota Innova Hycross review - India's favourite MPV reborn | First Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
+   },
    "review": {
     "title": "Toyota Innova Hycross review, road test",
     "url": "https://www.autocarindia.com/car-reviews/toyota-innova-hycross-review-road-test-428393"
    },
    "url": "https://www.autocarindia.com/cars/toyota/innova-hycross/expert-reviews",
    "image": "toyota_innova-hycross"
-  },
-  "Toyota|Land Cruiser 300": {
-   "slug": "toyota/land-cruiser",
-   "score": 8,
-   "scores": {
-    "features": 8,
-    "mileage": 6,
-    "comfort": 7,
-    "value": 6,
-    "performance": 8,
-    "design": 9
-   },
-   "like": [
-    "Go-anywhere ability",
-    "Road presence"
-   ],
-   "dislike": [
-    "Lacks sheer quality of rivals",
-    "Exorbitant price"
-   ],
-   "video": null,
-   "review": {
-    "title": "Toyota Land Cruiser 300 review: Above all else",
-    "url": "https://www.autocarindia.com/car-reviews/toyota-land-cruiser-300-review-above-all-else-429417"
-   },
-   "url": "https://www.autocarindia.com/cars/toyota/land-cruiser/expert-reviews",
-   "image": "toyota_land-cruiser"
-  },
-  "Toyota|Legender": {
-   "slug": "toyota/fortuner",
-   "score": 7,
-   "scores": {
-    "features": 7,
-    "mileage": 5,
-    "comfort": 6.5,
-    "value": 5,
-    "performance": 7,
-    "design": 8
-   },
-   "like": [
-    "Tough build",
-    "Image"
-   ],
-   "dislike": [
-    "Expensive",
-    "Cabin doesn’t feel special enough"
-   ],
-   "video": null,
-   "review": {
-    "title": "Toyota Fortuner Neo Drive review: Fixing the unbroken",
-    "url": "https://www.autocarindia.com/car-reviews/toyota-fortuner-neo-drive-review-fixing-the-unbroken-436338"
-   },
-   "basedOn": "Fortuner",
-   "url": "https://www.autocarindia.com/cars/toyota/fortuner/expert-reviews",
-   "image": "toyota_fortuner"
-  },
-  "Toyota|Hilux": {
-   "slug": "toyota/hilux",
-   "score": 7,
-   "scores": {
-    "features": 7,
-    "mileage": 8,
-    "comfort": 7,
-    "value": 7,
-    "performance": 9,
-    "design": 7
-   },
-   "like": [
-    "Excellent refinement with minimal noise and vibrations",
-    "Suspension can take a pounding from large imperfections"
-   ],
-   "dislike": [
-    "Misses key equipment along with goodies expected at this price",
-    "Bouncy ride, especially with the rear unloaded"
-   ],
-   "video": {
-    "id": "ijFIZHdoik8",
-    "title": "New Toyota Hilux review - Tough as nails pick-up in an all-new avatar | First Drive | Autocar India ",
-    "ago": "2 mo ago",
-    "src": "youtube"
-   },
-   "review": {
-    "title": "2026 Toyota Hilux review: Mr. Indestructible",
-    "url": "https://www.autocarindia.com/car-reviews/2026-toyota-hilux-review-mr-indestructible-440501"
-   },
-   "url": "https://www.autocarindia.com/cars/toyota/hilux/expert-reviews",
-   "image": "toyota_hilux"
   },
   "Toyota|Rumion": {
    "slug": "toyota/rumion",
@@ -4246,32 +5556,37 @@
    "url": "https://www.autocarindia.com/cars/toyota/rumion/expert-reviews",
    "image": "toyota_rumion"
   },
-  "Toyota|Urban Cruiser Taisor": {
-   "slug": "toyota/urban-cruiser-taisor",
+  "Toyota|Land Cruiser 300": {
+   "slug": "toyota/land-cruiser",
    "score": 8,
    "scores": {
-    "features": 7,
-    "mileage": 8,
-    "comfort": 8,
-    "value": 8,
+    "features": 8,
+    "mileage": 6,
+    "comfort": 7,
+    "value": 6,
     "performance": 8,
     "design": 9
    },
    "like": [
-    "Warranty",
-    "Compact yet practical"
+    "Go-anywhere ability",
+    "Road presence"
    ],
    "dislike": [
-    "Some features missing",
-    "Not different enough from Fronx"
+    "Lacks sheer quality of rivals",
+    "Exorbitant price"
    ],
-   "video": null,
-   "review": {
-    "title": "Toyota Urban Cruiser Taisor review: This or the Fronx?",
-    "url": "https://www.autocarindia.com/car-reviews/toyota-taisor-review-this-or-the-fronx-431792"
+   "video": {
+    "id": "S6fBTmAqg8w",
+    "title": "Toyota Land Cruiser LC 300 review - King of the road | First Drive | Autocar India",
+    "ago": "3 yr ago",
+    "src": "youtube"
    },
-   "url": "https://www.autocarindia.com/cars/toyota/urban-cruiser-taisor/expert-reviews",
-   "image": "toyota_urban-cruiser-taisor"
+   "review": {
+    "title": "Toyota Land Cruiser 300 review: Above all else",
+    "url": "https://www.autocarindia.com/car-reviews/toyota-land-cruiser-300-review-above-all-else-429417"
+   },
+   "url": "https://www.autocarindia.com/cars/toyota/land-cruiser/expert-reviews",
+   "image": "toyota_land-cruiser"
   },
   "Toyota|Urban Cruiser Ebella": {
    "slug": "toyota/urban-cruiser-ebella",
@@ -4306,33 +5621,6 @@
    "url": "https://www.autocarindia.com/cars/toyota/urban-cruiser-ebella/expert-reviews",
    "image": "toyota_urban-cruiser-ebella"
   },
-  "Volkswagen|Taigun": {
-   "slug": "volkswagen/taigun",
-   "score": 7,
-   "scores": {
-    "features": 6,
-    "mileage": 6,
-    "comfort": 7.5,
-    "value": 6,
-    "performance": 8,
-    "design": 7
-   },
-   "like": [
-    "Rock-solid highway stability",
-    "Smooth-shifting 8-speed automatic"
-   ],
-   "dislike": [
-    "Low speed ride feels harsh",
-    "Misses 360-deg camera, ADAS, rear sunblinds"
-   ],
-   "video": null,
-   "review": {
-    "title": "2026 Volkswagen Taigun review: Jaipur to Chandigarh mileage test",
-    "url": "https://www.autocarindia.com/car-reviews/2026-volkswagen-taigun-review-jaipur-to-chandigarh-mileage-test-440409"
-   },
-   "url": "https://www.autocarindia.com/cars/volkswagen/taigun/expert-reviews",
-   "image": "volkswagen_taigun"
-  },
   "Toyota|Urban Cruiser Hyryder": {
    "slug": "toyota/urban-cruiser-hyryder",
    "score": 8,
@@ -4363,6 +5651,34 @@
    },
    "url": "https://www.autocarindia.com/cars/toyota/urban-cruiser-hyryder/expert-reviews",
    "image": "toyota_urban-cruiser-hyryder"
+  },
+  "Toyota|Legender": {
+   "slug": "toyota/fortuner",
+   "score": 7,
+   "scores": {
+    "features": 7,
+    "mileage": 5,
+    "comfort": 6.5,
+    "value": 5,
+    "performance": 7,
+    "design": 8
+   },
+   "like": [
+    "Tough build",
+    "Image"
+   ],
+   "dislike": [
+    "Expensive",
+    "Cabin doesn’t feel special enough"
+   ],
+   "video": null,
+   "review": {
+    "title": "Toyota Fortuner Neo Drive review: Fixing the unbroken",
+    "url": "https://www.autocarindia.com/car-reviews/toyota-fortuner-neo-drive-review-fixing-the-unbroken-436338"
+   },
+   "basedOn": "Fortuner",
+   "url": "https://www.autocarindia.com/cars/toyota/fortuner/expert-reviews",
+   "image": "toyota_fortuner"
   },
   "Toyota|Vellfire": {
    "slug": "toyota/vellfire",
@@ -4398,6 +5714,138 @@
    "url": "https://www.autocarindia.com/cars/toyota/vellfire/expert-reviews",
    "image": "toyota_vellfire"
   },
+  "VinFast|VF MPV 7": {
+   "slug": "vinfast/new-vf-mpv-7",
+   "url": "https://www.autocarindia.com/cars/vinfast/new-vf-mpv-7/expert-reviews",
+   "video": null,
+   "image": null
+  },
+  "VinFast|VF7": {
+   "slug": "vinfast/vf7",
+   "score": 8,
+   "scores": {
+    "features": 9,
+    "mileage": 6,
+    "comfort": 8,
+    "value": 8,
+    "performance": 9,
+    "design": 8
+   },
+   "like": [
+    "Spacious rear seat",
+    "Strong performance",
+    "Value for money"
+   ],
+   "dislike": [
+    "Touchscreen controls too many functions",
+    "Lacks road presence",
+    "No spare tyre"
+   ],
+   "video": {
+    "id": "jYMIacqpTL4",
+    "title": "Vinfast VF7 video review",
+    "year": 2026
+   },
+   "review": {
+    "title": "Vinfast VF7 road test review",
+    "url": "https://www.autocarindia.com/car-reviews/vinfast-vf7-road-test-review-440434"
+   },
+   "url": "https://www.autocarindia.com/cars/vinfast/vf7/expert-reviews",
+   "image": "vinfast_vf7"
+  },
+  "Toyota|Urban Cruiser Taisor": {
+   "slug": "toyota/urban-cruiser-taisor",
+   "score": 8,
+   "scores": {
+    "features": 7,
+    "mileage": 8,
+    "comfort": 8,
+    "value": 8,
+    "performance": 8,
+    "design": 9
+   },
+   "like": [
+    "Warranty",
+    "Compact yet practical"
+   ],
+   "dislike": [
+    "Some features missing",
+    "Not different enough from Fronx"
+   ],
+   "video": null,
+   "review": {
+    "title": "Toyota Urban Cruiser Taisor review: This or the Fronx?",
+    "url": "https://www.autocarindia.com/car-reviews/toyota-taisor-review-this-or-the-fronx-431792"
+   },
+   "url": "https://www.autocarindia.com/cars/toyota/urban-cruiser-taisor/expert-reviews",
+   "image": "toyota_urban-cruiser-taisor"
+  },
+  "Volkswagen|Taigun": {
+   "slug": "volkswagen/taigun",
+   "score": 7,
+   "scores": {
+    "features": 6,
+    "mileage": 6,
+    "comfort": 7.5,
+    "value": 6,
+    "performance": 8,
+    "design": 7
+   },
+   "like": [
+    "Rock-solid highway stability",
+    "Smooth-shifting 8-speed automatic"
+   ],
+   "dislike": [
+    "Low speed ride feels harsh",
+    "Misses 360-deg camera, ADAS, rear sunblinds"
+   ],
+   "video": {
+    "id": "PH9BPtzlqhg",
+    "title": "2026 VW Taigun 1.0 TSI 8AT review - 400km+ real-world fuel efficiency test | Autocar India",
+    "ago": "5 mo ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2026 Volkswagen Taigun review: Jaipur to Chandigarh mileage test",
+    "url": "https://www.autocarindia.com/car-reviews/2026-volkswagen-taigun-review-jaipur-to-chandigarh-mileage-test-440409"
+   },
+   "url": "https://www.autocarindia.com/cars/volkswagen/taigun/expert-reviews",
+   "image": "volkswagen_taigun"
+  },
+  "Volkswagen|Tayron": {
+   "slug": "volkswagen/tayron",
+   "score": 8,
+   "scores": {
+    "features": 8,
+    "mileage": 6,
+    "comfort": 8,
+    "value": 8,
+    "performance": 9,
+    "design": 8
+   },
+   "like": [
+    "Tough build and premium interior",
+    "Peppy petrol engine and easy handling",
+    "Packs in all new-age essential features"
+   ],
+   "dislike": [
+    "Third row access is inconvenient and space is tight",
+    "Few physical controls for commonly used functions",
+    "No diesel engine option"
+   ],
+   "video": {
+    "id": "EJkTxaFxjrU",
+    "title": "Volkswagen Tayron review - 7 seat premium SUV with a sporty vibe | First Drive | Autocar India ",
+    "ago": "8 mo ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "Volkswagen Tayron review: Euro express",
+    "url": "https://www.autocarindia.com/car-reviews/volkswagen-tayron-review-euro-express-440321"
+   },
+   "url": "https://www.autocarindia.com/cars/volkswagen/tayron/expert-reviews",
+   "image": "volkswagen_tayron"
+  },
   "Volkswagen|Virtus": {
    "slug": "volkswagen/virtus",
    "score": 8,
@@ -4417,18 +5865,149 @@
     "Some poor interior bits",
     "No diesel or hybrid option"
    ],
-   "video": {
-    "id": "22Nwt9ED_bY",
-    "title": "2022 Volkswagen Virtus review - It's almost a Jetta! | First Drive | Autocar India",
-    "ago": "4 yr ago",
-    "src": "youtube"
-   },
+   "video": null,
    "review": {
     "title": "Volkswagen Virtus 1.0 TSI MT review: Owner’s manual",
     "url": "https://www.autocarindia.com/car-reviews/volkswagen-virtus-10-tsi-mt-review-owners-manual-424991"
    },
    "url": "https://www.autocarindia.com/cars/volkswagen/virtus/expert-reviews",
    "image": "volkswagen_virtus"
+  },
+  "VinFast|VF6": {
+   "slug": "vinfast/vf6",
+   "score": 7,
+   "scores": {
+    "features": 8,
+    "mileage": 7,
+    "comfort": 7,
+    "value": 9,
+    "performance": 8,
+    "design": 7
+   },
+   "like": [
+    "Strong performance",
+    "Superb value for money",
+    "Robust interior quality"
+   ],
+   "dislike": [
+    "Space is merely adequate",
+    "Over-reliance on touchscreen",
+    "Poorly calibrated power delivery"
+   ],
+   "video": {
+    "id": "LtdRVSKk5Lw",
+    "title": "Vinfast VF6 review - Is it better than the Creta EV? | Drive | Autocar India",
+    "ago": "8 mo ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2026 Vinfast VF6 India review: Southeast Asian Surprise",
+    "url": "https://www.autocarindia.com/car-reviews/2026-vinfast-vf6-india-review-440293"
+   },
+   "url": "https://www.autocarindia.com/cars/vinfast/vf6/expert-reviews",
+   "image": "vinfast_vf6"
+  },
+  "Volvo|EX30": {
+   "slug": "volvo/ex30",
+   "score": 8,
+   "scores": {
+    "features": 6,
+    "mileage": 8,
+    "comfort": 7,
+    "value": 7,
+    "performance": 8,
+    "design": 8
+   },
+   "like": [],
+   "dislike": [],
+   "video": {
+    "id": "Tp8_ZPFJZeM",
+    "title": "Volvo EX30 review - Great EX-pectations! | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2025 Volvo EX30 review: EX marks the spot",
+    "url": "https://www.autocarindia.com/car-reviews/2025-volvo-ex30-review-ex-marks-the-spot-436707"
+   },
+   "url": "https://www.autocarindia.com/cars/volvo/ex30/expert-reviews",
+   "image": "volvo_ex30"
+  },
+  "Volkswagen|Tiguan R-Line": {
+   "slug": "volkswagen/new-tiguan-r-line",
+   "url": "https://www.autocarindia.com/cars/volkswagen/new-tiguan-r-line/expert-reviews",
+   "video": {
+    "id": "7cD-p3Q1SFM",
+    "title": "2025 Volkswagen Tiguan R-Line review - Can it justify the price? | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
+   "image": null
+  },
+  "Volvo|XC60": {
+   "slug": "volvo/xc60",
+   "score": 7,
+   "scores": {
+    "features": 9,
+    "mileage": 6,
+    "comfort": 8.5,
+    "value": 7,
+    "performance": 7,
+    "design": 8
+   },
+   "like": [
+    "Comfortable ride",
+    "Plush interior"
+   ],
+   "dislike": [
+    "No wireless connectivity",
+    "Not exciting to drive"
+   ],
+   "video": {
+    "id": "fVwh2qqb48c",
+    "title": "2025 Volvo XC60 review - XC and I know it | First Drive | Autocar India",
+    "ago": "1 yr ago",
+    "src": "youtube"
+   },
+   "review": {
+    "title": "2025 Volvo XC60 facelift review: XC and I know it",
+    "url": "https://www.autocarindia.com/car-reviews/2025-volvo-xc60-facelift-review-xc-and-i-know-it-436455"
+   },
+   "url": "https://www.autocarindia.com/cars/volvo/xc60/expert-reviews",
+   "image": "volvo_xc60"
+  },
+  "Volvo|EC40": {
+   "slug": "volvo/new-ec40",
+   "url": "https://www.autocarindia.com/cars/volvo/new-ec40/expert-reviews",
+   "video": null,
+   "image": null
+  },
+  "Volvo|XC90": {
+   "slug": "volvo/xc90",
+   "score": 7,
+   "scores": {
+    "features": 9,
+    "mileage": 6,
+    "comfort": 7.5,
+    "value": 7,
+    "performance": 6,
+    "design": 8
+   },
+   "like": [
+    "Loaded with equipment",
+    "Classy interior"
+   ],
+   "dislike": [
+    "Firm low-speed ride",
+    "Engines sound gruff "
+   ],
+   "video": null,
+   "review": {
+    "title": "2025 Volvo XC90 review - A different flavour of luxury SUV",
+    "url": "https://www.autocarindia.com/car-reviews/2025-volvo-xc90-review-a-different-flavour-of-luxury-suv-435117"
+   },
+   "url": "https://www.autocarindia.com/cars/volvo/xc90/expert-reviews",
+   "image": "volvo_xc90"
   }
  }
 }
