@@ -1,0 +1,168 @@
+{
+ "brand": "MINI",
+ "curated": true,
+ "updated": "2026-10-06",
+ "source": "https://www.mini.in/en_IN/home/range.html (official 'from' prices via MINI India price service); trim prices not on the official site from carwale.com",
+ "models": [
+  {
+   "model": "Cooper",
+   "body": "Hatchback",
+   "url": "https://www.mini.in/en_IN/home/range/mini-cooper-3-door.html",
+   "variants": [
+    {
+     "name": "Cooper S Essential",
+     "fuel": "Petrol",
+     "transmission": "7-speed DCT",
+     "drive": "",
+     "seats": 4,
+     "price": 4445000,
+     "engine": "1998 cc",
+     "specs": {
+      "Power": "204 PS"
+     },
+     "priceSource": "https://productdata.api.bmw/pdh/fsm/v1.0/pricing/minifsm+marketIN+minifsm_in+en_IN/latest?range=F66"
+    },
+    {
+     "name": "Cooper S Classic",
+     "fuel": "Petrol",
+     "transmission": "7-speed DCT",
+     "drive": "",
+     "seats": 4,
+     "price": 5040000,
+     "engine": "1998 cc",
+     "specs": {
+      "Power": "204 PS"
+     },
+     "priceSource": "https://www.carwale.com/mini-cars/cooper/"
+    },
+    {
+     "name": "Cooper S Favoured",
+     "fuel": "Petrol",
+     "transmission": "7-speed DCT",
+     "drive": "",
+     "seats": 4,
+     "price": 5325000,
+     "engine": "1998 cc",
+     "specs": {
+      "Power": "204 PS"
+     },
+     "priceSource": "https://www.carwale.com/mini-cars/cooper/"
+    },
+    {
+     "name": "Cooper S JCW Pack",
+     "fuel": "Petrol",
+     "transmission": "7-speed DCT",
+     "drive": "",
+     "seats": 4,
+     "price": 5565000,
+     "engine": "1998 cc",
+     "specs": {
+      "Power": "204 PS"
+     },
+     "priceSource": "https://www.carwale.com/mini-cars/cooper/"
+    }
+   ]
+  },
+  {
+   "model": "Cooper Convertible",
+   "body": "Coupe / Convertible",
+   "url": "https://www.mini.in/en_IN/home/range/mini-cooper-convertible.html",
+   "variants": [
+    {
+     "name": "Cooper S Convertible Favoured",
+     "fuel": "Petrol",
+     "transmission": "7-speed DCT",
+     "drive": "",
+     "seats": 4,
+     "price": 5900000,
+     "engine": "1998 cc",
+     "specs": {
+      "Power": "204 PS"
+     },
+     "priceSource": "https://productdata.api.bmw/pdh/fsm/v1.0/pricing/minifsm+marketIN+minifsm_in+en_IN/latest?range=F67"
+    },
+    {
+     "name": "Cooper S Convertible JCW Pack",
+     "fuel": "Petrol",
+     "transmission": "7-speed DCT",
+     "drive": "",
+     "seats": 4,
+     "price": 6150000,
+     "engine": "1998 cc",
+     "specs": {
+      "Power": "204 PS"
+     },
+     "priceSource": "https://www.carwale.com/mini-cars/cooper-s-convertible/"
+    },
+    {
+     "name": "Cooper S Convertible Stardust Edition",
+     "fuel": "Petrol",
+     "transmission": "7-speed DCT",
+     "drive": "",
+     "seats": 4,
+     "price": 6290000,
+     "engine": "1998 cc",
+     "specs": {
+      "Power": "204 PS"
+     },
+     "priceSource": "https://www.carwale.com/mini-cars/cooper-s-convertible/"
+    }
+   ]
+  },
+  {
+   "model": "Countryman",
+   "body": "SUV",
+   "url": "https://www.mini.in/en_IN/home/range/mini-countryman-c.html",
+   "variants": [
+    {
+     "name": "Countryman C Favoured",
+     "fuel": "Petrol",
+     "transmission": "7-speed DCT",
+     "drive": "",
+     "seats": 5,
+     "price": 4750000,
+     "engine": "1499 cc",
+     "specs": {
+      "Power": "156 hp"
+     },
+     "priceSource": "https://productdata.api.bmw/pdh/fsm/v1.0/pricing/minifsm+marketIN+minifsm_in+en_IN/latest?range=U25"
+    },
+    {
+     "name": "Countryman E (All-Electric)",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 5565000,
+     "specs": {
+      "Range": "462 km (WLTP)",
+      "Battery": "64.6 kWh",
+      "Power": "204 PS"
+     },
+     "priceSource": "https://productdata.api.bmw/pdh/fsm/v1.0/pricing/minifsm+marketIN+minifsm_in+en_IN/latest?range=U25E"
+    }
+   ]
+  },
+  {
+   "model": "John Cooper Works Countryman",
+   "body": "SUV",
+   "url": "https://www.mini.in/en_IN/home/range/john-cooper-works.html",
+   "variants": [
+    {
+     "name": "JCW Countryman ALL4",
+     "fuel": "Petrol",
+     "transmission": "7-speed DCT",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 6615000,
+     "engine": "1998 cc",
+     "specs": {
+      "Power": "300 hp",
+      "Torque": "400 Nm"
+     },
+     "priceSource": "https://productdata.api.bmw/pdh/fsm/v1.0/pricing/minifsm+marketIN+minifsm_in+en_IN/latest?range=JCW"
+    }
+   ]
+  }
+ ]
+}

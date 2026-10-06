@@ -180,11 +180,24 @@ function specOf(specs, re) { for (const [k, v] of Object.entries(specs || {})) i
 function cleanModelName(brand, m) {
   let s = String(m).replace(/^(all[\s-]+)?new\s+/i, '').replace(/^the\s+/i, '').replace(/^(volkswagen|vw|kia|nissan|renault|tata|hyundai|honda|skoda|škoda|mg|toyota|mahindra|jeep|audi|bmw|mercedes-benz)\s+/i, '').trim();
   if (brand === 'Volkswagen') s = s.replace(/\s+(anniversary edition|chrome|sport)$/i, '');
-  if (brand === 'Mahindra') s = s.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase()).replace(/\bXuv\b/g, 'XUV').replace(/\b(\d)xo\b/i, '$1XO').replace(/Og$/, 'OG');
-  const KEEP = /^(IONIQ|XUV\d*|XUV|CNG|EV\d*|GT|RS|ZS|AMG|GLA|GLC|GLE|GLS|CLA|CLE|EQS|EQA|EQB|EQE|XL6|SUV|MPV|OG|N|TSI|TDI)$/;
+  if (brand === 'Mahindra') s = s.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase()).replace(/\bXuv\b/g, 'XUV').replace(/\b(\d)xo\b/i, '$1XO').replace(/Og$/, 'OG').replace(/\bBe\b/g, 'BE').replace(/\bXev\b/g, 'XEV').replace(/\b9s\b/g, '9S').replace(/\bEv\b/g, 'EV');
+  const KEEP = /^(IONIQ|XEV|XUV\d*|XUV|CNG|EV\d*|GT|RS|ZS|AMG|GLA|GLC|GLE|GLS|CLA|CLE|EQS|EQA|EQB|EQE|XL6|SUV|MPV|OG|N|TSI|TDI)$/;
   s = s.split(/\s+/).map((w) => (/^[A-Z]{3,}$/.test(w) && !KEEP.test(w) ? w[0] + w.slice(1).toLowerCase() : w)).join(' ');
   s = s.replace(/\bEv\b/g, 'EV').replace(/\bXuv(\d*)\b/g, 'XUV$1').replace(/\bPhev\b/g, 'PHEV').replace(/^E Vitara$/i, 'e Vitara').replace(/\bNios\b/, 'Nios');
   return s;
+}
+
+// keep model names stable between the live scrape and older snapshots (images, reviews and NCAP are keyed by name)
+const MODEL_ALIAS = {
+  BMW: { '3 Lwb': '3 Series Lwb', '5 Lwb': '5 Series Lwb', '2 Series': '2 Series Gran Coupe' },
+  'Mercedes-Benz': { 'A-Class Hatchback': 'A-Class', 'CLE Coupé': 'CLE Coupe', 'GLC Coupé': 'GLC Coupe', 'GLE Coupé': 'GLE Coupe', 'E-Class Sedan': 'E-Class', 'E-Class Sedan Long': 'E-Class', 'Mercedes AMG GT Coupé': 'AMG GT Coupe', 'AMG GT Coupé': 'AMG GT Coupe', 'Mercedes-Maybach EQS SUV': 'Maybach EQS SUV', 'Mercedes-Maybach GLS': 'Maybach GLS', 'Mercedes-Maybach SL Monogram Series': 'Maybach SL', 'Mercedes-Maybach S-Class': 'Maybach S-Class' },
+};
+// no longer sold new in India (makers' price feeds can lag behind)
+const GONE = new Set(['Maruti Suzuki|Ciaz', 'Maruti Suzuki|Ignis', 'Skoda|Kodiaq RS']);
+function modelName(brand, m) {
+  let s = cleanModelName(brand, m.model);
+  if (brand === 'Mercedes-Benz' && s === 'EQS' && /\/suv\//.test(m.url || '')) s = 'EQS SUV';
+  return (MODEL_ALIAS[brand] || {})[s] || s;
 }
 
 export function normalize() {
@@ -193,9 +206,15 @@ export function normalize() {
   const rawFiles = fs.existsSync(rawDir) ? fs.readdirSync(rawDir).filter((f) => f.endsWith('.json') && !f.startsWith('_')).map((f) => path.join(rawDir, f)) : [];
   const rawNames = new Set(rawFiles.map((f) => path.basename(f)));
   // a curated snapshot (data/curated/x.json) is only used when the scraper for x produced nothing
-  const curFiles = (fs.existsSync(curDir) ? fs.readdirSync(curDir).filter((f) => f.endsWith('.json')).map((f) => path.join(curDir, f)) : [])
-    .filter((f) => !rawNames.has(path.basename(f)));
-  const files = [...rawFiles, ...curFiles];
+  const curAll = fs.existsSync(curDir) ? fs.readdirSync(curDir).filter((f) => f.endsWith('.json')).map((f) => path.join(curDir, f)) : [];
+  const curFiles = curAll.filter((f) => !rawNames.has(path.basename(f)));
+  // when the scraper did produce the brand, its snapshot still fills in models the scrape missed
+  // data/curated-extra/*.json: models the brand scrapers don't cover (new brands live in data/curated);
+  // a model there is used only if no scraper or snapshot already produced it
+  const extraDir = path.join(ROOT, 'data/curated-extra');
+  const extraFiles = [...curAll.filter((f) => rawNames.has(path.basename(f))), ...(fs.existsSync(extraDir) ? fs.readdirSync(extraDir).filter((f) => f.endsWith('.json')).map((f) => path.join(extraDir, f)) : [])];
+  const files = [...rawFiles, ...curFiles, ...extraFiles];
+  const haveModel = new Set();
   const cars = [];
   const brands = {};
   const seen = new Set();
@@ -204,8 +223,11 @@ export function normalize() {
     const brand = raw.brand;
     const complete = raw.complete ?? COMPLETE.has(brand);
     brands[brand] = brands[brand] || { brand, updated: raw.scrapedAt || raw.updated, source: raw.source, curated: !!raw.curated, models: 0, variants: 0 };
+    const isExtra = extraFiles.includes(file);
     for (const m of raw.models || []) {
-      const model = cleanModelName(brand, m.model);
+      const model = modelName(brand, m);
+      if (isExtra && haveModel.has(brand + '|' + model)) continue;
+      if (GONE.has(brand + '|' + model)) continue;
       let nV = 0;
       for (const v of m.variants || []) {
         if (!v.price || v.price < 200000) continue;
@@ -236,7 +258,7 @@ export function normalize() {
         });
         nV++;
       }
-      if (nV) { brands[brand].models++; brands[brand].variants += nV; }
+      if (nV) { if (!haveModel.has(brand + '|' + model)) brands[brand].models++; brands[brand].variants += nV; haveModel.add(brand + '|' + model); }
     }
   }
   // fill unknown seats from same model
@@ -318,7 +340,8 @@ export function normalize() {
   const have = new Set(cars.map((c) => `${c.brand}|${c.model}`));
   const pick = (o) => Object.fromEntries(Object.entries(o).filter(([k]) => have.has(k)));
   const ncap = pick(rd('ncap.json')), usp = pick(rd('usp.json'));
-  return { generated: new Date().toISOString(), buckets: BUCKETS, features: featureMeta, brands: Object.values(brands).filter((b) => b.variants), cars, experts, ncap, usp };
+  const testdrive = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data/testdrive.json'), 'utf8')).brands || {}; } catch (e) { return {}; } })();
+  return { generated: new Date().toISOString(), buckets: BUCKETS, features: featureMeta, brands: Object.values(brands).filter((b) => b.variants), cars, experts, ncap, usp, testdrive };
 }
 
 // ---- car page extras: photos, real-world mileage, ratings, maintenance and resale (site/data/extras.json) ----

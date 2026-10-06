@@ -305,9 +305,39 @@
  },
  "MG|Windsor Pro": {
   "page": "https://www.mgmotor.co.in/vehicles/windsor-ev-pro",
-  "hero": null,
-  "colors": [],
-  "interior": []
+  "hero": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_CL?fmt=png-alpha&wid=1400",
+  "colors": [
+   {
+    "name": "Celadon Blue",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_CL?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Aurora Silver",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_AS?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Glaze Red",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_GR?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Pearl White",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_PW?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Starry Black",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_SB?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Turquoise Green",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_TG?fmt=png-alpha&wid=1400"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dual-tone ivory cabin",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-bn-dsc-041?wid=1600&fmt=jpg"
+   }
+  ]
  },
  "MG|ZS EV": {
   "page": "https://www.mgmotor.co.in/vehicles/mgzsev-electric-car-in-india",
@@ -342,6 +372,74 @@
    {
     "cap": "Infotainment",
     "img": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0307?fmt=jpg&qlt=85&wid=1400"
+   }
+  ]
+ },
+ "MG|Cyberster": {
+  "page": "https://www.mgselect.co.in/cyberster",
+  "hero": "https://mgmotor.scene7.com/is/image/mgmotor/Red?fmt=png-alpha&wid=1400",
+  "colors": [
+   {
+    "name": "Flare Red",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/Red?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Nuclear Yellow",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/Yellow?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Andes Grey",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/grey?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Modern Beige",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/beige?fmt=png-alpha&wid=1400"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/hotspot-interior-g?fmt=png-alpha&wid=1400"
+   },
+   {
+    "cap": "Digital cockpit",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/launch-mode-thumb?fmt=png-alpha&wid=1400"
+   },
+   {
+    "cap": "Cabin from above",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/airbags_v4?fmt=png-alpha&wid=1400"
+   }
+  ]
+ },
+ "MG|M9": {
+  "page": "https://www.mgselect.co.in/m9",
+  "hero": "https://mgmotor.scene7.com/is/image/mgmotor/pearl-white?fmt=png-alpha&wid=1400",
+  "colors": [
+   {
+    "name": "Pearl White with Black Roof",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/pearl-white?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Metal Black",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/metal-black?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Concrete Grey with Black Roof",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/concrete-grey?fmt=png-alpha&wid=1400"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Second-row seats (massage)",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/massage-desktop-thumbnail?fmt=png-alpha&wid=1400"
+   },
+   {
+    "cap": "Second-row seat fully extended",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/fully-extend-desktop-thumb?fmt=png-alpha&wid=1400"
+   },
+   {
+    "cap": "Seating layout",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/thumbnail_second_banner?fmt=png-alpha&wid=1400"
    }
   ]
  }

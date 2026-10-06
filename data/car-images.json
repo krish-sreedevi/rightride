@@ -1102,10 +1102,72 @@
    "page": "https://www.bmw.in/en/all-models/7-series/sedan/bmw-i7-sedan.html"
   },
   "BMW|iX1 Lwb": {
-   "hero": null,
-   "colors": [],
-   "interior": [],
-   "page": "https://www.bmw.in/en/all-models.html"
+   "hero": {
+    "src": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8ELDOdqQmSLlXEifG7QLl5w8jCzojrtE6lcJiacUsgXA9Hhccy6R3aJt6C3NrvXYuIWptvM%25cO0%25lcIO7qTMI0nTNL3u8uHLfmFezWDFPNATQdbduTWGZCpHEyYkbHiaiGbXkJMAmDCkIFJGJkSABKupUP8FeWS6GbSKMPVYp9hWhbNmQprPo90ya6fbHi4TnFt9%25wc3OsRiftxdIUyw178ziPftECUkwEo7slGAtW4CrXpF7M9lZQ6KC3nXRaYWlI4Q5nmPX%25RagOybQfGnvIT9aeCO2B3iK2RIjedwW%252BDMztPloeqhk7bSkMLoAC9VRhJHFlievou%25KXsmDHSfWQr4W%25V1PaZcMfNEbnRZi10s9O56TE4riIgqRscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2gKv6jQ%25jpJ2YDafD6bjmqn1qA8DyLOE3PKqTJIsd7SL3uBrzTvJdSeZHWCuzHhQIeMT63D%25xqlRGwg6QuiVpRB%25r330KEFY8UG4fXl9aPL3hSF2%25P6%25FyrU519xEWhcavQFzl5JE47BdqfojT",
+    "img": "img/cars/bmw-ix1-lwb/hero-58bb960ff1.webp",
+    "how": "ai"
+   },
+   "colors": [
+    {
+     "src": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8ELDOdqQmSLlXEifG7QLl5w8jCzojrtE6lcJiacUsgXA9Hhccy6R3aJt6C3NrvXYuIWptvM%25cO0%25lcIO7qTMI0nTNL3u8uHLfmFezWDFPNATQdbduTWGZCpHEyYkbHiaiGbXkJMAmDCkIFJGJkSABKupUP8FeWS6GbSKMPVYp9hWhbNmQprPo90ya6fbHi4TnFt9%25wc3OsRiftxdIUyw178ziPftECUkwEo7slGAtW4CrXpF7M9lZQ6KC3nXRaYWlI4Q5nmPX%25RagOybQfGnvIT9aeCO2B3iK2RIjedwW%252BDMztPloeqhk7bSkMLoAC9VRhJHFlievou%25KXsmDHSfWQr4W%25V1PaZcMfNEbnRZi10s9O56TE4riIgqRscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2gKv6jQ%25jpJ2YDafD6bjmqn1qA8DyLOE3PKqTJIsd7SL3uBrzTvJdSeZHWCuzHhQIeMT63D%25xqlRGwg6QuiVpRB%25r330KEFY8UG4fXl9aPL3hSF2%25P6%25FyrU519xEWhcavQFzl5JE47BdqfojT",
+     "img": "img/cars/bmw-ix1-lwb/mineral-white-58bb960ff1.webp",
+     "how": "ai",
+     "name": "Mineral White"
+    },
+    {
+     "src": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8ELDOdqQmSLlXEifG7QLl5w8jCzgJwtE6lcJiacUsgXA9Hhccy6R3aJt6C3NrvXYuIWptvM%25cO0%25lcIO7qTMI0nTNL3u8uHLfmFezWDFPNATQdbduTWGZCpHEyYkbHiaiGbXkJMAmDCkIFJGJkSABKupUP8FeWS6GbSKMPVYp9hWhbNmQprPo90ya6fbHi4TnFt9%25wc3OsRiftxdIUyw178ziPftECUkwEo7slGAtW4CrXpF7M9lZQ6KC3nXRaYWlI4Q5nmPX%25RagOybQfGnvIT9aeCO2B3iK2RIjedwW%252BDMztPloeqhk7bSkMLoAC9VRhJHFlievou%25KXsmDHSfWQr4W%25V1PaZcMfNEbnRZi10s9O56TE4riIgqRscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2gKv6jQ%25jpJ2YDafD6bjmqn1qA8DyLOE3PKqTJIsd7SL3uBrzTvJdSeZHWCuzHhQIeMT63D%25xqlRGwg6QuiVpRB%25r330KEFY8UG4fXl9aPL3hSF2%25P6%25FyrU519xEWhcavQFzl5JE47BdqfojT",
+     "img": "img/cars/bmw-ix1-lwb/night-dusk-blue-f8e626c598.webp",
+     "how": "ai",
+     "name": "Night Dusk Blue"
+    },
+    {
+     "src": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8ELDOdqQmSLlXEifG7QLl5w8jCzghftE6lcJiacUsgXA9Hhccy6R3aJt6C3NrvXYuIWptvM%25cO0%25lcIO7qTMI0nTNL3u8uHLfmFezWDFPNATQdbduTWGZCpHEyYkbHiaiGbXkJMAmDCkIFJGJkSABKupUP8FeWS6GbSKMPVYp9hWhbNmQprPo90ya6fbHi4TnFt9%25wc3OsRiftxdIUyw178ziPftECUkwEo7slGAtW4CrXpF7M9lZQ6KC3nXRaYWlI4Q5nmPX%25RagOybQfGnvIT9aeCO2B3iK2RIjedwW%252BDMztPloeqhk7bSkMLoAC9VRhJHFlievou%25KXsmDHSfWQr4W%25V1PaZcMfNEbnRZi10s9O56TE4riIgqRscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2gKv6jQ%25jpJ2YDafD6bjmqn1qA8DyLOE3PKqTJIsd7SL3uBrzTvJdSeZHWCuzHhQIeMT63D%25xqlRGwg6QuiVpRB%25r330KEFY8UG4fXl9aPL3hSF2%25P6%25FyrU519xEWhcavQFzl5JE47BdqfojT",
+     "img": "img/cars/bmw-ix1-lwb/fire-red-71572b0ebc.webp",
+     "how": "ai",
+     "name": "Fire Red"
+    },
+    {
+     "src": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8ELDOdqQmSLlXEifG7QLl5w8jCzgautE6lcJiacUsgXA9Hhccy6R3aJt6C3NrvXYuIWptvM%25cO0%25lcIO7qTMI0nTNL3u8uHLfmFezWDFPNATQdbduTWGZCpHEyYkbHiaiGbXkJMAmDCkIFJGJkSABKupUP8FeWS6GbSKMPVYp9hWhbNmQprPo90ya6fbHi4TnFt9%25wc3OsRiftxdIUyw178ziPftECUkwEo7slGAtW4CrXpF7M9lZQ6KC3nXRaYWlI4Q5nmPX%25RagOybQfGnvIT9aeCO2B3iK2RIjedwW%252BDMztPloeqhk7bSkMLoAC9VRhJHFlievou%25KXsmDHSfWQr4W%25V1PaZcMfNEbnRZi10s9O56TE4riIgqRscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2gKv6jQ%25jpJ2YDafD6bjmqn1qA8DyLOE3PKqTJIsd7SL3uBrzTvJdSeZHWCuzHhQIeMT63D%25xqlRGwg6QuiVpRB%25r330KEFY8UG4fXl9aPL3hSF2%25P6%25FyrU519xEWhcavQFzl5JE47BdqfojT",
+     "img": "img/cars/bmw-ix1-lwb/skyscraper-grey-52a0a3affa.webp",
+     "how": "ai",
+     "name": "Skyscraper Grey"
+    },
+    {
+     "src": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8ELDOdqQmSLlXEifG7QLl5w8jCzgaStE6lcJiacUsgXA9Hhccy6R3aJt6C3NrvXYuIWptvM%25cO0%25lcIO7qTMI0nTNL3u8uHLfmFezWDFPNATQdbduTWGZCpHEyYkbHiaiGbXkJMAmDCkIFJGJkSABKupUP8FeWS6GbSKMPVYp9hWhbNmQprPo90ya6fbHi4TnFt9%25wc3OsRiftxdIUyw178ziPftECUkwEo7slGAtW4CrXpF7M9lZQ6KC3nXRaYWlI4Q5nmPX%25RagOybQfGnvIT9aeCO2B3iK2RIjedwW%252BDMztPloeqhk7bSkMLoAC9VRhJHFlievou%25KXsmDHSfWQr4W%25V1PaZcMfNEbnRZi10s9O56TE4riIgqRscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2gKv6jQ%25jpJ2YDafD6bjmqn1qA8DyLOE3PKqTJIsd7SL3uBrzTvJdSeZHWCuzHhQIeMT63D%25xqlRGwg6QuiVpRB%25r330KEFY8UG4fXl9aPL3hSF2%25P6%25FyrU519xEWhcavQFzl5JE47BdqfojT",
+     "img": "img/cars/bmw-ix1-lwb/m-brooklyn-grey-8ab8940b58.webp",
+     "how": "ai",
+     "name": "M Brooklyn Grey"
+    },
+    {
+     "src": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8ELDOdqQmSLlXEifG7QLl5w8jCziTrtE6lcJiacUsgXA9Hhccy6R3aJt6C3NrvXYuIWptvM%25cO0%25lcIO7qTMI0nTNL3u8uHLfmFezWDFPNATQdbduTWGZCpHEyYkbHiaiGbXkJMAmDCkIFJGJkSABKupUP8FeWS6GbSKMPVYp9hWhbNmQprPo90ya6fbHi4TnFt9%25wc3OsRiftxdIUyw178ziPftECUkwEo7slGAtW4CrXpF7M9lZQ6KC3nXRaYWlI4Q5nmPX%25RagOybQfGnvIT9aeCO2B3iK2RIjedwW%252BDMztPloeqhk7bSkMLoAC9VRhJHFlievou%25KXsmDHSfWQr4W%25V1PaZcMfNEbnRZi10s9O56TE4riIgqRscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2gKv6jQ%25jpJ2YDafD6bjmqn1qA8DyLOE3PKqTJIsd7SL3uBrzTvJdSeZHWCuzHhQIeMT63D%25xqlRGwg6QuiVpRB%25r330KEFY8UG4fXl9aPL3hSF2%25P6%25FyrU519xEWhcavQFzl5JE47BdqfojT",
+     "img": "img/cars/bmw-ix1-lwb/m-carbon-black-1f4f1fb168.webp",
+     "how": "ai",
+     "name": "M Carbon Black"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8wlD7Z9cvt3MvEifG70qbX0x1RCzPhe00YGryXqiGtySE5CpLnFUi5Bo0aVo70nawjmBnVQmSDyLcLhDH6kI3F2kKSzmlTWTLmF8stUhfYpdWhbXb8WCdqBz62tdnkq8qdJzOALUxKckIFJG8WJABKupUPeFeWS6lUEKMPVYXGHWhbNmQkiPo90ya1rbHi4TnxY9%25wc3bKHiftxd9fMw178ziFNtECUkwBP7slGAtyQCrXpF7nNlZQ6KCorXRaYWlH8Q5nmPXItagOybAgrnvIT9FogO2B3iK7MIjedwWJdBDMztPureqhk7bI5MLoAC162hJHFlENFou%25KXs0BHSfWQrsb%25V1PaZGmfNEbnRjr10s9OGQJE4riIrHYscZwBZ%25rrxRteRoyZ857M5JNRUgChgRA5GvlovUqgp2XH2GWv6jQ%25jzc2YDafyKAjmqn1TwJDyLOE3m5qTJIshFtL3helnIBmGy2o4j7r89RGlLbuUrOoEyyVAfPnQm2apRBnrFP0KEFY8UG4fXl9aPL3hSF2%25P6kRet"
+    },
+    {
+     "cap": "Cockpit",
+     "img": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8wlD7Z9cvt3MvEifG70qbX0x1RCzPhe00YGryXqiGtySE5CpLnFUi5Bo0aVo70nawjmBnVQmSDyLcLhDH6kI3F2kKSzmlTWTLmF8stUhfYpdWhbXb8WCdqBz62tdnkq8qdJzOALUxKckIFJG8WJABKupUPeFeWS6lUEKMPVYXGHWhbNmQkiPo90ya1rbHi4TnxY9%25wc3bKHiftxd9fMw178ziFNtECUkwBP7slGAtyQCrXpF7nNlZQ6KCorXRaYWlH8Q5nmPXItagOybAgrnvIT9FogO2B3iK7MIjedwWJdBDMztPureqhk7bI5MLoAC162hJHFlENFou%25KXs0BHSfWQrsb%25V1PaZGmfNEbnRjr10s9OGQJE4riIrHYscZwBZ%25rrxRteRoyZ857M5JNRUgChgRA5GvlovUqgp2XH2GWv6jQ%25jzc2YDafyKAjmqn1TwJDyLOE3m5qTJIshFtL3helnIBmGy2o4j7r89RGlLbuUrOoEyyVAfPnQm2apRBnrFP0KEFY8UG4fXl9aPL3hSF2%25P6uQvX%25BfxbUnQ"
+    },
+    {
+     "cap": "Rear seats",
+     "img": "https://bmw.scene7.com/is/image/BMW/rear-leg-room-ix1-launch:3to2?fmt=jpg&wid=1600"
+    },
+    {
+     "cap": "Curved display",
+     "img": "https://bmw.scene7.com/is/image/BMW/bmw-curved-display-with-os9:3to2?fmt=jpg&wid=1600"
+    },
+    {
+     "cap": "Centre console",
+     "img": "https://bmw.scene7.com/is/image/BMW/floating-console_1:3to2?fmt=jpg&wid=1600"
+    }
+   ],
+   "page": "https://www.bmw.in/en/all-models/bmw-i/iX1/2025/bmw-ix1-highlights.html"
   },
   "BMW|M2": {
    "hero": {
@@ -6158,9 +6220,55 @@
    "page": "https://www.mgmotor.co.in/vehicles/windsor-ev-electric-car-in-india"
   },
   "MG|Windsor Pro": {
-   "hero": null,
-   "colors": [],
-   "interior": [],
+   "hero": {
+    "src": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_CL?fmt=png-alpha&wid=1400",
+    "img": "img/cars/mg-windsor-pro/hero-8b4764c6a9.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_CL?fmt=png-alpha&wid=1400",
+     "img": "img/cars/mg-windsor-pro/celadon-blue-8b4764c6a9.webp",
+     "how": "alpha",
+     "name": "Celadon Blue"
+    },
+    {
+     "src": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_AS?fmt=png-alpha&wid=1400",
+     "img": "img/cars/mg-windsor-pro/aurora-silver-0b9ac3f489.webp",
+     "how": "alpha",
+     "name": "Aurora Silver"
+    },
+    {
+     "src": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_GR?fmt=png-alpha&wid=1400",
+     "img": "img/cars/mg-windsor-pro/glaze-red-31fb8899ee.webp",
+     "how": "alpha",
+     "name": "Glaze Red"
+    },
+    {
+     "src": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_PW?fmt=png-alpha&wid=1400",
+     "img": "img/cars/mg-windsor-pro/pearl-white-41ba88361b.webp",
+     "how": "alpha",
+     "name": "Pearl White"
+    },
+    {
+     "src": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_SB?fmt=png-alpha&wid=1400",
+     "img": "img/cars/mg-windsor-pro/starry-black-42775502aa.webp",
+     "how": "alpha",
+     "name": "Starry Black"
+    },
+    {
+     "src": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_TG?fmt=png-alpha&wid=1400",
+     "img": "img/cars/mg-windsor-pro/turquoise-green-e571730105.webp",
+     "how": "alpha",
+     "name": "Turquoise Green"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dual-tone ivory cabin",
+     "img": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-bn-dsc-041?wid=1600&fmt=jpg"
+    }
+   ],
    "page": "https://www.mgmotor.co.in/vehicles/windsor-ev-pro"
   },
   "MG|ZS EV": {
@@ -7969,8 +8077,58 @@
    "page": "https://www.toyotabharat.com/showroom/rumion/"
   },
   "Toyota|Urban Cruiser Ebella": {
-   "hero": null,
-   "colors": [],
+   "hero": {
+    "src": "https://static.toyotabharat.com/images/showroom/a32/colors/Opulent-Red-MT-1050x350.webp",
+    "img": "img/cars/toyota-urban-cruiser-ebella/hero-57bb289818.webp"
+   },
+   "colors": [
+    {
+     "src": "https://static.toyotabharat.com/images/showroom/a32/colors/Opulent-Red-MT-1050x350.webp",
+     "img": "img/cars/toyota-urban-cruiser-ebella/sportin-red-57bb289818.webp",
+     "name": "Sportin Red"
+    },
+    {
+     "src": "https://static.toyotabharat.com/images/showroom/a32/colors/Artic-White-MT-1050x350.webp",
+     "img": "img/cars/toyota-urban-cruiser-ebella/cafe-white-20948e728b.webp",
+     "name": "Cafe White"
+    },
+    {
+     "src": "https://static.toyotabharat.com/images/showroom/a32/colors/Bluish-Black-MT-1050x350.webp",
+     "img": "img/cars/toyota-urban-cruiser-ebella/bluish-black-c1c4189497.webp",
+     "name": "Bluish Black"
+    },
+    {
+     "src": "https://static.toyotabharat.com/images/showroom/a32/colors/Grandeur-Grey-MT-1050x350.webp",
+     "img": "img/cars/toyota-urban-cruiser-ebella/gaming-grey-44ca9b22a4.webp",
+     "name": "Gaming Grey"
+    },
+    {
+     "src": "https://static.toyotabharat.com/images/showroom/a32/colors/Splendid-Silver-MT-1050x350.webp",
+     "img": "img/cars/toyota-urban-cruiser-ebella/enticing-silver-9c6bf0095c.webp",
+     "name": "Enticing Silver"
+    },
+    {
+     "src": "https://static.toyotabharat.com/images/showroom/a32/colors/Artic-White%20DT-1050x350.webp",
+     "img": "img/cars/toyota-urban-cruiser-ebella/cafe-white-dual-tone-26a0c4d291.webp",
+     "name": "Cafe White Dual Tone"
+    },
+    {
+     "src": "https://static.toyotabharat.com/images/showroom/a32/colors/Opulent-Red-DT-1050x350.webp",
+     "img": "img/cars/toyota-urban-cruiser-ebella/sportin-red-dual-tone-e08ca86cb6.webp",
+     "name": "Sportin Red Dual Tone"
+    },
+    {
+     "src": "https://static.toyotabharat.com/images/showroom/a32/colors/Landbreeze-Green-DT-1050x350.webp",
+     "img": "img/cars/toyota-urban-cruiser-ebella/land-breeze-green-dual-tone-90ca5a49ca.webp",
+     "name": "Land Breeze Green Dual Tone"
+    },
+    {
+     "src": "https://static.toyotabharat.com/images/showroom/a32/colors/Splendid-Silver-DT-1050x350.webp",
+     "img": "img/cars/toyota-urban-cruiser-ebella/enticing-silver-dual-tone-2874937953.webp",
+     "how": "alpha",
+     "name": "Enticing Silver Dual Tone"
+    }
+   ],
    "interior": [
     {
      "cap": "Dashboard",
@@ -7987,6 +8145,10 @@
     {
      "cap": "Boot space",
      "img": "https://static.toyotabharat.com/images/showroom/a32/interior/Interior3_1400x790.webp"
+    },
+    {
+     "cap": "Front seats",
+     "img": "https://static.toyotabharat.com/images/showroom/a32/interior/Interior1_1400x790.webp"
     }
    ],
    "page": "https://www.toyotabharat.com/showroom/urbancruiser-ebella/"
@@ -8157,6 +8319,2157 @@
     }
    ],
    "page": "https://www.volkswagen.co.in/en/models/taigun.html"
+  },
+  "Audi|S5 Sportback": {
+   "hero": {
+    "src": "https://uploads.audi.com/system/production/media/83858/images/63899666e8342fb4331346087ab947d600146c4f/A1911739_web_1920.jpg?1742807214",
+    "img": "img/cars/audi-s5-sportback/hero-c28b3d2f1a.webp",
+    "how": "ai"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Interior (A5 Sportback shown)",
+     "img": "https://uploads.audi.com/system/production/media/83917/images/6d14c092d9853c9e6a063f182c8bad987ddace59/A1911798_web_1920.jpg?1731496555"
+    }
+   ],
+   "page": "https://www.audi.in/in/web/en/models/a5/s5-sportback.html"
+  },
+  "BYD|Atto 3": {
+   "hero": {
+    "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1740461378524.png",
+    "img": "img/cars/byd-atto-3/hero-db120c9b9c.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773293630918.png",
+     "img": "img/cars/byd-atto-3/cosmos-black-9892b08ca2.webp",
+     "how": "alpha",
+     "name": "Cosmos Black"
+    },
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773293694047.png",
+     "img": "img/cars/byd-atto-3/ski-white-7c8ce3ef8c.webp",
+     "how": "alpha",
+     "name": "Ski White"
+    },
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773293669310.png",
+     "img": "img/cars/byd-atto-3/harbour-grey-8dd4410596.webp",
+     "how": "alpha",
+     "name": "Harbour Grey"
+    },
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1789966913654.png",
+     "img": "img/cars/byd-atto-3/atlantis-grey-3a5ae62b66.webp",
+     "how": "alpha",
+     "name": "Atlantis Grey"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741689301693.jpg"
+    },
+    {
+     "cap": "Cockpit",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741668087257.jpg"
+    },
+    {
+     "cap": "Rear cabin",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741689373128.jpg"
+    },
+    {
+     "cap": "Steering wheel",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741667889583.jpg"
+    }
+   ],
+   "page": "https://www.bydautoindia.com/bydatto3"
+  },
+  "BYD|Seal": {
+   "hero": {
+    "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741686908572.png",
+    "img": "img/cars/byd-seal/hero-8ea2082069.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741686908572.png",
+     "img": "img/cars/byd-seal/atlantis-gray-8ea2082069.webp",
+     "how": "alpha",
+     "name": "Atlantis Gray"
+    },
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741686969487.png",
+     "img": "img/cars/byd-seal/cosmos-black-edcae554f6.webp",
+     "how": "alpha",
+     "name": "Cosmos Black"
+    },
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741687034645.png",
+     "img": "img/cars/byd-seal/aurora-white-0c577df027.webp",
+     "how": "alpha",
+     "name": "Aurora White"
+    },
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741687079351.png",
+     "img": "img/cars/byd-seal/shark-gray-a22272754e.webp",
+     "how": "alpha",
+     "name": "Shark Gray"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1719478851179.webp"
+    },
+    {
+     "cap": "Rotating touchscreen",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1719479959684.webp"
+    },
+    {
+     "cap": "Rear seats",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1719479071636.webp"
+    },
+    {
+     "cap": "Centre console",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1719479087212.webp"
+    }
+   ],
+   "page": "https://www.bydautoindia.com/bydseal"
+  },
+  "BYD|eMAX 7": {
+   "hero": {
+    "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1728027032845.webp",
+    "img": "img/cars/byd-emax-7/hero-09f6de1a11.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1728027032845.webp",
+     "img": "img/cars/byd-emax-7/quartz-blue-09f6de1a11.webp",
+     "how": "alpha",
+     "name": "Quartz Blue"
+    },
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1728027090625.webp",
+     "img": "img/cars/byd-emax-7/cosmos-black-36bb0ce83c.webp",
+     "how": "alpha",
+     "name": "Cosmos Black"
+    },
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1728027123541.webp",
+     "img": "img/cars/byd-emax-7/crystal-white-02ef06e7e8.webp",
+     "how": "alpha",
+     "name": "Crystal White"
+    },
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1728027175115.webp",
+     "img": "img/cars/byd-emax-7/harbour-grey-743cfd1ff5.webp",
+     "how": "alpha",
+     "name": "Harbour Grey"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727415734399.jpg"
+    },
+    {
+     "cap": "Seats",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727415964774.jpg"
+    },
+    {
+     "cap": "Panoramic roof",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727417335417.jpg"
+    },
+    {
+     "cap": "Centre console",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727932374007.webp"
+    }
+   ],
+   "page": "https://www.bydautoindia.com/bydemax7"
+  },
+  "BYD|Sealion 7": {
+   "hero": {
+    "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737014896975.png",
+    "img": "img/cars/byd-sealion-7/hero-49c3ecd2f3.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737014896975.png",
+     "img": "img/cars/byd-sealion-7/atlantis-gray-49c3ecd2f3.webp",
+     "how": "alpha",
+     "name": "Atlantis Gray"
+    },
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737015048828.png",
+     "img": "img/cars/byd-sealion-7/cosmos-black-501aadbdf4.webp",
+     "how": "alpha",
+     "name": "Cosmos Black"
+    },
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737015147811.png",
+     "img": "img/cars/byd-sealion-7/aurora-white-77e4e2413d.webp",
+     "how": "alpha",
+     "name": "Aurora White"
+    },
+    {
+     "src": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737525327022.webp",
+     "img": "img/cars/byd-sealion-7/shark-gray-1aa0287f7a.webp",
+     "how": "alpha",
+     "name": "Shark Gray"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1787211242344.jpeg"
+    },
+    {
+     "cap": "Cockpit",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1787211249589.jpeg"
+    },
+    {
+     "cap": "Rear seats",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773738265903.jpg"
+    },
+    {
+     "cap": "Centre console",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1787211292495.jpeg"
+    },
+    {
+     "cap": "Panoramic roof",
+     "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773738238085.webp"
+    }
+   ],
+   "page": "https://www.bydautoindia.com/bydsealion7"
+  },
+  "Citro\u00ebn|C3X": {
+   "hero": {
+    "src": "https://citroenstorageprod.blob.core.windows.net/citroen-assets/models/6109b82e-abb8-4454-b1c4-98a51e7601cd.png",
+    "img": "img/cars/citro-n-c3x/hero-aaec0c6318.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/interior/1.jpg"
+    },
+    {
+     "cap": "Climate controls",
+     "img": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/comfort/2.jpg"
+    },
+    {
+     "cap": "Steering wheel controls",
+     "img": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/comfort/3.jpg"
+    }
+   ],
+   "page": "https://www.citroen.in/models/c3.html"
+  },
+  "Citro\u00ebn|BasaltX": {
+   "hero": {
+    "src": "https://citroenstorageprod.blob.core.windows.net/citroen-assets/models/eb549d46-0fc9-4395-885a-01cc3b24ef13.png",
+    "img": "img/cars/citro-n-basaltx/hero-646c14f4e8.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.citroen.in/content/dam/citroen/india/models/basalt/gallery/interior/1.jpg"
+    },
+    {
+     "cap": "Door trim",
+     "img": "https://www.citroen.in/content/dam/citroen/india/models/basalt/gallery/interior/2.jpg"
+    },
+    {
+     "cap": "Dashboard trim",
+     "img": "https://www.citroen.in/content/dam/citroen/india/models/basalt/gallery/interior/3.jpg"
+    },
+    {
+     "cap": "Rear seats",
+     "img": "https://www.citroen.in/content/dam/citroen/india/models/basalt/gallery/interior/4.jpg"
+    }
+   ],
+   "page": "https://www.citroen.in/models/basalt.html"
+  },
+  "Citro\u00ebn|AircrossX": {
+   "hero": {
+    "src": "https://citroenstorageprod.blob.core.windows.net/citroen-assets/models/14d65713-fd87-440b-ad35-78ed6ccc80d4.png",
+    "img": "img/cars/citro-n-aircrossx/hero-06d1a66363.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/interior/1.jpg"
+    },
+    {
+     "cap": "Third-row seats",
+     "img": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/interior/2.jpg"
+    },
+    {
+     "cap": "Climate controls",
+     "img": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/comfort/1.jpg"
+    }
+   ],
+   "page": "https://www.citroen.in/models/aircross.html"
+  },
+  "Citro\u00ebn|\u00eb-C3X": {
+   "hero": {
+    "src": "https://citroenstorageprod.blob.core.windows.net/citroen-assets/models/00d2259a-b2cc-4b91-a637-927973650f99.png",
+    "img": "img/cars/citro-n-c3x/hero-0cfdb0b1b3.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.citroen.in/content/dam/citroen/india/models/2026/e-c3x/comfort/Premium_Cabin_Experience.png"
+    },
+    {
+     "cap": "Front seats",
+     "img": "https://www.citroen.in/content/dam/citroen/india/models/2026/e-c3x/comfort/Leatherette_Luxury.png"
+    },
+    {
+     "cap": "Centre console",
+     "img": "https://www.citroen.in/content/dam/citroen/india/models/ec3/gallery/comfort/Citroen_EC3_CenterConsole.jpg"
+    }
+   ],
+   "page": "https://www.citroen.in/models/new-e-c3.html"
+  },
+  "Citro\u00ebn|C5 Aircross": {
+   "hero": {
+    "src": "https://citroenstorageprod.blob.core.windows.net/citroen-assets/models/35de8b22-8b69-4e83-be8c-e11ef3eb0990.png",
+    "img": "img/cars/citro-n-c5-aircross/hero-e85edb4ad8.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Touchscreen",
+     "img": "https://www.citroen.in/content/dam/citroen/india/models/c5/gallery/technology/1.jpg"
+    },
+    {
+     "cap": "Rear seats",
+     "img": "https://www.citroen.in/content/dam/citroen/india/models/c5/gallery/comfort/1.jpg"
+    }
+   ],
+   "page": "https://www.citroen.in/models/c5-aircross.html"
+  },
+  "Force Motors|Gurkha 3-Door": {
+   "hero": {
+    "src": "https://forcegurkha.co.in/wp-content/uploads/2024/04/3-DOOR_12.jpg",
+    "img": "img/cars/force-motors-gurkha-3-door/hero-f74e50d1f2.webp",
+    "how": "ai"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/dashboard.jpg"
+    },
+    {
+     "cap": "Touchscreen",
+     "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/touch-screen.jpg"
+    },
+    {
+     "cap": "Digital cluster",
+     "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/digital-cluster.jpg"
+    },
+    {
+     "cap": "Centre console",
+     "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/feature-2.jpg"
+    },
+    {
+     "cap": "Cabin layout",
+     "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/COMFORTABLE_SPACIOUS_SEATING.png"
+    }
+   ],
+   "page": "https://forcegurkha.co.in/"
+  },
+  "Force Motors|Gurkha 5-Door": {
+   "hero": {
+    "src": "https://forcegurkha.co.in/wp-content/uploads/2024/04/5-DOOR_8.jpg",
+    "img": "img/cars/force-motors-gurkha-5-door/hero-db5a6d040b.webp",
+    "how": "ai"
+   },
+   "colors": [
+    {
+     "src": "https://forcegurkha.co.in/wp-content/uploads/2024/04/5-DOOR_8.jpg",
+     "img": "img/cars/force-motors-gurkha-5-door/red-db5a6d040b.webp",
+     "how": "ai",
+     "name": "Red"
+    },
+    {
+     "src": "https://forcegurkha.co.in/wp-content/uploads/2024/04/5-DOOR_5.jpg",
+     "img": "img/cars/force-motors-gurkha-5-door/black-56c1aa246e.webp",
+     "how": "ai",
+     "name": "Black"
+    },
+    {
+     "src": "https://forcegurkha.co.in/wp-content/uploads/2024/04/5-DOOR_7.jpg",
+     "img": "img/cars/force-motors-gurkha-5-door/green-da31226428.webp",
+     "how": "ai",
+     "name": "Green"
+    },
+    {
+     "src": "https://forcegurkha.co.in/wp-content/uploads/2024/04/5-DOOR_9.jpg",
+     "img": "img/cars/force-motors-gurkha-5-door/white-0c26be8cb3.webp",
+     "how": "ai",
+     "name": "White"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/dashboard.jpg"
+    },
+    {
+     "cap": "Cabin seating",
+     "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/comfort.jpg"
+    },
+    {
+     "cap": "Seating layout (top view)",
+     "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/convenience.jpg"
+    },
+    {
+     "cap": "Touchscreen",
+     "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/touch-screen.jpg"
+    }
+   ],
+   "page": "https://forcegurkha.co.in/"
+  },
+  "Honda|City e:HEV": {
+   "hero": {
+    "src": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLACK_01_desk_new13/CITY_EHEV_BLACK_01_desk_00.jpg",
+    "img": "img/cars/honda-city-e-hev/hero-0f274474e8.webp",
+    "how": "ai"
+   },
+   "colors": [
+    {
+     "src": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLACK_01_desk_new13/CITY_EHEV_BLACK_01_desk_00.jpg",
+     "img": "img/cars/honda-city-e-hev/crystal-black-pearl-0f274474e8.webp",
+     "how": "ai",
+     "name": "Crystal Black Pearl"
+    },
+    {
+     "src": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_SILVER_01_desk_new1/CITY_EHEV_SILVER_01_desk_00.jpg",
+     "img": "img/cars/honda-city-e-hev/lunar-silver-metallic-e22fb74afc.webp",
+     "how": "ai",
+     "name": "Lunar Silver Metallic"
+    },
+    {
+     "src": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_GREY_01_desk_new12/CITY_EHEV_GREY_01_desk_00.jpg",
+     "img": "img/cars/honda-city-e-hev/meteoroid-grey-metallic-f0e2dca073.webp",
+     "how": "ai",
+     "name": "Meteoroid Grey Metallic"
+    },
+    {
+     "src": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_00.jpg",
+     "img": "img/cars/honda-city-e-hev/obsidian-blue-pearl-d30525824e.webp",
+     "how": "ai",
+     "name": "Obsidian Blue Pearl"
+    },
+    {
+     "src": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_WHITE_01_desk_new1/CITY_EHEV_WHITE_01_desk_00.jpg",
+     "img": "img/cars/honda-city-e-hev/platinum-white-pearl-692e4ee6e8.webp",
+     "how": "ai",
+     "name": "Platinum White Pearl"
+    },
+    {
+     "src": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_RED_01_desk_new1/CITY_EHEV_RED_01_desk_00.jpg",
+     "img": "img/cars/honda-city-e-hev/radiant-red-metallic-8f42ac3838.webp",
+     "how": "ai",
+     "name": "Radiant Red Metallic"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Card%20Component/desktop/Interior/two_tone_interior_desk.jpg"
+    },
+    {
+     "cap": "Front seats",
+     "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Card%20Component/desktop/Interior/AR_SN_HONDA_CITY_E-HEV_FRONT-SEATS_SIDE-VIEW_03.jpg"
+    },
+    {
+     "cap": "Infotainment",
+     "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Card%20Component/desktop/Interior/Wireless_desk.jpg"
+    },
+    {
+     "cap": "Instrument cluster",
+     "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Card%20Component/desktop/Interior/car_meter_desk.jpg"
+    },
+    {
+     "cap": "Climate control",
+     "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Card%20Component/desktop/Interior/AR_AB_CITY_FATC_04.jpg"
+    }
+   ],
+   "page": "https://www.hondacarindia.com/honda-city"
+  },
+  "Honda|ZR-V": {
+   "hero": {
+    "src": "https://www.hondacarindia.com/web-data/models/2026/zrv/Exterior/ZR-V_WHITE_01_desk/ZR-V_WHITE_01_desk_00.jpg",
+    "img": "img/cars/honda-zr-v/hero-bdfab89e6a.webp",
+    "how": "ai"
+   },
+   "colors": [
+    {
+     "src": "https://www.hondacarindia.com/web-data/models/2026/zrv/Exterior/ZR-V_WHITE_01_desk/ZR-V_WHITE_01_desk_00.jpg",
+     "img": "img/cars/honda-zr-v/platinum-white-pearl-bdfab89e6a.webp",
+     "how": "ai",
+     "name": "Platinum White Pearl"
+    },
+    {
+     "src": "https://www.hondacarindia.com/web-data/models/2026/zrv/Exterior/ZR-V_BLACK_01_desk/ZR-V_BLACK_01_desk_00.jpg",
+     "img": "img/cars/honda-zr-v/crystal-black-pearl-cd3261e94a.webp",
+     "how": "ai",
+     "name": "Crystal Black Pearl"
+    },
+    {
+     "src": "https://www.hondacarindia.com/web-data/models/2026/zrv/Exterior/ZR-V_GREY_01_desk/ZR-V_GREY_01_desk_00.jpg",
+     "img": "img/cars/honda-zr-v/meteoroid-grey-metallic-0b5775e71a.webp",
+     "how": "ai",
+     "name": "Meteoroid Grey Metallic"
+    },
+    {
+     "src": "https://www.hondacarindia.com/web-data/models/2026/zrv/Exterior/ZR-V_PURPLE_01_desk/ZR-V_PURPLE_01_desk_00.jpg",
+     "img": "img/cars/honda-zr-v/twilight-mist-black-pearl-5a7321fbb5.webp",
+     "how": "ai",
+     "name": "Twilight Mist Black Pearl"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.hondacarindia.com/web-data/models/2026/zrv/ZRV%20Component/desktop/Interior/ZR-V_Front%20Dash_01.jpg"
+    },
+    {
+     "cap": "Infotainment",
+     "img": "https://www.hondacarindia.com/web-data/models/2026/zrv/ZRV%20Component/desktop/Interior/AR-AM-HONDA-ZRV-AVNT-SHOT-2026-v3.jpg"
+    },
+    {
+     "cap": "Instrument cluster",
+     "img": "https://www.hondacarindia.com/web-data/models/2026/zrv/ZRV%20Component/desktop/Interior/AR-AM_HONDA_ZRV_METER_SHOT_02_2026-v2.jpg"
+    },
+    {
+     "cap": "Dual-zone climate control",
+     "img": "https://www.hondacarindia.com/web-data/models/2026/zrv/ZRV%20Component/desktop/Interior/ZR-V_Dual%20Zone_04.jpg"
+    },
+    {
+     "cap": "Rear seats",
+     "img": "https://www.hondacarindia.com/web-data/models/2026/zrv/ZRV%20Component/desktop/Comfort/AR_SN_HONDA_ZRV_REAR-COMFORT_03.jpg"
+    }
+   ],
+   "page": "https://www.hondacarindia.com/honda-zrv"
+  },
+  "Isuzu|D-Max V-Cross": {
+   "hero": {
+    "src": "https://www.isuzu.in/images/All%20models/Vcross.webp",
+    "img": "img/cars/isuzu-d-max-v-cross/hero-ba6d90af4d.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://www.isuzu.in/images/vcross/Features/colors/Silky%20Pearl%20White.jpg",
+     "img": "img/cars/isuzu-d-max-v-cross/silky-white-pearl-3e66304711.webp",
+     "how": "ai",
+     "name": "Silky White Pearl"
+    },
+    {
+     "src": "https://www.isuzu.in/images/vcross/Features/colors/Black%20Mica.jpg",
+     "img": "img/cars/isuzu-d-max-v-cross/black-mica-e5c37a895f.webp",
+     "how": "ai",
+     "name": "Black Mica"
+    },
+    {
+     "src": "https://www.isuzu.in/images/vcross/Features/colors/Red%20Spinel%20Mica.jpg",
+     "img": "img/cars/isuzu-d-max-v-cross/red-spinel-mica-d8db6e40cd.webp",
+     "how": "ai",
+     "name": "Red Spinel Mica"
+    },
+    {
+     "src": "https://www.isuzu.in/images/vcross/Features/colors/Nautilus%20Mica.jpg",
+     "img": "img/cars/isuzu-d-max-v-cross/nautilus-blue-749d4ba954.webp",
+     "how": "ai",
+     "name": "Nautilus Blue"
+    },
+    {
+     "src": "https://www.isuzu.in/images/vcross/Features/colors/Galena%20Gray.jpg",
+     "img": "img/cars/isuzu-d-max-v-cross/galena-grey-1a1ef2452b.webp",
+     "how": "ai",
+     "name": "Galena Grey"
+    },
+    {
+     "src": "https://www.isuzu.in/images/vcross/Features/colors/Silver%20Metallic.jpg",
+     "img": "img/cars/isuzu-d-max-v-cross/silver-metallic-b9eed86803.webp",
+     "how": "ai",
+     "name": "Silver Metallic"
+    },
+    {
+     "src": "https://www.isuzu.in/images/vcross/Features/colors/Splash%20White.jpg",
+     "img": "img/cars/isuzu-d-max-v-cross/splash-white-e176f96b7c.webp",
+     "how": "ai",
+     "name": "Splash White"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.isuzu.in/images/vcross/interior/VCross_Red_Interior_1e.jpg"
+    },
+    {
+     "cap": "Instrument cluster",
+     "img": "https://www.isuzu.in/images/vcross/interior/V-CROSS_415x422_03.jpg"
+    },
+    {
+     "cap": "Rear seats",
+     "img": "https://www.isuzu.in/images/vcross/interior/Improved-Rear-Seat.jpg"
+    },
+    {
+     "cap": "Touchscreen",
+     "img": "https://www.isuzu.in/images/vcross/interior/Apple-play-and-anroid-auto.jpg"
+    }
+   ],
+   "page": "https://www.isuzu.in/vcross.php"
+  },
+  "Isuzu|Hi-Lander": {
+   "hero": {
+    "src": "https://www.isuzu.in/images/All%20models/hi-lander.webp",
+    "img": "img/cars/isuzu-hi-lander/hero-00996dcc62.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://www.isuzu.in/images/hilander/Features/colors/Hilandersilver.png",
+     "img": "img/cars/isuzu-hi-lander/silver-metallic-4e6e10b56c.webp",
+     "how": "alpha",
+     "name": "Silver Metallic"
+    },
+    {
+     "src": "https://www.isuzu.in/images/hilander/Features/colors/Hilanderblue.png",
+     "img": "img/cars/isuzu-hi-lander/nautilus-blue-38a698ec4e.webp",
+     "how": "alpha",
+     "name": "Nautilus Blue"
+    },
+    {
+     "src": "https://www.isuzu.in/images/hilander/Features/colors/Hilander-redmica.png",
+     "img": "img/cars/isuzu-hi-lander/red-spinel-mica-dd63ed60af.webp",
+     "how": "alpha",
+     "name": "Red Spinel Mica"
+    },
+    {
+     "src": "https://www.isuzu.in/images/hilander/Features/colors/HilanderGret.png",
+     "img": "img/cars/isuzu-hi-lander/galena-grey-99e010fd5b.webp",
+     "how": "alpha",
+     "name": "Galena Grey"
+    },
+    {
+     "src": "https://www.isuzu.in/images/hilander/Features/colors/Hilanderblackmica.png",
+     "img": "img/cars/isuzu-hi-lander/black-mica-79bf9fc85d.webp",
+     "how": "alpha",
+     "name": "Black Mica"
+    },
+    {
+     "src": "https://www.isuzu.in/images/hilander/Features/colors/Hilanderwhite.png",
+     "img": "img/cars/isuzu-hi-lander/splash-white-78fbe687da.webp",
+     "how": "alpha",
+     "name": "Splash White"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.isuzu.in/images/hilander/Interior/Interior.jpeg"
+    },
+    {
+     "cap": "Instrument cluster",
+     "img": "https://www.isuzu.in/images/hilander/Interior/Web-banner--Hilander-2.jpg"
+    },
+    {
+     "cap": "Rear seats",
+     "img": "https://www.isuzu.in/images/hilander/Interior/Web-banner--Hilander-3.jpg"
+    },
+    {
+     "cap": "Driver seat",
+     "img": "https://www.isuzu.in/images/hilander/Interior/Web-banner--Hilander-5.jpg"
+    }
+   ],
+   "page": "https://www.isuzu.in/hilander.php"
+  },
+  "Isuzu|MU-X": {
+   "hero": {
+    "src": "https://www.isuzu.in/images/All%20models/mux.webp",
+    "img": "img/cars/isuzu-mu-x/hero-974162041a.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://www.isuzu.in/images/mux/colors/mux1.png",
+     "img": "img/cars/isuzu-mu-x/nautilus-blue-61c5cb4a66.webp",
+     "how": "alpha",
+     "name": "Nautilus Blue"
+    },
+    {
+     "src": "https://www.isuzu.in/images/mux/colors/mux2.png",
+     "img": "img/cars/isuzu-mu-x/red-spinel-mica-d213e34db7.webp",
+     "how": "alpha",
+     "name": "Red Spinel Mica"
+    },
+    {
+     "src": "https://www.isuzu.in/images/mux/colors/mux3.png",
+     "img": "img/cars/isuzu-mu-x/silky-white-pearl-4c2a6c8fd7.webp",
+     "how": "alpha",
+     "name": "Silky White Pearl"
+    },
+    {
+     "src": "https://www.isuzu.in/images/mux/colors/mux4.png",
+     "img": "img/cars/isuzu-mu-x/galena-grey-251768af61.webp",
+     "how": "alpha",
+     "name": "Galena Grey"
+    },
+    {
+     "src": "https://www.isuzu.in/images/mux/colors/mux5.png",
+     "img": "img/cars/isuzu-mu-x/black-mica-4864bb11a1.webp",
+     "how": "alpha",
+     "name": "Black Mica"
+    },
+    {
+     "src": "https://www.isuzu.in/images/mux/colors/mux6.png",
+     "img": "img/cars/isuzu-mu-x/silver-metallic-61a2681405.webp",
+     "how": "alpha",
+     "name": "Silver Metallic"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.isuzu.in/images/mux/Interior/mu-X_1296x729.jpg"
+    },
+    {
+     "cap": "Front seats",
+     "img": "https://www.isuzu.in/images/mux/Interior/mu-X_415x422_02.jpg"
+    },
+    {
+     "cap": "Rear armrest",
+     "img": "https://www.isuzu.in/images/mux/Interior/mu-X_415x422_04.jpg"
+    },
+    {
+     "cap": "Roof AC vents",
+     "img": "https://www.isuzu.in/images/mux/Interior/mu-X_415x422_05.jpg"
+    }
+   ],
+   "page": "https://www.isuzu.in/mux.php"
+  },
+  "Jaguar|F-PACE": {
+   "hero": {
+    "src": "https://jlr.scene7.com/is/image/jlr/X76124GL_303101393_026_RDYN_S?wid=1600",
+    "img": "img/cars/jaguar-f-pace/hero-b8e74ef8bb.webp",
+    "how": "ai"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Cabin",
+     "img": "https://jlr.scene7.com/is/image/jlr/X76124GL_303101393_015?wid=1600"
+    },
+    {
+     "cap": "Sport seats",
+     "img": "https://jlr.scene7.com/is/image/jlr/X76124GL_303101393_012?wid=1600"
+    }
+   ],
+   "page": "https://www.jaguar.com/en-in/jdx/jaguar-range/f-pace/index.html"
+  },
+  "Jeep|Compass": {
+   "hero": {
+    "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/Compass_1440-x-600-red.png",
+    "img": "img/cars/jeep-compass/hero-0ff4608678.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/Compass_1440-x-600-red.png",
+     "img": "img/cars/jeep-compass/exotica-red-0ff4608678.webp",
+     "how": "alpha",
+     "name": "Exotica Red"
+    },
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/Compass_1440-x-600-Pearl-White.png",
+     "img": "img/cars/jeep-compass/pearl-white-f03a0f7f17.webp",
+     "how": "alpha",
+     "name": "Pearl White"
+    },
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/Compass_1440-x-600-black.png",
+     "img": "img/cars/jeep-compass/brilliant-black-cc064c4388.webp",
+     "how": "alpha",
+     "name": "Brilliant Black"
+    },
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/Compass_1440-x-600-grey.png",
+     "img": "img/cars/jeep-compass/grigio-magnesio-aa855ba92a.webp",
+     "how": "alpha",
+     "name": "Grigio Magnesio"
+    },
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/Compass_green-1440X600.png",
+     "img": "img/cars/jeep-compass/techno-metallic-green-88b53adf2e.webp",
+     "how": "alpha",
+     "name": "Techno Metallic Green"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/Accentuated-Dashboard.jpg"
+    },
+    {
+     "cap": "Touchscreen",
+     "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/UConnect-with-touchscreen-Display.jpg"
+    },
+    {
+     "cap": "Ambient lighting",
+     "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/ambientlighting_edited.png"
+    },
+    {
+     "cap": "Wireless charger",
+     "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/1001X751-Compass-Features-5.jpg"
+    }
+   ],
+   "page": "https://www.jeep-india.com/new-compass.html"
+  },
+  "Jeep|Meridian": {
+   "hero": {
+    "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/colories/Limited-O-3001x1251_Red.jpg",
+    "img": "img/cars/jeep-meridian/hero-c657ec13c2.webp",
+    "how": "ai"
+   },
+   "colors": [
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/colories/Limited-O-3001x1251_Red.jpg",
+     "img": "img/cars/jeep-meridian/velvet-red-c657ec13c2.webp",
+     "how": "ai",
+     "name": "Velvet Red"
+    },
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/colories/Limited-O-3001x1251_Pearl-White.jpg",
+     "img": "img/cars/jeep-meridian/pearl-white-27056b81c2.webp",
+     "how": "ai",
+     "name": "Pearl White"
+    },
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/colories/Limited-O-3001x1251_Black.jpg",
+     "img": "img/cars/jeep-meridian/brilliant-black-dfe2751e8a.webp",
+     "how": "ai",
+     "name": "Brilliant Black"
+    },
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/colories/Limited-O-3001x1251_Magnesio-Grey.jpg",
+     "img": "img/cars/jeep-meridian/magnesio-grey-2b1c1c7d91.webp",
+     "how": "ai",
+     "name": "Magnesio Grey"
+    },
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/colories/Limited-O-3001x1251_Green.jpg",
+     "img": "img/cars/jeep-meridian/techno-metallic-green-bd5e3499d3.webp",
+     "how": "ai",
+     "name": "Techno Metallic Green"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Front seats",
+     "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/1001X671-1-beige-interior.jpg"
+    },
+    {
+     "cap": "Rear seats",
+     "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/1001X671-3-Grey-Seal-Interior.jpg"
+    },
+    {
+     "cap": "Instrument cluster",
+     "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/1001X671-5-Digital-Intrumental-Cluster.jpg"
+    },
+    {
+     "cap": "Touchscreen",
+     "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/1001X671-3-U-connect.jpg"
+    },
+    {
+     "cap": "Panoramic sunroof",
+     "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/1001X671-1-Sunroof.jpg"
+    }
+   ],
+   "page": "https://www.jeep-india.com/new-jeep-meridian.html"
+  },
+  "Jeep|Wrangler": {
+   "hero": {
+    "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/Unlimited-1000x416-Red.png",
+    "img": "img/cars/jeep-wrangler/hero-aed580d314.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/Unlimited-1000x416-Red.png",
+     "img": "img/cars/jeep-wrangler/firecracker-red-aed580d314.webp",
+     "name": "Firecracker Red"
+    },
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/Unlimited-1000x416-Black.png",
+     "img": "img/cars/jeep-wrangler/black-6c28dd15dc.webp",
+     "name": "Black"
+    },
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/Unlimited-1000x416-White.png",
+     "img": "img/cars/jeep-wrangler/bright-white-5be429c9a6.webp",
+     "name": "Bright White"
+    },
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/Unlimited-1000x416-Anvil.png",
+     "img": "img/cars/jeep-wrangler/anvil-clear-coat-b54fbb0201.webp",
+     "name": "Anvil Clear Coat"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Touchscreen",
+     "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/2880X2880-Website-Overview-Page-3.jpg"
+    },
+    {
+     "cap": "Powered seat controls",
+     "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/2880X2880-Website-Overview-Page-6.jpg"
+    }
+   ],
+   "page": "https://www.jeep-india.com/wrangler-jl.html"
+  },
+  "Jeep|Grand Cherokee": {
+   "hero": {
+    "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-grand-cherokee/product-page-img/product-img-color/w-color-1440x600px.png",
+    "img": "img/cars/jeep-grand-cherokee/hero-5ed2429473.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-grand-cherokee/product-page-img/product-img-color/w-color-1440x600px.png",
+     "img": "img/cars/jeep-grand-cherokee/bright-white-5ed2429473.webp",
+     "how": "alpha",
+     "name": "Bright White"
+    },
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-grand-cherokee/product-page-img/product-img-color/blk-color-1440x600px.png",
+     "img": "img/cars/jeep-grand-cherokee/diamond-black-crystal-f80844498d.webp",
+     "how": "alpha",
+     "name": "Diamond Black Crystal"
+    },
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-grand-cherokee/product-page-img/product-img-color/rm-color-1440x600px.png",
+     "img": "img/cars/jeep-grand-cherokee/rocky-mountain-0783fe8ba9.webp",
+     "how": "alpha",
+     "name": "Rocky Mountain"
+    },
+    {
+     "src": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-grand-cherokee/product-page-img/product-img-color/r-color-1440x600px.png",
+     "img": "img/cars/jeep-grand-cherokee/velvet-red-b0a7f6712c.webp",
+     "how": "alpha",
+     "name": "Velvet Red"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-grand-cherokee/product-page-img/H-1920x600-2.jpg"
+    },
+    {
+     "cap": "Instrument cluster",
+     "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-grand-cherokee/product-page-img/H-1920x600-3.jpg"
+    }
+   ],
+   "page": "https://www.jeep-india.com/new-grand-cherokee.html"
+  },
+  "Land Rover|Discovery": {
+   "hero": {
+    "src": "https://jlr.scene7.com/is/image/jlr/L46227GL_303105414_010?wid=1600",
+    "img": "img/cars/land-rover-discovery/hero-200fc0eca8.webp",
+    "how": "ai"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Infotainment",
+     "img": "https://jlr.scene7.com/is/image/jlr/L46227GL_303105414_036_ALT?wid=1600"
+    },
+    {
+     "cap": "Centre console",
+     "img": "https://jlr.scene7.com/is/image/jlr/L46227GL_303105414_037?wid=1600"
+    },
+    {
+     "cap": "Seven-seat layout",
+     "img": "https://jlr.scene7.com/is/image/jlr/L46227GL_303105414_019?wid=1600"
+    },
+    {
+     "cap": "Meridian sound system",
+     "img": "https://jlr.scene7.com/is/image/jlr/L46227GL_303105414_029?wid=1600"
+    }
+   ],
+   "page": "https://www.landrover.in/discovery/discovery/index.html"
+  },
+  "Lexus|ES": {
+   "hero": {
+    "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/white.jpg",
+    "img": "img/cars/lexus-es/hero-fde5f9f41c.webp",
+    "how": "ai"
+   },
+   "colors": [
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/white.jpg",
+     "img": "img/cars/lexus-es/white-nova-fde5f9f41c.webp",
+     "how": "ai",
+     "name": "White Nova"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/sonic-titanium.jpg",
+     "img": "img/cars/lexus-es/sonic-titanium-be4699d668.webp",
+     "how": "ai",
+     "name": "Sonic Titanium"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/black-graphite.jpg",
+     "img": "img/cars/lexus-es/graphite-black-3e77e99e75.webp",
+     "how": "ai",
+     "name": "Graphite Black"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/sonic-copper.jpg",
+     "img": "img/cars/lexus-es/sonic-copper-2cc5f2a5ca.webp",
+     "how": "ai",
+     "name": "Sonic Copper"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/sou.jpg",
+     "img": "img/cars/lexus-es/sou-015c6da34a.webp",
+     "how": "ai",
+     "name": "Sou"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Cabin (Hazel)",
+     "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/desktop-beige.jpg"
+    },
+    {
+     "cap": "Cabin (White)",
+     "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/350h_Interior_White_desktop_1920x908_v1.jpg"
+    }
+   ],
+   "page": "https://www.lexusindia.co.in/models/es-350h/"
+  },
+  "Lexus|NX": {
+   "hero": {
+    "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-exterior-titanium-des_3x.webp",
+    "img": "img/cars/lexus-nx/hero-d2f769f3d1.webp",
+    "how": "ai"
+   },
+   "colors": [
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-exterior-titanium-des_3x.webp",
+     "img": "img/cars/lexus-nx/sonic-titanium-d2f769f3d1.webp",
+     "how": "ai",
+     "name": "Sonic Titanium"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-exterior-chrome-des_3x.webp",
+     "img": "img/cars/lexus-nx/sonic-chrome-cbdb8b8b13.webp",
+     "how": "ai",
+     "name": "Sonic Chrome"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-exterior-red-des_3x.webp",
+     "img": "img/cars/lexus-nx/radiant-red-c016bbc83a.webp",
+     "how": "ai",
+     "name": "Radiant Red"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-exterior-white-des_3x.webp",
+     "img": "img/cars/lexus-nx/white-nova-39a91c47a1.webp",
+     "how": "ai",
+     "name": "White Nova"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-exterior-black-des_3x.webp",
+     "img": "img/cars/lexus-nx/graphite-black-b855a6a1f8.webp",
+     "how": "ai",
+     "name": "Graphite Black"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Cabin (Hazel)",
+     "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-interior-hazel-des_3x.webp"
+    },
+    {
+     "cap": "Cabin (Solis White)",
+     "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-interior-white-des_3x.webp"
+    },
+    {
+     "cap": "Cabin (Dark Rose)",
+     "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-interior-rose-des_3x.webp"
+    }
+   ],
+   "page": "https://www.lexusindia.co.in/models/nx-350h/"
+  },
+  "Lexus|RX": {
+   "hero": {
+    "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_red_des_1_5x.webp",
+    "img": "img/cars/lexus-rx/hero-32bd8346e5.webp",
+    "how": "ai"
+   },
+   "colors": [
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_red_des_1_5x.webp",
+     "img": "img/cars/lexus-rx/red-mica-crystal-shine-32bd8346e5.webp",
+     "how": "ai",
+     "name": "Red Mica Crystal Shine"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_iridium_des_1_5x.webp",
+     "img": "img/cars/lexus-rx/sonic-iridium-0030da48ed.webp",
+     "how": "ai",
+     "name": "Sonic Iridium"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_quartz_des_1_5x.webp",
+     "img": "img/cars/lexus-rx/sonic-quartz-8d050d91b1.webp",
+     "how": "ai",
+     "name": "Sonic Quartz"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_blue_des_1_5x.webp",
+     "img": "img/cars/lexus-rx/deep-blue-mica-c29ded7e00.webp",
+     "how": "ai",
+     "name": "Deep Blue Mica"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_chrome_des_1_5x.webp",
+     "img": "img/cars/lexus-rx/sonic-chrome-66d8a69292.webp",
+     "how": "ai",
+     "name": "Sonic Chrome"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_black_des_1_5x.webp",
+     "img": "img/cars/lexus-rx/graphite-black-a3e41bd544.webp",
+     "how": "ai",
+     "name": "Graphite Black"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_copper_des_1_5x.webp",
+     "img": "img/cars/lexus-rx/sonic-copper-99dccdea4c.webp",
+     "how": "ai",
+     "name": "Sonic Copper"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_titanium_des_1_5x.webp",
+     "img": "img/cars/lexus-rx/sonic-titanium-02fd9ebb32.webp",
+     "how": "ai",
+     "name": "Sonic Titanium"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Cabin (Solis White)",
+     "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/interior_whitel_des_1_5x.webp"
+    },
+    {
+     "cap": "Cabin (Black)",
+     "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/interior_black_des_1_5x.webp"
+    },
+    {
+     "cap": "Cabin (Dark Sepia)",
+     "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/interior_sepia_des_1_5x.webp"
+    }
+   ],
+   "page": "https://www.lexusindia.co.in/models/rx-350h/"
+  },
+  "Lexus|LX": {
+   "hero": {
+    "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_urban_black_des_3x.webp",
+    "img": "img/cars/lexus-lx/hero-e36fd551f0.webp",
+    "how": "ai"
+   },
+   "colors": [
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_urban_black_des_3x.webp",
+     "img": "img/cars/lexus-lx/graphite-black-e36fd551f0.webp",
+     "how": "ai",
+     "name": "Graphite Black"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_urban_titanium_des_3x.webp",
+     "img": "img/cars/lexus-lx/sonic-titanium-fe960a23fe.webp",
+     "how": "ai",
+     "name": "Sonic Titanium"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_urban_white_des_3x.webp",
+     "img": "img/cars/lexus-lx/sonic-quartz-aaa46f444b.webp",
+     "how": "ai",
+     "name": "Sonic Quartz"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Cabin (Hazel)",
+     "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/LXC2109-1.webp"
+    },
+    {
+     "cap": "Cabin (Crimson)",
+     "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/LXC2107-1.webp"
+    }
+   ],
+   "page": "https://www.lexusindia.co.in/models/lx-500d/"
+  },
+  "Lexus|LM": {
+   "hero": {
+    "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_7seater_black_des_1_5x.webp",
+    "img": "img/cars/lexus-lm/hero-74aea96e61.webp",
+    "how": "ai"
+   },
+   "colors": [
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_7seater_black_des_1_5x.webp",
+     "img": "img/cars/lexus-lm/graphite-black-74aea96e61.webp",
+     "how": "ai",
+     "name": "Graphite Black"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_7seater_titanium_des_1_5x.webp",
+     "img": "img/cars/lexus-lm/sonic-titanium-e0ec3714d4.webp",
+     "how": "ai",
+     "name": "Sonic Titanium"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_7seater_white_des_1_5x.webp",
+     "img": "img/cars/lexus-lm/sonic-quartz-82de8bdd54.webp",
+     "how": "ai",
+     "name": "Sonic Quartz"
+    },
+    {
+     "src": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_7seater_red_des_1_5x.webp",
+     "img": "img/cars/lexus-lm/sonic-agate-17f999371e.webp",
+     "how": "ai",
+     "name": "Sonic Agate"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Cabin (Black)",
+     "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/interior_7seater_black_des_1_5x.webp"
+    },
+    {
+     "cap": "Cabin (Solis White)",
+     "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/interior_7seater_white_des_1_5x.webp"
+    }
+   ],
+   "page": "https://www.lexusindia.co.in/models/lm-350h/"
+  },
+  "Mahindra|BE 6 Sporteq": {
+   "hero": {
+    "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw66f4a1ab/images/BE6/hires/Pack_Four/Pack_Four_DeepForest_1366x600.png",
+    "img": "img/cars/mahindra-be-6-sporteq/hero-7c05ef2e26.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw66f4a1ab/images/BE6/hires/Pack_Four/Pack_Four_DeepForest_1366x600.png",
+     "img": "img/cars/mahindra-be-6-sporteq/deep-forest-7c05ef2e26.webp",
+     "how": "alpha",
+     "name": "Deep Forest"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw16fdf8aa/images/BE6/hires/Pack_Four/Pack_Four_FirestromeOrange_1366x600.png",
+     "img": "img/cars/mahindra-be-6-sporteq/firestorm-orange-8a5152666e.webp",
+     "how": "alpha",
+     "name": "Firestorm Orange"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwe6dd0460/images/BE6/hires/Pack_Four/Pack_Four_DesertMyst_1366x600.png",
+     "img": "img/cars/mahindra-be-6-sporteq/desert-myst-a5381c0ead.webp",
+     "how": "alpha",
+     "name": "Desert Myst"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw49de1744/images/BE6/hires/Pack_Four/Pack_Four_TangoRed_1366x600.png",
+     "img": "img/cars/mahindra-be-6-sporteq/tango-red-89b05131f8.webp",
+     "how": "alpha",
+     "name": "Tango Red"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwbcdc831e/images/BE6/hires/Pack_Four/Pack_Four_EverestWhite_1366x600.png",
+     "img": "img/cars/mahindra-be-6-sporteq/everest-white-1652bff8c1.webp",
+     "how": "alpha",
+     "name": "Everest White"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwf85bde8f/images/BE6/hires/Pack_Four/Pack_Four_StealthBlack_1366x600.png",
+     "img": "img/cars/mahindra-be-6-sporteq/stealth-black-e5fd31f0bf.webp",
+     "how": "alpha",
+     "name": "Stealth Black"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwe02d215b/images/BE6/hires/Pack_Four/Pack_Four_RubyVelvet_1366x600.png",
+     "img": "img/cars/mahindra-be-6-sporteq/ruby-velvet-a4cab83167.webp",
+     "how": "alpha",
+     "name": "Ruby Velvet"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw9982a14c/images/BE6/hires/LE/LE_GalaxyGrey_1366x600.png",
+     "img": "img/cars/mahindra-be-6-sporteq/graphite-storm-ae0c82ce5d.webp",
+     "how": "alpha",
+     "name": "Graphite Storm"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwc4d0d7ed/BE6_SPORTEQ/KEY_HIGHLIGHTS/Dynamic_Dashboard_3Screen_Wide.jpg"
+    },
+    {
+     "cap": "Cockpit",
+     "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwe9aa5e47/BE6_SPORTEQ/KEY_HIGHLIGHTS/LE_Cockpit_View_Wide.jpg"
+    },
+    {
+     "cap": "Steering wheel",
+     "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwcf4fc12e/BE6_SPORTEQ/KEY_HIGHLIGHTS/Steering_Wide.jpg"
+    },
+    {
+     "cap": "Ventilated seats",
+     "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw0012c151/BE6_SPORTEQ/KEY_HIGHLIGHTS/VentilatedSeats_Wide.jpg"
+    }
+   ],
+   "page": "https://www.mahindraelectricsuv.com/esuv/MBE6.html"
+  },
+  "Mahindra|XEV 9e": {
+   "hero": {
+    "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw9d3e4ed7/images/XEV9E/hires/packThree-R19/Everest_White_1366x600.png",
+    "img": "img/cars/mahindra-xev-9e/hero-7ddb8b9fad.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwc70bb8f9/images/XEV9E/hires/packThree-R19/Deep_Forest_1366x600.png",
+     "img": "img/cars/mahindra-xev-9e/deep-forest-3a20bde5e3.webp",
+     "how": "alpha",
+     "name": "Deep Forest"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw170a9ad0/images/XEV9E/hires/packThree-R19/Desert_Myst_1366x600.png",
+     "img": "img/cars/mahindra-xev-9e/desert-myst-84b1f790bd.webp",
+     "how": "alpha",
+     "name": "Desert Myst"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw701e0d8c/images/XEV9E/hires/packThree-R19/Tango_Red_1366x600.png",
+     "img": "img/cars/mahindra-xev-9e/tango-red-40893c1054.webp",
+     "how": "alpha",
+     "name": "Tango Red"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw9d3e4ed7/images/XEV9E/hires/packThree-R19/Everest_White_1366x600.png",
+     "img": "img/cars/mahindra-xev-9e/everest-white-7ddb8b9fad.webp",
+     "how": "alpha",
+     "name": "Everest White"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwec37764a/images/XEV9E/hires/packThree-R19/Stealth_Black_1366x600.png",
+     "img": "img/cars/mahindra-xev-9e/stealth-black-0a4ae1b9eb.webp",
+     "how": "alpha",
+     "name": "Stealth Black"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwa47a4951/images/XEV9E/hires/packThree-R19/Ruby_Velvet_1366x600.png",
+     "img": "img/cars/mahindra-xev-9e/ruby-velvet-cf86ba5c64.webp",
+     "how": "alpha",
+     "name": "Ruby Velvet"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw89b6b7ac/images/XEV9E/hires/packThree-R19/Nebula_Blue_1366x600.png",
+     "img": "img/cars/mahindra-xev-9e/nebula-blue-32c3d00114.webp",
+     "how": "alpha",
+     "name": "Nebula Blue"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw3048f708/Xev-9e/ride/fold-3.6.jpg"
+    },
+    {
+     "cap": "Cockpit",
+     "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw6bafe2e3/Xev-9e/Client_Fold-2.3.png"
+    },
+    {
+     "cap": "Rear seats",
+     "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwe20142f8/Xev-9e/Client_Fold-3.4.png"
+    },
+    {
+     "cap": "Cabin",
+     "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwfee2bd26/Xev-9e/DESKTOP_RED_RED_Fold_2.6.png"
+    }
+   ],
+   "page": "https://www.mahindraelectricsuv.com/esuv/xev-9e/MXV9.html"
+  },
+  "Mahindra|XEV 9S": {
+   "hero": {
+    "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwa8f28381/images/XEV9/hires/PackThreeTech_Everest_White_1366x600.png",
+    "img": "img/cars/mahindra-xev-9s/hero-00565ff928.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw36a51997/images/XEV9/hires/PackThreeTech_Nebula_Blue_1366x600.png",
+     "img": "img/cars/mahindra-xev-9s/nebula-blue-cb05455da2.webp",
+     "how": "alpha",
+     "name": "Nebula Blue"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwb1fc950e/images/XEV9/hires/PackThreeTech_MidNight_Black_1366x600.png",
+     "img": "img/cars/mahindra-xev-9s/midnight-black-dbdb4fb248.webp",
+     "how": "alpha",
+     "name": "Midnight Black"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw73c9fabb/images/XEV9/hires/PackThreeTech_Desert_Myst_1366x600.png",
+     "img": "img/cars/mahindra-xev-9s/desert-myst-180ce774b1.webp",
+     "how": "alpha",
+     "name": "Desert Myst"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw9cbfc7d6/images/XEV9/hires/PackThreeTech_Ruby_Velvet_1366x600.png",
+     "img": "img/cars/mahindra-xev-9s/ruby-velvet-a18cfb846a.webp",
+     "how": "alpha",
+     "name": "Ruby Velvet"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwa8f28381/images/XEV9/hires/PackThreeTech_Everest_White_1366x600.png",
+     "img": "img/cars/mahindra-xev-9s/everest-white-00565ff928.webp",
+     "how": "alpha",
+     "name": "Everest White"
+    },
+    {
+     "src": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw26a2462c/images/XEV9/hires/PackThreeTech_Stealth_Black_1366x600.png",
+     "img": "img/cars/mahindra-xev-9s/stealth-black-b4ae528f81.webp",
+     "how": "alpha",
+     "name": "Stealth Black"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw19703ebf/XEV-9s/desktop_latest/DIGITAL_Cockpit_View_1920X960.jpg"
+    },
+    {
+     "cap": "Cabin",
+     "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwb65ded3a/XEV-9s/desktop_latest/DIGITAL_Aerial_Interior_1920X960.jpg"
+    },
+    {
+     "cap": "Panoramic sunroof",
+     "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwd481ce98/XEV-9s/desktop_latest/DIGITAL_Panaromic_Skyroof_1920X960.jpg"
+    },
+    {
+     "cap": "Sliding second-row seats",
+     "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwf2fe5268/XEV-9s/FEATURES_DESKTOP/DIGITAL_SlidingSeats_1920-X-960.jpg"
+    }
+   ],
+   "page": "https://www.mahindraelectricsuv.com/esuv/xev-9s/XEV9.html"
+  },
+  "Mahindra|XUV 3XO EV": {
+   "hero": {
+    "src": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw5bf55673/images/X3XE/hires/AX7L_1366x443_DeepForest.png",
+    "img": "img/cars/mahindra-xuv-3xo-ev/hero-e972cea888.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw5bf55673/images/X3XE/hires/AX7L_1366x443_DeepForest.png",
+     "img": "img/cars/mahindra-xuv-3xo-ev/deep-forest-e972cea888.webp",
+     "how": "alpha",
+     "name": "Deep Forest"
+    },
+    {
+     "src": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwb5ef29cb/images/X3XE/hires/AX7L_GalaxyGrey_1366x443.png",
+     "img": "img/cars/mahindra-xuv-3xo-ev/galaxy-grey-a8c221ecc8.webp",
+     "how": "alpha",
+     "name": "Galaxy Grey"
+    },
+    {
+     "src": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwe9cfd693/images/X3XE/hires/AX7L_1366x443_NebulaBlue.png",
+     "img": "img/cars/mahindra-xuv-3xo-ev/nebula-blue-b5fed3116f.webp",
+     "how": "alpha",
+     "name": "Nebula Blue"
+    },
+    {
+     "src": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw31bac62c/images/X3XE/hires/AX7L_1366x443_TangoRed.png",
+     "img": "img/cars/mahindra-xuv-3xo-ev/tango-red-44f76d917c.webp",
+     "how": "alpha",
+     "name": "Tango Red"
+    },
+    {
+     "src": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwedefabb6/images/X3XE/hires/AX7L_1366x443_EverestWhite.png",
+     "img": "img/cars/mahindra-xuv-3xo-ev/everest-white-c654ca9091.webp",
+     "how": "alpha",
+     "name": "Everest White"
+    },
+    {
+     "src": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw889b8234/images/X3XE/hires/AX7L_1366x443_StealthBlack.png",
+     "img": "img/cars/mahindra-xuv-3xo-ev/stealth-black-a3682c1347.webp",
+     "how": "alpha",
+     "name": "Stealth Black"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw4cec640a/XUV3XO_ev/Desktop/X3XE_Twin_HD_Screens.png"
+    },
+    {
+     "cap": "Cabin",
+     "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw7d16bb6f/XUV3XO_ev/Desktop/Cabin_Space.jpg"
+    },
+    {
+     "cap": "Seats",
+     "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dwa2e38496/XUV3XO_ev/Desktop/Leatherette_Seat.jpg"
+    },
+    {
+     "cap": "Panoramic sunroof",
+     "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw23302b22/XUV3XO_ev/Desktop/Panoramic_Sunroof.jpg"
+    }
+   ],
+   "page": "https://auto.mahindra.com/suv/xuv3xo-ev.html"
+  },
+  "Maruti Suzuki|Eeco": {
+   "hero": {
+    "src": "https://marutisuzuki.scene7.com/is/image/maruti/2025.06.21_12.18.21_Eeco_360_Blue_PathTracer_0010?fmt=png-alpha&bfc=on",
+    "img": "img/cars/maruti-suzuki-eeco/hero-cd670b0db2.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://marutisuzuki.scene7.com/is/image/maruti/2025.07.02_14.10.37_Eeco_360_Blue_PathTracer_0010?fmt=png-alpha&bfc=on",
+     "img": "img/cars/maruti-suzuki-eeco/bluish-black-7b5958a01e.webp",
+     "how": "alpha",
+     "name": "Bluish Black"
+    },
+    {
+     "src": "https://marutisuzuki.scene7.com/is/image/maruti/2025.07.02_14.02.51_Eeco_360_Blue_PathTracer_0010?fmt=png-alpha&bfc=on",
+     "img": "img/cars/maruti-suzuki-eeco/metallic-glistening-grey-84e9edc25a.webp",
+     "how": "alpha",
+     "name": "Metallic Glistening Grey"
+    },
+    {
+     "src": "https://marutisuzuki.scene7.com/is/image/maruti/2025.07.02_13.48.15_Eeco_360_Blue_PathTracer_0010?fmt=png-alpha&bfc=on",
+     "img": "img/cars/maruti-suzuki-eeco/solid-white-35b988de99.webp",
+     "how": "alpha",
+     "name": "Solid White"
+    },
+    {
+     "src": "https://marutisuzuki.scene7.com/is/image/maruti/2025.06.21_12.18.21_Eeco_360_Blue_PathTracer_0010?fmt=png-alpha&bfc=on",
+     "img": "img/cars/maruti-suzuki-eeco/metallic-brisk-blue-cd670b0db2.webp",
+     "how": "alpha",
+     "name": "Metallic Brisk Blue"
+    },
+    {
+     "src": "https://marutisuzuki.scene7.com/is/image/maruti/2025.07.02_13.55.47_Eeco_360_Silver_PathTracer_0010?fmt=png-alpha&bfc=on",
+     "img": "img/cars/maruti-suzuki-eeco/metallic-silky-silver-b3cdf34175.webp",
+     "how": "alpha",
+     "name": "Metallic Silky Silver"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Cabin",
+     "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:b0ce6bae-0697-44e3-866f-12c25ed35813/as/spacious_cabin_desk.png?width=1600&preferwebp=false"
+    },
+    {
+     "cap": "Seating (5 / 6 seater)",
+     "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:afffb7d4-a25b-4773-95b4-43e99d86269f/as/5_6_seat_desk.png?width=1600&preferwebp=false"
+    },
+    {
+     "cap": "AC and heater controls",
+     "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:04ac5672-3e34-4b2f-942d-8e25f16022ef/as/Air-conditioner_heater_desk.png?width=1600&preferwebp=false"
+    }
+   ],
+   "page": "https://www.marutisuzuki.com/arena/eeco"
+  },
+  "MG|Cyberster": {
+   "hero": {
+    "src": "https://mgmotor.scene7.com/is/image/mgmotor/Red?fmt=png-alpha&wid=1400",
+    "img": "img/cars/mg-cyberster/hero-685564f2ee.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://mgmotor.scene7.com/is/image/mgmotor/Red?fmt=png-alpha&wid=1400",
+     "img": "img/cars/mg-cyberster/flare-red-685564f2ee.webp",
+     "how": "alpha",
+     "name": "Flare Red"
+    },
+    {
+     "src": "https://mgmotor.scene7.com/is/image/mgmotor/Yellow?fmt=png-alpha&wid=1400",
+     "img": "img/cars/mg-cyberster/nuclear-yellow-46c7b955c6.webp",
+     "how": "alpha",
+     "name": "Nuclear Yellow"
+    },
+    {
+     "src": "https://mgmotor.scene7.com/is/image/mgmotor/grey?fmt=png-alpha&wid=1400",
+     "img": "img/cars/mg-cyberster/andes-grey-c0235e35d1.webp",
+     "how": "alpha",
+     "name": "Andes Grey"
+    },
+    {
+     "src": "https://mgmotor.scene7.com/is/image/mgmotor/beige?fmt=png-alpha&wid=1400",
+     "img": "img/cars/mg-cyberster/modern-beige-9c94087669.webp",
+     "how": "alpha",
+     "name": "Modern Beige"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://mgmotor.scene7.com/is/image/mgmotor/hotspot-interior-g?fmt=png-alpha&wid=1400"
+    },
+    {
+     "cap": "Digital cockpit",
+     "img": "https://mgmotor.scene7.com/is/image/mgmotor/launch-mode-thumb?fmt=png-alpha&wid=1400"
+    },
+    {
+     "cap": "Cabin from above",
+     "img": "https://mgmotor.scene7.com/is/image/mgmotor/airbags_v4?fmt=png-alpha&wid=1400"
+    }
+   ],
+   "page": "https://www.mgselect.co.in/cyberster"
+  },
+  "MG|M9": {
+   "hero": {
+    "src": "https://mgmotor.scene7.com/is/image/mgmotor/pearl-white?fmt=png-alpha&wid=1400",
+    "img": "img/cars/mg-m9/hero-4a4fca9857.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://mgmotor.scene7.com/is/image/mgmotor/pearl-white?fmt=png-alpha&wid=1400",
+     "img": "img/cars/mg-m9/pearl-white-with-black-roof-4a4fca9857.webp",
+     "how": "alpha",
+     "name": "Pearl White with Black Roof"
+    },
+    {
+     "src": "https://mgmotor.scene7.com/is/image/mgmotor/metal-black?fmt=png-alpha&wid=1400",
+     "img": "img/cars/mg-m9/metal-black-df02b19ed8.webp",
+     "how": "alpha",
+     "name": "Metal Black"
+    },
+    {
+     "src": "https://mgmotor.scene7.com/is/image/mgmotor/concrete-grey?fmt=png-alpha&wid=1400",
+     "img": "img/cars/mg-m9/concrete-grey-with-black-roof-da9e106360.webp",
+     "how": "alpha",
+     "name": "Concrete Grey with Black Roof"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Second-row seats (massage)",
+     "img": "https://mgmotor.scene7.com/is/image/mgmotor/massage-desktop-thumbnail?fmt=png-alpha&wid=1400"
+    },
+    {
+     "cap": "Second-row seat fully extended",
+     "img": "https://mgmotor.scene7.com/is/image/mgmotor/fully-extend-desktop-thumb?fmt=png-alpha&wid=1400"
+    },
+    {
+     "cap": "Seating layout",
+     "img": "https://mgmotor.scene7.com/is/image/mgmotor/thumbnail_second_banner?fmt=png-alpha&wid=1400"
+    }
+   ],
+   "page": "https://www.mgselect.co.in/m9"
+  },
+  "MINI|Cooper": {
+   "hero": {
+    "src": "https://prod.cosy.bmw.cloud/miniweb/cosySec?COSY-EU-100-7331rjFhnOqIbqJKLgL3hpvYLfCny2oWYgpnQ97lX80UrOohYxVAfPXYuNWCB9%25UbT79Kix2K7bYCjKq%25SbfFSrNG1JyXq2FgXAg2dvsv63ipzpvU3NHP0qMyNF9OALUoxPkIogOybLW0nvLUgChCWB5GybUEqE4I89ChbNmNLDPoEqhk7wqgMLNmqn1%25VYDyk7m5VutoYCn178z3lTtE5V1PaXzOfN8zVMRpc0SkPazDxiYAdnMRaYWHoOQ5DxRtes2gZ8YWxfj0SzcPteWS6AdBKMfjedwOjRBDS6jQ%25g6r2Ydw6ZuUhiptQ%25wc3bvMifZu%25KXhEoHSc3uBrqVtJdKX324uFlTQBrXpF3gflZ24riIXU3scpF4HvrbH0KiIFJG4h%25ABHvIT9Fq8O2JGvloIZ0gpT9GsLvkmUilo90y7dBbHsLoAC1ZqhJ0yLOEVzVqTACygNzaUmlOECUkaRJ7sgNEbnRZi10UkNh5xiCVAbnkq8WwuzOh5nmPX7Jagq857MrFTRUmP81D5PAxb7MPVY8tOWh1DMztP50eqVYDafusUjmztYRS3nx672tr93dYgMyIE5cPrWyGp6xEaS%25F6ds57Qqdv6OD3Zekxh1lNUEMAKWzOSs5m%2565ezICP4WsxnTNkiQhtE6lnuQv7GqXA2HkCrmoShtDoJx2YI1b4gL3WCzOSAoUnpkJE%25uFbYCja1%25P4fFSr7Vk",
+    "img": "img/cars/mini-cooper/hero-105c3ff6db.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Steering wheel and display",
+     "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/cooper/3-door/bodytype-hub/hot-spots/mini-F66-steering-wheel.webp"
+    },
+    {
+     "cap": "Circular OLED display",
+     "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/cooper/3-door/bodytype-hub/mini-F66-gallery-display.webp"
+    },
+    {
+     "cap": "Seat detail",
+     "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/cooper/3-door/bodytype-hub/hot-spots/mini-F66-seats.webp"
+    }
+   ],
+   "page": "https://www.mini.in/en_IN/home/range/mini-cooper-3-door.html"
+  },
+  "MINI|Cooper Convertible": {
+   "hero": {
+    "src": "https://prod.cosy.bmw.cloud/miniweb/cosySec?COSY-EU-100-7331rjFhnOqIbqcPI6L3hpvYLfCny2oWYgpnQ97lX80UrOohYHVAfPXYuNnCB9%25UnpqyBLayV3WJYw1p8ac1QT8RcmZWkyhI%25uzWQdjce0r3aeZQ6KAZfXRjcZwBO24rx6Kc%252gFa4WwBKupUP8Fe%252B3ibM3Ijup2XHhifv63iprJkyYGwXHi4TnFt9%25rJHFl5RAou4TJIs8IvL3FlTv0PwmyXIslGAtsHCrv0s9Of0hE4GA0ogSjqNF9OALUdZnkIogOybQVrnvLUgChZmN5GybUEqcpI89ChbNmU7MPoEqhk7bSvMLNmqn1hdnDyk7m5VqQOYCn178zmZetE5V1Pa7oDfN8zVMRcGdSkPazDxKBKdnMRaYWB2tQ5DxRte2pkZ8YWxfjpiOcPteWS6i9NKMfjedwS9HBDS6jQ%25QtS2Ydw6ZuTneptQ%25wc3lOUifG%250hlXw8j7gVxFe0B7b9iKVZ3JOiXNxfrYXUi56l42aK2lbJkVDOdqQ53NxtJix2Qg1eABNKRCzFWrD%25ViERTrUfbYsnGLa10tq3D%25ZtyKGwgSMA8mFB1Q53nqPR9ayVJTOMw1pZSJeAuO30fda",
+    "img": "img/cars/mini-cooper-convertible/hero-3c07f8460c.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Dashboard display",
+     "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/cooper/convertible/bodytype-hub/mini-F67-gallery-display.webp.asset.1738068425416.webp"
+    }
+   ],
+   "page": "https://www.mini.in/en_IN/home/range/mini-cooper-convertible.html"
+  },
+  "MINI|Countryman": {
+   "hero": {
+    "src": "https://prod.cosy.bmw.cloud/miniweb/cosySec?COSY-EU-100-7331rjFhnOqIbqcPLLL3hpvYLfCny2oWYgpnQ97lX80UrOQhYCVAfPXYuNWCB9%25UbT79Kix2K7bYCjKq%25SbfFSrNG1JyXq2FgXAV2IguOGcSwPCE4GA0og9RnNF9OALULRckIogOybyX4nvLUgCheU05GybUEqjPI89ChbNm6qTPoEqhk7ZnHMLNmqn1cnDDyk7m5VpJIYCn178ziPftE5V1PaHVefN8zVMRJK7SkPazDxTetdnMRaYWzeZQ5DxRteapJZ8YWxfjRNacPteWS6xXiKMfjedwHE2BDS6jQ%25JTZ2Ydw6ZuTy5ptQ%25wc3ZylifZu%25KXKcNHSc3uBrE4TJdKX324NzVTQBrXpFhOalZ24riIqD8scpF4HvVUx0KiIFJGzTXABHvIT9avrO2JGvloRkcgpT9GsLxCmUilo90yWw2bHsLoAC9V2hJ0yLOEoztqTACygNLpbmlOECUkaKH7sgNEbnRxR10UkNh5xWlVAbnkq8WwuzOSnjXWPkJEF%25vLYCj7F3dzmvh8RwzP2LOM0PuzHNWD19msgBGTvEit7bH82LARzL1b%25IC672moKG9QMsnvzBoxMuO30eiS8lIjAr8snNrcmSk%25gl6J4W7IbH8irTod9cvRxwlkIVhgRC65w8jOU9",
+    "img": "img/cars/mini-countryman/hero-12ebd337c0.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/countryman/ice/bodytype-hub/mini-U25-gallery-interior.webp.asset.1724746199757.webp"
+    },
+    {
+     "cap": "Front seats",
+     "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/countryman/ice/bodytype-hub/mini-U25-gallery-seats.webp"
+    },
+    {
+     "cap": "Cabin",
+     "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/countryman/ice/bodytype-hub/mini-U25-gallery-welcome.webp"
+    },
+    {
+     "cap": "Centre console (Electric)",
+     "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/countryman/bev/bodytype-hub/mini-U25-BEV-gallery-dashboard.webp.asset.1739348683590.webp"
+    }
+   ],
+   "page": "https://www.mini.in/en_IN/home/range/mini-countryman-c.html"
+  },
+  "MINI|John Cooper Works Countryman": {
+   "hero": {
+    "src": "https://prod.cosy.bmw.cloud/miniweb/cosySec?COSY-EU-100-7331rjFhnOqIbqJsLWL3hpvYLfCny2oWYgpnQ97lX80UrO0ZYCVAfPXYuNWCB9%25UbT79Kix2K7bYCjKq%25SbfFSrNG1JyXq2FgXAV2IguOGcSwPCE4GA0ogo9kNF9OALUxbnkIogOybWUcnvLUgChSD25GybUEqdNp89ChbNmQfrPoEqhk7ZSDMLNmqn12SJDyk7m5Vp8bYCn178zi1htE5V1PaHVefN8zVMRJldSkPazDxTB1dnMRaYWljfQ5DxRtesgkZ8YWxfjR6KcPteWS6xHnKMfjedwWJdBDS6jQ%25eT02Ydw6ZujlaptQ%25wc36sIifZu%25KXwM2HSc3uBr05YJdKX324APlTQBrXpFOgOlZ24riIg5tscpF4Hvii10KiIFJGeO2ABNIqab9FSrW1juyXqlWzkATjHGg7A9DuBoc9VAf4bLswTZ2M6djrtClifGDuKgAusi1eXmlDT%25P6wnoZIjAM%25UoVBzchtN56eqKRGZI4R8TNF12QmSxbleifGtRd%25kw8jgU7QFe0H2gXmv7GqBpw",
+    "img": "img/cars/mini-john-cooper-works-countryman/hero-69578203d8.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [],
+   "page": "https://www.mini.in/en_IN/home/range/john-cooper-works.html"
+  },
+  "Nissan|X-Trail": {
+   "hero": {
+    "src": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/x-trail/overview/Nissan%20X-TRAIL%20Side%20Angle.png",
+    "img": "img/cars/nissan-x-trail/hero-88bcd0affd.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Instrument cluster",
+     "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/x-trail/gallery/1-SOTA-D.jpg"
+    },
+    {
+     "cap": "Dual-zone climate control",
+     "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/x-trail/gallery/4-SOTA-D.jpg"
+    },
+    {
+     "cap": "Floating centre console",
+     "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/x-trail/gallery/5-MIJ-D.jpg"
+    },
+    {
+     "cap": "Cabin layout",
+     "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/x-trail/gallery/2-SUVE-D.jpg"
+    }
+   ],
+   "page": "https://www.nissan.in/vehicles/new/x-trail.html"
+  },
+  "Porsche|911": {
+   "hero": {
+    "src": "https://images.porsche.com/f/285489813253582/5000x1485/a203ff742b/model-9921b2-side-shot_c0332ade044b4b01b7e09d445787a5f5.png/m/2400x0/filters:format(png)",
+    "img": "img/cars/porsche-911/hero-96190740da.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Cockpit and infotainment",
+     "img": "https://a.storyblok.com/f/322327/2100x2651/4de2ff2a24/cz26w12od0004-eu-911-carrera-gts-infotainment.jpg/m/1920x0"
+    }
+   ],
+   "page": "https://www.porsche.com/middle-east/_india_/models/911/"
+  },
+  "Porsche|Taycan": {
+   "hero": {
+    "src": "https://images.porsche.com/f/285489813253582/5000x1390/cbb6569be9/model-y1adj1-side-shot_e1c0e39dcd7444bd81e1ffbac43285a0.png/m/2400x0/filters:format(png)",
+    "img": "img/cars/porsche-taycan/hero-3b57fc61e3.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Cabin (Black Edition)",
+     "img": "https://a.storyblok.com/f/322327/3840x2160/364ca5f024/ta26q3cid0011-taycan-black-edition-interior.jpg/m/1920x0"
+    },
+    {
+     "cap": "Cockpit",
+     "img": "https://a.storyblok.com/f/322327/3400x2600/a049b07dc2/ta27q32id0006-eu-taycan-black-edition-cockpit.jpg/m/1920x0"
+    },
+    {
+     "cap": "Seats",
+     "img": "https://a.storyblok.com/f/322327/1300x1300/807e53d8d0/ta26q3cid0011-taycan-black-edition-seats.jpg"
+    }
+   ],
+   "page": "https://www.porsche.com/middle-east/_india_/models/taycan/"
+  },
+  "Porsche|Panamera": {
+   "hero": {
+    "src": "https://images.porsche.com/f/285489813253582/5000x1393/f3c0558acf/model-yaaaa1-side-shot_75b78d18f2904583977e4ec4cefda7e3.png/m/2400x0/filters:format(png)",
+    "img": "img/cars/porsche-panamera/hero-5863c73dd0.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Cockpit",
+     "img": "https://a.storyblok.com/f/322327/2100x2651/9ed543ab65/pa27p5kod0008-eu-panamera-turbo-e-hybrid-infotainment.jpg/m/1920x0"
+    },
+    {
+     "cap": "Rear seats",
+     "img": "https://a.storyblok.com/f/322327/3896x2651/327f6cfafe/pa27p5kod0007-panamera-fond.jpg/m/1920x0"
+    }
+   ],
+   "page": "https://www.porsche.com/middle-east/_india_/models/panamera/"
+  },
+  "Porsche|Macan": {
+   "hero": {
+    "src": "https://images.porsche.com/f/285489813253582/5000x1759/12429472bf/model-95bau1-2026-side-shot_89b9eaf02a9540d494e3398b12d105e2.png/m/2400x0/filters:format(png)",
+    "img": "img/cars/porsche-macan/hero-ee521a98b2.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Cockpit (Macan Electric)",
+     "img": "https://a.storyblok.com/f/322327/1300x1300/64283a96b5/ma24t4cod0004-macan-steering-wheel.jpg"
+    },
+    {
+     "cap": "Cabin (Macan Electric)",
+     "img": "https://a.storyblok.com/f/322327/3165x1779/76e449da59/ma26t4cix0004-macan-4-with-open-doors.jpg/m/1920x0"
+    },
+    {
+     "cap": "Advanced Cockpit (Macan Turbo Electric)",
+     "img": "https://a.storyblok.com/f/322327/1700x1300/da0810405e/ma26t4eod0003-experience.png"
+    }
+   ],
+   "page": "https://www.porsche.com/middle-east/_india_/models/macan/"
+  },
+  "Porsche|Cayenne": {
+   "hero": {
+    "src": "https://images.porsche.com/f/285489813253582/3274x1618/8d46f839ef/model-9yaai1-degree-30-shot.png/m/2400x0/filters:format(png)",
+    "img": "img/cars/porsche-cayenne/hero-99b6bdb02c.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Cockpit (GTS)",
+     "img": "https://a.storyblok.com/f/322327/3896x2651/aa1689587c/cy27j5fod0003-eu-cayenne-gts-interior.jpg/m/1920x0"
+    },
+    {
+     "cap": "Interior (Cayenne Electric)",
+     "img": "https://a.storyblok.com/f/322327/3840x1648/baafc8b34c/cayenne-turbo-electric-interior.jpg/m/1920x0"
+    },
+    {
+     "cap": "Cockpit (Cayenne Electric)",
+     "img": "https://a.storyblok.com/f/322327/3840x1648/14e0324c9e/cayenne-turbo-electric-mood-modes.jpg/m/1920x0"
+    }
+   ],
+   "page": "https://www.porsche.com/middle-east/_india_/models/cayenne/"
+  },
+  "Porsche|Cayenne Coup\u00e9": {
+   "hero": {
+    "src": "https://images.porsche.com/f/285489813253582/3274x1618/f372535424/model-9ybai1-degree-30-shot.png/m/2400x0/filters:format(png)",
+    "img": "img/cars/porsche-cayenne-coup/hero-52fbefba2b.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Head-up display",
+     "img": "https://a.storyblok.com/f/322327/820x1300/095686248f/034-card-slider_cy24j5bod0002_me_rgb_desktop.jpg"
+    }
+   ],
+   "page": "https://www.porsche.com/middle-east/_india_/models/cayenne/cayenne-coupe-models/"
+  },
+  "Tata|Harrier EV": {
+   "hero": {
+    "src": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/360-exterior/empowered-oxide/empoweredoxide-0.png",
+    "img": "img/cars/tata-harrier-ev/hero-4a63ba4e48.webp",
+    "how": "alpha"
+   },
+   "colors": [
+    {
+     "src": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/360-exterior/empowered-oxide/empoweredoxide-0.png",
+     "img": "img/cars/tata-harrier-ev/empowered-oxide-with-dual-tone-4a63ba4e48.webp",
+     "how": "alpha",
+     "name": "Empowered Oxide with Dual Tone"
+    },
+    {
+     "src": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/360-exterior/nainital-nocturn/nainitalnocturn-0.png",
+     "img": "img/cars/tata-harrier-ev/nainital-nocturne-with-dual-tone-02d6aff914.webp",
+     "how": "alpha",
+     "name": "Nainital Nocturne with Dual Tone"
+    },
+    {
+     "src": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/360-exterior/prestine-white/prestinewhite-0.png",
+     "img": "img/cars/tata-harrier-ev/pristine-white-with-dual-tone-73b2e27b16.webp",
+     "how": "alpha",
+     "name": "Pristine White with Dual Tone"
+    },
+    {
+     "src": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/360-exterior/pure-grey/puregrey-0.png",
+     "img": "img/cars/tata-harrier-ev/pure-grey-with-dual-tone-30f4273f56.webp",
+     "how": "alpha",
+     "name": "Pure Grey with Dual Tone"
+    },
+    {
+     "src": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/360-exterior/seaweed-green/SeaweedGreen-0.png",
+     "img": "img/cars/tata-harrier-ev/seaweed-green-with-dual-tone-e75348f945.webp",
+     "how": "alpha",
+     "name": "Seaweed Green with Dual Tone"
+    }
+   ],
+   "interior": [
+    {
+     "cap": "Digital cockpit",
+     "img": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/staticfeaturebucket/comfort-section/harrier-ev-digital-cockpit-614x400.jpg"
+    },
+    {
+     "cap": "Front seats",
+     "img": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/overview-assets/interior/fr-seat_614x400.jpg"
+    },
+    {
+     "cap": "Rear seat",
+     "img": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/staticfeaturebucket/comfort-section/rear-seat-with-armrest.jpg"
+    },
+    {
+     "cap": "Panoramic sunroof",
+     "img": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/overview-assets/interior/panoramic-sunroof-shot.jpg"
+    },
+    {
+     "cap": "Steering wheel",
+     "img": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/staticfeaturebucket/design-section/steering-wheel-buttons-614x400.jpg"
+    }
+   ],
+   "page": "https://ev.tata.cars/harrier/ev.html"
+  },
+  "VinFast|VF6": {
+   "hero": {
+    "src": "https://static-cms-prod.vinfastauto.in/statics/2025-09/vf6_intro.webp",
+    "img": "img/cars/vinfast-vf6/hero-1549f9d36d.webp",
+    "how": "ai"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/13.webp"
+    },
+    {
+     "cap": "Front cabin",
+     "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/07.webp"
+    },
+    {
+     "cap": "Touchscreen",
+     "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/10.webp"
+    },
+    {
+     "cap": "Panoramic glass roof",
+     "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/01.webp"
+    },
+    {
+     "cap": "Front seats",
+     "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/14.webp"
+    }
+   ],
+   "page": "https://vinfastauto.in/en/vf6"
+  },
+  "VinFast|VF7": {
+   "hero": {
+    "src": "https://static-cms-prod.vinfastauto.in/statics/2025-09/vf7_intro.webp",
+    "img": "img/cars/vinfast-vf7/hero-19fd359eef.webp",
+    "how": "ai"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/15_0.webp"
+    },
+    {
+     "cap": "Front seats",
+     "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/10_0.webp"
+    },
+    {
+     "cap": "Touchscreen",
+     "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/12_0.webp"
+    },
+    {
+     "cap": "Cabin",
+     "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/19.webp"
+    }
+   ],
+   "page": "https://vinfastauto.in/en/vf7"
+  },
+  "Volkswagen|Tayron": {
+   "hero": {
+    "src": "https://assets.volkswagen.com/is/image/volkswagenag/image-for-all-models-page?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmYzQ5Nw==",
+    "img": "img/cars/volkswagen-tayron/hero-dfbf37fb6e.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Front seats",
+     "img": "https://assets.volkswagen.com/is/image/volkswagenag/seats-main-new?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+     "cap": "Infotainment",
+     "img": "https://assets.volkswagen.com/is/image/volkswagenag/infotainment_system?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+     "cap": "Ambient lighting",
+     "img": "https://assets.volkswagen.com/is/image/volkswagenag/ambient-lighting-3?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+     "cap": "Panoramic sunroof",
+     "img": "https://assets.volkswagen.com/is/image/volkswagenag/sunroof-11?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    },
+    {
+     "cap": "Boot",
+     "img": "https://assets.volkswagen.com/is/image/volkswagenag/bootspace-main?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+    }
+   ],
+   "page": "https://www.volkswagen.co.in/en/models/tayron.html"
+  },
+  "Volkswagen|Tiguan R-Line": {
+   "hero": {
+    "src": "https://assets.volkswagen.com/is/image/volkswagenag/tiguan-r-line-mofa?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD05NjAmYmZjPW9mZiZiZjg0",
+    "img": "img/cars/volkswagen-tiguan-r-line/hero-71eb7aeebc.webp",
+    "how": "alpha"
+   },
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://assets.volkswagen.com/is/image/volkswagenag/tiguan-r-line-interiors-image?Zm10PXBuZy1hbHBoYSZ3aWQ9MTkyMCZiZmM9b2ZmJjdhNzA="
+    },
+    {
+     "cap": "Digital cockpit",
+     "img": "https://assets.volkswagen.com/is/image/volkswagenag/digital-cock-pit-cover-image?Zm10PXdlYnAmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmZDY2Mg=="
+    },
+    {
+     "cap": "Infotainment",
+     "img": "https://assets.volkswagen.com/is/image/volkswagenag/infotainment-system-4?Zm10PXdlYnAmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmZDY2Mg=="
+    },
+    {
+     "cap": "Front seats",
+     "img": "https://assets.volkswagen.com/is/image/volkswagenag/beyond-comfier-tiguan-r-line-cover-image?Zm10PXdlYnAmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmZDY2Mg=="
+    },
+    {
+     "cap": "Panoramic sunroof",
+     "img": "https://assets.volkswagen.com/is/image/volkswagenag/sunroof-panaromic?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEwODAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNmIyMQ=="
+    }
+   ],
+   "page": "https://www.volkswagen.co.in/en/models/tiguan-r-line.html"
+  },
+  "Volvo|EX30": {
+   "hero": null,
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt63cddde4b2a91c3f/6878ff36cfeb1672c7200fda/Interior-bento-dashboard-16x9-EX30.jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920"
+    },
+    {
+     "cap": "Front seats",
+     "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt144d3b573a761850/691727bff88986c693e89144/my26_ex30_int_isolated_seat_side_16x9.jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920"
+    },
+    {
+     "cap": "Rear seats",
+     "img": "https://wizz.volvocars.com/images/2026/416/interior/studio/rear/interior-studio-rear_C1D325518048D683D363DCBAF5F9349069FCB10A.png"
+    }
+   ],
+   "page": "https://www.volvocars.com/in/cars/ex30-electric/"
+  },
+  "Volvo|EC40": {
+   "hero": null,
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt1c44ced7a3a8a04d/691721b22e6c247d10eee774/my26_ec40_int_isolated_dashboard_16x9.jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920"
+    },
+    {
+     "cap": "Front seats",
+     "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/bltc2d1e7cdc438f28b/6a4f7d3019f7cd7c964b3396/EC40-in-16x9.jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920"
+    },
+    {
+     "cap": "Rear seats",
+     "img": "https://wizz.volvocars.com/images/2027/539/interior/studio/rear/interior-studio-rear_62BA391F8107ADCE1A1781DDBE7BDC61924C35F0.png"
+    }
+   ],
+   "page": "https://www.volvocars.com/in/cars/ec40-electric/"
+  },
+  "Volvo|XC60": {
+   "hero": null,
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt23439e64d9c00605/67926b624174ad0a90835054/Bento_1-16x9.jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920"
+    },
+    {
+     "cap": "Front seats",
+     "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt87f38fb36a54be1b/6a844e133d80b8458ca8d286/1753105562_Volvo_XC60_Image_re-size_4x3-06_(3).jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920"
+    },
+    {
+     "cap": "Rear seats",
+     "img": "https://wizz.volvocars.com/images/2027/246/interior/studio/rear/interior-studio-rear_CE831C478C9253DDE7E9883327BB561C6CCF819D.png"
+    }
+   ],
+   "page": "https://www.volvocars.com/in/cars/xc60/"
+  },
+  "Volvo|XC90": {
+   "hero": null,
+   "colors": [],
+   "interior": [
+    {
+     "cap": "Dashboard",
+     "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt41804ccac63b02c7/685b9e702f51360652e0905f/xc90-fuel-interior-bento-row1-item1-16x9_16X9.jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920"
+    },
+    {
+     "cap": "Front seats",
+     "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt88468d163eb13f18/69174515559c1fc49c113be1/my26_xc90_int_isolated_seat_side_16x9.jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920"
+    },
+    {
+     "cap": "Rear seats",
+     "img": "https://wizz.volvocars.com/images/2026/256/interior/studio/rear/interior-studio-rear_D829E36676C68FEA76E604A036BB828CFFC88074.png"
+    }
+   ],
+   "page": "https://www.volvocars.com/in/cars/xc90/"
   }
  }
 }

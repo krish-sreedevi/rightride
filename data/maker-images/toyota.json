@@ -381,7 +381,44 @@
  "Toyota|Urban Cruiser Ebella": {
   "page": "https://www.toyotabharat.com/showroom/urbancruiser-ebella/",
   "hero": "https://static.toyotabharat.com/images/showroom/a32/colors/Opulent-Red-MT-1050x350.webp",
-  "colors": [],
+  "colors": [
+   {
+    "name": "Sportin Red",
+    "img": "https://static.toyotabharat.com/images/showroom/a32/colors/Opulent-Red-MT-1050x350.webp"
+   },
+   {
+    "name": "Cafe White",
+    "img": "https://static.toyotabharat.com/images/showroom/a32/colors/Artic-White-MT-1050x350.webp"
+   },
+   {
+    "name": "Bluish Black",
+    "img": "https://static.toyotabharat.com/images/showroom/a32/colors/Bluish-Black-MT-1050x350.webp"
+   },
+   {
+    "name": "Gaming Grey",
+    "img": "https://static.toyotabharat.com/images/showroom/a32/colors/Grandeur-Grey-MT-1050x350.webp"
+   },
+   {
+    "name": "Enticing Silver",
+    "img": "https://static.toyotabharat.com/images/showroom/a32/colors/Splendid-Silver-MT-1050x350.webp"
+   },
+   {
+    "name": "Cafe White Dual Tone",
+    "img": "https://static.toyotabharat.com/images/showroom/a32/colors/Artic-White%20DT-1050x350.webp"
+   },
+   {
+    "name": "Sportin Red Dual Tone",
+    "img": "https://static.toyotabharat.com/images/showroom/a32/colors/Opulent-Red-DT-1050x350.webp"
+   },
+   {
+    "name": "Land Breeze Green Dual Tone",
+    "img": "https://static.toyotabharat.com/images/showroom/a32/colors/Landbreeze-Green-DT-1050x350.webp"
+   },
+   {
+    "name": "Enticing Silver Dual Tone",
+    "img": "https://static.toyotabharat.com/images/showroom/a32/colors/Splendid-Silver-DT-1050x350.webp"
+   }
+  ],
   "interior": [
    {
     "cap": "Dashboard",
@@ -398,6 +435,10 @@
    {
     "cap": "Boot space",
     "img": "https://static.toyotabharat.com/images/showroom/a32/interior/Interior3_1400x790.webp"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://static.toyotabharat.com/images/showroom/a32/interior/Interior1_1400x790.webp"
    }
   ]
  },

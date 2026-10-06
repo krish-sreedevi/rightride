@@ -1,0 +1,61 @@
+{
+ "MINI|Cooper": {
+  "page": "https://www.mini.in/en_IN/home/range/mini-cooper-3-door.html",
+  "hero": "https://prod.cosy.bmw.cloud/miniweb/cosySec?COSY-EU-100-7331rjFhnOqIbqJKLgL3hpvYLfCny2oWYgpnQ97lX80UrOohYxVAfPXYuNWCB9%25UbT79Kix2K7bYCjKq%25SbfFSrNG1JyXq2FgXAg2dvsv63ipzpvU3NHP0qMyNF9OALUoxPkIogOybLW0nvLUgChCWB5GybUEqE4I89ChbNmNLDPoEqhk7wqgMLNmqn1%25VYDyk7m5VutoYCn178z3lTtE5V1PaXzOfN8zVMRpc0SkPazDxiYAdnMRaYWHoOQ5DxRtes2gZ8YWxfj0SzcPteWS6AdBKMfjedwOjRBDS6jQ%25g6r2Ydw6ZuUhiptQ%25wc3bvMifZu%25KXhEoHSc3uBrqVtJdKX324uFlTQBrXpF3gflZ24riIXU3scpF4HvrbH0KiIFJG4h%25ABHvIT9Fq8O2JGvloIZ0gpT9GsLvkmUilo90y7dBbHsLoAC1ZqhJ0yLOEVzVqTACygNzaUmlOECUkaRJ7sgNEbnRZi10UkNh5xiCVAbnkq8WwuzOh5nmPX7Jagq857MrFTRUmP81D5PAxb7MPVY8tOWh1DMztP50eqVYDafusUjmztYRS3nx672tr93dYgMyIE5cPrWyGp6xEaS%25F6ds57Qqdv6OD3Zekxh1lNUEMAKWzOSs5m%2565ezICP4WsxnTNkiQhtE6lnuQv7GqXA2HkCrmoShtDoJx2YI1b4gL3WCzOSAoUnpkJE%25uFbYCja1%25P4fFSr7Vk",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Steering wheel and display",
+    "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/cooper/3-door/bodytype-hub/hot-spots/mini-F66-steering-wheel.webp"
+   },
+   {
+    "cap": "Circular OLED display",
+    "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/cooper/3-door/bodytype-hub/mini-F66-gallery-display.webp"
+   },
+   {
+    "cap": "Seat detail",
+    "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/cooper/3-door/bodytype-hub/hot-spots/mini-F66-seats.webp"
+   }
+  ]
+ },
+ "MINI|Cooper Convertible": {
+  "page": "https://www.mini.in/en_IN/home/range/mini-cooper-convertible.html",
+  "hero": "https://prod.cosy.bmw.cloud/miniweb/cosySec?COSY-EU-100-7331rjFhnOqIbqcPI6L3hpvYLfCny2oWYgpnQ97lX80UrOohYHVAfPXYuNnCB9%25UnpqyBLayV3WJYw1p8ac1QT8RcmZWkyhI%25uzWQdjce0r3aeZQ6KAZfXRjcZwBO24rx6Kc%252gFa4WwBKupUP8Fe%252B3ibM3Ijup2XHhifv63iprJkyYGwXHi4TnFt9%25rJHFl5RAou4TJIs8IvL3FlTv0PwmyXIslGAtsHCrv0s9Of0hE4GA0ogSjqNF9OALUdZnkIogOybQVrnvLUgChZmN5GybUEqcpI89ChbNmU7MPoEqhk7bSvMLNmqn1hdnDyk7m5VqQOYCn178zmZetE5V1Pa7oDfN8zVMRcGdSkPazDxKBKdnMRaYWB2tQ5DxRte2pkZ8YWxfjpiOcPteWS6i9NKMfjedwS9HBDS6jQ%25QtS2Ydw6ZuTneptQ%25wc3lOUifG%250hlXw8j7gVxFe0B7b9iKVZ3JOiXNxfrYXUi56l42aK2lbJkVDOdqQ53NxtJix2Qg1eABNKRCzFWrD%25ViERTrUfbYsnGLa10tq3D%25ZtyKGwgSMA8mFB1Q53nqPR9ayVJTOMw1pZSJeAuO30fda",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard display",
+    "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/cooper/convertible/bodytype-hub/mini-F67-gallery-display.webp.asset.1738068425416.webp"
+   }
+  ]
+ },
+ "MINI|Countryman": {
+  "page": "https://www.mini.in/en_IN/home/range/mini-countryman-c.html",
+  "hero": "https://prod.cosy.bmw.cloud/miniweb/cosySec?COSY-EU-100-7331rjFhnOqIbqcPLLL3hpvYLfCny2oWYgpnQ97lX80UrOQhYCVAfPXYuNWCB9%25UbT79Kix2K7bYCjKq%25SbfFSrNG1JyXq2FgXAV2IguOGcSwPCE4GA0og9RnNF9OALULRckIogOybyX4nvLUgCheU05GybUEqjPI89ChbNm6qTPoEqhk7ZnHMLNmqn1cnDDyk7m5VpJIYCn178ziPftE5V1PaHVefN8zVMRJK7SkPazDxTetdnMRaYWzeZQ5DxRteapJZ8YWxfjRNacPteWS6xXiKMfjedwHE2BDS6jQ%25JTZ2Ydw6ZuTy5ptQ%25wc3ZylifZu%25KXKcNHSc3uBrE4TJdKX324NzVTQBrXpFhOalZ24riIqD8scpF4HvVUx0KiIFJGzTXABHvIT9avrO2JGvloRkcgpT9GsLxCmUilo90yWw2bHsLoAC9V2hJ0yLOEoztqTACygNLpbmlOECUkaKH7sgNEbnRxR10UkNh5xWlVAbnkq8WwuzOSnjXWPkJEF%25vLYCj7F3dzmvh8RwzP2LOM0PuzHNWD19msgBGTvEit7bH82LARzL1b%25IC672moKG9QMsnvzBoxMuO30eiS8lIjAr8snNrcmSk%25gl6J4W7IbH8irTod9cvRxwlkIVhgRC65w8jOU9",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/countryman/ice/bodytype-hub/mini-U25-gallery-interior.webp.asset.1724746199757.webp"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/countryman/ice/bodytype-hub/mini-U25-gallery-seats.webp"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/countryman/ice/bodytype-hub/mini-U25-gallery-welcome.webp"
+   },
+   {
+    "cap": "Centre console (Electric)",
+    "img": "https://www.mini.in/content/dam/MINI/common/Range/new-generation/countryman/bev/bodytype-hub/mini-U25-BEV-gallery-dashboard.webp.asset.1739348683590.webp"
+   }
+  ]
+ },
+ "MINI|John Cooper Works Countryman": {
+  "page": "https://www.mini.in/en_IN/home/range/john-cooper-works.html",
+  "hero": "https://prod.cosy.bmw.cloud/miniweb/cosySec?COSY-EU-100-7331rjFhnOqIbqJsLWL3hpvYLfCny2oWYgpnQ97lX80UrO0ZYCVAfPXYuNWCB9%25UbT79Kix2K7bYCjKq%25SbfFSrNG1JyXq2FgXAV2IguOGcSwPCE4GA0ogo9kNF9OALUxbnkIogOybWUcnvLUgChSD25GybUEqdNp89ChbNmQfrPoEqhk7ZSDMLNmqn12SJDyk7m5Vp8bYCn178zi1htE5V1PaHVefN8zVMRJldSkPazDxTB1dnMRaYWljfQ5DxRtesgkZ8YWxfjR6KcPteWS6xHnKMfjedwWJdBDS6jQ%25eT02Ydw6ZujlaptQ%25wc36sIifZu%25KXwM2HSc3uBr05YJdKX324APlTQBrXpFOgOlZ24riIg5tscpF4Hvii10KiIFJGeO2ABNIqab9FSrW1juyXqlWzkATjHGg7A9DuBoc9VAf4bLswTZ2M6djrtClifGDuKgAusi1eXmlDT%25P6wnoZIjAM%25UoVBzchtN56eqKRGZI4R8TNF12QmSxbleifGtRd%25kw8jgU7QFe0H2gXmv7GqBpw",
+  "colors": [],
+  "interior": []
+ }
+}

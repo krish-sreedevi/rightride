@@ -1,0 +1,96 @@
+{
+ "Porsche|911": {
+  "page": "https://www.porsche.com/middle-east/_india_/models/911/",
+  "hero": "https://images.porsche.com/f/285489813253582/5000x1485/a203ff742b/model-9921b2-side-shot_c0332ade044b4b01b7e09d445787a5f5.png/m/2400x0/filters:format(png)",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Cockpit and infotainment",
+    "img": "https://a.storyblok.com/f/322327/2100x2651/4de2ff2a24/cz26w12od0004-eu-911-carrera-gts-infotainment.jpg/m/1920x0"
+   }
+  ]
+ },
+ "Porsche|Taycan": {
+  "page": "https://www.porsche.com/middle-east/_india_/models/taycan/",
+  "hero": "https://images.porsche.com/f/285489813253582/5000x1390/cbb6569be9/model-y1adj1-side-shot_e1c0e39dcd7444bd81e1ffbac43285a0.png/m/2400x0/filters:format(png)",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Cabin (Black Edition)",
+    "img": "https://a.storyblok.com/f/322327/3840x2160/364ca5f024/ta26q3cid0011-taycan-black-edition-interior.jpg/m/1920x0"
+   },
+   {
+    "cap": "Cockpit",
+    "img": "https://a.storyblok.com/f/322327/3400x2600/a049b07dc2/ta27q32id0006-eu-taycan-black-edition-cockpit.jpg/m/1920x0"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://a.storyblok.com/f/322327/1300x1300/807e53d8d0/ta26q3cid0011-taycan-black-edition-seats.jpg"
+   }
+  ]
+ },
+ "Porsche|Panamera": {
+  "page": "https://www.porsche.com/middle-east/_india_/models/panamera/",
+  "hero": "https://images.porsche.com/f/285489813253582/5000x1393/f3c0558acf/model-yaaaa1-side-shot_75b78d18f2904583977e4ec4cefda7e3.png/m/2400x0/filters:format(png)",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Cockpit",
+    "img": "https://a.storyblok.com/f/322327/2100x2651/9ed543ab65/pa27p5kod0008-eu-panamera-turbo-e-hybrid-infotainment.jpg/m/1920x0"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://a.storyblok.com/f/322327/3896x2651/327f6cfafe/pa27p5kod0007-panamera-fond.jpg/m/1920x0"
+   }
+  ]
+ },
+ "Porsche|Macan": {
+  "page": "https://www.porsche.com/middle-east/_india_/models/macan/",
+  "hero": "https://images.porsche.com/f/285489813253582/5000x1759/12429472bf/model-95bau1-2026-side-shot_89b9eaf02a9540d494e3398b12d105e2.png/m/2400x0/filters:format(png)",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Cockpit (Macan Electric)",
+    "img": "https://a.storyblok.com/f/322327/1300x1300/64283a96b5/ma24t4cod0004-macan-steering-wheel.jpg"
+   },
+   {
+    "cap": "Cabin (Macan Electric)",
+    "img": "https://a.storyblok.com/f/322327/3165x1779/76e449da59/ma26t4cix0004-macan-4-with-open-doors.jpg/m/1920x0"
+   },
+   {
+    "cap": "Advanced Cockpit (Macan Turbo Electric)",
+    "img": "https://a.storyblok.com/f/322327/1700x1300/da0810405e/ma26t4eod0003-experience.png"
+   }
+  ]
+ },
+ "Porsche|Cayenne": {
+  "page": "https://www.porsche.com/middle-east/_india_/models/cayenne/",
+  "hero": "https://images.porsche.com/f/285489813253582/3274x1618/8d46f839ef/model-9yaai1-degree-30-shot.png/m/2400x0/filters:format(png)",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Cockpit (GTS)",
+    "img": "https://a.storyblok.com/f/322327/3896x2651/aa1689587c/cy27j5fod0003-eu-cayenne-gts-interior.jpg/m/1920x0"
+   },
+   {
+    "cap": "Interior (Cayenne Electric)",
+    "img": "https://a.storyblok.com/f/322327/3840x1648/baafc8b34c/cayenne-turbo-electric-interior.jpg/m/1920x0"
+   },
+   {
+    "cap": "Cockpit (Cayenne Electric)",
+    "img": "https://a.storyblok.com/f/322327/3840x1648/14e0324c9e/cayenne-turbo-electric-mood-modes.jpg/m/1920x0"
+   }
+  ]
+ },
+ "Porsche|Cayenne Coupé": {
+  "page": "https://www.porsche.com/middle-east/_india_/models/cayenne/cayenne-coupe-models/",
+  "hero": "https://images.porsche.com/f/285489813253582/3274x1618/f372535424/model-9ybai1-degree-30-shot.png/m/2400x0/filters:format(png)",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Head-up display",
+    "img": "https://a.storyblok.com/f/322327/820x1300/095686248f/034-card-slider_cy24j5bod0002_me_rgb_desktop.jpg"
+   }
+  ]
+ }
+}

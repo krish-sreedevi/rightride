@@ -1,0 +1,102 @@
+{
+ "updated": "2026-10-06",
+ "brands": {
+  "Maruti Suzuki": {
+   "url": "https://www.marutisuzuki.com/arena/book-a-test-drive",
+   "nexa": "https://www.nexaexperience.com/book-a-test-drive"
+  },
+  "Hyundai": {
+   "url": "https://www.hyundai.com/in/en/click-to-buy/request-a-test-drive",
+   "model": "https://www.hyundai.com/in/en/click-to-buy/{model}-request-a-test-drive",
+   "modelSlug": "lower-hyphen"
+  },
+  "Tata": {
+   "url": "https://tata.cars/book-test-drive/landing.html",
+   "ev": "https://ev.tata.cars/book-test-drive/standard.html"
+  },
+  "Mahindra": {
+   "url": "https://auto.mahindra.com/test-drive",
+   "ev": "https://www.mahindraelectricsuv.com/test-drive"
+  },
+  "Kia": {
+   "url": "https://www.kia.com/in/buy/test-drive.html"
+  },
+  "Toyota": {
+   "url": "https://www.toyotabharat.com/testdrive/"
+  },
+  "Honda": {
+   "url": "https://www.hondacarindia.com/shop/request-test-drive"
+  },
+  "MG": {
+   "url": "https://www.mgmotor.co.in/tools/test-drive"
+  },
+  "Skoda": {
+   "url": "https://www.skoda-auto.co.in/shopping/kushaq-book-a-testdrive"
+  },
+  "Volkswagen": {
+   "url": "https://www.volkswagen.co.in/app/site/testdrive-scheduler/"
+  },
+  "Renault": {
+   "url": "https://www.renault.co.in/contact/schedule-test-drive.html"
+  },
+  "Nissan": {
+   "url": "https://www.one.nissan.in/booktestdrive"
+  },
+  "Jeep": {
+   "url": "https://www.jeep-india.com/book-a-test-drive.html"
+  },
+  "Mercedes-Benz": {
+   "url": "https://www.mercedes-benz.co.in/passengercars/mercedes-benz-cars/online-testdrive.html"
+  },
+  "BMW": {
+   "url": "https://www.bmw.in/en/topics/owners/tools/Test-Drive.html"
+  },
+  "MINI": {
+   "url": "https://www.mini.in/en_IN/home.html",
+   "kind": "enquiry"
+  },
+  "Audi": {
+   "url": "https://www.audi.in/en/test-drive/"
+  },
+  "Land Rover": {
+   "url": "https://www.landrover.in/book-a-test-drive/index.html"
+  },
+  "Jaguar": {
+   "url": "https://www.jaguar.com/en-in/jdx/index.html",
+   "kind": "enquiry"
+  },
+  "Citroën": {
+   "url": "https://www.citroen.in/tools/book-test-drive.html",
+   "model": "https://www.citroen.in/tools/book-test-drive-{model}.html",
+   "modelSlug": "lower-hyphen"
+  },
+  "BYD": {
+   "url": "https://bydautoindia.com/book-a-test-drive"
+  },
+  "Volvo": {
+   "url": "https://www.volvocars.com/in/",
+   "kind": "enquiry"
+  },
+  "Porsche": {
+   "url": "https://www.porsche.com/india/",
+   "kind": "enquiry"
+  },
+  "Lexus": {
+   "url": "https://www.lexusindia.co.in/contact-us/book-a-test-drive/"
+  },
+  "Isuzu": {
+   "url": "https://www.isuzu.in/scheduletestdrive"
+  },
+  "Force Motors": {
+   "url": "https://www.forcemotors.com/contact/",
+   "kind": "enquiry"
+  },
+  "VinFast": {
+   "url": "https://shop.vinfastauto.in/reservation",
+   "kind": "enquiry"
+  },
+  "Tesla": {
+   "url": "https://www.tesla.com/en_IN/drive"
+  }
+ }
+}

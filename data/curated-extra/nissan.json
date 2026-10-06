@@ -1,0 +1,64 @@
+{
+ "brand": "Nissan",
+ "curated": true,
+ "updated": "2026-10-06",
+ "source": "https://www.nissan.in/vehicles/new/x-trail.html (model page and launch brochure; nissan.in shows no price, so price from cardekho.com)",
+ "models": [
+  {
+   "model": "X-Trail",
+   "body": "SUV",
+   "url": "https://www.nissan.in/vehicles/new/x-trail.html",
+   "variants": [
+    {
+     "name": "1.5 VC-Turbo Mild Hybrid CVT",
+     "fuel": "Petrol",
+     "transmission": "CVT",
+     "drive": "",
+     "seats": 7,
+     "price": 4819862,
+     "engine": "1498 cc",
+     "mileage": "13.7 km/l",
+     "airbags": 7,
+     "priceSource": "https://www.cardekho.com/nissan-x-trail/car-price-in-new-delhi.htm",
+     "featureFlags": {
+      "airbags6": true,
+      "abs": true,
+      "esc": true,
+      "hillAssist": true,
+      "tpms": true,
+      "rearCamera": true,
+      "rearSensors": true,
+      "frontSensors": true,
+      "rearDisc": true,
+      "touchscreen": true,
+      "androidAuto": true,
+      "digitalCluster": true,
+      "wirelessCharger": true,
+      "autoClimate": true,
+      "dualZone": true,
+      "cruise": true,
+      "keyless": true,
+      "pushStart": true,
+      "autoHeadlamps": true,
+      "rainWipers": true,
+      "autoIRVM": true,
+      "foldingORVM": true,
+      "epb": true,
+      "paddleShifters": true,
+      "driveModes": true,
+      "rearArmrest": true,
+      "tiltTelescopic": true,
+      "sunroof": true,
+      "panoramic": true,
+      "camera360": true,
+      "ambient": true,
+      "leather": false,
+      "ledHeadlamps": true,
+      "ledDRL": true,
+      "roofRails": true
+     }
+    }
+   ]
+  }
+ ]
+}

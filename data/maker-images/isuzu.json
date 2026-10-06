@@ -1,0 +1,150 @@
+{
+ "Isuzu|D-Max V-Cross": {
+  "page": "https://www.isuzu.in/vcross.php",
+  "hero": "https://www.isuzu.in/images/All%20models/Vcross.webp",
+  "colors": [
+   {
+    "name": "Silky White Pearl",
+    "img": "https://www.isuzu.in/images/vcross/Features/colors/Silky%20Pearl%20White.jpg"
+   },
+   {
+    "name": "Black Mica",
+    "img": "https://www.isuzu.in/images/vcross/Features/colors/Black%20Mica.jpg"
+   },
+   {
+    "name": "Red Spinel Mica",
+    "img": "https://www.isuzu.in/images/vcross/Features/colors/Red%20Spinel%20Mica.jpg"
+   },
+   {
+    "name": "Nautilus Blue",
+    "img": "https://www.isuzu.in/images/vcross/Features/colors/Nautilus%20Mica.jpg"
+   },
+   {
+    "name": "Galena Grey",
+    "img": "https://www.isuzu.in/images/vcross/Features/colors/Galena%20Gray.jpg"
+   },
+   {
+    "name": "Silver Metallic",
+    "img": "https://www.isuzu.in/images/vcross/Features/colors/Silver%20Metallic.jpg"
+   },
+   {
+    "name": "Splash White",
+    "img": "https://www.isuzu.in/images/vcross/Features/colors/Splash%20White.jpg"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.isuzu.in/images/vcross/interior/VCross_Red_Interior_1e.jpg"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://www.isuzu.in/images/vcross/interior/V-CROSS_415x422_03.jpg"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://www.isuzu.in/images/vcross/interior/Improved-Rear-Seat.jpg"
+   },
+   {
+    "cap": "Touchscreen",
+    "img": "https://www.isuzu.in/images/vcross/interior/Apple-play-and-anroid-auto.jpg"
+   }
+  ]
+ },
+ "Isuzu|Hi-Lander": {
+  "page": "https://www.isuzu.in/hilander.php",
+  "hero": "https://www.isuzu.in/images/All%20models/hi-lander.webp",
+  "colors": [
+   {
+    "name": "Silver Metallic",
+    "img": "https://www.isuzu.in/images/hilander/Features/colors/Hilandersilver.png"
+   },
+   {
+    "name": "Nautilus Blue",
+    "img": "https://www.isuzu.in/images/hilander/Features/colors/Hilanderblue.png"
+   },
+   {
+    "name": "Red Spinel Mica",
+    "img": "https://www.isuzu.in/images/hilander/Features/colors/Hilander-redmica.png"
+   },
+   {
+    "name": "Galena Grey",
+    "img": "https://www.isuzu.in/images/hilander/Features/colors/HilanderGret.png"
+   },
+   {
+    "name": "Black Mica",
+    "img": "https://www.isuzu.in/images/hilander/Features/colors/Hilanderblackmica.png"
+   },
+   {
+    "name": "Splash White",
+    "img": "https://www.isuzu.in/images/hilander/Features/colors/Hilanderwhite.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.isuzu.in/images/hilander/Interior/Interior.jpeg"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://www.isuzu.in/images/hilander/Interior/Web-banner--Hilander-2.jpg"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://www.isuzu.in/images/hilander/Interior/Web-banner--Hilander-3.jpg"
+   },
+   {
+    "cap": "Driver seat",
+    "img": "https://www.isuzu.in/images/hilander/Interior/Web-banner--Hilander-5.jpg"
+   }
+  ]
+ },
+ "Isuzu|MU-X": {
+  "page": "https://www.isuzu.in/mux.php",
+  "hero": "https://www.isuzu.in/images/All%20models/mux.webp",
+  "colors": [
+   {
+    "name": "Nautilus Blue",
+    "img": "https://www.isuzu.in/images/mux/colors/mux1.png"
+   },
+   {
+    "name": "Red Spinel Mica",
+    "img": "https://www.isuzu.in/images/mux/colors/mux2.png"
+   },
+   {
+    "name": "Silky White Pearl",
+    "img": "https://www.isuzu.in/images/mux/colors/mux3.png"
+   },
+   {
+    "name": "Galena Grey",
+    "img": "https://www.isuzu.in/images/mux/colors/mux4.png"
+   },
+   {
+    "name": "Black Mica",
+    "img": "https://www.isuzu.in/images/mux/colors/mux5.png"
+   },
+   {
+    "name": "Silver Metallic",
+    "img": "https://www.isuzu.in/images/mux/colors/mux6.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.isuzu.in/images/mux/Interior/mu-X_1296x729.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.isuzu.in/images/mux/Interior/mu-X_415x422_02.jpg"
+   },
+   {
+    "cap": "Rear armrest",
+    "img": "https://www.isuzu.in/images/mux/Interior/mu-X_415x422_04.jpg"
+   },
+   {
+    "cap": "Roof AC vents",
+    "img": "https://www.isuzu.in/images/mux/Interior/mu-X_415x422_05.jpg"
+   }
+  ]
+ }
+}

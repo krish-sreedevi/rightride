@@ -1,0 +1,76 @@
+{
+ "brand": "Force Motors",
+ "curated": true,
+ "updated": "2026-10-06",
+ "source": "https://www.forcemotors.com/prices/ (official ex-showroom price list, 'Special Vehicles' section); specs from https://forcegurkha.co.in/explore/",
+ "models": [
+  {
+   "model": "Gurkha 3-Door",
+   "body": "SUV",
+   "url": "https://forcegurkha.co.in/",
+   "variants": [
+    {
+     "name": "3-Door 4x4 MT",
+     "fuel": "Diesel",
+     "transmission": "5-speed Manual",
+     "drive": "4x4",
+     "seats": 4,
+     "price": 1625013,
+     "engine": "2596 cc",
+     "airbags": 2,
+     "priceSource": "https://www.forcemotors.com/prices/",
+     "featureFlags": {
+      "abs": true,
+      "airbags6": false,
+      "tpms": true,
+      "rearSensors": true,
+      "touchscreen": true,
+      "androidAuto": true,
+      "ledHeadlamps": true,
+      "ledDRL": true,
+      "fogLamps": true,
+      "tiltTelescopic": true,
+      "captainSeats": true,
+      "sunroof": false,
+      "adas": false,
+      "esc": false
+     }
+    }
+   ]
+  },
+  {
+   "model": "Gurkha 5-Door",
+   "body": "SUV",
+   "url": "https://forcegurkha.co.in/",
+   "variants": [
+    {
+     "name": "5-Door 4x4 MT",
+     "fuel": "Diesel",
+     "transmission": "5-speed Manual",
+     "drive": "4x4",
+     "seats": 7,
+     "price": 1758013,
+     "engine": "2596 cc",
+     "airbags": 2,
+     "priceSource": "https://www.forcemotors.com/prices/",
+     "featureFlags": {
+      "abs": true,
+      "airbags6": false,
+      "tpms": true,
+      "rearSensors": true,
+      "touchscreen": true,
+      "androidAuto": true,
+      "ledHeadlamps": true,
+      "ledDRL": true,
+      "fogLamps": true,
+      "tiltTelescopic": true,
+      "captainSeats": true,
+      "sunroof": false,
+      "adas": false,
+      "esc": false
+     }
+    }
+   ]
+  }
+ ]
+}

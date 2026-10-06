@@ -1,0 +1,189 @@
+{
+ "brand": "Lexus",
+ "curated": true,
+ "updated": "2026-10-06",
+ "source": "https://www.lexusindia.co.in/price-and-model-tools/price-list/ (official price list, starting ex-showroom per variant)",
+ "models": [
+  {
+   "model": "ES",
+   "body": "Sedan",
+   "url": "https://www.lexusindia.co.in/models/es-350h/",
+   "variants": [
+    {
+     "name": "ES 350h Exquisite",
+     "fuel": "Hybrid",
+     "transmission": "e-CVT",
+     "drive": "",
+     "seats": 5,
+     "price": 6610000,
+     "engine": "2.5 L",
+     "priceSource": "https://www.lexusindia.co.in/price-and-model-tools/price-list/"
+    },
+    {
+     "name": "ES 350h Luxury",
+     "fuel": "Hybrid",
+     "transmission": "e-CVT",
+     "drive": "",
+     "seats": 5,
+     "price": 7180000,
+     "engine": "2.5 L",
+     "priceSource": "https://www.lexusindia.co.in/price-and-model-tools/price-list/"
+    },
+    {
+     "name": "ES 500e Luxury",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 9120000,
+     "airbags": 8,
+     "specs": {
+      "Range": "580 km",
+      "Battery": "74.68 kWh",
+      "Power": "252 kW"
+     },
+     "priceSource": "https://www.lexusindia.co.in/price-and-model-tools/price-list/"
+    }
+   ]
+  },
+  {
+   "model": "NX",
+   "body": "SUV",
+   "url": "https://www.lexusindia.co.in/models/nx-350h/",
+   "variants": [
+    {
+     "name": "NX 350h Exquisite",
+     "fuel": "Hybrid",
+     "transmission": "e-CVT",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 6793000,
+     "engine": "2.5 L",
+     "priceSource": "https://www.lexusindia.co.in/price-and-model-tools/price-list/"
+    },
+    {
+     "name": "NX 350h Overtrail",
+     "fuel": "Hybrid",
+     "transmission": "e-CVT",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 7179000,
+     "engine": "2.5 L",
+     "priceSource": "https://www.lexusindia.co.in/price-and-model-tools/price-list/"
+    },
+    {
+     "name": "NX 350h Luxury",
+     "fuel": "Hybrid",
+     "transmission": "e-CVT",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 7270000,
+     "engine": "2.5 L",
+     "priceSource": "https://www.lexusindia.co.in/price-and-model-tools/price-list/"
+    },
+    {
+     "name": "NX 350h F SPORT",
+     "fuel": "Hybrid",
+     "transmission": "e-CVT",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 7488000,
+     "engine": "2.5 L",
+     "priceSource": "https://www.lexusindia.co.in/price-and-model-tools/price-list/"
+    }
+   ]
+  },
+  {
+   "model": "RX",
+   "body": "SUV",
+   "url": "https://www.lexusindia.co.in/models/rx-350h/",
+   "variants": [
+    {
+     "name": "RX 350h Exquisite",
+     "fuel": "Hybrid",
+     "transmission": "e-CVT",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 9044000,
+     "engine": "2487 cc",
+     "priceSource": "https://www.lexusindia.co.in/price-and-model-tools/price-list/"
+    },
+    {
+     "name": "RX 350h Exquisite (Mark Levinson audio)",
+     "fuel": "Hybrid",
+     "transmission": "e-CVT",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 9387000,
+     "engine": "2487 cc",
+     "featureFlags": {
+      "premiumAudio": true
+     },
+     "priceSource": "https://www.lexusindia.co.in/price-and-model-tools/price-list/"
+    },
+    {
+     "name": "RX 500h F SPORT+",
+     "fuel": "Hybrid",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 11055000,
+     "engine": "2393 cc",
+     "priceSource": "https://www.lexusindia.co.in/price-and-model-tools/price-list/"
+    }
+   ]
+  },
+  {
+   "model": "LX",
+   "body": "SUV",
+   "url": "https://www.lexusindia.co.in/models/lx-500d/",
+   "variants": [
+    {
+     "name": "LX 500d Urban",
+     "fuel": "Diesel",
+     "transmission": "10-speed AT",
+     "drive": "4x4",
+     "price": 29125000,
+     "engine": "3.3 L V6 twin-turbo",
+     "priceSource": "https://www.lexusindia.co.in/price-and-model-tools/price-list/"
+    },
+    {
+     "name": "LX 500d Overtrail",
+     "fuel": "Diesel",
+     "transmission": "10-speed AT",
+     "drive": "4x4",
+     "price": 30291000,
+     "engine": "3.3 L V6 twin-turbo",
+     "priceSource": "https://www.lexusindia.co.in/price-and-model-tools/price-list/"
+    }
+   ]
+  },
+  {
+   "model": "LM",
+   "body": "MUV / MPV",
+   "url": "https://www.lexusindia.co.in/models/lm-350h/",
+   "variants": [
+    {
+     "name": "LM 350h 7-Seater VIP",
+     "fuel": "Hybrid",
+     "transmission": "e-CVT",
+     "drive": "AWD",
+     "seats": 7,
+     "price": 22738000,
+     "engine": "2.5 L",
+     "priceSource": "https://www.lexusindia.co.in/price-and-model-tools/price-list/"
+    },
+    {
+     "name": "LM 350h 4-Seater Ultra Luxury",
+     "fuel": "Hybrid",
+     "transmission": "e-CVT",
+     "drive": "AWD",
+     "seats": 4,
+     "price": 28424000,
+     "engine": "2.5 L",
+     "priceSource": "https://www.lexusindia.co.in/price-and-model-tools/price-list/"
+    }
+   ]
+  }
+ ]
+}

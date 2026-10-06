@@ -1,0 +1,97 @@
+{
+  "Citroën|C3X": {
+    "page": "https://www.citroen.in/models/c3.html",
+    "hero": "https://citroenstorageprod.blob.core.windows.net/citroen-assets/models/6109b82e-abb8-4454-b1c4-98a51e7601cd.png",
+    "colors": [],
+    "interior": [
+      {
+        "cap": "Dashboard",
+        "img": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/interior/1.jpg"
+      },
+      {
+        "cap": "Climate controls",
+        "img": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/comfort/2.jpg"
+      },
+      {
+        "cap": "Steering wheel controls",
+        "img": "https://www.citroen.in/content/dam/citroen/india/models/c3/gallery/comfort/3.jpg"
+      }
+    ]
+  },
+  "Citroën|BasaltX": {
+    "page": "https://www.citroen.in/models/basalt.html",
+    "hero": "https://citroenstorageprod.blob.core.windows.net/citroen-assets/models/eb549d46-0fc9-4395-885a-01cc3b24ef13.png",
+    "colors": [],
+    "interior": [
+      {
+        "cap": "Dashboard",
+        "img": "https://www.citroen.in/content/dam/citroen/india/models/basalt/gallery/interior/1.jpg"
+      },
+      {
+        "cap": "Door trim",
+        "img": "https://www.citroen.in/content/dam/citroen/india/models/basalt/gallery/interior/2.jpg"
+      },
+      {
+        "cap": "Dashboard trim",
+        "img": "https://www.citroen.in/content/dam/citroen/india/models/basalt/gallery/interior/3.jpg"
+      },
+      {
+        "cap": "Rear seats",
+        "img": "https://www.citroen.in/content/dam/citroen/india/models/basalt/gallery/interior/4.jpg"
+      }
+    ]
+  },
+  "Citroën|AircrossX": {
+    "page": "https://www.citroen.in/models/aircross.html",
+    "hero": "https://citroenstorageprod.blob.core.windows.net/citroen-assets/models/14d65713-fd87-440b-ad35-78ed6ccc80d4.png",
+    "colors": [],
+    "interior": [
+      {
+        "cap": "Dashboard",
+        "img": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/interior/1.jpg"
+      },
+      {
+        "cap": "Third-row seats",
+        "img": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/interior/2.jpg"
+      },
+      {
+        "cap": "Climate controls",
+        "img": "https://www.citroen.in/content/dam/citroen/india/models/aircross-models-page/gallery/comfort/1.jpg"
+      }
+    ]
+  },
+  "Citroën|ë-C3X": {
+    "page": "https://www.citroen.in/models/new-e-c3.html",
+    "hero": "https://citroenstorageprod.blob.core.windows.net/citroen-assets/models/00d2259a-b2cc-4b91-a637-927973650f99.png",
+    "colors": [],
+    "interior": [
+      {
+        "cap": "Dashboard",
+        "img": "https://www.citroen.in/content/dam/citroen/india/models/2026/e-c3x/comfort/Premium_Cabin_Experience.png"
+      },
+      {
+        "cap": "Front seats",
+        "img": "https://www.citroen.in/content/dam/citroen/india/models/2026/e-c3x/comfort/Leatherette_Luxury.png"
+      },
+      {
+        "cap": "Centre console",
+        "img": "https://www.citroen.in/content/dam/citroen/india/models/ec3/gallery/comfort/Citroen_EC3_CenterConsole.jpg"
+      }
+    ]
+  },
+  "Citroën|C5 Aircross": {
+    "page": "https://www.citroen.in/models/c5-aircross.html",
+    "hero": "https://citroenstorageprod.blob.core.windows.net/citroen-assets/models/35de8b22-8b69-4e83-be8c-e11ef3eb0990.png",
+    "colors": [],
+    "interior": [
+      {
+        "cap": "Touchscreen",
+        "img": "https://www.citroen.in/content/dam/citroen/india/models/c5/gallery/technology/1.jpg"
+      },
+      {
+        "cap": "Rear seats",
+        "img": "https://www.citroen.in/content/dam/citroen/india/models/c5/gallery/comfort/1.jpg"
+      }
+    ]
+  }
+}

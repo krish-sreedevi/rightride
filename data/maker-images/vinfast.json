@@ -1,0 +1,52 @@
+{
+  "VinFast|VF6": {
+    "page": "https://vinfastauto.in/en/vf6",
+    "hero": "https://static-cms-prod.vinfastauto.in/statics/2025-09/vf6_intro.webp",
+    "colors": [],
+    "interior": [
+      {
+        "cap": "Dashboard",
+        "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/13.webp"
+      },
+      {
+        "cap": "Front cabin",
+        "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/07.webp"
+      },
+      {
+        "cap": "Touchscreen",
+        "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/10.webp"
+      },
+      {
+        "cap": "Panoramic glass roof",
+        "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/01.webp"
+      },
+      {
+        "cap": "Front seats",
+        "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/14.webp"
+      }
+    ]
+  },
+  "VinFast|VF7": {
+    "page": "https://vinfastauto.in/en/vf7",
+    "hero": "https://static-cms-prod.vinfastauto.in/statics/2025-09/vf7_intro.webp",
+    "colors": [],
+    "interior": [
+      {
+        "cap": "Dashboard",
+        "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/15_0.webp"
+      },
+      {
+        "cap": "Front seats",
+        "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/10_0.webp"
+      },
+      {
+        "cap": "Touchscreen",
+        "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/12_0.webp"
+      },
+      {
+        "cap": "Cabin",
+        "img": "https://static-cms-prod.vinfastauto.in/statics/2025-09/19.webp"
+      }
+    ]
+  }
+}

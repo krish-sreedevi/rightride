@@ -1,0 +1,400 @@
+{
+ "brand": "Mahindra",
+ "curated": true,
+ "updated": "2026-10-06",
+ "source": "https://www.mahindraelectricsuv.com/ and https://auto.mahindra.com/ (official variant cards; ex-showroom prices without wall charger)",
+ "models": [
+  {
+   "model": "BE 6 Sporteq",
+   "body": "SUV",
+   "url": "https://www.mahindraelectricsuv.com/esuv/MBE6.html",
+   "variants": [
+    {
+     "name": "One 59 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 1945000,
+     "specs": {
+      "Range": "573 km",
+      "Battery": "59 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/MBE6.html"
+    },
+    {
+     "name": "Two 59 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 2095000,
+     "specs": {
+      "Range": "573 km",
+      "Battery": "59 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/MBE6.html"
+    },
+    {
+     "name": "Three 59 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 2195000,
+     "specs": {
+      "Range": "573 km",
+      "Battery": "59 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/MBE6.html"
+    },
+    {
+     "name": "Three 70 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 2295000,
+     "specs": {
+      "Range": "651 km",
+      "Battery": "70 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/MBE6.html"
+    },
+    {
+     "name": "Three+ 70 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 2395000,
+     "specs": {
+      "Range": "651 km",
+      "Battery": "70 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/MBE6.html"
+    },
+    {
+     "name": "FE 79 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 2445000,
+     "specs": {
+      "Range": "708 km",
+      "Battery": "79 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/MBE6.html"
+    },
+    {
+     "name": "Three+ 79 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 2495000,
+     "specs": {
+      "Range": "708 km",
+      "Battery": "79 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/MBE6.html"
+    },
+    {
+     "name": "Four 79 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 2695000,
+     "specs": {
+      "Range": "708 km",
+      "Battery": "79 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/MBE6.html"
+    },
+    {
+     "name": "FE Four 79 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 2695000,
+     "specs": {
+      "Range": "708 km",
+      "Battery": "79 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/MBE6.html"
+    },
+    {
+     "name": "Launch Edition 79 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 2695000,
+     "specs": {
+      "Range": "708 km",
+      "Battery": "79 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/MBE6.html"
+    }
+   ]
+  },
+  {
+   "model": "XEV 9e",
+   "body": "SUV",
+   "url": "https://www.mahindraelectricsuv.com/esuv/xev-9e/MXV9.html",
+   "variants": [
+    {
+     "name": "Pack One 59 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 2190000,
+     "specs": {
+      "Range": "522 km",
+      "Battery": "59 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9e/MXV9.html"
+    },
+    {
+     "name": "Pack Two 59 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 2490000,
+     "specs": {
+      "Range": "522 km",
+      "Battery": "59 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9e/MXV9.html"
+    },
+    {
+     "name": "Pack Two 79 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 2650000,
+     "specs": {
+      "Range": "656 km",
+      "Battery": "79 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9e/MXV9.html"
+    },
+    {
+     "name": "Pack Three Select 59 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 2790000,
+     "specs": {
+      "Range": "522 km",
+      "Battery": "59 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9e/MXV9.html"
+    },
+    {
+     "name": "Cineluxe 79 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 2935000,
+     "specs": {
+      "Range": "656 km",
+      "Battery": "79 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9e/MXV9.html"
+    },
+    {
+     "name": "Pack Three 79 kWh",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 3050000,
+     "specs": {
+      "Range": "656 km",
+      "Battery": "79 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9e/MXV9.html"
+    }
+   ]
+  },
+  {
+   "model": "XEV 9S",
+   "body": "SUV",
+   "url": "https://www.mahindraelectricsuv.com/esuv/xev-9s/XEV9.html",
+   "variants": [
+    {
+     "name": "Pack One Above 59 kWh 7-Seater",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 7,
+     "price": 2065000,
+     "specs": {
+      "Range": "521 km",
+      "Battery": "59 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9s/XEV9.html"
+    },
+    {
+     "name": "Pack One Above 79 kWh 7-Seater",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 7,
+     "price": 2265000,
+     "specs": {
+      "Range": "679 km",
+      "Battery": "79 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9s/XEV9.html"
+    },
+    {
+     "name": "Pack Two Above 70 kWh 7-Seater",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 7,
+     "price": 2505000,
+     "specs": {
+      "Range": "600 km",
+      "Battery": "70 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9s/XEV9.html"
+    },
+    {
+     "name": "Pack Two Above 70 kWh 6-Seater",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 6,
+     "price": 2525000,
+     "specs": {
+      "Range": "600 km",
+      "Battery": "70 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9s/XEV9.html"
+    },
+    {
+     "name": "Pack Two Above 79 kWh 7-Seater",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 7,
+     "price": 2595000,
+     "specs": {
+      "Range": "679 km",
+      "Battery": "79 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9s/XEV9.html"
+    },
+    {
+     "name": "Pack Two Above 79 kWh 6-Seater",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 6,
+     "price": 2615000,
+     "specs": {
+      "Range": "679 km",
+      "Battery": "79 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9s/XEV9.html"
+    },
+    {
+     "name": "Pack Three 79 kWh 7-Seater",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 7,
+     "price": 2785000,
+     "specs": {
+      "Range": "679 km",
+      "Battery": "79 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9s/XEV9.html"
+    },
+    {
+     "name": "Pack Three 79 kWh 6-Seater",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 6,
+     "price": 2805000,
+     "specs": {
+      "Range": "679 km",
+      "Battery": "79 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9s/XEV9.html"
+    },
+    {
+     "name": "Pack Three Above 79 kWh 7-Seater",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 7,
+     "price": 2995000,
+     "specs": {
+      "Range": "679 km",
+      "Battery": "79 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9s/XEV9.html"
+    },
+    {
+     "name": "Pack Three Above 79 kWh 6-Seater",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 6,
+     "price": 3015000,
+     "specs": {
+      "Range": "679 km",
+      "Battery": "79 kWh"
+     },
+     "priceSource": "https://www.mahindraelectricsuv.com/esuv/xev-9s/XEV9.html"
+    }
+   ]
+  },
+  {
+   "model": "XUV 3XO EV",
+   "body": "SUV",
+   "url": "https://auto.mahindra.com/suv/xuv3xo-ev.html",
+   "variants": [
+    {
+     "name": "AX5",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 1388999,
+     "airbags": 6,
+     "specs": {
+      "Battery": "39.4 kWh"
+     },
+     "priceSource": "https://auto.mahindra.com/suv/xuv3xo-ev.html"
+    },
+    {
+     "name": "AX7L",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 1495999,
+     "airbags": 6,
+     "specs": {
+      "Battery": "39.4 kWh"
+     },
+     "priceSource": "https://auto.mahindra.com/suv/xuv3xo-ev.html"
+    }
+   ]
+  }
+ ]
+}

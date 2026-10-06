@@ -1,128 +1,139 @@
 {
- "Audi|A4": {
-  "page": "https://www.audi.com/en/audi-a4-24",
-  "hero": "https://uploads.audi.com/system/production/media/114010/images/2b377842dcaa55eab967c8861c433539d1d3ad9d/A226704_web_1920.jpeg?1731490598",
-  "colors": [],
-  "interior": []
- },
- "Audi|A6": {
-  "page": "https://www.audi.com/en/audi-a6-40",
-  "hero": "https://uploads.audi.com/system/production/media/117234/images/a47dc8f5ed1c73ddfeed0370a8cfe20efcca640d/A232492_web_1920.jpeg?1740748854",
-  "colors": [],
-  "interior": []
- },
- "Audi|Q3": {
-  "page": "https://www.audi.com/en/audi-q3-57",
-  "hero": "https://uploads.audi.com/system/production/media/65167/images/f5e9afd95ff0153e1dffa782103ee8af2fb214d3/A188607_web_1920.jpg?1750085569",
-  "colors": [
-   {
-    "name": "Pulse Orange",
-    "img": "https://uploads.audi.com/system/production/media/71094/images/f451d20cb27b0570da1bf7a2e4de013fd8a839af/A1814469_web_1920.jpg?1748952732"
-   }
-  ],
-  "interior": [
-   {
-    "cap": "Dashboard",
-    "img": "https://uploads.audi.com/system/production/media/71121/images/f18e1b4f55429d637cd6e82b0475e8b7bb66486d/A1814496_web_1920.jpg?1748952731"
-   },
-   {
-    "cap": "Interior",
-    "img": "https://uploads.audi.com/system/production/media/71091/images/98aada3a8152433bfd4c18a19719965d57d2ccc9/A1814466_web_1920.jpg?1748952701"
-   },
-   {
-    "cap": "Interior",
-    "img": "https://uploads.audi.com/system/production/media/65183/images/45ed9954d1d15ff41b5a1e481ecf241a9f27ba71/A188623_web_1920.jpg?1698324764"
-   }
-  ]
- },
- "Audi|Q3 Sportback": {
-  "page": "https://www.audi.com/en/audi-q3-sportback-11990",
-  "hero": "https://uploads.audi.com/system/production/media/83705/images/4ff7f06d73d84f673fddc0dbb87be8ed3ce13a2c/A1911586_web_1920.jpg?1698390664",
-  "colors": [],
-  "interior": [
-   {
-    "cap": "Dashboard",
-    "img": "https://uploads.audi.com/system/production/media/83750/images/db616b99496142146273e1f896a35502879622f7/A1911631_web_1920.jpg?1698390951"
-   },
-   {
-    "cap": "Interior",
-    "img": "https://uploads.audi.com/system/production/media/81848/images/fee17629d9fc7baa95e4578cdaa05a06d598fd81/A199731_web_1920.jpg?1698383788"
-   }
-  ]
- },
- "Audi|Q5": {
-  "page": "https://www.audi.com/en/audi-q5-suv-until-2024-16562",
-  "hero": "https://uploads.audi.com/system/production/media/91780/images/9d2e88af17282f7271186d9534f9c401f033f1fe/A203108_web_1920.jpg?1741700531",
-  "colors": [
-   {
-    "name": "District Green Metallic",
-    "img": "https://uploads.audi.com/system/production/media/91780/images/9d2e88af17282f7271186d9534f9c401f033f1fe/A203108_web_1920.jpg?1741700531"
-   }
-  ],
-  "interior": [
-   {
-    "cap": "Dashboard",
-    "img": "https://uploads.audi.com/system/production/media/91740/images/345e0e031e8eb309e933fdd80c1a370428fb639e/A203068_web_1920.jpg?1741700558"
-   }
-  ]
- },
- "Audi|Q7": {
-  "page": "https://www.audi.com/en/audi-q7-65",
-  "hero": "https://uploads.audi.com/system/production/media/122629/images/628a9f1fcbb7a3e1e557f87cec46034128148dc4/A240551_web_1920.jpg?1780417136",
-  "colors": [],
-  "interior": [
-   {
-    "cap": "Dashboard",
-    "img": "https://uploads.audi.com/system/production/media/122638/images/8fa9fab0770da1b19f189198f284d262d8f9e83e/A240560_web_1920.jpg?1780417181"
-   },
-   {
-    "cap": "Interior",
-    "img": "https://uploads.audi.com/system/production/media/122639/images/135528b47e034c7958112afda424b878b5f96d09/A240561_web_1920.jpg?1780417188"
-   }
-  ]
- },
- "Audi|Q8": {
-  "page": "https://www.audi.com/en/audi-q8-suv-10296",
-  "hero": "https://uploads.audi.com/system/production/cars/421/photos/939a7b0a0e28decd8e69c5653d335199d35f6a7b/web_1440_Q8_SUV.png?1782897813",
-  "colors": [
-   {
-    "name": "Sakhir Gold",
-    "img": "https://uploads.audi.com/system/production/media/120804/images/6c85573a6799d262bd693a70e8aead15d2c73b1e/A236005_web_1920.jpg?1733131944"
-   }
-  ],
-  "interior": [
-   {
-    "cap": "Interior",
-    "img": "https://uploads.audi.com/system/production/media/120817/images/49686e5fd27719bf43e31d8c523ef37965b835ad/A236018_web_1920.jpg?1699366362"
-   },
-   {
-    "cap": "Interior",
-    "img": "https://uploads.audi.com/system/production/media/120818/images/7fe2ad7b9a12970c587f27c2c073500dfc8ee8b1/A236019_web_1920.jpg?1699366321"
-   },
-   {
-    "cap": "Interior",
-    "img": "https://uploads.audi.com/system/production/media/120819/images/c4e0bb2e4bfa1fb542afacca13cce10ec0f57ace/A236020_web_1920.jpg?1699366292"
-   },
-   {
-    "cap": "Interior",
-    "img": "https://uploads.audi.com/system/production/media/120820/images/4afa33c00d2d28464aebf92cf3eadb7f4365dbdc/A236021_web_1920.jpg?1699366261"
-   },
-   {
-    "cap": "Interior",
-    "img": "https://uploads.audi.com/system/production/media/120821/images/83d7747f470534b9fa1d4aab0af365f1422b82c4/A236022_web_1920.jpg?1699366221"
-   }
-  ]
- },
- "Audi|RS Q8": {
-  "page": "https://www.audi.com/en/audi-rs-q8-12372",
-  "hero": "https://uploads.audi.com/system/production/cars/573/photos/52f9ff1e4cc021df7322db3a78484f6f1c9ebbdd/web_1440_RS_Q8_SUV.png?1761656141",
-  "colors": [],
-  "interior": []
- },
- "Audi|SQ8": {
-  "page": "https://www.audi.com/en/audi-sq8-tfsi-11700",
-  "hero": "https://uploads.audi.com/system/production/cars/531/photos/45539e10f114190f7b4b72f4a3739548e8a02b10/web_1440_SQ8_SUV.png?1761655971",
-  "colors": [],
-  "interior": []
- }
+  "Audi|A4": {
+    "page": "https://www.audi.com/en/audi-a4-24",
+    "hero": "https://uploads.audi.com/system/production/media/114010/images/2b377842dcaa55eab967c8861c433539d1d3ad9d/A226704_web_1920.jpeg?1731490598",
+    "colors": [],
+    "interior": []
+  },
+  "Audi|A6": {
+    "page": "https://www.audi.com/en/audi-a6-40",
+    "hero": "https://uploads.audi.com/system/production/media/117234/images/a47dc8f5ed1c73ddfeed0370a8cfe20efcca640d/A232492_web_1920.jpeg?1740748854",
+    "colors": [],
+    "interior": []
+  },
+  "Audi|Q3": {
+    "page": "https://www.audi.com/en/audi-q3-57",
+    "hero": "https://uploads.audi.com/system/production/media/65167/images/f5e9afd95ff0153e1dffa782103ee8af2fb214d3/A188607_web_1920.jpg?1750085569",
+    "colors": [
+      {
+        "name": "Pulse Orange",
+        "img": "https://uploads.audi.com/system/production/media/71094/images/f451d20cb27b0570da1bf7a2e4de013fd8a839af/A1814469_web_1920.jpg?1748952732"
+      }
+    ],
+    "interior": [
+      {
+        "cap": "Dashboard",
+        "img": "https://uploads.audi.com/system/production/media/71121/images/f18e1b4f55429d637cd6e82b0475e8b7bb66486d/A1814496_web_1920.jpg?1748952731"
+      },
+      {
+        "cap": "Interior",
+        "img": "https://uploads.audi.com/system/production/media/71091/images/98aada3a8152433bfd4c18a19719965d57d2ccc9/A1814466_web_1920.jpg?1748952701"
+      },
+      {
+        "cap": "Interior",
+        "img": "https://uploads.audi.com/system/production/media/65183/images/45ed9954d1d15ff41b5a1e481ecf241a9f27ba71/A188623_web_1920.jpg?1698324764"
+      }
+    ]
+  },
+  "Audi|Q3 Sportback": {
+    "page": "https://www.audi.com/en/audi-q3-sportback-11990",
+    "hero": "https://uploads.audi.com/system/production/media/83705/images/4ff7f06d73d84f673fddc0dbb87be8ed3ce13a2c/A1911586_web_1920.jpg?1698390664",
+    "colors": [],
+    "interior": [
+      {
+        "cap": "Dashboard",
+        "img": "https://uploads.audi.com/system/production/media/83750/images/db616b99496142146273e1f896a35502879622f7/A1911631_web_1920.jpg?1698390951"
+      },
+      {
+        "cap": "Interior",
+        "img": "https://uploads.audi.com/system/production/media/81848/images/fee17629d9fc7baa95e4578cdaa05a06d598fd81/A199731_web_1920.jpg?1698383788"
+      }
+    ]
+  },
+  "Audi|Q5": {
+    "page": "https://www.audi.com/en/audi-q5-suv-until-2024-16562",
+    "hero": "https://uploads.audi.com/system/production/media/91780/images/9d2e88af17282f7271186d9534f9c401f033f1fe/A203108_web_1920.jpg?1741700531",
+    "colors": [
+      {
+        "name": "District Green Metallic",
+        "img": "https://uploads.audi.com/system/production/media/91780/images/9d2e88af17282f7271186d9534f9c401f033f1fe/A203108_web_1920.jpg?1741700531"
+      }
+    ],
+    "interior": [
+      {
+        "cap": "Dashboard",
+        "img": "https://uploads.audi.com/system/production/media/91740/images/345e0e031e8eb309e933fdd80c1a370428fb639e/A203068_web_1920.jpg?1741700558"
+      }
+    ]
+  },
+  "Audi|Q7": {
+    "page": "https://www.audi.com/en/audi-q7-65",
+    "hero": "https://uploads.audi.com/system/production/media/122629/images/628a9f1fcbb7a3e1e557f87cec46034128148dc4/A240551_web_1920.jpg?1780417136",
+    "colors": [],
+    "interior": [
+      {
+        "cap": "Dashboard",
+        "img": "https://uploads.audi.com/system/production/media/122638/images/8fa9fab0770da1b19f189198f284d262d8f9e83e/A240560_web_1920.jpg?1780417181"
+      },
+      {
+        "cap": "Interior",
+        "img": "https://uploads.audi.com/system/production/media/122639/images/135528b47e034c7958112afda424b878b5f96d09/A240561_web_1920.jpg?1780417188"
+      }
+    ]
+  },
+  "Audi|Q8": {
+    "page": "https://www.audi.com/en/audi-q8-suv-10296",
+    "hero": "https://uploads.audi.com/system/production/cars/421/photos/939a7b0a0e28decd8e69c5653d335199d35f6a7b/web_1440_Q8_SUV.png?1782897813",
+    "colors": [
+      {
+        "name": "Sakhir Gold",
+        "img": "https://uploads.audi.com/system/production/media/120804/images/6c85573a6799d262bd693a70e8aead15d2c73b1e/A236005_web_1920.jpg?1733131944"
+      }
+    ],
+    "interior": [
+      {
+        "cap": "Interior",
+        "img": "https://uploads.audi.com/system/production/media/120817/images/49686e5fd27719bf43e31d8c523ef37965b835ad/A236018_web_1920.jpg?1699366362"
+      },
+      {
+        "cap": "Interior",
+        "img": "https://uploads.audi.com/system/production/media/120818/images/7fe2ad7b9a12970c587f27c2c073500dfc8ee8b1/A236019_web_1920.jpg?1699366321"
+      },
+      {
+        "cap": "Interior",
+        "img": "https://uploads.audi.com/system/production/media/120819/images/c4e0bb2e4bfa1fb542afacca13cce10ec0f57ace/A236020_web_1920.jpg?1699366292"
+      },
+      {
+        "cap": "Interior",
+        "img": "https://uploads.audi.com/system/production/media/120820/images/4afa33c00d2d28464aebf92cf3eadb7f4365dbdc/A236021_web_1920.jpg?1699366261"
+      },
+      {
+        "cap": "Interior",
+        "img": "https://uploads.audi.com/system/production/media/120821/images/83d7747f470534b9fa1d4aab0af365f1422b82c4/A236022_web_1920.jpg?1699366221"
+      }
+    ]
+  },
+  "Audi|RS Q8": {
+    "page": "https://www.audi.com/en/audi-rs-q8-12372",
+    "hero": "https://uploads.audi.com/system/production/cars/573/photos/52f9ff1e4cc021df7322db3a78484f6f1c9ebbdd/web_1440_RS_Q8_SUV.png?1761656141",
+    "colors": [],
+    "interior": []
+  },
+  "Audi|SQ8": {
+    "page": "https://www.audi.com/en/audi-sq8-tfsi-11700",
+    "hero": "https://uploads.audi.com/system/production/cars/531/photos/45539e10f114190f7b4b72f4a3739548e8a02b10/web_1440_SQ8_SUV.png?1761655971",
+    "colors": [],
+    "interior": []
+  },
+  "Audi|S5 Sportback": {
+    "page": "https://www.audi.in/in/web/en/models/a5/s5-sportback.html",
+    "hero": "https://uploads.audi.com/system/production/media/83858/images/63899666e8342fb4331346087ab947d600146c4f/A1911739_web_1920.jpg?1742807214",
+    "colors": [],
+    "interior": [
+      {
+        "cap": "Interior (A5 Sportback shown)",
+        "img": "https://uploads.audi.com/system/production/media/83917/images/6d14c092d9853c9e6a063f182c8bad987ddace59/A1911798_web_1920.jpg?1731496555"
+      }
+    ]
+  }
 }

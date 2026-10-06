@@ -177,5 +177,101 @@
     "img": "https://www.hondacarindia.com/web-data/models/2024/elevate/Design/Interior/int_twotone_desk.jpg"
    }
   ]
+ },
+ "Honda|City e:HEV": {
+  "page": "https://www.hondacarindia.com/honda-city",
+  "hero": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLACK_01_desk_new13/CITY_EHEV_BLACK_01_desk_00.jpg",
+  "colors": [
+   {
+    "name": "Crystal Black Pearl",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLACK_01_desk_new13/CITY_EHEV_BLACK_01_desk_00.jpg"
+   },
+   {
+    "name": "Lunar Silver Metallic",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_SILVER_01_desk_new1/CITY_EHEV_SILVER_01_desk_00.jpg"
+   },
+   {
+    "name": "Meteoroid Grey Metallic",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_GREY_01_desk_new12/CITY_EHEV_GREY_01_desk_00.jpg"
+   },
+   {
+    "name": "Obsidian Blue Pearl",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_00.jpg"
+   },
+   {
+    "name": "Platinum White Pearl",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_WHITE_01_desk_new1/CITY_EHEV_WHITE_01_desk_00.jpg"
+   },
+   {
+    "name": "Radiant Red Metallic",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_RED_01_desk_new1/CITY_EHEV_RED_01_desk_00.jpg"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Card%20Component/desktop/Interior/two_tone_interior_desk.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Card%20Component/desktop/Interior/AR_SN_HONDA_CITY_E-HEV_FRONT-SEATS_SIDE-VIEW_03.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Card%20Component/desktop/Interior/Wireless_desk.jpg"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Card%20Component/desktop/Interior/car_meter_desk.jpg"
+   },
+   {
+    "cap": "Climate control",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Card%20Component/desktop/Interior/AR_AB_CITY_FATC_04.jpg"
+   }
+  ]
+ },
+ "Honda|ZR-V": {
+  "page": "https://www.hondacarindia.com/honda-zrv",
+  "hero": "https://www.hondacarindia.com/web-data/models/2026/zrv/Exterior/ZR-V_WHITE_01_desk/ZR-V_WHITE_01_desk_00.jpg",
+  "colors": [
+   {
+    "name": "Platinum White Pearl",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/zrv/Exterior/ZR-V_WHITE_01_desk/ZR-V_WHITE_01_desk_00.jpg"
+   },
+   {
+    "name": "Crystal Black Pearl",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/zrv/Exterior/ZR-V_BLACK_01_desk/ZR-V_BLACK_01_desk_00.jpg"
+   },
+   {
+    "name": "Meteoroid Grey Metallic",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/zrv/Exterior/ZR-V_GREY_01_desk/ZR-V_GREY_01_desk_00.jpg"
+   },
+   {
+    "name": "Twilight Mist Black Pearl",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/zrv/Exterior/ZR-V_PURPLE_01_desk/ZR-V_PURPLE_01_desk_00.jpg"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/zrv/ZRV%20Component/desktop/Interior/ZR-V_Front%20Dash_01.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/zrv/ZRV%20Component/desktop/Interior/AR-AM-HONDA-ZRV-AVNT-SHOT-2026-v3.jpg"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/zrv/ZRV%20Component/desktop/Interior/AR-AM_HONDA_ZRV_METER_SHOT_02_2026-v2.jpg"
+   },
+   {
+    "cap": "Dual-zone climate control",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/zrv/ZRV%20Component/desktop/Interior/ZR-V_Dual%20Zone_04.jpg"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/zrv/ZRV%20Component/desktop/Comfort/AR_SN_HONDA_ZRV_REAR-COMFORT_03.jpg"
+   }
+  ]
  }
 }

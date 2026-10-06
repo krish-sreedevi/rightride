@@ -397,7 +397,7 @@
       const idx = modelIndex(), toks = t.replace(STOP, ' ').split(/\s+/).filter((x) => x && !/^\d+(\.\d+)?$/.test(x) && !/^(under|below|above|over|seater|seats?|lakhs?|crore|cr|cars?|suv|suvs|sedan|hatchback|muv|diesel|petrol|cng|manual|automatic|auto)$/.test(x));
       for (let i = 0; i < toks.length; i++) {
         for (let n = Math.min(4, toks.length - i); n >= 1; n--) {
-          const g = toks.slice(i, i + n).join(''); if (g.length < 2) continue;
+          const g = toks.slice(i, i + n).join(''); if (g.length < 2 || (n === 1 && /^(electric|ev|evs|hybrid|mini)$/.test(g))) continue;
           const sc = idx.map((m) => [m, matchName(m, g)]), top = Math.max(0, ...sc.map((x) => x[1])), hits = top ? sc.filter((x) => x[1] === top).map((x) => x[0]) : [];
           if (hits.length) { hits.forEach((m) => f.models.includes(m.key) || f.models.push(m.key)); const re = new RegExp('\\b' + toks.slice(i, i + n).map((x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('\\s+') + '\\b'); t = t.replace(re, ' '); i += n - 1; break; }
         }
@@ -410,7 +410,8 @@
     take(new RegExp('(?:above|over|more than|>|min(?:imum)?|at least|starting)\\s*(?:rs\\.?\\s*)?(\\d+(?:\\.\\d+)?)' + U), (m) => { f.min = amt(m[1], m[2]); });
     take(new RegExp('(?:around|about|approx(?:imately)?|~|near|close to)\\s*(?:rs\\.?\\s*)?(\\d+(?:\\.\\d+)?)' + U), (m) => { const v = amt(m[1], m[2]); f.min = Math.round(v * 0.85 * 10) / 10; f.max = Math.round(v * 1.15 * 10) / 10; });
     take(/\b(\d+(?:\.\d+)?)\s*(l|lakh|lakhs|lac|lacs|cr|crore|crores)\b/, (m) => { f.max = amt(m[1], m[2]); });
-    take(/\b(suvs?|crossovers?|compact suvs?|jeeps?)\b/, () => (f.body = 'SUV'));
+    take(/\b(mini|micro|small|compact|sub.?4m?)\s+(suvs?|crossovers?)\b/, () => (f.body = 'SUV'));
+    take(/\b(suvs?|crossovers?|compact suvs?)\b/, () => (f.body = 'SUV'));
     take(/\b(hatch|hatchbacks?|hatches|small cars?|city cars?)\b/, () => (f.body = 'Hatchback'));
     take(/\b(sedans?|saloons?)\b/, () => (f.body = 'Sedan'));
     take(/\b(muvs?|mpvs?|people movers?|vans?)\b/, () => (f.body = 'MUV / MPV'));
@@ -429,7 +430,7 @@
     take(/\b(cheapest|cheap|affordable|budget friendly|low cost|lowest price|value)\b/, () => (f.sort = 'price'));
     take(/\b(best mileage|mileage|fuel efficient|economical|efficient|frugal)\b/, () => (f.sort = 'mileage'));
     take(/\b(best|top rated|top|highest rated|recommended|popular)\b/, () => (f.sort = f.sort || 'expert'));
-    if (!f.models.length) for (const b of BRANDS()) { const bl = b.toLowerCase(), alias = { 'maruti suzuki': 'maruti suzuki|maruti|suzuki|nexa', 'mercedes-benz': 'mercedes-benz|mercedes benz|mercedes|benz|merc', 'land rover': 'land rover|range rover|landrover', volkswagen: 'volkswagen|vw', 'mg': 'mg|morris garages' }[bl]; const re = new RegExp('\\b(' + (alias || bl.replace(/[-]/g, '.')) + ')\\b'); if (re.test(t)) { f.brand = b; t = t.replace(re, ' '); break; } }
+    if (!f.models.length) for (const b of BRANDS()) { const bl = b.toLowerCase(), alias = { 'maruti suzuki': 'maruti suzuki|maruti|suzuki|nexa', 'mercedes-benz': 'mercedes-benz|mercedes benz|mercedes|benz|merc', 'land rover': 'land rover|range rover|landrover', volkswagen: 'volkswagen|vw', 'mg': 'mg|morris garages', 'citroën': 'citroën|citroen|citreon', 'force motors': 'force motors|force', 'mini': 'mini cooper|mini countryman|mini brand', bmw: 'bmw|beemer' }[bl]; const re = new RegExp('\\b(' + (alias || bl.replace(/[-]/g, '.')) + ')\\b'); if (re.test(t)) { f.brand = b; t = t.replace(re, ' '); break; } }
     // anything left must match a model/variant name; words that match no car at all are ignored (and shown as ignored)
     const hayAll = DATA.cars.map((c) => `${c.brand} ${c.model} ${c.variant}`.toLowerCase());
     for (const w of t.replace(STOP, ' ').split(/\s+/).filter((w) => w.length > 1)) {
@@ -440,7 +441,7 @@
   }
   // model name index for search and suggestions
   let MIDX = null;
-  const compact = (x) => x.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const compact = (x) => x.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
   function modelIndex() {
     if (MIDX) return MIDX;
     const g = new Map();
@@ -787,6 +788,9 @@
         ${nc.aop != null || nc.cop != null ? `<div class="nc-bars">${nc.aop != null ? `<div><span>Adult occupant</span>${bar10(nc.aop / max[0] * 10)}<b>${nc.aop}${max[0] ? `<small>/${max[0]}</small>` : ''}</b></div>` : ''}${nc.cop != null ? `<div><span>Child occupant</span>${bar10(nc.cop / max[1] * 10)}<b>${nc.cop}${max[1] ? `<small>/${max[1]}</small>` : ''}</b></div>` : ''}${nc.sa != null ? `<div><span>Safety assist</span>${bar10(nc.sa / max[2] * 10)}<b>${nc.sa}${max[2] ? `<small>/${max[2]}</small>` : ''}</b></div>` : ''}</div>` : ''}
         ${nc.note ? `<p class="note">${esc(nc.note)}</p>` : ''}`
       : `<p class="muted">Not crash-tested by Bharat NCAP or Global NCAP yet. ${m.vs.some((v) => v.c.airbags) ? `Comes with up to ${Math.max(...m.vs.map((v) => v.c.airbags || 0))} airbags.` : ''}</p>`;
+    const usp1 = usp && usp.length ? `<section class="cp-sec cp-usp"><div class="cp-sec-head"><h3 class="display">Why people pick it</h3><span class="ai-tag"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2l1.8 5.6L19.5 9l-5.7 1.6L12 16l-1.8-5.4L4.5 9l5.7-1.4zM19 15l.9 2.6 2.6.9-2.6.9L19 22l-.9-2.6-2.6-.9 2.6-.9z"/></svg>AI summary of expert reviews</span></div>
+        <ol class="usp">${usp.map((u) => `<li>${esc(u)}</li>`).join('')}</ol></section>` : '';
+    const chHead = (n, id, title, sub) => `<header class="ch-head"><span class="ch-n" aria-hidden="true">${n}</span><div><h2 class="ch-t" id="${id}T">${title}</h2>${sub ? `<p class="muted">${sub}</p>` : ''}</div></header>`;
     $('#carPage').innerHTML = `<div class="cp-wrap">
       <button class="cp-back" type="button" data-back><span aria-hidden="true">‹</span> All cars</button>
       <section class="cp-hero">
@@ -797,24 +801,33 @@
           <div class="muted small">On-road price in ${esc(st)}</div>
           <div class="cp-price">${lakh(m.min)}${m.max > m.min ? ` <span>– ${lakh(m.max)}</span>` : ''}</div>
           <div class="cp-tags">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>
-          <div class="cp-badges">${x && x.s ? `<span class="cp-badge"><b>${esc(x.s)}</b><small>/10</small><span>Expert score</span></span>` : ''}${nc ? `<a class="cp-badge nc" href="#cpSafety"><b>${nc.stars}★</b><span>${esc(nc.by)}</span></a>` : ''}</div>
-          <div class="sheet-cta"><a class="btn primary" href="#cpVariants" data-jump="cpVariants">Find my variant</a><a class="btn ghost" href="#cpDealers" data-jump="cpDealers">Showrooms near me</a></div>
+          <div class="cp-badges">${x && x.s ? `<span class="cp-badge"><b>${esc(x.s)}</b><small>/10</small><span>Expert score</span></span>` : ''}${nc ? `<a class="cp-badge nc" href="#cpSafety" data-jump="cpSafety"><b>${nc.stars}★</b><span>${esc(nc.by)}</span></a>` : ''}</div>
+          <div class="sheet-cta"><a class="btn primary" href="#chVariant" data-jump="chVariant">Find the Right Variant</a><a class="btn ghost" href="#chDealer" data-jump="chDealer">Find the Right Dealer</a></div>
         </div>
       </section>
-      <section class="cp-sec" id="cpMetrics" hidden></section>
-      ${usp && usp.length ? `<section class="cp-sec cp-usp"><div class="cp-sec-head"><h2 class="display">Why people pick it</h2><span class="ai-tag"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2l1.8 5.6L19.5 9l-5.7 1.6L12 16l-1.8-5.4L4.5 9l5.7-1.4zM19 15l.9 2.6 2.6.9-2.6.9L19 22l-.9-2.6-2.6-.9 2.6-.9z"/></svg>AI summary of expert reviews</span></div>
-        <ol class="usp">${usp.map((u) => `<li>${esc(u)}</li>`).join('')}</ol></section>` : ''}
-      <div class="cp-two">
-        <section class="cp-sec" id="cpSafety"><div class="cp-sec-head"><h2 class="display">Safety rating</h2></div>${safety}</section>
-        <section class="cp-sec"><div class="cp-sec-head"><h2 class="display">Expert view</h2>${x && x.s ? `<span class="xbadge">Expert score ${esc(x.s)}/10</span>` : ''}</div>
-          ${x ? `<ul class="pc">${x.like.map((t) => `<li class="pro">${esc(t)}</li>`).join('')}${x.dislike.map((t) => `<li class="con">${esc(t)}</li>`).join('')}</ul>${x.basedOn ? `<p class="muted small">From the review of the ${esc(x.basedOn)}.</p>` : ''}` : '<p class="muted">No expert review yet.</p>'}
-          <div class="cp-links"><a class="watch" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>Watch the video review</a>${x && x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">Read the review ↗</a>` : ''}<a href="${esc(m.url)}" target="_blank" rel="noopener">Official site ↗</a></div>
-        </section>
-      </div>
-      <section class="cp-sec" id="cpVariants"></section>
-      <section class="cp-sec" id="cpDealers"></section>
+      <nav class="cp-nav" id="cpNav" aria-label="Sections"><a href="#chRide" data-jump="chRide" class="on"><span class="n">1</span><b>Is this my Right Ride?</b></a><a href="#chVariant" data-jump="chVariant"><span class="n">2</span><b>Find the Right Variant</b></a><a href="#chDealer" data-jump="chDealer"><span class="n">3</span><b>Find the Right Dealer</b></a></nav>
+      <section class="cp-ch" id="chRide" aria-labelledby="chRideT">
+        ${chHead(1, 'chRide', 'Is this my Right Ride?', `What owning a ${esc(m.model)} is like, what experts think and how safe it is.`)}
+        <section class="cp-sec" id="cpMetrics" hidden></section>
+        ${usp1}
+        <div class="cp-two">
+          <section class="cp-sec" id="cpSafety"><div class="cp-sec-head"><h3 class="display">Safety rating</h3></div>${safety}</section>
+          <section class="cp-sec"><div class="cp-sec-head"><h3 class="display">Expert view</h3>${x && x.s ? `<span class="xbadge">Expert score ${esc(x.s)}/10</span>` : ''}</div>
+            ${x ? `<ul class="pc">${x.like.map((t) => `<li class="pro">${esc(t)}</li>`).join('')}${x.dislike.map((t) => `<li class="con">${esc(t)}</li>`).join('')}</ul>${x.basedOn ? `<p class="muted small">From the review of the ${esc(x.basedOn)}.</p>` : ''}` : '<p class="muted">No expert review yet.</p>'}
+            <div class="cp-links"><a class="watch" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>Watch the video review</a>${x && x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">Read the review ↗</a>` : ''}<a href="${esc(m.url)}" target="_blank" rel="noopener">Official site ↗</a></div>
+          </section>
+        </div>
+      </section>
+      <section class="cp-ch" id="chVariant" aria-labelledby="chVariantT">
+        ${chHead(2, 'chVariant', 'Find the Right Variant', `${m.vs.length} variant${m.vs.length > 1 ? 's' : ''}. Choose on the left; the variant that fits shows on the right.`)}
+        <div class="cp-sec" id="cpVariants"></div>
+      </section>
+      <section class="cp-ch" id="chDealer" aria-labelledby="chDealerT">
+        ${chHead(3, 'chDealer', 'Find the Right Dealer', `${esc(m.brand)} showrooms near you, nearest first. Book a test drive in a tap.`)}
+        <div class="cp-sec" id="cpDealers"></div>
+      </section>
     </div>`;
-    drawVariants(m); drawDealers(m);
+    drawVariants(m); drawDealers(m); spyChapters();
     loadExtras().then((X) => { if (cp.key !== key) return; const e = X[key]; if (e) { drawHeroGallery(m, e); drawMetrics(m, e); } });
   }
 
@@ -940,7 +953,7 @@
     }
     if (!tiles.length) { box.hidden = true; return; }
     box.hidden = false;
-    box.innerHTML = `<div class="cp-sec-head"><h2 class="display">Owning one</h2></div><div class="mt-grid">${tiles.join('')}</div>`;
+    box.innerHTML = `<div class="cp-sec-head"><h3 class="display">Owning one</h3></div><div class="mt-grid">${tiles.join('')}</div>`;
   }
 
   // variant helper: only what differs between variants, the cheapest one with everything you ticked
@@ -967,24 +980,32 @@
     if (best) {
       const nxt = all.find((c) => c.orTotal > best.orTotal && c.fuel === best.fuel && c.transmission === best.transmission && /[01]/.test(c.fs));
       const adds = nxt ? DATA.features.filter((f) => best.feat(f.key) !== '1' && nxt.feat(f.key) === '1') : [];
-      pick = `<div class="vh-pick"><div class="vh-pick-k">${cp.need.size ? 'Your Right variant' : 'Cheapest variant'}${cp.fuel.size || cp.gear.size ? ' for your choice' : ''}</div>
+      pick = `<div class="vh-pick" data-k="${esc(best.id)}"><div class="vh-pick-k">${cp.need.size || cp.fuel.size || cp.gear.size ? 'Your Right Variant' : 'Cheapest variant'}</div>
         <div class="vh-pick-main"><div><h3>${esc(best.variant)}</h3><div class="muted small">${esc([best.fuel, gearTxt(best)].join(' · '))}${cp.need.size ? ` · has all ${cp.need.size} feature${cp.need.size > 1 ? 's' : ''} you picked` : ''}${match.length > 1 ? ` · ${match.length - 1} more variant${match.length > 2 ? 's' : ''} also fit` : ''}</div></div>
         <div class="vh-pick-p"><b>${lakh(best.orTotal)}</b><span class="muted small">on-road · ex-showroom ${lakh(best.or.ex)}</span></div></div>
         ${adds.length ? `<div class="vh-up">Step up to <b>${esc(nxt.variant)}</b> (+${lakh(nxt.orTotal - best.orTotal).replace('₹', '₹')}) for ${esc(adds.slice(0, 5).map((f) => f.label).join(', '))}${adds.length > 5 ? ` and ${adds.length - 5} more` : ''}.</div>` : ''}
-        <button class="link" type="button" data-vid="${esc(best.id)}">Price break-up and all features ›</button></div>`;
+        <ul class="vh-pick-specs">${[best.seats ? best.seats + ' seats' : '', best.airbags ? best.airbags + ' airbags' : '', rng(best) !== '–' ? rng(best) : '', best.cc ? best.cc + ' cc' : '', best.drive && best.drive !== '2WD' ? best.drive : ''].filter(Boolean).map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
+        ${cp.need.size ? `<ul class="vh-pick-has">${[...cp.need].map((k) => `<li>${esc(FLABEL(k).replace(/ \(.*\)$/, ''))}</li>`).join('')}</ul>` : ''}
+        <div class="vh-pick-act"><button class="btn primary" type="button" data-vid="${esc(best.id)}">Price break-up</button><a class="btn ghost" href="#chDealer" data-jump="chDealer">Book a test drive</a></div></div>`;
     } else pick = `<div class="vh-pick none">${SORRY_ICON}<div><b>Sorry, no ${esc(m.model)} variant has all of that.</b><div class="muted small">Untick a feature to see the closest variants.</div></div></div>`;
     const grp = (name, vals, set) => vals.length > 1 ? `<div class="group"><div class="label">${name}</div><div class="chips">${vals.map((v) => `<button type="button" class="chip" data-cpf="${name === 'Fuel' ? 'fuel' : 'gear'}" data-v="${esc(v)}" aria-pressed="${set.has(v)}">${esc(v)}</button>`).join('')}</div></div>` : '';
     const cnt = (k) => known.filter((c) => c.feat(k) === '1').length;
-    box.innerHTML = `<div class="cp-sec-head"><div><h2 class="display">Find your variant</h2><p class="muted">${all.length} variant${all.length > 1 ? 's' : ''}. Tick what you care about. We only show what changes between them.${cp.carried ? ' Your choices from the search are already ticked.' : ''}</p></div></div>
-      ${all.length > 1 ? `<div class="vh-filters">${grp('Fuel', fuels, cp.fuel)}${grp('Gearbox', gears, cp.gear)}</div>
-      ${diff.length ? `<div class="group"><div class="label">Features that differ <span class="muted">· tap the ones you want</span></div><div class="chips vh-need">${(cp.more ? diff : diff.filter((f, i) => i < 12 || cp.need.has(f.key))).map((f) => `<button type="button" class="chip" data-need="${f.key}" aria-pressed="${cp.need.has(f.key)}">${esc(f.label)}<small>${cnt(f.key)}/${known.length}</small></button>`).join('')}${diff.length > 12 ? `<button type="button" class="chip more" data-more>${cp.more ? 'Fewer' : `+${diff.filter((f, i) => i >= 12 && !cp.need.has(f.key)).length} more`}</button>` : ''}</div></div>`
-        : known.length ? '<p class="muted">These variants have the same feature list.</p>' : `<div class="note">${esc(m.brand)} doesn't publish a variant-wise feature list, so we can only compare prices and specs here.</div>`}` : ''}
-      ${allHave.length ? `<p class="vh-all-have">✓ Every variant here has ${esc(allHave.map((k) => FLABEL(k).replace(/ \(.*\)$/, '')).join(', '))}</p>` : ''}
-      ${pick}
+    const noFeat = known.length ? '<p class="muted">These variants have the same feature list.</p>' : `<div class="note">${esc(m.brand)} doesn't publish a variant-wise feature list, so we can only compare prices and specs here.</div>`;
+    box.innerHTML = `<div class="vh-split${all.length > 1 ? '' : ' one'}">
+      <div class="vh-left">
+        ${all.length > 1 ? `<div class="vh-step">What do you want?</div>${cp.carried ? '<p class="hint vh-carried">Your choices from the search are already ticked.</p>' : ''}
+        <div class="vh-filters">${grp('Fuel', fuels, cp.fuel)}${grp('Gearbox', gears, cp.gear)}</div>
+        ${diff.length ? `<div class="group"><div class="label">Features that differ <span class="muted">· tap the ones you want</span></div><div class="chips vh-need">${(cp.more ? diff : diff.filter((f, i) => i < 12 || cp.need.has(f.key))).map((f) => `<button type="button" class="chip" data-need="${f.key}" aria-pressed="${cp.need.has(f.key)}">${esc(f.label)}<small>${cnt(f.key)}/${known.length}</small></button>`).join('')}${diff.length > 12 ? `<button type="button" class="chip more" data-more>${cp.more ? 'Fewer' : `+${diff.filter((f, i) => i >= 12 && !cp.need.has(f.key)).length} more`}</button>` : ''}</div></div>` : noFeat}
+        ${allHave.length ? `<p class="vh-all-have">✓ Every variant here has ${esc(allHave.map((k) => FLABEL(k).replace(/ \(.*\)$/, '')).join(', '))}</p>` : ''}
+        ${cp.fuel.size || cp.gear.size || cp.need.size ? '<button class="link vh-reset" type="button" data-vreset>Clear my choices</button>' : ''}` : '<p class="muted">The only variant on sale.</p>'}
+      </div>
+      <div class="vh-right" aria-live="polite">${pick}</div>
+    </div>
+    <div class="vh-cmp"><div class="vh-cmp-h"><h3 class="display">Compare variants</h3><span class="muted small">${cp.all ? 'Every spec and feature' : 'Only what differs'}${pool.length < all.length ? ` · ${pool.length} of ${all.length} variants match your fuel and gearbox` : ''}</span></div>
       <div class="vh-scroll"><table class="vh-table"><thead><tr><th class="vh-c0">Variant</th>${pool.map((c) => `<th class="${c === best ? 'best' : ok(c) ? '' : 'off'}"><button type="button" data-vid="${esc(c.id)}"><span class="vh-vn">${esc(c.variant)}</span><b>${lakh(c.orTotal)}</b>${c === best ? '<em>Best fit</em>' : ''}</button></th>`).join('')}</tr></thead>
         <tbody>${specs.map(([l, fn]) => `<tr class="spec"><td class="vh-c0">${l}</td>${pool.map((c) => `<td class="${c === best ? 'best' : ok(c) ? '' : 'off'}">${esc(fn(c))}</td>`).join('')}</tr>`).join('')}
         ${ordered.map((f) => `<tr class="${cp.need.has(f.key) ? 'want' : ''}"><td class="vh-c0">${esc(f.label)}</td>${pool.map((c) => `<td class="${c === best ? 'best' : ok(c) ? '' : 'off'}">${cell(c, f.key)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
-      ${known.length ? `<label class="toggle vh-all"><input type="checkbox" data-cpall ${cp.all ? 'checked' : ''}> Also show features every variant shares</label>` : ''}`;
+      ${known.length ? `<label class="toggle vh-all"><input type="checkbox" data-cpall ${cp.all ? 'checked' : ''}> Also show features every variant shares</label>` : ''}</div>`;
   }
 
   // dealers: nearest showrooms of this brand, from OpenStreetMap, each linked to its Google Maps page
@@ -997,8 +1018,7 @@
   function drawDealers(m) {
     const box = $('#cpDealers'); if (!box) return;
     const geo = store.get('geo', null);
-    box.innerHTML = `<div class="cp-sec-head"><div><h2 class="display">${esc(m.brand)} showrooms near you</h2><p class="muted">Nearest first, with phone numbers where they're listed. Open any of them on Google Maps for reviews, ratings and opening hours.</p></div></div>
-      <form class="dl-find" data-dlform><button type="button" class="btn ghost" data-dl="geo">${PIN} Use my location</button><span class="muted">or</span>
+    box.innerHTML = `<form class="dl-find" data-dlform><button type="button" class="btn ghost" data-dl="geo">${PIN} Use my location</button><span class="muted">or</span>
         <input class="dl-pin" name="pin" inputmode="numeric" autocomplete="postal-code" maxlength="6" pattern="[1-9][0-9]{5}" placeholder="Enter pincode" aria-label="Pincode"><button class="btn primary" type="submit">Find</button></form>
       <p class="hint dl-geo-note">Your location is only used in your browser to sort showrooms by distance. Pincodes are looked up with OpenStreetMap's Nominatim service.</p>
       <div id="dlList" aria-live="polite"></div>`;
@@ -1009,22 +1029,49 @@
     out.innerHTML = `<p class="muted">Looking for ${esc(m.brand)} showrooms near ${esc(geo.label)}…</p>`;
     const all = await loadDealers();
     if (!$('#dlList') || cp.key !== m.brand + '|' + m.model) return;
-    const near = all.filter((d) => d.b === m.brand).map((d) => ({ ...d, km: kmBetween(geo.la, geo.lo, d.la, d.lo) })).filter((d) => d.km <= 120).sort((a, b) => a.km - b.km).slice(0, 8);
+    // one card per dealer group: if a dealer has several outlets, only its nearest one is listed
+    const seenGroup = new Set();
+    const nearAll = all.filter((d) => d.b === m.brand && !(/\b(service|workshop|body ?shop|spares?|accessor|parts)\b/i.test(d.n) && !/\b(sales|showroom)\b/i.test(d.n))).map((d) => ({ ...d, n: fixDealerName(d.n), km: kmBetween(geo.la, geo.lo, d.la, d.lo) })).filter((d) => d.km <= 120).sort((a, b) => a.km - b.km)
+      .filter((d) => { const g = dealerGroup(d.n, m.brand); if (!g) return true; if ([...seenGroup].some((h) => h === g || (g.length > 5 && lev(g, h, 2) <= 2))) return false; seenGroup.add(g); return true; });
+    // outlets mapped with no name of their own ("Hyundai") only fill in when few named dealers are near
+    const named = nearAll.filter((d) => dealerGroup(d.n, m.brand));
+    const near = (named.length >= 4 ? named : nearAll).slice(0, 8);
+    cp.dealerModel = m;
     const gAll = `https://www.google.com/maps/search/${encodeURIComponent(m.brand + ' showroom')}/@${geo.la.toFixed(5)},${geo.lo.toFixed(5)},12z`;
     out.innerHTML = `<div class="dl-where">${PIN} Near <b>${esc(geo.label)}</b> <button class="link" type="button" data-dl="change">Change</button></div>
       ${near.length ? `<ol class="dl-list">${near.map(dealerCard).join('')}</ol>` : `<p class="muted">We don't have any ${esc(m.brand)} showrooms on our map within 120 km yet.</p>`}
       <a class="btn ghost dl-all" href="${gAll}" target="_blank" rel="noopener">See every ${esc(m.brand)} showroom near ${esc(geo.label)} on Google Maps ↗</a>
-      <p class="hint">Showroom locations © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">Open Database License</a>. Refreshed weekly; call ahead to check stock and test drives.</p>`;
+      <p class="hint">Showroom locations © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">Open Database License</a>. Refreshed weekly. Test drives are booked on ${esc(m.brand)}'s official website, where you can pick this showroom.</p>`;
+  }
+  // dealer names as mapped in OpenStreetMap: fix brand misspellings; group outlets of the same dealer
+  const NAME_FIX = [[/\bHuyndai\b|\bHyundia\b|\bHundai\b/gi, 'Hyundai'], [/\bMahindara\b/gi, 'Mahindra'], [/\bToyata\b/gi, 'Toyota'], [/\bMaruthi\b/gi, 'Maruti'], [/^Blu Hyundai\b/i, 'Blue Hyundai']];
+  const fixDealerName = (n) => NAME_FIX.reduce((s, [re, to]) => s.replace(re, to), String(n || '').trim());
+  const GENERIC = /\b(showroom|show room|sales|service|services|centre|center|workshop|outlet|branch|dealer(ship)?|authori[sz]ed|pvt|private|ltd|limited|llp|the|cars?|motors? india|nexa|arena|true value|signature|studio|ev|electric|mega|new|used)\b/g;
+  function dealerGroup(n, brand) {
+    let s = n.toLowerCase().replace(/[(\[].*$/, '').replace(/\s[-–|,@].*$/, '');
+    for (const w of brand.toLowerCase().split(/[\s-]+/)) s = s.replace(new RegExp('\\b' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'g'), ' ');
+    s = s.replace(/\b(maruti|suzuki|mercedes|benz|land|rover|range)\b/g, ' ').replace(GENERIC, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
+    return s || null; // nothing distinctive left (e.g. just "Hyundai Showroom"): don't group
+  }
+  const NEXA = new Set(['Baleno', 'Fronx', 'Grand Vitara', 'Ignis', 'Invicto', 'Jimny', 'XL6', 'Ciaz', 'e Vitara']);
+  function testDriveUrl(m) {
+    const T = (DATA.testdrive || {})[m.brand];
+    if (!T) return m.url;
+    if (T.nexa && NEXA.has(m.model)) return T.nexa;
+    if (T.ev && m.fuels.length === 1 && m.fuels[0] === 'Electric') return T.ev;
+    return T.url;
   }
   function dealerCard(d) {
+    const m = cp.dealerModel;
     const area = d.c || nearestCity(d.la, d.lo);
     const addr = [d.a, area, d.p].filter(Boolean).join(', ');
-    const gm = `https://www.google.com/maps/search/${encodeURIComponent(d.n + (area ? ', ' + area : ''))}/@${d.la},${d.lo},17z`;
-    const dir = `https://www.google.com/maps/dir/?api=1&destination=${d.la},${d.lo}`;
     const tel = d.t ? d.t.replace(/[^\d+]/g, '') : '';
-    return `<li class="dl"><div class="dl-main"><b class="dl-n">${esc(d.n)}</b><div class="dl-a">${esc(addr || 'Address not listed')}</div>
-      <div class="dl-meta"><span class="dl-km">${d.km < 10 ? d.km.toFixed(1) : Math.round(d.km)} km away</span>${tel ? `<a class="dl-tel" href="tel:${esc(tel)}">${PHONE} ${esc(d.t)}</a>` : '<span class="muted">Phone number on Google Maps</span>'}</div></div>
-      <div class="dl-act"><a class="btn primary" href="${esc(gm)}" target="_blank" rel="noopener">Google Maps ↗</a><a class="link" href="${esc(dir)}" target="_blank" rel="noopener">Directions</a></div></li>`;
+    const T = (DATA.testdrive || {})[m.brand] || {};
+    const web = d.w && /^https?:\/\//i.test(d.w) ? d.w : d.w ? 'https://' + d.w : '';
+    const plain = !dealerGroup(d.n, m.brand); // just "Hyundai" etc. on the map
+    return `<li class="dl"><div class="dl-main"><b class="dl-n">${esc(plain ? `${m.brand} showroom${area ? ', ' + area : ''}` : d.n)}</b><div class="dl-a">${esc(addr || 'Address not listed')}</div>
+      <div class="dl-meta"><span class="dl-km">${d.km < 10 ? d.km.toFixed(1) : Math.round(d.km)} km away</span>${tel ? `<a class="dl-tel" href="tel:${esc(tel)}" data-ev="call" data-dealer="${esc(d.n)}">${PHONE} ${esc(d.t)}</a>` : ''}${web ? `<a class="dl-web" href="${esc(web)}" target="_blank" rel="noopener" data-ev="dealer-site" data-dealer="${esc(d.n)}">Dealer website ↗</a>` : ''}</div></div>
+      <div class="dl-act"><a class="btn primary dl-td" href="${esc(testDriveUrl(m))}" target="_blank" rel="noopener" data-td data-dealer="${esc(d.n)}" data-area="${esc(area || '')}">${T.kind === 'enquiry' ? 'Ask for a test drive' : 'Book a test drive'} ↗</a></div></li>`;
   }
   async function pinToGeo(pin) {
     try {
@@ -1042,13 +1089,14 @@
       const m = modelBySlug(carSlug); if (!m) return;
       if (e.target.closest('[data-back]')) { if (navFromList && history.length > 1) history.back(); else go('cars'); return; }
       const ni = e.target.closest('[data-ncinfo]'); if (ni) { const box = $('#ncInfo'), open = box.hidden; box.hidden = !open; ni.setAttribute('aria-expanded', open); return; }
-      const j = e.target.closest('[data-jump]'); if (j) { e.preventDefault(); $('#' + j.dataset.jump).scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+      const j = e.target.closest('[data-jump]'); if (j) { e.preventDefault(); if (j.closest('#cpNav') || /^ch/.test(j.dataset.jump)) { chHold = Date.now(); for (const a of document.querySelectorAll('#cpNav a')) a.classList.toggle('on', a.dataset.jump === j.dataset.jump); } $('#' + j.dataset.jump).scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
       const hs = e.target.closest('[data-hs]'); if (hs) { heroGo(gal.i + Number(hs.dataset.hs)); return; }
       const hi = e.target.closest('[data-hi]'); if (hi) { heroGo(Number(hi.dataset.hi)); return; }
       const op = e.target.closest('[data-open]'); if (op) { openLightbox(Number(op.dataset.open)); return; }
       const v = e.target.closest('[data-vid]'); if (v) { detail(v.dataset.vid); return; }
       const f = e.target.closest('[data-cpf]'); if (f) { const set = cp[f.dataset.cpf]; set.has(f.dataset.v) ? set.delete(f.dataset.v) : set.add(f.dataset.v); return keepY(() => drawVariants(m)); }
       if (e.target.closest('[data-more]')) { cp.more = !cp.more; return keepY(() => drawVariants(m)); }
+      if (e.target.closest('[data-vreset]')) { cp.fuel.clear(); cp.gear.clear(); cp.need.clear(); cp.carried = 0; return keepY(() => drawVariants(m)); }
       const n = e.target.closest('[data-need]'); if (n) { cp.need.has(n.dataset.need) ? cp.need.delete(n.dataset.need) : cp.need.add(n.dataset.need); return keepY(() => drawVariants(m)); }
       const d = e.target.closest('[data-dl]');
       if (d && d.dataset.dl === 'change') { store.set('geo', null); drawDealers(m); $('.dl-pin').focus(); return; }
@@ -1430,10 +1478,63 @@
     if (location.hash !== h) location.hash = h; else showPage(next, true, arg);
   }
   function route(animate) {
+    countView();
     const c = location.hash.match(/^#\/car\/([\w-]+)/);
     if (c) return showPage('car', animate, c[1]);
     showPage(/^#\/cars/.test(location.hash) ? 'cars' : 'home', animate);
   }
+  // sticky chapter tabs on the car page follow the scroll
+  let chObs = null, chHold = 0;
+  function spyChapters() {
+    if (chObs) chObs.disconnect();
+    const links = [...document.querySelectorAll('#cpNav a')];
+    chObs = new IntersectionObserver((ents) => {
+      const vis = ents.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+      if (vis && Date.now() - chHold > 900) for (const a of links) a.classList.toggle('on', a.dataset.jump === vis.target.id);
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    for (const id of ['chRide', 'chVariant', 'chDealer']) { const el = document.getElementById(id); if (el) chObs.observe(el); }
+  }
+  const setTopbarH = () => { const t = document.querySelector('.topbar'); if (t) document.documentElement.style.setProperty('--topbar-h', t.offsetHeight + 'px'); };
+  setTopbarH(); window.addEventListener('resize', setTopbarH);
+  // ---- "Right" and "Ride" are always set like the logo: Michroma, brand red ----
+  const RR_WORD = /\b(Right|Ride)\b/;
+  const RR_SKIP = /^(SCRIPT|STYLE|TEXTAREA|INPUT|OPTION|SELECT|TITLE|svg|text|tspan)$/;
+  function brandWords(root) {
+    const base = root && (root.nodeType === 3 ? root.parentNode : root.nodeType === 1 ? root : null);
+    if (!base || !base.isConnected) return;
+    const walk = document.createTreeWalker(base, NodeFilter.SHOW_TEXT, { acceptNode: (n) => {
+      for (let p = n.parentNode; p && p !== document.body; p = p.parentNode) if (RR_SKIP.test(p.nodeName) || (p.classList && (p.classList.contains('rrw') || p.hasAttribute('data-nobrand')))) return NodeFilter.FILTER_REJECT;
+      return RR_WORD.test(n.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+    } });
+    const hits = []; while (walk.nextNode()) hits.push(walk.currentNode);
+    for (const n of hits) {
+      const f = document.createDocumentFragment();
+      for (const part of n.nodeValue.split(/\b(Right|Ride)\b/)) {
+        if (part === 'Right' || part === 'Ride') { const sp = document.createElement('span'); sp.className = 'rrw'; sp.textContent = part; f.appendChild(sp); }
+        else if (part) f.appendChild(document.createTextNode(part));
+      }
+      n.parentNode.replaceChild(f, n);
+    }
+  }
+  brandWords(document.body);
+  new MutationObserver((list) => { for (const r of list) for (const n of r.addedNodes) brandWords(n); }).observe(document.body, { childList: true, subtree: true });
+  // ---- visit counting (analytics.js): one page view per route, test-drive clicks as events ----
+  let lastView = '';
+  function countView() {
+    const h = location.hash.replace(/^#/, '') || '/';
+    const path = /^\/car\//.test(h) ? h : /^\/cars/.test(h) ? '/cars' : '/';
+    if (path === lastView) return; lastView = path;
+    const m = /^\/car\/(.+)/.test(path) ? modelBySlug(path.slice(5)) : null;
+    window.rrTrack && window.rrTrack(path, m ? `${m.brand} ${m.model}` : path === '/cars' ? 'Cars' : 'Home');
+  }
+  const seg = (t) => encodeURIComponent(String(t || '').trim()).replace(/%20/g, '+');
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('[data-td],[data-ev]'); if (!a || !window.rrTrack) return;
+    const m = cp.dealerModel || modelBySlug(carSlug); if (!m) return;
+    const kind = a.hasAttribute('data-td') ? 'testdrive' : a.dataset.ev;
+    const dealer = a.dataset.dealer ? `${a.dataset.dealer}${a.dataset.area ? ' (' + a.dataset.area + ')' : ''}` : '';
+    window.rrTrack(`${kind}/${seg(m.brand)}/${seg(m.model)}/${seg(dealer)}`, `${kind}: ${m.brand} ${m.model}${dealer ? ' @ ' + dealer : ''}`, true);
+  }, true);
   // ---------------- home scene: sunrise over a road drawn in true perspective ----------------
   // scene units: 860 tall (always fully visible), width grows with the window; horizon at y=500
   const SC = { VH: 860, HZ: 500, F: 360, B: 0.32, HW: 0.62, ZMIN: 0.92, DL: 0.42, DG: 0.62 };
@@ -1492,7 +1593,8 @@
       e.preventDefault(); go(a.dataset.go);
     });
     // a shared link with filters, or a saved recommendation, opens straight on the cars page
-    if (!location.hash && (state.rec || /[?&](body|feats|brand|fuel|min|max|seats|trans)=/.test(location.search))) history.replaceState(null, '', location.pathname + location.search + '#/cars');
+    // the bare address always lands on the home page; only a shared link with filters opens the cars page
+    if (!location.hash || location.hash === '#') history.replaceState(null, '', location.pathname + location.search + (/[?&](body|feats|brand|fuel|min|max|seats|trans)=/.test(location.search) ? '#/cars' : '#/'));
     route(false);
   }
 

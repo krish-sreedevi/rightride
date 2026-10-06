@@ -112,9 +112,26 @@
   ]
  },
  "Skoda|Kodiaq RS": {
-  "page": "https://www.skoda-auto.co.in/models/kodiaq-rs",
-  "hero": null,
+  "page": "https://www.skoda-storyboard.com/en/skoda-model/new-kodiaq/kodiaq-rs/",
+  "hero": "https://cdn.skoda-storyboard.com/2025/02/28_Skoda_Kodiaq_RS_ce8ac346-1920x1281.jpg",
   "colors": [],
-  "interior": []
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://cdn.skoda-storyboard.com/2024/10/09_Skoda_Kodiaq_RS_4b20668b-1920x1425.jpg"
+   },
+   {
+    "cap": "Cockpit",
+    "img": "https://cdn.skoda-storyboard.com/2024/10/08_Skoda_Kodiaq_RS_74101564-1920x1426.jpg"
+   },
+   {
+    "cap": "Front sport seats",
+    "img": "https://cdn.skoda-storyboard.com/2024/10/12_Skoda_Kodiaq_RS_adb77162-1920x1440.jpg"
+   },
+   {
+    "cap": "RS headrest",
+    "img": "https://cdn.skoda-storyboard.com/2024/10/13_Skoda_Kodiaq_RS_e85b6e17-1920x1440.jpg"
+   }
+  ]
  }
 }

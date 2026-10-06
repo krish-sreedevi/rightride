@@ -12,11 +12,16 @@ const UA = 'RightRide/1.0 (https://aksreedevi.in/rightride)';
 // brand → patterns matched against brand/name/operator tags
 const BRANDS = {
   'Maruti Suzuki': /maruti|nexa|\barena\b|true value/i,
-  Hyundai: /hyundai/i, Tata: /\btata\b(?!.*(steel|power|sky|1mg|croma))/i, Mahindra: /mahindra(?!.*(finance|first choice))/i,
-  Kia: /\bkia\b/i, Toyota: /toyota|lexus/i, Honda: /honda(?!.*(two|bike|scooter|motorcycle|2 wheel))/i, MG: /\bmg\b|morris garages|mg motor/i,
-  Skoda: /skoda/i, Volkswagen: /volkswagen|\bvw\b/i, Renault: /renault/i, Nissan: /nissan|datsun/i, Jeep: /\bjeep\b/i,
-  'Mercedes-Benz': /mercedes/i, BMW: /\bbmw\b|\bmini\b/i, Audi: /\baudi\b/i, 'Land Rover': /land rover|range rover|jaguar|\bjlr\b/i,
+  Hyundai: /hyundai|huyndai|hyundia/i, Tata: /\btata\b(?!.*(steel|power|sky|1mg|croma))/i, Mahindra: /mahindra(?!.*(finance|first choice))/i,
+  Kia: /\bkia\b/i, Lexus: /lexus/i, Toyota: /toyota/i, Honda: /honda(?!.*(two|bike|scooter|motorcycle|2 wheel))/i, MG: /\bmg\b|morris garages|mg motor/i,
+  Skoda: /skoda|škoda/i, Volkswagen: /volkswagen|\bvw\b/i, Renault: /renault/i, Nissan: /nissan|datsun/i, Jeep: /\bjeep\b/i,
+  'Mercedes-Benz': /mercedes/i, MINI: /\bmini\b(?!.*(truck|bus|cooper store))/i, BMW: /\bbmw\b/i, Audi: /\baudi\b/i, Jaguar: /jaguar/i, 'Land Rover': /land rover|range rover|\bjlr\b/i,
+  'Citroën': /citro[eë]n/i, BYD: /\bbyd\b/i, Volvo: /volvo(?!.*(bus|truck|eicher|construction|\bce\b))/i, Porsche: /porsche/i, Isuzu: /isuzu/i,
+  'Force Motors': /force motors|\bforce\b.*(gurkha|showroom|dealer)/i, VinFast: /vinfast/i, Tesla: /\btesla\b/i,
 };
+// spelling fixes for dealer names as mapped in OpenStreetMap
+const NAME_FIX = [[/\bHuyndai\b|\bHyundia\b|\bHundai\b/gi, 'Hyundai'], [/\bMahindara\b/gi, 'Mahindra'], [/\bToyata\b/gi, 'Toyota'], [/\bMaruthi\b/gi, 'Maruti'], [/^Blu Hyundai\b/i, 'Blue Hyundai']];
+const fixName = (n) => NAME_FIX.reduce((s, [re, to]) => s.replace(re, to), n.trim());
 const NOT_CARS = /two.?wheel|bike|scooter|motorcycle|tvs|bajaj|hero|royal enfield|yamaha|suzuki motorcycle|ather|ola electric|used car|pre.?owned|true value|spinny|cars24|carwale|service centre only|tyre/i;
 
 const tiles = [];
@@ -60,7 +65,7 @@ for (const [s, w, n, e] of tiles) {
     const key = `${brand}|${t.name}|${la.toFixed(3)}|${lo.toFixed(3)}`;
     if (seen.has(key)) continue; seen.add(key);
     const addr = t['addr:full'] || [t['addr:housenumber'], t['addr:street'], t['addr:suburb'] || t['addr:neighbourhood'] || t['addr:place']].filter(Boolean).join(', ');
-    const d = { b: brand, n: t.name.trim(), la: +la.toFixed(5), lo: +lo.toFixed(5) };
+    const d = { b: brand, n: fixName(t.name), la: +la.toFixed(5), lo: +lo.toFixed(5) };
     if (addr) d.a = addr;
     if (t['addr:city'] || t['addr:district']) d.c = t['addr:city'] || t['addr:district'];
     if (t['addr:postcode']) d.p = String(t['addr:postcode']).replace(/\s/g, '');

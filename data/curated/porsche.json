@@ -1,0 +1,281 @@
+{
+ "brand": "Porsche",
+ "curated": true,
+ "updated": "2026-10-06",
+ "source": "https://www.porsche.com/middle-east/_india_/models/ (official model overview, 'From' prices per variant)",
+ "models": [
+  {
+   "model": "911",
+   "body": "Coupe / Convertible",
+   "url": "https://www.porsche.com/middle-east/_india_/models/911/",
+   "variants": [
+    {
+     "name": "911 Carrera",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 4,
+     "price": 21129000,
+     "specs": {
+      "Power": "290 kW / 394 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    },
+    {
+     "name": "911 Carrera 4 GTS",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 4,
+     "price": 28214000,
+     "specs": {
+      "Power": "398 kW / 541 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    },
+    {
+     "name": "911 GT3",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 4,
+     "price": 33260000,
+     "specs": {
+      "Power": "375 kW / 510 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    },
+    {
+     "name": "911 Turbo S",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 4,
+     "price": 38249000,
+     "specs": {
+      "Power": "523 kW / 711 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    }
+   ]
+  },
+  {
+   "model": "Taycan",
+   "body": "Sedan",
+   "url": "https://www.porsche.com/middle-east/_india_/models/taycan/",
+   "variants": [
+    {
+     "name": "Taycan 4S",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 20070000,
+     "specs": {
+      "Power": "440 kW / 598 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    },
+    {
+     "name": "Taycan 4S Black Edition",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 20945000,
+     "specs": {
+      "Power": "440 kW / 598 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    },
+    {
+     "name": "Taycan Turbo",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 27427000,
+     "specs": {
+      "Power": "650 kW / 884 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    }
+   ]
+  },
+  {
+   "model": "Panamera",
+   "body": "Sedan",
+   "url": "https://www.porsche.com/middle-east/_india_/models/panamera/",
+   "variants": [
+    {
+     "name": "Panamera",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 4,
+     "price": 17912000,
+     "specs": {
+      "Power": "260 kW / 353 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    }
+   ]
+  },
+  {
+   "model": "Macan",
+   "body": "SUV",
+   "url": "https://www.porsche.com/middle-east/_india_/models/macan/",
+   "variants": [
+    {
+     "name": "Macan",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 9109000,
+     "specs": {
+      "Power": "195 kW / 265 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    },
+    {
+     "name": "Macan Electric",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 5,
+     "price": 12162000,
+     "specs": {
+      "Power": "265 kW / 360 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    },
+    {
+     "name": "Macan 4S Electric",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 16304000,
+     "specs": {
+      "Power": "380 kW / 516 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    },
+    {
+     "name": "Macan Turbo Electric",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 17774000,
+     "specs": {
+      "Power": "470 kW / 639 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    }
+   ]
+  },
+  {
+   "model": "Cayenne",
+   "body": "SUV",
+   "url": "https://www.porsche.com/middle-east/_india_/models/cayenne/",
+   "variants": [
+    {
+     "name": "Cayenne",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 15118000,
+     "specs": {
+      "Power": "260 kW / 353 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    },
+    {
+     "name": "Cayenne Black Edition",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 18303000,
+     "specs": {
+      "Power": "260 kW / 353 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    },
+    {
+     "name": "Cayenne GTS",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 21126000,
+     "specs": {
+      "Power": "368 kW / 500 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    },
+    {
+     "name": "Cayenne Electric",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 17727000,
+     "specs": {
+      "Power": "325 kW / 442 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    },
+    {
+     "name": "Cayenne Turbo Electric",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "price": 22751000,
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    }
+   ]
+  },
+  {
+   "model": "Cayenne Coupé",
+   "body": "SUV",
+   "url": "https://www.porsche.com/middle-east/_india_/models/cayenne/cayenne-coupe-models/",
+   "variants": [
+    {
+     "name": "Cayenne Coupé",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 15737000,
+     "specs": {
+      "Power": "260 kW / 353 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    },
+    {
+     "name": "Cayenne Coupé Black Edition",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 18995000,
+     "specs": {
+      "Power": "260 kW / 353 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    },
+    {
+     "name": "Cayenne GTS Coupé",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "price": 21261000,
+     "specs": {
+      "Power": "368 kW / 500 PS"
+     },
+     "priceSource": "https://www.porsche.com/middle-east/_india_/models/"
+    }
+   ]
+  }
+ ]
+}

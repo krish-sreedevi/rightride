@@ -89,5 +89,28 @@
     "img": "https://storyblok-assets.prod.nissan.eu/f/288274551197823/1440x1800/20dc78aa4c/vlp-dual-mode-steering-mobile-1440x1800-07j.jpg"
    }
   ]
+ },
+ "Nissan|X-Trail": {
+  "page": "https://www.nissan.in/vehicles/new/x-trail.html",
+  "hero": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/x-trail/overview/Nissan%20X-TRAIL%20Side%20Angle.png",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Instrument cluster",
+    "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/x-trail/gallery/1-SOTA-D.jpg"
+   },
+   {
+    "cap": "Dual-zone climate control",
+    "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/x-trail/gallery/4-SOTA-D.jpg"
+   },
+   {
+    "cap": "Floating centre console",
+    "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/x-trail/gallery/5-MIJ-D.jpg"
+   },
+   {
+    "cap": "Cabin layout",
+    "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/x-trail/gallery/2-SUVE-D.jpg"
+   }
+  ]
  }
 }

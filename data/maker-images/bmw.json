@@ -339,10 +339,56 @@
   ]
  },
  "BMW|iX1 Lwb": {
-  "page": "https://www.bmw.in/en/all-models.html",
-  "hero": null,
-  "colors": [],
-  "interior": []
+  "page": "https://www.bmw.in/en/all-models/bmw-i/iX1/2025/bmw-ix1-highlights.html",
+  "hero": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8ELDOdqQmSLlXEifG7QLl5w8jCzojrtE6lcJiacUsgXA9Hhccy6R3aJt6C3NrvXYuIWptvM%25cO0%25lcIO7qTMI0nTNL3u8uHLfmFezWDFPNATQdbduTWGZCpHEyYkbHiaiGbXkJMAmDCkIFJGJkSABKupUP8FeWS6GbSKMPVYp9hWhbNmQprPo90ya6fbHi4TnFt9%25wc3OsRiftxdIUyw178ziPftECUkwEo7slGAtW4CrXpF7M9lZQ6KC3nXRaYWlI4Q5nmPX%25RagOybQfGnvIT9aeCO2B3iK2RIjedwW%252BDMztPloeqhk7bSkMLoAC9VRhJHFlievou%25KXsmDHSfWQr4W%25V1PaZcMfNEbnRZi10s9O56TE4riIgqRscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2gKv6jQ%25jpJ2YDafD6bjmqn1qA8DyLOE3PKqTJIsd7SL3uBrzTvJdSeZHWCuzHhQIeMT63D%25xqlRGwg6QuiVpRB%25r330KEFY8UG4fXl9aPL3hSF2%25P6%25FyrU519xEWhcavQFzl5JE47BdqfojT",
+  "colors": [
+   {
+    "name": "Mineral White",
+    "img": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8ELDOdqQmSLlXEifG7QLl5w8jCzojrtE6lcJiacUsgXA9Hhccy6R3aJt6C3NrvXYuIWptvM%25cO0%25lcIO7qTMI0nTNL3u8uHLfmFezWDFPNATQdbduTWGZCpHEyYkbHiaiGbXkJMAmDCkIFJGJkSABKupUP8FeWS6GbSKMPVYp9hWhbNmQprPo90ya6fbHi4TnFt9%25wc3OsRiftxdIUyw178ziPftECUkwEo7slGAtW4CrXpF7M9lZQ6KC3nXRaYWlI4Q5nmPX%25RagOybQfGnvIT9aeCO2B3iK2RIjedwW%252BDMztPloeqhk7bSkMLoAC9VRhJHFlievou%25KXsmDHSfWQr4W%25V1PaZcMfNEbnRZi10s9O56TE4riIgqRscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2gKv6jQ%25jpJ2YDafD6bjmqn1qA8DyLOE3PKqTJIsd7SL3uBrzTvJdSeZHWCuzHhQIeMT63D%25xqlRGwg6QuiVpRB%25r330KEFY8UG4fXl9aPL3hSF2%25P6%25FyrU519xEWhcavQFzl5JE47BdqfojT"
+   },
+   {
+    "name": "Night Dusk Blue",
+    "img": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8ELDOdqQmSLlXEifG7QLl5w8jCzgJwtE6lcJiacUsgXA9Hhccy6R3aJt6C3NrvXYuIWptvM%25cO0%25lcIO7qTMI0nTNL3u8uHLfmFezWDFPNATQdbduTWGZCpHEyYkbHiaiGbXkJMAmDCkIFJGJkSABKupUP8FeWS6GbSKMPVYp9hWhbNmQprPo90ya6fbHi4TnFt9%25wc3OsRiftxdIUyw178ziPftECUkwEo7slGAtW4CrXpF7M9lZQ6KC3nXRaYWlI4Q5nmPX%25RagOybQfGnvIT9aeCO2B3iK2RIjedwW%252BDMztPloeqhk7bSkMLoAC9VRhJHFlievou%25KXsmDHSfWQr4W%25V1PaZcMfNEbnRZi10s9O56TE4riIgqRscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2gKv6jQ%25jpJ2YDafD6bjmqn1qA8DyLOE3PKqTJIsd7SL3uBrzTvJdSeZHWCuzHhQIeMT63D%25xqlRGwg6QuiVpRB%25r330KEFY8UG4fXl9aPL3hSF2%25P6%25FyrU519xEWhcavQFzl5JE47BdqfojT"
+   },
+   {
+    "name": "Fire Red",
+    "img": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8ELDOdqQmSLlXEifG7QLl5w8jCzghftE6lcJiacUsgXA9Hhccy6R3aJt6C3NrvXYuIWptvM%25cO0%25lcIO7qTMI0nTNL3u8uHLfmFezWDFPNATQdbduTWGZCpHEyYkbHiaiGbXkJMAmDCkIFJGJkSABKupUP8FeWS6GbSKMPVYp9hWhbNmQprPo90ya6fbHi4TnFt9%25wc3OsRiftxdIUyw178ziPftECUkwEo7slGAtW4CrXpF7M9lZQ6KC3nXRaYWlI4Q5nmPX%25RagOybQfGnvIT9aeCO2B3iK2RIjedwW%252BDMztPloeqhk7bSkMLoAC9VRhJHFlievou%25KXsmDHSfWQr4W%25V1PaZcMfNEbnRZi10s9O56TE4riIgqRscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2gKv6jQ%25jpJ2YDafD6bjmqn1qA8DyLOE3PKqTJIsd7SL3uBrzTvJdSeZHWCuzHhQIeMT63D%25xqlRGwg6QuiVpRB%25r330KEFY8UG4fXl9aPL3hSF2%25P6%25FyrU519xEWhcavQFzl5JE47BdqfojT"
+   },
+   {
+    "name": "Skyscraper Grey",
+    "img": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8ELDOdqQmSLlXEifG7QLl5w8jCzgautE6lcJiacUsgXA9Hhccy6R3aJt6C3NrvXYuIWptvM%25cO0%25lcIO7qTMI0nTNL3u8uHLfmFezWDFPNATQdbduTWGZCpHEyYkbHiaiGbXkJMAmDCkIFJGJkSABKupUP8FeWS6GbSKMPVYp9hWhbNmQprPo90ya6fbHi4TnFt9%25wc3OsRiftxdIUyw178ziPftECUkwEo7slGAtW4CrXpF7M9lZQ6KC3nXRaYWlI4Q5nmPX%25RagOybQfGnvIT9aeCO2B3iK2RIjedwW%252BDMztPloeqhk7bSkMLoAC9VRhJHFlievou%25KXsmDHSfWQr4W%25V1PaZcMfNEbnRZi10s9O56TE4riIgqRscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2gKv6jQ%25jpJ2YDafD6bjmqn1qA8DyLOE3PKqTJIsd7SL3uBrzTvJdSeZHWCuzHhQIeMT63D%25xqlRGwg6QuiVpRB%25r330KEFY8UG4fXl9aPL3hSF2%25P6%25FyrU519xEWhcavQFzl5JE47BdqfojT"
+   },
+   {
+    "name": "M Brooklyn Grey",
+    "img": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8ELDOdqQmSLlXEifG7QLl5w8jCzgaStE6lcJiacUsgXA9Hhccy6R3aJt6C3NrvXYuIWptvM%25cO0%25lcIO7qTMI0nTNL3u8uHLfmFezWDFPNATQdbduTWGZCpHEyYkbHiaiGbXkJMAmDCkIFJGJkSABKupUP8FeWS6GbSKMPVYp9hWhbNmQprPo90ya6fbHi4TnFt9%25wc3OsRiftxdIUyw178ziPftECUkwEo7slGAtW4CrXpF7M9lZQ6KC3nXRaYWlI4Q5nmPX%25RagOybQfGnvIT9aeCO2B3iK2RIjedwW%252BDMztPloeqhk7bSkMLoAC9VRhJHFlievou%25KXsmDHSfWQr4W%25V1PaZcMfNEbnRZi10s9O56TE4riIgqRscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2gKv6jQ%25jpJ2YDafD6bjmqn1qA8DyLOE3PKqTJIsd7SL3uBrzTvJdSeZHWCuzHhQIeMT63D%25xqlRGwg6QuiVpRB%25r330KEFY8UG4fXl9aPL3hSF2%25P6%25FyrU519xEWhcavQFzl5JE47BdqfojT"
+   },
+   {
+    "name": "M Carbon Black",
+    "img": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8ELDOdqQmSLlXEifG7QLl5w8jCziTrtE6lcJiacUsgXA9Hhccy6R3aJt6C3NrvXYuIWptvM%25cO0%25lcIO7qTMI0nTNL3u8uHLfmFezWDFPNATQdbduTWGZCpHEyYkbHiaiGbXkJMAmDCkIFJGJkSABKupUP8FeWS6GbSKMPVYp9hWhbNmQprPo90ya6fbHi4TnFt9%25wc3OsRiftxdIUyw178ziPftECUkwEo7slGAtW4CrXpF7M9lZQ6KC3nXRaYWlI4Q5nmPX%25RagOybQfGnvIT9aeCO2B3iK2RIjedwW%252BDMztPloeqhk7bSkMLoAC9VRhJHFlievou%25KXsmDHSfWQr4W%25V1PaZcMfNEbnRZi10s9O56TE4riIgqRscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2gKv6jQ%25jpJ2YDafD6bjmqn1qA8DyLOE3PKqTJIsd7SL3uBrzTvJdSeZHWCuzHhQIeMT63D%25xqlRGwg6QuiVpRB%25r330KEFY8UG4fXl9aPL3hSF2%25P6%25FyrU519xEWhcavQFzl5JE47BdqfojT"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8wlD7Z9cvt3MvEifG70qbX0x1RCzPhe00YGryXqiGtySE5CpLnFUi5Bo0aVo70nawjmBnVQmSDyLcLhDH6kI3F2kKSzmlTWTLmF8stUhfYpdWhbXb8WCdqBz62tdnkq8qdJzOALUxKckIFJG8WJABKupUPeFeWS6lUEKMPVYXGHWhbNmQkiPo90ya1rbHi4TnxY9%25wc3bKHiftxd9fMw178ziFNtECUkwBP7slGAtyQCrXpF7nNlZQ6KCorXRaYWlH8Q5nmPXItagOybAgrnvIT9FogO2B3iK7MIjedwWJdBDMztPureqhk7bI5MLoAC162hJHFlENFou%25KXs0BHSfWQrsb%25V1PaZGmfNEbnRjr10s9OGQJE4riIrHYscZwBZ%25rrxRteRoyZ857M5JNRUgChgRA5GvlovUqgp2XH2GWv6jQ%25jzc2YDafyKAjmqn1TwJDyLOE3m5qTJIshFtL3helnIBmGy2o4j7r89RGlLbuUrOoEyyVAfPnQm2apRBnrFP0KEFY8UG4fXl9aPL3hSF2%25P6kRet"
+   },
+   {
+    "cap": "Cockpit",
+    "img": "https://prod.cosy.bmw.cloud/connext-bmw/cosySec?COSY-EU-100-7331c9Nv2Z7d5yKlHS9gwyljT5lkQM370jreTQLTKs8VNP05PXiN0bH8wlD7Z9cvt3MvEifG70qbX0x1RCzPhe00YGryXqiGtySE5CpLnFUi5Bo0aVo70nawjmBnVQmSDyLcLhDH6kI3F2kKSzmlTWTLmF8stUhfYpdWhbXb8WCdqBz62tdnkq8qdJzOALUxKckIFJG8WJABKupUPeFeWS6lUEKMPVYXGHWhbNmQkiPo90ya1rbHi4TnxY9%25wc3bKHiftxd9fMw178ziFNtECUkwBP7slGAtyQCrXpF7nNlZQ6KCorXRaYWlH8Q5nmPXItagOybAgrnvIT9FogO2B3iK7MIjedwWJdBDMztPureqhk7bI5MLoAC162hJHFlENFou%25KXs0BHSfWQrsb%25V1PaZGmfNEbnRjr10s9OGQJE4riIrHYscZwBZ%25rrxRteRoyZ857M5JNRUgChgRA5GvlovUqgp2XH2GWv6jQ%25jzc2YDafyKAjmqn1TwJDyLOE3m5qTJIshFtL3helnIBmGy2o4j7r89RGlLbuUrOoEyyVAfPnQm2apRBnrFP0KEFY8UG4fXl9aPL3hSF2%25P6uQvX%25BfxbUnQ"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://bmw.scene7.com/is/image/BMW/rear-leg-room-ix1-launch:3to2?fmt=jpg&wid=1600"
+   },
+   {
+    "cap": "Curved display",
+    "img": "https://bmw.scene7.com/is/image/BMW/bmw-curved-display-with-os9:3to2?fmt=jpg&wid=1600"
+   },
+   {
+    "cap": "Centre console",
+    "img": "https://bmw.scene7.com/is/image/BMW/floating-console_1:3to2?fmt=jpg&wid=1600"
+   }
+  ]
  },
  "BMW|M2": {
   "page": "https://www.bmw.in/en/all-models.html",

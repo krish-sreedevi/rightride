@@ -938,5 +938,45 @@
     "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:3ca4f6b8-aea5-4913-aa4b-eb8874d730ed/as/XL6_image_paddle-shifter-1.png?width=1600&preferwebp=false"
    }
   ]
+ },
+ "Maruti Suzuki|Eeco": {
+  "page": "https://www.marutisuzuki.com/arena/eeco",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/2025.06.21_12.18.21_Eeco_360_Blue_PathTracer_0010?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Bluish Black",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.07.02_14.10.37_Eeco_360_Blue_PathTracer_0010?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Metallic Glistening Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.07.02_14.02.51_Eeco_360_Blue_PathTracer_0010?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Solid White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.07.02_13.48.15_Eeco_360_Blue_PathTracer_0010?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Metallic Brisk Blue",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.06.21_12.18.21_Eeco_360_Blue_PathTracer_0010?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Metallic Silky Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.07.02_13.55.47_Eeco_360_Silver_PathTracer_0010?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Cabin",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:b0ce6bae-0697-44e3-866f-12c25ed35813/as/spacious_cabin_desk.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Seating (5 / 6 seater)",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:afffb7d4-a25b-4773-95b4-43e99d86269f/as/5_6_seat_desk.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "AC and heater controls",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:04ac5672-3e34-4b2f-942d-8e25f16022ef/as/Air-conditioner_heater_desk.png?width=1600&preferwebp=false"
+   }
+  ]
  }
 }

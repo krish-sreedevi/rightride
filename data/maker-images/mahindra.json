@@ -426,5 +426,209 @@
     "img": "https://auto.mahindra.com/on/demandware.static/-/Sites-amc-Library/default/dw585c4593/mahindraelectricimagesnew/xuv400images/xuv-features/DashboardReady_1500x750.png"
    }
   ]
+ },
+ "Mahindra|BE 6 Sporteq": {
+  "page": "https://www.mahindraelectricsuv.com/esuv/MBE6.html",
+  "hero": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw66f4a1ab/images/BE6/hires/Pack_Four/Pack_Four_DeepForest_1366x600.png",
+  "colors": [
+   {
+    "name": "Deep Forest",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw66f4a1ab/images/BE6/hires/Pack_Four/Pack_Four_DeepForest_1366x600.png"
+   },
+   {
+    "name": "Firestorm Orange",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw16fdf8aa/images/BE6/hires/Pack_Four/Pack_Four_FirestromeOrange_1366x600.png"
+   },
+   {
+    "name": "Desert Myst",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwe6dd0460/images/BE6/hires/Pack_Four/Pack_Four_DesertMyst_1366x600.png"
+   },
+   {
+    "name": "Tango Red",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw49de1744/images/BE6/hires/Pack_Four/Pack_Four_TangoRed_1366x600.png"
+   },
+   {
+    "name": "Everest White",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwbcdc831e/images/BE6/hires/Pack_Four/Pack_Four_EverestWhite_1366x600.png"
+   },
+   {
+    "name": "Stealth Black",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwf85bde8f/images/BE6/hires/Pack_Four/Pack_Four_StealthBlack_1366x600.png"
+   },
+   {
+    "name": "Ruby Velvet",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwe02d215b/images/BE6/hires/Pack_Four/Pack_Four_RubyVelvet_1366x600.png"
+   },
+   {
+    "name": "Graphite Storm",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw9982a14c/images/BE6/hires/LE/LE_GalaxyGrey_1366x600.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwc4d0d7ed/BE6_SPORTEQ/KEY_HIGHLIGHTS/Dynamic_Dashboard_3Screen_Wide.jpg"
+   },
+   {
+    "cap": "Cockpit",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwe9aa5e47/BE6_SPORTEQ/KEY_HIGHLIGHTS/LE_Cockpit_View_Wide.jpg"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwcf4fc12e/BE6_SPORTEQ/KEY_HIGHLIGHTS/Steering_Wide.jpg"
+   },
+   {
+    "cap": "Ventilated seats",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw0012c151/BE6_SPORTEQ/KEY_HIGHLIGHTS/VentilatedSeats_Wide.jpg"
+   }
+  ]
+ },
+ "Mahindra|XEV 9e": {
+  "page": "https://www.mahindraelectricsuv.com/esuv/xev-9e/MXV9.html",
+  "hero": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw9d3e4ed7/images/XEV9E/hires/packThree-R19/Everest_White_1366x600.png",
+  "colors": [
+   {
+    "name": "Deep Forest",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwc70bb8f9/images/XEV9E/hires/packThree-R19/Deep_Forest_1366x600.png"
+   },
+   {
+    "name": "Desert Myst",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw170a9ad0/images/XEV9E/hires/packThree-R19/Desert_Myst_1366x600.png"
+   },
+   {
+    "name": "Tango Red",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw701e0d8c/images/XEV9E/hires/packThree-R19/Tango_Red_1366x600.png"
+   },
+   {
+    "name": "Everest White",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw9d3e4ed7/images/XEV9E/hires/packThree-R19/Everest_White_1366x600.png"
+   },
+   {
+    "name": "Stealth Black",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwec37764a/images/XEV9E/hires/packThree-R19/Stealth_Black_1366x600.png"
+   },
+   {
+    "name": "Ruby Velvet",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwa47a4951/images/XEV9E/hires/packThree-R19/Ruby_Velvet_1366x600.png"
+   },
+   {
+    "name": "Nebula Blue",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw89b6b7ac/images/XEV9E/hires/packThree-R19/Nebula_Blue_1366x600.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw3048f708/Xev-9e/ride/fold-3.6.jpg"
+   },
+   {
+    "cap": "Cockpit",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw6bafe2e3/Xev-9e/Client_Fold-2.3.png"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwe20142f8/Xev-9e/Client_Fold-3.4.png"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwfee2bd26/Xev-9e/DESKTOP_RED_RED_Fold_2.6.png"
+   }
+  ]
+ },
+ "Mahindra|XEV 9S": {
+  "page": "https://www.mahindraelectricsuv.com/esuv/xev-9s/XEV9.html",
+  "hero": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwa8f28381/images/XEV9/hires/PackThreeTech_Everest_White_1366x600.png",
+  "colors": [
+   {
+    "name": "Nebula Blue",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw36a51997/images/XEV9/hires/PackThreeTech_Nebula_Blue_1366x600.png"
+   },
+   {
+    "name": "Midnight Black",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwb1fc950e/images/XEV9/hires/PackThreeTech_MidNight_Black_1366x600.png"
+   },
+   {
+    "name": "Desert Myst",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw73c9fabb/images/XEV9/hires/PackThreeTech_Desert_Myst_1366x600.png"
+   },
+   {
+    "name": "Ruby Velvet",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw9cbfc7d6/images/XEV9/hires/PackThreeTech_Ruby_Velvet_1366x600.png"
+   },
+   {
+    "name": "Everest White",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dwa8f28381/images/XEV9/hires/PackThreeTech_Everest_White_1366x600.png"
+   },
+   {
+    "name": "Stealth Black",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-esuv-product-catalog/default/dw26a2462c/images/XEV9/hires/PackThreeTech_Stealth_Black_1366x600.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw19703ebf/XEV-9s/desktop_latest/DIGITAL_Cockpit_View_1920X960.jpg"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwb65ded3a/XEV-9s/desktop_latest/DIGITAL_Aerial_Interior_1920X960.jpg"
+   },
+   {
+    "cap": "Panoramic sunroof",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwd481ce98/XEV-9s/desktop_latest/DIGITAL_Panaromic_Skyroof_1920X960.jpg"
+   },
+   {
+    "cap": "Sliding second-row seats",
+    "img": "https://www.mahindraelectricsuv.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwf2fe5268/XEV-9s/FEATURES_DESKTOP/DIGITAL_SlidingSeats_1920-X-960.jpg"
+   }
+  ]
+ },
+ "Mahindra|XUV 3XO EV": {
+  "page": "https://auto.mahindra.com/suv/xuv3xo-ev.html",
+  "hero": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw5bf55673/images/X3XE/hires/AX7L_1366x443_DeepForest.png",
+  "colors": [
+   {
+    "name": "Deep Forest",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw5bf55673/images/X3XE/hires/AX7L_1366x443_DeepForest.png"
+   },
+   {
+    "name": "Galaxy Grey",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwb5ef29cb/images/X3XE/hires/AX7L_GalaxyGrey_1366x443.png"
+   },
+   {
+    "name": "Nebula Blue",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwe9cfd693/images/X3XE/hires/AX7L_1366x443_NebulaBlue.png"
+   },
+   {
+    "name": "Tango Red",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw31bac62c/images/X3XE/hires/AX7L_1366x443_TangoRed.png"
+   },
+   {
+    "name": "Everest White",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwedefabb6/images/X3XE/hires/AX7L_1366x443_EverestWhite.png"
+   },
+   {
+    "name": "Stealth Black",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw889b8234/images/X3XE/hires/AX7L_1366x443_StealthBlack.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw4cec640a/XUV3XO_ev/Desktop/X3XE_Twin_HD_Screens.png"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw7d16bb6f/XUV3XO_ev/Desktop/Cabin_Space.jpg"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dwa2e38496/XUV3XO_ev/Desktop/Leatherette_Seat.jpg"
+   },
+   {
+    "cap": "Panoramic sunroof",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw23302b22/XUV3XO_ev/Desktop/Panoramic_Sunroof.jpg"
+   }
+  ]
  }
 }

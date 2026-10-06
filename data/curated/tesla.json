@@ -1,0 +1,41 @@
+{
+  "brand": "Tesla",
+  "curated": true,
+  "updated": "2026-10-06",
+  "source": "https://www.cardekho.com/tesla/model-y (tesla.com/en_in blocked automated access; ex-showroom New Delhi)",
+  "models": [
+    {
+      "model": "Model Y",
+      "body": "SUV",
+      "url": "https://www.tesla.com/en_in/modely",
+      "variants": [
+        {
+          "name": "Premium RWD",
+          "fuel": "Electric",
+          "transmission": "Automatic",
+          "drive": "",
+          "seats": 5,
+          "price": 5089000,
+          "specs": {
+            "Range": "500 km (WLTP)",
+            "Battery": "60 kWh"
+          },
+          "priceSource": "https://www.cardekho.com/tesla/model-y"
+        },
+        {
+          "name": "Model Y L Premium AWD",
+          "fuel": "Electric",
+          "transmission": "Automatic",
+          "drive": "AWD",
+          "seats": 6,
+          "price": 6199000,
+          "specs": {
+            "Range": "681 km (WLTP)",
+            "Battery": "82 kWh"
+          },
+          "priceSource": "https://www.cardekho.com/tesla/model-y"
+        }
+      ]
+    }
+  ]
+}

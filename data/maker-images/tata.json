@@ -714,5 +714,53 @@
     "img": "https://s7ap1.scene7.com/is/image/tatapassenger/premium-interior?wid=614&fmt=jpg&qlt=85"
    }
   ]
+ },
+ "Tata|Harrier EV": {
+  "page": "https://ev.tata.cars/harrier/ev.html",
+  "hero": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/360-exterior/empowered-oxide/empoweredoxide-0.png",
+  "colors": [
+   {
+    "name": "Empowered Oxide with Dual Tone",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/360-exterior/empowered-oxide/empoweredoxide-0.png"
+   },
+   {
+    "name": "Nainital Nocturne with Dual Tone",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/360-exterior/nainital-nocturn/nainitalnocturn-0.png"
+   },
+   {
+    "name": "Pristine White with Dual Tone",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/360-exterior/prestine-white/prestinewhite-0.png"
+   },
+   {
+    "name": "Pure Grey with Dual Tone",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/360-exterior/pure-grey/puregrey-0.png"
+   },
+   {
+    "name": "Seaweed Green with Dual Tone",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/360-exterior/seaweed-green/SeaweedGreen-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Digital cockpit",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/staticfeaturebucket/comfort-section/harrier-ev-digital-cockpit-614x400.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/overview-assets/interior/fr-seat_614x400.jpg"
+   },
+   {
+    "cap": "Rear seat",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/staticfeaturebucket/comfort-section/rear-seat-with-armrest.jpg"
+   },
+   {
+    "cap": "Panoramic sunroof",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/overview-assets/interior/panoramic-sunroof-shot.jpg"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/harrier/year-2025/ev/promoting-vc/staticfeaturebucket/design-section/steering-wheel-buttons-614x400.jpg"
+   }
+  ]
  }
 }

@@ -1,0 +1,69 @@
+{
+ "Force Motors|Gurkha 3-Door": {
+  "page": "https://forcegurkha.co.in/",
+  "hero": "https://forcegurkha.co.in/wp-content/uploads/2024/04/3-DOOR_12.jpg",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/dashboard.jpg"
+   },
+   {
+    "cap": "Touchscreen",
+    "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/touch-screen.jpg"
+   },
+   {
+    "cap": "Digital cluster",
+    "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/digital-cluster.jpg"
+   },
+   {
+    "cap": "Centre console",
+    "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/feature-2.jpg"
+   },
+   {
+    "cap": "Cabin layout",
+    "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/COMFORTABLE_SPACIOUS_SEATING.png"
+   }
+  ]
+ },
+ "Force Motors|Gurkha 5-Door": {
+  "page": "https://forcegurkha.co.in/",
+  "hero": "https://forcegurkha.co.in/wp-content/uploads/2024/04/5-DOOR_8.jpg",
+  "colors": [
+   {
+    "name": "Red",
+    "img": "https://forcegurkha.co.in/wp-content/uploads/2024/04/5-DOOR_8.jpg"
+   },
+   {
+    "name": "Black",
+    "img": "https://forcegurkha.co.in/wp-content/uploads/2024/04/5-DOOR_5.jpg"
+   },
+   {
+    "name": "Green",
+    "img": "https://forcegurkha.co.in/wp-content/uploads/2024/04/5-DOOR_7.jpg"
+   },
+   {
+    "name": "White",
+    "img": "https://forcegurkha.co.in/wp-content/uploads/2024/04/5-DOOR_9.jpg"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/dashboard.jpg"
+   },
+   {
+    "cap": "Cabin seating",
+    "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/comfort.jpg"
+   },
+   {
+    "cap": "Seating layout (top view)",
+    "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/convenience.jpg"
+   },
+   {
+    "cap": "Touchscreen",
+    "img": "https://forcegurkha.co.in/wp-content/themes/force-motors/assets/images/touch-screen.jpg"
+   }
+  ]
+ }
+}

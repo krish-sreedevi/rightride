@@ -1,0 +1,32 @@
+{
+  "brand": "Land Rover",
+  "curated": true,
+  "updated": "2026-10-06",
+  "source": "https://www.landrover.in/discovery/discovery/models-and-specifications.html (models); price from autocarindia.com (Delhi ex-showroom)",
+  "models": [
+    {
+      "model": "Discovery",
+      "body": "SUV",
+      "url": "https://www.landrover.in/discovery/discovery/index.html",
+      "variants": [
+        {
+          "name": "Tempest D300",
+          "fuel": "Diesel",
+          "transmission": "Automatic",
+          "drive": "AWD",
+          "seats": 7,
+          "price": 13906000,
+          "engine": "2997 cc",
+          "priceSource": "https://www.autocarindia.com/cars/land-rover/discovery/price-in-delhi",
+          "featureFlags": {
+            "sunroof": true,
+            "panoramic": true,
+            "hud": true,
+            "massage": true,
+            "powerTailgate": true
+          }
+        }
+      ]
+    }
+  ]
+}

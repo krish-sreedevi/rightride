@@ -1,0 +1,42 @@
+{
+ "Volvo|EX30": {
+  "page": "https://www.volvocars.com/in/cars/ex30-electric/",
+  "hero": "https://wizz.volvocars.com/images/2026/416/exterior/studio/threeQuartersFrontLeft/transparent_exterior-studio-threeQuartersFrontLeft_605CB334A01ECB5F193E54D33A55EC3E09D70575.png",
+  "colors": [],
+  "interior": [
+   { "cap": "Dashboard", "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt63cddde4b2a91c3f/6878ff36cfeb1672c7200fda/Interior-bento-dashboard-16x9-EX30.jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920" },
+   { "cap": "Front seats", "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt144d3b573a761850/691727bff88986c693e89144/my26_ex30_int_isolated_seat_side_16x9.jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920" },
+   { "cap": "Rear seats", "img": "https://wizz.volvocars.com/images/2026/416/interior/studio/rear/interior-studio-rear_C1D325518048D683D363DCBAF5F9349069FCB10A.png" }
+  ]
+ },
+ "Volvo|EC40": {
+  "page": "https://www.volvocars.com/in/cars/ec40-electric/",
+  "hero": "https://wizz.volvocars.com/images/2027/539/exterior/studio/threeQuartersFrontLeft/transparent_exterior-studio-threeQuartersFrontLeft_9D4C8DA8A710281B017B9B53B7768A2DD035FC23.png",
+  "colors": [],
+  "interior": [
+   { "cap": "Dashboard", "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt1c44ced7a3a8a04d/691721b22e6c247d10eee774/my26_ec40_int_isolated_dashboard_16x9.jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920" },
+   { "cap": "Front seats", "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/bltc2d1e7cdc438f28b/6a4f7d3019f7cd7c964b3396/EC40-in-16x9.jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920" },
+   { "cap": "Rear seats", "img": "https://wizz.volvocars.com/images/2027/539/interior/studio/rear/interior-studio-rear_62BA391F8107ADCE1A1781DDBE7BDC61924C35F0.png" }
+  ]
+ },
+ "Volvo|XC60": {
+  "page": "https://www.volvocars.com/in/cars/xc60/",
+  "hero": "https://wizz.volvocars.com/images/2027/246/exterior/studio/threeQuartersFrontLeft/transparent_exterior-studio-threeQuartersFrontLeft_B31D91331E033FE021A467E095C2EA9F2E47E094.png",
+  "colors": [],
+  "interior": [
+   { "cap": "Dashboard", "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt23439e64d9c00605/67926b624174ad0a90835054/Bento_1-16x9.jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920" },
+   { "cap": "Front seats", "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt87f38fb36a54be1b/6a844e133d80b8458ca8d286/1753105562_Volvo_XC60_Image_re-size_4x3-06_(3).jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920" },
+   { "cap": "Rear seats", "img": "https://wizz.volvocars.com/images/2027/246/interior/studio/rear/interior-studio-rear_CE831C478C9253DDE7E9883327BB561C6CCF819D.png" }
+  ]
+ },
+ "Volvo|XC90": {
+  "page": "https://www.volvocars.com/in/cars/xc90/",
+  "hero": "https://wizz.volvocars.com/images/2026/256/exterior/studio/threeQuartersFrontLeft/transparent_exterior-studio-threeQuartersFrontLeft_0F37F084137645321445AA74E53CBD793EA00D07.png",
+  "colors": [],
+  "interior": [
+   { "cap": "Dashboard", "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt41804ccac63b02c7/685b9e702f51360652e0905f/xc90-fuel-interior-bento-row1-item1-16x9_16X9.jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920" },
+   { "cap": "Front seats", "img": "https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt88468d163eb13f18/69174515559c1fc49c113be1/my26_xc90_int_isolated_seat_side_16x9.jpg?branch=prod_alias&quality=85&format=auto&iar=0&w=1920" },
+   { "cap": "Rear seats", "img": "https://wizz.volvocars.com/images/2026/256/interior/studio/rear/interior-studio-rear_D829E36676C68FEA76E604A036BB828CFFC88074.png" }
+  ]
+ }
+}

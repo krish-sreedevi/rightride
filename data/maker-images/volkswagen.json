@@ -77,5 +77,59 @@
     "img": "https://assets.volkswagen.com/is/image/volkswagenag/volkswagen-virtus-7-speed-dsg?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
    }
   ]
+ },
+ "Volkswagen|Tayron": {
+  "page": "https://www.volkswagen.co.in/en/models/tayron.html",
+  "hero": "https://assets.volkswagen.com/is/image/volkswagenag/image-for-all-models-page?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmYzQ5Nw==",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Front seats",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/seats-main-new?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/infotainment_system?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+   },
+   {
+    "cap": "Ambient lighting",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/ambient-lighting-3?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+   },
+   {
+    "cap": "Panoramic sunroof",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/sunroof-11?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+   },
+   {
+    "cap": "Boot",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/bootspace-main?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+   }
+  ]
+ },
+ "Volkswagen|Tiguan R-Line": {
+  "page": "https://www.volkswagen.co.in/en/models/tiguan-r-line.html",
+  "hero": "https://assets.volkswagen.com/is/image/volkswagenag/tiguan-r-line-mofa?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD05NjAmYmZjPW9mZiZiZjg0",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/tiguan-r-line-interiors-image?Zm10PXBuZy1hbHBoYSZ3aWQ9MTkyMCZiZmM9b2ZmJjdhNzA="
+   },
+   {
+    "cap": "Digital cockpit",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/digital-cock-pit-cover-image?Zm10PXdlYnAmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmZDY2Mg=="
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/infotainment-system-4?Zm10PXdlYnAmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmZDY2Mg=="
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/beyond-comfier-tiguan-r-line-cover-image?Zm10PXdlYnAmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmZDY2Mg=="
+   },
+   {
+    "cap": "Panoramic sunroof",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/sunroof-panaromic?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEwODAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNmIyMQ=="
+   }
+  ]
  }
 }

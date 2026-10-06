@@ -798,3 +798,66 @@ body.lb-open { overflow: hidden; }
 .hg-slide.color img { object-fit: contain; width: 94%; height: 330px; }
 .lb-slide img[src*="img/cars/"] { background: radial-gradient(120% 90% at 50% 100%, rgba(255,255,255,.10), transparent 60%); }
 @media (max-width: 600px) { .hg-slide.color img { height: 200px; } }
+
+/* "Right" and "Ride" are always written like the logo */
+.rrw { font-family: Michroma, Inter, sans-serif; font-weight: 400; color: var(--brand); letter-spacing: .01em; font-size: .9em; }
+h1 .rrw, .hero-title .rrw, .display .rrw, .ch-t .rrw { font-size: 1em; }
+.btn.primary .rrw, .wz-opt.primary .rrw, .on-red .rrw, .cp-nav a.on .rrw { color: inherit; }
+
+/* car page: three chapters */
+.cp-nav { position: sticky; top: var(--topbar-h, 64px); z-index: 20; display: flex; gap: 6px; margin: 0 0 22px; padding: 6px; border-radius: 999px; background: color-mix(in srgb, var(--panel) 86%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: var(--shadow); overflow-x: auto; scrollbar-width: none; }
+.cp-nav::-webkit-scrollbar { display: none; }
+.cp-nav a b { font-weight: 600; }
+.cp-nav a { flex: 1 0 auto; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 16px; border-radius: 999px; text-decoration: none; color: var(--text); font-weight: 600; font-size: .9rem; white-space: nowrap; transition: background .25s var(--ease), color .25s var(--ease); }
+.cp-nav a .n { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; font-size: .72rem; background: var(--chip); color: var(--muted); transition: inherit; }
+.cp-nav a:hover { background: var(--chip); }
+.cp-nav a.on { background: var(--brand-grad); color: #fff; }
+.cp-nav a.on .n { background: rgba(255,255,255,.22); color: #fff; }
+.cp-ch { scroll-margin-top: calc(var(--topbar-h, 64px) + 70px); margin-bottom: 34px; }
+.ch-head { display: flex; gap: 16px; align-items: flex-start; margin: 8px 0 16px; }
+.ch-n { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--brand-grad); color: #fff; font-family: Michroma, Inter, sans-serif; font-size: .95rem; box-shadow: 0 6px 16px -6px color-mix(in srgb, var(--brand) 70%, transparent); }
+.ch-t { font-family: Michroma, Inter, sans-serif; font-weight: 400; font-size: clamp(1.25rem, 2.6vw, 1.7rem); margin: 4px 0 2px; letter-spacing: -.005em; }
+.ch-head p { margin: 2px 0 0; }
+.cp-sec-head h3 { font-size: 1.2rem; margin: 0; }
+
+/* Find the Right Variant: choices left, the fitting variant right */
+.vh-split { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr); gap: 26px; align-items: start; }
+.vh-split.one { grid-template-columns: 1fr; }
+.vh-left .group { margin-top: 14px; }
+.vh-left .vh-filters { gap: 18px; }
+.vh-step { font-family: Michroma, Inter, sans-serif; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.vh-carried { margin: 6px 0 0; }
+.vh-reset { margin-top: 14px; }
+.vh-right { position: sticky; top: calc(var(--topbar-h, 64px) + 78px); }
+.vh-right .vh-pick { margin: 0; }
+.vh-pick-specs { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.vh-pick-specs li { font-size: .8rem; padding: 4px 10px; border-radius: 999px; background: var(--panel); box-shadow: inset 0 0 0 1px var(--line); }
+.vh-pick-has { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 4px; font-size: .86rem; }
+.vh-pick-has li::before { content: '✓'; color: var(--yes); font-weight: 700; margin-right: 8px; }
+.vh-pick-act { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+.vh-pick-act .btn { padding: 9px 16px; font-size: .88rem; }
+.vh-cmp { margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--line); }
+.vh-cmp-h { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+.vh-cmp-h h3 { font-size: 1.1rem; margin: 0; }
+
+/* Find the Right Dealer */
+.dl-td { white-space: nowrap; }
+.dl-web { font-weight: 500; text-decoration: none; }
+.dl-web:hover { text-decoration: underline; }
+
+@media (max-width: 900px) {
+  .vh-split { grid-template-columns: 1fr; gap: 18px; }
+  .vh-right { position: sticky; bottom: 10px; top: auto; z-index: 5; }
+  .vh-right .vh-pick { background: var(--panel); box-shadow: 0 10px 30px -10px rgba(0,0,0,.35), inset 0 0 0 1.5px color-mix(in srgb, var(--brand) 35%, transparent); }
+  .vh-pick-specs, .vh-pick-has, .vh-up { display: none; }
+  .vh-pick-main h3 { font-size: 1.1rem; }
+  .vh-pick-p b { font-size: 1.2rem; }
+  .vh-pick-act { margin-top: 10px; }
+  .cp-nav { margin-left: -4px; margin-right: -4px; }
+  .cp-nav a { padding: 8px 12px; font-size: .82rem; }
+  .ch-n { width: 34px; height: 34px; font-size: .85rem; }
+  .dl-act .dl-td { flex: 1; text-align: center; }
+}
+
+.vh-right .vh-pick-main { flex-direction: column; align-items: flex-start; gap: 10px; }
+.vh-right .vh-pick-p { text-align: left; }

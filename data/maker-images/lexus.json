@@ -1,0 +1,190 @@
+{
+ "Lexus|ES": {
+  "page": "https://www.lexusindia.co.in/models/es-350h/",
+  "hero": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/white.jpg",
+  "colors": [
+   {
+    "name": "White Nova",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/white.jpg"
+   },
+   {
+    "name": "Sonic Titanium",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/sonic-titanium.jpg"
+   },
+   {
+    "name": "Graphite Black",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/black-graphite.jpg"
+   },
+   {
+    "name": "Sonic Copper",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/sonic-copper.jpg"
+   },
+   {
+    "name": "Sou",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/sou.jpg"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Cabin (Hazel)",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/desktop-beige.jpg"
+   },
+   {
+    "cap": "Cabin (White)",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/07/350h_Interior_White_desktop_1920x908_v1.jpg"
+   }
+  ]
+ },
+ "Lexus|NX": {
+  "page": "https://www.lexusindia.co.in/models/nx-350h/",
+  "hero": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-exterior-titanium-des_3x.webp",
+  "colors": [
+   {
+    "name": "Sonic Titanium",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-exterior-titanium-des_3x.webp"
+   },
+   {
+    "name": "Sonic Chrome",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-exterior-chrome-des_3x.webp"
+   },
+   {
+    "name": "Radiant Red",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-exterior-red-des_3x.webp"
+   },
+   {
+    "name": "White Nova",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-exterior-white-des_3x.webp"
+   },
+   {
+    "name": "Graphite Black",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-exterior-black-des_3x.webp"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Cabin (Hazel)",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-interior-hazel-des_3x.webp"
+   },
+   {
+    "cap": "Cabin (Solis White)",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-interior-white-des_3x.webp"
+   },
+   {
+    "cap": "Cabin (Dark Rose)",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/ExquisiteLuxury-interior-rose-des_3x.webp"
+   }
+  ]
+ },
+ "Lexus|RX": {
+  "page": "https://www.lexusindia.co.in/models/rx-350h/",
+  "hero": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_red_des_1_5x.webp",
+  "colors": [
+   {
+    "name": "Red Mica Crystal Shine",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_red_des_1_5x.webp"
+   },
+   {
+    "name": "Sonic Iridium",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_iridium_des_1_5x.webp"
+   },
+   {
+    "name": "Sonic Quartz",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_quartz_des_1_5x.webp"
+   },
+   {
+    "name": "Deep Blue Mica",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_blue_des_1_5x.webp"
+   },
+   {
+    "name": "Sonic Chrome",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_chrome_des_1_5x.webp"
+   },
+   {
+    "name": "Graphite Black",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_black_des_1_5x.webp"
+   },
+   {
+    "name": "Sonic Copper",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_copper_des_1_5x.webp"
+   },
+   {
+    "name": "Sonic Titanium",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_titanium_des_1_5x.webp"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Cabin (Solis White)",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/interior_whitel_des_1_5x.webp"
+   },
+   {
+    "cap": "Cabin (Black)",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/interior_black_des_1_5x.webp"
+   },
+   {
+    "cap": "Cabin (Dark Sepia)",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/interior_sepia_des_1_5x.webp"
+   }
+  ]
+ },
+ "Lexus|LX": {
+  "page": "https://www.lexusindia.co.in/models/lx-500d/",
+  "hero": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_urban_black_des_3x.webp",
+  "colors": [
+   {
+    "name": "Graphite Black",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_urban_black_des_3x.webp"
+   },
+   {
+    "name": "Sonic Titanium",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_urban_titanium_des_3x.webp"
+   },
+   {
+    "name": "Sonic Quartz",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_urban_white_des_3x.webp"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Cabin (Hazel)",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/LXC2109-1.webp"
+   },
+   {
+    "cap": "Cabin (Crimson)",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/LXC2107-1.webp"
+   }
+  ]
+ },
+ "Lexus|LM": {
+  "page": "https://www.lexusindia.co.in/models/lm-350h/",
+  "hero": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_7seater_black_des_1_5x.webp",
+  "colors": [
+   {
+    "name": "Graphite Black",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_7seater_black_des_1_5x.webp"
+   },
+   {
+    "name": "Sonic Titanium",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_7seater_titanium_des_1_5x.webp"
+   },
+   {
+    "name": "Sonic Quartz",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_7seater_white_des_1_5x.webp"
+   },
+   {
+    "name": "Sonic Agate",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/exterior_7seater_red_des_1_5x.webp"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Cabin (Black)",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/interior_7seater_black_des_1_5x.webp"
+   },
+   {
+    "cap": "Cabin (Solis White)",
+    "img": "https://www.lexusindia.co.in/wp-content/uploads/2026/09/interior_7seater_white_des_1_5x.webp"
+   }
+  ]
+ }
+}

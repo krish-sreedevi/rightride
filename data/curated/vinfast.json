@@ -1,0 +1,264 @@
+{
+  "brand": "VinFast",
+  "curated": true,
+  "updated": "2026-10-06",
+  "source": "https://vinfastauto.in/en (official model pages and variant price banners)",
+  "models": [
+    {
+      "model": "VF6",
+      "body": "SUV",
+      "url": "https://vinfastauto.in/en/vf6",
+      "variants": [
+        {
+          "name": "Earth",
+          "fuel": "Electric",
+          "transmission": "Automatic",
+          "drive": "",
+          "seats": 5,
+          "price": 1819000,
+          "airbags": 7,
+          "specs": {
+            "Range": "468 km (MIDC)",
+            "Battery": "59.6 kWh"
+          },
+          "priceSource": "https://vinfastauto.in/en/vf6",
+          "featureFlags": {
+            "abs": true,
+            "adas": false,
+            "airbags6": true,
+            "alloys": true,
+            "androidAuto": true,
+            "autoClimate": true,
+            "autoHeadlamps": true,
+            "autoIRVM": true,
+            "blindSpot": true,
+            "camera360": true,
+            "connected": true,
+            "cruise": true,
+            "dualZone": false,
+            "esc": true,
+            "foldingORVM": true,
+            "hillAssist": true,
+            "hud": false,
+            "isofix": true,
+            "keyless": true,
+            "ledDRL": true,
+            "panoramic": false,
+            "poweredSeat": true,
+            "pushStart": true,
+            "rainWipers": true,
+            "rearAC": true,
+            "rearArmrest": true,
+            "rearSensors": true,
+            "sunroof": false,
+            "touchscreen": true,
+            "tpms": true,
+            "ventilated": false,
+            "wirelessAA": true,
+            "wirelessCharger": false
+          }
+        },
+        {
+          "name": "Wind",
+          "fuel": "Electric",
+          "transmission": "Automatic",
+          "drive": "",
+          "seats": 5,
+          "price": 1959000,
+          "airbags": 7,
+          "specs": {
+            "Range": "463 km (MIDC)",
+            "Battery": "59.6 kWh"
+          },
+          "priceSource": "https://vinfastauto.in/en/vf6",
+          "featureFlags": {
+            "abs": true,
+            "adas": true,
+            "airPurifier": true,
+            "airbags6": true,
+            "alloys": true,
+            "androidAuto": true,
+            "autoClimate": true,
+            "autoHeadlamps": true,
+            "autoIRVM": true,
+            "blindSpot": true,
+            "camera360": true,
+            "connected": true,
+            "cruise": true,
+            "dualZone": true,
+            "esc": true,
+            "foldingORVM": true,
+            "hillAssist": true,
+            "hud": true,
+            "isofix": true,
+            "keyless": true,
+            "ledDRL": true,
+            "panoramic": false,
+            "poweredSeat": true,
+            "pushStart": true,
+            "rainWipers": true,
+            "rearAC": true,
+            "rearArmrest": true,
+            "rearSensors": true,
+            "sunroof": false,
+            "touchscreen": true,
+            "tpms": true,
+            "ventilated": true,
+            "wirelessAA": true,
+            "wirelessCharger": true
+          }
+        },
+        {
+          "name": "Wind Infinity",
+          "fuel": "Electric",
+          "transmission": "Automatic",
+          "drive": "",
+          "seats": 5,
+          "price": 2009000,
+          "airbags": 7,
+          "specs": {
+            "Range": "463 km (MIDC)",
+            "Battery": "59.6 kWh"
+          },
+          "priceSource": "https://vinfastauto.in/en/vf6",
+          "featureFlags": {
+            "abs": true,
+            "adas": true,
+            "airPurifier": true,
+            "airbags6": true,
+            "alloys": true,
+            "androidAuto": true,
+            "autoClimate": true,
+            "autoHeadlamps": true,
+            "autoIRVM": true,
+            "blindSpot": true,
+            "camera360": true,
+            "connected": true,
+            "cruise": true,
+            "dualZone": true,
+            "esc": true,
+            "foldingORVM": true,
+            "hillAssist": true,
+            "hud": true,
+            "isofix": true,
+            "keyless": true,
+            "ledDRL": true,
+            "panoramic": true,
+            "poweredSeat": true,
+            "pushStart": true,
+            "rainWipers": true,
+            "rearAC": true,
+            "rearArmrest": true,
+            "rearSensors": true,
+            "sunroof": true,
+            "touchscreen": true,
+            "tpms": true,
+            "ventilated": true,
+            "wirelessAA": true,
+            "wirelessCharger": true
+          }
+        }
+      ]
+    },
+    {
+      "model": "VF7",
+      "body": "SUV",
+      "url": "https://vinfastauto.in/en/vf7",
+      "variants": [
+        {
+          "name": "Earth",
+          "fuel": "Electric",
+          "transmission": "Automatic",
+          "drive": "",
+          "seats": 5,
+          "price": 2299000,
+          "specs": {
+            "Range": "438 km",
+            "Battery": "59.6 kWh"
+          },
+          "priceSource": "https://vinfastauto.in/en/vf7"
+        },
+        {
+          "name": "Wind",
+          "fuel": "Electric",
+          "transmission": "Automatic",
+          "drive": "",
+          "seats": 5,
+          "price": 2589000,
+          "specs": {
+            "Range": "532 km",
+            "Battery": "70 kWh"
+          },
+          "priceSource": "https://vinfastauto.in/en/vf7"
+        },
+        {
+          "name": "Wind Infinity",
+          "fuel": "Electric",
+          "transmission": "Automatic",
+          "drive": "",
+          "seats": 5,
+          "price": 2639000,
+          "specs": {
+            "Range": "532 km",
+            "Battery": "70 kWh"
+          },
+          "priceSource": "https://vinfastauto.in/en/vf7"
+        },
+        {
+          "name": "Sky",
+          "fuel": "Electric",
+          "transmission": "Automatic",
+          "drive": "AWD",
+          "seats": 5,
+          "price": 2749000,
+          "specs": {
+            "Range": "510 km",
+            "Battery": "70 kWh"
+          },
+          "priceSource": "https://vinfastauto.in/en/vf7"
+        },
+        {
+          "name": "Sky Infinity",
+          "fuel": "Electric",
+          "transmission": "Automatic",
+          "drive": "AWD",
+          "seats": 5,
+          "price": 2809000,
+          "specs": {
+            "Range": "510 km",
+            "Battery": "70 kWh"
+          },
+          "priceSource": "https://vinfastauto.in/en/vf7"
+        }
+      ]
+    },
+    {
+      "model": "VF MPV 7",
+      "body": "MUV / MPV",
+      "url": "https://vinfastauto.in/en/mpv7",
+      "variants": [
+        {
+          "name": "VF MPV 7",
+          "fuel": "Electric",
+          "transmission": "Automatic",
+          "drive": "",
+          "seats": 7,
+          "price": 2449000,
+          "airbags": 4,
+          "specs": {
+            "Range": "517 km (ARAI)",
+            "Battery": "60.13 kWh"
+          },
+          "priceSource": "https://vinfastauto.in/en/press-release/vinfast-launches-the-all-new-vf-mpv-7-a-spacious-electric-seven-seater-for-indian",
+          "featureFlags": {
+            "airbags6": false,
+            "touchscreen": true,
+            "androidAuto": true,
+            "epb": true,
+            "ledHeadlamps": true
+          }
+        }
+      ]
+    }
+  ]
+}

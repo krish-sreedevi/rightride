@@ -1,0 +1,106 @@
+{
+ "brand": "MG",
+ "curated": true,
+ "updated": "2026-10-06",
+ "source": "https://www.mgselect.co.in/ (MG Select official prices; Couture Edition prices from cardekho.com)",
+ "models": [
+  {
+   "model": "Cyberster",
+   "body": "Coupe / Convertible",
+   "url": "https://www.mgselect.co.in/cyberster",
+   "variants": [
+    {
+     "name": "Standard",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 2,
+     "price": 8249800,
+     "airbags": 4,
+     "specs": {
+      "Range": "580 km",
+      "Battery": "77 kWh"
+     },
+     "priceSource": "https://www.mgselect.co.in/cyberster",
+     "featureFlags": {
+      "adas": true,
+      "digitalCluster": true,
+      "touchscreen": true
+     }
+    },
+    {
+     "name": "Couture Edition",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 2,
+     "price": 8749000,
+     "airbags": 4,
+     "specs": {
+      "Range": "580 km",
+      "Battery": "77 kWh"
+     },
+     "priceSource": "https://www.cardekho.com/mg/cyberster",
+     "featureFlags": {
+      "adas": true,
+      "digitalCluster": true,
+      "touchscreen": true
+     }
+    }
+   ]
+  },
+  {
+   "model": "M9",
+   "body": "MUV / MPV",
+   "url": "https://www.mgselect.co.in/m9",
+   "variants": [
+    {
+     "name": "Presidential Limo",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 7,
+     "price": 7994800,
+     "airbags": 7,
+     "specs": {
+      "Range": "548 km",
+      "Battery": "90 kWh"
+     },
+     "priceSource": "https://www.mgselect.co.in/m9",
+     "featureFlags": {
+      "airbags6": true,
+      "adas": true,
+      "ventilated": true,
+      "massage": true,
+      "captainSeats": true,
+      "ledHeadlamps": true,
+      "ledDRL": true
+     }
+    },
+    {
+     "name": "Couture Edition",
+     "fuel": "Electric",
+     "transmission": "Automatic",
+     "drive": "",
+     "seats": 7,
+     "price": 8494000,
+     "airbags": 7,
+     "specs": {
+      "Range": "548 km",
+      "Battery": "90 kWh"
+     },
+     "priceSource": "https://www.cardekho.com/mg/m9",
+     "featureFlags": {
+      "airbags6": true,
+      "adas": true,
+      "ventilated": true,
+      "massage": true,
+      "captainSeats": true,
+      "ledHeadlamps": true,
+      "ledDRL": true
+     }
+    }
+   ]
+  }
+ ]
+}

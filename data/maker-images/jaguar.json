@@ -1,0 +1,17 @@
+{
+  "Jaguar|F-PACE": {
+    "page": "https://www.jaguar.com/en-in/jdx/jaguar-range/f-pace/index.html",
+    "hero": "https://jlr.scene7.com/is/image/jlr/X76124GL_303101393_026_RDYN_S?wid=1600",
+    "colors": [],
+    "interior": [
+      {
+        "cap": "Cabin",
+        "img": "https://jlr.scene7.com/is/image/jlr/X76124GL_303101393_015?wid=1600"
+      },
+      {
+        "cap": "Sport seats",
+        "img": "https://jlr.scene7.com/is/image/jlr/X76124GL_303101393_012?wid=1600"
+      }
+    ]
+  }
+}

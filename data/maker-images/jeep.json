@@ -1,0 +1,158 @@
+{
+ "Jeep|Compass": {
+  "page": "https://www.jeep-india.com/new-compass.html",
+  "hero": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/Compass_1440-x-600-red.png",
+  "colors": [
+   {
+    "name": "Exotica Red",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/Compass_1440-x-600-red.png"
+   },
+   {
+    "name": "Pearl White",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/Compass_1440-x-600-Pearl-White.png"
+   },
+   {
+    "name": "Brilliant Black",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/Compass_1440-x-600-black.png"
+   },
+   {
+    "name": "Grigio Magnesio",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/Compass_1440-x-600-grey.png"
+   },
+   {
+    "name": "Techno Metallic Green",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/Compass_green-1440X600.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/Accentuated-Dashboard.jpg"
+   },
+   {
+    "cap": "Touchscreen",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/UConnect-with-touchscreen-Display.jpg"
+   },
+   {
+    "cap": "Ambient lighting",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/ambientlighting_edited.png"
+   },
+   {
+    "cap": "Wireless charger",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-compass/1001X751-Compass-Features-5.jpg"
+   }
+  ]
+ },
+ "Jeep|Meridian": {
+  "page": "https://www.jeep-india.com/new-jeep-meridian.html",
+  "hero": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/colories/Limited-O-3001x1251_Red.jpg",
+  "colors": [
+   {
+    "name": "Velvet Red",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/colories/Limited-O-3001x1251_Red.jpg"
+   },
+   {
+    "name": "Pearl White",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/colories/Limited-O-3001x1251_Pearl-White.jpg"
+   },
+   {
+    "name": "Brilliant Black",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/colories/Limited-O-3001x1251_Black.jpg"
+   },
+   {
+    "name": "Magnesio Grey",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/colories/Limited-O-3001x1251_Magnesio-Grey.jpg"
+   },
+   {
+    "name": "Techno Metallic Green",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/colories/Limited-O-3001x1251_Green.jpg"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Front seats",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/1001X671-1-beige-interior.jpg"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/1001X671-3-Grey-Seal-Interior.jpg"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/1001X671-5-Digital-Intrumental-Cluster.jpg"
+   },
+   {
+    "cap": "Touchscreen",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/1001X671-3-U-connect.jpg"
+   },
+   {
+    "cap": "Panoramic sunroof",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/meridian/1001X671-1-Sunroof.jpg"
+   }
+  ]
+ },
+ "Jeep|Wrangler": {
+  "page": "https://www.jeep-india.com/wrangler-jl.html",
+  "hero": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/Unlimited-1000x416-Red.png",
+  "colors": [
+   {
+    "name": "Firecracker Red",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/Unlimited-1000x416-Red.png"
+   },
+   {
+    "name": "Black",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/Unlimited-1000x416-Black.png"
+   },
+   {
+    "name": "Bright White",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/Unlimited-1000x416-White.png"
+   },
+   {
+    "name": "Anvil Clear Coat",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/Unlimited-1000x416-Anvil.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Touchscreen",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/2880X2880-Website-Overview-Page-3.jpg"
+   },
+   {
+    "cap": "Powered seat controls",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/wrangler-price-reveal/2880X2880-Website-Overview-Page-6.jpg"
+   }
+  ]
+ },
+ "Jeep|Grand Cherokee": {
+  "page": "https://www.jeep-india.com/new-grand-cherokee.html",
+  "hero": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-grand-cherokee/product-page-img/product-img-color/w-color-1440x600px.png",
+  "colors": [
+   {
+    "name": "Bright White",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-grand-cherokee/product-page-img/product-img-color/w-color-1440x600px.png"
+   },
+   {
+    "name": "Diamond Black Crystal",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-grand-cherokee/product-page-img/product-img-color/blk-color-1440x600px.png"
+   },
+   {
+    "name": "Rocky Mountain",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-grand-cherokee/product-page-img/product-img-color/rm-color-1440x600px.png"
+   },
+   {
+    "name": "Velvet Red",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-grand-cherokee/product-page-img/product-img-color/r-color-1440x600px.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-grand-cherokee/product-page-img/H-1920x600-2.jpg"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://www.jeep-india.com/content/dam/cross-regional/apac/jeep/en_in/new-grand-cherokee/product-page-img/H-1920x600-3.jpg"
+   }
+  ]
+ }
+}

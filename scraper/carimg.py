@@ -58,6 +58,24 @@ def has_real_alpha(im):
     edge = [px[i] for i in range(64)] + [px[-64 + i] for i in range(64)] + [px[i * 64] for i in range(64)] + [px[i * 64 + 63] for i in range(64)]
     return sum(1 for v in px if v < 40) / len(px) > 0.08 and sum(1 for v in edge if v < 40) / len(edge) > 0.6
 
+def clean_alpha(im):
+    """renders that come with transparency sometimes carry a faint backdrop or a baked-in floor shadow:
+    drop near-invisible pixels, and semi-transparent pixels beside or below the solid car body"""
+    import numpy as np
+    a = np.array(im.getchannel("A")).astype(np.int16)
+    a[a < 40] = 0
+    solid = a >= 235
+    h, w = a.shape
+    cols = solid.any(axis=0)
+    # lowest solid pixel per column (wheels/tyres are solid); below it is floor
+    low = np.where(cols, h - 1 - np.argmax(solid[::-1, :], axis=0), -1)
+    rows = np.arange(h)[:, None]
+    semi = (a > 0) & (a < 235)
+    floor = semi & ((~cols)[None, :] | (rows > low[None, :]))
+    a[floor] = 0
+    out = im.copy(); out.putalpha(Image.fromarray(a.astype(np.uint8)))
+    return out
+
 def border_stats(rgb):
     w, h = rgb.size
     s = rgb.resize((min(w, 200), min(h, 200)))
@@ -84,13 +102,16 @@ def flood_cutout(rgb, tol=26):
     out = rgb.convert('RGBA'); out.putalpha(mask)
     return out
 
-def cutout(im):
-    """returns (RGBA image with transparent background, method)"""
+def cutout(im, ai=False):
+    """returns (RGBA image with transparent background, method); ai=True ignores the photo's own transparency
+    (for renders with a baked-in floor shadow) and cuts the car out again on a white backdrop"""
     im = ImageOps.exif_transpose(im)
     if im.mode in ('P', 'LA'):
         im = im.convert('RGBA')
-    if has_real_alpha(im):
-        return im.convert('RGBA'), 'alpha'
+    if ai and im.mode == 'RGBA':
+        bg = Image.new('RGBA', im.size, (255, 255, 255, 255)); bg.alpha_composite(im); im = bg.convert('RGB')
+    if not ai and has_real_alpha(im):
+        return clean_alpha(im.convert('RGBA')), 'alpha'
     rgb = im.convert('RGB')
     mean, sd = border_stats(rgb)
     if sd < 14 and not rembg_session():
@@ -185,10 +206,10 @@ def compose(car, size=CANVAS, shadow=True):
     canvas.alpha_composite(car, (x, y))
     return canvas
 
-def standardize(src, out, size=CANVAS, shadow=True, flip=False, quality=82, erase=None):
+def standardize(src, out, size=CANVAS, shadow=True, flip=False, quality=82, erase=None, ai=False):
     raw = fetch(src)
     im = Image.open(io.BytesIO(raw))
-    car, how = cutout(im)
+    car, how = cutout(im, ai)
     if car is None:
         return None
     for box in erase or []:  # manual fix: [x0, y0, x1, y1] as fractions of the source photo
@@ -237,7 +258,7 @@ def build(only=None, force=False):
                     pass
                 else:
                     try:
-                        how = standardize(url, path, flip=o.get('flip', False), erase=o.get('erase') if kind == 'hero' else None)
+                        how = standardize(url, path, flip=o.get('flip', False), erase=o.get('erase') if kind == 'hero' else None, ai=o.get('ai', False))
                         if not how:
                             print('  could not cut out', key, kind, name or '', file=sys.stderr); fail += 1; continue
                         rec['how'] = how; done += 1

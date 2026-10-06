@@ -1,0 +1,107 @@
+{
+ "brand": "Maruti Suzuki",
+ "curated": true,
+ "updated": "2026-10-06",
+ "source": "https://www.marutisuzuki.com/arena/eeco (official Arena price API, Delhi ex-showroom; variant data from Arena GraphQL)",
+ "models": [
+  {
+   "model": "Eeco",
+   "body": "MUV / MPV",
+   "url": "https://www.marutisuzuki.com/arena/eeco",
+   "variants": [
+    {
+     "name": "5 Seater Standard",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "drive": "",
+     "seats": 5,
+     "price": 528400,
+     "engine": "1197 cc",
+     "mileage": "19.71 km/l",
+     "airbags": 6,
+     "priceSource": "https://www.marutisuzuki.com/pricing/v2/common/pricing/ex-showroom-detail?forCode=08&channel=NRC&variantInfoRequired=true&modelCodes=VR",
+     "featureFlags": {
+      "abs": true,
+      "esc": true,
+      "rearSensors": true,
+      "digitalCluster": true,
+      "voiceCommands": false,
+      "foldingORVM": false,
+      "sunroof": false,
+      "ambient": false,
+      "airbags6": true
+     }
+    },
+    {
+     "name": "6 Seater Standard",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "drive": "",
+     "seats": 6,
+     "price": 554900,
+     "engine": "1197 cc",
+     "mileage": "19.71 km/l",
+     "airbags": 6,
+     "priceSource": "https://www.marutisuzuki.com/pricing/v2/common/pricing/ex-showroom-detail?forCode=08&channel=NRC&variantInfoRequired=true&modelCodes=VR",
+     "featureFlags": {
+      "abs": true,
+      "esc": true,
+      "rearSensors": true,
+      "digitalCluster": true,
+      "voiceCommands": false,
+      "foldingORVM": false,
+      "sunroof": false,
+      "ambient": false,
+      "airbags6": true
+     }
+    },
+    {
+     "name": "5 Seater AC",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "drive": "",
+     "seats": 5,
+     "price": 561300,
+     "engine": "1197 cc",
+     "mileage": "19.71 km/l",
+     "airbags": 6,
+     "priceSource": "https://www.marutisuzuki.com/pricing/v2/common/pricing/ex-showroom-detail?forCode=08&channel=NRC&variantInfoRequired=true&modelCodes=VR",
+     "featureFlags": {
+      "abs": true,
+      "esc": true,
+      "rearSensors": true,
+      "digitalCluster": true,
+      "voiceCommands": false,
+      "foldingORVM": false,
+      "sunroof": false,
+      "ambient": false,
+      "airbags6": true
+     }
+    },
+    {
+     "name": "5 Seater AC CNG",
+     "fuel": "CNG",
+     "transmission": "Manual",
+     "drive": "",
+     "seats": 5,
+     "price": 645800,
+     "engine": "1197 cc",
+     "mileage": "26.78 km/kg",
+     "airbags": 6,
+     "priceSource": "https://www.marutisuzuki.com/pricing/v2/common/pricing/ex-showroom-detail?forCode=08&channel=NRC&variantInfoRequired=true&modelCodes=VR",
+     "featureFlags": {
+      "abs": true,
+      "esc": true,
+      "rearSensors": true,
+      "digitalCluster": true,
+      "voiceCommands": false,
+      "foldingORVM": false,
+      "sunroof": false,
+      "ambient": false,
+      "airbags6": true
+     }
+    }
+   ]
+  }
+ ]
+}

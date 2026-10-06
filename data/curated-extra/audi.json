@@ -1,0 +1,30 @@
+{
+  "brand": "Audi",
+  "curated": true,
+  "updated": "2026-10-06",
+  "source": "audi.in S5 Sportback model page (listed; price not shown, audi.in blocks automated access); price from carwale.com",
+  "models": [
+    {
+      "model": "S5 Sportback",
+      "body": "Sedan",
+      "url": "https://www.audi.in/in/web/en/models/a5/s5-sportback.html",
+      "variants": [
+        {
+          "name": "S5 Sportback 3.0 TFSI quattro",
+          "fuel": "Petrol",
+          "transmission": "8-speed AT",
+          "drive": "AWD",
+          "seats": 5,
+          "price": 7357000,
+          "engine": "2994 cc",
+          "airbags": 8,
+          "priceSource": "https://www.carwale.com/audi-cars/s5-sportback/",
+          "featureFlags": {
+            "panoramic": true,
+            "premiumAudio": true
+          }
+        }
+      ]
+    }
+  ]
+}

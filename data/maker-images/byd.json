@@ -1,0 +1,166 @@
+{
+  "BYD|Atto 3": {
+    "page": "https://www.bydautoindia.com/bydatto3",
+    "hero": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1740461378524.png",
+    "colors": [
+      {
+        "name": "Cosmos Black",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773293630918.png"
+      },
+      {
+        "name": "Ski White",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773293694047.png"
+      },
+      {
+        "name": "Harbour Grey",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773293669310.png"
+      },
+      {
+        "name": "Atlantis Grey",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1789966913654.png"
+      }
+    ],
+    "interior": [
+      {
+        "cap": "Dashboard",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741689301693.jpg"
+      },
+      {
+        "cap": "Cockpit",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741668087257.jpg"
+      },
+      {
+        "cap": "Rear cabin",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741689373128.jpg"
+      },
+      {
+        "cap": "Steering wheel",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741667889583.jpg"
+      }
+    ]
+  },
+  "BYD|Seal": {
+    "page": "https://www.bydautoindia.com/bydseal",
+    "hero": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741686908572.png",
+    "colors": [
+      {
+        "name": "Atlantis Gray",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741686908572.png"
+      },
+      {
+        "name": "Cosmos Black",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741686969487.png"
+      },
+      {
+        "name": "Aurora White",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741687034645.png"
+      },
+      {
+        "name": "Shark Gray",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1741687079351.png"
+      }
+    ],
+    "interior": [
+      {
+        "cap": "Dashboard",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1719478851179.webp"
+      },
+      {
+        "cap": "Rotating touchscreen",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1719479959684.webp"
+      },
+      {
+        "cap": "Rear seats",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1719479071636.webp"
+      },
+      {
+        "cap": "Centre console",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1719479087212.webp"
+      }
+    ]
+  },
+  "BYD|eMAX 7": {
+    "page": "https://www.bydautoindia.com/bydemax7",
+    "hero": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1728027032845.webp",
+    "colors": [
+      {
+        "name": "Quartz Blue",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1728027032845.webp"
+      },
+      {
+        "name": "Cosmos Black",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1728027090625.webp"
+      },
+      {
+        "name": "Crystal White",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1728027123541.webp"
+      },
+      {
+        "name": "Harbour Grey",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1728027175115.webp"
+      }
+    ],
+    "interior": [
+      {
+        "cap": "Dashboard",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727415734399.jpg"
+      },
+      {
+        "cap": "Seats",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727415964774.jpg"
+      },
+      {
+        "cap": "Panoramic roof",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727417335417.jpg"
+      },
+      {
+        "cap": "Centre console",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1727932374007.webp"
+      }
+    ]
+  },
+  "BYD|Sealion 7": {
+    "page": "https://www.bydautoindia.com/bydsealion7",
+    "hero": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737014896975.png",
+    "colors": [
+      {
+        "name": "Atlantis Gray",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737014896975.png"
+      },
+      {
+        "name": "Cosmos Black",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737015048828.png"
+      },
+      {
+        "name": "Aurora White",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737015147811.png"
+      },
+      {
+        "name": "Shark Gray",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1737525327022.webp"
+      }
+    ],
+    "interior": [
+      {
+        "cap": "Dashboard",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1787211242344.jpeg"
+      },
+      {
+        "cap": "Cockpit",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1787211249589.jpeg"
+      },
+      {
+        "cap": "Rear seats",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773738265903.jpg"
+      },
+      {
+        "cap": "Centre console",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1787211292495.jpeg"
+      },
+      {
+        "cap": "Panoramic roof",
+        "img": "https://byd-assets.s3.us-east-2.amazonaws.com/production/uploads/image-upload-1773738238085.webp"
+      }
+    ]
+  }
+}

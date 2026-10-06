@@ -1,0 +1,65 @@
+{
+  "brand": "Jaguar",
+  "curated": true,
+  "updated": "2026-10-06",
+  "source": "https://www.jaguar.com/en-in/jdx/jaguar-range/f-pace/models/index.html (model/spec); price from carwale.com",
+  "models": [
+    {
+      "model": "F-PACE",
+      "body": "SUV",
+      "url": "https://www.jaguar.com/en-in/jdx/jaguar-range/f-pace/index.html",
+      "variants": [
+        {
+          "name": "F-PACE R-Dynamic S Petrol",
+          "fuel": "Petrol",
+          "transmission": "8-speed AT",
+          "drive": "AWD",
+          "seats": 5,
+          "price": 6896000,
+          "engine": "1997 cc",
+          "priceSource": "https://www.carwale.com/jaguar-cars/f-pace/",
+          "featureFlags": {
+            "keyless": true,
+            "ledHeadlamps": true,
+            "powerTailgate": true,
+            "wirelessCharger": true,
+            "wirelessAA": true,
+            "androidAuto": true,
+            "digitalCluster": true,
+            "touchscreen": true,
+            "cruise": true,
+            "frontSensors": true,
+            "rearSensors": true,
+            "premiumAudio": true,
+            "poweredSeat": true
+          }
+        },
+        {
+          "name": "F-PACE R-Dynamic S Diesel",
+          "fuel": "Diesel",
+          "transmission": "8-speed AT",
+          "drive": "AWD",
+          "seats": 5,
+          "price": 6896000,
+          "engine": "1997 cc",
+          "priceSource": "https://www.carwale.com/jaguar-cars/f-pace/",
+          "featureFlags": {
+            "keyless": true,
+            "ledHeadlamps": true,
+            "powerTailgate": true,
+            "wirelessCharger": true,
+            "wirelessAA": true,
+            "androidAuto": true,
+            "digitalCluster": true,
+            "touchscreen": true,
+            "cruise": true,
+            "frontSensors": true,
+            "rearSensors": true,
+            "premiumAudio": true,
+            "poweredSeat": true
+          }
+        }
+      ]
+    }
+  ]
+}
