@@ -1,0 +1,181 @@
+{
+ "Honda|Amaze": {
+  "page": "https://www.hondacarindia.com/honda-amaze",
+  "hero": "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00009_chooseCar.png",
+  "colors": [
+   {
+    "name": "Obsidian Blue Pearl",
+    "img": "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_OBSEDIAN_BLUE_V-3__00009_chooseCar.png"
+   },
+   {
+    "name": "Radiant Red Metallic",
+    "img": "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_RED_V-3__00009_chooseCar.png"
+   },
+   {
+    "name": "Platinum White Pearl",
+    "img": "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_PEARL_WHITE_V-3__00009_chooseCar.png"
+   },
+   {
+    "name": "Golden Brown Metallic",
+    "img": "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360__GOLDEN_BROWN_METALLIC_V-4_p1_00009_chooseCar.png"
+   },
+   {
+    "name": "Meteoroid Grey Metallic",
+    "img": "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_METEROID_GREY_METALLIC_V-3__00009_chooseCar.png"
+   },
+   {
+    "name": "Lunar Silver Metallic",
+    "img": "https://www.hondacarindia.com/web-data/models/2024/newAmaze/exterior360Desktop/AMAZE_EXT_360_LUNAR_SILVER_METALLIC_V-3__00009%201_chooseCar.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Interior",
+    "img": "https://www.hondacarindia.com/web-data/models/design/newAmaze/interior/AR_AD_SEP_24_HONDA_AMAZE_CONTOUR_SEATS_6K_02_new1.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.hondacarindia.com/web-data/models/design/newAmaze/interior/AR_AD_SEP_24_HONDA_AMAZE_CONTOUR_SEATS_6K_02_new.jpg"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://www.hondacarindia.com/web-data/models/design/newAmaze/interior/AR_SN_HONDA_AMAZE_2024_REAR-SEATS_V3_new.jpg"
+   }
+  ]
+ },
+ "Honda|Amaze - 2nd Gen": {
+  "page": "https://www.hondacarindia.com/honda-amaze-2g",
+  "hero": "https://www.hondacarindia.com/web-data/models/exterior/amaze/radiant_red_mettalic_14April.png",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hondacarindia.com/web-data/models/design/amaze/interior/Premium-interiors-with-sati-silver-and-chrome-ornamentation.jpg"
+   },
+   {
+    "cap": "Steering",
+    "img": "https://www.hondacarindia.com/web-data/models/design/amaze/interior/Multi-Functioning-Steering-Wheel.jpg"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://www.hondacarindia.com/web-data/models/design/amaze/interior/Multi-information-Combi-Meter.jpg"
+   },
+   {
+    "cap": "Climate control",
+    "img": "https://www.hondacarindia.com/web-data/models/design/amaze/interior/Automatic-Climate-Control.jpg"
+   }
+  ]
+ },
+ "Honda|City": {
+  "page": "https://www.hondacarindia.com/honda-city",
+  "hero": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLACK_01_desk_new13/CITY_EHEV_BLACK_01_desk_00.jpg",
+  "colors": [
+   {
+    "name": "Crystal Black Pearl",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLACK_01_desk_new13/CITY_EHEV_BLACK_01_desk_00.jpg"
+   },
+   {
+    "name": "Lunar Silver Metallic",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_SILVER_01_desk_new1/CITY_EHEV_SILVER_01_desk_00.jpg"
+   },
+   {
+    "name": "Meteoroid Grey Metallic",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_GREY_01_desk_new12/CITY_EHEV_GREY_01_desk_00.jpg"
+   },
+   {
+    "name": "Obsidian Blue Pearl",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_BLUE_01_desk_new1/CITY_EHEV_BLUE_01_desk_00.jpg"
+   },
+   {
+    "name": "Platinum White Pearl",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_WHITE_01_desk_new1/CITY_EHEV_WHITE_01_desk_00.jpg"
+   },
+   {
+    "name": "Radiant Red Metallic",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Exterior/CITY_EHEV_RED_01_desk_new1/CITY_EHEV_RED_01_desk_00.jpg"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Card%20Component/desktop/Interior/two_tone_interior_desk.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Card%20Component/desktop/Interior/AR_SN_HONDA_CITY_E-HEV_FRONT-SEATS_SIDE-VIEW_03.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Card%20Component/desktop/Interior/Wireless_desk.jpg"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Card%20Component/desktop/Interior/car_meter_desk.jpg"
+   },
+   {
+    "cap": "Climate control",
+    "img": "https://www.hondacarindia.com/web-data/models/2026/hondaCity/Card%20Component/desktop/Interior/AR_AB_CITY_FATC_04.jpg"
+   }
+  ]
+ },
+ "Honda|Elevate": {
+  "page": "https://www.hondacarindia.com/honda-elevate",
+  "hero": "https://www.hondacarindia.com/web-data/models/carModelImage/elevate/elevate_red_black_desk_new.png",
+  "colors": [
+   {
+    "name": "Crystal Black Pearl + Radiant Red Metallic (Dual Tone)",
+    "img": "https://www.hondacarindia.com/web-data/models/carModelImage/elevate/elevate_red_black_desk_new.png"
+   },
+   {
+    "name": "Crystal Black Pearl + Platinum White Pearl (Dual Tone)",
+    "img": "https://www.hondacarindia.com/web-data/models/carModelImage/elevate/elevate_white_black_desk_new.png"
+   },
+   {
+    "name": "Lunar Silver Metallic",
+    "img": "https://www.hondacarindia.com/web-data/models/carModelImage/elevate/elevate_silver_desk_new.png"
+   },
+   {
+    "name": "Golden Brown Metallic",
+    "img": "https://www.hondacarindia.com/web-data/models/carModelImage/elevate/elevate_brown_desk_new.png"
+   },
+   {
+    "name": "Platinum White Pearl",
+    "img": "https://www.hondacarindia.com/web-data/models/carModelImage/elevate/elevate_white_desk_new.png"
+   },
+   {
+    "name": "Meteoroid Gray Metallic",
+    "img": "https://www.hondacarindia.com/web-data/models/carModelImage/elevate/elevate_gray_desk_new.png"
+   },
+   {
+    "name": "Radiant Red Metallic",
+    "img": "https://www.hondacarindia.com/web-data/models/carModelImage/elevate/elevate_red_desk_new.png"
+   },
+   {
+    "name": "Obsidian Blue Pearl",
+    "img": "https://www.hondacarindia.com/web-data/models/carModelImage/elevate/elevate_blue_desk_new.png"
+   },
+   {
+    "name": "Crystal Black Pearl",
+    "img": "https://www.hondacarindia.com/web-data/models/carModelImage/elevate/elevate_black_desk.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hondacarindia.com/web-data/models/2024/elevate/Design/Interior/AR-AM-Honda-NEW-Elevate-FESTIVE--NEW--GRILL-INTERIOR-DASHBOARD-SHOT-2025-V3_2Sept25.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.hondacarindia.com/web-data/models/2024/elevate/Design/Interior/AR-AM-Honda-NEW-Elevate-FESTIVE--NEW--GRILL-SEAT-SHOT-2025-v3_2Sept25.jpg"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://www.hondacarindia.com/web-data/models/2024/elevate/Design/Interior/int_rearcabin_desk.jpg"
+   },
+   {
+    "cap": "Dashboard (brown & black)",
+    "img": "https://www.hondacarindia.com/web-data/models/2024/elevate/Design/Interior/int_twotone_desk.jpg"
+   }
+  ]
+ }
+}

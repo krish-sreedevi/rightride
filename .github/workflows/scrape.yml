@@ -42,6 +42,12 @@ jobs:
         if: ${{ github.event.inputs.brands == '' || github.event.inputs.brands == null || contains(github.event.inputs.brands, 'extras') }}
         run: node scraper/model-extras.mjs && node scraper/normalize.mjs
         continue-on-error: true
+      - name: Standardize car photos (maker images -> site/img/cars)
+        if: ${{ github.event.inputs.brands == '' || github.event.inputs.brands == null || contains(github.event.inputs.brands, 'images') }}
+        run: |
+          pip install --quiet pillow numpy scipy rembg onnxruntime
+          python3 scraper/carimg.py --build && node scraper/normalize.mjs
+        continue-on-error: true
       - name: Dealers (OpenStreetMap)
         if: ${{ github.event.inputs.brands == '' || github.event.inputs.brands == null || contains(github.event.inputs.brands, 'dealers') }}
         run: node scraper/dealers.mjs
@@ -50,6 +56,6 @@ jobs:
         run: |
           git config user.name "rightride-bot"
           git config user.email "rightride-bot@users.noreply.github.com"
-          git add data site/data
+          git add data site/data site/img
           git commit -m "Data refresh $(date -u +%Y-%m-%d)" || echo "no changes"
           git pull --rebase origin main && git push origin main

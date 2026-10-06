@@ -1,0 +1,15 @@
+{
+ "note": "Manual fixes for the image standardizer: hero (replacement URL), flip (mirror), erase (boxes to blank out, as fractions of the source photo).",
+ "models": {
+  "Volkswagen|Virtus": {
+   "erase": [
+    [
+     0.16,
+     0.08,
+     0.275,
+     0.41
+    ]
+   ]
+  }
+ }
+}

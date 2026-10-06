@@ -1,0 +1,243 @@
+{
+ "Land Rover|Defender 110": {
+  "page": "https://www.landrover.in/defender/defender-110/index.html",
+  "hero": "https://jlr.scene7.com/is/image/jlr/L66326GL_303104383_060?wid=1600",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Seats",
+    "img": "https://www.landrover.in/content/dam/lrdx/global/l663/20my/Int/L663_20MY_135_GLHD.jpg"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.landrover.in/content/dam/lrdx/global/l663/25my/int/L66325GL_303103289_054.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://jlr.scene7.com/is/image/jlr/L66326GL_303104383_049?wid=1600"
+   },
+   {
+    "cap": "Interior",
+    "img": "https://jlr.scene7.com/is/image/jlr/L66325GL_303103289_026?wid=1600"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://jlr.scene7.com/is/image/jlr/L66326GL_303104383_154?wid=1600"
+   }
+  ]
+ },
+ "Land Rover|Defender 130": {
+  "page": "https://www.landrover.in/defender/defender-130/index.html",
+  "hero": "https://jlr.scene7.com/is/image/jlr/L66326GL_303104383_073?wid=1600",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Seats",
+    "img": "https://www.landrover.in/content/dam/lrdx/global/l663/26my/int/L66326GL_303104383_019.jpg"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.landrover.in/content/dam/lrdx/global/l663/26my/int/L66326GL_303104383_018.jpg"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.landrover.in/content/dam/lrdx/global/l663/20my/Int/L663_20MY_135_GLHD.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://jlr.scene7.com/is/image/jlr/L66326GL_303104383_049?wid=1600"
+   },
+   {
+    "cap": "Interior",
+    "img": "https://jlr.scene7.com/is/image/jlr/L66325GL_303103289_026?wid=1600"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://jlr.scene7.com/is/image/jlr/L66326GL_303104383_103?wid=1600"
+   }
+  ]
+ },
+ "Land Rover|Defender 90": {
+  "page": "https://www.landrover.in/defender/defender-90/index.html",
+  "hero": "https://jlr.scene7.com/is/image/jlr/L66326GL_303104383_045?wid=1600",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Seats",
+    "img": "https://www.landrover.in/content/dam/lrdx/global/l663/26my/int/L66326GL_303104383_043.jpg"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.landrover.in/content/dam/lrdx/global/l663/25my/int/L66325GL_303103289_054.jpg"
+   },
+   {
+    "cap": "Interior",
+    "img": "https://jlr.scene7.com/is/image/jlr/L66325GL_303103289_026?wid=1600"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://jlr.scene7.com/is/image/jlr/L66326GL_303104383_155?wid=1600"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://jlr.scene7.com/is/image/jlr/L66326GL_303104383_049?wid=1600"
+   }
+  ]
+ },
+ "Land Rover|Discovery Sport": {
+  "page": "https://www.landrover.in/discovery/discovery-sport/index.html",
+  "hero": "https://jlr.scene7.com/is/image/jlr/L55026_5GL_303105376_005?wid=1600",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Seats",
+    "img": "https://www.landrover.in/content/dam/lrdx/global/l550/24my/int/L55024GL_303101775_017.jpg"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.landrover.in/content/dam/lrdx/global/l550/24my/int/L55024GL_303101775_026.jpg"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://www.landrover.in/content/dam/lrdx/global/l550/24my/int/L55024GL_303101775_001.jpg"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://www.landrover.in/content/dam/lrdx/global/l550/24my/int/L55024GL_303101775_027_ALT.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://jlr.scene7.com/is/image/jlr/L55024GL_303101775_030?wid=1600"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://jlr.scene7.com/is/image/jlr/L55024GL_303101775_001?wid=1600"
+   }
+  ]
+ },
+ "Land Rover|Range Rover": {
+  "page": "https://www.rangerover.com/en-in/range-rover/index.html",
+  "hero": "https://jlr.scene7.com/is/image/jlr/L46027GL_303105263_066-1?wid=1600",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Seats",
+    "img": "https://www.rangerover.com/content/dam/lrdx/global/l460/22my/int/L460_22MY_012_GLHD_ALT.jpg"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://www.rangerover.com/content/dam/lrdx/global/l460/25my/int/L46025GL_303103153_010.jpg"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://jlr.scene7.com/is/image/jlr/L46024GL_303101569_003_CROP?wid=1600"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://jlr.scene7.com/is/image/jlr/L46025GL_303103153_015?wid=1600"
+   }
+  ]
+ },
+ "Land Rover|Range Rover Evoque": {
+  "page": "https://www.rangerover.com/en-in/range-rover-evoque/index.html",
+  "hero": "https://jlr.scene7.com/is/image/jlr/L55126GL_303103981_001?wid=1600",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Infotainment",
+    "img": "https://www.rangerover.com/content/dam/lrdx/global/l551/26-75my/L55126_75GL_303105238_042.jpg.res/JLRHASHCE88A2411408E3C16C0B855218F40E066717B3A2/L55126_75GL_303105238_042.jpg"
+   },
+   {
+    "cap": "Centre console",
+    "img": "https://www.rangerover.com/content/dam/lrdx/global/l551/24my/int/L55124GL_303101952_023.jpg"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://www.rangerover.com/content/dam/lrdx/global/l551/24my/int/L55124GL_303101952_037.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://jlr.scene7.com/is/image/jlr/L55124GL_303101952_009_ALT?wid=1600"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://jlr.scene7.com/is/image/jlr/L55124GL_303101952_029?wid=1600"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://jlr.scene7.com/is/image/jlr/L55124GL_303101952_035?wid=1600"
+   }
+  ]
+ },
+ "Land Rover|Range Rover Sport": {
+  "page": "https://www.rangerover.com/en-in/range-rover-sport/index.html",
+  "hero": "https://jlr.scene7.com/is/image/jlr/L461_23MY_003_GLHD_SANTORINI_BLACK?wid=1600",
+  "colors": [
+   {
+    "name": "Borasco Grey",
+    "img": "https://www.rangerover.com/content/dam/lrdx/global/l461/23my/int/L461_23MY_032_GLHD_BORASCO-GREY.jpg.res/JLRHASH6F18C0886C6C74207B1C23F78E80131794CA81C1/L461_23MY_032_GLHD_BORASCO-GREY.jpg"
+   },
+   {
+    "name": "Firenze Red",
+    "img": "https://jlr.scene7.com/is/image/jlr/L46126GL_303104765_018?wid=1600"
+   },
+   {
+    "name": "Santorini Black",
+    "img": "https://jlr.scene7.com/is/image/jlr/L461_23MY_003_GLHD_SANTORINI_BLACK?wid=1600"
+   },
+   {
+    "name": "Eiger Grey",
+    "img": "https://jlr.scene7.com/is/image/jlr/L461_23MY_140_GLHD_EIGER_GREY_SATIN_CROP?wid=1600"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Seats",
+    "img": "https://www.rangerover.com/content/dam/landrover/global/vehicles/range-rover-sport/23my/L461_23MY_034_GLHD_CROP.jpg"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://www.rangerover.com/content/dam/lrdx/global/l461/25my/int/L46125GL_303103154_011.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://jlr.scene7.com/is/image/jlr/L46125GL_303103154_060?wid=1600"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://jlr.scene7.com/is/image/jlr/L461_SV_SH028_HOME_SV_01?wid=1600"
+   }
+  ]
+ },
+ "Land Rover|Range Rover Velar": {
+  "page": "https://www.rangerover.com/en-in/range-rover-velar/index.html",
+  "hero": "https://jlr.scene7.com/is/image/jlr/L56026GL_303103980_001_NAV?wid=1600",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Infotainment",
+    "img": "https://www.rangerover.com/content/dam/lrdx/global/l560/26-75my/int/L56026_75GL_303104383_024.jpg.res/JLRHASHD3B8A63E9F0731F16711D556DF601010A907254F/L56026_75GL_303104383_024.jpg"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.rangerover.com/content/dam/lrdx/global/l560/24my/int/L56024GL_303101279_033.jpg"
+   },
+   {
+    "cap": "Centre console",
+    "img": "https://www.rangerover.com/content/dam/lrdx/global/l560/24my/int/L56024GL_303101279_022.jpg"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://jlr.scene7.com/is/image/jlr/L56024GL_303101279_035?wid=1600"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://jlr.scene7.com/is/image/jlr/L56026_75GL_303104383_044?wid=1600"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://jlr.scene7.com/is/image/jlr/L56025GL_303103135_001?wid=1600"
+   }
+  ]
+ }
+}

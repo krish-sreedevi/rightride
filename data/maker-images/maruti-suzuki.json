@@ -1,0 +1,942 @@
+{
+ "Maruti Suzuki|Alto K10": {
+  "page": "https://www.marutisuzuki.com/arena/alto-k10",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.30_13.53.22_Alto_360_Red_PathTracer_0005?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Pearl Metallic Earth Gold",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.30_14.55.09_Alto_360_Gold_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Metallic Sizzling Red",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.30_13.53.22_Alto_360_Red_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Metallic Speedy Blue",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.30_14.24.28_Alto_360_Blue_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Metallic Granite Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.25_12.42.26_Alto_360_Grey_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Metallic Silky Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.30_16.01.25_Alto_360_Silver_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Solid White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.30_15.33.16_Alto_360_White_PathTracer_0005?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Cabin",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:b63dcd0b-6497-4754-8c11-2bbebdf8a2d4/as/Cabin_desk.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:be4c670b-fdd5-4d0e-91a0-7bd64ba038e7/as/Altok10_2000x1348__SMARTPLAY.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:9ac41d44-5654-424b-9fec-cc7e37ef1a2c/as/steering_mounted_desk.png?width=1600&preferwebp=false"
+   }
+  ]
+ },
+ "Maruti Suzuki|Baleno": {
+  "page": "https://www.nexaexperience.com/baleno",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/BALENO_360_STUDIO_Blue_005?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Enigmatic Teal Green",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/BALENO_360_STUDIO_Teal_005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Arctic White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/BALENO_360_STUDIO_White_02_005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Bluish Black",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/BALENO_360_STUDIO_BLACK_005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Grandeur Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/BALENO_360_STUDIO_MagmaGrey_005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Nexa Blue",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/BALENO_360_STUDIO_Blue_005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Opulent Red",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/BALENO_360_STUDIO_Red_005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Splendid Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/BALENO_360_STUDIO_Silver_02_005?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Interior",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:d9d7087b-a5fc-454f-ae04-ae9516acb2ef/as/Baleno-Interior-Poster.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:68388ee2-1357-474b-8e5d-ea02027007d6/as/seat-upholestry.jpg?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:f5102af9-950a-42c6-a98b-108a332ce7f4/as/Smartplay-pro-desktop.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Climate control",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:f620c9ed-e22f-48e3-b96c-d3ff22737383/as/Auto-climate-control.jpg?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Head-up display",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:ff1bc337-79d3-49bf-a531-fe210b315bda/as/HUD-desktop.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Rear AC vents",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:aa56bfa5-dce4-404f-971b-0495b037ef94/as/Ac-vents.jpg?width=1600&preferwebp=false"
+   }
+  ]
+ },
+ "Maruti Suzuki|Brezza": {
+  "page": "https://www.marutisuzuki.com/arena/brezza",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/BB_0005?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Sizzling Red With Bluish Black Roof",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/BB_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Bluish Black",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/PBB_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Lustrous Beige",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/LB_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Lustrous Beige With Bluish Black Roof",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/LBBB_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Magma Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/MG_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Pearl Arctic White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/PAW_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Pearl Arctic White With Bluish Black Roof",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/PAWBB_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Splendid Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/SS_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Vivacious Orange",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/VO_0005?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:a8f6c3fd-79fa-4fc7-8e30-ac463c4a4311/as/TB-dashboard.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Sunroof",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:f9714910-fa8e-43cd-b923-5a286ef1f7d2/as/TB-sunroof.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Ambient lighting",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:898e91d6-3d6f-4797-8e0d-abd8eaf8d1ed/as/bt-Ambient-Lighting-without-Screen.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Ventilated seats",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:46f442b2-e07b-4602-83b3-c1bd370da177/as/TB-ventilated.png?width=1600&preferwebp=false"
+   }
+  ]
+ },
+ "Maruti Suzuki|Celerio": {
+  "page": "https://www.marutisuzuki.com/arena/celerio",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.15_14.52.55_Celerio_360_Red_PathTracer_0005?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Caffine Brown",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.15_14.35.09_Celerio_360_Brown_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Solid Fire Red",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.15_14.52.55_Celerio_360_Red_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Silky Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.15_15.14.12_Celerio_360_Silver_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Speedy Blue",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.15_14.11.03_Celerio_360_Blue_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Arctic White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.15_15.39.30_Celerio_360_White_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Glistening Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.15_15.46.47_Celerio_360_Grey_PathTracer_0005?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:f4ce54f2-1dbf-486a-b863-3e71aa7fc1b6/as/dashboard_desktop_img.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:7c40e074-70ad-4c73-afae-74ce0c8c57cf/as/cabin_desktop_img.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:6efb5681-2d0d-46be-be84-65a23729d6c7/as/rearseat_desktop_img.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:003558d5-d8c7-488c-ab1d-cf226642c72d/as/infotainment_desktop_img.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:b0c015b8-a7ac-4edc-a3c7-0c02df1e340a/as/AR_BP_MARUTI_SUZUKI_CELERIO_STEERING_MOUNTED_CONTROLS_05-2000x1348.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:43a1e0ea-8919-4bcd-b129-9c3d0247a06f/as/celerio_-wide-cabin-space_latest.png?width=1600&preferwebp=false"
+   }
+  ]
+ },
+ "Maruti Suzuki|Ciaz": {
+  "page": "https://www.nexaexperience.com/ciaz",
+  "hero": null,
+  "colors": [],
+  "interior": []
+ },
+ "Maruti Suzuki|Dzire": {
+  "page": "https://www.marutisuzuki.com/arena/dzire",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/Dzire_360_Red00005?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Alluring Blue",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.24_19.03.09_Dzire_360_Blue_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Nutmeg Brown",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/Dzire_360_Brown_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Bluish Black",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/Dzire_360_BluishBlack_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Magma Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/Dzire_360_Grey_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Splendid Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/Dzire_360_Silver_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Arctic White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/Dzire_360_White_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Gallant Red",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/Dzire_360_Red00005?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Cabin",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:b91fb893-3a3a-4cf1-942b-387546898a57/as/cabin_space_desk.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:32565c34-681a-4ac4-b659-9d6280106807/as/Infotainment_desk.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Climate control",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:45037984-7427-48b7-a35c-ce1889cbbb1b/as/Automatic_climate_control_desk.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Sunroof",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:e60083f9-ddc3-4425-9b99-c94441d88d43/as/sunroof_desk.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Rear AC vents",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:d118c98d-7b65-437e-b2be-cdc22031ed41/as/Rear_ac_vent_desk.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Wireless charger",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:ddba2965-410d-4fb2-8108-8847737a123f/as/wireless_charger_desk.png?width=1600&preferwebp=false"
+   }
+  ]
+ },
+ "Maruti Suzuki|e Vitara": {
+  "page": "https://www.nexaexperience.com/e-vitara",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/AR_BP_NEXA_E_VITARA_ST_BLUE_00013?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Splendid Silver With Bluish Black Roof",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/AR_BP_NEXA_E_VITARA_2024_DT_SILVER_00013?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Bluish Black",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/AR_BP_NEXA_E_VITARA_2024_ST_BLACK_00013?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Land Breeze Green With Bluish Black Roof",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/AR_BP_NEXA_E_VITARA_2024_DT_GREEN_00013?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Opulent Red With Bluish Black Roof",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/AR_BP_NEXA_E_VITARA_2024_DT_RED_00013?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Arctic White With Bluish Black Roof",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/AR_BP_NEXA_E_VITARA_2024_DT_WHITE_00013?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Grandeur Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/AR_BP_NEXA_E_VITARA_2024_ST_GRAY_00013?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Splendid Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/AR_BP_NEXA_E_VITARA_2024_ST_SILVER_00013?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Arctic White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/AR_BP_NEXA_E_VITARA_2024_ST_WHITE_00013?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Opulent Red",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/AR_BP_NEXA_E_VITARA_2024_ST_RED_00013?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Interior",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:e4f48322-85e8-4837-ab05-f1548d25ff64/as/AR_BP_NEXA_E-VITARA_BROUCHER_SHOT_INTERIOR_02_V5_TIFF-copy-2.jpg?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:661a246a-9c6f-44b8-9ab4-856774c4b9cf/as/C4_AR_PK_E_Vitara_2024_Rear_Seat_Sliding_Reclining_V-2.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:99545a5c-2e0a-4eb3-a90c-4baffce3a6fc/as/AR_SN_E-VITARA_VENTILATED_SEATS_V12-(1).jpg?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Sunroof",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:f102c98f-418a-4863-a75d-fbff29ed72b9/as/SUNROOF-WITH-FIXED-GLASS.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Ambient lighting",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:a8bdc8ec-97df-4bfa-8bdc-c5df4ef6988f/as/AMBIENT-LIGHTING-WITH-MULTI-COLOUR-ILLUMINATION.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Wireless charger",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:345c3e2e-dad8-44f2-9356-b9672e65583d/as/WIRELESS-CHARGER.png?width=1600&preferwebp=false"
+   }
+  ]
+ },
+ "Maruti Suzuki|Ertiga": {
+  "page": "https://www.marutisuzuki.com/arena/ertiga",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/ertiga_360_V1_red_00005?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Metallic Magma Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/ertiga_360_V1_grey_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Pearl Metallic Auburn Red",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/ertiga_360_V1_red_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Pearl Metallic Oxford Blue",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/ertiga_360_V1_blue_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Splendid Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/ertiga_360_V1_silver_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Pearl Artic White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/ertiga_360_V1_white_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Dignity Brown",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/ertiga_360_V1_brown_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Bluish Black",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/ertiga_360_V1_bluishblack_00005?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:d54d22cf-6695-47ac-9a37-b1b23e54f805/as/Sculpted-Dashboard_2560x1440_v1.jpg?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Dual-tone interior",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:1ec89dd0-f4fc-4499-9401-1a69459f13e7/as/Desktop-Ertiga-Dual-tone-carousel-image.jpg?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:062a556a-6c3f-4b32-9f8e-5ed18f0a0726/as/Smart-Flexi-Seating.jpg?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:45d320aa-2459-4362-8078-5dddbc5f73ce/as/Ertiga_tech_Smartplay_2000x1348.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Paddle shifters",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:16742fe0-15fb-4bbb-a2a2-c8b631821153/as/Ertiga_tech_PAddle-shifter_2000x1348.png?width=1600&preferwebp=false"
+   }
+  ]
+ },
+ "Maruti Suzuki|Fronx": {
+  "page": "https://www.nexaexperience.com/fronx",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.26_11.42.51_Fronx_360_Blue_PathTracer_0005?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Bluish Black",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.13_04.59.26_Fronx_360_BluishBlack_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Arctic White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.13_06.10.30_Fronx_360_White_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Nexa Blue",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.26_11.42.51_Fronx_360_Blue_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Bluish Black + Earthen Brown (Dual Tone)",
+    "img": "https://prod-nexa.marutisuzuki.com/content/dam/msil/nexa/in/en/assets/cars/fronx/360_view_images/earthen_brown_with_bluish_black_roof/2025.03.13_05.17.06_Fronx_360_BrownBluishBlack_PathTracer_0005.png"
+   },
+   {
+    "name": "Splendid Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.13_05.52.41_Fronx_360_Silver_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Opulent Red",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.13_05.34.54_Fronx_360_Red_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Earthen Brown",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.13_05.08.17_Fronx_360_Brown_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Grandeur Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.13_05.26.01_Fronx_360_Grey_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Bluish Black + Splendid Silver (Dual Tone)",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.13_06.01.39_Fronx_360_SilverBluishBlack_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Bluish Black + Opulent Red (Dual Tone)",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.13_05.43.48_Fronx_360_RedBlack_PathTracer_0005?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dual-tone interior",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:8118ee7a-d6d3-4f9f-8a1c-d8bdcd2622c2/as/Fronx_Dual_Tone_Desktop_Image.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:0bdc42f0-d552-4004-9a6d-6eb3c85453ca/as/Fronx_image__smart-play.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:2b0cf00d-457f-4213-b5f2-56be48bb93fa/as/Fronx_Steering_Desktop_Image.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Head-up display",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:18a0a5a8-a589-497c-a341-c5fe6c86ff5d/as/Fronx_image__HUD.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Rear AC vents",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:4e5307ac-b219-427d-9a4f-c5d5f5fe1ccf/as/Fronx_Rear_AC_Vents_Desktop_Image.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Wireless charger",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:3d4b7f61-04e9-4950-88d4-7c4c2d219277/as/Fronx_image__wireless-charging.png?width=1600&preferwebp=false"
+   }
+  ]
+ },
+ "Maruti Suzuki|Grand Vitara": {
+  "page": "https://www.nexaexperience.com/grand-vitara",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/2025.04.01_02.22.34_GV_360_Blue_PathTracer_0005?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Midnight Black + Splendid Silver (Dual Tone)",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.04.09_16.20.59_GV_360_SilverBlack_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Midnight Black + Arctic White (Dual Tone)",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.04.09_16.26.35_GV_360_WhiteBlack_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Midnight Black",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.04.01_02.59.01_GV_360_Black_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Opulent Red",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.04.01_03.26.43_GV_360_Red_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Chestnut Brown",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.04.01_03.08.11_GV_360_Brown_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Grandeur Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.04.01_03.17.32_GV_360_Grey_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Splendid Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.04.01_03.45.19_GV_360_Silver_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Arctic White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.04.01_04.04.04_GV_360_White_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Nexa Blue",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.04.01_02.22.34_GV_360_Blue_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Midnight Black + Opulent Red (Dual Tone)",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.04.09_16.15.04_GV_360_RedBlack_PathTracer_0005?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Seats",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:80bf8e4d-810f-4bc2-909d-0ef95fcf867c/as/GV_F_Seat_Desktop_Image.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Sunroof",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:14167f1f-230c-4307-9cca-c0038aef92d4/as/GV_Sunroof_Desktop_Image.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Ambient lighting",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:ee092bc2-4f63-4b9f-8094-fc40dc2dfdad/as/GV_Ambient_Light_Desktop_Image.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Wireless charger",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:9f10058a-a750-42ab-9c0d-28a810bb5511/as/wireless-charging.jpg?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Paddle shifters",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:c090fc33-f57d-4159-965e-bf947b1e0c44/as/GV_paddle_shifter_Desktop.jpg?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Gear lever",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:ee357e3c-02c4-456f-8f59-8358b7f18aad/as/GV_Auto-Gear-Shot-1_v2.png?width=1600&preferwebp=false"
+   }
+  ]
+ },
+ "Maruti Suzuki|Ignis": {
+  "page": "https://www.nexaexperience.com/ignis",
+  "hero": null,
+  "colors": [],
+  "interior": []
+ },
+ "Maruti Suzuki|Invicto": {
+  "page": "https://www.nexaexperience.com/invicto",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.13_06.28.14_Invicto_360_Blue_PathTracer_0005?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Mystic White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.13_06.54.28_Invicto_360_White_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Majestic Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.13_06.45.42_Invicto_360_Silver_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Stellar Bronze",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.13_06.36.56_Invicto_360_Bronze_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Nexa Blue",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.13_06.28.14_Invicto_360_Blue_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Magnificent Black",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.13_06.19.29_Invicto_360_Black_PathTracer_0005?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Seats",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:d41abab2-f411-430a-974e-19395f81602b/as/Invicto_Powered-driver-seat-1_v2.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:de596f4d-2de7-4f6d-a919-b0c99f93a88b/as/Invicto_SmartPlay-Magnum%20-1.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Rear AC vents",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:4d676f35-07af-4d48-8873-f79414a85df2/as/Invicto_Rear-AC-1_v2.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Paddle shifters",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:fa244c86-21a1-462f-abd6-638d30b3185a/as/Invicto_Paddle-Shifter-1.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:e363f99a-5b3a-48f0-b936-03e957f55405/as/Front_Seat_Image_Desktop.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:6efcb201-0231-4166-903e-3af7a753e339/as/Mid_Seat_Image_Desktop.png?width=1600&preferwebp=false"
+   }
+  ]
+ },
+ "Maruti Suzuki|Jimny": {
+  "page": "https://www.nexaexperience.com/jimny",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.26_14.20.56_Jimny_360_Blue_PathTracer_0005?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Bluish Black Sizzling Red",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.18_18.33.43_Jimny_360_RedBluishBlack_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Bluish Black Kinetic Yellow",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.18_18.51.41_Jimny_360_YellowBluishBlack_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Nexa Blue",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.26_14.20.56_Jimny_360_Blue_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Granite Gray",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.18_18.14.38_Jimny_360_Grey_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Sizzling Red",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.18_18.24.38_Jimny_360_Red_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Pearl Arctic White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.18_18.42.38_Jimny_360_White_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Bluish Black",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.03.18_18.03.47_Jimny_360_BluishBlack_PathTracer_0005?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Interior",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:cb107b18-0138-494d-9353-1f1156af1f55/as/JIMNY_Interior_Desktop_Image.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:83eb19c1-267c-41a8-904d-4ddde9e82a0a/as/JIMNY_Seats_Desktop_Image.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:f31a4e69-5a50-456d-8afa-0a121a3a55a7/as/JIMNY_SmartPlay_Desktop_Image.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Interior",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:bbd16fcf-a8c9-430e-b1c4-ab1f06d4bb4f/as/JIMNY_Interior_Layout_Desktop_Image.png?width=1600&preferwebp=false"
+   }
+  ]
+ },
+ "Maruti Suzuki|S-Presso": {
+  "page": "https://www.marutisuzuki.com/arena/s-presso",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.12_14.37.35_Spresso_360_Red_PathTracer_00005?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Solid Sizzle Orange",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/Orange_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Metallic Silky Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/Silver_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Metallic Granite Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/Grey_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Solid Fire Red",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/2025.05.12_14.37.35_Spresso_360_Red_PathTracer_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Pearl Starry Blue",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/Blue_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Solid White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/White_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Bluish Black",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/BluishBlack_00005?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Interior",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:e1a84db0-384c-4c9a-a866-f45d8101690f/as/Interior_8_sec.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:9bd5b171-534e-4c71-a08e-c1d5b82b7d0f/as/cabin_image_desk.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:efc56e63-29db-42d9-8423-514ed7fefb3b/as/Backseat_image_desk.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:747221d5-530c-4421-976c-12b9e9137e94/as/smartplay_desk_image.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:29638dd4-9e42-4838-bdf8-a4074f1decad/as/steering_desk_image.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:3af37519-aa37-44b6-b234-22684e209547/as/Revised-Instrument-Cluster_2000x1348.png?width=1600&preferwebp=false"
+   }
+  ]
+ },
+ "Maruti Suzuki|Swift": {
+  "page": "https://www.marutisuzuki.com/arena/swift",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/SUZUKI_SWIFT_EXT_360_RED_BLUISH_BKACK_DUAL_TONE_V-1_revised_00005?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Splendid Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/SUZUKI_SWIFT_EXT_360_SILVER_V-4_2_revised_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Pearl Arctic White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/SUZUKI_SWIFT_EXT_360_WHITE_V-2_revised_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Novel Orange",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/SUZUKI_SWIFT_EXT_360_ORAGNE_V-1_revised_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Magma Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/SUZUKI_SWIFT_EXT_360_GREY_V-3_revised_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Luster Blue",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/SUZUKI_SWIFT_EXT_360_BLUE_V-1_revised_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Sizzling Red",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/SUZUKI_SWIFT_EXT_360_RED_V-1_revised_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Bluish Black + Luster Blue (Dual Tone)",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/SUZUKI_SWIFT_EXT_360_BLUE_BLUISH_BLACK_DUAL_TONE_V-2_revised_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Bluish Black + Pearl Arctic White (Dual Tone)",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/SUZUKI_SWIFT_EXT_360_WHITE_BLUISH_BLACK_DUAL_TONE_V-2_revised_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Bluish Black + Sizzling Red (Dual Tone)",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/SUZUKI_SWIFT_EXT_360_RED_BLUISH_BKACK_DUAL_TONE_V-1_revised_00005?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:39384c12-b973-4d04-8a9f-c1baa22f9e8a/as/AR_PK_SWIFT_2024_FULL_DASHBOARD_6k_V-4.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:e596efba-8fa3-49f5-ba02-7afabab5dfa7/as/AR_AB_SWIFT_REVERSE_PARKING_SENSOR_INFOTAINMENT_02-2000x1348.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Rear AC vents",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:39ba3dc0-d336-4121-839a-ca1a3a4e9907/as/AR-AM-Swift_RearAc-Vent-Shot-2024-v2-copy.jpg?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Climate control",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:d33e3b35-9181-482a-bf29-162e5ecbbf78/as/AR-AM-Swift-Automatic-climate-control-Shot-2024-v2.jpg?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Wireless charger",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:bfc8d5bc-f91b-4766-b63b-2d4df11d09bc/as/AR-AM-Swift-Wireless-Phone-charger-op-2-Shot-2024-v3.png?width=1600&preferwebp=false"
+   }
+  ]
+ },
+ "Maruti Suzuki|Victoris": {
+  "page": "https://www.marutisuzuki.com/arena/victoris",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/saber_360_V4_blue_dt_00005?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Arctic White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/saber_360_V4_white_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Splendid Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/saber_360_V4_silver_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Sizzling Red With Black Roof",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/saber_360_V4_red_dt_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Splendid Silver With Black Roof",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/saber_360_V4_silver_dt_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Magma Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/saber_360_V4_grey_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Mystic Green",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/saber_360_V4_green_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Bluish Black",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/saber_360_V4_black_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Eternal Blue",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/saber_360_V4_blue_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Sizzling Red",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/saber_360_V4_red_00005?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:80c0f5df-897b-45d1-87c4-e91eb53a8ace/as/Desktop-3-Layered-Dashboard.jpg?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Interior",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:3884ba73-886c-462c-a7c4-06b6f49c7c30/as/Desktop-Dual-Tone-Interior---Seat.jpg?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:9be6df5a-54b3-4f18-a321-131d2cbd138e/as/steering_mounted_desk.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Ambient lighting",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:e95c892c-ab85-4326-800e-44e8a38ae73c/as/Desktop-64-Color-Ambient-Lighting.jpg?width=1600&preferwebp=false"
+   }
+  ]
+ },
+ "Maruti Suzuki|WagonR": {
+  "page": "https://www.marutisuzuki.com/arena/wagonr",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/WagonR_360_White_00005?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Silky Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/WagonR_360_Silver_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Magma Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/WagonR_360_Grey_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Nutmeg Brown",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/WagonR_360_Brown_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Pearl Bluish Black Metallic With Gallant Red",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/WagonR_360_RedBluishBlack_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Poolside Blue",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/WagonR_360_Blue_00005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Pearl Bluish Black Metallic With Magma Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/WagonR_360_GreyBluishBlack_00005?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dual-tone interior",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:dcf526d1-a3d3-4663-9283-f32116106cfd/as/dual_tone_desk.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:a5d82525-409b-4b53-b379-9041221b3599/as/spacious_cabin.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:b65b4d96-8e85-4fdd-84fb-2c70733b971d/as/smartplay_audio_desk.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:182d44b3-1531-48fc-8982-cbc11c2eda65/as/Steering_desk.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.marutisuzuki.com/adobe/assets/urn:aaid:aem:ce356615-a948-4341-ac8d-b5c369c60864/as/WagonR_Tech_Smartplay_Desktop_BAB.png?width=1600&preferwebp=false"
+   }
+  ]
+ },
+ "Maruti Suzuki|XL6": {
+  "page": "https://www.nexaexperience.com/xl6",
+  "hero": "https://marutisuzuki.scene7.com/is/image/maruti/XL6_Blue_PathTracer_0005?fmt=png-alpha&bfc=on",
+  "colors": [
+   {
+    "name": "Arctic White",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/XL6_White_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Brave Khaki",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/XL6_Khaki_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Nexa Blue",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/XL6_Blue_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Splendid Silver",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/XL6_Silver_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Grandeur Grey",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/XL6_Grey_PathTracer_0005?fmt=png-alpha&bfc=on"
+   },
+   {
+    "name": "Opulent Red",
+    "img": "https://marutisuzuki.scene7.com/is/image/maruti/XL6_Red_PathTracer_0005?fmt=png-alpha&bfc=on"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Seats",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:abb2e900-4b38-4fc2-a70b-9b4671156d80/as/Mid_Seat_Image_Desktop.png?width=1600&preferwebp=false"
+   },
+   {
+    "cap": "Paddle shifters",
+    "img": "https://www.nexaexperience.com/adobe/assets/urn:aaid:aem:3ca4f6b8-aea5-4913-aa4b-eb8874d730ed/as/XL6_image_paddle-shifter-1.png?width=1600&preferwebp=false"
+   }
+  ]
+ }
+}

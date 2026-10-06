@@ -1,0 +1,718 @@
+{
+ "Tata|Aeris": {
+  "page": "https://tata.cars/aeris/ice.html",
+  "hero": "https://tata.cars/content/dam/tml/pv/products/aeris/year-2026/ice/promoting-vc/360-exterior/dandeli-drizzle/DandeliDrizzle-0.png",
+  "colors": [
+   {
+    "name": "Dandeli Drizzle color",
+    "img": "https://tata.cars/content/dam/tml/pv/products/aeris/year-2026/ice/promoting-vc/360-exterior/dandeli-drizzle/DandeliDrizzle-0.png"
+   },
+   {
+    "name": "Daytona Grey color",
+    "img": "https://tata.cars/content/dam/tml/pv/products/aeris/year-2026/ice/promoting-vc/360-exterior/daytona-grey/DaytonaGrey-0.png"
+   },
+   {
+    "name": "Dune Glow color",
+    "img": "https://tata.cars/content/dam/tml/pv/products/aeris/year-2026/ice/promoting-vc/360-exterior/dune-glow/DuneGlow-0.png"
+   },
+   {
+    "name": "Nitro Crimson color",
+    "img": "https://tata.cars/content/dam/tml/pv/products/aeris/year-2026/ice/promoting-vc/360-exterior/nitro-crimson/NitroCrimson-0.png"
+   },
+   {
+    "name": "Pristine White color",
+    "img": "https://tata.cars/content/dam/tml/pv/products/aeris/year-2026/ice/promoting-vc/360-exterior/pristine-white/PristineWhite-0.png"
+   },
+   {
+    "name": "Pure Grey color",
+    "img": "https://tata.cars/content/dam/tml/pv/products/aeris/year-2026/ice/promoting-vc/360-exterior/pure-grey/PureGrey-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/premium-openview-dashboard?wid=474&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/premium-ventilated-leatherette-seats-1?wid=474&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/26-03cm-floating-infotainment-touchscreen?wid=474&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/aeris-interior-petrol?wid=1326&fmt=jpg&qlt=85"
+   }
+  ]
+ },
+ "Tata|Altroz": {
+  "page": "https://tata.cars/altroz/ice.html",
+  "hero": "https://tata.cars/content/dam/tml/pv/products/altroz/year-2025/ice/promoting-vc/360-exterior/prestine-white/PrestineWhite-0.png",
+  "colors": [
+   {
+    "name": "Pristine White",
+    "img": "https://tata.cars/content/dam/tml/pv/products/altroz/year-2025/ice/promoting-vc/360-exterior/prestine-white/PrestineWhite-0.png"
+   },
+   {
+    "name": "Pure Grey",
+    "img": "https://tata.cars/content/dam/tml/pv/products/altroz/year-2025/ice/promoting-vc/360-exterior/arcade-grey/ArcadeGrey-0.png"
+   },
+   {
+    "name": "Royal Blue",
+    "img": "https://tata.cars/content/dam/tml/pv/products/altroz/year-2025/ice/promoting-vc/360-exterior/royal-blue/RoyalBlue-0.png"
+   },
+   {
+    "name": "Ember Glow",
+    "img": "https://tata.cars/content/dam/tml/pv/products/altroz/year-2025/ice/promoting-vc/360-exterior/ember-glow/new-1/EmberGlow-0.png"
+   },
+   {
+    "name": "Dune Glow",
+    "img": "https://tata.cars/content/dam/tml/pv/products/altroz/year-2025/ice/promoting-vc/360-exterior/dune-glow/DuneGlow-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/dashboard-7?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/driver-seat-adjustment?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/rear-seat?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/altroz-infotaiment?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/altroz-steering?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Digital cockpit",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/cockpit?wid=614&fmt=jpg&qlt=85"
+   }
+  ]
+ },
+ "Tata|Curvv": {
+  "page": "https://tata.cars/curvv/ice.html",
+  "hero": "https://tata.cars/content/dam/tml/pv/products/curvv/year-2026/ice/promoting-vc/exterior-360/pristine-white/PristineWhite-0.png",
+  "colors": [
+   {
+    "name": "Pristine White",
+    "img": "https://tata.cars/content/dam/tml/pv/products/curvv/year-2026/ice/promoting-vc/exterior-360/pristine-white/PristineWhite-0.png"
+   },
+   {
+    "name": "Nitro Crimson (Dual Tone)",
+    "img": "https://tata.cars/content/dam/tml/pv/products/curvv/year-2026/ice/promoting-vc/exterior-360/nitro-crimson/NitroCrimson-0.png"
+   },
+   {
+    "name": "Pure Grey",
+    "img": "https://tata.cars/content/dam/tml/pv/products/curvv/year-2026/ice/promoting-vc/exterior-360/pure-grey/PureGrey-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/llg-theme-interiors?wid=474&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/ergo-lux-6-way-powered-driver-seat-1?wid=474&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/interior-thumbnail?wid=1326&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/front-ventilated-seats?wid=474&fmt=jpg&qlt=85"
+   }
+  ]
+ },
+ "Tata|Curvv EV": {
+  "page": "https://ev.tata.cars/curvv/ev.html",
+  "hero": "https://ev.tata.cars/content/dam/tml/ev/products/curvv/year-2025/ev/promoting-vc/360/empowered-oxide/empoweredoxide-0.png",
+  "colors": [
+   {
+    "name": "Empowered Oxide With Dual Tone",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/curvv/year-2025/ev/promoting-vc/360/empowered-oxide/empoweredoxide-0.png"
+   },
+   {
+    "name": "Pristine White With Dual Tone",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/curvv/year-2025/ev/promoting-vc/360/prestine-white/prestinewhite-0.png"
+   },
+   {
+    "name": "Pure Grey With Dual Tone",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/curvv/year-2025/ev/promoting-vc/360/pure-grey/puregrey-0.png"
+   },
+   {
+    "name": "Virtual Sunrise With Dual Tone",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/curvv/year-2025/ev/promoting-vc/360/virtual-sunrise/virtualsunrise-0.png"
+   },
+   {
+    "name": "Nitro Crimson With Dual Tone",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/curvv/year-2026/ev/promoting-vc/360/nitro-crimson/NitroCrimson-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/digital-dashboard-curvv-ev?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/2-stage-rear-seat-recline-curvv-ev?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/smart-digital-steering-wheel-new?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/advanced-comfort-seats-with-ventilation-2?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/60-40-rear-split-seats-with-centre-armrest-curvv-ev?wid=614&fmt=jpg&qlt=85"
+   }
+  ]
+ },
+ "Tata|Harrier": {
+  "page": "https://tata.cars/harrier/ice.html",
+  "hero": "https://tata.cars/content/dam/tml/pv/products/harrier/year-2025/ice/promoting-vc/360-exterior/new/sunlit-yellow/SunlitYellow-0.png",
+  "colors": [
+   {
+    "name": "Sunlit Yellow",
+    "img": "https://tata.cars/content/dam/tml/pv/products/harrier/year-2025/ice/promoting-vc/360-exterior/new/sunlit-yellow/SunlitYellow-0.png"
+   },
+   {
+    "name": "Seaweed Green",
+    "img": "https://tata.cars/content/dam/tml/pv/products/harrier/year-2025/ice/promoting-vc/360-exterior/new/seawed-green/SeaweedGreen-0.png"
+   },
+   {
+    "name": "Daytona Grey",
+    "img": "https://tata.cars/content/dam/tml/pv/products/harrier/year-2025/ice/promoting-vc/360-exterior/new/daytona-grey/DaytonaGrey-0.png"
+   },
+   {
+    "name": "Fearless Red",
+    "img": "https://tata.cars/content/dam/tml/pv/products/harrier/year-2025/ice/promoting-vc/360-exterior/new/fearless-red/FearlessRed-0.png"
+   },
+   {
+    "name": "Pure Grey",
+    "img": "https://tata.cars/content/dam/tml/pv/products/harrier/year-2025/ice/promoting-vc/360-exterior/new/pure-grey/PureGrey-0.png"
+   },
+   {
+    "name": "Nitro Crimson",
+    "img": "https://tata.cars/content/dam/tml/pv/products/harrier/year-2025/ice/promoting-vc/360-exterior/new/nitro-crimson/NitroCrimson-0.png"
+   },
+   {
+    "name": "Pristine White",
+    "img": "https://tata.cars/content/dam/tml/pv/products/harrier/year-2025/ice/promoting-vc/360-exterior/new/prestine-white/PrestineWhite-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/dual-tone-titan-wood-finish-dashboard?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/ergo-lux-4-way-powered-co-driver-seat?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/cinematic-infotainment-screen?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/digital-steering-wheel-with-illuminated-logo?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/oyster-white-titan-brown-interior-theme?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/ventilated-front-row-seats-2?wid=614&fmt=jpg&qlt=85"
+   }
+  ]
+ },
+ "Tata|Nexon": {
+  "page": "https://tata.cars/nexon/ice.html",
+  "hero": "https://tata.cars/content/dam/tml/pv/products/nexon/year-2025/ice/promoting-vc/360-exterior/new/royal-blue/RoyalBlue-0.png",
+  "colors": [
+   {
+    "name": "Royal Blue",
+    "img": "https://tata.cars/content/dam/tml/pv/products/nexon/year-2025/ice/promoting-vc/360-exterior/new/royal-blue/RoyalBlue-0.png"
+   },
+   {
+    "name": "Ocean Blue",
+    "img": "https://tata.cars/content/dam/tml/pv/products/nexon/year-2025/ice/promoting-vc/360-exterior/new/ocean-blue/OceanBlue-0.png"
+   },
+   {
+    "name": "Pure Grey",
+    "img": "https://tata.cars/content/dam/tml/pv/products/nexon/year-2025/ice/promoting-vc/360-exterior/new/pure-grey/PureGrey-0.png"
+   },
+   {
+    "name": "Grassland Beige",
+    "img": "https://tata.cars/content/dam/tml/pv/products/nexon/year-2025/ice/promoting-vc/360-exterior/new/grassland-beige/GrasslandBeige-0.png"
+   },
+   {
+    "name": "Daytona Grey",
+    "img": "https://tata.cars/content/dam/tml/pv/products/nexon/year-2025/ice/promoting-vc/360-exterior/new/daytona-grey/DaytonaGrey-0.png"
+   },
+   {
+    "name": "Pristine White",
+    "img": "https://tata.cars/content/dam/tml/pv/products/nexon/year-2025/ice/promoting-vc/360-exterior/new/calgury-white/CalguryWhite-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/three-tone-dashboard-1?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/premium-ventilated-leatherette-seats?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/floating-infotainment-system?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/steering-wheel-2?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Centre console",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/grand-floor-console?wid=614&fmt=jpg&qlt=85"
+   }
+  ]
+ },
+ "Tata|Nexon EV": {
+  "page": "https://ev.tata.cars/nexon/ev.html",
+  "hero": "https://ev.tata.cars/content/dam/tml/ev/products/nexon/year-2026/ev/promoting-vc/360-exterior/pristine-white/PristineWhite-0.png",
+  "colors": [
+   {
+    "name": "Pristine White",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/nexon/year-2026/ev/promoting-vc/360-exterior/pristine-white/PristineWhite-0.png"
+   },
+   {
+    "name": "Ocean Blue",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/nexon/year-2026/ev/promoting-vc/360-exterior/creative-ocean/CreativeOcean-0.png"
+   },
+   {
+    "name": "Pure Grey",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/nexon/year-2026/ev/promoting-vc/360-exterior/pure-grey/PureGrey-0.png"
+   },
+   {
+    "name": "Daytona Grey",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/nexon/year-2026/ev/promoting-vc/360-exterior/daytona-grey/DaytonaGrey-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/full-dashboard?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/bolstered-seats?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/nexon-ev-inner-design-comfort?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/nexon-ev-2025-smart-digital-steering-wheel?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Digital cockpit",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/digital-cockpit-1?wid=1020&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Centre console",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/grand-centre-console-with-armrest?wid=614&fmt=jpg&qlt=85"
+   }
+  ]
+ },
+ "Tata|Punch": {
+  "page": "https://tata.cars/punch/ice.html",
+  "hero": "https://tata.cars/content/dam/tml/pv/products/punch/year-2026/ice/promoting-vc/360-exterior/cyantific/Cyantific-0.png",
+  "colors": [
+   {
+    "name": "Cyantafic Blue",
+    "img": "https://tata.cars/content/dam/tml/pv/products/punch/year-2026/ice/promoting-vc/360-exterior/cyantific/Cyantific-0.png"
+   },
+   {
+    "name": "Coorg Clouds",
+    "img": "https://tata.cars/content/dam/tml/pv/products/punch/year-2026/ice/promoting-vc/360-exterior/coorg-clouds/CoorgClouds-0.png"
+   },
+   {
+    "name": "Caramel",
+    "img": "https://tata.cars/content/dam/tml/pv/products/punch/year-2026/ice/promoting-vc/360-exterior/caramel/Caramel-0.png"
+   },
+   {
+    "name": "Bengal Rouge",
+    "img": "https://tata.cars/content/dam/tml/pv/products/punch/year-2026/ice/promoting-vc/360-exterior/bengal-rogue/BengalRogue-0.png"
+   },
+   {
+    "name": "Pristine White",
+    "img": "https://tata.cars/content/dam/tml/pv/products/punch/year-2026/ice/promoting-vc/360-exterior/pristine-white/PrestineWhite-0.png"
+   },
+   {
+    "name": "Daytona Grey",
+    "img": "https://tata.cars/content/dam/tml/pv/products/punch/year-2026/ice/promoting-vc/360-exterior/daytona-grey/DaytonaGrey-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/duotone-signature-dash-1?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/extended-thigh-support-seats-new?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/boot-petrol-new-1?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/aacp-new-1?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/d-cut-steering-wheel-3?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Digital cockpit",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/ultra-view-twin-digital-cockpit-1?wid=614&fmt=jpg&qlt=85"
+   }
+  ]
+ },
+ "Tata|Punch EV": {
+  "page": "https://ev.tata.cars/punch/ev.html",
+  "hero": "https://ev.tata.cars/content/dam/tml/ev/products/punch/year-2026/ev/promoting-vc/360-exterior/bengal-rouge/BengalRouge-0.png",
+  "colors": [
+   {
+    "name": "Bengal Rouge",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/punch/year-2026/ev/promoting-vc/360-exterior/bengal-rouge/BengalRouge-0.png"
+   },
+   {
+    "name": "Caramel",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/punch/year-2026/ev/promoting-vc/360-exterior/caramel/Caramel-0.png"
+   },
+   {
+    "name": "Empowered Oxide",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/punch/year-2026/ev/promoting-vc/360-exterior/oxide/EmpoweredOxide-0.png"
+   },
+   {
+    "name": "Fearless Yellow",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/punch/year-2026/ev/promoting-vc/360-exterior/fearless-yellow/FearlessYellow-0.png"
+   },
+   {
+    "name": "Pristine White",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/punch/year-2026/ev/promoting-vc/360-exterior/pristine-white/PrestineWhite-0.png"
+   },
+   {
+    "name": "Pure Grey",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/punch/year-2026/ev/promoting-vc/360-exterior/pure-grey/PureGrey-0.png"
+   },
+   {
+    "name": "Supernova Copper",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/punch/year-2026/ev/promoting-vc/360-exterior/supernova-copper/SupernovaCopper-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Interior",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/INT-0?wid=1020&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Digital cockpit",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/cockpit-614x400?wid=614&fmt=jpg&qlt=85"
+   }
+  ]
+ },
+ "Tata|Safari": {
+  "page": "https://tata.cars/safari/ice.html",
+  "hero": "https://tata.cars/content/dam/tml/pv/products/safari/year-2024/ice/promoting-vc/exterior-360/lunar-slate/LunarSlate-0.png",
+  "colors": [
+   {
+    "name": "Pure Grey",
+    "img": "https://tata.cars/content/dam/tml/pv/products/safari/year-2024/ice/promoting-vc/exterior-360/lunar-slate/LunarSlate-0.png"
+   },
+   {
+    "name": "Royal Blue",
+    "img": "https://tata.cars/content/dam/tml/pv/products/safari/year-2024/ice/promoting-vc/exterior-360/galactic-sapphire/GalacticSapphire-0.png"
+   },
+   {
+    "name": "Daytona Grey",
+    "img": "https://tata.cars/content/dam/tml/pv/products/safari/year-2024/ice/promoting-vc/exterior-360/stardust-ash/StardustAsh-0.png"
+   },
+   {
+    "name": "Frost White",
+    "img": "https://tata.cars/content/dam/tml/pv/products/safari/year-2025/ice/promoting-vc/home-page/frost-white/exterior-360/FrostWhite-0.png"
+   },
+   {
+    "name": "Black + Cosmic Gold (Dual Tone)",
+    "img": "https://tata.cars/content/dam/tml/pv/products/safari/year-2024/ice/promoting-vc/exterior-360/cosmic-gold/CosmicGold-0.png"
+   },
+   {
+    "name": "Supernova Copper",
+    "img": "https://tata.cars/content/dam/tml/pv/products/safari/year-2024/ice/promoting-vc/exterior-360/supernova-copper/SupernovaCopper-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/exquisite-carnelian-red-interior-theme-614x400-1?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/ergo-lux-6-way-powered-driver-seat-614x400-1?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/luxorious-3rd-row-seats-new-safari?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/36-9-cm-cinematic-infotainment-screen-by-harman-powered-by-samsung-neo-qled-world-s-1st-neo-qled-automotive-614x400?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/steering-wheel-614x400?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/exquisite-carnelian-red-interior-theme-614x400?wid=614&fmt=jpg&qlt=85"
+   }
+  ]
+ },
+ "Tata|Sierra": {
+  "page": "https://tata.cars/sierra/ice.html",
+  "hero": "https://tata.cars/content/dam/tml/pv/products/sierra/year-2025/ice/promoting-vc/360-exterior/pure-grey/puregrey-0.png",
+  "colors": [
+   {
+    "name": "Pure Grey",
+    "img": "https://tata.cars/content/dam/tml/pv/products/sierra/year-2025/ice/promoting-vc/360-exterior/pure-grey/puregrey-0.png"
+   },
+   {
+    "name": "Andaman Adventure",
+    "img": "https://tata.cars/content/dam/tml/pv/products/sierra/year-2025/ice/promoting-vc/360-exterior/andaman-adventure/updated/AndamanAdventure-0.png"
+   },
+   {
+    "name": "Bengal Rouge",
+    "img": "https://tata.cars/content/dam/tml/pv/products/sierra/year-2025/ice/promoting-vc/360-exterior/bengal-rouge/BengalRouge-0.png"
+   },
+   {
+    "name": "Coorg Clouds",
+    "img": "https://tata.cars/content/dam/tml/pv/products/sierra/year-2025/ice/promoting-vc/360-exterior/coorg-clouds/CoorgCloud-0.png"
+   },
+   {
+    "name": "Munnar Mist",
+    "img": "https://tata.cars/content/dam/tml/pv/products/sierra/year-2025/ice/promoting-vc/360-exterior/munnar-mist/MunnarMist-0.png"
+   },
+   {
+    "name": "Pristine White",
+    "img": "https://tata.cars/content/dam/tml/pv/products/sierra/year-2025/ice/promoting-vc/360-exterior/prestine-white/PrestineWhite-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Rear seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/rear-comfort-?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/6-way-power-seat?wid=1020&fmt=jpg&qlt=85"
+   }
+  ]
+ },
+ "Tata|Sierra EV": {
+  "page": "https://ev.tata.cars/sierra/ev.html",
+  "hero": "https://ev.tata.cars/content/dam/tml/ev/products/sierra/year-2026/ev/promoting-vc/360/andaman-adventure/AndamanAdventure-0.png",
+  "colors": [
+   {
+    "name": "Andaman Adventure",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/sierra/year-2026/ev/promoting-vc/360/andaman-adventure/AndamanAdventure-0.png"
+   },
+   {
+    "name": "Bengal Rouge",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/sierra/year-2026/ev/promoting-vc/360/bengal-rouge/BengalRouge-0.png"
+   },
+   {
+    "name": "Coorg Clouds",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/sierra/year-2026/ev/promoting-vc/360/coorg-cloud/CoorgCloud-0.png"
+   },
+   {
+    "name": "Nainital Nocturne",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/sierra/year-2026/ev/promoting-vc/360/nainital-noctum/NainitalNoctum-0.png"
+   },
+   {
+    "name": "Pristine White",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/sierra/year-2026/ev/promoting-vc/360/prestine-white/PrestineWhite-0.png"
+   },
+   {
+    "name": "Pure Grey",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/sierra/year-2026/ev/promoting-vc/360/pure-grey/PureGrey-0.png"
+   },
+   {
+    "name": "Rishikesh Rapids",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/sierra/year-2026/ev/promoting-vc/360/rishikesh-rapid/RishikeshRapid-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/interior-thumbnail?wid=1080&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/horizon-view-triple-screen-infotainment-experience?wid=474&fmt=jpg&qlt=85"
+   }
+  ]
+ },
+ "Tata|Tiago": {
+  "page": "https://tata.cars/tiago/ice.html",
+  "hero": "https://tata.cars/content/dam/tml/pv/products/tiago/year-2026/ice/promoting-vc/360-exterior/vibrance-varanasi/VibranceVaranasi-0.png",
+  "colors": [
+   {
+    "name": "Varanasi Vibrance",
+    "img": "https://tata.cars/content/dam/tml/pv/products/tiago/year-2026/ice/promoting-vc/360-exterior/vibrance-varanasi/VibranceVaranasi-0.png"
+   },
+   {
+    "name": "Pristine White",
+    "img": "https://tata.cars/content/dam/tml/pv/products/tiago/year-2026/ice/promoting-vc/360-exterior/prestine-white/PrestineWhite-0.png"
+   },
+   {
+    "name": "Pure Grey",
+    "img": "https://tata.cars/content/dam/tml/pv/products/tiago/year-2026/ice/promoting-vc/360-exterior/pure-grey/PureGrey-0.png"
+   },
+   {
+    "name": "Pangong Pulse",
+    "img": "https://tata.cars/content/dam/tml/pv/products/tiago/year-2026/ice/promoting-vc/360-exterior/pangong-pulse/PangongPulse-0.png"
+   },
+   {
+    "name": "Daytona Grey",
+    "img": "https://tata.cars/content/dam/tml/pv/products/tiago/year-2026/ice/promoting-vc/360-exterior/matheran-monsoon/MatheranMonsoon-0.png"
+   },
+   {
+    "name": "Sobo Surge",
+    "img": "https://tata.cars/content/dam/tml/pv/products/tiago/year-2026/ice/promoting-vc/360-exterior/sobo-surge/SoboSurge-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/premium-fabric-touch-dashboard-and-door-trim-pv?wid=474&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/premium-melange-fabric-seats-with-extended-thigh-support-new?wid=475&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/26.03-cm-hd-touchscreen-infotainment?wid=475&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatamotors/interior-hotspot?wid=1400&fmt=jpg&qlt=85"
+   }
+  ]
+ },
+ "Tata|Tiago EV": {
+  "page": "https://ev.tata.cars/tiago/ev.html",
+  "hero": "https://ev.tata.cars/content/dam/tml/ev/products/tiago/year-2026/ev/promoting-vc/daytona-grey/main-images/MatheranMonsoon-0.png",
+  "colors": [
+   {
+    "name": "Daytona Grey",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/tiago/year-2026/ev/promoting-vc/daytona-grey/main-images/MatheranMonsoon-0.png"
+   },
+   {
+    "name": "Pangong Pulse",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/tiago/year-2026/ev/promoting-vc/pangong-pulse/main-images/PangongPulse-0.png"
+   },
+   {
+    "name": "Dehradun Dew",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/tiago/year-2026/ev/promoting-vc/dehradun-dew/main-images/DehradunDew-0.png"
+   },
+   {
+    "name": "Sobo Surge",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/tiago/year-2026/ev/promoting-vc/sobo-surge/main-images/SoboSurge-0.png"
+   },
+   {
+    "name": "Pure Grey",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/tiago/year-2026/ev/promoting-vc/pure-grey/main-images/PureGrey-0.png"
+   },
+   {
+    "name": "Pristine White",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/tiago/year-2026/ev/promoting-vc/pristine-white/main-images/PrestineWhite-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/Futuristic-Dual-Tone-Fabric-Wrapped-Dashboard?wid=474&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/Premium-Melange-Fabric-Seats-with-Extended-Thigh-Support?wid=474&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/Infotainment-Screen-1?wid=474&fmt=jpg&qlt=85"
+   }
+  ]
+ },
+ "Tata|Tigor EV": {
+  "page": "https://ev.tata.cars/tigor/ev.html",
+  "hero": "https://ev.tata.cars/content/dam/tml/ev/products/tigor/year-2023/ev/promoting-vc/daytona-grey/360-exterior/DaytonaGrey-0.png",
+  "colors": [
+   {
+    "name": "Black + Daytona Grey (Dual Tone)",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/tigor/year-2023/ev/promoting-vc/daytona-grey/360-exterior/DaytonaGrey-0.png"
+   },
+   {
+    "name": "Black + Signature Teal Blue (Dual Tone)",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/tigor/year-2023/ev/promoting-vc/signature-teal-blue/360-exterior/SignatureTealBlue-0.png"
+   },
+   {
+    "name": "Magnetic Red",
+    "img": "https://ev.tata.cars/content/dam/tml/ev/products/tigor/year-2023/ev/promoting-vc/magnetic-red/360-exterior/MagneticRed-0.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/dash-board?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/Comfort-Height-Adjustable-Seats-1?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/Harman-Infotainment?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/flatbottom-steering?wid=614&fmt=jpg&qlt=85"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://s7ap1.scene7.com/is/image/tatapassenger/premium-interior?wid=614&fmt=jpg&qlt=85"
+   }
+  ]
+ }
+}

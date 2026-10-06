@@ -1,0 +1,586 @@
+{
+ "Hyundai|Alcazar": {
+  "page": "https://www.hyundai.com/in/en/find-a-car/alcazar/exterior",
+  "hero": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Alcazar/360/altas-white-dual-tone/pc/altas-white-dual-tone_5.png",
+  "colors": [
+   {
+    "name": "Abssy Black + Atlas White (Dual Tone)",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Alcazar/360/altas-white-dual-tone/pc/altas-white-dual-tone_5.png"
+   },
+   {
+    "name": "Starry Night",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Alcazar/360/starry-night/pc/starry-night_5.png"
+   },
+   {
+    "name": "Atlas White",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Alcazar/360/atlas-white/pc/atlas-white_5.png"
+   },
+   {
+    "name": "Abssy Black",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Alcazar/360/abyss-black/pc/abyss-black_5.png"
+   },
+   {
+    "name": "Robust Emerald Pearl",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Alcazar/360/robust-emerald-pearl/pc/robust-emerald-pearl_5.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Alcazar/booking-open/512X340_7.jpg"
+   },
+   {
+    "cap": "Cabin seating",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Alcazar/Highlights/pc/alcazarinteriorinnerkv-pc.jpg"
+   },
+   {
+    "cap": "Ventilated front & 2nd row seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Alcazar/booking-open/1stand2ndventilatedseats.jpg"
+   },
+   {
+    "cap": "2nd row captain seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Alcazar/booking-open/2ndrowseats.jpg"
+   }
+  ]
+ },
+ "Hyundai|Aura": {
+  "page": "https://www.hyundai.com/in/en/find-a-car/aura/exterior",
+  "hero": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Aura/360/titan-grey/pc/titan-grey_5.png",
+  "colors": [
+   {
+    "name": "Titan Grey",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Aura/360/titan-grey/pc/titan-grey_5.png"
+   },
+   {
+    "name": "Atlas White",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Aura/360/polar-white/pc/polar-white_5.png"
+   },
+   {
+    "name": "Typhoon Silver",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Aura/360/typhoon-silver/pc/typhoon-silver_5.png"
+   },
+   {
+    "name": "Starry Night",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Aura/360/starry-night/pc/starry-night_5.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Aura/Interior/Pc/interior_pc1.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Aura/Interior/Pc/interior_mid_3pc.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Aura/Interior/Pc/interior_mid_2pc.jpg"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Aura/Interior/Pc/auraint_3.jpg"
+   }
+  ]
+ },
+ "Hyundai|Creta": {
+  "page": "https://www.hyundai.com/in/en/find-a-car/creta/exterior",
+  "hero": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Creta/360/titan-grey/pc/titan-grey_5.png",
+  "colors": [
+   {
+    "name": "Titan Grey",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Creta/360/titan-grey/pc/titan-grey_5.png"
+   },
+   {
+    "name": "Abyss Black + Atlas White (Dual Tone)",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Creta/360/altas-white-dual-tone/pc/altas-white-dual-tone_5.png"
+   },
+   {
+    "name": "Robust Emerald Pearl",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Creta/360/robust-emerald-pearl/pc/robust-emerald-pearl_5.png"
+   },
+   {
+    "name": "Atlas White",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Creta/360/atlas-white/pc/atlas-white_5.png"
+   },
+   {
+    "name": "Starry Night",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Creta/360/starry-night/pc/starry-night_5.png"
+   },
+   {
+    "name": "Titan Grey Matte",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Creta/360/titan-grey-matte/pc/titan-grey-matte_5.png"
+   },
+   {
+    "name": "Abyss Black",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Creta/360/abyss-black/pc/abyss-black_5.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Creta/Interior/cretakinginterior.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Creta/Interior/pc/Hyundai-creta-suv-interior-big-1120x600-1.jpg"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Creta/Interior/pc/Hyundai-creta-suv-interior-big-1120x600-2.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Creta/Interior/pc/Hyundai-creta-suv-interior-small-830x530-1.jpg"
+   }
+  ]
+ },
+ "Hyundai|Creta Electric": {
+  "page": "https://www.hyundai.com/in/en/find-a-car/creta-electric/exterior",
+  "hero": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/360/altas-white-dual-tone/pc/altas-white-dual-tone_5.png",
+  "colors": [
+   {
+    "name": "Abyss Black + Atlas White (Dual Tone)",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/360/altas-white-dual-tone/pc/altas-white-dual-tone_5.png"
+   },
+   {
+    "name": "Abyss Black",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/360/abyss-black/pc/abyss-black_5.png"
+   },
+   {
+    "name": "Starry Night",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/360/starry-night/pc/starry-night_5.png"
+   },
+   {
+    "name": "Fiery Red",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/360/fiery-red/pc/fiery-red_5.png"
+   },
+   {
+    "name": "Atlas White",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/360/atlas-white/pc/atlas-white_5.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/interior/cretaelectricinteriorbig.jpg"
+   },
+   {
+    "cap": "Centre console",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/interior/floatingconsolewithsurround.jpg"
+   },
+   {
+    "cap": "Infotainment & cluster",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/interior/infotainmentandcluster.jpg"
+   }
+  ]
+ },
+ "Hyundai|Creta N Line": {
+  "page": "https://www.hyundai.com/in/en/find-a-car/creta-n-line/exterior",
+  "hero": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-n-line/360/titan-grey/pc/titan-grey_5.png",
+  "colors": [
+   {
+    "name": "Titan Grey",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-n-line/360/titan-grey/pc/titan-grey_5.png"
+   },
+   {
+    "name": "Abyss Black + Atlas White (Dual Tone)",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-n-line/360/altas-white-dual-tone/pc/altas-white-dual-tone_5.png"
+   },
+   {
+    "name": "Atlas White",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-n-line/360/atlas-white/pc/atlas-white_5.png"
+   },
+   {
+    "name": "Abyss Black",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-n-line/360/abyss-black/pc/abyss-black_5.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-n-line/Interior/pc/CRETA%20N%20Line%20-%20interior%20-top%20big%20image.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-n-line/Interior/pc/creta-n-line-interior-seatdesign.jpg"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-n-line/Interior/pc/creta-n-line-interior-seatdesign1.jpg"
+   },
+   {
+    "cap": "Rear seats folded",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-n-line/Interior/tab/creta-n-line-interior-seatcompactdesign.jpg"
+   }
+  ]
+ },
+ "Hyundai|Exter": {
+  "page": "https://www.hyundai.com/in/en/find-a-car/exter/exterior",
+  "hero": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Exter/360/golden-bronze/pc/golden-bronze_5.png",
+  "colors": [
+   {
+    "name": "Golden Bronze",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Exter/360/golden-bronze/pc/golden-bronze_5.png"
+   },
+   {
+    "name": "Ranger Khaki",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Exter/360/khaki/pc/khaki_5.png"
+   },
+   {
+    "name": "Atlas White",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Exter/360/atlas-white/pc/atlas-white_5.png"
+   },
+   {
+    "name": "Ranger Khaki With Black Roof",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Exter/360/khaki-dual-tone/pc/khaki-dual-tone_5.png"
+   },
+   {
+    "name": "Starry Night",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Exter/360/starry-night-blue/pc/starry-night-blue_5.png"
+   },
+   {
+    "name": "Titan Grey",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Exter/360/titan-grey/pc/titan-grey_5.png"
+   },
+   {
+    "name": "Titanium Black",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Exter/360/abyss-black/pc/abyss-black_5.png"
+   },
+   {
+    "name": "Titanium Black Matte",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Exter/360/abyss-black-matte/pc/abyss-black-matte_5.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Exter/interior/exter-int-bigimage-pc.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Exter/interior/exter-seat-upholder.jpg"
+   },
+   {
+    "cap": "Steering",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Exter/interior/exter-dcut.jpg"
+   }
+  ]
+ },
+ "Hyundai|Grand i10 Nios": {
+  "page": "https://www.hyundai.com/in/en/find-a-car/grand-i10-nios/exterior",
+  "hero": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Grand-i10-Nios/360/aqua-teal/pc/aqua-teal_5.png",
+  "colors": [
+   {
+    "name": "Aqua Teal",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Grand-i10-Nios/360/aqua-teal/pc/aqua-teal_5.png"
+   },
+   {
+    "name": "Fiery Red",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Grand-i10-Nios/360/fiery-red/pc/fiery-red_5.png"
+   },
+   {
+    "name": "Titan Grey",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Grand-i10-Nios/360/titan-gray/pc/titan-gray_5.png"
+   },
+   {
+    "name": "Typhoon Silver",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Grand-i10-Nios/360/typhoon-silver/pc/typhoon-silver_5.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Grand-i10-Nios/Interior/pc/Dual%20tone%20grey%20interiors_1120x600.jpg"
+   },
+   {
+    "cap": "Dashboard (black/red)",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Grand-i10-Nios/Interior/pc/Sporty-Black-Interiors-with-Red-Inserts_1120x600.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Grand-i10-Nios/Highlights/pc/niosafetypc1.jpg"
+   }
+  ]
+ },
+ "Hyundai|i20": {
+  "page": "https://www.hyundai.com/in/en/find-a-car/i20/exterior",
+  "hero": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20/360/starry-night/pc/starry-night_5.png",
+  "colors": [
+   {
+    "name": "Starry Night",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20/360/starry-night/pc/starry-night_5.png"
+   },
+   {
+    "name": "Fiery Red",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20/360/fiery-red/pc/fiery-red_5.png"
+   },
+   {
+    "name": "Titan Grey",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20/360/titan-grey/pc/titan-grey_5.png"
+   },
+   {
+    "name": "Abyss Black + Atlas White (Dual Tone)",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20/360/polar-white-black-roof/pc/polar-white-black-roof_5.png"
+   },
+   {
+    "name": "Atlas White",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20/360/polar-white/pc/polar-white_5.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20/Interior/pc/i20peint2.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20/Interior/pc/big-image1.jpg"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20/Highlights/mob/i20_RearSeats.jpg"
+   },
+   {
+    "cap": "Steering",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20/Interior/pc/leather_wrapped_steering_wheel.jpg"
+   }
+  ]
+ },
+ "Hyundai|i20 N Line": {
+  "page": "https://www.hyundai.com/in/en/find-a-car/i20-n-line/exterior",
+  "hero": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20-n-line/360/abyss-black/pc/abyss-black_5.png",
+  "colors": [
+   {
+    "name": "Abyss Black",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20-n-line/360/abyss-black/pc/abyss-black_5.png"
+   },
+   {
+    "name": "Starry Night",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20-n-line/360/starry-night/pc/starry-night_5.png"
+   },
+   {
+    "name": "Titan Grey",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20-n-line/360/titan-grey/pc/titan-grey_5.png"
+   },
+   {
+    "name": "Abyss Black + Atlas White (Dual Tone)",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20-n-line/360/polar-white-dual-tone/pc/polar-white-dual-tone_5.png"
+   },
+   {
+    "name": "Atlas White",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20-n-line/360/polar-white/pc/polar-white_5.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20-n-line/Interior/pc/i20-nline-Interior-big1.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20-n-line/Interior/pc/i20-nline-Interior-big2.jpg"
+   },
+   {
+    "cap": "Steering",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20-n-line/Interior/Hyundai-i20-nline-Interior-small-section-PC-800x530-6.jpg"
+   }
+  ]
+ },
+ "Hyundai|IONIQ 5": {
+  "page": "https://www.hyundai.com/in/en/find-a-car/ioniq-5/exterior",
+  "hero": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/ioniq-5/360/midnight-black-pearl/pc/midnight-black-pearl_5.png",
+  "colors": [
+   {
+    "name": "Midnight Black Pearl",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/ioniq-5/360/midnight-black-pearl/pc/midnight-black-pearl_5.png"
+   },
+   {
+    "name": "Gravity Gold Matte",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/ioniq-5/360/gravity-gold-matte/pc/gravity-gold-matte_5.png"
+   },
+   {
+    "name": "Optic White",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/ioniq-5/360/optic-white/pc/optic-white_5.png"
+   },
+   {
+    "name": "Titan Grey",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/ioniq-5/360/titan-grey/pc/titan-grey_5.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Cabin",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/ioniq-5/interior/interiortab1-ioniq.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/ioniq-5/interior/ioniq-dashboard.jpg"
+   },
+   {
+    "cap": "Steering",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/ioniq-5/interior/ioniq-steering.jpg"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/ioniq-5/interior/ioniq-headrest.jpg"
+   }
+  ]
+ },
+ "Hyundai|Venue": {
+  "page": "https://www.hyundai.com/in/en/find-a-car/venue/exterior",
+  "hero": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Venue/360/hazel-blue-dual-tone/pc/hazel-blue-dual-tone_5.png",
+  "colors": [
+   {
+    "name": "Hazel Blue With Abyss Black Roof",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Venue/360/hazel-blue-dual-tone/pc/hazel-blue-dual-tone_5.png"
+   },
+   {
+    "name": "Mystic Sapphire",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Venue/360/mystic-sapphire/pc/mystic-sapphire_5.png"
+   },
+   {
+    "name": "Titan Grey",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Venue/360/titan-grey/pc/titan-grey_5.png"
+   },
+   {
+    "name": "Atlas White",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Venue/360/atlas-white/pc/atlas-white_5.png"
+   },
+   {
+    "name": "Abyss Black",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Venue/360/abyss-black/pc/abyss-black_5.png"
+   },
+   {
+    "name": "Atlas White With Abyss Black Roof",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Venue/360/altas-white-dual-tone/pc/altas-white-dual-tone_5.png"
+   },
+   {
+    "name": "Dragon Red",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Venue/360/dragon-red/pc/dragon-red_5.png"
+   },
+   {
+    "name": "Hazel Blue",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Venue/360/hazel-blue/pc/hazel-blue_5.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Venue/Interior/pc/venueintbigimg-1.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Venue/Interior/pc/venueintbigimg-2.jpg"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/pre-booking/venue_2nd-row-spacious-cabin.jpg"
+   },
+   {
+    "cap": "Steering",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/pre-booking/d-cut-steering-wheel.jpg"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Venue/Interior/pc/venueintimg1.jpg"
+   }
+  ]
+ },
+ "Hyundai|Venue N Line": {
+  "page": "https://www.hyundai.com/in/en/find-a-car/venue-n-line/exterior",
+  "hero": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/venue-n-line/360/hazel-blue-dual-tone/pc/hazel-blue-dual-tone_5.png",
+  "colors": [
+   {
+    "name": "Hazel Blue With Abyss Black Roof",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/venue-n-line/360/hazel-blue-dual-tone/pc/hazel-blue-dual-tone_5.png"
+   },
+   {
+    "name": "Titan Grey",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/venue-n-line/360/titan-grey/pc/titan-grey_5.png"
+   },
+   {
+    "name": "Atlas White",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/venue-n-line/360/atlas-white/pc/atlas-white_5.png"
+   },
+   {
+    "name": "Abyss Black",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/venue-n-line/360/abyss-black/pc/abyss-black_5.png"
+   },
+   {
+    "name": "Atlas White With Abyss Black Roof",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/venue-n-line/360/atlas-white-dual-tone/pc/atlas-white-dual-tone_5.png"
+   },
+   {
+    "name": "Dragon Red",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/venue-n-line/360/dragon-red/pc/dragon-red_5.png"
+   },
+   {
+    "name": "Hazel Blue",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/venue-n-line/360/hazel-blue/pc/hazel-blue_5.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/venue-n-line/interior/interior-banner.jpg"
+   },
+   {
+    "cap": "Steering",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/venue-n-line/interior/N-Line-exclusive-steering-wheel.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/venue-n-line/interior/sporty-black-leather-seats-with-N-branding.jpg"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/venue-n-line/interior/spacious-cabin-ample-head-room.jpg"
+   }
+  ]
+ },
+ "Hyundai|Verna": {
+  "page": "https://www.hyundai.com/in/en/find-a-car/verna/exterior",
+  "hero": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Verna/360/atlas-white/pc/atlas-white_5.png",
+  "colors": [
+   {
+    "name": "Atlas White",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Verna/360/atlas-white/pc/atlas-white_5.png"
+   },
+   {
+    "name": "Atlas White Dual Tone",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Verna/360/altas-white-dual-tone/pc/altas-white-dual-tone_5.png"
+   },
+   {
+    "name": "Classy Blue",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Verna/360/classy-blue/pc/classy-blue_5.png"
+   },
+   {
+    "name": "Starry Night",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Verna/360/starry-night/pc/starry-night_5.png"
+   },
+   {
+    "name": "Titan Grey",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Verna/360/titan-grey/pc/titan-grey_5.png"
+   },
+   {
+    "name": "Titan Grey Matte",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Verna/360/titan-grey-matte/pc/titan-grey-matte_5.png"
+   },
+   {
+    "name": "Titanium Black",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Verna/360/abyss-black/pc/abyss-black_5.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Verna/Interior/verna-interior-dashboard.jpg"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Verna/Interior/leatherette-seat-upholstery.jpg"
+   }
+  ]
+ }
+}

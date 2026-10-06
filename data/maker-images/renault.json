@@ -1,0 +1,198 @@
+{
+ "Renault|Duster": {
+  "page": "https://www.renault.co.in/cars/renault-duster.html",
+  "hero": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1SERIELIM3_-TEDQT",
+  "colors": [
+   {
+    "name": "Jade Mountain Green",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1SERIELIM3_-TEDQT"
+   },
+   {
+    "name": "Sunset Red",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1SERIELIM3_-TENBW"
+   },
+   {
+    "name": "Stealth Black",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1SERIELIM1_-OVC61"
+   },
+   {
+    "name": "River Blue",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1SERIELIM3_-TEB53"
+   },
+   {
+    "name": "Pearl White",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1SERIELIM1_-OQX1"
+   },
+   {
+    "name": "Moonlight Silver",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FDR3%2Fnew-duster%2Fc%2FA-ENS_0MDL2P1SERIELIM1_-TEK23"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Infotainment screens",
+    "img": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/rb3k5/reveal/overview/duster-overview-cover-first-desktop-017.jpg"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/rb3k5/reveal/overview/duster-overview-desktop-021.jpg"
+   },
+   {
+    "cap": "Centre console",
+    "img": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/rb3k5/reveal/overview/duster-overview-desktop-038.jpg"
+   }
+  ]
+ },
+ "Renault|Kiger": {
+  "page": "https://www.renault.co.in/cars/renault-kiger.html",
+  "hero": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIYZK",
+  "colors": [
+   {
+    "name": "Mystery Black + Shadow Grey (Dual Tone)",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIYZK"
+   },
+   {
+    "name": "Mystery Black + Oasis Yellow (Dual Tone)",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIYZM"
+   },
+   {
+    "name": "Shadow Grey",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-TEKAD"
+   },
+   {
+    "name": "Oasis Yellow",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-TED37"
+   },
+   {
+    "name": "Moonlight Silver",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-TEK23"
+   },
+   {
+    "name": "Ice Cool White",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-OD34"
+   },
+   {
+    "name": "Caspian Blue",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-TERCA"
+   },
+   {
+    "name": "Mystery Black + Radiant Red (Dual Tone)",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIXYV"
+   },
+   {
+    "name": "Stealth Black",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-OVC61"
+   },
+   {
+    "name": "Mystery Black + Ice Cool White (Dual Tone)",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FHC1%2Fkiger-ph2%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIXNY"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Infotainment",
+    "img": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/kiger/ph2/overview/renault-kiger-ph2-overview-012-desktop.jpg"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/kiger/ph2/overview/renault-kiger-ph2-overview-013-desktop.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/kiger/ph2/overview/renault-kiger-ph2-overview-021-1-desktop.jpg"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/kiger/ph2/overview/renault-kiger-ph2-overview-022-desktop.jpg"
+   }
+  ]
+ },
+ "Renault|Kwid": {
+  "page": "https://www.renault.co.in/cars/renault-kwid.html",
+  "hero": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBAB%2Frenault-kwid%2Fc%2FA-ENS_0MDL2P1SERIELIM2_-OD34",
+  "colors": [
+   {
+    "name": "Ice Cool White",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBAB%2Frenault-kwid%2Fc%2FA-ENS_0MDL2P1SERIELIM2_-OD34"
+   },
+   {
+    "name": "Moonlight Silver",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBAB%2Frenault-kwid%2Fc%2FA-ENS_0MDL2P1SERIELIM2_-TEK23"
+   },
+   {
+    "name": "Zanskar Blue",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBAB%2Frenault-kwid%2Fc%2FA-ENS_0MDL2P1SERIELIM2_-TERRD"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://cdn.group.renault.com/ren/in/kwid-my26/2560x1440_db.jpg"
+   },
+   {
+    "cap": "Steering",
+    "img": "https://cdn.group.renault.com/ren/in/kwid-my26/2560x1440_db_steering.jpg"
+   }
+  ]
+ },
+ "Renault|Triber": {
+  "page": "https://www.renault.co.in/cars/renault-triber.html",
+  "hero": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM3_-TECNZ",
+  "colors": [
+   {
+    "name": "Amber Terracotta",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM3_-TECNZ"
+   },
+   {
+    "name": "Shadow Grey",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM2_-TEKAD"
+   },
+   {
+    "name": "Zanskar Blue",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM2_-TERRD"
+   },
+   {
+    "name": "Stealth Black + Ice Cool White (Dual Tone)",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIXNY"
+   },
+   {
+    "name": "Stealth Black + Shadow Grey (Dual Tone)",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIYZK"
+   },
+   {
+    "name": "Stealth Black + Amber Terracotta (Dual Tone)",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIYZL"
+   },
+   {
+    "name": "Ice Cool White",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM1_-OD34"
+   },
+   {
+    "name": "Moonlight Silver",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM1_-TEK23"
+   },
+   {
+    "name": "Stealth Black",
+    "img": "https://www.renault.co.in/agg/vn/unique/grade_carrousel_main_1_medium/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Fin.co.rplug.renault.com%2Fproduct%2Fmodel%2FBC1%2Ftriber%2Fc%2FA-ENS_0MDL2P1SERIELIM1_-OVC61"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://cdn.group.renault.com/ren/in/triber2026/triber-turbo/interior.jpg"
+   },
+   {
+    "cap": "Seating layout",
+    "img": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/triber/my26/overview/renault-triber-my26-seats-desktop-001.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://cdn.group.renault.com/ren/master/renault-new-cars/product-plans/triber/reveal/editorial/triber-overview-016.jpg"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://cdn.group.renault.com/ren/in/triber2026/triber-turbo/tftcluster.jpg"
+   }
+  ]
+ }
+}

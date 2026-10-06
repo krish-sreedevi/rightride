@@ -1,0 +1,93 @@
+{
+ "Nissan|Gravite": {
+  "page": "https://www.nissan.in/vehicles/new/nissan-gravite.html",
+  "hero": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/gravite/overview/3-Gravite-V.-Image-670x372-17feb-v2.jpg",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/gravite/int/Int.-Straight-Dashboard-1800x972-16feb.jpg.ximg.l_12_m.smart.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/gravite/int/Int.-Premium-Suede-&-Leatherette-Seats-1800x972-16feb.jpg.ximg.l_12_m.smart.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/gravite/tech/Tech.-Floating-20.32-cm-Touchscreen-Infotainment-Mobile-1800x972-16feb.jpg.ximg.l_12_m.smart.jpg"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/gravite/tech/Tech.-17.78-cm-Fully-Digital-Instrument-Cluster-with-TPMS-Mobile-1800x972-16feb.jpg.ximg.l_12_m.smart.jpg"
+   }
+  ]
+ },
+ "Nissan|Magnite": {
+  "page": "https://www.nissan.in/vehicles/new/nissan-magnite.html",
+  "hero": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/new-magnite/Images/TEKNA_VLP_V1_2.png",
+  "colors": [
+   {
+    "name": "Onyx Black",
+    "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/new-magnite/N_CONNECTA_Black_V1_2.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/new-magnite/overview/section/31-Nissan-MC-Interior-Desktop_764-x-1144_pix.jpg.ximg.l_12_h.smart.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/new-magnite/overview/section/34-Nissan-MC-INTERIOR-Desktop_764-x-1144_pix.jpg.ximg.l_12_h.smart.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/new-magnite/overview/section/28-Nissan-MC-INTERIOR-Desktop_764-x-1144_pix-4oct.jpg.ximg.l_12_h.smart.jpg"
+   },
+   {
+    "cap": "Steering",
+    "img": "https://www-asia.nissan-cdn.net/content/dam/Nissan/in/vehicles/new-magnite/overview/section/19-Nissan-MC-Interior-Desktop_764-x-1144_pix.jpg.ximg.l_12_h.smart.jpg"
+   }
+  ]
+ },
+ "Nissan|Tekton": {
+  "page": "https://www.nissan.in/cf/vehicles/new/tekton",
+  "hero": "https://storyblok-assets.prod.nissan.eu/f/288274551197823/1920x1080/51bbd3ae91/acenta-160-red.png",
+  "colors": [
+   {
+    "name": "Blade Silver",
+    "img": "https://storyblok-assets.prod.nissan.eu/f/288274551197823/1920x1080/2e7fdc8f44/visia-silver.png"
+   },
+   {
+    "name": "Flare Garnet Red",
+    "img": "https://storyblok-assets.prod.nissan.eu/f/288274551197823/1920x1080/51bbd3ae91/acenta-160-red.png"
+   },
+   {
+    "name": "Indigo Blue",
+    "img": "https://storyblok-assets.prod.nissan.eu/f/288274551197823/1910x1075/a6d3225d07/tekna-160-blue.png"
+   },
+   {
+    "name": "Onyx Black",
+    "img": "https://storyblok-assets.prod.nissan.eu/f/288274551197823/1920x1080/10c2eb7158/n-connecta-160-black.png"
+   },
+   {
+    "name": "Pearl White",
+    "img": "https://storyblok-assets.prod.nissan.eu/f/288274551197823/1913x1076/c912c9b74b/visia-white.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://storyblok-assets.prod.nissan.eu/f/288274551197823/2680x1200/38f8691775/infotainment-desktop-2680x1200-07j.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://storyblok-assets.prod.nissan.eu/f/288274551197823/2680x1200/93976a77b8/vlp-straight-front-seat-comfort-desktop-2680x1200-07j.jpg"
+   },
+   {
+    "cap": "Steering",
+    "img": "https://storyblok-assets.prod.nissan.eu/f/288274551197823/1440x1800/20dc78aa4c/vlp-dual-mode-steering-mobile-1440x1800-07j.jpg"
+   }
+  ]
+ }
+}

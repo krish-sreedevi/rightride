@@ -1,0 +1,348 @@
+{
+ "MG|Astor": {
+  "page": "https://www.mgmotor.co.in/vehicles/mgastor",
+  "hero": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-0338?fmt=png-alpha&wid=850",
+  "colors": [
+   {
+    "name": "Glaze Red",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-0338?fmt=png-alpha&wid=850"
+   },
+   {
+    "name": "Havana Grey",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-0339?fmt=png-alpha&wid=850"
+   },
+   {
+    "name": "Aurora Silver",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-0340?fmt=png-alpha&wid=850"
+   },
+   {
+    "name": "Candy White",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-0341?fmt=png-alpha&wid=850"
+   },
+   {
+    "name": "Starry Black",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-0342?fmt=png-alpha&wid=850"
+   },
+   {
+    "name": "Black + White (Dual Tone)",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-0343?fmt=png-alpha&wid=850"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Interior",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-313?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-0349?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-316?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Digital cluster",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/as-img-dsc-314?fmt=jpg&qlt=85&wid=1400"
+   }
+  ]
+ },
+ "MG|Comet EV": {
+  "page": "https://www.mgmotor.co.in/vehicles/comet-ev-electric-car-in-india",
+  "hero": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0191?fmt=png-alpha&wid=849",
+  "colors": [
+   {
+    "name": "Starry Black Apple Green",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0191?fmt=png-alpha&wid=849"
+   },
+   {
+    "name": "Aurora Silver",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0192?fmt=png-alpha&wid=849"
+   },
+   {
+    "name": "Candy White",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0194?fmt=png-alpha&wid=849"
+   },
+   {
+    "name": "Starry Black",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0190?fmt=png-alpha&wid=849"
+   },
+   {
+    "name": "Starry Black Candy White",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0193?fmt=png-alpha&wid=849"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0163?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0164?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0165?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Cabin (top view)",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/cm-img-dsc-0183?fmt=jpg&qlt=85&wid=1400"
+   }
+  ]
+ },
+ "MG|Gloster": {
+  "page": "https://www.mgmotor.co.in/vehicles/mg-majestor-biggest-suv-india",
+  "hero": "https://mgmotor.scene7.com/is/image/mgmotor/hd-img-dsc-054?fmt=png-alpha&wid=1400",
+  "colors": [],
+  "interior": []
+ },
+ "MG|Hector": {
+  "page": "https://www.mgmotor.co.in/vehicles/mghector",
+  "hero": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0001?fmt=png-alpha&wid=849",
+  "colors": [
+   {
+    "name": "Celadon Blue",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0001?fmt=png-alpha&wid=849"
+   },
+   {
+    "name": "Aurora Silver",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0002?fmt=png-alpha&wid=849"
+   },
+   {
+    "name": "Glaze Red",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0003?fmt=png-alpha&wid=849"
+   },
+   {
+    "name": "Pearl White",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0004?fmt=png-alpha&wid=849"
+   },
+   {
+    "name": "Starry Black",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0005?fmt=png-alpha&wid=849"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-int-0005?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-com-0001?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-int-0012?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Digital cluster",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-int-0006?fmt=jpg&qlt=85&wid=1400"
+   }
+  ]
+ },
+ "MG|Hector Plus 6 Seater": {
+  "page": "https://www.mgmotor.co.in/vehicles/mghector",
+  "hero": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0001?fmt=png-alpha&wid=849",
+  "colors": [
+   {
+    "name": "Celadon Blue",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0001?fmt=png-alpha&wid=849"
+   },
+   {
+    "name": "Aurora Silver",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0002?fmt=png-alpha&wid=849"
+   },
+   {
+    "name": "Glaze Red",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0003?fmt=png-alpha&wid=849"
+   },
+   {
+    "name": "Pearl White",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0004?fmt=png-alpha&wid=849"
+   },
+   {
+    "name": "Starry Black",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-thm-img-0005?fmt=png-alpha&wid=849"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-int-0005?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-com-0001?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-int-0012?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Digital cluster",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mgi-hector-int-0006?fmt=jpg&qlt=85&wid=1400"
+   }
+  ]
+ },
+ "MG|Hector Tomahawk EV": {
+  "page": "https://www.mgmotor.co.in/vehicles/hector-tomahawk/ev",
+  "hero": "https://mgmotor.scene7.com/is/image/mgmotor/001-khaki-green-image?fmt=png-alpha&wid=1400",
+  "colors": [
+   {
+    "name": "Khaki Green",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/001-khaki-green-image?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Aurora Silver",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/002-aurora-silver-image?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Celadon Blue",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/003-celadon-blue-image?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Khaki Green Plus Mono Black",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/004-khaki-green-s-black-image?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Pearl White",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/005-pearl-white-image?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Starry Black",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/008-starry-black-image?fmt=png-alpha&wid=1400"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/010-interiors-image?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/008-interiors-image?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/005-interiors-image?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/002-interiors-image?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Centre console",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/004-interiors-image?fmt=jpg&qlt=85&wid=1400"
+   }
+  ]
+ },
+ "MG|Hector Tomahawk PHEV": {
+  "page": "https://www.mgmotor.co.in/vehicles/hector-tomahawk/phev",
+  "hero": "https://mgmotor.scene7.com/is/image/mgmotor/001-hw-phev-aurora-silver?fmt=png-alpha&wid=1400",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Rear seats",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/004-interior-image?fmt=jpg&qlt=85&wid=1400"
+   }
+  ]
+ },
+ "MG|Majestor": {
+  "page": "https://www.mgmotor.co.in/vehicles/mg-majestor-biggest-suv-india",
+  "hero": "https://mgmotor.scene7.com/is/image/mgmotor/chooseyourmajestor-img-001?fmt=png-alpha&wid=1024",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Front seats",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/mlounge-img-003?fmt=jpg&qlt=85&wid=1086"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/categoryshowcasetech-img-001?fmt=jpg&qlt=85&wid=1050"
+   },
+   {
+    "cap": "Digital cluster",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/categoryshowcasetech-img-002?fmt=jpg&qlt=85&wid=1050"
+   }
+  ]
+ },
+ "MG|Windsor EV": {
+  "page": "https://www.mgmotor.co.in/vehicles/windsor-ev-electric-car-in-india",
+  "hero": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_TG?fmt=png-alpha&wid=1400",
+  "colors": [
+   {
+    "name": "Turquoise Green",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_TG?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Starburst Black",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_SB?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Pearl White",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/wd_4106ECU_ECL_PW?fmt=png-alpha&wid=1400"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-022?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-037?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-039?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/cuv-img-dsc-013?fmt=jpg&qlt=85&wid=1400"
+   }
+  ]
+ },
+ "MG|Windsor Pro": {
+  "page": "https://www.mgmotor.co.in/vehicles/windsor-ev-pro",
+  "hero": null,
+  "colors": [],
+  "interior": []
+ },
+ "MG|ZS EV": {
+  "page": "https://www.mgmotor.co.in/vehicles/mgzsev-electric-car-in-india",
+  "hero": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0315?fmt=png-alpha&wid=1400",
+  "colors": [
+   {
+    "name": "Candy White",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0317?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Starry Black",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0314?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Aurora Silver",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0316?fmt=png-alpha&wid=1400"
+   },
+   {
+    "name": "Glaze Red",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0315?fmt=png-alpha&wid=1400"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Front seats",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0266?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Interior",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0265?fmt=jpg&qlt=85&wid=1400"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0307?fmt=jpg&qlt=85&wid=1400"
+   }
+  ]
+ }
+}

@@ -208,7 +208,7 @@
 
 
   // ---------------- car images ----------------
-  // every model has a picture: Autocar India studio shot (resized by its CDN) → maker's image → drawn silhouette
+  // every model has a picture: maker press image → maker's image → drawn silhouette
   const SIL = { Hatchback: 'M14 46h92M20 46c0-14 6-20 18-22l14-10h26l16 12c6 2 10 8 10 20M40 24h46', Sedan: 'M8 46h104M14 46c0-10 4-14 14-16l18-12h30l18 12c10 1 16 6 16 16M44 30h50', SUV: 'M10 46h100M14 46V30l10-14h56l12 14c8 1 12 6 12 16M28 16v14h64', 'MUV / MPV': 'M10 46h100M14 46V28l12-12h60l12 12c6 2 10 8 10 18M30 16v12h60' };
   function silhouette(body) {
     const d = SIL[body] || SIL.SUV;
@@ -284,7 +284,7 @@
   const L = 1e5;
   const byScore = (a, b) => b.s - a.s || a.min - b.min;
   const SHELVES = [
-    { id: 'top', title: 'Top rated by experts', sub: 'Autocar India\'s highest-scoring cars on sale right now', pick: (ms) => ms.filter((m) => m.s).sort(byScore), feature: true, see: { tab: 'top' } },
+    { id: 'top', title: 'Top rated by experts', sub: 'The highest expert scores among cars on sale right now', pick: (ms) => ms.filter((m) => m.s).sort(byScore), feature: true, see: { tab: 'top' } },
     { id: 'value', title: 'Best value under ₹10 L', sub: 'Expert favourites that won\'t stretch the budget', pick: (ms) => ms.filter((m) => m.min <= 10 * L).sort(byScore), see: { tab: 'u10', sort: 'expert' } },
     { id: 'csuv', title: 'Compact SUVs under ₹15 L', sub: 'India\'s favourite kind of car', pick: (ms) => ms.filter((m) => m.body === 'SUV' && m.min <= 15 * L).sort(byScore), see: { set: { body: ['SUV'] }, max: 15, sort: 'expert' } },
     { id: 'family', title: 'Family 7-seaters', sub: 'Room for everyone — SUVs and MUVs with three rows', pick: (ms) => ms.filter((m) => m.seatsMax >= 6).sort(byScore), see: { set: { seats: ['6–7'] }, sort: 'expert' } },
@@ -558,8 +558,6 @@
       const t = e.target.closest('.tile'); if (t) openCar(t.dataset.key);
     });
     $('#shelves').addEventListener('keydown', (e) => { const t = e.target.closest('.tile'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openCar(t.dataset.key); } });
-    $('#qHints').addEventListener('click', (e) => { const b = e.target.closest('[data-q]'); if (!b) return; $('#q').value = b.dataset.q; runSearch(b.dataset.q); });
-    drawHints();
     let qt; $('#q').addEventListener('input', (e) => { clearTimeout(qt); drawSug(e.target.value); qt = setTimeout(() => runSearch(e.target.value), 250); });
     $('#q').addEventListener('keydown', (e) => {
       const box = $('#qSug'), rows = $$('[data-sug]', box), open = !box.hidden && rows.length;
@@ -606,7 +604,7 @@
     document.body.classList.toggle('rec-mode', !!(state.sort === 'rec' && state.rec));
     const recMode = state.sort === 'rec' && state.rec;
     if (recMode && list.length) $('#resultTitle').textContent = `${list.length} model${list.length > 1 ? 's' : ''} ranked for you`;
-    if (recMode) $('#resultSub').textContent = `Ranked on your priorities using Autocar India expert scores plus our specs data. Click a car for its variants, safety rating and nearby showrooms.`;
+    if (recMode) $('#resultSub').textContent = `Ranked on your priorities using expert scores plus our specs data. Click a car for its variants, safety rating and nearby showrooms.`;
     $('#list').className = recMode ? 'list' : 'tile-grid';
     $('#list').innerHTML = shown.length ? shown.map((m, i) => (!recMode && featsOn().size && m.tier > 0 && (i === 0 || shown[i - 1].tier === 0) ? `<div class="grid-split"><b>More to check</b><span class="muted">We couldn't confirm every feature for these yet. Open a car to see its variants.</span></div>` : '') + (recMode ? recCard(m, i + 1) : tile(m))).join('') : sorry();
     $('#more').hidden = list.length <= shown.length;
@@ -627,7 +625,7 @@
       state.feats.size && m.confirmed ? `<span class="tag good">All ${state.feats.size} features ✓</span>` : '',
       partial ? `<span class="tag warn">Missing: ${esc(m.best.ev.miss.map(FLABEL).join(', '))}</span>` : '',
       unknown ? `<span class="tag warn">${unknown} not confirmed</span>` : '',
-      expertOf(m) && expertOf(m).s ? `<span class="tag xtag" title="Autocar India expert score">Autocar ${esc(expertOf(m).s)}/10</span>` : '',
+      expertOf(m) && expertOf(m).s ? `<span class="tag xtag" title="Expert score">Expert ${esc(expertOf(m).s)}/10</span>` : '',
     ].join('');
     const img = carImg(m);
     return `<article class="card" data-key="${esc(key)}">
@@ -701,6 +699,8 @@
     const rows = DATA.brands.sort((a, b) => a.brand.localeCompare(b.brand)).map((b) => `<tr><td>${esc(b.brand)}</td><td class="num">${b.models}</td><td class="num">${b.variants}</td><td>${b.curated ? 'Curated snapshot' : 'Official site (automatic)'}</td><td>${b.updated ? new Date(b.updated).toLocaleDateString('en-IN') : ''}</td></tr>`).join('');
     $('#modalBody').innerHTML = `<div class="modal-head"><h2>Data sources &amp; coverage</h2><button class="btn ghost" data-close aria-label="Close">✕</button></div><div class="modal-body">
       <p>Every Monday a robot visits each carmaker's official Indian website and collects models, variants, ex-showroom prices and (where published) variant-wise features. Where a maker publishes state-wise prices (Hyundai, Maruti Suzuki, Toyota, Honda) those are used; otherwise the national/Delhi ex-showroom price is used.</p>
+      <p>Expert scores, real-world mileage, owner ratings, service costs and some missing feature details come from leading Indian motoring publications and car sites, and are refreshed weekly. Crash-test results come from Bharat NCAP, Global NCAP and, where neither has tested a car, ASEAN NCAP. Resale values and some maintenance costs are our own estimates and are labelled as such.</p>
+      <p>Car photos are the manufacturers' own press and website images. Showroom locations © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> (<a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">ODbL</a>); our showroom list (<a href="data/dealers.json">dealers.json</a>) is offered under the same licence.</p>
       <p>On-road prices add state road tax (from each state's published slabs), registration and number-plate fees, an insurance estimate, FASTag and TCS. Road tax rules last checked: ${esc(RTO.verified)}.</p>
       <table><thead><tr><th>Brand</th><th class="num">Models</th><th class="num">Variants</th><th>Source</th><th>Updated</th></tr></thead><tbody>${rows}</tbody></table><p class="muted">Jaguar currently has no models on sale in India (jaguar.in redirects to the global site while the brand moves to its new electric range), so there is nothing to list yet. Curated brands show the starting ex-showroom price per model; their features are not yet published variant-by-variant, so they appear as "not confirmed" when you filter by features.</p></div>`;
     $('#modal').showModal();
@@ -797,7 +797,7 @@
           <div class="muted small">On-road price in ${esc(st)}</div>
           <div class="cp-price">${lakh(m.min)}${m.max > m.min ? ` <span>– ${lakh(m.max)}</span>` : ''}</div>
           <div class="cp-tags">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>
-          <div class="cp-badges">${x && x.s ? `<span class="cp-badge"><b>${esc(x.s)}</b><small>/10</small><span>Autocar India</span></span>` : ''}${nc ? `<a class="cp-badge nc" href="#cpSafety"><b>${nc.stars}★</b><span>${esc(nc.by)}</span></a>` : ''}</div>
+          <div class="cp-badges">${x && x.s ? `<span class="cp-badge"><b>${esc(x.s)}</b><small>/10</small><span>Expert score</span></span>` : ''}${nc ? `<a class="cp-badge nc" href="#cpSafety"><b>${nc.stars}★</b><span>${esc(nc.by)}</span></a>` : ''}</div>
           <div class="sheet-cta"><a class="btn primary" href="#cpVariants" data-jump="cpVariants">Find my variant</a><a class="btn ghost" href="#cpDealers" data-jump="cpDealers">Showrooms near me</a></div>
         </div>
       </section>
@@ -806,8 +806,8 @@
         <ol class="usp">${usp.map((u) => `<li>${esc(u)}</li>`).join('')}</ol></section>` : ''}
       <div class="cp-two">
         <section class="cp-sec" id="cpSafety"><div class="cp-sec-head"><h2 class="display">Safety rating</h2></div>${safety}</section>
-        <section class="cp-sec"><div class="cp-sec-head"><h2 class="display">Expert view</h2>${x && x.s ? `<span class="xbadge">Autocar ${esc(x.s)}/10</span>` : ''}</div>
-          ${x ? `<ul class="pc">${x.like.map((t) => `<li class="pro">${esc(t)}</li>`).join('')}${x.dislike.map((t) => `<li class="con">${esc(t)}</li>`).join('')}</ul>${x.basedOn ? `<p class="muted small">From the review of the ${esc(x.basedOn)}.</p>` : ''}` : '<p class="muted">No Autocar India review yet.</p>'}
+        <section class="cp-sec"><div class="cp-sec-head"><h2 class="display">Expert view</h2>${x && x.s ? `<span class="xbadge">Expert score ${esc(x.s)}/10</span>` : ''}</div>
+          ${x ? `<ul class="pc">${x.like.map((t) => `<li class="pro">${esc(t)}</li>`).join('')}${x.dislike.map((t) => `<li class="con">${esc(t)}</li>`).join('')}</ul>${x.basedOn ? `<p class="muted small">From the review of the ${esc(x.basedOn)}.</p>` : ''}` : '<p class="muted">No expert review yet.</p>'}
           <div class="cp-links"><a class="watch" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>Watch the video review</a>${x && x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">Read the review ↗</a>` : ''}<a href="${esc(m.url)}" target="_blank" rel="noopener">Official site ↗</a></div>
         </section>
       </div>
@@ -896,7 +896,6 @@
     L.addEventListener('close', () => { document.body.classList.remove('lb-open'); heroGo(lbSync.i || 0, false); });
   }
   const fmtL = (n) => (n >= 1e7 ? `₹${(n / 1e7).toFixed(2)} Cr` : `₹${(n / 1e5).toFixed(1)} L`);
-  const SRC = { autocar: 'Autocar India', zigwheels: 'ZigWheels', carwale: 'CarWale', cardekho: 'CarDekho' };
   function drawMetrics(m, e) {
     const box = $('#cpMetrics'); if (!box) return;
     const tiles = [];
@@ -904,7 +903,7 @@
     if (e.service) {
       const s = e.service, yr = (v) => Math.round(v / 5 / 100) * 100;
       tiles.push(`<div class="mt"><div class="mt-k">Average maintenance cost</div><div class="mt-v">₹${yr(s.lo).toLocaleString('en-IN')}${s.hi > s.lo * 1.05 ? `–${yr(s.hi).toLocaleString('en-IN')}` : ''}<small>/year</small></div>
-        <div class="mt-s">${s.est ? `Our estimate for routine servicing over 5 years (about ₹${Math.round(s.lo / 1000)}k in all)` : `Routine servicing, about ₹${Math.round(s.lo / 1000)}k${s.hi > s.lo * 1.05 ? `–${Math.round(s.hi / 1000)}k` : ''} over 5 years or 50,000 km. <a href="${esc(s.url)}" target="_blank" rel="noopener">V3Cars ↗</a>`}</div>
+        <div class="mt-s">${s.est ? `Our estimate for routine servicing over 5 years (about ₹${Math.round(s.lo / 1000)}k in all)` : `Routine servicing, about ₹${Math.round(s.lo / 1000)}k${s.hi > s.lo * 1.05 ? `–${Math.round(s.hi / 1000)}k` : ''} over 5 years or 50,000 km.`}</div>
         <div class="mt-tag">${s.est ? 'Estimate' : 'Service schedule'}</div></div>`);
     }
     // real-world mileage: overall average, then averages by fuel and by gearbox
@@ -925,7 +924,7 @@
         <div class="mt-tag">${kind}</div></div>`);
     } else if (evs.length) {
       const r = Math.round(evs.reduce((t, x) => t + x.evRange, 0) / evs.length);
-      tiles.push(`<div class="mt"><div class="mt-k">Real-world range</div><div class="mt-v">${r}<small> km</small></div><div class="mt-s">Autocar India tested range on a full charge</div><div class="mt-tag">Road-tested</div></div>`);
+      tiles.push(`<div class="mt"><div class="mt-k">Real-world range</div><div class="mt-v">${r}<small> km</small></div><div class="mt-s">Tested range on a full charge</div><div class="mt-tag">Road-tested</div></div>`);
     }
     // resale
     if (e.resale) {
@@ -937,8 +936,7 @@
     if (e.rating) {
       const g = e.rating;
       tiles.push(`<div class="mt"><div class="mt-k">Average user satisfaction</div><div class="mt-v">${g.avg.toFixed(1)}<small>/5</small> ${stars(Math.round(g.avg))}</div>
-        <div class="mt-s">From ${g.count.toLocaleString('en-IN')} owner ratings across ${Object.keys(g.sources).length} sites</div>
-        <ul class="mt-src">${Object.entries(g.sources).map(([s, v]) => `<li><a href="${esc(v.url)}" target="_blank" rel="noopener">${SRC[s]}</a><b>${v.r.toFixed(1)}</b><em>${v.n ? v.n.toLocaleString('en-IN') : ''}</em></li>`).join('')}</ul></div>`);
+        <div class="mt-s">From ${g.count.toLocaleString('en-IN')} owner ratings across ${Object.keys(g.sources).length} leading Indian car sites</div></div>`);
     }
     if (!tiles.length) { box.hidden = true; return; }
     box.hidden = false;
@@ -977,7 +975,7 @@
     } else pick = `<div class="vh-pick none">${SORRY_ICON}<div><b>Sorry, no ${esc(m.model)} variant has all of that.</b><div class="muted small">Untick a feature to see the closest variants.</div></div></div>`;
     const grp = (name, vals, set) => vals.length > 1 ? `<div class="group"><div class="label">${name}</div><div class="chips">${vals.map((v) => `<button type="button" class="chip" data-cpf="${name === 'Fuel' ? 'fuel' : 'gear'}" data-v="${esc(v)}" aria-pressed="${set.has(v)}">${esc(v)}</button>`).join('')}</div></div>` : '';
     const cnt = (k) => known.filter((c) => c.feat(k) === '1').length;
-    box.innerHTML = `<div class="cp-sec-head"><div><h2 class="display">Find your variant</h2><p class="muted">${all.length} variant${all.length > 1 ? 's' : ''}. Tick what you care about. We only show what changes between them.${cp.carried ? ' Your choices from the search are already ticked.' : ''}${all.some((c) => c.fsrc === 'autocar' || c.zw) ? ` Some details from ${[all.some((c) => c.fsrc === 'autocar') && 'Autocar India', all.some((c) => c.zw) && 'ZigWheels'].filter(Boolean).join(' and ')}.` : ''}</p></div></div>
+    box.innerHTML = `<div class="cp-sec-head"><div><h2 class="display">Find your variant</h2><p class="muted">${all.length} variant${all.length > 1 ? 's' : ''}. Tick what you care about. We only show what changes between them.${cp.carried ? ' Your choices from the search are already ticked.' : ''}</p></div></div>
       ${all.length > 1 ? `<div class="vh-filters">${grp('Fuel', fuels, cp.fuel)}${grp('Gearbox', gears, cp.gear)}</div>
       ${diff.length ? `<div class="group"><div class="label">Features that differ <span class="muted">· tap the ones you want</span></div><div class="chips vh-need">${(cp.more ? diff : diff.filter((f, i) => i < 12 || cp.need.has(f.key))).map((f) => `<button type="button" class="chip" data-need="${f.key}" aria-pressed="${cp.need.has(f.key)}">${esc(f.label)}<small>${cnt(f.key)}/${known.length}</small></button>`).join('')}${diff.length > 12 ? `<button type="button" class="chip more" data-more>${cp.more ? 'Fewer' : `+${diff.filter((f, i) => i >= 12 && !cp.need.has(f.key)).length} more`}</button>` : ''}</div></div>`
         : known.length ? '<p class="muted">These variants have the same feature list.</p>' : `<div class="note">${esc(m.brand)} doesn't publish a variant-wise feature list, so we can only compare prices and specs here.</div>`}` : ''}
@@ -1002,6 +1000,7 @@
     box.innerHTML = `<div class="cp-sec-head"><div><h2 class="display">${esc(m.brand)} showrooms near you</h2><p class="muted">Nearest first, with phone numbers where they're listed. Open any of them on Google Maps for reviews, ratings and opening hours.</p></div></div>
       <form class="dl-find" data-dlform><button type="button" class="btn ghost" data-dl="geo">${PIN} Use my location</button><span class="muted">or</span>
         <input class="dl-pin" name="pin" inputmode="numeric" autocomplete="postal-code" maxlength="6" pattern="[1-9][0-9]{5}" placeholder="Enter pincode" aria-label="Pincode"><button class="btn primary" type="submit">Find</button></form>
+      <p class="hint dl-geo-note">Your location is only used in your browser to sort showrooms by distance. Pincodes are looked up with OpenStreetMap's Nominatim service.</p>
       <div id="dlList" aria-live="polite"></div>`;
     if (geo) listDealers(m, geo);
   }
@@ -1015,7 +1014,7 @@
     out.innerHTML = `<div class="dl-where">${PIN} Near <b>${esc(geo.label)}</b> <button class="link" type="button" data-dl="change">Change</button></div>
       ${near.length ? `<ol class="dl-list">${near.map(dealerCard).join('')}</ol>` : `<p class="muted">We don't have any ${esc(m.brand)} showrooms on our map within 120 km yet.</p>`}
       <a class="btn ghost dl-all" href="${gAll}" target="_blank" rel="noopener">See every ${esc(m.brand)} showroom near ${esc(geo.label)} on Google Maps ↗</a>
-      <p class="hint">Showroom list from OpenStreetMap, refreshed weekly. Call ahead to check stock and test-drive cars.</p>`;
+      <p class="hint">Showroom locations © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>, available under the <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">Open Database License</a>. Refreshed weekly; call ahead to check stock and test drives.</p>`;
   }
   function dealerCard(d) {
     const area = d.c || nearestCity(d.la, d.lo);
@@ -1079,7 +1078,7 @@
   const PRIO_HINT = { features: 'Tech, safety and convenience kit', mileage: 'Fuel efficiency / range', comfort: 'Space, seats and ride quality', value: 'Most car for the money' };
   const BODY_OPTS = { small: { label: 'Small car', sub: 'Hatchbacks — easy to park', bodies: ['Hatchback'] }, sedan: { label: 'Sedan', sub: 'Boot, comfort, highway manners', bodies: ['Sedan'] }, suv: { label: 'SUV', sub: 'SUVs and 7-seat MUVs', bodies: ['SUV', 'MUV / MPV'] } };
   const expertOf = (m) => (DATA.experts || {})[m.brand + '|' + m.model] || null;
-  const ytUrl = (m) => { const x = expertOf(m); return x && x.yt ? `https://www.youtube.com/watch?v=${x.yt}` : `https://www.youtube.com/results?search_query=${encodeURIComponent(`Autocar India ${m.brand} ${m.model} review`)}`; };
+  const ytUrl = (m) => { const x = expertOf(m); return x && x.yt ? `https://www.youtube.com/watch?v=${x.yt}` : `https://www.youtube.com/results?search_query=${encodeURIComponent(`${m.brand} ${m.model} review`)}`; };
   const onesOf = (c) => (/[01]/.test(c.fs) ? c.fs.split('1').length - 1 : null);
 
   function pickVariant(m) {
@@ -1190,12 +1189,12 @@
         <div>
           <div class="brand">${esc(m.brand)}</div><h3>${esc(m.model)}</h3>
           <div class="meta"><span class="tag">${esc(c.variant)}</span><span class="tag">${esc(c.fuel)}</span><span class="tag">${esc(c.transType && c.transType !== 'MT' ? c.transType : c.transmission)}</span>${c.mileage && c.fuel !== 'Electric' ? `<span class="tag hide-sm">${c.mileage} km/l</span>` : ''}</div>
-          <div class="subs">${state.rec.prio.map((k) => `<div class="sub${m.est[k] ? ' est' : ''}"${m.est[k] ? ' title="Not rated separately by Autocar India and not published by the maker; estimated from the overall score"' : ''}><span>${esc(PRIO[k])}</span>${bar10(m.sub[k])}<b>${m.est[k] ? '~' : ''}${m.sub[k].toFixed(1)}</b></div>`).join('')}</div>
+          <div class="subs">${state.rec.prio.map((k) => `<div class="sub${m.est[k] ? ' est' : ''}"${m.est[k] ? ' title="Not rated separately by experts and not published by the maker; estimated from the overall score"' : ''}><span>${esc(PRIO[k])}</span>${bar10(m.sub[k])}<b>${m.est[k] ? '~' : ''}${m.sub[k].toFixed(1)}</b></div>`).join('')}</div>
         </div>
         <div class="price"><div class="match"><b>${m.match.toFixed(1)}</b><span>/10 match</span></div><div class="big">${lakh(c.orTotal)}</div><div class="small">on-road · ex-showroom ${lakh(c.or.ex)}</div></div>
       </div>
-      ${x ? `<div class="expert"><div class="xs"><span class="xbadge">Autocar ${x.s ? esc(x.s) + '/10' : 'review'}</span>${x.basedOn ? `<span class="muted"> (review of the ${esc(x.basedOn)})</span>` : ''}</div><ul class="pc">${pros}</ul></div>` : `<div class="expert"><span class="muted">No Autocar India expert review yet — ranked on specs.</span></div>`}
-      <div class="card-foot"><a class="watch" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>${x && x.yt ? 'Watch the Autocar India review' : 'Find the Autocar India video'}</a>
+      ${x ? `<div class="expert"><div class="xs"><span class="xbadge">Expert ${x.s ? esc(x.s) + '/10' : 'review'}</span>${x.basedOn ? `<span class="muted"> (review of the ${esc(x.basedOn)})</span>` : ''}</div><ul class="pc">${pros}</ul></div>` : `<div class="expert"><span class="muted">No expert review yet — ranked on specs.</span></div>`}
+      <div class="card-foot"><a class="watch" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>${x && x.yt ? 'Watch the video review' : 'Find a video review'}</a>
         <span class="foot-links">${x && x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">Expert review ↗</a>` : ''}<button class="link" data-toggle="${esc(key)}">${open ? 'Hide' : 'See'} ${m.vs.length} variant${m.vs.length > 1 ? 's' : ''}</button></span></div>
       ${open ? variantTable(m) : ''}
     </article>`;

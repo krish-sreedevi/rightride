@@ -1,0 +1,617 @@
+{
+ "BMW|2 Series Gran Coupe": {
+  "page": "https://www.bmw.in/en/all-models/2-series/2-series-gran-coupe/bmw-2-series-gran-coupe.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCdFHmhFUsxuvagdOLb5inTNu8PftE6UnxEaEqE4D89GsLsgUUiprJqDYGw6ZuLcpptYRSJwx67m5VuTJYCygNS3lmlTv0PkiyX324bpzTQdjc96q3azDxiajdnkq8weZzOALUdPKkIFJGzTOABKupkBQFeWS6Ae3KMPVYFMMWhbNmK3LPo90yWQkbHi4TP7b9%25wc36%25MiftxdYQ%25w178zmFltECUkyRU7slGAT5MCrXpF3tAlZQ6KIN1XRaYWB2YQ5nmPej7agOybMe3nvIT9hS4O2B3ioEMIjedwSbRBDMztV55eqhk7NpMMLoAC0t5hJHFlHIxou%25KX%25BHHSfWQfOD%25V1Pa1IGfNEbnE2310s9Os88E4riIrpOscZwBZsdrxRteRhPZ857M5xjRUgChg8F5Gvlo6kdgp2XHYGsv6jQ%25mpq2YDafBzxjmq4qMjNZ7pR%25iSZ8XCWit74Sc1QCKGdJdoLrNJjuMw%25RBDFBfpCb9EiyEjZtUscCJzL1hJUbKiifGruLBkJnTNM3TFe0P%25dxEaUmJCOy8sZR10tN2ZR5EiyhPS5qwlGmIqQ53OM4BLayVIbfMs",
+  "colors": [
+   {
+    "name": "Brooklyn Grey Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJE%25qdbYCjKq%25SbfFSrNG1JyXql5tkATjHdMsqUi5F0WUjh1b4g6TNF1YLYrt3lkIVrgyfYgMy1fBcPrwO30kxbZUCqPJ8snh1mmSk%25h8ekxo701YMLoMrHKVhJHFlFeCou%25KXKiHHSfWQlCE%25V1PaXMffNEbnQVh10s9OaZQE4riInRcscZwBLvSrxRteJfgZ857Mu1lRUgChSU75GvloVmPgp2XH5LDv6jQ%25gZp2YDafvY8jmqn12mRDyLOEjyyqTJIsDRXL3uBrq8vJdSeZL0JuzVMR1zySkNh5E8zVA0ogsjcNF4HvrbH0Kc%252Z9y4WxfjRN2cP81D6IAxbUEqYtE89GsLm70UiprJymRGw6ZuTneptYRS3Fy67m5VnJbYCygNO99mlTv0IfyyX324BN9TQdjcd6h3azDxzYddnkq8kpCzOALUA6%25kIFJGFtRABKupKooFeWS6WfpKMPVYPK5WhbNmbTLPo90y9h7bHi4Tioj9%25wc31v5iftxdE%25Kw178zsfltECUkYgh7slely7IP0fbzSnPox4qSN0enMA84D%255Q53XWIQ7ayV8RXABNAigYx8tUDtIlpR7sY5NShKVBzcN7I%25lZya2wdqfkPGhEbzLuSDyeLix2GqTMycSVNLB9gnYNUeHFbrUfNws53ZG19mrOpgk"
+   },
+   {
+    "name": "Black Sapphire (Metallic)",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJE%25qdbYCjKq%25SbfFSrNG1JyXql5tkATjHdMsqUi5F0WUjh1b4g6TNF1YLYrt3lkIVrgyfYgMy1fBcPrwO30kxbZUCqPJ8snh1mmSk%25h8ekxo7BpMMLoMrHKVhJHFlFeCou%25KXKiHHSfWQlCE%25V1PaXMffNEbnQVh10s9OaZQE4riInRcscZwBLvSrxRteJfgZ857Mu1lRUgChSU75GvloVmPgp2XH5LDv6jQ%25gZp2YDafvY8jmqn12mRDyLOEjyyqTJIsDRXL3uBrq8vJdSeZL0JuzVMR1zySkNh5E8zVA0ogsjcNF4HvrbH0Kc%252Z9y4WxfjRN2cP81D6IAxbUEqYtE89GsLm70UiprJymRGw6ZuTneptYRS3Fy67m5VnJbYCygNO99mlTv0IfyyX324BN9TQdjcd6h3azDxzYddnkq8kpCzOALUA6%25kIFJGFtRABKupKooFeWS6WfpKMPVYPK5WhbNmbTLPo90y9h7bHi4Tioj9%25wc31v5iftxdE%25Kw178zsfltECUkYgh7slely7IP0fbzSnPox4qSN0enMA84D%255Q53XWIQ7ayV8RXABNAigYx8tUDtIlpR7sY5NShKVBzcN7I%25lZya2wdqfkPGhEbzLuSDyeLix2GqTMycSVNLB9gnYNUeHFbrUfNws53ZG19mrOfdE"
+   },
+   {
+    "name": "Portimao Blue Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJE%25qdbYCjKq%25SbfFSrNG1JyXql5tkATjHdMsqUi5F0WUjh1b4g6TNF1YLYrt3lkIVrgyfYgMy1fBcPrwO30kxbZUCqPJ8snh1mmSk%25h8ekxo70qaMLoMrHKVhJHFlFeCou%25KXKiHHSfWQlCE%25V1PaXMffNEbnQVh10s9OaZQE4riInRcscZwBLvSrxRteJfgZ857Mu1lRUgChSU75GvloVmPgp2XH5LDv6jQ%25gZp2YDafvY8jmqn12mRDyLOEjyyqTJIsDRXL3uBrq8vJdSeZL0JuzVMR1zySkNh5E8zVA0ogsjcNF4HvrbH0Kc%252Z9y4WxfjRN2cP81D6IAxbUEqYtE89GsLm70UiprJymRGw6ZuTneptYRS3Fy67m5VnJbYCygNO99mlTv0IfyyX324BN9TQdjcd6h3azDxzYddnkq8kpCzOALUA6%25kIFJGFtRABKupKooFeWS6WfpKMPVYPK5WhbNmbTLPo90y9h7bHi4Tioj9%25wc31v5iftxdE%25Kw178zsfltECUkYgh7slely7IP0fbzSnPox4qSN0enMA84D%255Q53XWIQ7ayV8RXABNAigYx8tUDtIlpR7sY5NShKVBzcN7I%25lZya2wdqfkPGhEbzLuSDyeLix2GqTMycSVNLB9gnYNUeHFbrUfNws53ZG19mrOp0h"
+   },
+   {
+    "name": "Alpine White",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJE%25qdbYCjKq%25SbfFSrNG1JyXql5tkATjHdMsqUi5F0WUjh1b4g6TNF1YLYrt3lkIVrgyfYgMy1fBcPrwO30kxbZUCqPJ8snh1mmSk%25h8ekxo7ZfgMLoMrHKVhJHFlFeCou%25KXKiHHSfWQlCE%25V1PaXMffNEbnQVh10s9OaZQE4riInRcscZwBLvSrxRteJfgZ857Mu1lRUgChSU75GvloVmPgp2XH5LDv6jQ%25gZp2YDafvY8jmqn12mRDyLOEjyyqTJIsDRXL3uBrq8vJdSeZL0JuzVMR1zySkNh5E8zVA0ogsjcNF4HvrbH0Kc%252Z9y4WxfjRN2cP81D6IAxbUEqYtE89GsLm70UiprJymRGw6ZuTneptYRS3Fy67m5VnJbYCygNO99mlTv0IfyyX324BN9TQdjcd6h3azDxzYddnkq8kpCzOALUA6%25kIFJGFtRABKupKooFeWS6WfpKMPVYPK5WhbNmbTLPo90y9h7bHi4Tioj9%25wc31v5iftxdE%25Kw178zsfltECUkYgh7slely7IP0fbzSnPox4qSN0enMA84D%255Q53XWIQ7ayV8RXABNAigYx8tUDtIlpR7sY5NShKVBzcN7I%25lZya2wdqfkPGhEbzLuSDyeLix2GqTMycSVNLB9gnYNUeHFbrUfNws53ZG19mrOD5J"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Interior lighting",
+    "img": "https://bmw.scene7.com/is/image/BMW/f74_ice_intro_positioning:16to7?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Interior",
+    "img": "https://bmw.scene7.com/is/image/BMW/f74_ice_interior_positioning-loop_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Interior",
+    "img": "https://bmw.scene7.com/is/image/BMW/f74_ice_interior_illuminated-metal-trims-1:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   }
+  ]
+ },
+ "BMW|3 Series": {
+  "page": "https://www.bmw.in/en/all-models/3-series/sedan/2022/bmw-3-series-sedan-overview.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCdFHmhFUsxuvagdOLb5inTNu8PftE6UnxEa3U5xyShKVjBYSkNh5hQqVA0ogou5NF4HvHsK0Kc%252gqF4WxfjvKkcP81D2WvxbUEqjp289GsLD6BUiprJqY3Gw6ZuATWptYRSFxy67m5VK7JYCygNW23mlTv0Pj%25yX324mAMTQdjcy6h3azDxTYQdnkq83nCzOALUdOmkIFJGzY2ABKupkQFFeWS6AC3KMPVYFZdWhbNmKRrPo90yWnxbHi4TPx49%25wc3bOeiftxd9Iiw178zm1otECUkynH7slGATOECrXpF3PalZQ6Kdv6XRaYWzCfQ5nmPeHRagOybMDynvIT9hqlO2B3ioL8IjedwHGNBDMzt%25p6eqhk7f%25FMLoAC1RchJHFlEftou%25KXc7HHSfWQxOq%25V1Pa8qqfNEbnU3110s9OGwFE4riIrHYscZwBZ%25rrxRteRoVZ857M5HTRUgChgu05GvlovMWgp2XH23ov6jQ%25jvW2YDafDqAjmqn1qLSDyLOELmiqTJIsJKEL3uBrz9PJdSeZklNuzVMR%256XSk%25oaBMh3Ydqf0QXFptvGuypx65ejVZ8XZDKoOILB9LbYNcJdop7GqgpAOQBBDFu6GZCpEiy5wiXRTnjtzL1Abpos9kJSVqTMycSVNLB9gnYNUeHFbrUfNws53ZG19mrOpg3",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Centre console",
+    "img": "https://bmw.scene7.com/is/image/BMW/3-int_2:2to1?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://bmw.scene7.com/is/image/BMW/3-int_3:2to1?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Sound system",
+    "img": "https://bmw.scene7.com/is/image/BMW/3-int_4:2to1?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://bmw.scene7.com/is/image/BMW/3-dr_6:2to1?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://bmw.scene7.com/is/image/BMW/3-cr-1:2to1?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   }
+  ]
+ },
+ "BMW|3 Series Lwb": {
+  "page": "https://www.bmw.in/en/all-models/3-series/bmw-3-series-long-wheelbase.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCdFHmhFUsxuvagdOLb5inTNu8PftE6UnxEaEqE4D89GsLsuKUiprJqV9Gw6ZuLiqptYRSJyL67m5VKdbYCygNWuQmlTv0PGdyX324bDVTQdjcyFk3azDxTYodnkq83mazOALUdOlkIFJGzIyABKupkmjFeWS6ArEKMPVYFKaWhbNmKwjPo90yWaIbHi4TPnb9%25wc36lHiftxdYfhw178zmaotECUkyn17slGATWQCrXpF3gplZQ6KdvoXRaYWzCfQ5nmPeHRagOybMDynvIT9hqlO2B3ioL8IjedwHGNBDMzt%25p6eqhk7f%25FMLoAC1R%25hJHFlEftou%25KXsxKHSfWQxCD%25V1Pa8lffNEbnEX110s9Oso6E4riIrHsscZwBZhSrxRteRoyZ857M5JNRUgChgeK5GvlovThgp2XH2gKv6jQ%25jDJ2YDafD6ujmqn1qY9DyLOE3PKqTJIsd7SL3uBroJIJdSUS%25JxvQy2sC4v6OaiCXQU4GZIH9b2NF1VgxNJ0%25ls2ouboryat7RCzRd43Q5GaNKVZfNYt9CCrmg0VoWNekx%25AkbH8wsFpRBYdNaMz65v2Z8XxLv2jRCzfw4jSlnmdhSIjAM%25UoVBzchtNfU",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Rear seats",
+    "img": "https://bmw.scene7.com/is/image/BMW/rear_seats:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/live-cockpit-plus:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Sound system",
+    "img": "https://bmw.scene7.com/is/image/BMW/Harman_kardon:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://bmw.scene7.com/is/image/BMW/m-leather-steering-wheel:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://bmw.scene7.com/is/image/BMW/Curved_Display_3GL:16to7?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   }
+  ]
+ },
+ "BMW|4 Series": {
+  "page": "https://www.bmw.in/en/all-models/m-series/bmw-m4-converitable.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCRbz1vbwx65efVuHbyMnnvz4UCStUDn2shKM4P1YeyWNRsj6X3aJDW2aKafaeujmqn1%25usDyLOEfK9qTJIs1yfL3uBrEV1JdSeZsN7uzVMRr08SkNh56x4VA0ogYLcNF4HvmFo0Kc%252yK54WxfjTy%25cP81D3AnxbUEqcNP89GsLx9FUiprJ8z9Gw6ZuUInptYRSGXy67m5Vpa0YCygN6q8mlTv0YzcyX324mkETQdjcy9t3azDxTi3dnkq8NnlzOALU06KkIFJG4hIABKupczZFeWS6xkQKMPVYwTOWhbNmtXMPo90y7DBbHi4TC7x9%25wc3l5jiftxdXIgw178zQg8tECUkg3o7slGAvdCCrXpF2%25%25lZyY4Up6EHswTlANmhJPMCfhIoKG9XABNAigYx8tUDtjHpE7sYhuMwWhRx0UUi5CoMAShdqfKLqNF1c9Jrt3RjhYzDZ7lXw1pfOlXQtUDWcHQeGm5jkeTQLzKEAM3D%25kxiK7",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/g83_g23-m440_int_dashboard_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Interior",
+    "img": "https://bmw.scene7.com/is/image/BMW/g83_g23-m440_int_leather-interior_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://bmw.scene7.com/is/image/BMW/g83_g23-m440_int_steering-wheel_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://bmw.scene7.com/is/image/BMW/g83_g23-m440_dynamics_variable-sport-steering_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/live-cockpit-3-1?qlt=80&wid=1600&fmt=webp"
+   }
+  ]
+ },
+ "BMW|5 Series Lwb": {
+  "page": "https://www.bmw.in/en/all-models/5-series/sedan/bmw-5-series-sedan-g68.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCdFHmhFUsxuvagdOLb5inTNu8PftE6UnxEa3U5xyShKVjBYSkNh5hQqVA0ogou5NF4Hv5Rx0Kc%252gFu4WxfjvUgcP81D36kxbUEqd2w89GsLz06UiprJk4RGw6ZuAwZptYRSFHz67m5VKGPYCygNWP7mlTv0PjSyX324mAvTQdjcy6h3azDxTYQdnkq83nGzOALUd6%25kIFJGzYMABKupkmjFeWS6AHbKMPVYFf7WhbNmKwpPo90yWtPbHi4TPoo9%25wc3bO9iftxdYQ%25w178zmFltECUkyRO7slGAT52CrXpF3tNlZQ6KIv6XRaYWB2tQ5nmPej4agOybMxunvIT9h8UO2B3ioJRIjedwHokBDMzt%2508eqhk7fZHMLoAC0wvhJHFlHIxou%25KX%25BHHSfWQfOU%25V1Pa1vqfNEbnEUa10s9Os1TE4riIrZgscZwBZ4vrxRteRckZ857MGdTRUgChp815Gvlon9QgpnQ97lX80UrOobPRVAfS5cVLNHCEvhJPhsmQwtZ7dZLfReRUQVFSr%25V6wb77sY5NShKVBzcHkzPoxiEAGZI63VQedpRgvrxlcqgv2Z7d%25i02uCaY3MuO2keH8hSId4MwVCB",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Interior",
+    "img": "https://bmw.scene7.com/is/image/BMW/interior_july_22?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Ambient lighting",
+    "img": "https://bmw.scene7.com/is/image/BMW/AMBIENT_LIGHTING_5_series_nw_lnch_3:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Panoramic sunroof",
+    "img": "https://bmw.scene7.com/is/image/BMW/Interior_Sunroof_V9-1:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Sound system",
+    "img": "https://bmw.scene7.com/is/image/BMW/BOWERS_WILKINS_5_series_nw_lnch_3:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://bmw.scene7.com/is/image/BMW/G68_S4NBA_Display_SOPfehlt_SOCfehlt_Frnt_seat_ventilation_g68_5:1to1?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   }
+  ]
+ },
+ "BMW|7 Series": {
+  "page": "https://www.bmw.in/en/all-models/7-series/sedan/bmw-7-series-sedan.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCdFHmhFUsxuvagdOLb5inTNu8PftE6UnxEa3U5xyShKVjBYSkNh5hQqVA0ogou5NF4HvH9d0Kc%252g584Wxfjv6KcP81D2WvxbUEqjp289GsLD6uUiprJkyKGw6ZuAqCptYRSFxy67m5VK8IYCygNWCgmlTv0PxayX324bEATQdjc9sE3azDxiycdnkq8wT7zOALUtumkIFJG7SxABKupk9JFeWS6AUoKMPVYFzsWhbNmKkMPo90yWo7bHi4TPzR9%25wc3bkMiftxd9AVw178zihttECUkwoL7slGAtq%25CrXpF7galZQ6KC21XRaYWljQQ5nmPXDhagOybQqPnvIT9aA4O2B3inhPIjedwO2LBDMztIjdeqhk7BDDMLoACeRMhJHFlisLou%25KXwn1HSfWQt4W%25V1Pa7c5fNEbnCxG10s9Ol%25zE4riIga9scZwBvnnrxRte2ptZ857Mj61RUgChDr55GvloqyEgp2XHLqyv6jQ%25JzP2YDafzo8jmqn1kiDDyLOELgKqTJIsJvLL3uBru56JdSeZSgbuzVMRVGmSkNh5NbRVA0og0VlNF4Hv4jB0Kc%252cxG4WxfjxKpcP81D8WOxbUEqiaX89GsLwM6UiprJt90Gw6Zu7imptYRS2pF672gfrR5iWw8jL%254kFe0ApbFdKVZcYuzHuxXgEsUrOUqQ95GwgFMA8NFCE%25rrxlpKAuhFqIbVBIHS91cetUDCnFgLO7G6Y89Rb36YmUrON1WmkZvlnJkjmBLViuADOPJEj%25d",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/g70_lci_ice_interior_cockpit_welcome_dsk_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/g70_lci_ice_interior_cockpit_bmw_panoramic_vision_dsk_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/g70_lci_ice_interior_cockpit_passenger_screen_dsk_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://bmw.scene7.com/is/image/BMW/g70_lci_ice_interior_cockpit_steering_wheel_dsk_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Interior lighting",
+    "img": "https://bmw.scene7.com/is/image/BMW/g70_lci_ice_interior_highlights_customization_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/g70_lci_ice_interior_cockpit_overlay_welcome_automated_doors:1to1?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   }
+  ]
+ },
+ "BMW|i5": {
+  "page": "https://www.bmw.in/en/all-models/m-series/bmw-i5-m60/bmw-i5-m60xdrive-overview.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCRbz1vbwx65efVu4bWCmnvz4UCStUDn2shKM4P1YeyWNRsj6X3aJDW2aK0De2VrtGZH9urxRteIgOZ857MBv7RUgChe2V5GvloVeYgp2XHNrDv6jQ%2506h2YDaf4gwjmqn1cx8DyLOExBuqTJIs8ewL3uBrq0VJdSeZLjbuzVMRJDdSkNh5ukaVA0ogSjwNF4HvVDB0Kc%252Nd44Wxfj0yucP81D4tmxbUEqczZ89GsLxYjUiprJ8mUGw6ZuUiiptYRSGFl67m5VpKEYCygN6WYmlTv0YdUyX324uFlTQdjcSUk3azDxVBidnkq8NTxzOALU03CkIFJGbhTABKup9oRFeWS6iHgKMPVYw2sWhbNmtjDPo90y7EBbHi4TC7x9%25wc3lO5iftxdXIcw178z5ThtECUkgKH7slGAvHHCrXpF2VllZQ6KjA0XRaYWDy8Q5nmPn7aagOybOwunvIT9IfrO2B3iBtVIjedwe7YBDMztMjUeqhk7JnMMLoACu8chJHFlSLOou%25KXVJ1HSfWQNuC%25V1Pawj9fNw9zKPbuDShtfo3b2YIv%25L2RjnWe1Q53QMc9AFoKGoRI4uHS92mvhO20AdKKM4%25jvQy2CpLn6p3aJkeYVo70U29lGNHf1hJPLZf1EoKGOkDEgWi4UXgtE6lnuQv7GqXA2HE",
+  "colors": [
+   {
+    "name": "Fire Red Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJE%25qdbYCjKq%25SbfFSrNG1JyXql5tkATjHdMsqUi5F0WUjh1b4g6TNF1YLYrt3lkIVKDZdbDJBHWp3QlOD2VfxbZOMVXuMwVQX9v6OTP05x2YIDzf6EjnWtQSSrxltjix27d5M%25w17wOWR1tECBCmtOWN%25PduaWhbNm6ipPo90yYw0bHi4TmtO9%25wc3OmEiftxdIWCw178zB1TtECUkeiV7slGAMhoCrXpFhYalZQ6KomVXRaYWlBOQ5nmPX7JagOybQC5nvIT9avUO2B3in7VIjedwOCYBDMztI5eeqhk7BraMLoACeNshJHFlMgPou%25KXhE7HSfWQosH%25V1PaHSSfNEbn%25jc10s9OfDFE4riI1qEscZwBE5HrxRteajcZ857MnHvRUgChOYS5GvloIZhgp2XHBR4v6jQ%25JTZ2YDafu3bjmqn1SdiDyLOEVtKqTJIsN7CL3uBr0FYJdSeZ40huzVMRcp9SkNh5x6MVA0og9ZTNF4HviDd0Kc%252wdd4WxfjtOccP81D72BxbUEqCro89GsLG0UUiprJpVaGw6Zu6kWptYRSYNO67m5Vm0EYCygNy7HmlTv0QGyyX324aoMTQdjcnXp3azDxOQAdnkq8Ia4zOALUV7ukIVugDLJaCnTNk3RJtE6wzXtb7GqN1wTQLTKs8VNP05PXkEobH8ELDOdqQmSLbXeifG7ZWYgMyk4OoAmvjD5GavKVZ4gpnGSDqLvQFsC8L0aB3A%250MLWHE6f4hFU%25lc2L"
+   },
+   {
+    "name": "Black Sapphire Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJE%25qdbYCjKq%25SbfFSrNG1JyXql5tkATjHdMsqUi5F0WUjh1b4g6TNF1YLYrt3lkIVKDZdbDJBHWp3QlOD2VfxbZOMVXuMwVQX9v6OTP05x2YIDzf6EjnWtQSSrxltjix27d9Lww17wOWR1tECBCmtOWN%25PduaWhbNm6ipPo90yYw0bHi4TmtO9%25wc3OmEiftxdIWCw178zB1TtECUkeiV7slGAMhoCrXpFhYalZQ6KomVXRaYWlBOQ5nmPX7JagOybQC5nvIT9avUO2B3in7VIjedwOCYBDMztI5eeqhk7BraMLoACeNshJHFlMgPou%25KXhE7HSfWQosH%25V1PaHSSfNEbn%25jc10s9OfDFE4riI1qEscZwBE5HrxRteajcZ857MnHvRUgChOYS5GvloIZhgp2XHBR4v6jQ%25JTZ2YDafu3bjmqn1SdiDyLOEVtKqTJIsN7CL3uBr0FYJdSeZ40huzVMRcp9SkNh5x6MVA0og9ZTNF4HviDd0Kc%252wdd4WxfjtOccP81D72BxbUEqCro89GsLG0UUiprJpVaGw6Zu6kWptYRSYNO67m5Vm0EYCygNy7HmlTv0QGyyX324aoMTQdjcnXp3azDxOQAdnkq8Ia4zOALUV7ukIVugDLJaCnTNk3RJtE6wzXtb7GqN1wTQLTKs8VNP05PXkEobH8ELDOdqQmSLbXeifG7ZWYgMyk4OoAmvjD5GavKVZ4gpnGSDqLvQFsC8L0aB3A%250MLWHE6f4hFU%25lMYo"
+   },
+   {
+    "name": "Phytonic Blue Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJE%25qdbYCjKq%25SbfFSrNG1JyXql5tkATjHdMsqUi5F0WUjh1b4g6TNF1YLYrt3lkIVKDZdbDJBHWp3QlOD2VfxbZOMVXuMwVQX9v6OTP05x2YIDzf6EjnWtQSSrxltjix27d5y3w17wOWR1tECBCmtOWN%25PduaWhbNm6ipPo90yYw0bHi4TmtO9%25wc3OmEiftxdIWCw178zB1TtECUkeiV7slGAMhoCrXpFhYalZQ6KomVXRaYWlBOQ5nmPX7JagOybQC5nvIT9avUO2B3in7VIjedwOCYBDMztI5eeqhk7BraMLoACeNshJHFlMgPou%25KXhE7HSfWQosH%25V1PaHSSfNEbn%25jc10s9OfDFE4riI1qEscZwBE5HrxRteajcZ857MnHvRUgChOYS5GvloIZhgp2XHBR4v6jQ%25JTZ2YDafu3bjmqn1SdiDyLOEVtKqTJIsN7CL3uBr0FYJdSeZ40huzVMRcp9SkNh5x6MVA0og9ZTNF4HviDd0Kc%252wdd4WxfjtOccP81D72BxbUEqCro89GsLG0UUiprJpVaGw6Zu6kWptYRSYNO67m5Vm0EYCygNy7HmlTv0QGyyX324aoMTQdjcnXp3azDxOQAdnkq8Ia4zOALUV7ukIVugDLJaCnTNk3RJtE6wzXtb7GqN1wTQLTKs8VNP05PXkEobH8ELDOdqQmSLbXeifG7ZWYgMyk4OoAmvjD5GavKVZ4gpnGSDqLvQFsC8L0aB3A%250MLWHE6f4hFU%25lctC"
+   },
+   {
+    "name": "Cape York Green Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJE%25qdbYCjKq%25SbfFSrNG1JyXql5tkATjHdMsqUi5F0WUjh1b4g6TNF1YLYrt3lkIVKDZdbDJBHWp3QlOD2VfxbZOMVXuMwVQX9v6OTP05x2YIDzf6EjnWtQSSrxltjix27d5Arw17wOWR1tECBCmtOWN%25PduaWhbNm6ipPo90yYw0bHi4TmtO9%25wc3OmEiftxdIWCw178zB1TtECUkeiV7slGAMhoCrXpFhYalZQ6KomVXRaYWlBOQ5nmPX7JagOybQC5nvIT9avUO2B3in7VIjedwOCYBDMztI5eeqhk7BraMLoACeNshJHFlMgPou%25KXhE7HSfWQosH%25V1PaHSSfNEbn%25jc10s9OfDFE4riI1qEscZwBE5HrxRteajcZ857MnHvRUgChOYS5GvloIZhgp2XHBR4v6jQ%25JTZ2YDafu3bjmqn1SdiDyLOEVtKqTJIsN7CL3uBr0FYJdSeZ40huzVMRcp9SkNh5x6MVA0og9ZTNF4HviDd0Kc%252wdd4WxfjtOccP81D72BxbUEqCro89GsLG0UUiprJpVaGw6Zu6kWptYRSYNO67m5Vm0EYCygNy7HmlTv0QGyyX324aoMTQdjcnXp3azDxOQAdnkq8Ia4zOALUV7ukIVugDLJaCnTNk3RJtE6wzXtb7GqN1wTQLTKs8VNP05PXkEobH8ELDOdqQmSLbXeifG7ZWYgMyk4OoAmvjD5GavKVZ4gpnGSDqLvQFsC8L0aB3A%250MLWHE6f4hFU%25lcaN"
+   },
+   {
+    "name": "Mineral White Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331pKAuhFqIbC7NNRUQlPw7CcVxEaqe%25zuzHVPRdgShtDjux2YIDb4g8jmBYXGuSDOPLFtBZ8X7Dw8jCzojrtECtIP7p7slely7IP0fbzSnPo90yYoIbHi4Tmlo9%25wc3y5jiftxdTCyw178zBQltECUke3Z7slGAM9QCrXpFhrGlZQ6KoHHXRaYWHywQ5nmPXeIagOybQC5nvIT9avnO2B3in7VIjedwOCYBDMztIsjeqhk7BSHMLoACeNshJHFlM9pou%25KXhE7HSfWQosH%25V1PaHSsfNEbn%25Vp10s9OfDxE4riI1qKscZwBELsrxRtesg%25Z857MnDxRUgChO%2525GvloImGgp2XHBRbv6jQ%25JE82YDafu3Rjmqn1Sd9DyLOEVzwqTJIsN76L3uBr0NMJdSeZ4btuzVMRcp9SkNh5x6MVA0og983NF4HviR30Kc%252wdd4WxfjtOccP81D72BxbUEqCxB89GsLl6jUiprJpy0Gw6Zu6N4ptYRSYo167m5Vm0IYCygNy4smlTv0TC%25yX3243eiTQdjcnXp3azDxOQAdnueswTCzOSzbRp4cix2inKwUw1pidlwPtUDVfiyXq%25sGM8snGhMQSk%2508Xc9Vo74g37WNF1YLYrt3lkIVKoT4fXx6qtaYc1sr%25ViSgsrZfbYeKJZj9786njlZy%25i1lz0UswTaB9%25UtNDPlNcfZ7dWMBNNXz7mlD4%25P6UKoZIjAEKU9ZG19mwapP"
+   },
+   {
+    "name": "Oxide Grey Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331pKAuhFqIbC7NNRUQlPw7CcVxEaqe%25zuzHVPRdgShtDjux2YIDb4g8jmBYXGuSDOPLFtBZ8X7Dw8jCzgaqtECtIP7p7slely7IP0fbzSnPo90yYoIbHi4Tmlo9%25wc3y5jiftxdTCyw178zBQltECUke3Z7slGAM9QCrXpFhrGlZQ6KoHHXRaYWHywQ5nmPXeIagOybQC5nvIT9avnO2B3in7VIjedwOCYBDMztIsjeqhk7BSHMLoACeNshJHFlM9pou%25KXhE7HSfWQosH%25V1PaHSsfNEbn%25Vp10s9OfDxE4riI1qKscZwBELsrxRtesg%25Z857MnDxRUgChO%2525GvloImGgp2XHBRbv6jQ%25JE82YDafu3Rjmqn1Sd9DyLOEVzwqTJIsN76L3uBr0NMJdSeZ4btuzVMRcp9SkNh5x6MVA0og983NF4HviR30Kc%252wdd4WxfjtOccP81D72BxbUEqCxB89GsLl6jUiprJpy0Gw6Zu6N4ptYRSYo167m5Vm0IYCygNy4smlTv0TC%25yX3243eiTQdjcnXp3azDxOQAdnueswTCzOSzbRp4cix2inKwUw1pidlwPtUDVfiyXq%25sGM8snGhMQSk%2508Xc9Vo74giUlNF1YLYrt3lkIVKoT4fXx6qtaYc1sr%25ViSgsrZfbYeKJZj9786njlZy%25i1lz0UswTaB9%25UtNDPlNcfZ7dWMBNNXz7mlD4%25P6UKoZIjAEKU9ZG19mwapP"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Steering wheel",
+    "img": "https://bmw.scene7.com/is/image/BMW/g60_bev_mp_driving-dynamics_2_integral-act-steering_dsk_fb_de?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Interior",
+    "img": "https://bmw.scene7.com/is/image/BMW/g60_bev_mp_int-design-video-loop_dsk_fb-1_en?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Interior lighting",
+    "img": "https://bmw.scene7.com/is/image/BMW/g60_bev_mp_int-design-highlights_1_m-hmi_dsk_fb-1_en?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://bmw.scene7.com/is/image/BMW/g60_bev_mp_int-design-highlights_2_leather-seats_dsk_fb_de?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Interior lighting",
+    "img": "https://bmw.scene7.com/is/image/BMW/g60_bev_mp_int-design-highlights_3_sound_dsk_fb-2_en?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/live-cockpit-3-1?qlt=80&wid=1600&fmt=webp"
+   }
+  ]
+ },
+ "BMW|i5 Lwb": {
+  "page": "https://www.bmw.in/en/all-models/bmw-i-series/i5/bmw-i5-overview.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCdFHmhFUsxuvagdOLb5inTNu8PftE6UnxEaEqj2p89GsLD6jUiprJkyKGw6ZuAqCptYRSFxy67m5VK8vYCygNWCgmlTv0P1FyX324bYiTQdjc9iL3azDxiL0dnkq83WDzOALUdy%25kIFJGzTOABKupkBYFeWS6AyEKMPVYFTHWhbNmK3LPo90yW1wbHi4TPsX9%25wc3bCmiftxd9liw178zifftECUkwe07slGAtM7CrXpF3IslZQ6KdbnXRaYWz2MQ5nmPkj%25agOybADJnvIT9FQ8O2B3ioL3IjedwHJQBDMzt%25uGeqhk7f64MLoAC1YmhJHFlE0jou%25KXsEPHSfWQrUY%25V1PaZ2sfNEbnUXL10s9Oso6E4riIrHsscZwBZhmrxRteRLVZ857M5ZkRUgChg8D5GvlovUKgp2XH2dov6jQ%25mFk2YDafyiLjmqn1TYRDyLOEMD5qTMBCaOIYUmvhK2tjxbZcDpxN8sn5L10t1gzBXQ2aK2NZj%25jmBx9cvrx3X7aagdD8c1ixHWpsPWtE6l5by2o3FxB%25KTjqLv6OpVqLJ2aKrlUJ4nedFf4hJP%25sY1coKGfXx7l",
+  "colors": [
+   {
+    "name": "Mineral White Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331pKAuhFqIbC7NNRUQlPw7CcVxEaqe%25zuzHVPRdgShtDjux2YIDb4g8jmBYXGuSDOPLFtBZ8X7Dw8jCzojrtECtIP7p7slely7IP0fbzSnPo90yYoIbHi4Tmlo9%25wc3y5jiftxdTCyw178zBQltECUke3Z7slGAM9QCrXpFhrGlZQ6KoHHXRaYWHywQ5nmPXeIagOybQC5nvIT9avnO2B3in7VIjedwOCYBDMztIsjeqhk7BSHMLoACeNshJHFlM9pou%25KXhE7HSfWQosH%25V1PaHSsfNEbn%25Vp10s9OfDxE4riI1qKscZwBELsrxRtesg%25Z857MnDxRUgChO%2525GvloImGgp2XHBRbv6jQ%25JE82YDafu3Rjmqn1Sd9DyLOEVzwqTJIsN76L3uBr0NMJdSeZ4btuzVMRcp9SkNh5x6MVA0og983NF4HviR30Kc%252wdd4WxfjtOccP81D72BxbUEqCxB89GsLl6jUiprJpy0Gw6Zu6N4ptYRSYo167m5Vm0IYCygNy4smlTv0TC%25yX3243eiTQdjcnXp3azDxOQAdnueswTCzOSzbRp4cix2inKwUw1pidlwPtUDVfiyXq%25sGM8snGhMQSk%2508Xc9Vo74g37WNF1YLYrt3lkIVKoT4fXx6qtaYc1sr%25ViSgsrZfbYeKJZj9786njlZy%25i1lz0UswTaB9%25UtNDPlNcfZ7dWMBNNXz7mlD4%25P6UKoZIjAEKU9ZG19mwapP"
+   },
+   {
+    "name": "Phytonic Blue Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331pKAuhFqIbC7NNRUQlPw7CcVxEaqe%25zuzHVPRdgShtDjux2YIDb4g8jmBYXGuSDOPLFtBZ8X7Dw8jCzgTdtECtIP7p7slely7IP0fbzSnPo90yYoIbHi4Tmlo9%25wc3y5jiftxdTCyw178zBQltECUke3Z7slGAM9QCrXpFhrGlZQ6KoHHXRaYWHywQ5nmPXeIagOybQC5nvIT9avnO2B3in7VIjedwOCYBDMztIsjeqhk7BSHMLoACeNshJHFlM9pou%25KXhE7HSfWQosH%25V1PaHSsfNEbn%25Vp10s9OfDxE4riI1qKscZwBELsrxRtesg%25Z857MnDxRUgChO%2525GvloImGgp2XHBRbv6jQ%25JE82YDafu3Rjmqn1Sd9DyLOEVzwqTJIsN76L3uBr0NMJdSeZ4btuzVMRcp9SkNh5x6MVA0og983NF4HviR30Kc%252wdd4WxfjtOccP81D72BxbUEqCxB89GsLl6jUiprJpy0Gw6Zu6N4ptYRSYo167m5Vm0IYCygNy4smlTv0TC%25yX3243eiTQdjcnXp3azDxOQAdnueswTCzOSzbRp4cix2inKwUw1pidlwPtUDVfiyXq%25sGM8snGhMQSk%2508Xc9Vo74giZ5NF1YLYrt3lkIVKoT4fXx6qtaYc1sr%25ViSgsrZfbYeKJZj9786njlZy%25i1lz0UswTaB9%25UtNDPlNcfZ7dWMBNNXz7mlD4%25P6UKoZIjAEKU9ZG19mwapP"
+   },
+   {
+    "name": "Oxide Grey Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331pKAuhFqIbC7NNRUQlPw7CcVxEaqe%25zuzHVPRdgShtDjux2YIDb4g8jmBYXGuSDOPLFtBZ8X7Dw8jCzgaqtECtIP7p7slely7IP0fbzSnPo90yYoIbHi4Tmlo9%25wc3y5jiftxdTCyw178zBQltECUke3Z7slGAM9QCrXpFhrGlZQ6KoHHXRaYWHywQ5nmPXeIagOybQC5nvIT9avnO2B3in7VIjedwOCYBDMztIsjeqhk7BSHMLoACeNshJHFlM9pou%25KXhE7HSfWQosH%25V1PaHSsfNEbn%25Vp10s9OfDxE4riI1qKscZwBELsrxRtesg%25Z857MnDxRUgChO%2525GvloImGgp2XHBRbv6jQ%25JE82YDafu3Rjmqn1Sd9DyLOEVzwqTJIsN76L3uBr0NMJdSeZ4btuzVMRcp9SkNh5x6MVA0og983NF4HviR30Kc%252wdd4WxfjtOccP81D72BxbUEqCxB89GsLl6jUiprJpy0Gw6Zu6N4ptYRSYo167m5Vm0IYCygNy4smlTv0TC%25yX3243eiTQdjcnXp3azDxOQAdnueswTCzOSzbRp4cix2inKwUw1pidlwPtUDVfiyXq%25sGM8snGhMQSk%2508Xc9Vo74giUlNF1YLYrt3lkIVKoT4fXx6qtaYc1sr%25ViSgsrZfbYeKJZj9786njlZy%25i1lz0UswTaB9%25UtNDPlNcfZ7dWMBNNXz7mlD4%25P6UKoZIjAEKU9ZG19mwapP"
+   },
+   {
+    "name": "Fire Red Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJE%25qdbYCjKq%25SbfFSrNG1JyXql5tkATjHdMsqUi5F0WUjh1b4g6TNF1YLYrt3lkIVKDZdbDJBHWp3QlOD2VfxbZOMVXuMwVQX9v6OTP05x2YIDzf6EjnWtQSSrxltjix27d5M%25w17wOWR1tECBCmtOWN%25PduaWhbNm6ipPo90yYw0bHi4TmtO9%25wc3OmEiftxdIWCw178zB1TtECUkeiV7slGAMhoCrXpFhYalZQ6KomVXRaYWlBOQ5nmPX7JagOybQC5nvIT9avUO2B3in7VIjedwOCYBDMztI5eeqhk7BraMLoACeNshJHFlMgPou%25KXhE7HSfWQosH%25V1PaHSSfNEbn%25jc10s9OfDFE4riI1qEscZwBE5HrxRteajcZ857MnHvRUgChOYS5GvloIZhgp2XHBR4v6jQ%25JTZ2YDafu3bjmqn1SdiDyLOEVtKqTJIsN7CL3uBr0FYJdSeZ40huzVMRcp9SkNh5x6MVA0og9ZTNF4HviDd0Kc%252wdd4WxfjtOccP81D72BxbUEqCro89GsLG0UUiprJpVaGw6Zu6kWptYRSYNO67m5Vm0EYCygNy7HmlTv0QGyyX324aoMTQdjcnXp3azDxOQAdnkq8Ia4zOALUV7ukIVugDLJaCnTNk3RJtE6wzXtb7GqN1wTQLTKs8VNP05PXkEobH8ELDOdqQmSLbXeifG7ZWYgMyk4OoAmvjD5GavKVZ4gpnGSDqLvQFsC8L0aB3A%250MLWHE6f4hFU%25lc2L"
+   },
+   {
+    "name": "Black Sapphire Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJE%25qdbYCjKq%25SbfFSrNG1JyXql5tkATjHdMsqUi5F0WUjh1b4g6TNF1YLYrt3lkIVKDZdbDJBHWp3QlOD2VfxbZOMVXuMwVQX9v6OTP05x2YIDzf6EjnWtQSSrxltjix27d9Lww17wOWR1tECBCmtOWN%25PduaWhbNm6ipPo90yYw0bHi4TmtO9%25wc3OmEiftxdIWCw178zB1TtECUkeiV7slGAMhoCrXpFhYalZQ6KomVXRaYWlBOQ5nmPX7JagOybQC5nvIT9avUO2B3in7VIjedwOCYBDMztI5eeqhk7BraMLoACeNshJHFlMgPou%25KXhE7HSfWQosH%25V1PaHSSfNEbn%25jc10s9OfDFE4riI1qEscZwBE5HrxRteajcZ857MnHvRUgChOYS5GvloIZhgp2XHBR4v6jQ%25JTZ2YDafu3bjmqn1SdiDyLOEVtKqTJIsN7CL3uBr0FYJdSeZ40huzVMRcp9SkNh5x6MVA0og9ZTNF4HviDd0Kc%252wdd4WxfjtOccP81D72BxbUEqCro89GsLG0UUiprJpVaGw6Zu6kWptYRSYNO67m5Vm0EYCygNy7HmlTv0QGyyX324aoMTQdjcnXp3azDxOQAdnkq8Ia4zOALUV7ukIVugDLJaCnTNk3RJtE6wzXtb7GqN1wTQLTKs8VNP05PXkEobH8ELDOdqQmSLbXeifG7ZWYgMyk4OoAmvjD5GavKVZ4gpnGSDqLvQFsC8L0aB3A%250MLWHE6f4hFU%25lMYo"
+   },
+   {
+    "name": "Cape York Green Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJE%25qdbYCjKq%25SbfFSrNG1JyXql5tkATjHdMsqUi5F0WUjh1b4g6TNF1YLYrt3lkIVKDZdbDJBHWp3QlOD2VfxbZOMVXuMwVQX9v6OTP05x2YIDzf6EjnWtQSSrxltjix27d5Arw17wOWR1tECBCmtOWN%25PduaWhbNm6ipPo90yYw0bHi4TmtO9%25wc3OmEiftxdIWCw178zB1TtECUkeiV7slGAMhoCrXpFhYalZQ6KomVXRaYWlBOQ5nmPX7JagOybQC5nvIT9avUO2B3in7VIjedwOCYBDMztI5eeqhk7BraMLoACeNshJHFlMgPou%25KXhE7HSfWQosH%25V1PaHSSfNEbn%25jc10s9OfDFE4riI1qEscZwBE5HrxRteajcZ857MnHvRUgChOYS5GvloIZhgp2XHBR4v6jQ%25JTZ2YDafu3bjmqn1SdiDyLOEVtKqTJIsN7CL3uBr0FYJdSeZ40huzVMRcp9SkNh5x6MVA0og9ZTNF4HviDd0Kc%252wdd4WxfjtOccP81D72BxbUEqCro89GsLG0UUiprJpVaGw6Zu6kWptYRSYNO67m5Vm0EYCygNy7HmlTv0QGyyX324aoMTQdjcnXp3azDxOQAdnkq8Ia4zOALUV7ukIVugDLJaCnTNk3RJtE6wzXtb7GqN1wTQLTKs8VNP05PXkEobH8ELDOdqQmSLbXeifG7ZWYgMyk4OoAmvjD5GavKVZ4gpnGSDqLvQFsC8L0aB3A%250MLWHE6f4hFU%25lcaN"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Interior",
+    "img": "https://bmw.scene7.com/is/image/BMW/interior-4?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/cocpit:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Ambient lighting",
+    "img": "https://bmw.scene7.com/is/image/BMW/trims_5_series_nw_lnch_3:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Sound system",
+    "img": "https://bmw.scene7.com/is/image/BMW/DI23_000128530-1:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://bmw.scene7.com/is/image/BMW/g60_bev_mp_driving-dynamics_2_integral-act-steering_dsk_fb_de?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Interior",
+    "img": "https://bmw.scene7.com/is/image/BMW/g60_bev_mp_int-design-video-loop_dsk_fb-1_en?qlt=80&wid=1600&fmt=webp"
+   }
+  ]
+ },
+ "BMW|i7": {
+  "page": "https://www.bmw.in/en/all-models/7-series/sedan/bmw-i7-sedan.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCdFHmhFUsxuvagdOLb5inTNu8PftE6UnxEa3U5xyShKVjBYSkNh5hPTVA0ogRZcNF4Hv5GA0Kc%252g854WxfjvUqcP81D36kxbUEqd2w89GsLz06UiprJk4aGw6ZuAwZptYRSF0l67m5VK%25dYCygNWf%25mlTv0P6NyX324bYiTQdjc9qp3azDxiL0dnkq83WDzOALUdcekIFJGzTfABKupk3IFeWS6AeiKMPVYFTsWhbNmK3IPo90yWdJbHi4TPB99%25wc3bejiftxd92hw178ziZltECUkw5H7slGAtgCCrXpF7vBlZQ6KC2FXRaYWldVQ5nmPXBFagOybQ5unvIT9agDO2B3invTIjedwO22BDMztIrJeqhk7BZyMLoACeRMhJHFlMfOou%25KXwrJHSfWQtOE%25V1Pa7cPfNEbnCxg10s9Ol8pE4riIXfkscZwBQVLrxRte2OwZ857MjIIRUgChDYC5Gvloqmsgp2XHLRvv6jQ%25J3r2YDafuJ3jmqn1SA9DyLOEA%25GqTJIsFtLL3uBru2PJdSeZSjuuzVMRVv9SkNh5NpyVA0og0VlNF4Hv4jB0Kc%252cFG4WxfjxKncP81D9QlxbUEqiep89GsLwbNUiprJt9YGw6ZuvGFptv5%25sZR9Kix2dH0hABNkGPA3FSr46JdoJcl51E8sn8DXC9Ui5AekxVA71HsscCGFkJMADOPSIOoubf4Bw8j7aA5qntUp6xbZPTp6Y8snVfKYzrgCaLz2YIqS9JkjnWL1A4G",
+  "colors": [
+   {
+    "name": "Vancouver Green",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331S%25NrnF94fX5jHS9fmvhD%25Viny2of4YuzHMxBzchtNsgeqhew0VqMLoZobMsayjnt61agOybyqrnvIT9PWeO2B3ibHvIjedw9hbBDMztioCeqhk7ZfgMLoACRwShJHFl5Ifou%25KXgB8HSfWQvSW%25V1Pa2I4fNEbnjdR10s9ODzdE4riIqfOscZwBL1urxRteJC%25Z857MulIRUgChZD75GvloReYgp2XH5rzv6jQ%25gZp2YDafvYujmqn12rFDyLOEjZpqTJIsDRXL3uBrq6JJdSeZLYtuzVMRJwySkNh5uW4VA0ogSb3NF4HvV900Kc%252Ni64Wxfj0w2cP81D4RnxbUEqc6289GsLxbQUiprJ897Gw6ZuUirptYRSGww67m5VpKXYCygN6WsmlTv0YPmyX324mzGTQdjcSKX3azDxVGAdnkq8NeqzOALU0M9kIFJG4h%25ABKupczgFeWS6xnlKMPVYwGSWhbNmtppPo90y710bHi4TCEF9%25wc3lPiiftxdXZKw178zQXZtECUkavJ7slGAvdHCrXpF2VllZQ6KQwqXRaYWatQQ5nmPniJagOybO%25snvIT9In4O2B3iBt6Ijedwe2HBDMztMjUeqhk7Jx4MLoACuY%25hJHFlSLOou%25KXVJ1HSfWQiH2%25VibdFWPJjuMwR3Iyv6OpC8LJ2aKDkiOscCqXkOuADOPBfFaZ8XgDF2yRCzvhTu45GaRhj5sgXA9URBDFhSaP05zs3hPzLekjmBjVwsoH0%25l0gtiK4WsaBuCLB9ulCP5GavToU%25gXA9CLL10t8kdqBz2aKk1vuscCGzL1Srxlcqgv2Z7d%25i02uCaY3MuO2k1l1KVZ4"
+   },
+   {
+    "name": "Carbon Black",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331S%25NrnF94fX5jHS9fmvhD%25Viny2of4YuzHMxBzchtI9Jeqhew0VqMLoZobMsayjnt61agOybyqrnvIT9PWeO2B3ibHvIjedw9hbBDMztioCeqhk7ZfgMLoACRwShJHFl5Ifou%25KXgB8HSfWQvSW%25V1Pa2I4fNEbnjdR10s9ODzdE4riIqfOscZwBL1urxRteJC%25Z857MulIRUgChZD75GvloReYgp2XH5rzv6jQ%25gZp2YDafvYujmqn12rFDyLOEjZpqTJIsDRXL3uBrq6JJdSeZLYtuzVMRJwySkNh5uW4VA0ogSb3NF4HvV900Kc%252Ni64Wxfj0w2cP81D4RnxbUEqc6289GsLxbQUiprJ897Gw6ZuUirptYRSGww67m5VpKXYCygN6WsmlTv0YPmyX324mzGTQdjcSKX3azDxVGAdnkq8NeqzOALU0M9kIFJG4h%25ABKupczgFeWS6xnlKMPVYwGSWhbNmtppPo90y710bHi4TCEF9%25wc3lPiiftxdXZKw178zQXZtECUkavJ7slGAvdHCrXpF2VllZQ6KQwqXRaYWatQQ5nmPniJagOybO%25snvIT9In4O2B3iBt6Ijedwe2HBDMztMjUeqhk7Jx4MLoACuY%25hJHFlSLOou%25KXVJ1HSfWQiH2%25VibdFWPJjuMwR3Iyv6OpC8LJ2aKDkiOscCqXkOuADOPBfFaZ8XgDF2yRCzvhZB65GaRhj5sgXA9URBDFhSaP05zs3hPzLekjmBjVwsoH0%25l0gtiK4WsaBuCLB9ulCP5GavToU%25gXA9CLL10t8kdqBz2aKk1vuscCGzL1Srxlcqgv2Z7d%25i02uCaY3MuO2k1l1KVZ4"
+   },
+   {
+    "name": "Mineral White",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331S%25NrnF94fX5jHS9fmvhD%25Viny2of4YuzHMxBzchtgcJeqhew0VqMLoZobMsayjnt61agOybyqrnvIT9PWeO2B3ibHvIjedw9hbBDMztioCeqhk7ZfgMLoACRwShJHFl5Ifou%25KXgB8HSfWQvSW%25V1Pa2I4fNEbnjdR10s9ODzdE4riIqfOscZwBL1urxRteJC%25Z857MulIRUgChZD75GvloReYgp2XH5rzv6jQ%25gZp2YDafvYujmqn12rFDyLOEjZpqTJIsDRXL3uBrq6JJdSeZLYtuzVMRJwySkNh5uW4VA0ogSb3NF4HvV900Kc%252Ni64Wxfj0w2cP81D4RnxbUEqc6289GsLxbQUiprJ897Gw6ZuUirptYRSGww67m5VpKXYCygN6WsmlTv0YPmyX324mzGTQdjcSKX3azDxVGAdnkq8NeqzOALU0M9kIFJG4h%25ABKupczgFeWS6xnlKMPVYwGSWhbNmtppPo90y710bHi4TCEF9%25wc3lPiiftxdXZKw178zQXZtECUkavJ7slGAvdHCrXpF2VllZQ6KQwqXRaYWatQQ5nmPniJagOybO%25snvIT9In4O2B3iBt6Ijedwe2HBDMztMjUeqhk7Jx4MLoACuY%25hJHFlSLOou%25KXVJ1HSfWQiH2%25VibdFWPJjuMwR3Iyv6OpC8LJ2aKDkiOscCqXkOuADOPBfFaZ8XgDF2yRCzvh4z65GaRhj5sgXA9URBDFhSaP05zs3hPzLekjmBjVwsoH0%25l0gtiK4WsaBuCLB9ulCP5GavToU%25gXA9CLL10t8kdqBz2aKk1vuscCGzL1Srxlcqgv2Z7d%25i02uCaY3MuO2k1l1KVZ4"
+   },
+   {
+    "name": "Oxide Grey",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331S%25NrnF94fX5jHS9fmvhD%25Viny2of4YuzHMxBzchtNf8eqhew0VqMLoZobMsayjnt61agOybyqrnvIT9PWeO2B3ibHvIjedw9hbBDMztioCeqhk7ZfgMLoACRwShJHFl5Ifou%25KXgB8HSfWQvSW%25V1Pa2I4fNEbnjdR10s9ODzdE4riIqfOscZwBL1urxRteJC%25Z857MulIRUgChZD75GvloReYgp2XH5rzv6jQ%25gZp2YDafvYujmqn12rFDyLOEjZpqTJIsDRXL3uBrq6JJdSeZLYtuzVMRJwySkNh5uW4VA0ogSb3NF4HvV900Kc%252Ni64Wxfj0w2cP81D4RnxbUEqc6289GsLxbQUiprJ897Gw6ZuUirptYRSGww67m5VpKXYCygN6WsmlTv0YPmyX324mzGTQdjcSKX3azDxVGAdnkq8NeqzOALU0M9kIFJG4h%25ABKupczgFeWS6xnlKMPVYwGSWhbNmtppPo90y710bHi4TCEF9%25wc3lPiiftxdXZKw178zQXZtECUkavJ7slGAvdHCrXpF2VllZQ6KQwqXRaYWatQQ5nmPniJagOybO%25snvIT9In4O2B3iBt6Ijedwe2HBDMztMjUeqhk7Jx4MLoACuY%25hJHFlSLOou%25KXVJ1HSfWQiH2%25VibdFWPJjuMwR3Iyv6OpC8LJ2aKDkiOscCqXkOuADOPBfFaZ8XgDF2yRCzvhTqA5GaRhj5sgXA9URBDFhSaP05zs3hPzLekjmBjVwsoH0%25l0gtiK4WsaBuCLB9ulCP5GavToU%25gXA9CLL10t8kdqBz2aKk1vuscCGzL1Srxlcqgv2Z7d%25i02uCaY3MuO2k1l1KVZ4"
+   },
+   {
+    "name": "Tanzanite Blue",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331S%25NrnF94fX5jHS9fmvhD%25Viny2of4YuzHMxBzchtNDIeqhew0VqMLoZobMsayjnt61agOybyqrnvIT9PWeO2B3ibHvIjedw9hbBDMztioCeqhk7ZfgMLoACRwShJHFl5Ifou%25KXgB8HSfWQvSW%25V1Pa2I4fNEbnjdR10s9ODzdE4riIqfOscZwBL1urxRteJC%25Z857MulIRUgChZD75GvloReYgp2XH5rzv6jQ%25gZp2YDafvYujmqn12rFDyLOEjZpqTJIsDRXL3uBrq6JJdSeZLYtuzVMRJwySkNh5uW4VA0ogSb3NF4HvV900Kc%252Ni64Wxfj0w2cP81D4RnxbUEqc6289GsLxbQUiprJ897Gw6ZuUirptYRSGww67m5VpKXYCygN6WsmlTv0YPmyX324mzGTQdjcSKX3azDxVGAdnkq8NeqzOALU0M9kIFJG4h%25ABKupczgFeWS6xnlKMPVYwGSWhbNmtppPo90y710bHi4TCEF9%25wc3lPiiftxdXZKw178zQXZtECUkavJ7slGAvdHCrXpF2VllZQ6KQwqXRaYWatQQ5nmPniJagOybO%25snvIT9In4O2B3iBt6Ijedwe2HBDMztMjUeqhk7Jx4MLoACuY%25hJHFlSLOou%25KXVJ1HSfWQiH2%25VibdFWPJjuMwR3Iyv6OpC8LJ2aKDkiOscCqXkOuADOPBfFaZ8XgDF2yRCzvhTUZ5GaRhj5sgXA9URBDFhSaP05zs3hPzLekjmBjVwsoH0%25l0gtiK4WsaBuCLB9ulCP5GavToU%25gXA9CLL10t8kdqBz2aKk1vuscCGzL1Srxlcqgv2Z7d%25i02uCaY3MuO2k1l1KVZ4"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/g70_lci_bev_interior_cockpit_welcome_dsk_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/g70_lci_bev_interior_cockpit_bmw_panoramic_vision_dsk_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/g70_lci_bev_interior_cockpit_passenger_screen_dsk_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://bmw.scene7.com/is/image/BMW/g70_lci_bev_interior_cockpit_steering_wheel_dsk_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Interior lighting",
+    "img": "https://bmw.scene7.com/is/image/BMW/g70_lci_bev_interior_highlights_customization_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/g70_lci_bev_interior_cockpit_overlay_welcome_automated_doors:1to1?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   }
+  ]
+ },
+ "BMW|iX1 Lwb": {
+  "page": "https://www.bmw.in/en/all-models.html",
+  "hero": null,
+  "colors": [],
+  "interior": []
+ },
+ "BMW|M2": {
+  "page": "https://www.bmw.in/en/all-models.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCRbz1vbwx65efVubbfgsnvz4UCStUDn2shKM4P1YeyWNRsj6X3aJDW2aKafXRaYWYCNQ5nmPmK2agOyby3KnvIT9PdhO2B3ibvRIjedw92bBDMztio9eqhk7wHkMLoACt%25phJHFl5Ifou%25KXhB8HSfWQoeu%25V1PaHVqfNEbn%25NM10s9Of0TE4riI1MKscZwBESrrxRtesLcZ857MrdTRUgChZVQ5GvloR50gp2V2IguEi8shPLE47wAP9iVLNHCO%25vfDyej1uDgqIbhsnvzno8wKW%25P6%25pL%25GfNwDTjHBDcKkPPox1qjn3DXYuImYzOSFhy0%25lcpDwQ64fEsHS9u5Esr%25P6BFLr2btxpa2CrmQIVnjl6JaKDB4",
+  "colors": [],
+  "interior": []
+ },
+ "BMW|M4": {
+  "page": "https://www.bmw.in/en/all-models/m-series/bmw-4-series-m-models/bmw-m4-coupe.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCdFHmhFUsxuvagdOLb5inTNu8PftE6UnxEa3U5xyShKVjBYSkNh5hQrVA0ogouXNF4HvHAA0Kc%252g1G4WxfjvKkcP81D2WvxbUEqjp289GsLD6BUiprJk4YGw6ZuUciptYRSGtP67m5Vp7xYCygN6csmlTv0YiyyX324mPlTQdjcyHh3azDxT%25Cdnkq83tuzOALUduLkIFJGz7kABKupcBaFeWS6xwnKMPVY8teWhbNmU3iPo90yG10bHi4TpEX9%25wc36sIiftxdYb3w178zQIftECUkaRb7slGAn5uCrXpFOgVlZQ6KI0qXRaYWB4cQ5nmPeBTagOybMu0nvIT9h1SO2B3ioMPIjedwSbhBDMztV55eqhk7NpMMLoAC0KThJHFlHIoou%25KX%25njHSfWQfOU%25V1Pa1vqfNEbnEQ310s9OsGnE4riIreYscZwBZMWrxRteRckZ857M5yjRUgChgTM5Gvlo6sggp2XHYAzv6jQ%25I4p2YInwlQaGcpRBcHsa0KENv80u4fXrjHS9HZTn7C5lk5O8Nggpn0WNR10m7illZyv4NHP0MA8fFA9%25UtrK65emz0nhkYg2jRUQ8J2jD5lk1tcDVXOyzoVBDFhfGHNekxo701L",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/g82_comp-coupe_int_dashboard_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://bmw.scene7.com/is/image/BMW/g82_comp-coupe_int_m-leather-steering-wheel_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Interior",
+    "img": "https://bmw.scene7.com/is/image/BMW/g82_comp-coupe_int_m-trim_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/live-cockpit-3-1?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://bmw.scene7.com/is/image/BMW/g82_cs_int_m-carbon-bucket-seats_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://bmw.scene7.com/is/image/BMW/g82_cs_int_m-alcantara-steering-wheel_fb?qlt=80&wid=1600&fmt=webp"
+   }
+  ]
+ },
+ "BMW|M5": {
+  "page": "https://www.bmw.in/en/all-models/m-series/m5-series/2024/bmw-m5-sedan.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCRbz1vbwx65efVubb2Ksnvz4UCStUDn2shKM4P1YeyWNRsj6X3aJDW2aKafagbjmqn1nxbDyLOEfgKqTJIs1y6L3uBrET1JdSeZsNEuzVMRr0MSkNh56rKVA0ogYLcNF4HvmJf0Kc%252yVI4WxfjTEccP81D3sOxbUEqcNX89GsLx0bUiprJ8ioGw6ZuUNnptYRSG0167m5VpFtYCygN6MimlTv0YOFyX324m9qTQdjcyqf3azDxTF0dnkq83KdzOALUdtnkIFJGz72ABKupkCAFeWS6Ab3KMPVY8teWhbNmU3iPo90yG1abHi4TpWI9%25wc3lsKiftxdXrqw178zQZJtECUkaS27slGAnVNCrXpFOvflZQ6KIOmXRaYWBLVQ5nmPe%25JagOybLKynvIT9JrrO2B3iu8IIjedwSkYBDMztMaeeqhk7hXgMLoACoQchJHFlHR2ou%25KX%25clHSfWQfnU%25V1Pa1OkfNEbnEVT10s9OspLE4riIxHsscZwB8TmrxRteXZqZ85J5aZq%25P4fBFj%25VibdFWPJjuMwEhTPv6OgHqvZ2aKBfXRTXe4bkAhFUh9q4uoubvYgMnvNk3FFe0H2gXmv7GqapGTQLzB6ShtN8vbCUVo%25fMLWqr%25f1hFUnzj15K908l5w1pCaJXgtUDlkvns",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Interior",
+    "img": "https://bmw.scene7.com/is/image/BMW/g90_interior_design_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://bmw.scene7.com/is/image/BMW/g90_interior_m-multifunctional-seats_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://bmw.scene7.com/is/image/BMW/g90_interior_m-steering-wheel_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Centre console",
+    "img": "https://bmw.scene7.com/is/image/BMW/g90_interior_m-specific-centre-console_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Interior lighting",
+    "img": "https://bmw.scene7.com/is/image/BMW/g90_interior_m-interior-lighting_fb?qlt=80&wid=1600&fmt=webp"
+   }
+  ]
+ },
+ "BMW|X1": {
+  "page": "https://www.bmw.in/en/all-models/x-series/X1/2022/bmw-x1-overview.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCdFHmhFUsxuvagdOLb5inTNu8PftE6UnxEa3U5xyShKVjBYSkNh5hWAVA0ogou5NF4HvHNf0Kc%252g584WxfjvSccP81D2WVxbUEqjp289GsLD6iUiprJkyKGw6ZuAqCptYRSFxy67m5VK7RYCygNWafmlTv0PjvyX324mAzTQdjcy6X3azDxTa7dnkq83nYzOALUd6vkIFJGztyABKupkH9FeWS6AcbKMPVYFi2WhbNmUhIPo90yGChbHi4Tpzt9%25wc36sciftxdYb3w178zQJotECUkaRU7slGAn59CrXpFOnYlZQ6KIonXRaYWDA1Q5nmPqEEagOybLcnnvIT9JPEO2B3iBXVIjedweQBBDMztMl5eqhk7hX4MLoACoZvhJHFlHRYou%25KX%25clHSfWQfHY%25V1Pa1OkfNEbnEsR10s9OsN5E4riIr0dscZwB8TmrxRteUFgZ857MGxfRUgChp825GvlonNRgpnQ97lX80UrOQbZqVAfS5cVLNHCEvhJPhsmQwtZ7dZLJ2qRUQVFSr%25V6wb77sY5NShKVBzcHkzPoxiEAGZI63VQedpRgvrxlcqgv2Z7d%25i02uCaY3MuO2keH8hSId4MwVCJ",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/x1_int_1?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://bmw.scene7.com/is/image/BMW/x1_int_3?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   }
+  ]
+ },
+ "BMW|X1 Lwb": {
+  "page": "https://www.bmw.in/en/all-models/x-series/X1/bmw-x1-highlights.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCRbz1vbwx65efVubb2M5nvz4UCStUDn2shKM4P1YeyWNRsj6X3aJDW2aK0De2VrtGZH9urxRtetrCZ857MBvIRUgChe2C5GvloVedgp2XHNrDv6jQ%25g6x2YDafvs7jmqn12MJDyLOEjxmqTJIsD8XL3uBrqVvJdSeZfc3uzVMR1v0SkNh5EWhVA0ogsPYNF4HvrSg0Kc%252Gnz4WxfjpifcP81D6wVxbUEqY6r89GsLljFUiprJp4aGw6Zu6cpptYRSY0O67m5VmFbYCygNy7zmlTv0TC%25yX3243eiTQdjcnHh3azDxOrAdnkq8IaYzOSJ5jqLQ7ayV7R6ew1pidlwPtUDYkxbZxmeJv2TjHTPz2j3aJwEiyGwIvRjjmBdtixsw0%25lUf%25Z8XgY1nTNIowJ4HO3zkyXqlWzkATjHGg7A9DuBoc9VAf4UQxiNHCcvwaN",
+  "colors": [
+   {
+    "name": "Mineral White",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331rjFhnOqIbqcuOIL3h8H7EpCxEarjlfuzH5CpLSFt3aJt6C3NrvXYukWptv5%25sZR9Kix2KH0lABNWqRz9que%25P6daXqqiYP89RGlLbuUrOoEyyVAf4bLswTo6M4soKNHkIVzUWkTAusvOzcPr8O30kxbZPTp6Y8snVfKYzrgCaLz2YIqS9JkjnWL1GW3DyemQpSVqIbJK7eRUQu1uO30kxbZtId4A89RIhNQShtNaQi2YIaSXYunWEuvQ5nQoOYmagO%25OkaotUZ7WcMtECUkUtp7slGAzQdCrXpFkaplZQ6KokqXRaYWHtOQ5nmPX5EagOybQwGnvIT9aAeO2B3inEvIjedwOsYBDMztIoQeqhk7b1DMLoAC9Q%25hJHFliNFou%25KXw0gHSfWQthX%25V1PaZTLfNEbnRxb10s9O58oE4riIg5tscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2GLv6jQ%25jpP2YDafDkxjmqn1TWFDyLOE3tuqTJIsdygL3hAl7GRCxEalLcY"
+   },
+   {
+    "name": "Night Dusk Blue",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331rjFhnOqIbqcuOIL3h8H7EpCxEarjlfuzH5CpLSFt3aJt6C3NrvXYukWptv5%25sZR9Kix2KH0lABNWqRz9que%25P6daXqqiYP89RGlLbuUrOoEyyVAf4bLswTo6M4soKNHkIVzUWkTAusvOzcPr8O30kxbZPTp6Y8snVfKYzrgCaLz2YIqS9JkjnWL1AijDyemQpSVqIbJK7eRUQu1uO30kxbZtId4A89RIhNQShtNaQi2YIaSXYunWq0XQ5nQoOYmagO%25OkaotUZ7WcMtECUkUtp7slGAzQdCrXpFkaplZQ6KokqXRaYWHtOQ5nmPX5EagOybQwGnvIT9aAeO2B3inEvIjedwOsYBDMztIoQeqhk7b1DMLoAC9Q%25hJHFliNFou%25KXw0gHSfWQthX%25V1PaZTLfNEbnRxb10s9O58oE4riIg5tscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2GLv6jQ%25jpP2YDafDkxjmqn1TWFDyLOE3tuqTJIsdygL3hAl7GRCxEalLcY"
+   },
+   {
+    "name": "Skyscraper Grey",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331rjFhnOqIbqcuOIL3h8H7EpCxEarjlfuzH5CpLSFt3aJt6C3NrvXYukWptv5%25sZR9Kix2KH0lABNWqRz9que%25P6daXqqiYP89RGlLbuUrOoEyyVAf4bLswTo6M4soKNHkIVzUWkTAusvOzcPr8O30kxbZPTp6Y8snVfKYzrgCaLz2YIqS9JkjnWL1AVwDyemQpSVqIbJK7eRUQu1uO30kxbZtId4A89RIhNQShtNaQi2YIaSXYunWqe4Q5nQoOYmagO%25OkaotUZ7WcMtECUkUtp7slGAzQdCrXpFkaplZQ6KokqXRaYWHtOQ5nmPX5EagOybQwGnvIT9aAeO2B3inEvIjedwOsYBDMztIoQeqhk7b1DMLoAC9Q%25hJHFliNFou%25KXw0gHSfWQthX%25V1PaZTLfNEbnRxb10s9O58oE4riIg5tscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2GLv6jQ%25jpP2YDafDkxjmqn1TWFDyLOE3tuqTJIsdygL3hAl7GRCxEalLcY"
+   },
+   {
+    "name": "M Carbon Black",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331rjFhnOqIbqcuOIL3h8H7EpCxEarjlfuzH5CpLSFt3aJt6C3NrvXYukWptv5%25sZR9Kix2KH0lABNWqRz9que%25P6daXqqiYP89RGlLbuUrOoEyyVAf4bLswTo6M4soKNHkIVzUWkTAusvOzcPr8O30kxbZPTp6Y8snVfKYzrgCaLz2YIqS9JkjnWL12H3DyemQpSVqIbJK7eRUQu1uO30kxbZtId4A89RIhNQShtNaQi2YIaSXYunWlAvQ5nQoOYmagO%25OkaotUZ7WcMtECUkUtp7slGAzQdCrXpFkaplZQ6KokqXRaYWHtOQ5nmPX5EagOybQwGnvIT9aAeO2B3inEvIjedwOsYBDMztIoQeqhk7b1DMLoAC9Q%25hJHFliNFou%25KXw0gHSfWQthX%25V1PaZTLfNEbnRxb10s9O58oE4riIg5tscZwB6nSrxRteRfyZ857M51RRUgChg%2535GvlovS4gp2XH2GLv6jQ%25jpP2YDafDkxjmqn1TWFDyLOE3tuqTJIsdygL3hAl7GRCxEalLcY"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Panoramic sunroof",
+    "img": "https://bmw.scene7.com/is/image/BMW/X1_Sunroof_out:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Interior",
+    "img": "https://bmw.scene7.com/is/image/BMW/development_interior?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://bmw.scene7.com/is/image/BMW/bmw-curved-display-with-os9:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   }
+  ]
+ },
+ "BMW|X3": {
+  "page": "https://www.bmw.in/en/all-models/x-series/x3/X3-30.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCdFHmhFUsxuvagdOLb5inTNu8PftE6UnxEa3U5xyShKVjBYSkNh5hQqVA0ogou5NF4Hv5Rx0Kc%252gu74WxfjvKScP81D2GvxbUEqjpy89GsLzmFUiprJk4YGw6ZuAc5ptYRSFtZ67m5VK7JYCygNWp1mlTv0PLYyX324bDzTQdjc9q13azDxTKAdnkq834DzOALUdy%25kIFJGzTOABKupkBgFeWS6AyEKMPVYFTqWhbNmKOPPo90yWQkbHi4TPao9%25wc3brQiftxd9BGw178ziXwtECUkw117slGAtM7CrXpF3rflZQ6KdBrXRaYWz9OQ5nmPkjLagOybAXEnvIT9hfgO2B3ioL3IjedwHJQBDMzt%25HAeqhk7f4UMLoAC1RchJHFl4t2ou%25KXcjjHSfWQxy%25%25V1Pa8X3fNEbnUiA10s9Oso6E4riIrHsscZwBZhSrxRteRoyZ857M5JNRUgChgyM5Gvlov5Fgp2XH2fwv6jQ%25jpJ2YDafDk%25jmqn1TWFDyLOE3tuqTJIsdygL3uBrzTVJdSeZk3tuzVMRAdsSkNh5fbyVAfHnehodmzL1rJK%25672pST68YgMDNRUQRqWHIBJeiJ82uhuzH6CpLv6FIaeeqKSYpRl6swTgtwQ53OD7kJEF96HriAuVNL3hTxVN0JeivOm0GM%25K9ZG10trgdRpEiyZIqgu",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Interior",
+    "img": "https://bmw.scene7.com/is/image/BMW/g45_ice_interior_dsk_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Interior lighting",
+    "img": "https://bmw.scene7.com/is/image/BMW/g45_ice_int-design_dynamic-light_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://bmw.scene7.com/is/image/BMW/front-seats-x3?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://bmw.scene7.com/is/image/BMW/rear-seats-x3?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://bmw.scene7.com/is/image/BMW/Curved-Display_3:16to7?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://bmw.scene7.com/is/image/BMW/g45_ice_driving-dynamics_variable-steering:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   }
+  ]
+ },
+ "BMW|X5": {
+  "page": "https://www.bmw.in/en/all-models/x-series/x5/x5-2025-g05.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCdFHmhFUsxuvagdOLb5inTNu8PftE6UnxEa3U5xyShKVjBYSkNh5hQqVA0ogoaVNF4HvHSg0Kc%252%25BG4WxfjvgUcP81D2JxxbUEqjuP89GsLDbKUiprJq9DGw6ZuLmqptYRSJyp67m5VKdbYCygNWU3mlTv0PGCyX324bOeTQdjc9Is3azDxi4odnkq8wJ4zOALUdPKkIFJGzxLABKupk31FeWS6AdBKMPVYFTHWhbNmKRIPo90yWElbHi4TPrb9%25wc3bCmiftxd9%25%25w178ziBwtECUkyn17slGAT5GCrXpF3gBlZQ6KdvoXRaYWzC4Q5nmPeHRagOybMDynvIT9hqlO2B3ioL8IjedwHddBDMzt%25p0eqhk7f6YMLoAC1fKhJHFlExpou%25KXsg1HSfWQxrB%25V1Pa1MGfNEbnEh110s9Ose6E4riIrDuscZwBZ6IrxRteRrzZ857M5xjRUgChpE55Gvlo6kdgp2XHYbDv6jQ%25IdO2YInwlQaGcpRB%25i5F0KENv80u4fXrjHS9HZTn7C5lk5uG%25Bgpn0WNR10m7illZyv4NHP0MA8fFA9%25UtrK65emz0nhkYg2jRUQ8J2jD5lk1tcDVXOyzoVBDFhfGHNekxo7vxu",
+  "colors": [
+   {
+    "name": "Skyscraper Grey",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331RYechZ7dWwjjHS9jBqH7TAJei1ZIjAM%25UoVBzchtNfpeqKD3v%25fMA8o4YKQ53n0%25lEagd087uw8j7SuvFe0H5lkaKM4%25jvQy2CpLjK7OPoxQkQGZIgMLWlpRBnrU30KEmrng3OYgM2SIRcPrcYBLgvy2oyWXxSTQLjKvQFD%25zu92YD2NYEhjmq4qMjNZ7pR%25iSZ857M7K1RUgChCWR5GvlolZhgp2XHXiLv6jQ%25ohq2YDafHsjjmqn1%25rYDyLOEfmpqTJIs1yfL3uBrEV1JdSeZsNJuzVMRpcmSkNh56q4VA0ogYLkNF4Hvmbw0Kc%252y9O4WxfjTvCcP81D3svxbUEqcYp89GsLxjEUiprJ84aGw6ZuUciptYRSG0l67m5Vpe9YCygN6nAmlTv0YImyX324mkVTQdjcyXX3azDxTi3dnkq8NPazOALU0MLkIFJG4hiABKupcoCFeWS6xkvKMPVYwleWhbNmtfNPo90y71AbHi4TCED9%25wc3lcciftxdXJgw178zQuStECUkaQp7slGAnjJCrXpFOhalZQ6KjIiXRaYWatLQ5nmPn7aagOybOwunvIT9IfrO2B3iBu9IjedweIxBDMztMj%25eqhk7JnMMLoACu8chJHFlSmfou%25KX9cbHS9P3AKWL2JeiXTMGgpnGSDqLvQFsC8L0aB3A%250MLWHNO9cvwXzZjQixUG4Ws02U4Sc1QeK0"
+   },
+   {
+    "name": "Mineral White",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331RYechZ7dWwjjHS9jBqH7TAJei1ZIjAM%25UoVBzchtgcJeqKD3v%25fMA8o4YKQ53n0%25lEagd087uw8j7SuvFe0H5lkaKM4%25jvQy2CpLjK7OPoxQkQGZIgMLWlpRBnrU30KEmrng3OYgM2SIRcPrcYBLgvy2oyWXxSTQLjKvQFD%258Fy2YD2NYEhjmq4qMjNZ7pR%25iSZ857M7K1RUgChCWR5GvlolZhgp2XHXiLv6jQ%25ohq2YDafHsjjmqn1%25rYDyLOEfmpqTJIs1yfL3uBrEV1JdSeZsNJuzVMRpcmSkNh56q4VA0ogYLkNF4Hvmbw0Kc%252y9O4WxfjTvCcP81D3svxbUEqcYp89GsLxjEUiprJ84aGw6ZuUciptYRSG0l67m5Vpe9YCygN6nAmlTv0YImyX324mkVTQdjcyXX3azDxTi3dnkq8NPazOALU0MLkIFJG4hiABKupcoCFeWS6xkvKMPVYwleWhbNmtfNPo90y71AbHi4TCED9%25wc3lcciftxdXJgw178zQuStECUkaQp7slGAnjJCrXpFOhalZQ6KjIiXRaYWatLQ5nmPn7aagOybOwunvIT9IfrO2B3iBu9IjedweIxBDMztMj%25eqhk7JnMMLoACu8chJHFlSmfou%25KX9cbHS9P3AKWL2JeiXTMGgpnGSDqLvQFsC8L0aB3A%250MLWHNO9cvwXzZjQixUG4Ws02U4Sc1QeK0"
+   },
+   {
+    "name": "Black Sapphire Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331RYechZ7dWwjjHS9jBqH7TAJei1ZIjAM%25UoVBzchtIGeeqKD3v%25fMA8o4YKQ53n0%25lEagd087uw8j7SuvFe0H5lkaKM4%25jvQy2CpLjK7OPoxQkQGZIgMLWlpRBnrU30KEmrng3OYgM2SIRcPrcYBLgvy2oyWXxSTQLjKvQFD%25gb22YD2NYEhjmq4qMjNZ7pR%25iSZ857M7K1RUgChCWR5GvlolZhgp2XHXiLv6jQ%25ohq2YDafHsjjmqn1%25rYDyLOEfmpqTJIs1yfL3uBrEV1JdSeZsNJuzVMRpcmSkNh56q4VA0ogYLkNF4Hvmbw0Kc%252y9O4WxfjTvCcP81D3svxbUEqcYp89GsLxjEUiprJ84aGw6ZuUciptYRSG0l67m5Vpe9YCygN6nAmlTv0YImyX324mkVTQdjcyXX3azDxTi3dnkq8NPazOALU0MLkIFJG4hiABKupcoCFeWS6xkvKMPVYwleWhbNmtfNPo90y71AbHi4TCED9%25wc3lcciftxdXJgw178zQuStECUkaQp7slGAnjJCrXpFOhalZQ6KjIiXRaYWatLQ5nmPn7aagOybOwunvIT9IfrO2B3iBu9IjedweIxBDMztMj%25eqhk7JnMMLoACu8chJHFlSmfou%25KX9cbHS9P3AKWL2JeiXTMGgpnGSDqLvQFsC8L0aB3A%250MLWHNO9cvwXzZjQixUG4Ws02U4Sc1QeK0"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Infotainment",
+    "img": "https://bmw.scene7.com/is/image/BMW/g05_interior_highlights_curveddisplay:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Interior lighting",
+    "img": "https://bmw.scene7.com/is/image/BMW/g05_interior_highlights_decor:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Sound system",
+    "img": "https://bmw.scene7.com/is/image/BMW/3000x3000-6:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Panoramic sunroof",
+    "img": "https://bmw.scene7.com/is/image/BMW/3000x3000_2-2:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/global_tec-ani_live-cockpit-pro_dsk_us-discl_fb?qlt=80&wid=1600&fmt=webp"
+   }
+  ]
+ },
+ "BMW|X6": {
+  "page": "https://www.bmw.in/en/all-models/x-series/x6/x6-m60i.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCRbz1vbwx65efVubb2M5nvz4UCStUDn2shKM4P1YeyWNRsj6X3aJDW2aKafaiojmqn1nw5DyLOEO2iqTJIsIjDL3uBrBGkJdSeZehtuzVMRrdySkNh5ZzrVA0ogRcZNF4Hv5xQ0Kc%252g8D4WxfjTSUcP81D3VlxbUEqdb289GsLzZ6UiprJkReGw6ZuUTmptYRSGLZ67m5Vp8IYCygN6U7mlTv0YxeyX324m8nTQdjcyH73azDxTBAdnkq83tuzOALUdz8kIFJGzOLABKupkIIFeWS6AlFKMPVY8teWhbNmU3iPo90yG10bHi4TpEX9%25wc36sOiftxdYbJw178zQIftECUkaRb7slGAn5uCrXpFOgVlZQ6KI0qXRaYWB4cQ5nmPeBTagOybMu0nvIT9h1SO2B3iuPZIjedwSbBBDMztV55eqhk7NpMMLoAC06ShJHFl4W3ou%25KX%25BHHSfWQfgD%25V1Pa1OGfNEbnEIA10sjsC1vMAShad5MLWFmdkAj5DOPMIICZ8XrevZ1RCzahtE6tnSFT3Id4ImGMGBDFZUrOlZJTYddnueRrtGZ9cvCxc672ya8qIbJ0ZFi4LBMhO2kvfMhoId4ly5oszKu0wsPoxiCjtrb4gwTnaA",
+  "colors": [
+   {
+    "name": "Mineral White",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-733159kE29t8YgM1NS99jhgO2kLG8stUfbYGO%25RBDFsQsP05x2YI2SiEhoNHCNencn0KE%25poKGfXDGNHSfHkT1T%25V1PaP3lfNEbnbdh10s9O9%253E4riIif1scZwBwJUrxRtetCzZ857MBx0RUgChe8B5GvloMjegp2XHhDWv6jQ%25oq12YDaf4RLjmqn1c5FDyLOExy%25qTJIs8eSL3uBrUMtJdSeZL4NuzVMRJseSkNh5uqiVA0ogSLkNF4HvVDt0Kc%252Nqb4Wxfj0XkcP81D4wGxbUEqczZ89GsLx8qUiprJ89sGw6ZuUiiptYRSGFp67m5VqztYCygNLc3mlTv0JnvyX324uOKTQdjcSI93azDxVyrdnkq8WiazOALUPMykIFJGbhZABKup9o5FeWS6ivEKMPVYw2jWhbNmtw4Po90y7ZvbHi4TCnR9%25wc3ZmeiftxdRyww178z5hhtECUkgu77slGAvSRCrXpF2YclZQ6KQwXXRaYWao1Q5nmPn9JagOybOiGnvIfIAnH7GRCPxh7sYlvAEKCpL0UOOPox4qSN0enMA8PFFyQ53XWIQ7ayV8RXABNZvT1mvhTE1exbZ35BjkeTjHq0MvUi5F0WUjh1b4g6TNF1A6x8U0%25lLhzUyfriC2yRUQ8w4jD5lkv3PQfNws53ZG19mrOumxE47BdqfojTWptvXhFUP672ya8qIbJ0ZFi4LBMhO2kBxEaZ"
+   },
+   {
+    "name": "Black Sapphire",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-733159kE29t8YgM1NS99jhgO2kLG8stUfbYGO%25RBDFsQsP05x2YI2SiEhoNHCNencn0KE%25poKGfXhmHHSfHkT1T%25V1PaP3lfNEbnbdh10s9O9%253E4riIif1scZwBwJUrxRtetCzZ857MBx0RUgChe8B5GvloMjegp2XHhDWv6jQ%25oq12YDaf4RLjmqn1c5FDyLOExy%25qTJIs8eSL3uBrUMtJdSeZL4NuzVMRJseSkNh5uqiVA0ogSLkNF4HvVDt0Kc%252Nqb4Wxfj0XkcP81D4wGxbUEqczZ89GsLx8qUiprJ89sGw6ZuUiiptYRSGFp67m5VqztYCygNLc3mlTv0JnvyX324uOKTQdjcSI93azDxVyrdnkq8WiazOALUPMykIFJGbhZABKup9o5FeWS6ivEKMPVYw2jWhbNmtw4Po90y7ZvbHi4TCnR9%25wc3ZmeiftxdRyww178z5hhtECUkgu77slGAvSRCrXpF2YclZQ6KQwXXRaYWao1Q5nmPn9JagOybOiGnvIfIAnH7GRCPxh7sYlvAEKCpL0UOOPox4qSN0enMA8PFFyQ53XWIQ7ayV8RXABNZvT1mvhTE1exbZ35BjkeTjHq0MvUi5F0WUjh1b4g6TNF1A6x8U0%25lLhzUyfriC2yRUQ8w4jD5lkv3PQfNws53ZG19mrOfdEE47BdqfojTWptvXhFUP672ya8qIbJ0ZFi4LBMhO2kBxEaZ"
+   },
+   {
+    "name": "Manhattan Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-733159kE29t8YgM1NS99jhgO2kLG8stUfbYGO%25RBDFsQsP05x2YI2SiEhoNHCNencn0KE%25poKGfXxusHSfHkT1T%25V1PaP3lfNEbnbdh10s9O9%253E4riIif1scZwBwJUrxRtetCzZ857MBx0RUgChe8B5GvloMjegp2XHhDWv6jQ%25oq12YDaf4RLjmqn1c5FDyLOExy%25qTJIs8eSL3uBrUMtJdSeZL4NuzVMRJseSkNh5uqiVA0ogSLkNF4HvVDt0Kc%252Nqb4Wxfj0XkcP81D4wGxbUEqczZ89GsLx8qUiprJ89sGw6ZuUiiptYRSGFp67m5VqztYCygNLc3mlTv0JnvyX324uOKTQdjcSI93azDxVyrdnkq8WiazOALUPMykIFJGbhZABKup9o5FeWS6ivEKMPVYw2jWhbNmtw4Po90y7ZvbHi4TCnR9%25wc3ZmeiftxdRyww178z5hhtECUkgu77slGAvSRCrXpF2YclZQ6KQwXXRaYWao1Q5nmPn9JagOybOiGnvIfIAnH7GRCPxh7sYlvAEKCpL0UOOPox4qSN0enMA8PFFyQ53XWIQ7ayV8RXABNZvT1mvhTE1exbZ35BjkeTjHq0MvUi5F0WUjh1b4g6TNF1A6x8U0%25lLhzUyfriC2yRUQ8w4jD5lkv3PQfNws53ZG19mrOp05E47BdqfojTWptvXhFUP672ya8qIbJ0ZFi4LBMhO2kBxEaZ"
+   },
+   {
+    "name": "Isle Of Man Green",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-733159kE29t8YgM1NS99jhgO2kLG8stUfbYGO%25RBDFsQsP05x2YI2SiEhoNHCNencn0KE%25poKGfXxrSHSfHkT1T%25V1PaP3lfNEbnbdh10s9O9%253E4riIif1scZwBwJUrxRtetCzZ857MBx0RUgChe8B5GvloMjegp2XHhDWv6jQ%25oq12YDaf4RLjmqn1c5FDyLOExy%25qTJIs8eSL3uBrUMtJdSeZL4NuzVMRJseSkNh5uqiVA0ogSLkNF4HvVDt0Kc%252Nqb4Wxfj0XkcP81D4wGxbUEqczZ89GsLx8qUiprJ89sGw6ZuUiiptYRSGFp67m5VqztYCygNLc3mlTv0JnvyX324uOKTQdjcSI93azDxVyrdnkq8WiazOALUPMykIFJGbhZABKup9o5FeWS6ivEKMPVYw2jWhbNmtw4Po90y7ZvbHi4TCnR9%25wc3ZmeiftxdRyww178z5hhtECUkgu77slGAvSRCrXpF2YclZQ6KQwXXRaYWao1Q5nmPn9JagOybOiGnvIfIAnH7GRCPxh7sYlvAEKCpL0UOOPox4qSN0enMA8PFFyQ53XWIQ7ayV8RXABNZvT1mvhTE1exbZ35BjkeTjHq0MvUi5F0WUjh1b4g6TNF1A6x8U0%25lLhzUyfriC2yRUQ8w4jD5lkv3PQfNws53ZG19mrOpg4E47BdqfojTWptvXhFUP672ya8qIbJ0ZFi4LBMhO2kBxEaZ"
+   },
+   {
+    "name": "Aventurine Red",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-733159kE29t8YgM1NS99jhgO2kLG8stUfbYGO%25RBDFsQsP05x2YI2SiEhoNHCNencn0KE%25poKGfXxnFHSfHkT1T%25V1PaP3lfNEbnbdh10s9O9%253E4riIif1scZwBwJUrxRtetCzZ857MBx0RUgChe8B5GvloMjegp2XHhDWv6jQ%25oq12YDaf4RLjmqn1c5FDyLOExy%25qTJIs8eSL3uBrUMtJdSeZL4NuzVMRJseSkNh5uqiVA0ogSLkNF4HvVDt0Kc%252Nqb4Wxfj0XkcP81D4wGxbUEqczZ89GsLx8qUiprJ89sGw6ZuUiiptYRSGFp67m5VqztYCygNLc3mlTv0JnvyX324uOKTQdjcSI93azDxVyrdnkq8WiazOALUPMykIFJGbhZABKup9o5FeWS6ivEKMPVYw2jWhbNmtw4Po90y7ZvbHi4TCnR9%25wc3ZmeiftxdRyww178z5hhtECUkgu77slGAvSRCrXpF2YclZQ6KQwXXRaYWao1Q5nmPn9JagOybOiGnvIfIAnH7GRCPxh7sYlvAEKCpL0UOOPox4qSN0enMA8PFFyQ53XWIQ7ayV8RXABNZvT1mvhTE1exbZ35BjkeTjHq0MvUi5F0WUjh1b4g6TNF1A6x8U0%25lLhzUyfriC2yRUQ8w4jD5lkv3PQfNws53ZG19mrOpebE47BdqfojTWptvXhFUP672ya8qIbJ0ZFi4LBMhO2kBxEaZ"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Steering wheel",
+    "img": "https://bmw.scene7.com/is/image/BMW/unlimited:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://bmw.scene7.com/is/image/BMW/g06_interior_curved-display-1:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Centre console",
+    "img": "https://bmw.scene7.com/is/image/BMW/g06automatic-air-conditioning:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/g06_diamond-surround-sound:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://bmw.scene7.com/is/image/BMW/live-cockpit-3-1?qlt=80&wid=1600&fmt=webp"
+   }
+  ]
+ },
+ "BMW|X7": {
+  "page": "https://www.bmw.in/en/all-models/x-series/x7/bmw-x7-overview.html",
+  "hero": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJEPuqTMxot1G7c1Qs2C%25Jdo3Om04uMwVbXov6Ocr8vM9CGZIDuscCRbz1vbwx65efVuHbyMnnvz4UCStUDn2shKM4P1YeyWNRsj6X3aJDW2aKafaiojmqn1nw5DyLOEO2iqTJIsIAGL3uBrE36JdSeZsguuzVMRr97SkNh5ZzrVA0ogRcZNF4Hv5xH0Kc%252yG84WxfjTSUcP81D3VlxbUEqdNP89GsLz7XUiprJkxFGw6ZuA5qptYRSG3Z67m5VpJRYCygN6u7mlTv0YGiyX324mpMTQdjcy6X3azDxTW1dnkq83pHzOALUd6ekIFJGzhWABKupk4ZFeWS6AcUKMPVYF0WWhbNmKwYPo90yWhNbHi4TPnb9%25wc36XHiftxdYrxw178zmZntECUkyRE7slGAT5hCrXpF3gYlZQ6Kd70XRaYWB9EQ5nmPej7agOybMD4nvIT9hqxO2B3ioURIjedwHuXBDMzt%25HAeqhk7f4UMLoAC1RchJHFlE5Lou%25KXcagHSfWQfrB%25V1Pa1IGfNEbnE2L10s9OsGTE4riIreYscZwBZMWrxRteR5yZ857M5geRUgChpE55GvlozZggp2XHkhrv6jNjBvSswUrobJscCtFbiwNJ0%25lIOf1qTMDESqvLB9orO2kOHUtWPfbYfFd1v10tq3D%25eqxWAbbH8ELDOdqQmSBymkIVKoT4fXx6qtaYc1sr%25ViSgsrZfbYeKJZj9786njlZyaBNODXYunWq9Q",
+  "colors": [
+   {
+    "name": "Tanzanite Blue Metallic",
+    "img": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331MkJE%25qdbYCjb8iYJfZtUDTkxbZG%25I4Y%25E9CpL0FkV%25QJ22YI0Z0MA8WptvpdHNqLkJEkj5AwABN745UXgtUDpdvxKM45jdsTjHdrshUi58LYU4GZIH98jmBqk1YsDOP7aVVZ8X5AusNRUQ8J2jD5lk1tcDVXOyzoVBDFuUrO5eqKAY3zk2RjnWtwOIrxltjix27d5f9w17w0utOtECUkUS37slGAGV9CrXpFptSlZQ6K62%25XRaYWFR1Q5nmPKiaagOybWu0nvIT9PgWO2B3ibMPIjedw9hdBDMztr%25oeqhk7ZnHMLoACROchJHFl5ILou%25KXg0xHSfWQvhj%25V1Pa29lfNEbn%25RP10s9OfQbE4riI1a0scZwBE%25SrxRtesfyZ857Mr1xRUgChZqA5GvloRfdgp2XH51mv6jQ%25gTq2YDafvePjmqn12MHDyLOEjBqqTJIsDVEL3uBrqTIJdSeZLGJuzVMR1xdSkNh5EWhVA0ogsPGNF4HvrbF0Kc%252Z9T4WxfjRiEcP81D50BxbUEqYuF89GsLm70UiprJyCeGw6ZuTlhptYRS3Hb67m5VdaxYCygNzd2mlTv0keHyX324AbMTQdjcF9X3azDxMUidnkq8kWYzOALUA6%25kIFJGFtXABKupK%25ZFeWS6WmEKMPVYPyqWhbNmb9rPo90y9imbHi4TfF99%25wc3gPiiftxdvTWw17I7YwnKVHW3JQKM4%25jvQy2CpLjK7OPoxiCjtrb4gwTZHP9%25UHNMClix2t5JUABNWH3c1Q8YL7nmxErZ"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Interior",
+    "img": "https://bmw.scene7.com/is/image/BMW/g07_ice_interieur_fb?qlt=80&wid=1600&fmt=webp"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://bmw.scene7.com/is/image/BMW/g07_ice_interieur_cockpit:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://bmw.scene7.com/is/image/BMW/g07_ice_interieur_roomy:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://bmw.scene7.com/is/image/BMW/g07_ice_digital-highlights_6seatdesign:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Sound system",
+    "img": "https://bmw.scene7.com/is/image/BMW/BMW_NSC_X7_Website_Image_Adapt_Aug_25_3000x3000_DI22_000065782:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://bmw.scene7.com/is/image/BMW/g07_mpa_bmw-accessoires_clothhanger-1:3to2?fmt=webp-alpha&wid=1600&fit=constrain%2C1"
+   }
+  ]
+ }
+}

@@ -1,0 +1,2441 @@
+{
+ "Audi|A4": {
+  "brand": "Audi",
+  "model": "A4",
+  "body": "Sedan",
+  "page": "https://myaudi.in/en/vehiclePrices",
+  "currentMakerImage": null,
+  "colours": [
+   "Glacier White Metallic",
+   "Manhattan Gray Metallic",
+   "Mythos Black Metallic",
+   "Navarra Blue Metallic",
+   "Progressive Red Metallic"
+  ]
+ },
+ "Audi|A6": {
+  "brand": "Audi",
+  "model": "A6",
+  "body": "Sedan",
+  "page": "https://myaudi.in/en/vehiclePrices",
+  "currentMakerImage": null,
+  "colours": [
+   "Glacier White Metallic",
+   "Mythos Black Metallic",
+   "Firmament Blue Metallic",
+   "Madeira Brown Metallic",
+   "Manhattan Grey Metallic"
+  ]
+ },
+ "Audi|Q3": {
+  "brand": "Audi",
+  "model": "Q3",
+  "body": "SUV",
+  "page": "https://myaudi.in/en/vehiclePrices",
+  "currentMakerImage": null,
+  "colours": [
+   "Navarra Blue Metallic",
+   "Mythos Black Metallic",
+   "Glacier White Metallic",
+   "Nano Gray Metallic",
+   "Pulse Orange"
+  ]
+ },
+ "Audi|Q3 Sportback": {
+  "brand": "Audi",
+  "model": "Q3 Sportback",
+  "body": "SUV",
+  "page": "https://myaudi.in/en/vehiclePrices",
+  "currentMakerImage": null,
+  "colours": [
+   "Navarra Blue Metallic",
+   "Mythos Black Metallic",
+   "Chronos Grey Metallic",
+   "Glacier White Metallic",
+   "Red Metallic"
+  ]
+ },
+ "Audi|Q5": {
+  "brand": "Audi",
+  "model": "Q5",
+  "body": "SUV",
+  "page": "https://myaudi.in/en/vehiclePrices",
+  "currentMakerImage": null,
+  "colours": [
+   "District Green Metallic",
+   "Glacier White Silver",
+   "Mythos Black Metallic",
+   "Manhattan Grey Metallic",
+   "Navarra Blue Metallic"
+  ]
+ },
+ "Audi|Q7": {
+  "brand": "Audi",
+  "model": "Q7",
+  "body": "SUV",
+  "page": "https://myaudi.in/en/vehiclePrices",
+  "currentMakerImage": null,
+  "colours": [
+   "Glacier White Metallic",
+   "Waitomo Blue Metallic",
+   "Sakhir Gold Metallic",
+   "Samurai Gray Metallic",
+   "Mythos Black Metallic"
+  ]
+ },
+ "Audi|Q8": {
+  "brand": "Audi",
+  "model": "Q8",
+  "body": "SUV",
+  "page": "https://myaudi.in/en/vehiclePrices",
+  "currentMakerImage": null,
+  "colours": [
+   "Glacier White",
+   "Tamarind Brown",
+   "Mythos Black",
+   "Samurai Gray",
+   "Samurai Grey",
+   "Satellite Silver",
+   "Vicuna Beige",
+   "Waitomo Blue",
+   "Sakhir Gold"
+  ]
+ },
+ "Audi|RS Q8": {
+  "brand": "Audi",
+  "model": "RS Q8",
+  "body": "SUV",
+  "page": "https://myaudi.in/en/vehiclePrices",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "Audi|SQ8": {
+  "brand": "Audi",
+  "model": "SQ8",
+  "body": "SUV",
+  "page": "https://myaudi.in/en/vehiclePrices",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "BMW|2 Series Gran Coupe": {
+  "brand": "BMW",
+  "model": "2 Series Gran Coupe",
+  "body": "Sedan",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Alpine White",
+   "Black Sapphire (Metallic)",
+   "Brooklyn Grey Metallic",
+   "Portimao Blue Metallic"
+  ]
+ },
+ "BMW|3 Series": {
+  "brand": "BMW",
+  "model": "3 Series",
+  "body": "Sedan",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Fire Red",
+   "Tanzanite Blue",
+   "Arctic Race Blue",
+   "Dravit Grey"
+  ]
+ },
+ "BMW|3 Series Lwb": {
+  "brand": "BMW",
+  "model": "3 Series Lwb",
+  "body": "Sedan",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Portimao Blue Metallic",
+   "Skyscraper Grey Metallic",
+   "Mineral White Metallic",
+   "Carbon Black Metallic"
+  ]
+ },
+ "BMW|4 Series": {
+  "brand": "BMW",
+  "model": "4 Series",
+  "body": "Coupe / Convertible",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "BMW|5 Series Lwb": {
+  "brand": "BMW",
+  "model": "5 Series Lwb",
+  "body": "Sedan",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Phytonic Blue",
+   "Carbon Black",
+   "Mineral White",
+   "Grey"
+  ]
+ },
+ "BMW|7 Series": {
+  "brand": "BMW",
+  "model": "7 Series",
+  "body": "Sedan",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "BMW|i5": {
+  "brand": "BMW",
+  "model": "i5",
+  "body": "Sedan",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Fire Red Metallic",
+   "Cape York Green Metallic",
+   "M Brooklyn Grey Metallic",
+   "Oxide Grey Metallic",
+   "Phytonic Blue Metallic",
+   "Mineral White Metallic",
+   "Sophisto Grey Brilliant Effect Metallic",
+   "Black Sapphire Metallic",
+   "M Carbon Black Metallic",
+   "Alpine White Solid"
+  ]
+ },
+ "BMW|i5 Lwb": {
+  "brand": "BMW",
+  "model": "i5 Lwb",
+  "body": "Sedan",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Fire Red Metallic",
+   "Cape York Green Metallic",
+   "M Brooklyn Grey Metallic",
+   "Oxide Grey Metallic",
+   "Phytonic Blue Metallic",
+   "Mineral White Metallic",
+   "Sophisto Grey Brilliant Effect Metallic",
+   "Black Sapphire Metallic",
+   "M Carbon Black Metallic",
+   "Alpine White Solid"
+  ]
+ },
+ "BMW|i7": {
+  "brand": "BMW",
+  "model": "i7",
+  "body": "Sedan",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Green, Black",
+   "Dark Green",
+   "Green",
+   "Carbon Black",
+   "Mineral White",
+   "Oxide Grey",
+   "Tanzanite Blue",
+   "Vancouver Green"
+  ]
+ },
+ "BMW|iX1 Lwb": {
+  "brand": "BMW",
+  "model": "iX1 Lwb",
+  "body": "SUV",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Portimao Blue Metallic",
+   "Mineral White Metallic",
+   "Night Dusk Blue",
+   "Skyscraper Grey Metallic",
+   "Carbon Black Metallic",
+   "Sparkling Copper Grey Metallic"
+  ]
+ },
+ "BMW|M2": {
+  "brand": "BMW",
+  "model": "M2",
+  "body": "Coupe / Convertible",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "BMW|M4": {
+  "brand": "BMW",
+  "model": "M4",
+  "body": "Coupe / Convertible",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "BMW|M5": {
+  "brand": "BMW",
+  "model": "M5",
+  "body": "Sedan",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "BMW|X1": {
+  "brand": "BMW",
+  "model": "X1",
+  "body": "SUV",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Black Sapphire Metallic",
+   "Space Silver Metallic",
+   "Alpine White",
+   "Storm Bay Metallic",
+   "M Portimao Blue Metallic"
+  ]
+ },
+ "BMW|X1 Lwb": {
+  "brand": "BMW",
+  "model": "X1 Lwb",
+  "body": "SUV",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": [
+   "M Carbon Black",
+   "Skyscraper Grey",
+   "Night Dusk Blue",
+   "Mineral White"
+  ]
+ },
+ "BMW|X3": {
+  "brand": "BMW",
+  "model": "X3",
+  "body": "SUV",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Bmw Individual Tanzanite Blue",
+   "Black Sapphire Metallic",
+   "Dune Grey Metallic",
+   "Alpine White 3"
+  ]
+ },
+ "BMW|X5": {
+  "brand": "BMW",
+  "model": "X5",
+  "body": "SUV",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Mineral White",
+   "Black Sapphire Metallic",
+   "Skyscraper Grey"
+  ]
+ },
+ "BMW|X6": {
+  "brand": "BMW",
+  "model": "X6",
+  "body": "SUV",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Aventurine Red",
+   "Black Sapphire",
+   "Isle Of Man Green",
+   "Manhattan Metallic",
+   "Mineral White"
+  ]
+ },
+ "BMW|X7": {
+  "brand": "BMW",
+  "model": "X7",
+  "body": "SUV",
+  "page": "https://www.bmw.in/en/all-models.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Mineral White",
+   "Tanzanite Blue Metallic",
+   "Carbon Black Metallic",
+   "Dravit Grey Metallic"
+  ]
+ },
+ "Honda|Amaze": {
+  "brand": "Honda",
+  "model": "Amaze",
+  "body": "Sedan",
+  "page": "https://www.hondacarindia.com/honda-amaze",
+  "currentMakerImage": "https://www.hondacarindia.com/web-data/models/carModelImage/modelimages2026/amaze.png",
+  "colours": [
+   "Obsidian Blue Pearl",
+   "Radiant Red Metallic",
+   "Platinum White Pearl",
+   "Golden Brown Metallic",
+   "Meteoroid Grey Metallic",
+   "Lunar Silver Metallic"
+  ]
+ },
+ "Honda|Amaze - 2nd Gen": {
+  "brand": "Honda",
+  "model": "Amaze - 2nd Gen",
+  "body": "Sedan",
+  "page": "https://www.hondacarindia.com/honda-amaze-2g",
+  "currentMakerImage": "https://www.hondacarindia.com/web-data/models/carModelImage/modelimages2026/amaze_2ndgenNew.png",
+  "colours": []
+ },
+ "Honda|City": {
+  "brand": "Honda",
+  "model": "City",
+  "body": "Sedan",
+  "page": "https://www.hondacarindia.com/honda-city",
+  "currentMakerImage": "https://www.hondacarindia.com/web-data/models/carModelImage/modelimages2026/city.png",
+  "colours": [
+   "Crystal Black Pearl",
+   "Lunar Silver Metallic",
+   "Meteoroid Grey Metallic",
+   "Obsidian Blue Pearl",
+   "Platinum White Pearl",
+   "Radiant Red Metallic"
+  ]
+ },
+ "Honda|Elevate": {
+  "brand": "Honda",
+  "model": "Elevate",
+  "body": "SUV",
+  "page": "https://www.hondacarindia.com/honda-elevate",
+  "currentMakerImage": "https://www.hondacarindia.com/web-data/models/carModelImage/modelimages2026/elevate.png",
+  "colours": [
+   "Crystal Black Pearl + Radiant Red Metallic (Dual Tone)",
+   "Crystal Black Pearl + Platinum White Pearl (Dual Tone)",
+   "Lunar Silver Metallic",
+   "Golden Brown Metallic",
+   "Platinum White Pearl",
+   "Meteoroid Gray Metallic",
+   "Radiant Red Metallic",
+   "Crystal Black Pearl + Phoenix Orange Pearl (Dual Tone)",
+   "Obsidian Blue Pearl",
+   "Phoenix Orange Pearl",
+   "Crystal Black Pearl"
+  ]
+ },
+ "Hyundai|Alcazar": {
+  "brand": "Hyundai",
+  "model": "Alcazar",
+  "body": "SUV",
+  "page": "https://www.hyundai.com/in/en/find-a-car/alcazar/highlights",
+  "currentMakerImage": "https://www.hyundai.com/content/dam/hyundai/in/en/data/model/thumbnail460x250.png",
+  "colours": [
+   "Abssy Black + Atlas White (Dual Tone)",
+   "Robust Emerald Matte",
+   "Starry Night",
+   "Atlas White",
+   "Abssy Black",
+   "Fiery Red",
+   "Ranger Khaki",
+   "Starry Night Turbo",
+   "Robust Emerald Pearl",
+   "Titan Grey"
+  ]
+ },
+ "Hyundai|Aura": {
+  "brand": "Hyundai",
+  "model": "Aura",
+  "body": "Sedan",
+  "page": "https://www.hyundai.com/in/en/find-a-car/aura/highlights",
+  "currentMakerImage": "https://www.hyundai.com/content/dam/hyundai/in/en/data/model/aura-thumbnail-pc.png",
+  "colours": [
+   "Titan Grey",
+   "Atlas White",
+   "Typhoon Silver",
+   "Fiery Red",
+   "Aqua Teal",
+   "Starry Night"
+  ]
+ },
+ "Hyundai|Creta": {
+  "brand": "Hyundai",
+  "model": "Creta",
+  "body": "SUV",
+  "page": "https://www.hyundai.com/in/en/find-a-car/creta/highlights",
+  "currentMakerImage": "https://www.hyundai.com/content/dam/hyundai/in/en/data/model/creta-suvmob.png",
+  "colours": [
+   "Titan Grey",
+   "Abyss Black + Atlas White (Dual Tone)",
+   "Robust Emerald Pearl",
+   "Fiery Red",
+   "Atlas White",
+   "Ranger Khaki",
+   "Starry Night",
+   "Titan Grey Matte",
+   "Abyss Black"
+  ]
+ },
+ "Hyundai|Creta Electric": {
+  "brand": "Hyundai",
+  "model": "Creta Electric",
+  "body": "SUV",
+  "page": "https://www.hyundai.com/in/en/find-a-car/creta-electric/highlights",
+  "currentMakerImage": "https://www.hyundai.com/content/dam/hyundai/in/en/data/model/cretaev-thumbnail-mob.png",
+  "colours": [
+   "Abyss Black + Atlas White (Dual Tone)",
+   "Abyss Black + Ocean Blue (Dual Tone)",
+   "Robust Emerald Matte",
+   "Titan Grey Matte",
+   "Ocean Blue Matte",
+   "Abyss Black",
+   "Starry Night",
+   "Fiery Red",
+   "Atlas White",
+   "Ocean Blue"
+  ]
+ },
+ "Hyundai|Creta N Line": {
+  "brand": "Hyundai",
+  "model": "Creta N Line",
+  "body": "SUV",
+  "page": "https://www.hyundai.com/in/en/find-a-car/creta-n-line/highlights",
+  "currentMakerImage": "https://www.hyundai.com/content/dam/hyundai/in/en/data/model/cretanline-thumbnail-mob.png",
+  "colours": [
+   "Titan Grey",
+   "Abyss Black + Atlas White (Dual Tone)",
+   "Robust Emerald Pearl",
+   "Fiery Red",
+   "Atlas White",
+   "Ranger Khaki",
+   "Starry Night",
+   "Titan Grey Matte",
+   "Abyss Black"
+  ]
+ },
+ "Hyundai|Exter": {
+  "brand": "Hyundai",
+  "model": "Exter",
+  "body": "SUV",
+  "page": "https://www.hyundai.com/in/en/find-a-car/exter/highlights",
+  "currentMakerImage": "https://www.hyundai.com/content/dam/hyundai/in/en/data/model/exter-fe-thumbnail-pc.png",
+  "colours": [
+   "Golden Bronze",
+   "Ranger Khaki",
+   "Atlas White",
+   "Ranger Khaki With Black Roof",
+   "Starry Night",
+   "Titan Grey",
+   "Titanium Black",
+   "Titanium Black Matte"
+  ]
+ },
+ "Hyundai|Grand i10 Nios": {
+  "brand": "Hyundai",
+  "model": "Grand i10 Nios",
+  "body": "Hatchback",
+  "page": "https://www.hyundai.com/in/en/find-a-car/grand-i10-nios/highlights",
+  "currentMakerImage": "https://www.hyundai.com/content/dam/hyundai/in/en/data/model/grandi10nios-thumbnail-pc.png",
+  "colours": [
+   "Black + Atlas White (Dual Tone)",
+   "Black + Spark Green (Dual Tone)",
+   "Aqua Teal",
+   "Amazon Grey",
+   "Fiery Red",
+   "Titan Grey",
+   "Typhoon Silver",
+   "Phantom Black Spark Green",
+   "Spark Green"
+  ]
+ },
+ "Hyundai|i20": {
+  "brand": "Hyundai",
+  "model": "i20",
+  "body": "Hatchback",
+  "page": "https://www.hyundai.com/in/en/find-a-car/i20/highlights",
+  "currentMakerImage": "https://www.hyundai.com/content/dam/hyundai/in/en/data/model/i20pe-PC.png",
+  "colours": [
+   "Abyss Black",
+   "Black + Fiery Red (Dual Tone)",
+   "Starry Night",
+   "Fiery Red",
+   "Titan Grey",
+   "Typhoon Silver",
+   "Abyss Black + Atlas White (Dual Tone)",
+   "Atlas White",
+   "Amazon Grey"
+  ]
+ },
+ "Hyundai|i20 N Line": {
+  "brand": "Hyundai",
+  "model": "i20 N Line",
+  "body": "Hatchback",
+  "page": "https://www.hyundai.com/in/en/find-a-car/i20-n-line/highlights",
+  "currentMakerImage": "https://www.hyundai.com/content/dam/hyundai/in/en/data/model/i20-n-linethumbnail-pc.png",
+  "colours": [
+   "Abyss Black",
+   "Black + Fiery Red (Dual Tone)",
+   "Starry Night",
+   "Fiery Red",
+   "Titan Grey",
+   "Typhoon Silver",
+   "Abyss Black + Atlas White (Dual Tone)",
+   "Atlas White",
+   "Amazon Grey"
+  ]
+ },
+ "Hyundai|IONIQ 5": {
+  "brand": "Hyundai",
+  "model": "IONIQ 5",
+  "body": "SUV",
+  "page": "https://www.hyundai.com/in/en/find-a-car/ioniq-5/highlights",
+  "currentMakerImage": "https://www.hyundai.com/content/dam/hyundai/in/en/data/model/ioniq-thumbnail-pc.png",
+  "colours": [
+   "Grey, Black",
+   "Black, Grey",
+   "Midnight Black Pearl",
+   "Gravity Gold Matte",
+   "Optic White",
+   "Titan Grey"
+  ]
+ },
+ "Hyundai|Venue": {
+  "brand": "Hyundai",
+  "model": "Venue",
+  "body": "SUV",
+  "page": "https://www.hyundai.com/in/en/find-a-car/venue/highlights",
+  "currentMakerImage": "https://www.hyundai.com/content/dam/hyundai/in/en/data/model/venue-thumbnail-mobile.png",
+  "colours": [
+   "Hazel Blue With Abyss Black Roof",
+   "Mystic Sapphire",
+   "Titan Grey",
+   "Atlas White",
+   "Abyss Black",
+   "Atlas White With Abyss Black Roof",
+   "Dragon Red",
+   "Hazel Blue"
+  ]
+ },
+ "Hyundai|Venue N Line": {
+  "brand": "Hyundai",
+  "model": "Venue N Line",
+  "body": "SUV",
+  "page": "https://www.hyundai.com/in/en/find-a-car/venue-n-line/highlights",
+  "currentMakerImage": "https://www.hyundai.com/content/dam/hyundai/in/en/data/model/venue-n-line-thumbnail-mobile.png",
+  "colours": [
+   "Hazel Blue With Abyss Black Roof",
+   "Mystic Sapphire",
+   "Titan Grey",
+   "Atlas White",
+   "Abyss Black",
+   "Atlas White With Abyss Black Roof",
+   "Dragon Red",
+   "Hazel Blue"
+  ]
+ },
+ "Hyundai|Verna": {
+  "brand": "Hyundai",
+  "model": "Verna",
+  "body": "Sedan",
+  "page": "https://www.hyundai.com/in/en/find-a-car/verna/highlights",
+  "currentMakerImage": "https://www.hyundai.com/content/dam/hyundai/in/en/data/model/verna-thumbnail-pc-1.png",
+  "colours": [
+   "Atlas White",
+   "Atlas White Dual Tone",
+   "Classy Blue",
+   "Starry Night",
+   "Titan Grey",
+   "Titan Grey Matte",
+   "Titanium Black"
+  ]
+ },
+ "Kia|Carens": {
+  "brand": "Kia",
+  "model": "Carens",
+  "body": "MUV / MPV",
+  "page": "https://www.kia.com/in/our-vehicles/carens/showroom.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Sparkling Silver",
+   "Imperial Blue",
+   "Pewter Olive",
+   "Aurora Black Pearl",
+   "Gravity Grey",
+   "Clear White"
+  ]
+ },
+ "Kia|Carens Clavis": {
+  "brand": "Kia",
+  "model": "Carens Clavis",
+  "body": "MUV / MPV",
+  "page": "https://www.kia.com/in/our-vehicles/carens-clavis/showroom.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Sparkling Silver",
+   "Ivory Silver Gloss",
+   "Pewter Olive",
+   "Imperial Blue",
+   "Glacier White Pearl",
+   "Gravity Grey",
+   "Aurora Black Pearl",
+   "Clear White",
+   "Gravity Gray"
+  ]
+ },
+ "Kia|Carens Clavis EV": {
+  "brand": "Kia",
+  "model": "Carens Clavis EV",
+  "body": "MUV / MPV",
+  "page": "https://www.kia.com/in/our-vehicles/carens-clavis-ev/showroom.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Ivory Silver Matte",
+   "Glacier White Pearl",
+   "Pewter Olive",
+   "Aurora Black Pearl",
+   "Imperial Blue",
+   "Gravity Grey"
+  ]
+ },
+ "Kia|Carnival": {
+  "brand": "Kia",
+  "model": "Carnival",
+  "body": "MUV / MPV",
+  "page": "https://www.kia.com/in/our-vehicles/carnival/showroom.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Glacier White Pearl",
+   "Fusion Black"
+  ]
+ },
+ "Kia|EV6": {
+  "brand": "Kia",
+  "model": "EV6",
+  "body": "SUV",
+  "page": "https://www.kia.com/in/our-vehicles/ev6/showroom.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Wolf Gray",
+   "Aurora Black Pearl",
+   "Snow White Pearl",
+   "Runway Red"
+  ]
+ },
+ "Kia|EV9": {
+  "brand": "Kia",
+  "model": "EV9",
+  "body": "SUV",
+  "page": "https://www.kia.com/in/our-vehicles/ev9/showroom.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Aurora Black Pearl",
+   "Ocean Blue",
+   "Panthera Metal",
+   "Pebble Gray",
+   "Snow White Pearl"
+  ]
+ },
+ "Kia|Seltos": {
+  "brand": "Kia",
+  "model": "Seltos",
+  "body": "SUV",
+  "page": "https://www.kia.com/in/our-vehicles/seltos/showroom.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Aurora Black Pearl",
+   "Frost Blue",
+   "Glacier White Pearl",
+   "Gravity Grey",
+   "Imperial Blue",
+   "Ivory Silver Gloss",
+   "Magma Red",
+   "Morning Haze",
+   "Pewter Olive",
+   "Matte Graphite"
+  ]
+ },
+ "Kia|Sonet": {
+  "brand": "Kia",
+  "model": "Sonet",
+  "body": "SUV",
+  "page": "https://www.kia.com/in/our-vehicles/sonet/showroom.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Aurora Black Pearl + Glacier White Pearl (Dual Tone)",
+   "Imperial Blue",
+   "Intense Red",
+   "Aurora Black Pearl",
+   "Gravity Grey",
+   "Sparkling Silver",
+   "Glacier White Pearl",
+   "Pewter Olive",
+   "Aurora Black Pearl + Intense Red (Dual Tone)"
+  ]
+ },
+ "Kia|Sorento": {
+  "brand": "Kia",
+  "model": "Sorento",
+  "body": "SUV",
+  "page": "https://www.kia.com/in/our-vehicles/sorento/showroom.html",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "Kia|Syros": {
+  "brand": "Kia",
+  "model": "Syros",
+  "body": "SUV",
+  "page": "https://www.kia.com/in/our-vehicles/syros/showroom.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Imperial Blue",
+   "Intense Red",
+   "Gravity Grey",
+   "Sparkling Silver",
+   "Glacier White Pearl",
+   "Pewter Olive",
+   "Aurora Black Pearl",
+   "Frost Blue"
+  ]
+ },
+ "Kia|Syros EV": {
+  "brand": "Kia",
+  "model": "Syros EV",
+  "body": "SUV",
+  "page": "https://www.kia.com/in/our-vehicles/syros-ev/showroom.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Ivory Silver Matte",
+   "Aurora Black Pearl",
+   "Frost Blue",
+   "Glacier White Pearl",
+   "Gravity Grey",
+   "Ivory Silver Gloss",
+   "Magma Red",
+   "Pewter Olive",
+   "Xclusive Matte Graphite"
+  ]
+ },
+ "Land Rover|Defender 110": {
+  "brand": "Land Rover",
+  "model": "Defender 110",
+  "body": "SUV",
+  "page": "https://www.landrover.in/defender/defender-110/index.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Tasman Blue",
+   "Woolstone Green",
+   "Santorini Black",
+   "Gondwana Stone",
+   "Fuji White",
+   "Carpathian Grey",
+   "Borasco Grey"
+  ]
+ },
+ "Land Rover|Defender 130": {
+  "brand": "Land Rover",
+  "model": "Defender 130",
+  "body": "SUV",
+  "page": "https://www.landrover.in/defender/defender-130/index.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Tasman Blue",
+   "Woolstone Green",
+   "Santorini Black",
+   "Gondwana Stone",
+   "Fuji White",
+   "Carpathian Grey",
+   "Borasco Grey"
+  ]
+ },
+ "Land Rover|Defender 90": {
+  "brand": "Land Rover",
+  "model": "Defender 90",
+  "body": "SUV",
+  "page": "https://www.landrover.in/defender/defender-90/index.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Tasman Blue",
+   "Woolstone Green",
+   "Santorini Black",
+   "Gondwana Stone",
+   "Fuji White",
+   "Carpathian Grey",
+   "Borasco Grey"
+  ]
+ },
+ "Land Rover|Discovery Sport": {
+  "brand": "Land Rover",
+  "model": "Discovery Sport",
+  "body": "SUV",
+  "page": "https://www.landrover.in/discovery-sport/index.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Santorini Black",
+   "Firenze Red",
+   "Fuji White",
+   "Eiger Grey",
+   "Varesine Blue"
+  ]
+ },
+ "Land Rover|Range Rover": {
+  "brand": "Land Rover",
+  "model": "Range Rover",
+  "body": "SUV",
+  "page": "https://www.rangerover.com/en-in/range-rover/index.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Ostuni Pearl White",
+   "Varesine Blue",
+   "Belgravia Green",
+   "Hakuba Silver",
+   "Eiger Grey",
+   "Santorini Black",
+   "Fuji White",
+   "Charente Grey",
+   "Batumi Gold",
+   "Carpathian Grey",
+   "Blue"
+  ]
+ },
+ "Land Rover|Range Rover Evoque": {
+  "brand": "Land Rover",
+  "model": "Range Rover Evoque",
+  "body": "SUV",
+  "page": "https://www.rangerover.com/en-in/range-rover-evoque/index.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Santorini Black",
+   "Fuji White",
+   "Tribeca Blue"
+  ]
+ },
+ "Land Rover|Range Rover Sport": {
+  "brand": "Land Rover",
+  "model": "Range Rover Sport",
+  "body": "SUV",
+  "page": "https://www.rangerover.com/en-in/range-rover-sport/index.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Charente Grey",
+   "Ostuni Pearl White",
+   "Varesine Blue",
+   "Giola Green",
+   "Eiger Grey",
+   "Borasco Grey",
+   "Firenze Red",
+   "Santorini Black",
+   "Fuji White"
+  ]
+ },
+ "Land Rover|Range Rover Velar": {
+  "brand": "Land Rover",
+  "model": "Range Rover Velar",
+  "body": "SUV",
+  "page": "https://www.rangerover.com/en-in/range-rover-velar/index.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Santorini Black",
+   "Fuji White",
+   "Zadar Grey",
+   "Varesine Blue",
+   "Arroios Grey"
+  ]
+ },
+ "Mahindra|Bolero": {
+  "brand": "Mahindra",
+  "model": "Bolero",
+  "body": "SUV",
+  "page": "/suv/bolero/BOL.html?dwvar_BOL_fuelType=DIESEL&dwvar_BOL_gearBoxType=MANUAL&dwvar_BOL_seatingCapacity=7&quantity=1",
+  "currentMakerImage": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw2de0a99b/images/BOL/large/BoleroClassic_602x339.png?sw=602&sh=339",
+  "colours": [
+   "Stealth Black",
+   "Dsat Silver",
+   "Diamond White",
+   "Rocky Biege"
+  ]
+ },
+ "Mahindra|Bolero Neo": {
+  "brand": "Mahindra",
+  "model": "Bolero Neo",
+  "body": "SUV",
+  "page": "/suv/bolero-neo/NEO.html?dwvar_NEO_fuelType=DIESEL&dwvar_NEO_gearBoxType=MANUAL&dwvar_NEO_seatingCapacity=7&quantity=1",
+  "currentMakerImage": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw24e99287/images/NEO/large/BoleroNeo_602x339.png?sw=602&sh=339",
+  "colours": [
+   "Jeans Blue (Dual Tone)",
+   "Pearl White",
+   "Rockey Beige",
+   "Stealth Black",
+   "Jeans Blue",
+   "Concrete Grey",
+   "Diamond White",
+   "Concrete Grey (Dual Tone)",
+   "Pearl White (Dual Tone)"
+  ]
+ },
+ "Mahindra|Bolero Neo Plus": {
+  "brand": "Mahindra",
+  "model": "Bolero Neo Plus",
+  "body": "SUV",
+  "page": "/suv/bolero-neo-plus/NEOP.html?dwvar_NEOP_fuelType=DIESEL&dwvar_NEOP_gearBoxType=MANUAL&quantity=1",
+  "currentMakerImage": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwc6625064/images/NEOP/large/BoleroNeoPlus_602x339.png?sw=602&sh=339",
+  "colours": [
+   "Jeans Blue (Dual Tone)",
+   "Pearl White",
+   "Rockey Beige",
+   "Stealth Black",
+   "Jeans Blue",
+   "Concrete Grey",
+   "Diamond White",
+   "Concrete Grey (Dual Tone)",
+   "Pearl White (Dual Tone)"
+  ]
+ },
+ "Mahindra|Scorpio Classic": {
+  "brand": "Mahindra",
+  "model": "Scorpio Classic",
+  "body": "SUV",
+  "page": "/suv/scorpio-classic/SCRC.html?dwvar_SCRC_fuelType=DIESEL&dwvar_SCRC_gearBoxType=MANUAL&quantity=1",
+  "currentMakerImage": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw95797f68/images/SCRC/large/ScorpioClassic_602x339.png?sw=602&sh=339",
+  "colours": [
+   "Red Rage",
+   "Everest White",
+   "Stealth Black",
+   "Galaxy Grey"
+  ]
+ },
+ "Mahindra|Scorpio-N": {
+  "brand": "Mahindra",
+  "model": "Scorpio-N",
+  "body": "SUV",
+  "page": "/suv/scorpio-n/SCN.html?dwvar_SCN_fuelType=DIESEL&quantity=1",
+  "currentMakerImage": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw3408d691/images/SCN/large/Z8L/Z8L_Oceanic_602x339.png?sw=602&sh=339",
+  "colours": [
+   "Deep Forest",
+   "Everest White",
+   "Galaxy Grey",
+   "Oceanic",
+   "Stealth Black"
+  ]
+ },
+ "Mahindra|Thar OG": {
+  "brand": "Mahindra",
+  "model": "Thar OG",
+  "body": "SUV",
+  "page": "/suv/thar/THRN.html?dwvar_THRN_fuelType=DIESEL&quantity=1",
+  "currentMakerImage": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwc22e921e/images/THRN/large/ZXT_ArtemisSilver_602x339.png?sw=602&sh=339",
+  "colours": [
+   "Artemis Silver color",
+   "Battleship Grey color",
+   "Deep Forest color",
+   "Everest White color",
+   "Galaxy Grey color",
+   "Jeans Blue color",
+   "Stealth Black color",
+   "Tango Red color"
+  ]
+ },
+ "Mahindra|Thar Roxx": {
+  "brand": "Mahindra",
+  "model": "Thar Roxx",
+  "body": "SUV",
+  "page": "/suv/thar-roxx/TH5D.html?dwvar_TH5D_fuelType=DIESEL&quantity=1",
+  "currentMakerImage": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwa4de1cb1/images/TH5D/large/Thar_Roxx_602x339.png?sw=602&sh=339",
+  "colours": [
+   "Burnt Sienna",
+   "Citrine Yellow",
+   "Deep Forest",
+   "Everest White",
+   "Nebula Blue",
+   "Stealth Black",
+   "Tango Red"
+  ]
+ },
+ "Mahindra|XUV 3XO": {
+  "brand": "Mahindra",
+  "model": "XUV 3XO",
+  "body": "SUV",
+  "page": "/suv/xuv3xo/X3XO.html?dwvar_X3XO_fuelType=DIESEL&dwvar_X3XO_seatingCapacity=5&quantity=1",
+  "currentMakerImage": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwc4930484/images/X3XO/large/S220_602x339.png?sw=602&sh=339",
+  "colours": [
+   "Stealth Black + Galaxy Grey (Dual Tone)",
+   "Stealth Black + Dune Beige (Dual Tone)",
+   "Galaxy Grey + Deep Forest (Dual Tone)",
+   "Stealth Black + Tango Red (Dual Tone)",
+   "Galaxy Grey + Stealth Black (Dual Tone)",
+   "Galaxy Grey + Nebula Blue (Dual Tone)",
+   "Stealth Black + Citrine Yellow (Dual Tone)",
+   "Tango Red",
+   "Stealth Black",
+   "Nebula Blue",
+   "Galaxy Grey",
+   "Everest White",
+   "Dune Beige",
+   "Deep Forest"
+  ]
+ },
+ "Mahindra|XUV 7XO": {
+  "brand": "Mahindra",
+  "model": "XUV 7XO",
+  "body": "SUV",
+  "page": "/suv/xuv-7xo/X7XO.html?dwvar_X7XO_fuelType=DIESEL&quantity=1",
+  "currentMakerImage": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw3a9ff783/images/X7XO/large/AX7L_602x339_RubyVelvet.png?sw=602&sh=339",
+  "colours": [
+   "Desert Myst",
+   "Galaxy Grey",
+   "Midnight Black",
+   "Nebula Blue",
+   "Ruby Velvet",
+   "Stealth Black",
+   "Everest White Dual Tone",
+   "Midnight Black Dual Tone",
+   "Desert Myst Dual Tone",
+   "Everest White",
+   "Galaxy Grey Dual Tone"
+  ]
+ },
+ "Mahindra|XUV400": {
+  "brand": "Mahindra",
+  "model": "XUV400",
+  "body": "SUV",
+  "page": "/suv/xuv400/X400.html?dwvar_X400_fuelType=ELECTR&dwvar_X400_gearBoxType=AUTOMATIC&dwvar_X400_seatingCapacity=5&dwvar_X400_variantCode=M0497&quantity=1",
+  "currentMakerImage": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dweb7ab251/images/X400/large/XUV400_602x339.png?sw=602&sh=339",
+  "colours": [
+   "Satin Copper + Arctic Blue",
+   "Satin Copper + Nebula Blue",
+   "Satin Copper + Napoli Black",
+   "Nebula Blue",
+   "Napoli Black",
+   "Satin Copper + Arctic White",
+   "Arctic Blue",
+   "Satin Copper + Galaxy Grey",
+   "Galaxy Grey",
+   "Everest White"
+  ]
+ },
+ "Maruti Suzuki|Alto K10": {
+  "brand": "Maruti Suzuki",
+  "model": "Alto K10",
+  "body": "Hatchback",
+  "page": "https://www.marutisuzuki.com/arena/alto-k10",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/arena/in/en/assets/cars/alto-k10/images/spinset360/metallic-sizzling-red/2025.05.01_17.40.36_Alto_360_Red_PathTracer_0054.png",
+  "colours": [
+   "Red",
+   "Pearl Metallic Earth Gold",
+   "Metallic Sizzling Red",
+   "Metallic Speedy Blue",
+   "Metallic Granite Grey",
+   "Metallic Silky Silver",
+   "Solid White"
+  ]
+ },
+ "Maruti Suzuki|Baleno": {
+  "brand": "Maruti Suzuki",
+  "model": "Baleno",
+  "body": "Hatchback",
+  "page": "https://www.nexaexperience.com/baleno",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/nexa/in/en/assets/cars/baleno/images/front-tilted-view/Suzuki_Baleno_3-4th_(Co_Dr)_Low_Angle_left_CMYK_1.png",
+  "colours": [
+   "Enigmatic Teal Green",
+   "Arctic White",
+   "Bluish Black",
+   "Grandeur Grey",
+   "Nexa Blue",
+   "Opulent Red",
+   "Splendid Silver"
+  ]
+ },
+ "Maruti Suzuki|Brezza": {
+  "brand": "Maruti Suzuki",
+  "model": "Brezza",
+  "body": "SUV",
+  "page": "https://www.marutisuzuki.com/arena/brezza",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/arena/in/en/assets/cars/brezza/images/spinset360/sizzling_red---bluish-black-v2/BB_0054.png",
+  "colours": [
+   "Sizzling Red With Bluish Black Roof",
+   "Bluish Black",
+   "Lustrous Beige",
+   "Lustrous Beige With Bluish Black Roof",
+   "Magma Grey",
+   "Pearl Arctic White",
+   "Pearl Arctic White With Bluish Black Roof",
+   "Splendid Silver",
+   "Vivacious Orange"
+  ]
+ },
+ "Maruti Suzuki|Celerio": {
+  "brand": "Maruti Suzuki",
+  "model": "Celerio",
+  "body": "Hatchback",
+  "page": "https://www.marutisuzuki.com/arena/celerio",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/arena/in/en/assets/cars/celerio/images/spinset360/solid_fire_red_v1/2025.04.15_13.08.19_Celerio_360_Red_PathTracer_0054.png",
+  "colours": [
+   "Caffine Brown",
+   "Solid Fire Red",
+   "Silky Silver",
+   "Speedy Blue",
+   "Arctic White",
+   "Glistening Grey"
+  ]
+ },
+ "Maruti Suzuki|Ciaz": {
+  "brand": "Maruti Suzuki",
+  "model": "Ciaz",
+  "body": "Sedan",
+  "page": "https://www.nexaexperience.com/ciaz",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/nexa/in/en/assets/cars/ciaz/images/front-tilted-view/Ciaz-Front-Titled-335x185.png",
+  "colours": []
+ },
+ "Maruti Suzuki|Dzire": {
+  "brand": "Maruti Suzuki",
+  "model": "Dzire",
+  "body": "Sedan",
+  "page": "https://www.marutisuzuki.com/arena/dzire",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/arena/in/en/assets/cars/dzire/images/spinset360/GallantRed/2025.05.20_15.04.35_Dzire_360_Red_00054.png",
+  "colours": [
+   "Alluring Blue",
+   "Nutmeg Brown",
+   "Bluish Black",
+   "Magma Grey",
+   "Splendid Silver",
+   "Arctic White",
+   "Gallant Red"
+  ]
+ },
+ "Maruti Suzuki|e Vitara": {
+  "brand": "Maruti Suzuki",
+  "model": "e Vitara",
+  "body": "SUV",
+  "page": "https://www.nexaexperience.com/e-vitara",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/nexa/in/en/assets/cars/grand-vitara/sigma/images/variant-filter/variant-default.png",
+  "colours": [
+   "Splendid Silver With Bluish Black Roof",
+   "Bluish Black",
+   "Land Breeze Green With Bluish Black Roof",
+   "Opulent Red With Bluish Black Roof",
+   "Arctic White With Bluish Black Roof",
+   "Grandeur Grey",
+   "Splendid Silver",
+   "Arctic White",
+   "Opulent Red",
+   "Land Breeze Green"
+  ]
+ },
+ "Maruti Suzuki|Ertiga": {
+  "brand": "Maruti Suzuki",
+  "model": "Ertiga",
+  "body": "MUV / MPV",
+  "page": "https://www.marutisuzuki.com/arena/ertiga",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/arena/in/en/assets/cars/ertiga/images/spinset360/pearl-metallic-auburn-red/2025.04.17_17.41.15_Ertiga_360_Red_PathTracer_0054.png",
+  "colours": [
+   "Maroon",
+   "Metallic Magma Grey",
+   "Pearl Metallic Auburn Red",
+   "Pearl Metallic Oxford Blue",
+   "Splendid Silver",
+   "Pearl Artic White",
+   "Dignity Brown",
+   "Bluish Black"
+  ]
+ },
+ "Maruti Suzuki|Fronx": {
+  "brand": "Maruti Suzuki",
+  "model": "Fronx",
+  "body": "SUV",
+  "page": "https://www.nexaexperience.com/fronx",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/nexa/in/en/assets/cars/fronx/images/front-tilted-view/335x185.png",
+  "colours": [
+   "Bluish Black",
+   "Arctic White",
+   "Nexa Blue",
+   "Bluish Black + Earthen Brown (Dual Tone)",
+   "Splendid Silver",
+   "Opulent Red",
+   "Earthen Brown",
+   "Grandeur Grey",
+   "Bluish Black + Splendid Silver (Dual Tone)",
+   "Bluish Black + Opulent Red (Dual Tone)"
+  ]
+ },
+ "Maruti Suzuki|Grand Vitara": {
+  "brand": "Maruti Suzuki",
+  "model": "Grand Vitara",
+  "body": "SUV",
+  "page": "https://www.nexaexperience.com/grand-vitara",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/nexa/in/en/assets/cars/grand-vitara/sigma/images/front-tilted-view/AR_AB_RANGEMAN_SLIDE1_CAM_A_V2_02%20copy1.png",
+  "colours": [
+   "Midnight Black + Splendid Silver (Dual Tone)",
+   "Midnight Black + Arctic White (Dual Tone)",
+   "Midnight Black",
+   "Opulent Red",
+   "Chestnut Brown",
+   "Grandeur Grey",
+   "Splendid Silver",
+   "Arctic White",
+   "Nexa Blue",
+   "Midnight Black + Opulent Red (Dual Tone)"
+  ]
+ },
+ "Maruti Suzuki|Ignis": {
+  "brand": "Maruti Suzuki",
+  "model": "Ignis",
+  "body": "Hatchback",
+  "page": "https://www.nexaexperience.com/ignis",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/nexa/in/en/assets/cars/ignis/images/front-tilted-view/IgnisFrontTitled-335x185.png",
+  "colours": []
+ },
+ "Maruti Suzuki|Invicto": {
+  "brand": "Maruti Suzuki",
+  "model": "Invicto",
+  "body": "MUV / MPV",
+  "page": "https://www.nexaexperience.com/invicto",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/nexa/in/en/assets/cars/invicto/images/front-tilted-view/InvictoFrontTilted-335x185.png",
+  "colours": [
+   "Mystic White",
+   "Majestic Silver",
+   "Stellar Bronze",
+   "Nexa Blue",
+   "Magnificent Black"
+  ]
+ },
+ "Maruti Suzuki|Jimny": {
+  "brand": "Maruti Suzuki",
+  "model": "Jimny",
+  "body": "SUV",
+  "page": "https://www.nexaexperience.com/jimny",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/nexa/in/en/assets/cars/jimny/images/front-tilted-view/Jimny_Font-204x118.png",
+  "colours": [
+   "Bluish Black Sizzling Red",
+   "Bluish Black Kinetic Yellow",
+   "Nexa Blue",
+   "Granite Gray",
+   "Sizzling Red",
+   "Pearl Arctic White",
+   "Bluish Black"
+  ]
+ },
+ "Maruti Suzuki|S-Presso": {
+  "brand": "Maruti Suzuki",
+  "model": "S-Presso",
+  "body": "Hatchback",
+  "page": "https://www.marutisuzuki.com/arena/s-presso",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/arena/in/en/assets/cars/s-presso/images/spinset360/solid-fire-red-v2/2025.05.12_14.37.35_Spresso_360_Red_PathTracer_00054.png",
+  "colours": [
+   "Solid Sizzle Orange",
+   "Metallic Silky Silver",
+   "Metallic Granite Grey",
+   "Solid Fire Red",
+   "Pearl Starry Blue",
+   "Solid White",
+   "Bluish Black"
+  ]
+ },
+ "Maruti Suzuki|Swift": {
+  "brand": "Maruti Suzuki",
+  "model": "Swift",
+  "body": "Hatchback",
+  "page": "https://www.marutisuzuki.com/arena/swift",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/arena/in/en/assets/cars/swift/images/spinset360/sizzling-red-with-midnight-black-roof/2025.03.25_09.12.54_Swift_360_RedBlack_PathTracer_0054.png",
+  "colours": [
+   "Bluish Black",
+   "Splendid Silver",
+   "Pearl Arctic White",
+   "Novel Orange",
+   "Magma Grey",
+   "Luster Blue",
+   "Sizzling Red",
+   "Bluish Black + Luster Blue (Dual Tone)",
+   "Bluish Black + Pearl Arctic White (Dual Tone)",
+   "Bluish Black + Sizzling Red (Dual Tone)"
+  ]
+ },
+ "Maruti Suzuki|Victoris": {
+  "brand": "Maruti Suzuki",
+  "model": "Victoris",
+  "body": "SUV",
+  "page": "https://www.marutisuzuki.com/arena/victoris",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/arena/in/en/assets/cars/saber/images/spinset/blue-with-black/saber_360_V4_blue_dt_00054.png",
+  "colours": [
+   "Arctic White",
+   "Splendid Silver",
+   "Sizzling Red With Black Roof",
+   "Splendid Silver With Black Roof",
+   "Magma Grey",
+   "Mystic Green",
+   "Bluish Black",
+   "Eternal Blue",
+   "Sizzling Red"
+  ]
+ },
+ "Maruti Suzuki|WagonR": {
+  "brand": "Maruti Suzuki",
+  "model": "WagonR",
+  "body": "Hatchback",
+  "page": "https://www.marutisuzuki.com/arena/wagonr",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/arena/in/en/assets/cars/wagonr/images/spinset360/pearl-metallic-gallant-red_v1/2025.04.06_07.58.29_WagonR_360_Red_PathTracer_0054.png",
+  "colours": [
+   "Superior White",
+   "Silky Silver",
+   "Magma Grey",
+   "Nutmeg Brown",
+   "Pearl Bluish Black Metallic With Gallant Red",
+   "Poolside Blue",
+   "Pearl Bluish Black Metallic With Magma Grey"
+  ]
+ },
+ "Maruti Suzuki|XL6": {
+  "brand": "Maruti Suzuki",
+  "model": "XL6",
+  "body": "MUV / MPV",
+  "page": "https://www.nexaexperience.com/xl6",
+  "currentMakerImage": "https://prod-nexa.marutisuzuki.com/content/dam/msil/nexa/in/en/assets/cars/xl6/images/front-tilted-view/XL6-FrontTilted-335x185.png",
+  "colours": [
+   "Arctic White",
+   "Brave Khaki",
+   "Nexa Blue",
+   "Splendid Silver",
+   "Grandeur Grey",
+   "Opulent Red"
+  ]
+ },
+ "Mercedes-Benz|A-Class": {
+  "brand": "Mercedes-Benz",
+  "model": "A-Class",
+  "body": "Hatchback",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/hatchback/a-class/amg.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Polar White",
+   "Mountain Grey",
+   "Cosmos Black"
+  ]
+ },
+ "Mercedes-Benz|AMG GT Coupe": {
+  "brand": "Mercedes-Benz",
+  "model": "AMG GT Coupe",
+  "body": "Coupe / Convertible",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/coupe/amg-gt-2-door/overview.html",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "Mercedes-Benz|C-Class": {
+  "brand": "Mercedes-Benz",
+  "model": "C-Class",
+  "body": "Sedan",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/saloon/c-class/overview.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Selenite Grey",
+   "High Tech Silver",
+   "Sodalite Blue",
+   "Obsidian Black",
+   "Manufaktur Opalite White Bright"
+  ]
+ },
+ "Mercedes-Benz|CLA": {
+  "brand": "Mercedes-Benz",
+  "model": "CLA",
+  "body": "Sedan",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/saloon/cla-electric/overview.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Aqua Mint",
+   "Polar White",
+   "Cosmic Black",
+   "Patagonia Red"
+  ]
+ },
+ "Mercedes-Benz|CLE Cabriolet": {
+  "brand": "Mercedes-Benz",
+  "model": "CLE Cabriolet",
+  "body": "Coupe / Convertible",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/cabriolet-roadster/cle/overview.html",
+  "currentMakerImage": null,
+  "colours": [
+   "High Tech Silver",
+   "Spectral Blue",
+   "Obsidian Black",
+   "Graphite Grey"
+  ]
+ },
+ "Mercedes-Benz|CLE Coupe": {
+  "brand": "Mercedes-Benz",
+  "model": "CLE Coupe",
+  "body": "Coupe / Convertible",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/coupe/cle/amg.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Solid Sun Yellow",
+   "Metallic Spectral Blue",
+   "Metallic Obsidian Black",
+   "Opalite White",
+   "Alpine Grey Solid",
+   "Patagonia Red"
+  ]
+ },
+ "Mercedes-Benz|E-Class": {
+  "brand": "Mercedes-Benz",
+  "model": "E-Class",
+  "body": "Sedan",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/saloon/e-class/overview.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Nautic Blue",
+   "Polar White",
+   "Obsidian Black",
+   "Graphite Grey",
+   "High Tech Silver"
+  ]
+ },
+ "Mercedes-Benz|EQS": {
+  "brand": "Mercedes-Benz",
+  "model": "EQS",
+  "body": "Sedan",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/saloon/eqs/overview.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Opalith White Metallic Paint",
+   "Graphite Grey",
+   "Obsidian Black"
+  ]
+ },
+ "Mercedes-Benz|EQS SUV": {
+  "brand": "Mercedes-Benz",
+  "model": "EQS SUV",
+  "body": "SUV",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/suv/eqs/overview.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Obsidian Black Metallic",
+   "Velvet Brown Metallic",
+   "High Tech Silver",
+   "Sodalite Blue",
+   "Emerald Green",
+   "Selenite Grey",
+   "Alpine Gray Solid",
+   "Opalite White Bright",
+   "Polar White"
+  ]
+ },
+ "Mercedes-Benz|G-Class": {
+  "brand": "Mercedes-Benz",
+  "model": "G-Class",
+  "body": "SUV",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/suv/g-class/overview.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Mojave Silver",
+   "Obsidian Black",
+   "Iridium Silver",
+   "Emerald Green",
+   "Brilliant Blue",
+   "Selenite Grey",
+   "Magnetite Black",
+   "Sodalite Blue"
+  ]
+ },
+ "Mercedes-Benz|GLA": {
+  "brand": "Mercedes-Benz",
+  "model": "GLA",
+  "body": "SUV",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/suv/gla/overview.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Cosmos Black",
+   "Mountain Grey",
+   "Polar White",
+   "Iridium Silver"
+  ]
+ },
+ "Mercedes-Benz|GLC": {
+  "brand": "Mercedes-Benz",
+  "model": "GLC",
+  "body": "SUV",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/suv/glc/overview.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Obsidian Black",
+   "Hightech Silver",
+   "Graphite Grey",
+   "Polar White",
+   "Spectral Blue"
+  ]
+ },
+ "Mercedes-Benz|GLC Coupe": {
+  "brand": "Mercedes-Benz",
+  "model": "GLC Coupe",
+  "body": "SUV",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/suv/glc-coupe/amg.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Graphite Grey",
+   "High Tech Silver",
+   "Spectral Blue",
+   "Obsidian Black",
+   "Polar White"
+  ]
+ },
+ "Mercedes-Benz|GLE": {
+  "brand": "Mercedes-Benz",
+  "model": "GLE",
+  "body": "SUV",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/suv/gle/overview.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Selenite Grey",
+   "Polar White",
+   "Obsidian Black",
+   "Hightech Silver",
+   "Sodalite Blue"
+  ]
+ },
+ "Mercedes-Benz|GLE Coupe": {
+  "brand": "Mercedes-Benz",
+  "model": "GLE Coupe",
+  "body": "SUV",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/suv/gle-coupe/amg.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Polar White",
+   "Obsidian Black",
+   "Sodalite Blue",
+   "Hightech Silver",
+   "Selenite Grey"
+  ]
+ },
+ "Mercedes-Benz|GLS": {
+  "brand": "Mercedes-Benz",
+  "model": "GLS",
+  "body": "SUV",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/suv/gls/overview.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Selenite Grey",
+   "Obsidian Black",
+   "Polar White",
+   "Sodalite Blue",
+   "High Tech Silver"
+  ]
+ },
+ "Mercedes-Benz|Maybach EQS SUV": {
+  "brand": "Mercedes-Benz",
+  "model": "Maybach EQS SUV",
+  "body": "SUV",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/suv/maybach-eqs/overview.html",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "Mercedes-Benz|Maybach GLS": {
+  "brand": "Mercedes-Benz",
+  "model": "Maybach GLS",
+  "body": "SUV",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/suv/mercedes-maybach-gls/overview.html",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "Mercedes-Benz|Maybach S-Class": {
+  "brand": "Mercedes-Benz",
+  "model": "Maybach S-Class",
+  "body": "Sedan",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/saloon-long/mercedes-maybach-s-class/overview.html",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "Mercedes-Benz|Maybach SL": {
+  "brand": "Mercedes-Benz",
+  "model": "Maybach SL",
+  "body": "Coupe / Convertible",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/cabriolet-roadster/mercedes-maybach-sl/overview.html",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "Mercedes-Benz|S-Class": {
+  "brand": "Mercedes-Benz",
+  "model": "S-Class",
+  "body": "Sedan",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/saloon-long/s-class/overview.html",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "Mercedes-Benz|V-Class": {
+  "brand": "Mercedes-Benz",
+  "model": "V-Class",
+  "body": "MUV / MPV",
+  "page": "https://www.mercedes-benz.co.in/passengercars/models/van/v-class/overview.html",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "MG|Astor": {
+  "brand": "MG",
+  "model": "Astor",
+  "body": "SUV",
+  "page": "https://www.mgmotor.co.in/",
+  "currentMakerImage": null,
+  "colours": [
+   "Starry Black",
+   "Candy White",
+   "Glaze Red",
+   "Aurora Silver",
+   "Black + White (Dual Tone)",
+   "Havana Grey"
+  ]
+ },
+ "MG|Comet EV": {
+  "brand": "MG",
+  "model": "Comet EV",
+  "body": "Hatchback",
+  "page": "https://www.mgmotor.co.in/",
+  "currentMakerImage": null,
+  "colours": [
+   "Starry Black Candy White",
+   "Starry Black Apple Green",
+   "Starry Black",
+   "Aurora Silver",
+   "Candy White"
+  ]
+ },
+ "MG|Gloster": {
+  "brand": "MG",
+  "model": "Gloster",
+  "body": "SUV",
+  "page": "https://www.mgmotor.co.in/",
+  "currentMakerImage": null,
+  "colours": [
+   "Concrete Grey",
+   "Metal Ash",
+   "Metal Black",
+   "Pearl White"
+  ]
+ },
+ "MG|Hector": {
+  "brand": "MG",
+  "model": "Hector",
+  "body": "SUV",
+  "page": "https://www.mgmotor.co.in/",
+  "currentMakerImage": null,
+  "colours": [
+   "Starry Black",
+   "Aurora Silver",
+   "Celadon Blue",
+   "Glaze Red",
+   "Pearl White",
+   "Candy White + Starry Black (Dual Tone)",
+   "Havana Grey",
+   "Candy White",
+   "Dune Brown"
+  ]
+ },
+ "MG|Hector Plus 6 Seater": {
+  "brand": "MG",
+  "model": "Hector Plus 6 Seater",
+  "body": "SUV",
+  "page": "https://www.mgmotor.co.in/",
+  "currentMakerImage": null,
+  "colours": [
+   "Starry Black",
+   "Aurora Silver",
+   "Celadon Blue",
+   "Glaze Red",
+   "Pearl White",
+   "Candy White + Starry Black (Dual Tone)",
+   "Havana Grey",
+   "Candy White",
+   "Dune Brown"
+  ]
+ },
+ "MG|Hector Tomahawk EV": {
+  "brand": "MG",
+  "model": "Hector Tomahawk EV",
+  "body": "SUV",
+  "page": "https://www.mgmotor.co.in/",
+  "currentMakerImage": null,
+  "colours": [
+   "Aurora Silver",
+   "Celadon Blue",
+   "Khaki Green",
+   "Khaki Green Plus Mono Black",
+   "Pearl White",
+   "Starry Black"
+  ]
+ },
+ "MG|Hector Tomahawk PHEV": {
+  "brand": "MG",
+  "model": "Hector Tomahawk PHEV",
+  "body": "SUV",
+  "page": "https://www.mgmotor.co.in/",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "MG|Majestor": {
+  "brand": "MG",
+  "model": "Majestor",
+  "body": "SUV",
+  "page": "https://www.mgmotor.co.in/",
+  "currentMakerImage": null,
+  "colours": [
+   "Concrete Grey",
+   "Metal Ash",
+   "Metal Black",
+   "Pearl White"
+  ]
+ },
+ "MG|Windsor EV": {
+  "brand": "MG",
+  "model": "Windsor EV",
+  "body": "SUV",
+  "page": "https://www.mgmotor.co.in/",
+  "currentMakerImage": null,
+  "colours": [
+   "Turquoise Green",
+   "Starburst Black",
+   "Clay Beige",
+   "Pearl White"
+  ]
+ },
+ "MG|Windsor Pro": {
+  "brand": "MG",
+  "model": "Windsor Pro",
+  "body": "SUV",
+  "page": "https://www.mgmotor.co.in/",
+  "currentMakerImage": null,
+  "colours": [
+   "Turquoise Green",
+   "Starburst Black",
+   "Clay Beige",
+   "Pearl White"
+  ]
+ },
+ "MG|ZS EV": {
+  "brand": "MG",
+  "model": "ZS EV",
+  "body": "SUV",
+  "page": "https://www.mgmotor.co.in/",
+  "currentMakerImage": null,
+  "colours": [
+   "Candy White",
+   "Starry Black",
+   "Aurora Silver",
+   "Glaze Red"
+  ]
+ },
+ "Nissan|Gravite": {
+  "brand": "Nissan",
+  "model": "Gravite",
+  "body": "MUV / MPV",
+  "page": "https://www.nissan.in/vehicles/new/nissan-gravite.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Green, Black",
+   "Forest Green",
+   "Metallic Grey",
+   "Onyx Black",
+   "Storm White",
+   "Blade Silver"
+  ]
+ },
+ "Nissan|Magnite": {
+  "brand": "Nissan",
+  "model": "Magnite",
+  "body": "SUV",
+  "page": "https://www.nissan.in/vehicles/new/nissan-magnite.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Orange",
+   "Storm White",
+   "Pearl White",
+   "Vivid Blue",
+   "Onyx Black + Sunrise Copper Orange",
+   "Onyx Black + Blade Silver",
+   "Onyx Black + Flare Garnet Red",
+   "Onyx Black + Vivid Blue",
+   "Onyx Black + Pearl White",
+   "Sunrise Copper Orange",
+   "Onyx Black",
+   "Flare Garnet Red",
+   "Blade Silver"
+  ]
+ },
+ "Nissan|Tekton": {
+  "brand": "Nissan",
+  "model": "Tekton",
+  "body": "SUV",
+  "page": "https://www.nissan.in/vehicles/new/nissan-tekton.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Blade Silver",
+   "Flare Garnet Red",
+   "Indigo Blue",
+   "Moonbow Grey",
+   "Onyx Black",
+   "Pearl White"
+  ]
+ },
+ "Renault|Duster": {
+  "brand": "Renault",
+  "model": "Duster",
+  "body": "SUV",
+  "page": "https://www.renault.co.in/cars/renault-duster.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Jade Mountain Green",
+   "Sunset Red",
+   "Stealth Black",
+   "River Blue",
+   "Pearl White",
+   "Moonlight Silver",
+   "Black"
+  ]
+ },
+ "Renault|Kiger": {
+  "brand": "Renault",
+  "model": "Kiger",
+  "body": "SUV",
+  "page": "https://www.renault.co.in/cars/renault-kiger.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Mystery Black + Shadow Grey (Dual Tone)",
+   "Mystery Black + Oasis Yellow (Dual Tone)",
+   "Shadow Grey",
+   "Oasis Yellow",
+   "Moonlight Silver",
+   "Ice Cool White",
+   "Caspian Blue",
+   "Mystery Black + Radiant Red (Dual Tone)",
+   "Stealth Black",
+   "Mystery Black + Ice Cool White (Dual Tone)",
+   "Fictitious"
+  ]
+ },
+ "Renault|Kwid": {
+  "brand": "Renault",
+  "model": "Kwid",
+  "body": "Hatchback",
+  "page": "https://www.renault.co.in/cars/renault-kwid.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Fiery Red",
+   "Ice Cool White",
+   "Moonlight Silver",
+   "Zanskar Blue",
+   "Metal Mustard"
+  ]
+ },
+ "Renault|Triber": {
+  "brand": "Renault",
+  "model": "Triber",
+  "body": "MUV / MPV",
+  "page": "https://www.renault.co.in/cars/renault-triber.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Amber Terracotta",
+   "Shadow Grey",
+   "Zanskar Blue",
+   "Stealth Black + Ice Cool White (Dual Tone)",
+   "Stealth Black + Shadow Grey (Dual Tone)",
+   "Stealth Black + Amber Terracotta (Dual Tone)",
+   "Ice Cool White",
+   "Moonlight Silver",
+   "Stealth Black"
+  ]
+ },
+ "Skoda|Kodiaq": {
+  "brand": "Skoda",
+  "model": "Kodiaq",
+  "body": "SUV",
+  "page": "https://www.skoda-auto.co.in/models/kodiaq",
+  "currentMakerImage": null,
+  "colours": [
+   "Race Blue",
+   "Bronx Gold",
+   "Velvet Red",
+   "Graphite Grey",
+   "Magic Black",
+   "Moon White"
+  ]
+ },
+ "Skoda|Kodiaq RS": {
+  "brand": "Skoda",
+  "model": "Kodiaq RS",
+  "body": "SUV",
+  "page": "https://www.skoda-auto.co.in/models/kodiaq-rs",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "Skoda|Kushaq": {
+  "brand": "Skoda",
+  "model": "Kushaq",
+  "body": "SUV",
+  "page": "https://www.skoda-auto.co.in/models/kushaq",
+  "currentMakerImage": null,
+  "colours": [
+   "Brilliant Silver",
+   "Candy White",
+   "Carbon Steel",
+   "Cherry Red",
+   "Lava Blue",
+   "Shimla Green",
+   "Steel Grey"
+  ]
+ },
+ "Skoda|Kylaq": {
+  "brand": "Skoda",
+  "model": "Kylaq",
+  "body": "SUV",
+  "page": "https://www.skoda-auto.co.in/models/kylaq",
+  "currentMakerImage": null,
+  "colours": [
+   "Carbon Steel",
+   "Tornado Red",
+   "Lava Blue",
+   "Olive Gold",
+   "Deep Black",
+   "Candy White",
+   "Brilliant Silver"
+  ]
+ },
+ "Skoda|Slavia": {
+  "brand": "Skoda",
+  "model": "Slavia",
+  "body": "Sedan",
+  "page": "https://www.skoda-auto.co.in/models/slavia",
+  "currentMakerImage": null,
+  "colours": [
+   "Carbon Steel",
+   "Lava Blue",
+   "Deep Black",
+   "Candy White",
+   "Brilliant Silver",
+   "Tornado Red"
+  ]
+ },
+ "Tata|Aeris": {
+  "brand": "Tata",
+  "model": "Aeris",
+  "body": "SUV",
+  "page": "https://tata.cars/aeris/ice.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Dandeli Drizzle color",
+   "Daytona Grey color",
+   "Dune Glow color",
+   "Nitro Crimson color",
+   "Pristine White color",
+   "Pure Grey color"
+  ]
+ },
+ "Tata|Altroz": {
+  "brand": "Tata",
+  "model": "Altroz",
+  "body": "Hatchback",
+  "page": "https://tata.cars/altroz/ice.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Pristine White",
+   "Pure Grey",
+   "Royal Blue",
+   "Ember Glow",
+   "Dune Glow"
+  ]
+ },
+ "Tata|Curvv": {
+  "brand": "Tata",
+  "model": "Curvv",
+  "body": "SUV",
+  "page": "https://tata.cars/curvv/ice.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Pristine White",
+   "Flame Red",
+   "Gold Essence",
+   "Royal Blue (Dual Tone)",
+   "Nitro Crimson (Dual Tone)",
+   "Pure Grey",
+   "Daytona Grey"
+  ]
+ },
+ "Tata|Curvv EV": {
+  "brand": "Tata",
+  "model": "Curvv EV",
+  "body": "SUV",
+  "page": "https://ev.tata.cars/curvv/ev.html",
+  "currentMakerImage": "https://s7ap1.scene7.com/is/image/tatapassenger/1440x500?$B-BG-1440-500-S$&fit=crop&fmt=webp",
+  "colours": [
+   "Empowered Oxide With Dual Tone",
+   "Pristine White With Dual Tone",
+   "Pure Grey With Dual Tone",
+   "Virtual Sunrise With Dual Tone",
+   "Nitro Crimson With Dual Tone",
+   "Blue"
+  ]
+ },
+ "Tata|Harrier": {
+  "brand": "Tata",
+  "model": "Harrier",
+  "body": "SUV",
+  "page": "https://tata.cars/harrier/ice.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Sunlit Yellow",
+   "Seaweed Green",
+   "Daytona Grey",
+   "Fearless Red",
+   "Pure Grey",
+   "Nitro Crimson",
+   "Pristine White",
+   "Lunar White"
+  ]
+ },
+ "Tata|Nexon": {
+  "brand": "Tata",
+  "model": "Nexon",
+  "body": "SUV",
+  "page": "https://tata.cars/nexon/ice.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Royal Blue",
+   "Ocean Blue",
+   "Pure Grey",
+   "Grassland Beige",
+   "Daytona Grey",
+   "Pristine White"
+  ]
+ },
+ "Tata|Nexon EV": {
+  "brand": "Tata",
+  "model": "Nexon EV",
+  "body": "SUV",
+  "page": "https://ev.tata.cars/nexon/ev.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Pristine White",
+   "Ocean Blue",
+   "Pure Grey",
+   "Empowered Oxide",
+   "Daytona Grey"
+  ]
+ },
+ "Tata|Punch": {
+  "brand": "Tata",
+  "model": "Punch",
+  "body": "SUV",
+  "page": "https://tata.cars/punch/ice.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Cyantafic Blue",
+   "Coorg Clouds",
+   "Caramel",
+   "Bengal Rouge",
+   "Pristine White",
+   "Daytona Grey"
+  ]
+ },
+ "Tata|Punch EV": {
+  "brand": "Tata",
+  "model": "Punch EV",
+  "body": "SUV",
+  "page": "https://ev.tata.cars/punch/ev.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Bengal Rouge",
+   "Caramel",
+   "Empowered Oxide",
+   "Fearless Yellow",
+   "Pristine White",
+   "Pure Grey",
+   "Supernova Copper"
+  ]
+ },
+ "Tata|Safari": {
+  "brand": "Tata",
+  "model": "Safari",
+  "body": "SUV",
+  "page": "https://tata.cars/safari/ice.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Matte Stealth Black",
+   "Pure Grey",
+   "Royal Blue",
+   "Daytona Grey",
+   "Frost White",
+   "Black + Cosmic Gold (Dual Tone)",
+   "Supernova Copper"
+  ]
+ },
+ "Tata|Sierra": {
+  "brand": "Tata",
+  "model": "Sierra",
+  "body": "SUV",
+  "page": "https://tata.cars/sierra/ice.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Green, Black",
+   "Red, Black",
+   "Pure Grey",
+   "Andaman Adventure",
+   "Bengal Rouge",
+   "Coorg Clouds",
+   "Munnar Mist",
+   "Pristine White",
+   "Mintal Grey"
+  ]
+ },
+ "Tata|Sierra EV": {
+  "brand": "Tata",
+  "model": "Sierra EV",
+  "body": "SUV",
+  "page": "https://ev.tata.cars/sierra/ev.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Andaman Adventure",
+   "Bengal Rouge",
+   "Coorg Clouds",
+   "Nainital Nocturne",
+   "Pristine White",
+   "Pure Grey",
+   "Rishikesh Rapids"
+  ]
+ },
+ "Tata|Tiago": {
+  "brand": "Tata",
+  "model": "Tiago",
+  "body": "Hatchback",
+  "page": "https://tata.cars/tiago/ice.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Varanasi Vibrance",
+   "Pristine White",
+   "Pure Grey",
+   "Pangong Pulse",
+   "Daytona Grey",
+   "Sobo Surge"
+  ]
+ },
+ "Tata|Tiago EV": {
+  "brand": "Tata",
+  "model": "Tiago EV",
+  "body": "Hatchback",
+  "page": "https://ev.tata.cars/tiago/ev.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Daytona Grey",
+   "Pangong Pulse",
+   "Dehradun Dew",
+   "Sobo Surge",
+   "Pure Grey",
+   "Pristine White"
+  ]
+ },
+ "Tata|Tigor EV": {
+  "brand": "Tata",
+  "model": "Tigor EV",
+  "body": "Sedan",
+  "page": "https://ev.tata.cars/tigor/ev.html",
+  "currentMakerImage": "https://s7ap1.scene7.com/is/image/tatapassenger/specifications?$B-1920-667-D$&fit=crop&fmt=avif-alpha",
+  "colours": [
+   "Black + Daytona Grey (Dual Tone)",
+   "Black + Signature Teal Blue (Dual Tone)",
+   "Magnetic Red"
+  ]
+ },
+ "Toyota|Camry": {
+  "brand": "Toyota",
+  "model": "Camry",
+  "body": "Sedan",
+  "page": "https://www.toyotabharat.com/showroom/",
+  "currentMakerImage": null,
+  "colours": [
+   "Precious Metal",
+   "Platinum White Pearl",
+   "Emotional Red",
+   "Dark Blue",
+   "Attitude Black",
+   "Cement Gray"
+  ]
+ },
+ "Toyota|Fortuner": {
+  "brand": "Toyota",
+  "model": "Fortuner",
+  "body": "SUV",
+  "page": "https://www.toyotabharat.com/showroom/",
+  "currentMakerImage": null,
+  "colours": [
+   "Silver Metallic",
+   "Phantom Brown",
+   "Super White",
+   "Sparkling Black Crystal Shine",
+   "White Pearl Crystal Shine",
+   "Avant Garde Bronze",
+   "Attitude Black"
+  ]
+ },
+ "Toyota|Glanza": {
+  "brand": "Toyota",
+  "model": "Glanza",
+  "body": "Hatchback",
+  "page": "https://www.toyotabharat.com/showroom/",
+  "currentMakerImage": null,
+  "colours": [
+   "Sportin Red",
+   "Enticing Silver",
+   "Cafe White",
+   "Gaming Grey",
+   "Insta Blue"
+  ]
+ },
+ "Toyota|Hilux": {
+  "brand": "Toyota",
+  "model": "Hilux",
+  "body": "Pickup",
+  "page": "https://www.toyotabharat.com/showroom/",
+  "currentMakerImage": null,
+  "colours": [
+   "Sulphur Metallic",
+   "Ash",
+   "Attitude Black",
+   "Emotional Red",
+   "Platinum Pearl White Metallic",
+   "Super White"
+  ]
+ },
+ "Toyota|Innova Crysta": {
+  "brand": "Toyota",
+  "model": "Innova Crysta",
+  "body": "MUV / MPV",
+  "page": "https://www.toyotabharat.com/showroom/",
+  "currentMakerImage": null,
+  "colours": [
+   "Platinum White Pearl",
+   "Attitude Black Mica",
+   "Avant Garde Bronze Metal",
+   "Silver Metallic",
+   "Super White"
+  ]
+ },
+ "Toyota|Innova Hycross": {
+  "brand": "Toyota",
+  "model": "Innova Hycross",
+  "body": "MUV / MPV",
+  "page": "https://www.toyotabharat.com/showroom/",
+  "currentMakerImage": null,
+  "colours": [
+   "Super White",
+   "Attitude Black Mica",
+   "Avant Garde Bronze Metallic",
+   "Silver Metallic",
+   "Platinum White Pearl",
+   "Blackish Ageha Glass Flake"
+  ]
+ },
+ "Toyota|Land Cruiser 300": {
+  "brand": "Toyota",
+  "model": "Land Cruiser 300",
+  "body": "SUV",
+  "page": "https://www.toyotabharat.com/showroom/",
+  "currentMakerImage": null,
+  "colours": [
+   "Attitude Black",
+   "Precious White Pearl"
+  ]
+ },
+ "Toyota|Legender": {
+  "brand": "Toyota",
+  "model": "Legender",
+  "body": "SUV",
+  "page": "https://www.toyotabharat.com/showroom/",
+  "currentMakerImage": null,
+  "colours": [
+   "Silver Metallic",
+   "Phantom Brown",
+   "Super White",
+   "Sparkling Black Crystal Shine",
+   "White Pearl Crystal Shine",
+   "Avant Garde Bronze",
+   "Attitude Black"
+  ]
+ },
+ "Toyota|Rumion": {
+  "brand": "Toyota",
+  "model": "Rumion",
+  "body": "MUV / MPV",
+  "page": "https://www.toyotabharat.com/showroom/",
+  "currentMakerImage": null,
+  "colours": [
+   "Café White",
+   "Spunky Blue",
+   "Iconic Grey",
+   "Rustic Brown",
+   "Enticing Silver"
+  ]
+ },
+ "Toyota|Urban Cruiser Ebella": {
+  "brand": "Toyota",
+  "model": "Urban Cruiser Ebella",
+  "body": "SUV",
+  "page": "https://www.toyotabharat.com/showroom/",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "Toyota|Urban Cruiser Hyryder": {
+  "brand": "Toyota",
+  "model": "Urban Cruiser Hyryder",
+  "body": "SUV",
+  "page": "https://www.toyotabharat.com/showroom/",
+  "currentMakerImage": null,
+  "colours": []
+ },
+ "Toyota|Urban Cruiser Taisor": {
+  "brand": "Toyota",
+  "model": "Urban Cruiser Taisor",
+  "body": "SUV",
+  "page": "https://www.toyotabharat.com/showroom/",
+  "currentMakerImage": null,
+  "colours": [
+   "Midnight Black + Sportin Red (Dual Tone)",
+   "Midnight Black + Enticing Silver (Dual Tone)",
+   "Gaming Grey",
+   "Enticing Silver",
+   "Cafe White",
+   "Sportin Red",
+   "Lucent Orange",
+   "Midnight Black + Cafe White (Dual Tone)"
+  ]
+ },
+ "Toyota|Vellfire": {
+  "brand": "Toyota",
+  "model": "Vellfire",
+  "body": "MUV / MPV",
+  "page": "https://www.toyotabharat.com/showroom/",
+  "currentMakerImage": null,
+  "colours": [
+   "Platinum White Pearl",
+   "Precious Metal",
+   "Black"
+  ]
+ },
+ "Volkswagen|Taigun": {
+  "brand": "Volkswagen",
+  "model": "Taigun",
+  "body": "SUV",
+  "page": "https://www.volkswagen.co.in/en/models/taigun.html",
+  "currentMakerImage": null,
+  "colours": [
+   "Wild Cherry Red",
+   "Carbon Steel",
+   "Carbon Steel Matte",
+   "Deep Black Pearl",
+   "Lava Blue",
+   "Reflex Silver",
+   "Steel Grey",
+   "Candy White",
+   "Avacado Pearl"
+  ]
+ },
+ "Volkswagen|Virtus": {
+  "brand": "Volkswagen",
+  "model": "Virtus",
+  "body": "Sedan",
+  "page": "https://www.volkswagen.co.in/en/models/virtus-chrome.html",
+  "currentMakerImage": "https://assets.volkswagen.com/is/image/volkswagenag/virtus-chrome-og-image?Zml0PWNyb3AlMkMxJndpZD0xMjAwJmhlaT02MDAmZm10PWpwZWcmcWx0PTc5JmJmYz1vZmYmNzY1Nw==",
+  "colours": [
+   "Carbon Steel Grey Matte",
+   "Deep Black Pearl",
+   "Rising Blue Metallic",
+   "Lava Blue",
+   "Carbon Steel Grey",
+   "Wild Cherry Red",
+   "Candy White",
+   "Reflex Silver"
+  ]
+ }
+}

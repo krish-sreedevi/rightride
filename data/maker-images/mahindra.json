@@ -1,0 +1,430 @@
+{
+ "Mahindra|Bolero": {
+  "page": "https://auto.mahindra.com/suv/bolero/BOL.html?dwvar_BOL_fuelType=DIESEL&dwvar_BOL_gearBoxType=MANUAL&dwvar_BOL_seatingCapacity=7&quantity=1",
+  "hero": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw9bf83765/images/BOL/hires/B8_Stealth_Black_1366x443.png",
+  "colors": [
+   {
+    "name": "Stealth Black",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw9bf83765/images/BOL/hires/B8_Stealth_Black_1366x443.png"
+   },
+   {
+    "name": "Dsat Silver",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw8e8775f8/images/BOL/hires/B8_Dsat_Silver_1366x443.png"
+   },
+   {
+    "name": "Diamond White",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwef286e0f/images/BOL/hires/B8_Diamond_White_1366x443.png"
+   },
+   {
+    "name": "Rocky Biege",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw8944ff50/images/BOL/hires/B8_Rockey_Beige_1366x443.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Infotainment",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dwca8ca229/Bolero/interior/new-1/Desktop/17.8-cm-Touchscreen-Infotainment-System.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw0102163c/Bolero/interior/new-1/Desktop/Leatherette-upholstery.jpg"
+   }
+  ]
+ },
+ "Mahindra|Bolero Neo": {
+  "page": "https://auto.mahindra.com/suv/bolero-neo/NEO.html?dwvar_NEO_fuelType=DIESEL&dwvar_NEO_gearBoxType=MANUAL&dwvar_NEO_seatingCapacity=7&quantity=1",
+  "hero": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw58759e71/images/NEO/hires/N11_Jeans_Blue_1366x443.png",
+  "colors": [
+   {
+    "name": "Jeans Blue (Dual Tone)",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw58759e71/images/NEO/hires/N11_Jeans_Blue_1366x443.png"
+   },
+   {
+    "name": "Rockey Beige",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwea5a7ad0/images/NEO/hires/N10_Opt_Rocky_Beige.png"
+   },
+   {
+    "name": "Stealth Black",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw43729440/images/NEO/hires/N11_Stealth_Black_1366x443.png"
+   },
+   {
+    "name": "Jeans Blue",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw5770d0c0/images/NEO/hires/N10_Opt_Jeans_Blue.png"
+   },
+   {
+    "name": "Diamond White",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw8fbf8ade/images/NEO/large/N10_O_DiamondWhite_602x339.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Front seats",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw1932c759/NEO/interiorandexterior/interior/new/Leatherette-Upholstery.jpg"
+   }
+  ]
+ },
+ "Mahindra|Bolero Neo Plus": {
+  "page": "https://auto.mahindra.com/suv/bolero-neo-plus/NEOP.html?dwvar_NEOP_fuelType=DIESEL&dwvar_NEOP_gearBoxType=MANUAL&quantity=1",
+  "hero": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwc69e00d8/images/NEOP/hires/P10_DiamondWhite_1366x443.png",
+  "colors": [
+   {
+    "name": "Diamond White",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwc69e00d8/images/NEOP/hires/P10_DiamondWhite_1366x443.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw7dea8755/NEOP/key-highlights/Premium-Interiors.jpg"
+   },
+   {
+    "cap": "Cabin (top view)",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw36586898/NEOP/key-highlights/9-Seater-Comfort.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw78b6e00f/NEOP/interior/desktop/Armrests.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw3280c356/NEOP/interior/desktop/22.8cm-Infotainment-System.jpg"
+   }
+  ]
+ },
+ "Mahindra|Scorpio Classic": {
+  "page": "https://auto.mahindra.com/suv/scorpio-classic/SCRC.html?dwvar_SCRC_fuelType=DIESEL&dwvar_SCRC_gearBoxType=MANUAL&quantity=1",
+  "hero": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw224ea0b6/images/SCRC/hires/S11_EverestWhite_1366x443.png",
+  "colors": [
+   {
+    "name": "Everest White",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw224ea0b6/images/SCRC/hires/S11_EverestWhite_1366x443.png"
+   },
+   {
+    "name": "Stealth Black",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw723b4af1/images/SCRC/hires/S11_StealthBlack_1366x443.png"
+   },
+   {
+    "name": "Galaxy Grey",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw8a0e9f57/images/SCRC/hires/S11_GalaxyGrey_1366x443.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw26604949/SCRC/interior/new/desktop/Hydraulic-Power-Steering-copy.png"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw24cfc56f/SCRC/interior/new/desktop/Seat-Upholstery.png"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw9601d3c9/SCRC/interior/new/desktop/Faux-Leather-Wrapped-Steering.png"
+   }
+  ]
+ },
+ "Mahindra|Scorpio-N": {
+  "page": "https://auto.mahindra.com/suv/scorpio-n/SCN.html?dwvar_SCN_fuelType=DIESEL&quantity=1",
+  "hero": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwc174f769/images/SCN/hires/Z8L/Z8L_DeepForest_1366x443.png",
+  "colors": [
+   {
+    "name": "Deep Forest",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwc174f769/images/SCN/hires/Z8L/Z8L_DeepForest_1366x443.png"
+   },
+   {
+    "name": "Everest White",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw83f6fe9a/images/SCN/hires/Z8L/Z8L_EverestWhite_1366x443.png"
+   },
+   {
+    "name": "Galaxy Grey",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwf51a2d6b/images/SCN/hires/Z8L/Z8L_GalaxyGrey_1366x443.png"
+   },
+   {
+    "name": "Oceanic",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw5c71cebc/images/SCN/hires/Z8L/Z8L_Oceanic_1366x443.png"
+   },
+   {
+    "name": "Stealth Black",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw2d704326/images/SCN/hires/Z8L/Z8L_StealthBlack_1366x443.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Front seats",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw064ac086/z112/interiros/Desktop_Command_Seat.png"
+   }
+  ]
+ },
+ "Mahindra|Thar OG": {
+  "page": "https://auto.mahindra.com/suv/thar/THRN.html?dwvar_THRN_fuelType=DIESEL&quantity=1",
+  "hero": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw676f4f57/images/THRN/hires/ZXT_ArtemisSilver_1366x443.png",
+  "colors": [
+   {
+    "name": "Artemis Silver color",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw676f4f57/images/THRN/hires/ZXT_ArtemisSilver_1366x443.png"
+   },
+   {
+    "name": "Battleship Grey color",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw8327e178/images/THRN/hires/ZXT_BattleshipGrey_1366x443.png"
+   },
+   {
+    "name": "Deep Forest color",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw33b75185/images/THRN/hires/ZXT_DeepForest_1366x443.png"
+   },
+   {
+    "name": "Everest White color",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw4c10b333/images/THRN/hires/ZXT_EverestWhite_1366x443.png"
+   },
+   {
+    "name": "Galaxy Grey color",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwb36235d5/images/THRN/hires/ZXT_GalaxyGrey_1366x443.png"
+   },
+   {
+    "name": "Jeans Blue color",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw6d519494/images/THRN/hires/ZXT_JeansBlue_1366x443.png"
+   },
+   {
+    "name": "Stealth Black color",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwe2b71145/images/THRN/hires/ZXT_StealthBlack_1366x443.png"
+   },
+   {
+    "name": "Tango Red color",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw896d4a05/images/THRN/hires/ZXT_TangoRed_1366x443.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Front seats",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw7425260d/THRN-W511/Interior/3-Leatherette-Seats.jpg"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dwfdb7f185/THRN-W511/Interior/6-EPS.jpg"
+   }
+  ]
+ },
+ "Mahindra|Thar Roxx": {
+  "page": "https://auto.mahindra.com/suv/thar-roxx/TH5D.html?dwvar_TH5D_fuelType=DIESEL&quantity=1",
+  "hero": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwe5fbea3d/images/TH5D/hires/AX7L_BurntSienna_1366x443.png",
+  "colors": [
+   {
+    "name": "Burnt Sienna",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwe5fbea3d/images/TH5D/hires/AX7L_BurntSienna_1366x443.png"
+   },
+   {
+    "name": "Citrine Yellow",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwb224ce64/images/TH5D/hires/AX7_StarEdn_1366x443_CitrineYellow.png"
+   },
+   {
+    "name": "Deep Forest",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw2e020505/images/TH5D/hires/AX7L_DeepForest_1366x443.png"
+   },
+   {
+    "name": "Everest White",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw6571f9e8/images/TH5D/hires/AX7L_EverestWhite_1366x443.png"
+   },
+   {
+    "name": "Nebula Blue",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw80789913/images/TH5D/hires/AX7L_NebulaBlue_1366x443.png"
+   },
+   {
+    "name": "Stealth Black",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw703e2a53/images/TH5D/hires/AX7L_StealthBlack_1366x443.png"
+   },
+   {
+    "name": "Tango Red",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw88fba8e2/images/TH5D/hires/AX7L_TangoRed_1366x443.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Front seats",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw47acaeb8/thar-roxx/Interior/desktop/320x380-dark-interior.jpg"
+   }
+  ]
+ },
+ "Mahindra|XUV 3XO": {
+  "page": "https://auto.mahindra.com/suv/xuv3xo/X3XO.html?dwvar_X3XO_fuelType=DIESEL&dwvar_X3XO_seatingCapacity=5&quantity=1",
+  "hero": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw4f41d370/images/X3XO/hires/AX5L_TangoRed_1366x443.png",
+  "colors": [
+   {
+    "name": "Stealth Black + Galaxy Grey (Dual Tone)",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw7e0b6748/images/X3XO/hires/AX7L_GalaxyGrey_SB_1366x443.png"
+   },
+   {
+    "name": "Stealth Black + Dune Beige (Dual Tone)",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwec6ae72e/images/X3XO/hires/AX7L_DuneBeige_SB_1366x443.png"
+   },
+   {
+    "name": "Galaxy Grey + Deep Forest (Dual Tone)",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwc1add46b/images/X3XO/hires/AX7L_DeepForest_GG_1366x443.png"
+   },
+   {
+    "name": "Stealth Black + Tango Red (Dual Tone)",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw4f2fe59f/images/X3XO/hires/AX7L_TangoRed_SB_1366x443.png"
+   },
+   {
+    "name": "Galaxy Grey + Stealth Black (Dual Tone)",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw77b8d021/images/X3XO/hires/AX7L_StealthBlack_GG_1366x443.png"
+   },
+   {
+    "name": "Galaxy Grey + Nebula Blue (Dual Tone)",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw4143cb87/images/X3XO/hires/AX7L_NebulaBlue_GG_1366x443.png"
+   },
+   {
+    "name": "Stealth Black + Citrine Yellow (Dual Tone)",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwe545db7a/images/X3XO/hires/AX7L_CitrineYellow_SB_1366x443.png"
+   },
+   {
+    "name": "Tango Red",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw4f41d370/images/X3XO/hires/AX5L_TangoRed_1366x443.png"
+   },
+   {
+    "name": "Stealth Black",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw74cc42a5/images/X3XO/large/AX5L_StealthBlack_602x339.png"
+   },
+   {
+    "name": "Nebula Blue",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw2a7d82dd/images/X3XO/hires/AX5L_NebulaBlue_1366x443.png"
+   },
+   {
+    "name": "Galaxy Grey",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwa7da6b81/images/X3XO/hires/AX5L_GalaxyGrey_1366x443.png"
+   },
+   {
+    "name": "Everest White",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw1b03c2ed/images/X3XO/hires/AX5L_EverestWhite_1366x443.png"
+   },
+   {
+    "name": "Dune Beige",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw7b9a007e/images/X3XO/hires/AX5L_DuneBeige_1366x443.png"
+   },
+   {
+    "name": "Deep Forest",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw06c3ccc1/images/X3XO/hires/AX5L_DeepForest_1366x443.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw4b7cdb9d/X3XO/interiorExterior/desktop/Dashboard-desktop.png"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dwe310927c/X3XO/interiorExterior/desktop/Second-Row-Seat-desktop.png"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw4cd99760/X3XO/interiorExterior/desktop/Leg-room-desktop.png"
+   }
+  ]
+ },
+ "Mahindra|XUV 7XO": {
+  "page": "https://auto.mahindra.com/suv/xuv-7xo/X7XO.html?dwvar_X7XO_fuelType=DIESEL&quantity=1",
+  "hero": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwcfcf0938/images/X7XO/hires/AX7L_1366x443_DesertMyst.png",
+  "colors": [
+   {
+    "name": "Desert Myst",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwcfcf0938/images/X7XO/hires/AX7L_1366x443_DesertMyst.png"
+   },
+   {
+    "name": "Galaxy Grey",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw5090da23/images/X7XO/hires/AX7L_1366x443_GalaxyGrey.png"
+   },
+   {
+    "name": "Midnight Black",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw8c867731/images/X7XO/hires/AX7L_1366x443_MidNightBlack.png"
+   },
+   {
+    "name": "Nebula Blue",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwc336e24d/images/X7XO/hires/AX7L_1366x443_NebulaBlue.png"
+   },
+   {
+    "name": "Ruby Velvet",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw536c3d34/images/X7XO/hires/AX7L_1366x443_RubyVelvet.png"
+   },
+   {
+    "name": "Stealth Black",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw840db8e9/images/X7XO/hires/AX7L_1366x443_StealthBlack.png"
+   },
+   {
+    "name": "Everest White Dual Tone",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwa3285b84/images/X7XO/hires/AX7L_DT_1366x443_EverestWhite_DT.png"
+   },
+   {
+    "name": "Midnight Black Dual Tone",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw8b6e4bf3/images/X7XO/hires/AX7L_DT_1366x443_MidNightBlack_DT.png"
+   },
+   {
+    "name": "Desert Myst Dual Tone",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw0dc498f5/images/X7XO/hires/AX7L_DT_1366x443_DesertMyst_DT.png"
+   },
+   {
+    "name": "Everest White",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw4c3f1b83/images/X7XO/hires/AX7L_1366x443_EverestWhite.png"
+   },
+   {
+    "name": "Galaxy Grey Dual Tone",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw8bc44a1f/images/X7XO/hires/AX7L_DT_1366x443_GalaxyGrey_DT.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw2707cc2d/XUV-7XO/key-highlights/Desktop/BIS-Coast-to-Coast-31.2cm-HD-Triple-Screens-1920-X-960-R1.jpeg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw1e9c14d5/XUV-7XO/key-highlights/Desktop/6-way-Powered-Co-driver-seat-with-4-way-Boss-mode-1920-X-960-R1.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dwcf7eaba7/XUV-7XO/key-highlights/Untitled-test-2.jpg"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-amc-Library/default/dw1158babc/XUV-7XO/interior/Leather-Interior.jpg"
+   }
+  ]
+ },
+ "Mahindra|XUV400": {
+  "page": "https://auto.mahindra.com/suv/xuv400/X400.html?dwvar_X400_fuelType=ELECTR&dwvar_X400_gearBoxType=AUTOMATIC&dwvar_X400_seatingCapacity=5&dwvar_X400_variantCode=M0497&quantity=1",
+  "hero": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwb4faaa6d/images/X400/hires/ELPro_NebulaBlue_1366x443.png",
+  "colors": [
+   {
+    "name": "Nebula Blue",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwb4faaa6d/images/X400/hires/ELPro_NebulaBlue_1366x443.png"
+   },
+   {
+    "name": "Napoli Black",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dwc034f537/images/X400/hires/ELPro_NapoliBlack_1366x443.png"
+   },
+   {
+    "name": "Galaxy Grey",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw590a5ebb/images/X400/hires/ELPro_GalaxyGrey_1366x443.png"
+   },
+   {
+    "name": "Everest White",
+    "img": "https://auto.mahindra.com/dw/image/v2/BKRC_PRD/on/demandware.static/-/Sites-mahindra-product-catalog/default/dw4e536c7b/images/X400/hires/ELPro_EverestWhite_1366x443.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://auto.mahindra.com/on/demandware.static/-/Sites-amc-Library/default/dwce4856e2/mahindraelectricimagesnew/xuv400images/xuv-features/1600X900_CLIENT_Dual_Tone_Interiors.webp"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://auto.mahindra.com/on/demandware.static/-/Sites-amc-Library/default/dwcb69cb9d/mahindraelectricimagesnew/xuv400images/xuv-features/CLIENT_Cabin-Space_1600X1067.webp"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://auto.mahindra.com/on/demandware.static/-/Sites-amc-Library/default/dwbc8c9442/mahindraelectricimagesnew/xuv400images/xuv-features/10.25_Infotainment_System_1280X720.webp"
+   },
+   {
+    "cap": "Dashboard",
+    "img": "https://auto.mahindra.com/on/demandware.static/-/Sites-amc-Library/default/dw585c4593/mahindraelectricimagesnew/xuv400images/xuv-features/DashboardReady_1500x750.png"
+   }
+  ]
+ }
+}

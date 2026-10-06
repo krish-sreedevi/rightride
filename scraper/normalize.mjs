@@ -307,16 +307,12 @@ export function normalize() {
       experts[k] = { s: v.score || null, sc: v.scores || null, like: tidy(v.like), dislike: tidy(v.dislike), yt: v.video ? v.video.id : null, ytT: v.video ? v.video.title : null, url: v.url || null, rv: v.review ? v.review.title : null, basedOn: v.basedOn || null };
     }
   }
-  // one consistent, transparent studio image per model (Autocar India's CDN, resized on the fly);
-  // the maker's own image stays as a fallback
-  const imf = path.join(ROOT, 'data/images.json');
-  const IMG = fs.existsSync(imf) ? JSON.parse(fs.readFileSync(imf, 'utf8')).models || {} : {};
-  const XIMG = fs.existsSync(xf) ? JSON.parse(fs.readFileSync(xf, 'utf8')).models || {} : {};
+  // one standardized studio image per model, made from the maker's own press/website image by scraper/carimg.py
+  const CI = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data/car-images.json'), 'utf8')).models || {}; } catch (e) { return {}; } })();
   for (const c of cars) {
-    const k = `${c.brand}|${c.model}`, slug = IMG[k] || (XIMG[k] && XIMG[k].image) || null;
-    const own = c.image && /^https?:\/\//.test(c.image) && !/open-graph|home-hero|banner/i.test(c.image) ? c.image : null;
-    c.image = slug ? `https://asset.autocarindia.com/static/car-images/${slug}.png` : own;
-    c.image2 = slug ? own : null;
+    const e = CI[`${c.brand}|${c.model}`];
+    c.image = e && e.hero ? e.hero.img : null;
+    c.image2 = null;
   }
   const rd = (f) => { const p = path.join(ROOT, 'data', f); return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')).models || {} : {}; };
   const have = new Set(cars.map((c) => `${c.brand}|${c.model}`));
@@ -329,6 +325,7 @@ export function normalize() {
 // 5-year retained value (share of ex-showroom) by brand: a typical-market estimate, adjusted for fuel and body type
 const RETAIN = { 'Maruti Suzuki': 60, Toyota: 62, Honda: 52, Hyundai: 55, Kia: 52, Mahindra: 55, Tata: 47, MG: 42, Renault: 40, Nissan: 38, Skoda: 45, Volkswagen: 45, Jeep: 45, 'Mercedes-Benz': 45, BMW: 42, Audi: 40, 'Land Rover': 48 };
 function buildExtras(out) {
+  const CIMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data/car-images.json'), 'utf8')).models || {}; } catch (e) { return {}; } })();
   const raw = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data/extras.json'), 'utf8')).models || {}; } catch (e) { return {}; } })();
   const byModel = {};
   for (const c of out.cars) (byModel[c.brand + '|' + c.model] = byModel[c.brand + '|' + c.model] || []).push(c);
@@ -374,9 +371,10 @@ function buildExtras(out) {
       const cols = parts.map((p) => (M.find(([re]) => re.test(p)) || [null, null])[1]).filter(Boolean);
       return cols.length ? [...new Set(cols)].slice(0, 2) : ['#9a9ca1'];
     };
+    const ci = CIMG[k] || {};
     models[k] = {
-      colors: (x.colors || []).slice(0, 14).map((c) => ({ name: c.name, img: c.img, sw: swatch(c.name) })),
-      interior: (x.interior || []).slice(0, 8),
+      colors: (ci.colors || []).slice(0, 14).map((c) => ({ name: c.name, img: c.img, sw: swatch(c.name) })),
+      interior: (ci.interior || []).slice(0, 8).map((c) => ({ cap: c.cap, img: c.img })),
       mileage, rating, service, resale,
     };
   }

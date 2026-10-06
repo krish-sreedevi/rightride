@@ -1,0 +1,81 @@
+{
+ "Volkswagen|Taigun": {
+  "page": "https://www.volkswagen.co.in/en/models/taigun.html",
+  "hero": "https://assets.volkswagen.com/is/image/volkswagenag/taigun-model-db-1920X1080?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTE5MjAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNjdkZQ==",
+  "colors": [
+   {
+    "name": "Wild Cherry Red",
+    "img": "https://r-media.volkswagen.com/persisted/d7d79879-8d21-4c7c-a94b-a0d8df816e15/0.0.0/vehicle-mbt/623-2026-MYU/v1_90dbc5945248e7e69dd94891cfb5d107970f733e5248fbcd7ef58416ebc08233/custturntable4/ae45fbb96dc39b5763be6ab960b1561c.png"
+   },
+   {
+    "name": "Carbon Steel",
+    "img": "https://r-media.volkswagen.com/persisted/d7d79879-8d21-4c7c-a94b-a0d8df816e15/0.0.0/vehicle-mbt/623-2026-MYU/v1_72c580a9c79bb404a0aa512f113181090614c24f6980124f62d63bf9935afc16/custturntable4/23156fbcef3aea04cec37ad0684c26f6.png"
+   },
+   {
+    "name": "Carbon Steel Matte",
+    "img": "https://r-media.volkswagen.com/persisted/d7d79879-8d21-4c7c-a94b-a0d8df816e15/0.0.0/vehicle-mbt/623-2026-MYU/v1_7124c636c464aa9e55793fa9a91774b72937138c476e0271bf67e46d9d641728/custturntable4/f64ea56f896a155c5e02305c31ee1b2a.png"
+   },
+   {
+    "name": "Deep Black Pearl",
+    "img": "https://r-media.volkswagen.com/persisted/d7d79879-8d21-4c7c-a94b-a0d8df816e15/0.0.0/vehicle-mbt/623-2026-MYU/v1_fb87bfad3479df02ee0104af33b04e7b1b1e7d43974f7944ec66e05263d7b35e/custturntable4/b59a09de113dc5c0a3e741fd6bf815a6.png"
+   },
+   {
+    "name": "Lava Blue",
+    "img": "https://r-media.volkswagen.com/persisted/d7d79879-8d21-4c7c-a94b-a0d8df816e15/0.0.0/vehicle-mbt/623-2026-MYU/v1_5b337f15f548d54d20dcd2799a91f73d5ac2db53621ee5554fe898e6a539a0ed/custturntable4/e80a8ff26e2805577d9ba43c384a6109.png"
+   },
+   {
+    "name": "Reflex Silver",
+    "img": "https://r-media.volkswagen.com/persisted/d7d79879-8d21-4c7c-a94b-a0d8df816e15/0.0.0/vehicle-mbt/623-2026-MYU/v1_d355a541eae3d9279e08b47e23de7c3cd8e7f6d592898ec4fe211d939e784b4d/custturntable4/4929c0a6164e0fbaca10dda9805c4d36.png"
+   },
+   {
+    "name": "Steel Grey",
+    "img": "https://r-media.volkswagen.com/persisted/d7d79879-8d21-4c7c-a94b-a0d8df816e15/0.0.0/vehicle-mbt/623-2026-MYU/v1_64a92e34b0da14f6f1f706a5a5cc0e258122dbc77f70df936abebfc81bb55405/custturntable4/1556c9160d23cf92ac37b322c26b4dfa.png"
+   },
+   {
+    "name": "Candy White",
+    "img": "https://r-media.volkswagen.com/persisted/d7d79879-8d21-4c7c-a94b-a0d8df816e15/0.0.0/vehicle-mbt/623-2026-MYU/v1_3f41f398074a7a53f56611bdfc58cc4f6550e2bd060b677d3912ac08f7429ee2/custturntable4/efe642e31358cde07567d970656e8999.png"
+   },
+   {
+    "name": "Avacado Pearl",
+    "img": "https://r-media.volkswagen.com/persisted/d7d79879-8d21-4c7c-a94b-a0d8df816e15/0.0.0/vehicle-mbt/623-2026-MYU/v1_afb7a51a918c82881f9ee8c441a057367a366b6b9f71e14e24830de6a84fb441/custturntable4/002430a4b1c7e856c8d40e4292fd9496.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/the-new-taigun-section3?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTE5MjAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNjdkZQ=="
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/the-new-taigun-section4?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTE5MjAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmNjdkZQ=="
+   },
+   {
+    "cap": "Panoramic sunroof",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/the-new-taigun-section5?Zm10PXdlYnAtYWxwaGEmcWx0PTc5JndpZD0xOTIwJmJmYz1vZmYmYzQ5Nw=="
+   }
+  ]
+ },
+ "Volkswagen|Virtus": {
+  "page": "https://www.volkswagen.co.in/en/models/virtus.html",
+  "hero": "https://assets.volkswagen.com/is/image/volkswagenag/virtus-chrome-image?Zml0PWNyb3AsMSZmbXQ9d2VicCZxbHQ9Nzkmd2lkPTEyODAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmMzI3Yw==",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Rear seats",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/virtus-leather-seats?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+   },
+   {
+    "cap": "Climate control",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/volkswagen-virtus-ac?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+   },
+   {
+    "cap": "Wireless charger",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/volkswagen-virtus-wireless-charging?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+   },
+   {
+    "cap": "Gear lever (DSG)",
+    "img": "https://assets.volkswagen.com/is/image/volkswagenag/volkswagen-virtus-7-speed-dsg?Zml0PWNyb3AsMSZmbXQ9d2VicC1hbHBoYSZxbHQ9Nzkmd2lkPTEyMDAmaGVpPTEyMDAmYWxpZ249MC4wMCwwLjAwJmJmYz1vZmYmN2RjOQ=="
+   }
+  ]
+ }
+}

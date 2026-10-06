@@ -1,0 +1,706 @@
+{
+ "Mercedes-Benz|A-Class": {
+  "page": "https://media.mercedes-benz.com/",
+  "hero": "https://api.media.mercedes-benz.com/jsonapi/image/deliver/98db7b92-b93b-465a-9e93-40e3297f41f4/3_2_1053",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Front seats",
+    "img": "https://api.media.mercedes-benz.com/jsonapi/image/deliver/14fd8ffb-21e1-4c48-b927-0bfb3d939a55/3_2_1053"
+   }
+  ]
+ },
+ "Mercedes-Benz|AMG GT Coupe": {
+  "page": "https://www.mbusa.com/en/vehicles/class/amg-gt-2-door/mercedes-amg-gt-2-door-coupe",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/192378/807/iris.png?q=COSY-EU-100-1713d0VXqrWFqtyO67PobzIr3eWsrrCsdRRzwQZUOBZbMw3SGtlaMtsd2HtcUfpMqXGEjGBJ0lVohOB2sr%25bApUPlI5uGmIQC3aMrkzNHzxm7j8GvhKViYh%25vq4yjyLRsGWYaxCXprH1zHdn8w7PcoiZx6YM4FsQkTSMrp32ovm7jGhZhKVUp4%25vqECyyLRanfYaxHNJrHAlGqhTWFEnlAoW7Ns1JnwxV4V%25d%25CWLH59zW0uBZTmGaX&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Power front sport seats",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/amg-gt-class/amg-gt-2-dr/byo-options/2027-AMG-GT-COUPE-IH-1.jpg"
+   },
+   {
+    "cap": "Control in your hands",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/amg-gt-class/amg-gt-2-dr/byo-options/2027-AMG-GT-COUPE-IH-2.jpg"
+   },
+   {
+    "cap": "MANUFAKTUR Nappa leather",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/amg-gt-class/amg-gt-2-dr/byo-options/2027-AMG-GT-COUPE-IH-3.jpg"
+   },
+   {
+    "cap": "Audio atmosphere",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/amg-gt-class/amg-gt-2-dr/byo-options/2027-AMG-GT-COUPE-IH-4.jpg"
+   },
+   {
+    "cap": "Folding rear seats",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/amg-gt-class/amg-gt-2-dr/byo-options/2027-AMG-GT-COUPE-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|C-Class": {
+  "page": "https://www.mbusa.com/en/vehicles/class/c-class/sedan",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/206046/806/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtle9tsd2HTcUfp8fXGEuiRJ0l3IhOB2NQcbApjkoI5uVcZQC3qkWkzNRL6m7jZ6qhKVFKF%25vq9UTyLRDGfYaxWbSrH1KH1n8wvVwoiZUbEM4FGCwTg90626PDBSqSeWAt2tsd6HTcUfKr1XGEvnVJ0lgYAOB2PMcbApedlI5uscIQC3UkrkzNGm6m7j0aohKVBHL%25vqA8lyLRiXJYnymdEW%255OB2grEbAp4PtI5uB5uQC3ACFkzNWUbm7jK7IhKVvsQ%25vGdeNQnF1Wydaj%25XxcqtyRV3H3k9kBF7v0wAFslUxnIeKS&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [
+   {
+    "name": "Selenite Grey",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/206046/806/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZUkRZbMw3SGtle9tsd2HTcUfp8fXGEuiRJ0l3IhOB2NQcbApjkoI5uVcZQC3qkWkzNRL6m7jZ6qhKVFKF%25vq9UTyLRDGfYaxWbSrH1KH1n8wvVwoiZUbEM4FGCwTg90626PDBSqSeWAt2tsd6HTcUfKr1XGEvnVJ0lgYAOB2PMcbApedlI5uscIQC3UkrkzNGm6m7j0aohKVBHL%25vqA8lyLRiXJYnymdEW%255OB2grEbAp4PtI5uB5uQC3ACFkzNWUbm7jK7IhKVvsQ%25vGdeNQnF1Wydaj%25XxcqtyRV3H3k9kBF7v0wAFslUxnIeKS&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Obsidian Black",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/206046/806/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtle9tsd2HTcUfp8fXGEuiRJ0l3IhOB2NQcbApjkoI5uVcZQC3qkWkzNRL6m7jZ6qhKVFKF%25vq9UTyLRDGfYaxWbSrH1KH1n8wvVwoiZUbEM4FGCwTg90626PDBSqSeWAt2tsd6HTcUfKr1XGEvnVJ0lgYAOB2PMcbApedlI5uscIQC3UkrkzNGm6m7j0aohKVBHL%25vqA8lyLRiXJYnymdEW%255OB2grEbAp4PtI5uB5uQC3ACFkzNWUbm7jK7IhKVvsQ%25vGdeNQnF1Wydaj%25XxcqtyRV3H3k9kBF7v0wAFslUxnIeKS&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Memorable seating",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my26/c-class/class-page/series-ncm/2026-C-SEDAN-IH-1.jpg"
+   },
+   {
+    "cap": "Spectrum of styles",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my26/c-class/class-page/series-ncm/2026-C-SEDAN-IH-2.jpg"
+   },
+   {
+    "cap": "Finely crafted cabin",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my26/c-class/class-page/series-ncm/2026-C-SEDAN-IH-3.jpg"
+   },
+   {
+    "cap": "Wireless connections",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my26/c-class/class-page/series-ncm/wirelessconnections.jpg"
+   },
+   {
+    "cap": "Digital recognition",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my26/c-class/class-page/series-ncm/2026-C-SEDAN-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|CLA": {
+  "page": "https://www.mbusa.com/en/vehicles/class/cla/sedan",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/174313/807_057/iris.png?q=COSY-EU-100-1713d0VXqaWFng9jfZobxEnlqHI5QqqrQCPPnU2GOBLxm7skt0uBuibB2rQC6ApnkhS5uomUtC3Mt3gzNTcvX7j6XBkKVSJ1SvqtOwULRcbG%25axXmlyH1Jh5s8wO%25SriZbyWh4FIYa0g9Q19WPDkwJYeWmZs6sdhFvCUf%253fJGEyNZ60lYjFpB2rV4vApnq5c5uoRC5C3MxqrzNT1PP7j6CPMKVSzlCvqt72xLRcKZLaxXfHaH1JEUv8wOjBMiZbVZY4FIq3rg9QRqnPDkxHPeWmlWKsdh2aCUf%25pHUGEyuaH0AGetXSUF8wO2N8iZbpjb4FIu7Yg9Q3KgPDkNJieWm9GKsdhDavUf%25XRPGEylL70lY2lSB2rp2UApnuZc5uo3F0C3DIZr0vXSbzIDtpEioM4zToYVYBJBdXp3WtfXFm96vGZui&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [
+   {
+    "name": "Aqua Mint",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/174313/807_057/iris.png?q=COSY-EU-100-1713d0VXqaWFng9jfZobxEnlqHI5QqqrQCPPnU2GTBzxm7skt0uBuibB2rQC6ApnkhS5uomUtC3Mt3gzNTcvX7j6XBkKVSJ1SvqtOwULRcbG%25axXmlyH1Jh5s8wO%25SriZbyWh4FIYa0g9Q19WPDkwJYeWmZs6sdhFvCUf%253fJGEyNZ60lYjFpB2rV4vApnq5c5uoRC5C3MxqrzNT1PP7j6CPMKVSzlCvqt72xLRcKZLaxXfHaH1JEUv8wOjBMiZbVZY4FIq3rg9QRqnPDkxHPeWmlWKsdh2aCUf%25pHUGEyuaH0AGetXSUF8wO2N8iZbpjb4FIu7Yg9Q3KgPDkNJieWm9GKsdhDavUf%25XRPGEylL70lY2lSB2rp2UApnuZc5uo3F0C3DIZr0vXSbzIDtpEioM4zToYVYBJBdXp3WtfXFm96vGZui&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Polar White",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/174313/807_057/iris.png?q=COSY-EU-100-1713d0VXqaWFng9jfZobxEnlqHI5QqqrQCPPnU2GOBLxm7skt0uBuibB2rQC6ApnkhS5uomUtC3Mt3gzNTcvX7j6XBkKVSJ1SvqtOwULRcbG%25axXmlyH1Jh5s8wO%25SriZbyWh4FIYa0g9Q19WPDkwJYeWmZs6sdhFvCUf%253fJGEyNZ60lYjFpB2rV4vApnq5c5uoRC5C3MxqrzNT1PP7j6CPMKVSzlCvqt72xLRcKZLaxXfHaH1JEUv8wOjBMiZbVZY4FIq3rg9QRqnPDkxHPeWmlWKsdh2aCUf%25pHUGEyuaH0AGetXSUF8wO2N8iZbpjb4FIu7Yg9Q3KgPDkNJieWm9GKsdhDavUf%25XRPGEylL70lY2lSB2rp2UApnuZc5uo3F0C3DIZr0vXSbzIDtpEioM4zToYVYBJBdXp3WtfXFm96vGZui&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Cosmic Black",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/174313/807_057/iris.png?q=COSY-EU-100-1713d0VXqaWFng9jfZobxEnlqHI5QqqrQCPPnU2GOpzxm7skt0uBuibB2rQC6ApnkhS5uomUtC3Mt3gzNTcvX7j6XBkKVSJ1SvqtOwULRcbG%25axXmlyH1Jh5s8wO%25SriZbyWh4FIYa0g9Q19WPDkwJYeWmZs6sdhFvCUf%253fJGEyNZ60lYjFpB2rV4vApnq5c5uoRC5C3MxqrzNT1PP7j6CPMKVSzlCvqt72xLRcKZLaxXfHaH1JEUv8wOjBMiZbVZY4FIq3rg9QRqnPDkxHPeWmlWKsdh2aCUf%25pHUGEyuaH0AGetXSUF8wO2N8iZbpjb4FIu7Yg9Q3KgPDkNJieWm9GKsdhDavUf%25XRPGEylL70lY2lSB2rp2UApnuZc5uo3F0C3DIZr0vXSbzIDtpEioM4zToYVYBJBdXp3WtfXFm96vGZui&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Patagonia Red",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/174313/807_057/iris.png?q=COSY-EU-100-1713d0VXqaWFng9jfZobxEnlqHI5QqqrQCPPnU2GkpUxm7skt0uBuibB2rQC6ApnkhS5uomUtC3Mt3gzNTcvX7j6XBkKVSJ1SvqtOwULRcbG%25axXmlyH1Jh5s8wO%25SriZbyWh4FIYa0g9Q19WPDkwJYeWmZs6sdhFvCUf%253fJGEyNZ60lYjFpB2rV4vApnq5c5uoRC5C3MxqrzNT1PP7j6CPMKVSzlCvqt72xLRcKZLaxXfHaH1JEUv8wOjBMiZbVZY4FIq3rg9QRqnPDkxHPeWmlWKsdh2aCUf%25pHUGEyuaH0AGetXSUF8wO2N8iZbpjb4FIu7Yg9Q3KgPDkNJieWm9GKsdhDavUf%25XRPGEylL70lY2lSB2rp2UApnuZc5uo3F0C3DIZr0vXSbzIDtpEioM4zToYVYBJBdXp3WtfXFm96vGZui&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Seat heating and memory",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/cla-sedan/byo-options/2027-CLA-BEV-SEDAN-IH-1.jpg"
+   },
+   {
+    "cap": "Widescreen dash",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/cla-sedan/byo-options/2027-CLA-BEV-SEDAN-IH-2.jpg"
+   },
+   {
+    "cap": "Modern trim selections",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/cla-sedan/byo-options/2027-CLA-BEV-SEDAN-IH-3.jpg"
+   },
+   {
+    "cap": "Distinctive upholsteries",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/cla-sedan/byo-options/2027-CLA-BEV-SEDAN-IH-4.jpg"
+   },
+   {
+    "cap": "Front trunk with organizers",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/cla-sedan/byo-options/2027-CLA-BEV-SEDAN-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|CLE Cabriolet": {
+  "page": "https://www.mbusa.com/en/vehicles/class/cle/cabriolet",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/236447/807/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGeOtsd2HTcUfp8fXGEuiRJ0l34rOB2NQ%25bApjkXI5uVmMQC3qXFkzNRL6m7jZ7ZhKVFsM%25vq9UdyLRzcyYax7NxrH1eJtn8wsz4oiZU6oM4FGTlTg906E6PDMLoSeWTQStsd7J3cUfKr1XGEvnVJ0lgYZOB2PBqbApeTXI5usf2QC3UXQkzNGm6m7j0aohKVBHV%25vqA8ayLR5i2Yax4bJrH1gObnMr%25E2fYzI5ueo2QC3PsXkzN5zNm7jK7IhKVvsW%25vqLBqyL0fsjko9wdYfHJyM1aRcYxqN8NmDmA9KLBZ59U2G1oQsvt&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [
+   {
+    "name": "High Tech Silver",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/236447/807/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZUnRZbMw3SGtGeOtsd2HTcUfp8fXGEuiRJ0l34rOB2NQ%25bApjkXI5uVmMQC3qXFkzNRL6m7jZ7ZhKVFsM%25vq9UdyLRzcyYax7NxrH1eJtn8wsz4oiZU6oM4FGTlTg906E6PDMLoSeWTQStsd7J3cUfKr1XGEvnVJ0lgYZOB2PBqbApeTXI5usf2QC3UXQkzNGm6m7j0aohKVBHV%25vqA8ayLR5i2Yax4bJrH1gObnMr%25E2fYzI5ueo2QC3PsXkzN5zNm7jK7IhKVvsW%25vqLBqyL0fsjko9wdYfHJyM1aRcYxqN8NmDmA9KLBZ59U2G1oQsvt&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Obsidian Black",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/236447/807/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtGeOtsd2HTcUfp8fXGEuiRJ0l34rOB2NQ%25bApjkXI5uVmMQC3qXFkzNRL6m7jZ7ZhKVFsM%25vq9UdyLRzcyYax7NxrH1eJtn8wsz4oiZU6oM4FGTlTg906E6PDMLoSeWTQStsd7J3cUfKr1XGEvnVJ0lgYZOB2PBqbApeTXI5usf2QC3UXQkzNGm6m7j0aohKVBHV%25vqA8ayLR5i2Yax4bJrH1gObnMr%25E2fYzI5ueo2QC3PsXkzN5zNm7jK7IhKVvsW%25vqLBqyL0fsjko9wdYfHJyM1aRcYxqN8NmDmA9KLBZ59U2G1oQsvt&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Graphite Grey",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/236447/807/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZ6TfZbMw3SGtGeOtsd2HTcUfp8fXGEuiRJ0l34rOB2NQ%25bApjkXI5uVmMQC3qXFkzNRL6m7jZ7ZhKVFsM%25vq9UdyLRzcyYax7NxrH1eJtn8wsz4oiZU6oM4FGTlTg906E6PDMLoSeWTQStsd7J3cUfKr1XGEvnVJ0lgYZOB2PBqbApeTXI5usf2QC3UXQkzNGm6m7j0aohKVBHV%25vqA8ayLR5i2Yax4bJrH1gObnMr%25E2fYzI5ueo2QC3PsXkzN5zNm7jK7IhKVvsW%25vqLBqyL0fsjko9wdYfHJyM1aRcYxqN8NmDmA9KLBZ59U2G1oQsvt&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Memorable seating",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/cle-class/cle-cab/byo-options/2027-CLE-CAB-IH-1.jpg"
+   },
+   {
+    "cap": "Extended welcome",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/cle-class/cle-cab/byo-options/2027-CLE-CAB-IH-5.jpg"
+   },
+   {
+    "cap": "Sun-reflecting leather",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/cle-class/cle-cab/byo-options/2027-CLE-CAB-IH-2.jpg"
+   },
+   {
+    "cap": "Wireless connections",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/cle-class/cle-cab/byo-options/2027-CLE-CAB-IH-3.jpg"
+   },
+   {
+    "cap": "Immersive audio",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/cle-class/cle-cab/byo-options/2027-CLE-CAB-IH-4.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|CLE Coupe": {
+  "page": "https://www.mbusa.com/en/vehicles/class/cle/coupe",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/236362/807/iris.png?q=COSY-EU-100-1713d0VXqNEFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtlaMtsd2HdcUfp8qXGEubmJ0l3ItOB2NQnbApjtwI5uVKIQC3qvTkzNwzwm7jZeohKVFsW%25vqCv%25yLRz3RYaxPXSrH1eHDn8wsz4oiZU6oM4FGTlTg9ovn6PDC%25uSeWznMtsd8hxcUfiUNXGE4nSJ0lgDfOB2PSObApeIyI5usQMQC3UvrkzNGLNm7j0avhKVBHE%25vq8tayLRiOXYax4JOroYhfldyCbApPnlI5uBdoQC3AnMkzNW5Sm7jKevhKVv0V%25vqLrdyLRaYVYaxH4ErHAlGqhTWFEnlibr7gV1JnwxV4V%25d%25CWLH59zW0uBZTmGaX&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [
+   {
+    "name": "Solid Sun Yellow",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/236362/807/iris.png?q=COSY-EU-100-1713d0VXqNEFqtyO67PobzIr3eWsrrCsdRRzwQZUOBZbMw3SGtlaMtsd2HdcUfp8qXGEubmJ0l3ItOB2NQnbApjtwI5uVKIQC3qvTkzNwzwm7jZeohKVFsW%25vqCv%25yLRz3RYaxPXSrH1eHDn8wsz4oiZU6oM4FGTlTg9ovn6PDC%25uSeWznMtsd8hxcUfiUNXGE4nSJ0lgDfOB2PSObApeIyI5usQMQC3UvrkzNGLNm7j0avhKVBHE%25vq8tayLRiOXYax4JOroYhfldyCbApPnlI5uBdoQC3AnMkzNW5Sm7jKevhKVv0V%25vqLrdyLRaYVYaxH4ErHAlGqhTWFEnlibr7gV1JnwxV4V%25d%25CWLH59zW0uBZTmGaX&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Metallic Obsidian Black",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/236362/807/iris.png?q=COSY-EU-100-1713d0VXqNEFqtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtlaMtsd2HdcUfp8qXGEubmJ0l3ItOB2NQnbApjtwI5uVKIQC3qvTkzNwzwm7jZeohKVFsW%25vqCv%25yLRz3RYaxPXSrH1eHDn8wsz4oiZU6oM4FGTlTg9ovn6PDC%25uSeWznMtsd8hxcUfiUNXGE4nSJ0lgDfOB2PSObApeIyI5usQMQC3UvrkzNGLNm7j0avhKVBHE%25vq8tayLRiOXYax4JOroYhfldyCbApPnlI5uBdoQC3AnMkzNW5Sm7jKevhKVv0V%25vqLrdyLRaYVYaxH4ErHAlGqhTWFEnlibr7gV1JnwxV4V%25d%25CWLH59zW0uBZTmGaX&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Alpine Grey Solid",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/236362/807/iris.png?q=COSY-EU-100-1713d0VXqNEFqtyO67PobzIr3eWsrrCsdRRzwQZU3IZbMw3SGtlaMtsd2HdcUfp8qXGEubmJ0l3ItOB2NQnbApjtwI5uVKIQC3qvTkzNwzwm7jZeohKVFsW%25vqCv%25yLRz3RYaxPXSrH1eHDn8wsz4oiZU6oM4FGTlTg9ovn6PDC%25uSeWznMtsd8hxcUfiUNXGE4nSJ0lgDfOB2PSObApeIyI5usQMQC3UvrkzNGLNm7j0avhKVBHE%25vq8tayLRiOXYax4JOroYhfldyCbApPnlI5uBdoQC3AnMkzNW5Sm7jKevhKVv0V%25vqLrdyLRaYVYaxH4ErHAlGqhTWFEnlibr7gV1JnwxV4V%25d%25CWLH59zW0uBZTmGaX&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Patagonia Red",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/236362/807/iris.png?q=COSY-EU-100-1713d0VXqNEFqtyO67PobzIr3eWsrrCsdRRzwQZUkwZbMw3SGtlaMtsd2HdcUfp8qXGEubmJ0l3ItOB2NQnbApjtwI5uVKIQC3qvTkzNwzwm7jZeohKVFsW%25vqCv%25yLRz3RYaxPXSrH1eHDn8wsz4oiZU6oM4FGTlTg9ovn6PDC%25uSeWznMtsd8hxcUfiUNXGE4nSJ0lgDfOB2PSObApeIyI5usQMQC3UvrkzNGLNm7j0avhKVBHE%25vq8tayLRiOXYax4JOroYhfldyCbApPnlI5uBdoQC3AnMkzNW5Sm7jKevhKVv0V%25vqLrdyLRaYVYaxH4ErHAlGqhTWFEnlibr7gV1JnwxV4V%25d%25CWLH59zW0uBZTmGaX&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Memorable seating",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/cle-class/cle-coupe/byo-options/2027-CLE-Coupe-IH-1.jpg"
+   },
+   {
+    "cap": "Extended welcome",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/cle-class/cle-coupe/byo-options/2027-CLE-Coupe-IH-2.jpg"
+   },
+   {
+    "cap": "Finely crafted cabin",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/cle-class/cle-coupe/byo-options/2027-CLE-Coupe-IH-3.jpg"
+   },
+   {
+    "cap": "Wireless connections",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/cle-class/cle-coupe/byo-options/2027-CLE-Coupe-IH-4.jpg"
+   },
+   {
+    "cap": "Immersive audio",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/cle-class/cle-coupe/byo-options/2027-CLE-Coupe-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|E-Class": {
+  "page": "https://www.mbusa.com/en/vehicles/class/e-class/sedan",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/214046/807/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtxmFtsd1JpcUfpUuXGEuiSJ0l34lOB2Ng1bApjPoI5uVcZQC3qkWkzNRLNm7jZeohKVFsW%25vq9JTyLRD3fYaxWrhrH1KHrn8wvVcoiZLqZM4FayuTg9HU96PDBkbSeWAeRtsd5vDcUfC80XGEzidJ0l7IJOB2KM%25bApvIRI5uLQDQC3akRkzNITum7jQGIhKVkbE%25vqeJ%25yLRsOWYaxUkhrH1Gc%25n8w7O3oiZKkYM4FvRwTg9LYO6PDar6SeWHtItsd8cxcUfiXyXGE45mJ0lgCAOB2PzFbAp7oMIkbX1ZxOeTg97zp6PD4PDSeWgejtsdPsxcUfeO1XGEsJSJ0lUrjOB2G7RbApFPyI5u9fzQC3zMrkzN7zwm7jK7IhKVvKt%25vqLUkyLRanfYaBEUVmMDZfrE8%25vOwJxXr1RjijhWh5DvaAFCDGp0wMkULc&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [
+   {
+    "name": "Nautic Blue",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/214046/807/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZhkHZbMw3SGtxmFtsd1JpcUfpUuXGEuiSJ0l34lOB2Ng1bApjPoI5uVcZQC3qkWkzNRLNm7jZeohKVFsW%25vq9JTyLRD3fYaxWrhrH1KHrn8wvVcoiZLqZM4FayuTg9HU96PDBkbSeWAeRtsd5vDcUfC80XGEzidJ0l7IJOB2KM%25bApvIRI5uLQDQC3akRkzNITum7jQGIhKVkbE%25vqeJ%25yLRsOWYaxUkhrH1Gc%25n8w7O3oiZKkYM4FvRwTg9LYO6PDar6SeWHtItsd8cxcUfiXyXGE45mJ0lgCAOB2PzFbAp7oMIkbX1ZxOeTg97zp6PD4PDSeWgejtsdPsxcUfeO1XGEsJSJ0lUrjOB2G7RbApFPyI5u9fzQC3zMrkzN7zwm7jK7IhKVvKt%25vqLUkyLRanfYaBEUVmMDZfrE8%25vOwJxXr1RjijhWh5DvaAFCDGp0wMkULc&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Polar White",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/214046/807/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtxmFtsd1JpcUfpUuXGEuiSJ0l34lOB2Ng1bApjPoI5uVcZQC3qkWkzNRLNm7jZeohKVFsW%25vq9JTyLRD3fYaxWrhrH1KHrn8wvVcoiZLqZM4FayuTg9HU96PDBkbSeWAeRtsd5vDcUfC80XGEzidJ0l7IJOB2KM%25bApvIRI5uLQDQC3akRkzNITum7jQGIhKVkbE%25vqeJ%25yLRsOWYaxUkhrH1Gc%25n8w7O3oiZKkYM4FvRwTg9LYO6PDar6SeWHtItsd8cxcUfiXyXGE45mJ0lgCAOB2PzFbAp7oMIkbX1ZxOeTg97zp6PD4PDSeWgejtsdPsxcUfeO1XGEsJSJ0lUrjOB2G7RbApFPyI5u9fzQC3zMrkzN7zwm7jK7IhKVvKt%25vqLUkyLRanfYaBEUVmMDZfrE8%25vOwJxXr1RjijhWh5DvaAFCDGp0wMkULc&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Obsidian Black",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/214046/807/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtxmFtsd1JpcUfpUuXGEuiSJ0l34lOB2Ng1bApjPoI5uVcZQC3qkWkzNRLNm7jZeohKVFsW%25vq9JTyLRD3fYaxWrhrH1KHrn8wvVcoiZLqZM4FayuTg9HU96PDBkbSeWAeRtsd5vDcUfC80XGEzidJ0l7IJOB2KM%25bApvIRI5uLQDQC3akRkzNITum7jQGIhKVkbE%25vqeJ%25yLRsOWYaxUkhrH1Gc%25n8w7O3oiZKkYM4FvRwTg9LYO6PDar6SeWHtItsd8cxcUfiXyXGE45mJ0lgCAOB2PzFbAp7oMIkbX1ZxOeTg97zp6PD4PDSeWgejtsdPsxcUfeO1XGEsJSJ0lUrjOB2G7RbApFPyI5u9fzQC3zMrkzN7zwm7jK7IhKVvKt%25vqLUkyLRanfYaBEUVmMDZfrE8%25vOwJxXr1RjijhWh5DvaAFCDGp0wMkULc&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Graphite Grey",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/214046/807/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZ6TfZbMw3SGtxmFtsd1JpcUfpUuXGEuiSJ0l34lOB2Ng1bApjPoI5uVcZQC3qkWkzNRLNm7jZeohKVFsW%25vq9JTyLRD3fYaxWrhrH1KHrn8wvVcoiZLqZM4FayuTg9HU96PDBkbSeWAeRtsd5vDcUfC80XGEzidJ0l7IJOB2KM%25bApvIRI5uLQDQC3akRkzNITum7jQGIhKVkbE%25vqeJ%25yLRsOWYaxUkhrH1Gc%25n8w7O3oiZKkYM4FvRwTg9LYO6PDar6SeWHtItsd8cxcUfiXyXGE45mJ0lgCAOB2PzFbAp7oMIkbX1ZxOeTg97zp6PD4PDSeWgejtsdPsxcUfeO1XGEsJSJ0lUrjOB2G7RbApFPyI5u9fzQC3zMrkzN7zwm7jK7IhKVvKt%25vqLUkyLRanfYaBEUVmMDZfrE8%25vOwJxXr1RjijhWh5DvaAFCDGp0wMkULc&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "High Tech Silver",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/214046/807/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZUnRZbMw3SGtxmFtsd1JpcUfpUuXGEuiSJ0l34lOB2Ng1bApjPoI5uVcZQC3qkWkzNRLNm7jZeohKVFsW%25vq9JTyLRD3fYaxWrhrH1KHrn8wvVcoiZLqZM4FayuTg9HU96PDBkbSeWAeRtsd5vDcUfC80XGEzidJ0l7IJOB2KM%25bApvIRI5uLQDQC3akRkzNITum7jQGIhKVkbE%25vqeJ%25yLRsOWYaxUkhrH1Gc%25n8w7O3oiZKkYM4FvRwTg9LYO6PDar6SeWHtItsd8cxcUfiXyXGE45mJ0lgCAOB2PzFbAp7oMIkbX1ZxOeTg97zp6PD4PDSeWgejtsdPsxcUfeO1XGEsJSJ0lUrjOB2G7RbApFPyI5u9fzQC3zMrkzN7zwm7jK7IhKVvKt%25vqLUkyLRanfYaBEUVmMDZfrE8%25vOwJxXr1RjijhWh5DvaAFCDGp0wMkULc&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Intuitive touch controls",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/e-class/e-sedan/byo-options/2027-E-SEDAN-IH-1.jpg"
+   },
+   {
+    "cap": "Wraparound cockpit",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/e-class/e-sedan/byo-options/2027-E-SEDAN-IH-2.jpg"
+   },
+   {
+    "cap": "Memorable seating",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/e-class/e-sedan/byo-options/2027-E-SEDAN-IH-4.jpg"
+   },
+   {
+    "cap": "Flexibly spacious",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/e-class/e-sedan/byo-options/2027-E-SEDAN-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|EQS": {
+  "page": "https://www.mbusa.com/en/vehicles/class/eqs/sedan",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/297139/807/iris.png?q=COSY-EU-100-1713d0VXq0WFng9jfZobxEnlqHI5QqqrQCPPnU2G2BTxm7skt0uBI5TB2rQm6ApnksS5uoSubC3Mt3jzNTcDz7j6XE5KVSJa4vqtOHzLRcb8GaxXIzyH1JQ8o8wOkD%25iZbmWa4FIhd4g9Q%25fQPDkyE7eWmo7KsdhMdEUf%25TRtGEy6x20lYS1TB2rt4vApncgO5uoX%25bC3MJymzNTO7A7j6bxJKVSue4vqt3qvLRcNEIaxXjuwH1JV3o8wOqNmiZbRvn4FIxgCg9Q1fQPDk2zneWmpWcsdhudnUf%253wlGEyNAG0lYjiKB2rVAtApnq5Q5uoR4aC3Mx8nzNT5Do7j69W7KVSDdQvqtW5zLRcdC%25axXfHaH1JEUv8wOjBMiZbVZy4FIq7Hg9QRXrPDkxHAeWm184sdhwiEUf%25Z4mGEyF0G0lY9BHB2rDAcApnWjc5uodVaC3MfqjzNTERh7j6lxMKVS1G4vqtw0vLRcZBGaxXF0BHiaK%25YhL3ApnD8Y5uo9FJC3Mp3MzNTuNQ7j63j%25KVSNdIvqtjHYLRcV8GaxXqHKH1JRA08wOx5hiZb1CD4FIwzEg9QZEoPDkSzieWmtO5sdhfKCUf%25EfTGEylEe0lY2lHB2rpwUApnuZO5uo374C3DIZr0vXSbzIj79j7IM4zToYVYBJBdXp3WtfXFm96vGZui&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [
+   {
+    "name": "Graphite Grey",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/297139/807/iris.png?q=COSY-EU-100-1713d0VXq0WFng9jfZobxEnlqHI5QqqrQCPPnU2GZwzxm7skt0uBI5TB2rQm6ApnksS5uoSubC3Mt3jzNTcDz7j6XE5KVSJa4vqtOHzLRcb8GaxXIzyH1JQ8o8wOkD%25iZbmWa4FIhd4g9Q%25fQPDkyE7eWmo7KsdhMdEUf%25TRtGEy6x20lYS1TB2rt4vApncgO5uoX%25bC3MJymzNTO7A7j6bxJKVSue4vqt3qvLRcNEIaxXjuwH1JV3o8wOqNmiZbRvn4FIxgCg9Q1fQPDk2zneWmpWcsdhudnUf%253wlGEyNAG0lYjiKB2rVAtApnq5Q5uoR4aC3Mx8nzNT5Do7j69W7KVSDdQvqtW5zLRcdC%25axXfHaH1JEUv8wOjBMiZbVZy4FIq7Hg9QRXrPDkxHAeWm184sdhwiEUf%25Z4mGEyF0G0lY9BHB2rDAcApnWjc5uodVaC3MfqjzNTERh7j6lxMKVS1G4vqtw0vLRcZBGaxXF0BHiaK%25YhL3ApnD8Y5uo9FJC3Mp3MzNTuNQ7j63j%25KVSNdIvqtjHYLRcV8GaxXqHKH1JRA08wOx5hiZb1CD4FIwzEg9QZEoPDkSzieWmtO5sdhfKCUf%25EfTGEylEe0lY2lHB2rpwUApnuZO5uo374C3DIZr0vXSbzIj79j7IM4zToYVYBJBdXp3WtfXFm96vGZui&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Obsidian Black",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/297139/807/iris.png?q=COSY-EU-100-1713d0VXq0WFng9jfZobxEnlqHI5QqqrQCPPnU2GOpJxm7skt0uBI5TB2rQm6ApnksS5uoSubC3Mt3jzNTcDz7j6XE5KVSJa4vqtOHzLRcb8GaxXIzyH1JQ8o8wOkD%25iZbmWa4FIhd4g9Q%25fQPDkyE7eWmo7KsdhMdEUf%25TRtGEy6x20lYS1TB2rt4vApncgO5uoX%25bC3MJymzNTO7A7j6bxJKVSue4vqt3qvLRcNEIaxXjuwH1JV3o8wOqNmiZbRvn4FIxgCg9Q1fQPDk2zneWmpWcsdhudnUf%253wlGEyNAG0lYjiKB2rVAtApnq5Q5uoR4aC3Mx8nzNT5Do7j69W7KVSDdQvqtW5zLRcdC%25axXfHaH1JEUv8wOjBMiZbVZy4FIq7Hg9QRXrPDkxHAeWm184sdhwiEUf%25Z4mGEyF0G0lY9BHB2rDAcApnWjc5uodVaC3MfqjzNTERh7j6lxMKVS1G4vqtw0vLRcZBGaxXF0BHiaK%25YhL3ApnD8Y5uo9FJC3Mp3MzNTuNQ7j63j%25KVSNdIvqtjHYLRcV8GaxXqHKH1JRA08wOx5hiZb1CD4FIwzEg9QZEoPDkSzieWmtO5sdhfKCUf%25EfTGEylEe0lY2lHB2rpwUApnuZO5uo374C3DIZr0vXSbzIj79j7IM4zToYVYBJBdXp3WtfXFm96vGZui&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "MBUX Hyperscreen",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/eqs-class/eqs-sedan/byo-options/2027-EQS-SEDAN-IH-1.jpg"
+   },
+   {
+    "cap": "Immersive audio",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/eqs-class/eqs-sedan/byo-options/2027-EQS-SEDAN-IH-2.jpg"
+   },
+   {
+    "cap": "First-class front seats",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/eqs-class/eqs-sedan/byo-options/2027-EQS-SEDAN-IH-3.jpg"
+   },
+   {
+    "cap": "Exquisite tailoring",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/eqs-class/eqs-sedan/byo-options/2027-EQS-SEDAN-IH-4.jpg"
+   },
+   {
+    "cap": "Luxurious rear cabin",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/eqs-class/eqs-sedan/byo-options/2027-EQS-SEDAN-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|EQS SUV": {
+  "page": "https://www.mbusa.com/en/vehicles/class/eqs/suv",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/296644/807/iris.png?q=COSY-EU-100-1713d0VXqrWFqtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtxa2tsd1JpcUfwFuXGEZT3J0l3YhOB2NB1bApjPXI5uVeIQC3qsFkzNR%25nm7jxyIhKV1Yh%25vqwrcyLRZ3mYaxFN8rH19m%25n8wDh2oiZWeEM4FdsrTg9fUT6PDEGDSeWl0htsd3h%25cUfNU0XGEjamJ0lVHlOB2q81bApRiCI5ux6YQC31SFkzNwl9m7jZ2fhKVFHt%25vqCtTyLRzLyYax709rH1KCtn8wvz4oiZL7NM4FaKfTg9HY36PD8SmSeWi0Wtsd5h3cUfC%25kXGEzGXJ0l70ZOB2KBjbApvPwI5uLezQC3ahQkzNH%25Km7j8cohKVipE%25vq4yTyLRgYyYaxPrprH1eOtn8wsXwoiZrb1M4FnKFTg95zT6PDC7NSeWzK3tsd7oTcUfKMqXGEvJXJ0lL%25tOB2PrFbApeARI5use1QC3Uh1kzNGtbm7j02ZhKVBbM%25vqAIkyLR5QHYaxCrYrH1znOn8w7PfoiZKeXM4FvsFTg9LUe6PDaGqSeWH09tsd9hTcUfArkXGE5nXJ0lCorOB2znobQOcxwRJPM4FKIwTg97zp6PD4PDSeWgeRtsdPv3cUfe8kXGEsbwJ0lUIrOB2GbcbAp0MqI5uBTLQC3ATxkzN5aZm7jd6ohKVfig%25vqLtTyLRaLDYaxHahrH18HOn8wiA2oiZ46IM4zuA1YtEWpTuP6M1DAFIT9ZxexrlrKE847dvE5jCDtyAib&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [
+   {
+    "name": "Obsidian Black Metallic",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/296644/807/iris.png?q=COSY-EU-100-1713d0VXqrWFqtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtxa2tsd1JpcUfwFuXGEZT3J0l3YhOB2NB1bApjPXI5uVeIQC3qsFkzNR%25nm7jxyIhKV1Yh%25vqwrcyLRZ3mYaxFN8rH19m%25n8wDh2oiZWeEM4FdsrTg9fUT6PDEGDSeWl0htsd3h%25cUfNU0XGEjamJ0lVHlOB2q81bApRiCI5ux6YQC31SFkzNwl9m7jZ2fhKVFHt%25vqCtTyLRzLyYax709rH1KCtn8wvz4oiZL7NM4FaKfTg9HY36PD8SmSeWi0Wtsd5h3cUfC%25kXGEzGXJ0l70ZOB2KBjbApvPwI5uLezQC3ahQkzNH%25Km7j8cohKVipE%25vq4yTyLRgYyYaxPrprH1eOtn8wsXwoiZrb1M4FnKFTg95zT6PDC7NSeWzK3tsd7oTcUfKMqXGEvJXJ0lL%25tOB2PrFbApeARI5use1QC3Uh1kzNGtbm7j02ZhKVBbM%25vqAIkyLR5QHYaxCrYrH1znOn8w7PfoiZKeXM4FvsFTg9LUe6PDaGqSeWH09tsd9hTcUfArkXGE5nXJ0lCorOB2znobQOcxwRJPM4FKIwTg97zp6PD4PDSeWgeRtsdPv3cUfe8kXGEsbwJ0lUIrOB2GbcbAp0MqI5uBTLQC3ATxkzN5aZm7jd6ohKVfig%25vqLtTyLRaLDYaxHahrH18HOn8wiA2oiZ46IM4zuA1YtEWpTuP6M1DAFIT9ZxexrlrKE847dvE5jCDtyAib&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "High Tech Silver",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/296644/807/iris.png?q=COSY-EU-100-1713d0VXqrWFqtyO67PobzIr3eWsrrCsdRRzwQZUnRZbMw3SGtxa2tsd1JpcUfwFuXGEZT3J0l3YhOB2NB1bApjPXI5uVeIQC3qsFkzNR%25nm7jxyIhKV1Yh%25vqwrcyLRZ3mYaxFN8rH19m%25n8wDh2oiZWeEM4FdsrTg9fUT6PDEGDSeWl0htsd3h%25cUfNU0XGEjamJ0lVHlOB2q81bApRiCI5ux6YQC31SFkzNwl9m7jZ2fhKVFHt%25vqCtTyLRzLyYax709rH1KCtn8wvz4oiZL7NM4FaKfTg9HY36PD8SmSeWi0Wtsd5h3cUfC%25kXGEzGXJ0l70ZOB2KBjbApvPwI5uLezQC3ahQkzNH%25Km7j8cohKVipE%25vq4yTyLRgYyYaxPrprH1eOtn8wsXwoiZrb1M4FnKFTg95zT6PDC7NSeWzK3tsd7oTcUfKMqXGEvJXJ0lL%25tOB2PrFbApeARI5use1QC3Uh1kzNGtbm7j02ZhKVBbM%25vqAIkyLR5QHYaxCrYrH1znOn8w7PfoiZKeXM4FvsFTg9LUe6PDaGqSeWH09tsd9hTcUfArkXGE5nXJ0lCorOB2znobQOcxwRJPM4FKIwTg97zp6PD4PDSeWgeRtsdPv3cUfe8kXGEsbwJ0lUIrOB2GbcbAp0MqI5uBTLQC3ATxkzN5aZm7jd6ohKVfig%25vqLtTyLRaLDYaxHahrH18HOn8wiA2oiZ46IM4zuA1YtEWpTuP6M1DAFIT9ZxexrlrKE847dvE5jCDtyAib&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Alpine Gray Solid",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/296644/807/iris.png?q=COSY-EU-100-1713d0VXqrWFqtyO67PobzIr3eWsrrCsdRRzwQZU3IZbMw3SGtxa2tsd1JpcUfwFuXGEZT3J0l3YhOB2NB1bApjPXI5uVeIQC3qsFkzNR%25nm7jxyIhKV1Yh%25vqwrcyLRZ3mYaxFN8rH19m%25n8wDh2oiZWeEM4FdsrTg9fUT6PDEGDSeWl0htsd3h%25cUfNU0XGEjamJ0lVHlOB2q81bApRiCI5ux6YQC31SFkzNwl9m7jZ2fhKVFHt%25vqCtTyLRzLyYax709rH1KCtn8wvz4oiZL7NM4FaKfTg9HY36PD8SmSeWi0Wtsd5h3cUfC%25kXGEzGXJ0l70ZOB2KBjbApvPwI5uLezQC3ahQkzNH%25Km7j8cohKVipE%25vq4yTyLRgYyYaxPrprH1eOtn8wsXwoiZrb1M4FnKFTg95zT6PDC7NSeWzK3tsd7oTcUfKMqXGEvJXJ0lL%25tOB2PrFbApeARI5use1QC3Uh1kzNGtbm7j02ZhKVBbM%25vqAIkyLR5QHYaxCrYrH1znOn8w7PfoiZKeXM4FvsFTg9LUe6PDaGqSeWH09tsd9hTcUfArkXGE5nXJ0lCorOB2znobQOcxwRJPM4FKIwTg97zp6PD4PDSeWgeRtsdPv3cUfe8kXGEsbwJ0lUIrOB2GbcbAp0MqI5uBTLQC3ATxkzN5aZm7jd6ohKVfig%25vqLtTyLRaLDYaxHahrH18HOn8wiA2oiZ46IM4zuA1YtEWpTuP6M1DAFIT9ZxexrlrKE847dvE5jCDtyAib&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Polar White",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/296644/807/iris.png?q=COSY-EU-100-1713d0VXqrWFqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtxa2tsd1JpcUfwFuXGEZT3J0l3YhOB2NB1bApjPXI5uVeIQC3qsFkzNR%25nm7jxyIhKV1Yh%25vqwrcyLRZ3mYaxFN8rH19m%25n8wDh2oiZWeEM4FdsrTg9fUT6PDEGDSeWl0htsd3h%25cUfNU0XGEjamJ0lVHlOB2q81bApRiCI5ux6YQC31SFkzNwl9m7jZ2fhKVFHt%25vqCtTyLRzLyYax709rH1KCtn8wvz4oiZL7NM4FaKfTg9HY36PD8SmSeWi0Wtsd5h3cUfC%25kXGEzGXJ0l70ZOB2KBjbApvPwI5uLezQC3ahQkzNH%25Km7j8cohKVipE%25vq4yTyLRgYyYaxPrprH1eOtn8wsXwoiZrb1M4FnKFTg95zT6PDC7NSeWzK3tsd7oTcUfKMqXGEvJXJ0lL%25tOB2PrFbApeARI5use1QC3Uh1kzNGtbm7j02ZhKVBbM%25vqAIkyLR5QHYaxCrYrH1znOn8w7PfoiZKeXM4FvsFTg9LUe6PDaGqSeWH09tsd9hTcUfArkXGE5nXJ0lCorOB2znobQOcxwRJPM4FKIwTg97zp6PD4PDSeWgeRtsdPv3cUfe8kXGEsbwJ0lUIrOB2GbcbAp0MqI5uBTLQC3ATxkzN5aZm7jd6ohKVfig%25vqLtTyLRaLDYaxHahrH18HOn8wiA2oiZ46IM4zuA1YtEWpTuP6M1DAFIT9ZxexrlrKE847dvE5jCDtyAib&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "MBUX Hyperscreen",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/eqs-class/eqs-suv/byo-options/2027-EQS-SUV-IH-1.jpg"
+   },
+   {
+    "cap": "Immersive audio",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/eqs-class/eqs-suv/byo-options/2027-EQS-SUV-IH-2.jpg"
+   },
+   {
+    "cap": "Luxurious seating",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/eqs-class/eqs-suv/byo-options/2027-EQS-SUV-IH-3.jpg"
+   },
+   {
+    "cap": "Flexible rear cabin",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/eqs-class/eqs-suv/byo-options/2027-EQS-SUV-IH-4.jpg"
+   },
+   {
+    "cap": "Ambient lighting",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/eqs-class/eqs-suv/byo-options/2027-EQS-SUV-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|G-Class": {
+  "page": "https://www.mbusa.com/en/vehicles/class/g-class/suv",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/465210/X25/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtlaItsd2HdcUfp8yXGEPGEJ0l7YhOB2XQqbApeARI5usmxQC3UkTkzNGLdm7jaSthymI9WFk0cUfzUNXGE7nmJ0lK6xOB2vocbApLHyI5ug41QC3AgQkzN5J9m7jocShKVfBL%25vqE79yLRlN6YaxhrWrH1lb%25n8w2S4oiZT5pM4FmmJTg735wrcldu63yvAKIa9Q6DF1s1n2nvligKfLlCVzWcY54I&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [
+   {
+    "name": "Mojave Silver",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/465210/X25/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZ63pZbMw3SGtlaItsd2HdcUfp8yXGEPGEJ0l7YhOB2XQqbApeARI5usmxQC3UkTkzNGLdm7jaSthymI9WFk0cUfzUNXGE7nmJ0lK6xOB2vocbApLHyI5ug41QC3AgQkzN5J9m7jocShKVfBL%25vqE79yLRlN6YaxhrWrH1lb%25n8w2S4oiZT5pM4FmmJTg735wrcldu63yvAKIa9Q6DF1s1n2nvligKfLlCVzWcY54I&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Obsidian Black",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/465210/X25/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtlaItsd2HdcUfp8yXGEPGEJ0l7YhOB2XQqbApeARI5usmxQC3UkTkzNGLdm7jaSthymI9WFk0cUfzUNXGE7nmJ0lK6xOB2vocbApLHyI5ug41QC3AgQkzN5J9m7jocShKVfBL%25vqE79yLRlN6YaxhrWrH1lb%25n8w2S4oiZT5pM4FmmJTg735wrcldu63yvAKIa9Q6DF1s1n2nvligKfLlCVzWcY54I&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Iridium Silver",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/465210/X25/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZYVHZbMw3SGtlaItsd2HdcUfp8yXGEPGEJ0l7YhOB2XQqbApeARI5usmxQC3UkTkzNGLdm7jaSthymI9WFk0cUfzUNXGE7nmJ0lK6xOB2vocbApLHyI5ug41QC3AgQkzN5J9m7jocShKVfBL%25vqE79yLRlN6YaxhrWrH1lb%25n8w2S4oiZT5pM4FmmJTg735wrcldu63yvAKIa9Q6DF1s1n2nvligKfLlCVzWcY54I&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Emerald Green",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/465210/X25/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZUZpZbMw3SGtlaItsd2HdcUfp8yXGEPGEJ0l7YhOB2XQqbApeARI5usmxQC3UkTkzNGLdm7jaSthymI9WFk0cUfzUNXGE7nmJ0lK6xOB2vocbApLHyI5ug41QC3AgQkzN5J9m7jocShKVfBL%25vqE79yLRlN6YaxhrWrH1lb%25n8w2S4oiZT5pM4FmmJTg735wrcldu63yvAKIa9Q6DF1s1n2nvligKfLlCVzWcY54I&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Brilliant Blue",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/465210/X25/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZ6kIZbMw3SGtlaItsd2HdcUfp8yXGEPGEJ0l7YhOB2XQqbApeARI5usmxQC3UkTkzNGLdm7jaSthymI9WFk0cUfzUNXGE7nmJ0lK6xOB2vocbApLHyI5ug41QC3AgQkzN5J9m7jocShKVfBL%25vqE79yLRlN6YaxhrWrH1lb%25n8w2S4oiZT5pM4FmmJTg735wrcldu63yvAKIa9Q6DF1s1n2nvligKfLlCVzWcY54I&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Selenite Grey",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/465210/X25/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZUkRZbMw3SGtlaItsd2HdcUfp8yXGEPGEJ0l7YhOB2XQqbApeARI5usmxQC3UkTkzNGLdm7jaSthymI9WFk0cUfzUNXGE7nmJ0lK6xOB2vocbApLHyI5ug41QC3AgQkzN5J9m7jocShKVfBL%25vqE79yLRlN6YaxhrWrH1lb%25n8w2S4oiZT5pM4FmmJTg735wrcldu63yvAKIa9Q6DF1s1n2nvligKfLlCVzWcY54I&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Indulgent seating",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/g-class/byo-options/2027-G-SUV-IH-1.jpg"
+   },
+   {
+    "cap": "Wireless connections",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/g-class/byo-options/2027-G-SUV-IH-2.jpg"
+   },
+   {
+    "cap": "Better beverages",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/g-class/byo-options/2027-G-SUV-IH-3.jpg"
+   },
+   {
+    "cap": "Immersive sound",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/g-class/byo-options/2027-G-SUV-IH-4.jpg"
+   },
+   {
+    "cap": "Extensive customization",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/g-class/byo-options/2027-G-SUV-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|GLA": {
+  "page": "https://www.mbusa.com/en/vehicles/class/gla/suv",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/247747/806_056/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtGyUtsd2sDcUfp8fXGEubSJ0l3IrOB2NMEbApjtwI5ux5xQC31SrkzNBtum7j871hKViX3%25vq4yTyLRhcVYax%255hrH1GBln8w0XyoiZKbgM4FvSlTg9LU26PDZcoSeW0eStsdB%25ycJtTjqNS8YaxB5krH1LIOn8wuzxoiZ45YM4FgKjTg9Phk6PDe1oSeWstutsLV79MOuljcVGRvTEUdhcfWF0FT3THuPsa28uKxvEOo7em&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [
+   {
+    "name": "Cosmos Black",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/247747/806_056/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZgkfZbMw3SGtGyUtsd2sDcUfp8fXGEubSJ0l3IrOB2NMEbApjtwI5ux5xQC31SrkzNBtum7j871hKViX3%25vq4yTyLRhcVYax%255hrH1GBln8w0XyoiZKbgM4FvSlTg9LU26PDZcoSeW0eStsdB%25ycJtTjqNS8YaxB5krH1LIOn8wuzxoiZ45YM4FgKjTg9Phk6PDe1oSeWstutsLV79MOuljcVGRvTEUdhcfWF0FT3THuPsa28uKxvEOo7em&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Mountain Grey",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/247747/806_056/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZYZ4ZbMw3SGtGyUtsd2sDcUfp8fXGEubSJ0l3IrOB2NMEbApjtwI5ux5xQC31SrkzNBtum7j871hKViX3%25vq4yTyLRhcVYax%255hrH1GBln8w0XyoiZKbgM4FvSlTg9LU26PDZcoSeW0eStsdB%25ycJtTjqNS8YaxB5krH1LIOn8wuzxoiZ45YM4FgKjTg9Phk6PDe1oSeWstutsLV79MOuljcVGRvTEUdhcfWF0FT3THuPsa28uKxvEOo7em&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Polar White",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/247747/806_056/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtGyUtsd2sDcUfp8fXGEubSJ0l3IrOB2NMEbApjtwI5ux5xQC31SrkzNBtum7j871hKViX3%25vq4yTyLRhcVYax%255hrH1GBln8w0XyoiZKbgM4FvSlTg9LU26PDZcoSeW0eStsdB%25ycJtTjqNS8YaxB5krH1LIOn8wuzxoiZ45YM4FgKjTg9Phk6PDe1oSeWstutsLV79MOuljcVGRvTEUdhcfWF0FT3THuPsa28uKxvEOo7em&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   }
+  ],
+  "interior": []
+ },
+ "Mercedes-Benz|GLC": {
+  "page": "https://www.mbusa.com/en/vehicles/class/glc/suv",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/254647/807/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtxX2tsd1ZpcUfwMuXGEuiSJ0l34lOB2Ng1bApjPoI5uVmYQC3qhOkzNR%256m7jxODhKV1%25E%25vqw8cyLRDc1YaxWaWrH1dBtn8wfA2oiZE6pM4FlSfTg92hO6PDp%25NSeWuwRtsd3cTcUfgUcXGEP9EJ0le6xOB2sb1bApU7pI5uLoxQC3aMrkzNHzxm7j8e3hKViYh%25vq4JTyLRgYDYaxPrprH1yJRn8wYzyoiZreEM4FACMTg95z36PDC%25qSeWzy3tsd7kTcUfi%251XGE4bjJ0lgotOB2PWEbApetbI5uscZQC3UX7kzNGmum7j0hShKVBHF%25vqA8TyLR5iyYaxC48rH1zgun8wROfoiZxbXM4F1SrTg9UQO6PDGPoSeW0yhtsdB%25ycJtTjqNS8Yax5XqrH1ACmn8wa8woiZHipM4F84jTg9itV6PD4cmSeWgtMtsdPAjcUfxOkXGE0ymJ0lB0VOB2ABcbAp5iXI5uCeZQCPFi2J%25xVZkF7NA2jz3MkNulKlO1OsxACeqUx4Wgj%25Xi5o&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [
+   {
+    "name": "Obsidian Black",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/254647/807/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtxX2tsd1ZpcUfwMuXGEuiSJ0l34lOB2Ng1bApjPoI5uVmYQC3qhOkzNR%256m7jxODhKV1%25E%25vqw8cyLRDc1YaxWaWrH1dBtn8wfA2oiZE6pM4FlSfTg92hO6PDp%25NSeWuwRtsd3cTcUfgUcXGEP9EJ0le6xOB2sb1bApU7pI5uLoxQC3aMrkzNHzxm7j8e3hKViYh%25vq4JTyLRgYDYaxPrprH1yJRn8wYzyoiZreEM4FACMTg95z36PDC%25qSeWzy3tsd7kTcUfi%251XGE4bjJ0lgotOB2PWEbApetbI5uscZQC3UX7kzNGmum7j0hShKVBHF%25vqA8TyLR5iyYaxC48rH1zgun8wROfoiZxbXM4F1SrTg9UQO6PDGPoSeW0yhtsdB%25ycJtTjqNS8Yax5XqrH1ACmn8wa8woiZHipM4F84jTg9itV6PD4cmSeWgtMtsdPAjcUfxOkXGE0ymJ0lB0VOB2ABcbAp5iXI5uCeZQCPFi2J%25xVZkF7NA2jz3MkNulKlO1OsxACeqUx4Wgj%25Xi5o&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Hightech Silver",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/254647/807/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZUnRZbMw3SGtxX2tsd1ZpcUfwMuXGEuiSJ0l34lOB2Ng1bApjPoI5uVmYQC3qhOkzNR%256m7jxODhKV1%25E%25vqw8cyLRDc1YaxWaWrH1dBtn8wfA2oiZE6pM4FlSfTg92hO6PDp%25NSeWuwRtsd3cTcUfgUcXGEP9EJ0le6xOB2sb1bApU7pI5uLoxQC3aMrkzNHzxm7j8e3hKViYh%25vq4JTyLRgYDYaxPrprH1yJRn8wYzyoiZreEM4FACMTg95z36PDC%25qSeWzy3tsd7kTcUfi%251XGE4bjJ0lgotOB2PWEbApetbI5uscZQC3UX7kzNGmum7j0hShKVBHF%25vqA8TyLR5iyYaxC48rH1zgun8wROfoiZxbXM4F1SrTg9UQO6PDGPoSeW0yhtsdB%25ycJtTjqNS8Yax5XqrH1ACmn8wa8woiZHipM4F84jTg9itV6PD4cmSeWgtMtsdPAjcUfxOkXGE0ymJ0lB0VOB2ABcbAp5iXI5uCeZQCPFi2J%25xVZkF7NA2jz3MkNulKlO1OsxACeqUx4Wgj%25Xi5o&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Graphite Grey",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/254647/807/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZ6TfZbMw3SGtxX2tsd1ZpcUfwMuXGEuiSJ0l34lOB2Ng1bApjPoI5uVmYQC3qhOkzNR%256m7jxODhKV1%25E%25vqw8cyLRDc1YaxWaWrH1dBtn8wfA2oiZE6pM4FlSfTg92hO6PDp%25NSeWuwRtsd3cTcUfgUcXGEP9EJ0le6xOB2sb1bApU7pI5uLoxQC3aMrkzNHzxm7j8e3hKViYh%25vq4JTyLRgYDYaxPrprH1yJRn8wYzyoiZreEM4FACMTg95z36PDC%25qSeWzy3tsd7kTcUfi%251XGE4bjJ0lgotOB2PWEbApetbI5uscZQC3UX7kzNGmum7j0hShKVBHF%25vqA8TyLR5iyYaxC48rH1zgun8wROfoiZxbXM4F1SrTg9UQO6PDGPoSeW0yhtsdB%25ycJtTjqNS8Yax5XqrH1ACmn8wa8woiZHipM4F84jTg9itV6PD4cmSeWgtMtsdPAjcUfxOkXGE0ymJ0lB0VOB2ABcbAp5iXI5uCeZQCPFi2J%25xVZkF7NA2jz3MkNulKlO1OsxACeqUx4Wgj%25Xi5o&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Polar White",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/254647/807/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtxX2tsd1ZpcUfwMuXGEuiSJ0l34lOB2Ng1bApjPoI5uVmYQC3qhOkzNR%256m7jxODhKV1%25E%25vqw8cyLRDc1YaxWaWrH1dBtn8wfA2oiZE6pM4FlSfTg92hO6PDp%25NSeWuwRtsd3cTcUfgUcXGEP9EJ0le6xOB2sb1bApU7pI5uLoxQC3aMrkzNHzxm7j8e3hKViYh%25vq4JTyLRgYDYaxPrprH1yJRn8wYzyoiZreEM4FACMTg95z36PDC%25qSeWzy3tsd7kTcUfi%251XGE4bjJ0lgotOB2PWEbApetbI5uscZQC3UX7kzNGmum7j0hShKVBHF%25vqA8TyLR5iyYaxC48rH1zgun8wROfoiZxbXM4F1SrTg9UQO6PDGPoSeW0yhtsdB%25ycJtTjqNS8Yax5XqrH1ACmn8wa8woiZHipM4F84jTg9itV6PD4cmSeWgtMtsdPAjcUfxOkXGE0ymJ0lB0VOB2ABcbAp5iXI5uCeZQCPFi2J%25xVZkF7NA2jz3MkNulKlO1OsxACeqUx4Wgj%25Xi5o&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Heated power front seats",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/glc-class/glc-suv/byo-options/2027-GLC-SUV-IH-1.jpg"
+   },
+   {
+    "cap": "Finely tailored upholstery",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/glc-class/glc-suv/byo-options/2027-GLC-SUV-IH-2.jpg"
+   },
+   {
+    "cap": "Variety of cabin trims",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/glc-class/glc-suv/byo-options/2027-GLC-SUV-IH-3.jpg"
+   },
+   {
+    "cap": "Wireless smartphone integration",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/glc-class/glc-suv/byo-options/2027-GLC-SUV-IH-4.jpg"
+   },
+   {
+    "cap": "Fingerprint recognition",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/glc-class/glc-suv/byo-options/2027-GLC-SUV-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|GLC Coupe": {
+  "page": "https://www.mbusa.com/en/vehicles/class/glc/coupe",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/254374/807/iris.png?q=COSY-EU-100-1713d0VXqNEFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtxX2tsd1ZpcUfwMuXGEuymJ0l30fOB2NgcbApjPpI5uVeZQC3qsTkzNR%25nm7jxyIhKV1Yt%25vqwIdyLRZiXYaxWXwrH1dHdn8wf8boiZE5XM4FlCuTg92vk6PDpcNSeWuX2tsd3YQcUfNrqXGEjJSJ0le0JOB2s8%25bApUkbI5uG6MQC30E3kzNBJ9m7jAajhKViKw%25vq4UjyLRgnyYaxPbSrH1endn8wsbboiZrb1M4FnKrTg95zT6PDC%25qSeWzy3tsd7oTcUfKM0XGEvhXJ0lgYZOB2PMcbApedlI5uscIQC3UXFkzNGJKm7j0hShKVBHF%25vqA8TyLR5iyYaxC4xrH1zgin8w7P3oiZx6YM4Fs4rTg9UhO6PDG%25mSeW0h%25tXSMNV36HyLRAcVYaxBNerH1LHun8waT3oiZH6IM4F8TrTg9ikl6PD403SeWgB3tsdPwhcUfem%25XGE1PGJ0lB0VOB2A8cbAp5iCI5uCeuQC3zhFkzN7%25dm7jKcZhKVv%25N%25vqL8dyL0fsjko9wdYfHxKCusRcYxqN8NmDmA9KLBZ59U2G1oQsvt&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [
+   {
+    "name": "Graphite Grey",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/254374/807/iris.png?q=COSY-EU-100-1713d0VXqNEFqtyO67PobzIr3eWsrrCsdRRzwQZ6TfZbMw3SGtxX2tsd1ZpcUfwMuXGEuymJ0l30fOB2NgcbApjPpI5uVeZQC3qsTkzNR%25nm7jxyIhKV1Yt%25vqwIdyLRZiXYaxWXwrH1dHdn8wf8boiZE5XM4FlCuTg92vk6PDpcNSeWuX2tsd3YQcUfNrqXGEjJSJ0le0JOB2s8%25bApUkbI5uG6MQC30E3kzNBJ9m7jAajhKViKw%25vq4UjyLRgnyYaxPbSrH1endn8wsbboiZrb1M4FnKrTg95zT6PDC%25qSeWzy3tsd7oTcUfKM0XGEvhXJ0lgYZOB2PMcbApedlI5uscIQC3UXFkzNGJKm7j0hShKVBHF%25vqA8TyLR5iyYaxC4xrH1zgin8w7P3oiZx6YM4Fs4rTg9UhO6PDG%25mSeW0h%25tXSMNV36HyLRAcVYaxBNerH1LHun8waT3oiZH6IM4F8TrTg9ikl6PD403SeWgB3tsdPwhcUfem%25XGE1PGJ0lB0VOB2A8cbAp5iCI5uCeuQC3zhFkzN7%25dm7jKcZhKVv%25N%25vqL8dyL0fsjko9wdYfHxKCusRcYxqN8NmDmA9KLBZ59U2G1oQsvt&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "High Tech Silver",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/254374/807/iris.png?q=COSY-EU-100-1713d0VXqNEFqtyO67PobzIr3eWsrrCsdRRzwQZUnRZbMw3SGtxX2tsd1ZpcUfwMuXGEuymJ0l30fOB2NgcbApjPpI5uVeZQC3qsTkzNR%25nm7jxyIhKV1Yt%25vqwIdyLRZiXYaxWXwrH1dHdn8wf8boiZE5XM4FlCuTg92vk6PDpcNSeWuX2tsd3YQcUfNrqXGEjJSJ0le0JOB2s8%25bApUkbI5uG6MQC30E3kzNBJ9m7jAajhKViKw%25vq4UjyLRgnyYaxPbSrH1endn8wsbboiZrb1M4FnKrTg95zT6PDC%25qSeWzy3tsd7oTcUfKM0XGEvhXJ0lgYZOB2PMcbApedlI5uscIQC3UXFkzNGJKm7j0hShKVBHF%25vqA8TyLR5iyYaxC4xrH1zgin8w7P3oiZx6YM4Fs4rTg9UhO6PDG%25mSeW0h%25tXSMNV36HyLRAcVYaxBNerH1LHun8waT3oiZH6IM4F8TrTg9ikl6PD403SeWgB3tsdPwhcUfem%25XGE1PGJ0lB0VOB2A8cbAp5iCI5uCeuQC3zhFkzN7%25dm7jKcZhKVv%25N%25vqL8dyL0fsjko9wdYfHxKCusRcYxqN8NmDmA9KLBZ59U2G1oQsvt&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Obsidian Black",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/254374/807/iris.png?q=COSY-EU-100-1713d0VXqNEFqtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtxX2tsd1ZpcUfwMuXGEuymJ0l30fOB2NgcbApjPpI5uVeZQC3qsTkzNR%25nm7jxyIhKV1Yt%25vqwIdyLRZiXYaxWXwrH1dHdn8wf8boiZE5XM4FlCuTg92vk6PDpcNSeWuX2tsd3YQcUfNrqXGEjJSJ0le0JOB2s8%25bApUkbI5uG6MQC30E3kzNBJ9m7jAajhKViKw%25vq4UjyLRgnyYaxPbSrH1endn8wsbboiZrb1M4FnKrTg95zT6PDC%25qSeWzy3tsd7oTcUfKM0XGEvhXJ0lgYZOB2PMcbApedlI5uscIQC3UXFkzNGJKm7j0hShKVBHF%25vqA8TyLR5iyYaxC4xrH1zgin8w7P3oiZx6YM4Fs4rTg9UhO6PDG%25mSeW0h%25tXSMNV36HyLRAcVYaxBNerH1LHun8waT3oiZH6IM4F8TrTg9ikl6PD403SeWgB3tsdPwhcUfem%25XGE1PGJ0lB0VOB2A8cbAp5iCI5uCeuQC3zhFkzN7%25dm7jKcZhKVv%25N%25vqL8dyL0fsjko9wdYfHxKCusRcYxqN8NmDmA9KLBZ59U2G1oQsvt&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Polar White",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/254374/807/iris.png?q=COSY-EU-100-1713d0VXqNEFqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtxX2tsd1ZpcUfwMuXGEuymJ0l30fOB2NgcbApjPpI5uVeZQC3qsTkzNR%25nm7jxyIhKV1Yt%25vqwIdyLRZiXYaxWXwrH1dHdn8wf8boiZE5XM4FlCuTg92vk6PDpcNSeWuX2tsd3YQcUfNrqXGEjJSJ0le0JOB2s8%25bApUkbI5uG6MQC30E3kzNBJ9m7jAajhKViKw%25vq4UjyLRgnyYaxPbSrH1endn8wsbboiZrb1M4FnKrTg95zT6PDC%25qSeWzy3tsd7oTcUfKM0XGEvhXJ0lgYZOB2PMcbApedlI5uscIQC3UXFkzNGJKm7j0hShKVBHF%25vqA8TyLR5iyYaxC4xrH1zgin8w7P3oiZx6YM4Fs4rTg9UhO6PDG%25mSeW0h%25tXSMNV36HyLRAcVYaxBNerH1LHun8waT3oiZH6IM4F8TrTg9ikl6PD403SeWgB3tsdPwhcUfem%25XGE1PGJ0lB0VOB2A8cbAp5iCI5uCeuQC3zhFkzN7%25dm7jKcZhKVv%25N%25vqL8dyL0fsjko9wdYfHxKCusRcYxqN8NmDmA9KLBZ59U2G1oQsvt&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Standard MB Navigation",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/glc-class/glc-coupe/byo-options/2027-GLC-COUPE-IH-1.jpg"
+   },
+   {
+    "cap": "Enhanced ambient lighting",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/glc-class/glc-coupe/byo-options/2027-GLC-COUPE-IH-2.jpg"
+   },
+   {
+    "cap": "Variety of cabin trims",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/glc-class/glc-coupe/byo-options/2027-GLC-COUPE-IH-3.jpg"
+   },
+   {
+    "cap": "Heated power front seats",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/glc-class/glc-coupe/byo-options/2027-GLC-COUPE-IH-4.jpg"
+   },
+   {
+    "cap": "Fingerprint recognition",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/glc-class/glc-coupe/byo-options/2027-GLC-COUPE-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|GLE": {
+  "page": "https://www.mbusa.com/en/vehicles/class/gle/suv",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/167165/807/iris.png?q=COSY-EU-100-1713d0VXqaxFng9jfZobxEnlqHI5QqqrQCPPnU2G2BTxm7skt0uBMFsB2rTC8Apn6zS5uoSUbC3MtzrzNTcRT7j6bjqKVSue4vqt3qvLRc9UkaxXDxQH1JW4H8wOdiMiZbf594FIp34g9QuNnPDk3HieWm17csdhwdMUf%25ZBTGEyFg20lY9BHB2rDNtApnWjQ5uoYi0C3Mr4CzNTngT7j6oL7KVSMGIvqtwUGLHvzm%25kKp0lYwiJB2rEmrApnIlS5uo3iaC3MN4nzNTjDA7j6VWqKVSqvCvqEhWTC8IJmLhE2fxwjtsLcSM1MzQz2IjqlOpIdYfX85WVe&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [
+   {
+    "name": "Polar White",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/167165/807/iris.png?q=COSY-EU-100-1713d0VXqaxFng9jfZobxEnlqHI5QqqrQCPPnU2GOBLxm7skt0uBMFsB2rTC8Apn6zS5uoSUbC3MtzrzNTcRT7j6bjqKVSue4vqt3qvLRc9UkaxXDxQH1JW4H8wOdiMiZbf594FIp34g9QuNnPDk3HieWm17csdhwdMUf%25ZBTGEyFg20lY9BHB2rDNtApnWjQ5uoYi0C3Mr4CzNTngT7j6oL7KVSMGIvqtwUGLHvzm%25kKp0lYwiJB2rEmrApnIlS5uo3iaC3MN4nzNTjDA7j6VWqKVSqvCvqEhWTC8IJmLhE2fxwjtsLcSM1MzQz2IjqlOpIdYfX85WVe&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Obsidian Black",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/167165/807/iris.png?q=COSY-EU-100-1713d0VXqaxFng9jfZobxEnlqHI5QqqrQCPPnU2GOpJxm7skt0uBMFsB2rTC8Apn6zS5uoSUbC3MtzrzNTcRT7j6bjqKVSue4vqt3qvLRc9UkaxXDxQH1JW4H8wOdiMiZbf594FIp34g9QuNnPDk3HieWm17csdhwdMUf%25ZBTGEyFg20lY9BHB2rDNtApnWjQ5uoYi0C3Mr4CzNTngT7j6oL7KVSMGIvqtwUGLHvzm%25kKp0lYwiJB2rEmrApnIlS5uo3iaC3MN4nzNTjDA7j6VWqKVSqvCvqEhWTC8IJmLhE2fxwjtsLcSM1MzQz2IjqlOpIdYfX85WVe&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Hightech Silver",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/167165/807/iris.png?q=COSY-EU-100-1713d0VXqaxFng9jfZobxEnlqHI5QqqrQCPPnU2GkRPxm7skt0uBMFsB2rTC8Apn6zS5uoSUbC3MtzrzNTcRT7j6bjqKVSue4vqt3qvLRc9UkaxXDxQH1JW4H8wOdiMiZbf594FIp34g9QuNnPDk3HieWm17csdhwdMUf%25ZBTGEyFg20lY9BHB2rDNtApnWjQ5uoYi0C3Mr4CzNTngT7j6oL7KVSMGIvqtwUGLHvzm%25kKp0lYwiJB2rEmrApnIlS5uo3iaC3MN4nzNTjDA7j6VWqKVSqvCvqEhWTC8IJmLhE2fxwjtsLcSM1MzQz2IjqlOpIdYfX85WVe&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "MBUX Superscreen",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/gle-class/gle-suv/byo-options/2027-GLE-SUV-IH-1.jpg"
+   },
+   {
+    "cap": "Front-seat luxuries",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/gle-class/gle-suv/byo-options/2027-GLE-SUV-IH-2.jpg"
+   },
+   {
+    "cap": "Burmester 3D Surround Sound",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/gle-class/gle-suv/byo-options/2027-GLE-SUV-IH-3.jpg"
+   },
+   {
+    "cap": "The peak of comfort",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/gle-class/gle-suv/byo-options/2027-GLE-SUV-IH-4.jpg"
+   },
+   {
+    "cap": "Flexible rear cabin",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/gle-class/gle-suv/byo-options/2027-GLE-SUV-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|GLE Coupe": {
+  "page": "https://www.mbusa.com/en/vehicles/class/gle/coupe",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/167373/807/iris.png?q=COSY-EU-100-1713d0VXqrpVng9jfZobxEnlqHI5QqqrQCPPnU2G2BTxm7skt0uBMFsB2rTC8Apn6zS5uoSUbC3MtqMzNTONV7j6pPiKVSuVKvqt3HTLRcNaGaxXDGmH1JW1k8wOdg8iZbf4T4FIECDg9QiXnPDk3joeWmN84sdhwKXUf%25ZfTGEyFA60lY9PpB2rDA8ApnWjc5uodVkC3Mq3jzNTRPe7vzAIkbCEsdhRb3Uf%25WI%25GEyJ2v0lY2aKB2rpH8ApnupQ5uo3F0C3MN9jzNTjDP7j6VLkKVSqayvqtRLzLRcxaSax2yfS74kb%25Hy2ulNMcXGHJc6Z6KmKukqxpI3kEnlO4zfRU&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [
+   {
+    "name": "Polar White",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/167373/807/iris.png?q=COSY-EU-100-1713d0VXqrpVng9jfZobxEnlqHI5QqqrQCPPnU2GOBLxm7skt0uBMFsB2rTC8Apn6zS5uoSUbC3MtqMzNTONV7j6pPiKVSuVKvqt3HTLRcNaGaxXDGmH1JW1k8wOdg8iZbf4T4FIECDg9QiXnPDk3joeWmN84sdhwKXUf%25ZfTGEyFA60lY9PpB2rDA8ApnWjc5uodVkC3Mq3jzNTRPe7vzAIkbCEsdhRb3Uf%25WI%25GEyJ2v0lY2aKB2rpH8ApnupQ5uo3F0C3MN9jzNTjDP7j6VLkKVSqayvqtRLzLRcxaSax2yfS74kb%25Hy2ulNMcXGHJc6Z6KmKukqxpI3kEnlO4zfRU&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Obsidian Black",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/167373/807/iris.png?q=COSY-EU-100-1713d0VXqrpVng9jfZobxEnlqHI5QqqrQCPPnU2GOpJxm7skt0uBMFsB2rTC8Apn6zS5uoSUbC3MtqMzNTONV7j6pPiKVSuVKvqt3HTLRcNaGaxXDGmH1JW1k8wOdg8iZbf4T4FIECDg9QiXnPDk3joeWmN84sdhwKXUf%25ZfTGEyFA60lY9PpB2rDA8ApnWjc5uodVkC3Mq3jzNTRPe7vzAIkbCEsdhRb3Uf%25WI%25GEyJ2v0lY2aKB2rpH8ApnupQ5uo3F0C3MN9jzNTjDP7j6VLkKVSqayvqtRLzLRcxaSax2yfS74kb%25Hy2ulNMcXGHJc6Z6KmKukqxpI3kEnlO4zfRU&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Hightech Silver",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/167373/807/iris.png?q=COSY-EU-100-1713d0VXqrpVng9jfZobxEnlqHI5QqqrQCPPnU2GkRPxm7skt0uBMFsB2rTC8Apn6zS5uoSUbC3MtqMzNTONV7j6pPiKVSuVKvqt3HTLRcNaGaxXDGmH1JW1k8wOdg8iZbf4T4FIECDg9QiXnPDk3joeWmN84sdhwKXUf%25ZfTGEyFA60lY9PpB2rDA8ApnWjc5uodVkC3Mq3jzNTRPe7vzAIkbCEsdhRb3Uf%25WI%25GEyJ2v0lY2aKB2rpH8ApnupQ5uo3F0C3MN9jzNTjDP7j6VLkKVSqayvqtRLzLRcxaSax2yfS74kb%25Hy2ulNMcXGHJc6Z6KmKukqxpI3kEnlO4zfRU&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "MBUX Superscreen",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/gle-class/gle-coupe/byo-options/2027-GLE-COUPE-IH-1.jpg"
+   },
+   {
+    "cap": "Front-seat luxuries",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/gle-class/gle-coupe/byo-options/2027-GLE-COUPE-IH-2.jpg"
+   },
+   {
+    "cap": "Flexible rear cabin",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/gle-class/gle-coupe/byo-options/2027-GLE-COUPE-IH-3.jpg"
+   },
+   {
+    "cap": "The peak of comfort",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/gle-class/gle-coupe/byo-options/2027-GLE-COUPE-IH-4.jpg"
+   },
+   {
+    "cap": "Burmester 3D Surround Sound",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/gle-class/gle-coupe/byo-options/2027-GLE-COUPE-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|GLS": {
+  "page": "https://www.mbusa.com/en/vehicles/class/gls/suv",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/167965/807/iris.png?q=COSY-EU-100-1713d0VXqaxFng9jfZobxEnlqHI5QqqrQCPPnU2G2BTxm7skt0uBM1YB2rT9UApn6zi5uoSUbC3MtzrzNTcRT7j6bjqKVSue4vqt3qvLRcNaGaxXDGmH1JW1k8wOdg8iZbf4G4FIEgHg9QlPSPDk27deWmNVesdhjqTUf%25ZvJGEyFE60lY95SB2rDCJApnWsn5uodUNC3MfzgzNTERO7j6lx%25KVS1sUvaKCkhQ72GEy1xS0lYfkYB2rbwIApnu8L5uo3irC3MN3BzNTjDA7j6VK5KVfmDM5HbXkvmfldZ1NSevt6oxoCIClbNVEJ2bWydcHADjP&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [
+   {
+    "name": "Obsidian Black",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/167965/807/iris.png?q=COSY-EU-100-1713d0VXqaxFng9jfZobxEnlqHI5QqqrQCPPnU2GOpJxm7skt0uBM1YB2rT9UApn6zi5uoSUbC3MtzrzNTcRT7j6bjqKVSue4vqt3qvLRcNaGaxXDGmH1JW1k8wOdg8iZbf4G4FIEgHg9QlPSPDk27deWmNVesdhjqTUf%25ZvJGEyFE60lY95SB2rDCJApnWsn5uodUNC3MfzgzNTERO7j6lx%25KVS1sUvaKCkhQ72GEy1xS0lYfkYB2rbwIApnu8L5uo3irC3MN3BzNTjDA7j6VK5KVfmDM5HbXkvmfldZ1NSevt6oxoCIClbNVEJ2bWydcHADjP&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "Polar White",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/167965/807/iris.png?q=COSY-EU-100-1713d0VXqaxFng9jfZobxEnlqHI5QqqrQCPPnU2GOBLxm7skt0uBM1YB2rT9UApn6zi5uoSUbC3MtzrzNTcRT7j6bjqKVSue4vqt3qvLRcNaGaxXDGmH1JW1k8wOdg8iZbf4G4FIEgHg9QlPSPDk27deWmNVesdhjqTUf%25ZvJGEyFE60lY95SB2rDCJApnWsn5uodUNC3MfzgzNTERO7j6lx%25KVS1sUvaKCkhQ72GEy1xS0lYfkYB2rbwIApnu8L5uo3irC3MN3BzNTjDA7j6VK5KVfmDM5HbXkvmfldZ1NSevt6oxoCIClbNVEJ2bWydcHADjP&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   },
+   {
+    "name": "High Tech Silver",
+    "img": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/167965/807/iris.png?q=COSY-EU-100-1713d0VXqaxFng9jfZobxEnlqHI5QqqrQCPPnU2GkRPxm7skt0uBM1YB2rT9UApn6zi5uoSUbC3MtzrzNTcRT7j6bjqKVSue4vqt3qvLRcNaGaxXDGmH1JW1k8wOdg8iZbf4G4FIEgHg9QlPSPDk27deWmNVesdhjqTUf%25ZvJGEyFE60lY95SB2rDCJApnWsn5uodUNC3MfzgzNTERO7j6lx%25KVS1sUvaKCkhQ72GEy1xS0lYfkYB2rbwIApnu8L5uo3irC3MN3BzNTjDA7j6VK5KVfmDM5HbXkvmfldZ1NSevt6oxoCIClbNVEJ2bWydcHADjP&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "MBUX Superscreen",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/gls-class/gls-suv/byo-options/2027-GLS-SUV-IH-1.jpg"
+   },
+   {
+    "cap": "Multiple climate zones",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/gls-class/gls-suv/byo-options/2027-GLS-SUV-IH-2.jpg"
+   },
+   {
+    "cap": "Three rows of first-class seating",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/gls-class/gls-suv/byo-options/2027-GLS-SUV-IH-3.jpg"
+   },
+   {
+    "cap": "Rear Seat Entertainment",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/gls-class/gls-suv/byo-options/2027-GLS-SUV-IH-4.jpg"
+   },
+   {
+    "cap": "Executive Rear Seat Package",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/gls-class/gls-suv/byo-options/2027-GLS-SUV-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|Maybach EQS SUV": {
+  "page": "https://www.mbusa.com/en/vehicles/class/maybach-eqs/suv",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/296955/806/iris.png?q=COSY-EU-100-1713d0VXqbSeqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtGyFtsd1HpcUfwOuXGEZ93J0lF6NOB2NB1bApjACI5uV5qQC3qsOkzNRUkm7jxGDhKV10L%25vqwBcyLRZn6YaxFohrH19Mrn8wDTboiZWqYM4FdRPTg9fYn6PDErNSeWl0utsd2BTcUfpAcXGEu5EJ0l3CrOB2qrcbApRnoI5ux5zQC31CRkzNwPnm7jZejhKVFsW%25vq9JTyLRDOfYaxWNErH1djun8wvOcoiZLbYM4FaIPTg9HQE6PD8P6SeWie2tsd4vpcUfg8kXGEPi3J0leIJOB2sQ1bApUk9I5uG6JQC30XFkzNBm6m7jAajhKViSF%25vq4tTyLRgLyYaxPaprH1eCln8wsz4oiZU6oM4FGSPTg90hO6PDB1bSeWAtItsd5ctcUfCX1XGEz5BJ0l7CZOB2Kn%25bApJnlI5uOeuQC3bXwkzNImZm7jgefhKVPs9%25vqerZyLRsQWYaxUrYrH1Gnfn8w7O4oiZKiEM4FvK2Tg9Lt26PDacsSeWHyMtsd8YdcUfiFNXGE4TmJ0lg6xOB2PS5bApetlI5usQIQC3UkTkzNGLwm7j0aohKVBHL%25vqA8lyLR5iVYaxVXhrH1gCln8wPQcoiZekoM4FsmQTg9Ukm6tTnuNpMLhKVUs9%25vq7vayLRKL2Yaxv0WrH1LBtn8waAwoiZH6NM4F8SQTg9ihT6PD4rsSeWgtMtsdPyhcUfeY3XGEsrzJ0lUrjOB2GnmbApFioI5uCoYQC3zC1kzN7zNm7jK7ShKVvYt%25vqLJjyLRa36YaBEUVmMDZfrE8nYP2vxXr1RjijhWh5DvaAFCDGp0wMkULc&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [],
+  "interior": []
+ },
+ "Mercedes-Benz|Maybach GLS": {
+  "page": "https://www.mbusa.com/en/vehicles/class/maybach-gls/suv",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/167987/806/iris.png?q=COSY-EU-100-1713d0VXqbSFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtlaMtsd2HtcUfp8qXGEubSJ0l3IrOB2NW2bApjdCI5uVcZQC3qvWkzNwTdm7jZ7ohKVFsM%25vq98cyLRzc6Yax7XhrH1KHrn8wvz4oiZL7NM4FaSMTg9HtV6PD8%25oSeWiyStsd4ZtcUfgXyXGEP5jJ0l7YVOB2Kr%25bApvAbI5uLmIQC3akrkzNHmbm7j8hfhKViHF%25vqmr9yLRsLFYaxU0drH1GCln8w7O4oiZKiXM4FvSlTg9LY96PDarsSeWHthtsd8B3cUfiA1XGE45dJ0ldYhOB2frcbApEnbI5uK5zQC3vT6khQOZ9wIUSeWaaItsdLvNcUfeU1XGEsajJ0lUHhOB2GW2bAp0otI5u9fIQC3zMrkzN7zNm7jKG3hKVvpM%25vqLykyL0fsjko9wdYf0AGgRaRcYxqN8NmDmA9KLBZ59U2G1oQsvt&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [],
+  "interior": []
+ },
+ "Mercedes-Benz|Maybach S-Class": {
+  "page": "https://www.mbusa.com/en/vehicles/class/maybach-s-class/sedan",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/223979/807/iris.png?q=COSY-EU-100-1713d0VXqbYVng9jfZobxEnlqHI5QqqrQCPPnU2G2BTxm7skt0uBI5TB2rQm6ApnksS5uoSiaC3Mt3czNTcDz7j6XE5KVSJlRvqtOHULRcbC%25axXIzwH1JQ8v8wOkDLiZbmWi4FIhd6g9QrC8PDknzPeWmo7fsdhMdEUf%25TRPGEy6xG0lYS1XB2rtw6ApncgL5uoXPbC3MJyIzNTOYh7j6bK5KVSue4vqt3szLRcNU1axXjxaH1JV2k8wOqNLiZbRj54FIxV%25g9Q1sgPDkwUTeWmZL5sdhFagUf%259HUGEyDgc0lYWBHB2rdNrApnfaL5uoRukC3Mx9MzNT1fV7j6wLbKVSZaKvqtFHxLRc9BPaxXDTeH1JW6v8wOdiUiZbf4a4FIEg6g9QlPbPDk2EdeWmpK4sdhuvEUf%25eRmGEysZy0lYUFpB2rGAcApn1pS5uowFkC3MZ9OzNTFfQ7j6lP%25KVS2V4vqtpqxLRcuB7axX3AXH1JN6h8wOjSMiZbVt54FIqL0g9QRaQPDkxHIeWm1s5sdhwUsUf%25ZG%25GEyF0O0lY9BHB2rDAcApnWjL5uodVNC3MfqnzNTngA7j6oP7KVSMeRvqtTsYLRc6R1axXSiKH1J90Y8wODA5ig8LYnyHjC3M1eJzNTws87j6EE%25KVSWlCvqtd2vLRcfpcaxXEAmH1Jl5H8wO2SLiZbpt54FIuLHg9QjNnPDkFzteWm97KsdhDqCUf%25Ww%25GEydAG0lYf5bB2rE4BApnlhn5uo2%254C3MpzBzNTueb7j63sVKVSNUGvqtjGFLRcVFyaxXrGKH1Jn6s8wOoSFiZbFAT4FI9FYg9QD9QPDkWD7eWmdV6sdhf1SUf%25EHmGEylQ70lY2BsB2ZJx%25szSMXAJuaXVkJrHAnYh3hUtU9SE2FTDS1Iwozexla&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Executive seating",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/s-maybach/byo-options/2027-MAYBACH-S-SEDAN-IH-1.jpg"
+   },
+   {
+    "cap": "MBUX Superscreen",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/s-maybach/byo-options/2027-MAYBACH-S-SEDAN-IH-2.jpg"
+   },
+   {
+    "cap": "Extensive cabin customization",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/s-maybach/byo-options/2027-MAYBACH-S-SEDAN-IH-3.jpg"
+   },
+   {
+    "cap": "An air of quality",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/s-maybach/byo-options/2027-MAYBACH-S-SEDAN-IH-4.jpg"
+   },
+   {
+    "cap": "Multidimensional sound",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/s-maybach/byo-options/2027-MAYBACH-S-SEDAN-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|Maybach SL": {
+  "page": "https://www.mbusa.com/en/vehicles/class/sl-maybach/roadster",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/232981/807/iris.png?q=COSY-EU-100-1713d0VXqbWdqtyO67PobzIr3eWsrrCsdRRzwQZvkwZbMw3SGtxX2tsd1ZpcUfwMuXGEuymJ0l34tOB2NgObApjPwI5uVmIQC3qhTkzNRlKm7jxODhKV1Ht%25vq9tcyLRDLHYaxW0SrH1dBDn8wfTWoiZEkXM4FlmuTg92x36PDp1qSeWun2tsd3cTcUfNAyXGEPymJ0leYJOB2s8jbApUPlI5uGeqQC30hQkzNBlNm7jA2fhKV5bF%25vqCIdyLRzQXYax74xrH1KgDn8wsOfoiZUbXM4FGIjTg90gT6PDBPqSeWAK9tsd5HGcUfCOcXGEzbBJ0l7ohOB2Kb%25bApvoCI5uOo2QC3bMRkzNIUNm7jQGvhKVkbF%25vqm6%25yLRsGWYaxU0VrH1GIin8w0onoiZKbNM4Fv4JTg9Lhn6PDa1FSeWHnItsd8odcUfiXkXGE4JwJ0lgOrOB2Pz%25bApe7bI5usKzQC3UvWkzNp%25bm7ja6vhKVHXM%25vq8cXyr%25kWfDhAJ0la4tOB2Hg2bAp4iMI5uB4xQC3AhTkzN5tkm7jC2jhKVz%25Q%25vq7cFyLRKXjYaxvJTrH1L3fn8wuh4oiZ4iEM4Fg4FTg9Pgk6PDe7NSeWsajtsLV79MOuljcVGyu5dudhcfWF0FT3THuPsa28uKxvEOo7em&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Impeccably intricate",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/maybach/sl-roadster-maybach/byo-options/2027-MAYBACH-SL-ROADSTER-IH-1.jpg"
+   },
+   {
+    "cap": "Digital distinction",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/maybach/sl-roadster-maybach/byo-options/2027-MAYBACH-SL-ROADSTER-IH-2.jpg"
+   },
+   {
+    "cap": "Thoroughly thoughtful",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/maybach/sl-roadster-maybach/byo-options/2027-MAYBACH-SL-ROADSTER-IH-3.jpg"
+   },
+   {
+    "cap": "Season stretcher",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/maybach/sl-roadster-maybach/byo-options/2027-MAYBACH-SL-ROADSTER-IH-4.jpg"
+   },
+   {
+    "cap": "Tilting touchscreen",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/maybach/sl-roadster-maybach/byo-options/2027-MAYBACH-SL-ROADSTER-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|S-Class": {
+  "page": "https://www.mbusa.com/en/vehicles/class/s-class/sedan",
+  "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/nafta/US/223177/807/iris.png?q=COSY-EU-100-1713d0VXqrhVng9jfZobxEnlqHI5QqqrQCPPnU2G2BTxm7skt0uBI5TB2rQm6ApnksS5uoSiaC3Mt3czNTcDz7j6XE5KVSJlMvqtOHULRcbC%25axXIzwH1JQ8v8wOkDLiZbmWi4FIhd6g9QrCgPDknDdeWmoWBsdhMqSUf%25TRoGEy6870lYSiXB2rtmJApnchQ5uoXC0C3Ml4HzNT2Nz7j6pWJKVSulCvqt32xLRcNpIaxXjiaH1JV7Y8wOqiAiZbRWb4FIxB0g9Ql9SPDk2DYeWmpxfsdhu0MUf%253BUGEyNA20lYjiKB2rVmUApnq5L5uoRCkC3MxqjzNT1PV7j6CWMKVSzlSvqt72xLRcdEmaxX3GnH1JN1h8wOjCLiZbVty4FIqc6g9QRXzPDkxHAeWm18msdhwikUf%25ZGzGEyF0G0lY9BYB2rDAIApnW5i5uodCJC3MfqHzNTERV7j6oP5KVSMeRvqtTqxLRc687axXFxaH1J9BA84Hvyr%25aN5uoZW0C3MFdCzNT9fT7j6DUbKVSWGKvqtdozLRcfMGaxXEzKH1Jp2%258wOxBAiZb1uy4FIwVog9QZsSPDkFvPeWm9OmsdhDbkUf%25WGPGEyd3t0lYOasB2rbmuApnupc5uo3u0C3MN3gzNTjDQ7j6VWeKVSqlmvqEhWTC8IJmLhxemxnRtsLcSM1MzQz2IjqlOpIdYfX85WVe&BKGND=9&IMGT=P27&POV=BE020,PZM&cp=5bGZs3ZqvblYTH6ckO0W3A&fb=1",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "MBUX Superscreen",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/s-sedan/byo-options/2027-S-Sedan-IH-1.jpg"
+   },
+   {
+    "cap": "Digital vents, purified air",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/s-sedan/byo-options/2027-S-Sedan-IH-2.jpg"
+   },
+   {
+    "cap": "Memorable accommodations",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/s-sedan/byo-options/2027-S-Sedan-IH-3.jpg"
+   },
+   {
+    "cap": "Finer furnishings",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/s-sedan/byo-options/2027-S-Sedan-IH-4.jpg"
+   },
+   {
+    "cap": "Dozens of cabin customizations",
+    "img": "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my27/s-sedan/byo-options/2027-S-Sedan-IH-5.jpg"
+   }
+  ]
+ },
+ "Mercedes-Benz|V-Class": {
+  "page": "https://media.mercedes-benz.com/",
+  "hero": "https://api.media.mercedes-benz.com/jsonapi/image/deliver/e73781f2-306f-4a7a-bf88-dba257de1ec7/3_2_1053",
+  "colors": [],
+  "interior": []
+ }
+}

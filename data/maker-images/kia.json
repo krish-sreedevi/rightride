@@ -1,0 +1,477 @@
+{
+ "Kia|Carens": {
+  "page": "https://www.kia.com/in/our-vehicles/carens/showroom.html",
+  "hero": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/carens/tyw7d6617dd408/exterior/mpb/08-d.png",
+  "colors": [
+   {
+    "name": "Imperial Blue",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/carens/tyw7d6617dd408/exterior/mpb/08-d.png"
+   },
+   {
+    "name": "Aurora Black Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/carens/tyw7d6617dd408/exterior/abp/08-d.png"
+   },
+   {
+    "name": "Clear White",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/carens/tyw7d6617dd408/exterior/ud/08-d.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Infotainment",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/showroom/Carens/Interior/Desktop/int-4-d.jpg"
+   },
+   {
+    "cap": "Steering",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/showroom/Carens/Interior/Desktop/int-5-d.jpg"
+   }
+  ]
+ },
+ "Kia|Carens Clavis": {
+  "page": "https://www.kia.com/in/our-vehicles/carens-clavis/showroom.html",
+  "hero": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/clavis/tyw7k8g1utt202/exterior/isg/08-d.png",
+  "colors": [
+   {
+    "name": "Ivory Silver Gloss",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/clavis/tyw7k8g1utt202/exterior/isg/08-d.png"
+   },
+   {
+    "name": "Pewter Olive",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/clavis/tyw7k8g1utt202/exterior/ewe/08-d.png"
+   },
+   {
+    "name": "Imperial Blue",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/clavis/tyw7k8g1utt202/exterior/mpb/08-d.png"
+   },
+   {
+    "name": "Glacier White Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/clavis/tyw7k8g1utt202/exterior/gwp/08-d.png"
+   },
+   {
+    "name": "Gravity Grey",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/clavis/tyw7k8g1utt202/exterior/kdg/08-d.png"
+   },
+   {
+    "name": "Aurora Black Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/clavis/tyw7k8g1utt202/exterior/abp/08-d.png"
+   },
+   {
+    "name": "Gravity Gray",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/clavis/tyw7k8g1utt202/exterior/kdg/08-d.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard display",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/kia-clavis/int/Int-2.png"
+   },
+   {
+    "cap": "Front ventilated seats",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/kia-clavis/int/Int-5.png"
+   },
+   {
+    "cap": "Seating layout",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/kia-clavis/int/int_10.webp"
+   }
+  ]
+ },
+ "Kia|Carens Clavis EV": {
+  "page": "https://www.kia.com/in/our-vehicles/carens-clavis-ev/showroom.html",
+  "hero": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/clavis_ev/xyw7zhz7ztt021/exterior/ism/08-d.png",
+  "colors": [
+   {
+    "name": "Ivory Silver Matte",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/clavis_ev/xyw7zhz7ztt021/exterior/ism/08-d.png"
+   },
+   {
+    "name": "Glacier White Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/clavis_ev/xyw7zhz7ztt021/exterior/gwp/08-d.png"
+   },
+   {
+    "name": "Pewter Olive",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/clavis_ev/xyw7zhz7ztt021/exterior/ewe/08-d.png"
+   },
+   {
+    "name": "Aurora Black Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/clavis_ev/xyw7zhz7ztt021/exterior/abp/08-d.png"
+   },
+   {
+    "name": "Imperial Blue",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/clavis_ev/xyw7zhz7ztt021/exterior/mpb/08-d.png"
+   },
+   {
+    "name": "Gravity Grey",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/clavis_ev/xyw7zhz7ztt021/exterior/kdg/08-d.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/kia-carens-clavis-ev/showroom/s-5/s5-kv-d.png"
+   },
+   {
+    "cap": "Steering & displays",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/kia-carens-clavis-ev/showroom/s-5/s5-7.png"
+   },
+   {
+    "cap": "Front ventilated seats",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/kia-carens-clavis-ev/showroom/s-5/s5-1.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/kia-carens-clavis-ev/showroom/s-5/s5-2.jpg"
+   },
+   {
+    "cap": "2nd row seats",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/kia-carens-clavis-ev/showroom/s-5/s5-4.jpg"
+   }
+  ]
+ },
+ "Kia|Carnival": {
+  "page": "https://www.kia.com/in/our-vehicles/carnival/showroom.html",
+  "hero": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/carnival/8tb72hc5jgg000/exterior/gwp/08-d.png",
+  "colors": [
+   {
+    "name": "Glacier White Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/carnival/8tb72hc5jgg000/exterior/gwp/08-d.png"
+   },
+   {
+    "name": "Fusion Black",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/carnival/8tb72hc5jgg000/exterior/fsb/08-d.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Rear relaxation seats",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/carnival/luminplus/LP-2.jpg"
+   },
+   {
+    "cap": "VIP seats",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/carnival/lumin/Lu-2.jpg"
+   },
+   {
+    "cap": "Cabin seats",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/carnival/interior/In-1.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/carnival/interior/In-3.jpg"
+   }
+  ]
+ },
+ "Kia|EV6": {
+  "page": "https://www.kia.com/in/our-vehicles/ev6/showroom.html",
+  "hero": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/ev6/asw5ycz7zkk876/exterior/klm/15-d.png",
+  "colors": [
+   {
+    "name": "Wolf Gray",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/ev6/asw5ycz7zkk876/exterior/klm/15-d.png"
+   },
+   {
+    "name": "Aurora Black Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/ev6/asw5ycz7zkk876/exterior/abp/15-d.png"
+   },
+   {
+    "name": "Snow White Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/ev6/asw5ycz7zkk876/exterior/swp/15-d.png"
+   },
+   {
+    "name": "Runway Red",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/ev6/asw5ycz7zkk876/exterior/cr5/15-d.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/showroom/ev6/meet/sec3/Se6-b.jpg"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/showroom/ev6/meet/sec2/se1.jpg"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/showroom/ev6/prebooking/section2/pre-new/sec5/1.jpg"
+   }
+  ]
+ },
+ "Kia|EV9": {
+  "page": "https://www.kia.com/in/our-vehicles/ev9/showroom.html",
+  "hero": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/ev9/dow7ybz7zhh325/exterior/abp/61-d.png",
+  "colors": [
+   {
+    "name": "Aurora Black Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/ev9/dow7ybz7zhh325/exterior/abp/61-d.png"
+   },
+   {
+    "name": "Ocean Blue",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/ev9/dow7ybz7zhh325/exterior/obg/61-d.png"
+   },
+   {
+    "name": "Panthera Metal",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/ev9/dow7ybz7zhh325/exterior/p2m/61-d.png"
+   },
+   {
+    "name": "Pebble Gray",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/ev9/dow7ybz7zhh325/exterior/dfg/61-d.png"
+   },
+   {
+    "name": "Snow White Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/ev9/dow7ybz7zhh325/exterior/swp/61-d.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/showroom/ev9/show/s4-3.jpg"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/showroom/ev9/show/s13-1-d.jpg"
+   },
+   {
+    "cap": "2nd row captain seats",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/showroom/ev9/show/s4-5.jpg"
+   }
+  ]
+ },
+ "Kia|Seltos": {
+  "page": "https://www.kia.com/in/our-vehicles/seltos/showroom.html",
+  "hero": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/new_seltos/1mw5k8g1ugg205/exterior/abp/08-d.png",
+  "colors": [
+   {
+    "name": "Aurora Black Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/new_seltos/1mw5k8g1ugg205/exterior/abp/08-d.png"
+   },
+   {
+    "name": "Frost Blue",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/new_seltos/1mw5k8g1ugg205/exterior/ebb/08-d.png"
+   },
+   {
+    "name": "Glacier White Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/new_seltos/1mw5k8g1ugg205/exterior/gwp/08-d.png"
+   },
+   {
+    "name": "Gravity Grey",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/new_seltos/1mw5k8g1ugg205/exterior/kdg/08-d.png"
+   },
+   {
+    "name": "Imperial Blue",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/new_seltos/1mw5k8g1ugg205/exterior/mpb/08-d.png"
+   },
+   {
+    "name": "Ivory Silver Gloss",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/new_seltos/1mw5k8g1ugg205/exterior/isg/08-d.png"
+   },
+   {
+    "name": "Magma Red",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/new_seltos/1mw5k8g1ugg205/exterior/ar2/08-d.png"
+   },
+   {
+    "name": "Morning Haze",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/new_seltos/1mw5k8g1ugg205/exterior/dm9/08-d.png"
+   },
+   {
+    "name": "Pewter Olive",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/new_seltos/1mw5k8g1ugg205/exterior/ewe/08-d.png"
+   },
+   {
+    "name": "Matte Graphite",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/new_seltos/1mw5k8g1ugg206/exterior/k2g/08-d.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/new-seltos/showroom/interior/int_desk_5.png"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/new-seltos/showroom/interior/int_mb_2.png"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/new-seltos/showroom/interior/int_desk_4.png"
+   },
+   {
+    "cap": "Driver seat",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/new-seltos/showroom/section/int_sli_pc1.jpg"
+   },
+   {
+    "cap": "Steering",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/new-seltos/showroom/convenience/conv_desk_3.png"
+   }
+  ]
+ },
+ "Kia|Sonet": {
+  "page": "https://www.kia.com/in/our-vehicles/sonet/showroom.html",
+  "hero": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/sonet/sxw5k2g1uhh078/exterior/gb2/08-d.png",
+  "colors": [
+   {
+    "name": "Aurora Black Pearl + Glacier White Pearl (Dual Tone)",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/sonet/sxw5k2g1uhh078/exterior/gb2/08-d.png"
+   },
+   {
+    "name": "Imperial Blue",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/sonet/sxw5k2g1uhh078/exterior/mpb/08-d.png"
+   },
+   {
+    "name": "Aurora Black Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/sonet/sxw5k2g1uhh078/exterior/abp/08-d.png"
+   },
+   {
+    "name": "Gravity Grey",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/sonet/sxw5k2g1uhh078/exterior/kdg/08-d.png"
+   },
+   {
+    "name": "Glacier White Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/sonet/sxw5k2g1uhh078/exterior/gwp/08-d.png"
+   },
+   {
+    "name": "Pewter Olive",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/sonet/sxw5k2g1uhh078/exterior/ewe/08-d.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/showroom/sonet/slider/interior/2023/1-d.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/showroom/sonet/slider/interior/2023/6d-d.jpg"
+   },
+   {
+    "cap": "Driver seat",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/showroom/sonet/slider/interior/2023/5-d.jpg"
+   }
+  ]
+ },
+ "Kia|Sorento": {
+  "page": "https://www.kia.com/in/our-vehicles/sorento/showroom.html",
+  "hero": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/sorento/5gw7d5g1fev1ee018/exterior/mpb/08-d.png",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Instrument cluster",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/our-vehicles/sonetro/showroom/int/slide-1.png"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/our-vehicles/sonetro/showroom/int/RelaxationRow_Seats.png"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/our-vehicles/sonetro/showroom/int/slide-2.png"
+   },
+   {
+    "cap": "Climate controls",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/our-vehicles/sonetro/showroom/int/slide-5.png"
+   },
+   {
+    "cap": "Seating layout",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/our-vehicles/sonetro/showroom/int/67Seater.png"
+   }
+  ]
+ },
+ "Kia|Syros": {
+  "page": "https://www.kia.com/in/our-vehicles/syros/showroom.html",
+  "hero": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros/8ww5k2g1upp121/exterior/mpb/08-d.png",
+  "colors": [
+   {
+    "name": "Imperial Blue",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros/8ww5k2g1upp121/exterior/mpb/08-d.png"
+   },
+   {
+    "name": "Gravity Grey",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros/8ww5k2g1upp121/exterior/kdg/08-d.png"
+   },
+   {
+    "name": "Glacier White Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros/8ww5k2g1upp121/exterior/gwp/08-d.png"
+   },
+   {
+    "name": "Pewter Olive",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros/8ww5k2g1upp121/exterior/ewe/08-d.png"
+   },
+   {
+    "name": "Aurora Black Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros/8ww5k2g1upp121/exterior/abp/08-d.png"
+   },
+   {
+    "name": "Frost Blue",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros/8ww5k2g1upp121/exterior/ebb/08-d.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/syros/new/screen_d.png"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/syros/new/Int_screen_d.jpg"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/our-vehicles/syros/int/Int-6.png"
+   }
+  ]
+ },
+ "Kia|Syros EV": {
+  "page": "https://www.kia.com/in/our-vehicles/syros-ev/showroom.html",
+  "hero": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros_ev/8bw5zhz7zpp078/exterior/ism/08-d.png",
+  "colors": [
+   {
+    "name": "Ivory Silver Matte",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros_ev/8bw5zhz7zpp078/exterior/ism/08-d.png"
+   },
+   {
+    "name": "Aurora Black Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros_ev/8bw5zhz7zpp078/exterior/abp/08-d.png"
+   },
+   {
+    "name": "Frost Blue",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros_ev/8bw5zhz7zpp078/exterior/ebb/08-d.png"
+   },
+   {
+    "name": "Glacier White Pearl",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros_ev/8bw5zhz7zpp078/exterior/gwp/08-d.png"
+   },
+   {
+    "name": "Gravity Grey",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros_ev/8bw5zhz7zpp078/exterior/kdg/08-d.png"
+   },
+   {
+    "name": "Ivory Silver Gloss",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros_ev/8bw5zhz7zpp078/exterior/isg/08-d.png"
+   },
+   {
+    "name": "Magma Red",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros_ev/8bw5zhz7zpp078/exterior/ar2/08-d.png"
+   },
+   {
+    "name": "Pewter Olive",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros_ev/8bw5zhz7zpp078/exterior/ewe/08-d.png"
+   },
+   {
+    "name": "Xclusive Matte Graphite",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/360vr/syros_ev/8bw5zhz7zhh036/exterior/k2g/08-d.png"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/our-vehicles/syros_ev/interior/interior_5.jpg"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/our-vehicles/syros_ev/interior/interior_2.jpg"
+   },
+   {
+    "cap": "Display",
+    "img": "https://www.kia.com/content/dam/kia2/in/en/images/our-vehicles/syros_ev/interior/interior_4.jpg"
+   }
+  ]
+ }
+}

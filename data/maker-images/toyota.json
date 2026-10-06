@@ -1,0 +1,506 @@
+{
+ "Toyota|Camry": {
+  "page": "https://www.toyotabharat.com/showroom/camry/",
+  "hero": "https://static.toyotabharat.com/images/showroom/new-camry/precious-metal-1920x850.webp",
+  "colors": [
+   {
+    "name": "Precious Metal",
+    "img": "https://static.toyotabharat.com/images/showroom/new-camry/precious-metal-1920x850.webp"
+   },
+   {
+    "name": "Platinum White Pearl",
+    "img": "https://static.toyotabharat.com/images/showroom/new-camry/platinum-white-1920x850.webp"
+   },
+   {
+    "name": "Emotional Red",
+    "img": "https://static.toyotabharat.com/images/showroom/new-camry/emotional-red-1920x850.webp"
+   },
+   {
+    "name": "Dark Blue",
+    "img": "https://static.toyotabharat.com/images/showroom/new-camry/dark-blue-1920x850.webp"
+   },
+   {
+    "name": "Attitude Black",
+    "img": "https://static.toyotabharat.com/images/showroom/new-camry/attitude-black-1920x850.webp"
+   },
+   {
+    "name": "Cement Gray",
+    "img": "https://static.toyotabharat.com/images/showroom/new-camry/cement-grey-1920x850.webp"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://static.toyotabharat.com/images/showroom/new-camry/interior_img1-1199-x478.webp"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://static.toyotabharat.com/images/showroom/new-camry/convenience_img1-1199-x478.webp"
+   }
+  ]
+ },
+ "Toyota|Fortuner": {
+  "page": "https://www.toyotabharat.com/showroom/fortuner/index-fortuner.html",
+  "hero": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/muscle-to-lead-car.webp",
+  "colors": [
+   {
+    "name": "Silver Metallic",
+    "img": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/car-08.webp"
+   },
+   {
+    "name": "Super White",
+    "img": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/car-03.webp"
+   },
+   {
+    "name": "Sparkling Black Crystal Shine",
+    "img": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/car-01.webp"
+   },
+   {
+    "name": "Avant Garde Bronze",
+    "img": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/car-05.webp"
+   },
+   {
+    "name": "Attitude Black",
+    "img": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/car-04.webp"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Front seats",
+    "img": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/fortuner-interior-feature07.webp"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/fortuner-interior-feature04.webp"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/fortuner-interior-feature02.webp"
+   },
+   {
+    "cap": "Gear lever",
+    "img": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/fortuner-interior-feature05.webp"
+   },
+   {
+    "cap": "Drive mode selector",
+    "img": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/fortuner-interior-feature03.webp"
+   }
+  ]
+ },
+ "Toyota|Legender": {
+  "page": "https://www.toyotabharat.com/showroom/fortuner/index-legender.html",
+  "hero": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/style-to-inspire-car.webp",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/curated-feature01.webp"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/curated-feature02.webp"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/curated-feature06.webp"
+   },
+   {
+    "cap": "Gear lever",
+    "img": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/curated-feature03.webp"
+   },
+   {
+    "cap": "Wireless charger",
+    "img": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/curated-feature05.webp"
+   }
+  ]
+ },
+ "Toyota|Glanza": {
+  "page": "https://www.toyotabharat.com/showroom/glanza/",
+  "hero": "https://static.toyotabharat.com/images/showroom/glanza/new/colors/car-maroon.webp",
+  "colors": [
+   {
+    "name": "Insta Blue",
+    "img": "https://static.toyotabharat.com/images/showroom/glanza/new/colors/car-blue.webp"
+   },
+   {
+    "name": "Gaming Grey",
+    "img": "https://static.toyotabharat.com/images/showroom/glanza/new/colors/car-dark-grey.webp"
+   },
+   {
+    "name": "Enticing Silver",
+    "img": "https://static.toyotabharat.com/images/showroom/glanza/new/colors/car-light-grey.webp"
+   },
+   {
+    "name": "Sportin Red",
+    "img": "https://static.toyotabharat.com/images/showroom/glanza/new/colors/car-maroon.webp"
+   },
+   {
+    "name": "Cafe White",
+    "img": "https://static.toyotabharat.com/images/showroom/glanza/new/colors/car-white.webp"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://static.toyotabharat.com/images/showroom/glanza/new/interior/01.webp"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://static.toyotabharat.com/images/showroom/glanza/new/interior/03-new.webp"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://static.toyotabharat.com/images/showroom/glanza/new/interior/12.webp"
+   },
+   {
+    "cap": "Head-up display",
+    "img": "https://static.toyotabharat.com/images/showroom/glanza/new/interior/02.webp"
+   },
+   {
+    "cap": "360 camera display",
+    "img": "https://static.toyotabharat.com/images/showroom/glanza/new/interior/06.webp"
+   }
+  ]
+ },
+ "Toyota|Hilux": {
+  "page": "https://www.toyotabharat.com/showroom/hilux/",
+  "hero": "https://static.toyotabharat.com/images/showroom/hilux-v1/colors/car-super-white-1349x759.webp",
+  "colors": [
+   {
+    "name": "Sulphur Metallic",
+    "img": "https://static.toyotabharat.com/images/showroom/hilux-v1/colors/car-sulphur-metallic-1349x759.webp"
+   },
+   {
+    "name": "Emotional Red",
+    "img": "https://static.toyotabharat.com/images/showroom/hilux-v1/colors/car-emotional-red-1349x759.webp"
+   },
+   {
+    "name": "Platinum Pearl White Metallic",
+    "img": "https://static.toyotabharat.com/images/showroom/hilux-v1/colors/car-platinum-pearl-white-metallic-1349x759.webp"
+   },
+   {
+    "name": "Ash",
+    "img": "https://static.toyotabharat.com/images/showroom/hilux-v1/colors/car-ash-1349x759.webp"
+   },
+   {
+    "name": "Super White",
+    "img": "https://static.toyotabharat.com/images/showroom/hilux-v1/colors/car-super-white-1349x759.webp"
+   },
+   {
+    "name": "Attitude Black",
+    "img": "https://static.toyotabharat.com/images/showroom/hilux-v1/colors/car-attitude-black-1349x759.webp"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Infotainment",
+    "img": "https://static.toyotabharat.com/images/showroom/hilux-v1/interior/img-interior-feature-01.webp"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://static.toyotabharat.com/images/showroom/hilux-v1/interior/img-interior-feature-02.webp"
+   },
+   {
+    "cap": "Centre console",
+    "img": "https://static.toyotabharat.com/images/showroom/hilux-v1/convinience/convinience-feature-1-875x550.webp"
+   },
+   {
+    "cap": "Wireless charger",
+    "img": "https://static.toyotabharat.com/images/showroom/hilux-v1/convinience/convinience-feature-5-875x550.webp"
+   }
+  ]
+ },
+ "Toyota|Innova Crysta": {
+  "page": "https://www.toyotabharat.com/showroom/innova-crysta/",
+  "hero": "https://static.toyotabharat.com/images/showroom/innova-mmc/car-04-1600x900.webp",
+  "colors": [
+   {
+    "name": "Platinum White Pearl",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-mmc/white-pearl-crystal-color-1600x600.webp"
+   },
+   {
+    "name": "Attitude Black Mica",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-mmc/attitude-black-color-1600x600.webp"
+   },
+   {
+    "name": "Avant Garde Bronze Metal",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-mmc/avant-garde-bronze-1600x600.webp"
+   },
+   {
+    "name": "Silver Metallic",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-mmc/silver-color-1600x600.webp"
+   },
+   {
+    "name": "Super White",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-mmc/super-white-color-1600x600.webp"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-mmc/unrivaled-connectivity-banner1600x1000-new.webp"
+   },
+   {
+    "cap": "Captain seats",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-mmc/unmatched-comfort-banner1600x1000.webp"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-mmc/connectivity-feature-large02.webp"
+   },
+   {
+    "cap": "Instrument cluster",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-mmc/connectivity-feature-large01.webp"
+   }
+  ]
+ },
+ "Toyota|Innova Hycross": {
+  "page": "https://www.toyotabharat.com/showroom/innova/",
+  "hero": "https://static.toyotabharat.com/images/showroom/innova-hycross/super-white.webp",
+  "colors": [
+   {
+    "name": "Super White",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-hycross/super-white.webp"
+   },
+   {
+    "name": "Attitude Black Mica",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-hycross/attitude-black.webp"
+   },
+   {
+    "name": "Avant Garde Bronze Metallic",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-hycross/avant-garde-bronze.webp"
+   },
+   {
+    "name": "Silver Metallic",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-hycross/metallic-silver.webp"
+   },
+   {
+    "name": "Platinum White Pearl",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-hycross/platinum-white-pearl.webp"
+   },
+   {
+    "name": "Blackish Ageha Glass Flake",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-hycross/ageha-blackish.webp"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Cabin & sunroof",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-hycross/comfort-img2.webp"
+   },
+   {
+    "cap": "Steering controls",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-hycross/performance-img03.webp"
+   },
+   {
+    "cap": "Gear selector",
+    "img": "https://static.toyotabharat.com/images/showroom/innova-hycross/performance-img02.webp"
+   }
+  ]
+ },
+ "Toyota|Land Cruiser 300": {
+  "page": "https://www.toyotabharat.com/showroom/lc300/",
+  "hero": "https://static.toyotabharat.com/images/showroom/lc300/lc300-LX-EXT-B-1250x750.webp",
+  "colors": [
+   {
+    "name": "Attitude Black",
+    "img": "https://static.toyotabharat.com/images/showroom/lc300/lc300-LX-EXT-B-1250x750.webp"
+   },
+   {
+    "name": "Precious White Pearl",
+    "img": "https://static.toyotabharat.com/images/showroom/lc300/lc300-LX-EXT-W-1250x750.webp"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://static.toyotabharat.com/images/showroom/lc300/lc300-int-gallery-01-1800x800.webp"
+   },
+   {
+    "cap": "Seats",
+    "img": "https://static.toyotabharat.com/images/showroom/lc300/lc300-INT-NB-1250x750.webp"
+   },
+   {
+    "cap": "Rear climate control",
+    "img": "https://static.toyotabharat.com/images/showroom/lc300/lc300-int-ac-all-desktop-900x600.webp"
+   },
+   {
+    "cap": "GR-S dashboard",
+    "img": "https://static.toyotabharat.com/images/showroom/lc300/lc300-int-gallery-02-1800x800.webp"
+   },
+   {
+    "cap": "GR-S seats",
+    "img": "https://static.toyotabharat.com/images/showroom/lc300/lc300-int-gallery-03-1800x800.webp"
+   }
+  ]
+ },
+ "Toyota|Rumion": {
+  "page": "https://www.toyotabharat.com/showroom/rumion/",
+  "hero": "https://static.toyotabharat.com/images/showroom/rumion/car-color/monotone/cafe-white.webp",
+  "colors": [
+   {
+    "name": "Café White",
+    "img": "https://static.toyotabharat.com/images/showroom/rumion/car-color/monotone/cafe-white.webp"
+   },
+   {
+    "name": "Spunky Blue",
+    "img": "https://static.toyotabharat.com/images/showroom/rumion/car-color/monotone/spunky-blue.webp"
+   },
+   {
+    "name": "Iconic Grey",
+    "img": "https://static.toyotabharat.com/images/showroom/rumion/car-color/monotone/iconic-grey.webp"
+   },
+   {
+    "name": "Rustic Brown",
+    "img": "https://static.toyotabharat.com/images/showroom/rumion/car-color/monotone/rustic-brown.webp"
+   },
+   {
+    "name": "Enticing Silver",
+    "img": "https://static.toyotabharat.com/images/showroom/rumion/car-color/monotone/enticing-silver.webp"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Seats",
+    "img": "https://static.toyotabharat.com/images/showroom/rumion/space-img01.webp"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://static.toyotabharat.com/images/showroom/rumion/tech-img03.webp"
+   },
+   {
+    "cap": "Rear AC vents",
+    "img": "https://static.toyotabharat.com/images/showroom/rumion/space-img03.webp"
+   },
+   {
+    "cap": "Gear lever",
+    "img": "https://static.toyotabharat.com/images/showroom/rumion/performance-img03.webp"
+   }
+  ]
+ },
+ "Toyota|Urban Cruiser Ebella": {
+  "page": "https://www.toyotabharat.com/showroom/urbancruiser-ebella/",
+  "hero": "https://static.toyotabharat.com/images/showroom/a32/colors/Opulent-Red-MT-1050x350.webp",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://static.toyotabharat.com/images/showroom/a32/interior/Interior6_1400x790.webp"
+   },
+   {
+    "cap": "Centre console",
+    "img": "https://static.toyotabharat.com/images/showroom/a32/interior/Interior5_1400x790.webp"
+   },
+   {
+    "cap": "Ventilated seats",
+    "img": "https://static.toyotabharat.com/images/showroom/a32/comfort/comfort5_800x510.webp"
+   },
+   {
+    "cap": "Boot space",
+    "img": "https://static.toyotabharat.com/images/showroom/a32/interior/Interior3_1400x790.webp"
+   }
+  ]
+ },
+ "Toyota|Urban Cruiser Hyryder": {
+  "page": "https://www.toyotabharat.com/showroom/urbancruiser-hyryder/",
+  "hero": "https://static.toyotabharat.com/images/showroom/urbancruiser-hyryder/colors/speedy-blue.webp",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://static.toyotabharat.com/images/showroom/urbancruiser-hyryder/interior/Soft-touch-Instrument-Panel.webp"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://static.toyotabharat.com/images/showroom/urbancruiser-hyryder/interior/Stunning-Black-and-Brown-Interiors.webp"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://static.toyotabharat.com/images/showroom/urbancruiser-hyryder/interior/RECLINING-REAR-SEAT.webp"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://static.toyotabharat.com/images/showroom/urbancruiser-hyryder/interior/9-INCH-SMART-PLAY-CAST-AUDIO.webp"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://static.toyotabharat.com/images/showroom/urbancruiser-hyryder/interior/Tilt-&-Telescopic-Steering.webp"
+   },
+   {
+    "cap": "Panoramic sunroof",
+    "img": "https://static.toyotabharat.com/images/showroom/urbancruiser-hyryder/exterior/panoramic-roof.webp"
+   }
+  ]
+ },
+ "Toyota|Urban Cruiser Taisor": {
+  "page": "https://www.toyotabharat.com/showroom/urbancruiser-taisor/",
+  "hero": "https://static.toyotabharat.com/images/showroom/d27/gallery/d27_Gallery_4_1400x600px.webp",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://static.toyotabharat.com/images/showroom/d27/gallery/d27_Gallery_5_1400x600px.webp"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://static.toyotabharat.com/images/showroom/d27/features/freedom/d27_SMARTPLAY_CAST_TOUCH_SCREEN_INFOTAIN_ENT_SYSTEM_1020x600px.webp"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://static.toyotabharat.com/images/showroom/d27/features/realm/D27_STEERING_MOUNTED_CONTROLS_1020x600px.webp"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://static.toyotabharat.com/images/showroom/d27/features/realm/D27_60-40_SPLIT_REAR_SEAT_1020x600px.webp"
+   },
+   {
+    "cap": "Gear lever",
+    "img": "https://static.toyotabharat.com/images/showroom/d27/features/thrills/D27_SLICK_AT_TRANSMISSION_800x550px.webp"
+   }
+  ]
+ },
+ "Toyota|Vellfire": {
+  "page": "https://www.toyotabharat.com/showroom/vellfire/",
+  "hero": "https://static.toyotabharat.com/images/showroom/vellfire/colors/new-vellfire-white.webp",
+  "colors": [
+   {
+    "name": "Platinum White Pearl",
+    "img": "https://static.toyotabharat.com/images/showroom/vellfire/colors/new-vellfire-white.webp"
+   },
+   {
+    "name": "Precious Metal",
+    "img": "https://static.toyotabharat.com/images/showroom/vellfire/colors/new-vellfire-white-2.webp"
+   },
+   {
+    "name": "Black",
+    "img": "https://static.toyotabharat.com/images/showroom/vellfire/colors/new-vellfire-black.webp"
+   }
+  ],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://static.toyotabharat.com/images/showroom/vellfire/comfort/exquisite-interiors-800x450-1.webp"
+   },
+   {
+    "cap": "Rear captain seats",
+    "img": "https://static.toyotabharat.com/images/showroom/vellfire/spotlight/02.webp"
+   },
+   {
+    "cap": "Cabin",
+    "img": "https://static.toyotabharat.com/images/showroom/vellfire/spotlight/03.webp"
+   },
+   {
+    "cap": "Powered front seats",
+    "img": "https://static.toyotabharat.com/images/showroom/vellfire/comfort/powered-front-seats.webp"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://static.toyotabharat.com/images/showroom/vellfire/comfort/smart-device-link.webp"
+   },
+   {
+    "cap": "Rear seat entertainment",
+    "img": "https://static.toyotabharat.com/images/showroom/vellfire/comfort/rear-seat-entertainment.webp"
+   }
+  ]
+ }
+}

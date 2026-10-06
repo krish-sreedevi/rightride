@@ -1,0 +1,120 @@
+{
+ "Skoda|Kodiaq": {
+  "page": "https://www.skoda-auto.co.in/models/kodiaq/kodiaq",
+  "hero": "https://cdn.skoda-auto.com/images/external/2a53c8757bc810f3fdfc292a4379d7d6/DerivativeIntroductionModule/517a7c8aa96236dc9d8954f4916e42718d6bf87515b75d7ab74272b3bc3277bf/Default_bp1920_1.webp",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Cabin",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/4e8989cb-f813-4804-9f6c-b16ab7bbcfea/836ae1e2f2f52c0826bfd01dbcc122af/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/a1e63527-1d35-46fb-91a3-4d952238886d/0eb78ca0f933c0299a3c16e11b2ac82b/DetailLayerModule/9638c65fce7304c05b5e3c8a99f2bdd2/444ec46381a1b5f8a152e73f4bb82b3af26ec0c5ca94b1530ab04cc2e52d5be2/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Climate controls",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/212a537d-2861-4930-8909-649e5ac6283c/6e836a5e038bdb8759408dc657c85750/DetailLayerModule/9638c65fce7304c05b5e3c8a99f2bdd2/444ec46381a1b5f8a152e73f4bb82b3af26ec0c5ca94b1530ab04cc2e52d5be2/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Panoramic sunroof",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/f7fbaf87-a110-4a30-93ab-1c751656fbd7/20b106934d9b21060d6a70a7ae49071a/DetailLayerModule/9638c65fce7304c05b5e3c8a99f2bdd2/444ec46381a1b5f8a152e73f4bb82b3af26ec0c5ca94b1530ab04cc2e52d5be2/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Boot space",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/5d4653d2-d4ca-4704-94da-7ff7feb978de/4c5e25af9712f0d4b56e8788757b7909/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   }
+  ]
+ },
+ "Skoda|Kushaq": {
+  "page": "https://www.skoda-auto.co.in/models/kushaq/kushaq",
+  "hero": "https://cdn.skoda-auto.com/images/external/89a463be75c3e2396a6991e2c102cd8a/DerivativeIntroductionModule/517a7c8aa96236dc9d8954f4916e42718d6bf87515b75d7ab74272b3bc3277bf/Default_bp1920_1.webp",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Infotainment",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/f63b7dfa-5fb3-4627-9219-79de63af3b7b/2c764c86e3fc85a4b284e9c74328aa85/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Steering & digital cockpit",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/61494ffe-9226-435b-aa44-dadbdfeef895/a781e437d0440fe7f81f174494619761/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Sunroof",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/bb519033-461c-4a94-8982-a80aa34176a1/e0399e38907d5c283d3289cc070ecc18/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/28e2b504-db68-43e0-9bb6-49f2390560a9/508ef95c4f0783702007971b2b4f5a7e/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Gear lever",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/d6103e68-7d7f-4064-840a-445d5aa5464f/99e63143415bec5458372ca60ed6718b/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   }
+  ]
+ },
+ "Skoda|Kylaq": {
+  "page": "https://www.skoda-auto.co.in/models/kylaq/kylaq",
+  "hero": "https://cdn.skoda-auto.com/images/external/2f641e85235c48358e45b3d1cd67e164/DerivativeIntroductionModule/517a7c8aa96236dc9d8954f4916e42718d6bf87515b75d7ab74272b3bc3277bf/Default_bp1920_1.webp",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/4a973cdd-3897-4285-a0c8-43b104cf650f/fa03ba7e5b5070a66749d2ffe6df7cfd/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Ventilated front seats",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/05652b01-addf-42df-875f-e55b98c62023/e5569c60852a235e1b5c6459c36f4f8e/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/4e1166a3-80f4-4e7e-9944-769a8d50d2fb/db69ea4eadf0db9a57974dcfb3156d8f/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Digital cockpit",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/43af2fab-a525-4825-9f7e-67d6c5f56b97/c33ee3758ef19f55829a60d7c25f0d81/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/0042ed0c-5795-45fd-a85e-305f8a22f0fa/0c59347497105155d759048931a42fa4/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Boot space",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/718a7e80-9b60-4acf-8566-5ae32ecfe21f/8a05e8eed37ed1496da071fc75012213/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   }
+  ]
+ },
+ "Skoda|Slavia": {
+  "page": "https://www.skoda-auto.co.in/models/slavia/slavia",
+  "hero": "https://cdn.skoda-auto.com/images/external/8298e4da1842a614573caa0be098b3aa/DerivativeIntroductionModule/517a7c8aa96236dc9d8954f4916e42718d6bf87515b75d7ab74272b3bc3277bf/Default_bp1920_1.webp",
+  "colors": [],
+  "interior": [
+   {
+    "cap": "Dashboard",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/93b27e68-90c9-492c-917b-1b037f81f75c/f532cc6b4cdd08e806c8cad28d8617a6/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Infotainment",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/018ffe68-bef3-4521-8d87-b0ed2c3a1a99/e3ea6434809830d920d79c4cb80203b7/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Front seats",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/18a31efe-f2e0-4a50-bfac-a1a78961f1df/89b019186552fc6cbeaa519fa0d25b01/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Rear seats",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/9a6b69a8-76f1-45c8-ac62-6ec838e1ada7/a22872aad1b48785290ea6e82c5e428d/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   },
+   {
+    "cap": "Steering wheel",
+    "img": "https://cdn.skoda-auto.com/images/sites/enin-v2/7d77c860-4cb8-4bb9-982a-2de2410bae28/b6e9f478b5cfe44007715ad554895894/ModelCharacterGalleryModule/7632a1f0aa516594d6a0e94356eefae7250acf63669750b30971a08237c5496b/Default_bp1200_1.webp"
+   }
+  ]
+ },
+ "Skoda|Kodiaq RS": {
+  "page": "https://www.skoda-auto.co.in/models/kodiaq-rs",
+  "hero": null,
+  "colors": [],
+  "interior": []
+ }
+}

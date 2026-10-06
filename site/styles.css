@@ -182,7 +182,7 @@ body.leaving[data-page="cars"] .layout, body.leaving[data-page="cars"] .foot { a
 @keyframes page-out-down { to { opacity: 0; transform: translateY(24px); filter: blur(4px); } }
 /* arriving */
 body.to-cars .layout, body.to-car .car-page { animation: page-in .6s var(--ease) backwards; }
-body.to-cars .topbar .find-btn { animation: cta-arrive .9s var(--ease) .1s both, rr-spin 4s linear infinite; }
+
 body.to-cars .topbar::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: linear-gradient(90deg, transparent, var(--brand), transparent); animation: sweep .9s var(--ease) both; }
 body.to-home .hero-inner > :nth-child(2) { animation-delay: .06s; } body.to-home .hero-inner > :nth-child(3) { animation-delay: .12s; } body.to-home .hero-inner > :nth-child(4) { animation-delay: .18s; }
 @keyframes page-in { from { opacity: 0; transform: translateY(28px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
@@ -194,7 +194,7 @@ body.to-home .hero-inner > :nth-child(2) { animation-delay: .06s; } body.to-home
 @property --rr-a { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
 .rr-cta { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1; border: 0; padding: 2px; border-radius: 999px; cursor: pointer; font: inherit; color: var(--text);
   background: conic-gradient(from var(--rr-a), #C9281B, #FF7A55 18%, #ffd6c8 26%, #C9281B 40%, rgba(201,40,27,.15) 62%, #C9281B 85%);
-  animation: rr-spin 4s linear infinite; transition: transform .45s var(--ease), opacity .4s var(--ease), box-shadow .4s var(--ease);
+  transition: transform .45s var(--ease), opacity .4s var(--ease), box-shadow .4s var(--ease);
   box-shadow: 0 6px 22px color-mix(in srgb, var(--brand) 28%, transparent), 0 0 0 0 color-mix(in srgb, var(--brand) 30%, transparent); }
 .rr-cta::before { content: ''; position: absolute; inset: -6px; border-radius: inherit; background: inherit; filter: blur(12px); opacity: .3; z-index: -1; animation: rr-breathe 2.8s ease-in-out infinite; }
 @keyframes rr-spin { to { --rr-a: 360deg; } }
@@ -784,3 +784,17 @@ body.lb-open { overflow: hidden; }
 .sug-p { font-size: .82rem; font-weight: 600; color: var(--text); white-space: nowrap; }
 .sug-foot { padding: 8px 10px 4px; font-size: .76rem; color: var(--muted); border-top: 1px solid var(--line); margin-top: 4px; }
 @media (prefers-color-scheme: dark) { .sug-img { background: linear-gradient(165deg, #222225, #161618); } }
+.mt-dist { display: flex; gap: 6px; margin-top: 6px; } .mt-dist span { font-size: .74rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: var(--chip); color: var(--muted); }
+.dl-geo-note { margin: -4px 0 10px; }
+
+/* header call to action: static glow, no idle animation; hover still animates */
+.rr-cta, .rr-cta::before, .rr-cta-in::after, .rr-cta-text { animation: none !important; }
+.rr-cta { --rr-a: 200deg; }
+.rr-cta-in::after { display: none; }
+.rr-cta-text { background: none; color: var(--text); -webkit-background-clip: border-box; background-clip: border-box; }
+.rr-cta-orb img { width: 14px; height: 20px; display: block; }
+.rr-cta-orb .o-r { display: none; }
+.rr-cta:hover .rr-cta-orb .o-w { display: none; } .rr-cta:hover .rr-cta-orb .o-r { display: block; }
+.hg-slide.color img { object-fit: contain; width: 94%; height: 330px; }
+.lb-slide img[src*="img/cars/"] { background: radial-gradient(120% 90% at 50% 100%, rgba(255,255,255,.10), transparent 60%); }
+@media (max-width: 600px) { .hg-slide.color img { height: 200px; } }
