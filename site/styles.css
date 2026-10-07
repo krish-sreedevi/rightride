@@ -108,7 +108,7 @@ body.rec-mode .layout { padding-top: 28px; }
 .active-chips .chip { background: var(--brand-soft); color: var(--brand); font-weight: 500; }
 .list { display: grid; gap: 16px; }
 
-.card { background: var(--panel); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; transition: transform .35s var(--ease), box-shadow .35s var(--ease); animation: rise .5s var(--ease) both; }
+.card { background: var(--panel); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
 .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
 .card-main { display: grid; grid-template-columns: 168px 1fr auto; gap: 20px; padding: 18px 22px; align-items: center; }
 .thumb { width: 168px; height: 100px; border-radius: 16px; background: linear-gradient(160deg, var(--panel-2), var(--chip)); display: grid; place-items: center; overflow: hidden; }
@@ -463,7 +463,8 @@ body.rec-mode .layout { padding-top: 0; }
 /* grid view */
 #gridView { padding: 22px 40px 0; }
 .tile-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 18px; }
-.tile-grid > .tile { animation: rise .45s var(--ease) both; }
+#list > .enter { animation: list-in .6s cubic-bezier(.22, 1, .36, 1) backwards; animation-delay: calc(var(--i, 0) * 45ms); }
+@keyframes list-in { from { opacity: 0; transform: translateY(22px) scale(.985); } }
 .tile-grid > .empty { grid-column: 1 / -1; }
 
 /* filters drawer (all screen sizes) */
@@ -1089,3 +1090,16 @@ body.rq-dragging, body.rq-dragging * { cursor: grabbing !important; }
 @keyframes vt-fade-in { from { opacity: 0; } }
 @keyframes vt-out { to { opacity: 0; transform: scale(.97); filter: blur(4px); } }
 @keyframes vt-in { from { opacity: 0; transform: translateY(40px); } }
+
+/* ---- motion polish: one gentle curve, short durations, everything eases in and out ---- */
+:root { --ease-out: cubic-bezier(.22, 1, .36, 1); }
+a, .link, .tab, .foot-nav a, .filter-btn, .btn, .chip, .ms > summary, .ms-opt, .q-hint, .cp-nav a, .sort select { transition: color .25s var(--ease-out), background-color .25s var(--ease-out), box-shadow .3s var(--ease-out), transform .3s var(--ease-out), opacity .25s var(--ease-out); }
+.filter-btn:active, .tab:active, .chip:active { transform: scale(.97); }
+.ms[open] > .ms-pop { animation: menu-in .22s var(--ease-out); transform-origin: top center; }
+@keyframes menu-in { from { opacity: 0; transform: translateY(-6px) scale(.98); } }
+.bucket[open] > :not(summary) { animation: bucket-in .35s var(--ease-out) backwards; }
+@keyframes bucket-in { from { opacity: 0; transform: translateY(-4px); } }
+.q-sug:not([hidden]) { animation: menu-in .22s var(--ease-out); }
+#more { transition: background-color .25s var(--ease-out), box-shadow .3s var(--ease-out), transform .3s var(--ease-out); }
+#more:hover { transform: translateY(-1px); }
+.results-head h1 { transition: opacity .3s var(--ease-out); }

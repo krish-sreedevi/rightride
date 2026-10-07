@@ -607,12 +607,31 @@
     document.body.classList.toggle('rec-mode', !!(state.sort === 'rec' && state.rec));
     const recMode = state.sort === 'rec' && state.rec;
     if (recMode && list.length) $('#resultTitle').textContent = `${list.length} model${list.length > 1 ? 's' : ''} ranked for you`;
+    if (($('#list').className === 'list') !== !!recMode) listKeys = new Set(); // switching between list and grid: everything enters fresh
+    snapList();
     $('#list').className = recMode ? 'list' : 'tile-grid';
     $('#list').innerHTML = shown.length ? shown.map((m, i) => (!recMode && featsOn().size && m.tier > 0 && (i === 0 || shown[i - 1].tier === 0) ? `<div class="grid-split"><b>More to check</b><span class="muted">We couldn't confirm every feature for these yet. Open a car to see its variants.</span></div>` : '') + (recMode ? recCard(m, i + 1) : tile(m))).join('') : sorry();
+    animateList();
     $('#more').hidden = list.length <= shown.length;
     updateCompareBar();
   }
 
+  // graceful list updates: new cars rise in one after another, cars that stay glide to their new place
+  let listRects = new Map(), listKeys = null;
+  function snapList() { listRects = new Map(); for (const el of $('#list').children) if (el.dataset.key) listRects.set(el.dataset.key, el.getBoundingClientRect()); }
+  function animateList() {
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches, first = listKeys === null;
+    const kids = [...$('#list').children].filter((el) => el.dataset.key), keys = new Set(kids.map((el) => el.dataset.key));
+    let n = 0;
+    for (const el of kids) {
+      const k = el.dataset.key, was = listRects.get(k);
+      if (!listKeys || !listKeys.has(k)) { if (!reduce) { el.classList.add('enter'); el.style.setProperty('--i', Math.min(n++, 12)); } continue; }
+      if (!was || reduce || first || !el.animate) continue;
+      const now = el.getBoundingClientRect(), dx = was.left - now.left, dy = was.top - now.top;
+      if ((dx || dy) && Math.abs(dy) < innerHeight * 1.5) el.animate([{ transform: `translate(${dx}px, ${dy}px)` }, { transform: 'none' }], { duration: 520, easing: 'cubic-bezier(.22, 1, .36, 1)' });
+    }
+    listKeys = keys; listRects = new Map();
+  }
   function card(m) {
     const b = m.best.c;
     const key = m.brand + '|' + m.model;
@@ -1721,7 +1740,7 @@
     $('#findBtn').addEventListener('click', () => openWizard(1));
     document.addEventListener('click', (e) => { if (e.target.closest('[data-open-finder]')) openWizard(1); });
     wireWizard();
-    $('#more').addEventListener('click', () => { state.page++; render(); });
+    $('#more').addEventListener('click', () => { state.page++; render(); if (!matchMedia('(prefers-reduced-motion: reduce)').matches) window.scrollBy({ top: Math.round(innerHeight * .35), behavior: 'smooth' }); });
     $('#sort').addEventListener('change', (e) => { state.sort = e.target.value; saveFilters(); render(); });
     $('#state').addEventListener('change', (e) => { if (e.target.value === DETECT) { store.set('stateManual', false); detect(false); } else { hideLocToast(); setState(e.target.value, true); } });
     $('#locToast').addEventListener('click', (e) => {
