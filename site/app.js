@@ -15,7 +15,7 @@
     budgetMin: '', budgetMax: '',
     body: new Set(), seats: new Set(), brand: new Set(), fuel: new Set(), trans: new Set(), transType: new Set(), drive: new Set(),
     feats: new Set(), allowUnknown: true, closeMatches: true, sort: 'price', page: 1,
-    compare: new Set(), open: new Set(), rec: null, tab: 'foryou', q: '', qf: null,
+    compare: new Set(), open: new Set(), rec: null, tab: 'all', q: '', qf: null,
   };
   const PAGE = 20;
 
@@ -155,9 +155,17 @@
   function chips(name, values, set, labels = {}) {
     return `<div class="chips" data-set="${name}">${values.map((v) => `<button type="button" class="chip" data-v="${esc(v)}" aria-pressed="${set.has(v)}">${esc(labels[v] || v)}</button>`).join('')}</div>`;
   }
+  // brand: a multi-select dropdown, A to Z, with a quick search
+  const brandSummary = () => { const b = [...state.brand].sort((x, y) => x.localeCompare(y, 'en', { sensitivity: 'base' })); return !b.length ? 'Any brand' : b.length <= 2 ? b.join(', ') : `${b.length} brands`; };
+  function brandPicker(brands) {
+    return `<details class="ms" id="brandMs"><summary aria-labelledby="brandLbl brandSum"><span id="brandSum">${esc(brandSummary())}</span><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="ms-pop"><input type="search" class="ms-q" id="brandQ" placeholder="Search brands" aria-label="Search brands" autocomplete="off">
+        <div class="ms-list" role="group" aria-label="Brands">${brands.map((b) => `<label class="ms-opt" data-name="${esc(b.toLowerCase())}"><input type="checkbox" data-brand="${esc(b)}" ${state.brand.has(b) ? 'checked' : ''}><span>${esc(b)}</span></label>`).join('')}</div>
+        <div class="ms-foot"><button type="button" class="link" data-brandclear>Clear</button><button type="button" class="btn primary sm" data-brandclose>Done</button></div></div></details>`;
+  }
   function buildFilters() {
     const bodies = Object.keys(countBy((c) => c.body)).sort();
-    const brands = Object.keys(countBy((c) => c.brand)).sort();
+    const brands = Object.keys(countBy((c) => c.brand)).sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
     const fuels = FUELS.filter((f) => DATA.cars.some((c) => c.fuel === f));
     const byBucket = {};
     for (const f of DATA.features) (byBucket[f.bucket] = byBucket[f.bucket] || []).push(f);
@@ -169,7 +177,7 @@
         </div>
         <div class="group"><div class="label">Body type</div>${chips('body', ['Hatchback', 'Sedan', 'SUV', 'MUV / MPV'].filter((x) => bodies.includes(x)), state.body)}</div>
         <div class="group"><div class="label">Seats</div>${chips('seats', ['4–5', '6–7'], state.seats)}</div>
-        <div class="group"><div class="label">Brand</div>${chips('brand', brands, state.brand)}</div>
+        <div class="group"><div class="label" id="brandLbl">Brand</div>${brandPicker(brands)}</div>
       </details>
       <details class="bucket" open><summary>Fuel &amp; gearbox</summary>
         <div class="group"><div class="label">Fuel type</div>${chips('fuel', fuels, state.fuel)}</div>
@@ -190,6 +198,8 @@
   }
 
   function onFilterClick(e) {
+    if (e.target.closest('[data-brandclose]')) { const d = $('#brandMs'); d.open = false; d.querySelector('summary').focus(); return; }
+    if (e.target.closest('[data-brandclear]')) { state.brand.clear(); for (const i of $$('#brandMs [data-brand]')) i.checked = false; $('#brandSum').textContent = brandSummary(); state.page = 1; saveFilters(); render(); return; }
     const b = e.target.closest('button.chip');
     if (!b) return;
     if (b.dataset.budget) {
@@ -230,14 +240,6 @@
   // ---------------- showroom: tabs, shelves, tiles, model sheet, search ----------------
   const TABS = [
     { id: 'picks', label: 'Your picks', when: () => !!state.rec },
-    { id: 'foryou', label: 'For you' },
-    { id: 'suv', label: 'SUVs', set: { body: ['SUV'] } },
-    { id: 'hatch', label: 'Hatchbacks', set: { body: ['Hatchback'] } },
-    { id: 'sedan', label: 'Sedans', set: { body: ['Sedan'] } },
-    { id: 'muv', label: 'MUVs', set: { body: ['MUV / MPV'] } },
-    { id: 'ev', label: 'Electric', set: { fuel: ['Electric'] } },
-    { id: 'u10', label: 'Under ₹10 L', max: 10 },
-    { id: 'top', label: 'Top rated', sort: 'expert' },
     { id: 'all', label: 'All cars' },
   ];
   function drawTabs() {
@@ -598,14 +600,13 @@
       $('#resultTitle').textContent = ok ? `${ok} model${ok > 1 ? 's' : ''} match` : 'No confirmed matches';
       if (rest) $('#resultTitle').insertAdjacentHTML('beforeend', `<span class="rt-more"> + ${rest} more to check</span>`);
     }
-    $('#resultSub').textContent = `On-road prices estimated for ${stName}.` + (featsOn().size ? ' Confirmed matches first.' : ' Use the filters to narrow down.') + (state.qf && state.qf.ignored.length ? ` Ignored: ${state.qf.ignored.join(', ')}.` : '');
+    $('#resultSub').textContent = state.qf && state.qf.ignored.length ? `Ignored: ${state.qf.ignored.join(', ')}.` : '';
     $('#activeChips').innerHTML = activeFilters().map(([spec, label]) => `<button class="chip" data-rm="${esc(spec)}">${esc(label)} ✕</button>`).join('');
     const shown = list.slice(0, state.page * PAGE);
     recBar();
     document.body.classList.toggle('rec-mode', !!(state.sort === 'rec' && state.rec));
     const recMode = state.sort === 'rec' && state.rec;
     if (recMode && list.length) $('#resultTitle').textContent = `${list.length} model${list.length > 1 ? 's' : ''} ranked for you`;
-    if (recMode) $('#resultSub').textContent = `Ranked on your priorities using expert scores plus our specs data. Click a car for its variants, safety rating and nearby showrooms.`;
     $('#list').className = recMode ? 'list' : 'tile-grid';
     $('#list').innerHTML = shown.length ? shown.map((m, i) => (!recMode && featsOn().size && m.tier > 0 && (i === 0 || shown[i - 1].tier === 0) ? `<div class="grid-split"><b>More to check</b><span class="muted">We couldn't confirm every feature for these yet. Open a car to see its variants.</span></div>` : '') + (recMode ? recCard(m, i + 1) : tile(m))).join('') : sorry();
     $('#more').hidden = list.length <= shown.length;
@@ -1187,7 +1188,7 @@
     bar.hidden = false;
     bar.innerHTML = `<span class="rec-k">Priorities</span>
       <ol class="pr-row" id="prRow" aria-label="Your priorities, most important first">${r.prio.map((k, i) => `<li class="pr-pill" data-k="${k}" tabindex="0" title="${i ? '' : 'Most important'}"><span class="pn">${i + 1}</span><span class="pr-t">${esc(PRIO[k])}</span><span class="pr-mv"><button type="button" data-pmove="-1" aria-label="Move ${esc(PRIO[k])} up" ${i ? '' : 'disabled'}>‹</button><button type="button" data-pmove="1" aria-label="Move ${esc(PRIO[k])} down" ${i < 3 ? '' : 'disabled'}>›</button></span></li>`).join('')}</ol>
-      <span class="pr-hint muted">Use the arrows to reorder. The ranking updates instantly</span>`;
+      <span class="pr-hint muted">Use the arrows to reorder</span>`;
   }
   function setPrio(order) {
     if (!state.rec || order.join() === state.rec.prio.join()) return;
@@ -1240,7 +1241,7 @@
     saveFilters(); buildFilters(); render(); go('cars'); window.scrollTo({ top: 0, behavior: 'instant' });
   }
   function exitRec() {
-    state.rec = null; store.set('rec', null); state.tab = 'foryou';
+    state.rec = null; store.set('rec', null); state.tab = 'all';
     for (const k of SETS) state[k].clear(); state.budgetMin = state.budgetMax = '';
     state.sort = 'price'; $('#sort').value = 'price'; $('#sort option[value="rec"]').hidden = true;
     saveFilters(); buildFilters(); render();
@@ -1656,7 +1657,12 @@
   // ---------------- wiring ----------------
   function wire() {
     $('#filterBody').addEventListener('click', onFilterClick);
+    document.addEventListener('click', (e) => { const d = $('#brandMs'); if (d && d.open && !d.contains(e.target)) d.open = false; });
+    document.addEventListener('keydown', (e) => { const d = $('#brandMs'); if (e.key === 'Escape' && d && d.open) { d.open = false; d.querySelector('summary').focus(); e.stopPropagation(); } }, true);
+    $('#filterBody').addEventListener('toggle', (e) => { if (e.target.id === 'brandMs' && e.target.open) { const q = $('#brandQ'); q.value = ''; $$('#brandMs .ms-opt').forEach((o) => (o.hidden = false)); q.focus({ preventScroll: true }); } }, true);
     $('#filterBody').addEventListener('input', (e) => {
+      if (e.target.id === 'brandQ') { const q = e.target.value.trim().toLowerCase(); for (const o of $$('#brandMs .ms-opt')) o.hidden = !!q && !o.dataset.name.includes(q); return; }
+      if (e.target.dataset.brand) { const v = e.target.dataset.brand; e.target.checked ? state.brand.add(v) : state.brand.delete(v); $('#brandSum').textContent = brandSummary(); }
       if (e.target.id === 'bmin') state.budgetMin = e.target.value.replace(/[^\d.]/g, '');
       if (e.target.id === 'bmax') state.budgetMax = e.target.value.replace(/[^\d.]/g, '');
       if (e.target.id === 'allowUnknown') state.allowUnknown = e.target.checked;
@@ -1682,7 +1688,7 @@
     });
     document.addEventListener('click', (e) => {
       const r = e.target.closest('[data-rec]'); if (!r) return;
-      if (r.dataset.rec === 'edit') openWizard(1); else { $('#sort option[value="rec"]').hidden = true; setTab('foryou'); }
+      if (r.dataset.rec === 'edit') openWizard(1); else { $('#sort option[value="rec"]').hidden = true; setTab('all'); }
     });
     $('#findBtn').addEventListener('click', () => openWizard(1));
     document.addEventListener('click', (e) => { if (e.target.closest('[data-open-finder]')) openWizard(1); });
@@ -2078,7 +2084,7 @@
     } catch (e) {
       $('#resultTitle').textContent = 'Could not load car data. Please refresh.'; return;
     }
-    fillStates(); loadFilters(); state.tab = store.get('tab', null) || (state.rec && state.sort === 'rec' ? 'picks' : 'foryou'); prep(); buildFilters(); wire(); render(); wirePages(); autoLocate();
+    fillStates(); loadFilters(); state.tab = store.get('tab', null); if (!TABS.some((t) => t.id === state.tab) || (state.tab === 'picks' && !state.rec)) state.tab = state.rec && state.sort === 'rec' ? 'picks' : 'all'; prep(); buildFilters(); wire(); render(); wirePages(); autoLocate();
     $('#heroStats').textContent = `${DATA.cars.length.toLocaleString('en-IN')} variants · ${new Set(DATA.cars.map((c) => c.brand + c.model)).size} models · ${DATA.brands.length} brands — priced for your state`;
     $('#updated').textContent = `Data updated ${new Date(DATA.generated).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} · ${DATA.cars.length} variants from ${DATA.brands.length} brands`;
   }
