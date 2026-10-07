@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="home">
-  <script>document.body.dataset.page = /^#\/car\//.test(location.hash) ? 'car' : /^#\/cars/.test(location.hash) || /[?&](body|feats|brand|fuel|min|max|seats|trans)=/.test(location.search) ? 'cars' : 'home';</script>
+  <script>document.body.dataset.page = /^#\/car\//.test(location.hash) ? 'car' : /^#\/compare\//.test(location.hash) ? 'compare' : /^#\/cars/.test(location.hash) || /[?&](body|feats|brand|fuel|min|max|seats|trans)=/.test(location.search) ? 'cars' : 'home';</script>
   <script src="rr-intro.js"></script>
   <header class="topbar">
     <a class="logo" href="#/" data-go="home" aria-label="Right Ride home">
@@ -117,13 +117,12 @@
 
   <main id="carPage" class="car-page" aria-live="polite"></main>
 
-  <div id="compareBar" class="compare-bar" hidden>
-    <span id="compareText"></span>
-    <button id="compareGo" class="btn primary" type="button">Compare</button>
-    <button id="compareClear" class="link" type="button">Clear</button>
-  </div>
+  <main id="comparePage" class="compare-page" aria-live="polite"></main>
+
+  <div id="compareBar" class="compare-bar" role="region" aria-label="Compare cars" hidden></div>
 
   <dialog id="modal"><div id="modalBody"></div></dialog>
+  <dialog id="cmpPick" class="cmp-pick" aria-label="Choose a car to compare"></dialog>
   <dialog id="wizard" class="wizard" aria-labelledby="wzTitle"><div id="wizardBody"></div></dialog>
 
   <footer class="foot">

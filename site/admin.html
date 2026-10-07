@@ -117,7 +117,7 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
     $('#app').innerHTML = '<p class="muted">Loading…</p>';
     if (!S.code || !S.token) return login();
     const end = new Date(), start = new Date(Date.now() - (S.days - 1) * 864e5);
-    const range = { start: day(start), end: day(end) };
+    const range = { start: day(start) + 'T00:00:00Z', end: day(end) + 'T23:59:59Z' }; // the API wants full timestamps
     try {
       const [tot, hits] = await Promise.all([api('stats/total', range), allHits(range)]);
       D = { tot, hits, range };
@@ -139,7 +139,7 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
     const days = (stats || []).map((s) => ({ d: s.day, v: s.daily || 0 }));
     if (!days.length) return '<p class="empty">No visits yet.</p>';
     const W = 1000, H = 200, pad = { l: 34, r: 6, t: 8, b: 22 };
-    const max = Math.max(1, ...days.map((x) => x.v)), nice = Math.ceil(max / Math.pow(10, Math.floor(Math.log10(max)))) * Math.pow(10, Math.floor(Math.log10(max)));
+    const max = Math.max(4, ...days.map((x) => x.v)), mag = Math.pow(10, Math.floor(Math.log10(max))), nice = Math.max(4, Math.ceil(max / mag) * mag + (Math.ceil(max / mag) * mag) % 2); // whole-number ticks
     const bw = (W - pad.l - pad.r) / days.length, gap = Math.min(2, bw * .2);
     const y = (v) => pad.t + (H - pad.t - pad.b) * (1 - v / nice);
     const ticks = [0, nice / 2, nice];
@@ -165,7 +165,7 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
     const tabRows = { brand: agg(td, (h) => h.b), car: agg(td, (h) => h.b + ' ' + h.m), dealer: agg(td, (h) => h.d ? h.d + '|' + h.b : '') .map(([k, v]) => { const [d, b] = k.split('|'); return [[d, b], v]; }) };
     $('#app').innerHTML = `
       <div class="bar"><div class="seg" role="group" aria-label="Period">${[7, 30, 90, 365].map((d) => `<button data-days="${d}" aria-pressed="${S.days === d}">${d === 365 ? '1 year' : d + ' days'}</button>`).join('')}</div>
-        <span class="muted small">${esc(range.start)} to ${esc(range.end)} · ${esc(S.code)}.goatcounter.com</span></div>
+        <span class="muted small">${esc(range.start.slice(0, 10))} to ${esc(range.end.slice(0, 10))} · ${esc(S.code)}.goatcounter.com</span></div>
       <div class="kpis">
         <div class="card kpi"><div class="k">Visitors</div><div class="v">${visitors.toLocaleString('en-IN')}</div><div class="s">unique visits to the site</div></div>
         <div class="card kpi"><div class="k">Car page views</div><div class="v">${cpTotal.toLocaleString('en-IN')}</div><div class="s">across ${carPages.length} car${carPages.length === 1 ? '' : 's'}</div></div>

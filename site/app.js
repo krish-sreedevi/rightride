@@ -572,7 +572,7 @@
     $('#scrim').addEventListener('click', closeDrawer);
     $('#modal').addEventListener('click', (e) => {
       const box = e.target.closest('.cmp-box');
-      if (box) { box.checked ? (state.compare.size < 4 ? state.compare.add(box.dataset.id) : (box.checked = false)) : state.compare.delete(box.dataset.id); updateCompareBar(); return; }
+      if (box) { cmpToggle(box.dataset.id, box.checked); return; }
       const tr = e.target.closest('tr.v'); if (tr && !e.target.closest('input')) detail(tr.dataset.id);
     });
   }
@@ -643,7 +643,7 @@
   function variantTable(m) {
     const rows = m.vs.slice().sort((a, b) => a.c.orTotal - b.c.orTotal).map(({ c, ev }) => `
       <tr class="v" data-id="${esc(c.id)}">
-        <td><input type="checkbox" class="cmp-box" data-id="${esc(c.id)}" ${state.compare.has(c.id) ? 'checked' : ''} aria-label="Compare"></td>
+        <td><input type="checkbox" class="cmp-box" data-id="${esc(c.id)}" ${cmpKeys().includes(c.brand + '|' + c.model) ? 'checked' : ''} aria-label="Compare this car"></td>
         <td><b>${esc(c.variant)}</b>${ev.miss.length ? `<div class="miss">Missing: ${esc(ev.miss.map(FLABEL).join(', '))}</div>` : ''}${ev.unk.length ? `<div class="unk">Not confirmed: ${esc(ev.unk.map(FLABEL).join(', '))}</div>` : ''}</td>
         <td>${esc(c.fuel)}</td><td>${esc(c.transType && c.transType !== 'MT' ? c.transType : c.transmission || '')}</td>
         <td class="num hide-sm">${lakh(c.or.ex)}</td><td class="num"><b>${lakh(c.orTotal)}</b></td>
@@ -689,12 +689,7 @@
     $('#modalBody').innerHTML = `<div class="modal-head"><h2>Compare</h2><button class="btn ghost" data-close aria-label="Close">✕</button></div><div class="modal-body" style="overflow-x:auto"><table class="cmp"><thead><tr><th></th>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
     $('#modal').showModal();
   }
-  function updateCompareBar() {
-    const n = state.compare.size;
-    $('#compareBar').hidden = !n;
-    $('#compareText').textContent = `${n} selected${n < 2 ? ' — pick another to compare' : ''}`;
-    $('#compareGo').disabled = n < 2;
-  }
+
 
   function about() {
     const rows = DATA.brands.sort((a, b) => a.brand.localeCompare(b.brand)).map((b) => `<tr><td>${esc(b.brand)}</td><td class="num">${b.models}</td><td class="num">${b.variants}</td><td>${b.curated ? 'Curated snapshot' : 'Official site (automatic)'}</td><td>${b.updated ? new Date(b.updated).toLocaleDateString('en-IN') : ''}</td></tr>`).join('');
@@ -1457,7 +1452,7 @@
   // ---------------- two pages: home (#/) and cars (#/cars) ----------------
   let page = null, carSlug = null, carsY = 0;
   function showPage(next, animate = true, arg = null) {
-    if (next === page && (next !== 'car' || arg === carSlug)) return;
+    if (next === page && (next !== 'car' || arg === carSlug) && (next !== 'compare' || arg === cmpArg)) return;
     const prev = page; page = next;
     if (prev === 'cars') carsY = window.scrollY;
     const B = document.body, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1466,6 +1461,7 @@
       B.dataset.page = next;
       if (next !== 'car') { document.title = ORIG_TITLE; navFromList = navFromList && next === 'cars'; }
       if (next === 'car') { carSlug = arg; renderCar(arg); window.scrollTo({ top: 0, behavior: 'instant' }); }
+      else if (next === 'compare') { cmpArg = arg || ''; cmp.vsel = {}; renderCompare(cmpArg); window.scrollTo({ top: 0, behavior: 'instant' }); }
       else if (next === 'cars') { render(); window.scrollTo({ top: prev === 'car' ? carsY : 0, behavior: 'instant' }); }
       else { window.scrollTo({ top: 0, behavior: 'instant' }); requestAnimationFrame(placeHorizon); startLanes(); }
       if (animate && prev && !reduce) { void B.offsetWidth; B.classList.add('to-' + next); clearTimeout(showPage.t); showPage.t = setTimeout(() => B.classList.remove('to-cars', 'to-home', 'to-car'), 1100); }
@@ -1474,13 +1470,15 @@
     else swap();
   }
   function go(next, arg) {
-    const h = next === 'cars' ? '#/cars' : next === 'car' ? '#/car/' + arg : '#/';
+    const h = next === 'cars' ? '#/cars' : next === 'car' ? '#/car/' + arg : next === 'compare' ? '#/compare/' + arg : '#/';
     if (location.hash !== h) location.hash = h; else showPage(next, true, arg);
   }
   function route(animate) {
     countView();
     const c = location.hash.match(/^#\/car\/([\w-]+)/);
     if (c) return showPage('car', animate, c[1]);
+    const cm = location.hash.match(/^#\/compare\/([\w,-]+)/);
+    if (cm) return showPage('compare', animate, cm[1]);
     showPage(/^#\/cars/.test(location.hash) ? 'cars' : 'home', animate);
   }
   // sticky chapter tabs on the car page follow the scroll
@@ -1522,7 +1520,7 @@
   let lastView = '';
   function countView() {
     const h = location.hash.replace(/^#/, '') || '/';
-    const path = /^\/car\//.test(h) ? h : /^\/cars/.test(h) ? '/cars' : '/';
+    const path = /^\/car\//.test(h) ? h : /^\/compare\//.test(h) ? '/compare' : /^\/cars/.test(h) ? '/cars' : '/';
     if (path === lastView) return; lastView = path;
     const m = /^\/car\/(.+)/.test(path) ? modelBySlug(path.slice(5)) : null;
     window.rrTrack && window.rrTrack(path, m ? `${m.brand} ${m.model}` : path === '/cars' ? 'Cars' : 'Home');
@@ -1644,7 +1642,7 @@
       const t = e.target.closest('[data-toggle]');
       if (t) { const k = t.dataset.toggle; state.open.has(k) ? state.open.delete(k) : state.open.add(k); render(); return; }
       const box = e.target.closest('.cmp-box');
-      if (box) { box.checked ? (state.compare.size < 4 ? state.compare.add(box.dataset.id) : (box.checked = false)) : state.compare.delete(box.dataset.id); updateCompareBar(); return; }
+      if (box) { cmpToggle(box.dataset.id, box.checked); return; }
       const tr = e.target.closest('tr.v'); if (tr) { detail(tr.dataset.id); return; }
       if (e.target.closest('a, button, input, .variants')) return;
       const rc = e.target.closest('.rec-card, .tile'); if (rc) openCar(rc.dataset.key);
@@ -1666,14 +1664,253 @@
       else hideLocToast();
     });
     $('#reset').addEventListener('click', () => { clearFilters(); if (state.sort === 'rec') { state.sort = 'price'; $('#sort').value = 'price'; } saveFilters(); buildFilters(); render(); });
-    $('#compareGo').addEventListener('click', compareView);
-    $('#compareClear').addEventListener('click', () => { state.compare.clear(); render(); });
+    wireCompareBar(); wireComparePage();
     $('#modal').addEventListener('click', (e) => { if (e.target.closest('[data-close]') || e.target.id === 'modal') $('#modal').close(); });
     $('#aboutLink').addEventListener('click', (e) => { e.preventDefault(); about(); });
     $('#closeFilters').addEventListener('click', closeDrawer);
     $('#applyMobile').addEventListener('click', () => { closeDrawer(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
     $('#list').addEventListener('keydown', (e) => { const t = e.target.closest('.tile'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openCar(t.dataset.key); } });
     wireShowroom(); wirePrioBar(); wireCarPage();
+  }
+
+  // ---------------- compare up to 3 cars ----------------
+  // the bar on the cars page holds 3 slots; empty slots follow the current results, a slot the user picked stays put,
+  // and a slot the user cleared stays empty until they add a car
+  const cmp = { slots: store.get('cmpSlots', [null, null, null]), req: store.get('cmpReq', { must: [], nice: [] }), add: 'must', all: false, vsel: {} };
+  const keyOf = (m) => m.brand + '|' + m.model;
+  const modelByKey = (k) => groupAll().find((m) => keyOf(m) === k);
+  function cmpSource() {
+    const nothing = !activeCount() && !state.q && !(state.sort === 'rec' && state.rec);
+    const list = results();
+    if (nothing) { const xs = (m) => (expertOf(m) || {}).s || 0; return list.slice().sort((a, b) => xs(b) - xs(a) || a.best.c.orTotal - b.best.c.orTotal); }
+    return list;
+  }
+  function cmpKeys() {
+    const src = cmpSource().map(keyOf), pinned = cmp.slots.filter((s) => s && s.key).map((s) => s.key);
+    const used = new Set(pinned), out = [];
+    for (const s of cmp.slots) {
+      if (s && s.key) out.push(s.key);
+      else if (s && s.removed) out.push(null);
+      else { const k = src.find((x) => !used.has(x)); if (k) used.add(k); out.push(k || null); }
+    }
+    return out;
+  }
+  const saveCmp = () => { store.set('cmpSlots', cmp.slots); store.set('cmpReq', cmp.req); };
+  function updateCompareBar() {
+    const bar = $('#compareBar'); if (!bar) return;
+    const keys = cmpKeys(), ms = keys.map((k) => (k ? modelByKey(k) : null));
+    const n = ms.filter(Boolean).length, edited = cmp.slots.some(Boolean);
+    bar.hidden = false;
+    bar.innerHTML = `<div class="cb-in">
+      <div class="cb-head"><b>Compare</b><span class="muted small">${edited ? 'Your picks' : 'Top 3 from your results'}</span>${edited ? '<button class="link small" type="button" data-cb="reset">Reset</button>' : ''}</div>
+      <div class="cb-slots">${ms.map((m, i) => m ? `<div class="cb-slot" data-slot="${i}" title="Change ${esc(m.model)}"><div class="cb-thumb">${carImg(m, '80px')}</div><div class="cb-name"><span class="muted">${esc(m.brand)}</span><b>${esc(m.model)}</b><span class="small">from ${lakh(m.min)}</span></div>
+          <div class="cb-act"><button class="cb-btn" type="button" data-cb="change" data-i="${i}" aria-label="Change ${esc(m.model)}">Change</button><button class="cb-x" type="button" data-cb="remove" data-i="${i}" aria-label="Remove ${esc(m.model)}">✕</button></div></div>`
+        : `<button class="cb-slot empty" type="button" data-cb="change" data-i="${i}"><span class="cb-plus" aria-hidden="true">+</span>Add a car</button>`).join('')}</div>
+      <button class="btn primary cb-go" type="button" data-cb="go" ${n < 2 ? 'disabled' : ''}>Compare ${n || ''} <span aria-hidden="true">→</span></button>
+    </div>`;
+  }
+  function cmpPicker(i, onPick, takenKeys) {
+    const d = $('#cmpPick'), taken = new Set(takenKeys || cmpKeys().filter((k, j) => k && j !== i));
+    const filtered = cmpSource().filter((m) => !taken.has(keyOf(m)));
+    const all = groupAll().filter((m) => !taken.has(keyOf(m))).sort((a, b) => a.brand.localeCompare(b.brand) || a.model.localeCompare(b.model));
+    let scope = filtered.length ? 'filtered' : 'all';
+    const row = (m) => `<button type="button" class="cp-row" data-pick="${esc(keyOf(m))}"><span class="cp-th">${carImg(m, '72px')}</span><span class="cp-n"><span class="muted small">${esc(m.brand)}</span><b>${esc(m.model)}</b></span><span class="cp-p">${lakh(m.min)}</span></button>`;
+    const draw = () => {
+      const q = compact(($('#cmpQ') || {}).value || '');
+      const base = scope === 'filtered' ? filtered : all;
+      const list = q ? base.filter((m) => compact(m.brand + m.model).includes(q) || compact(m.model).includes(q)) : base;
+      $('#cmpList').innerHTML = list.length ? list.slice(0, 120).map(row).join('') : `<p class="muted cp-none">No cars match.${scope === 'filtered' ? ' <button class="link" type="button" data-scope="all">Search all cars</button>' : ''}</p>`;
+    };
+    d.innerHTML = `<div class="cp-head"><h2>Choose a car to compare</h2><button class="btn ghost" type="button" data-close aria-label="Close">✕</button></div>
+      <div class="cp-tools"><input id="cmpQ" type="search" placeholder="Search by name" autocomplete="off" aria-label="Search cars">
+      <div class="seg" role="group" aria-label="Which cars"><button type="button" data-scope="filtered" aria-pressed="${scope === 'filtered'}">Your results (${filtered.length})</button><button type="button" data-scope="all" aria-pressed="${scope === 'all'}">All cars</button></div></div>
+      <div id="cmpList" class="cp-list"></div>`;
+    draw();
+    d.oninput = (e) => { if (e.target.id === 'cmpQ') draw(); };
+    d.onclick = (e) => {
+      if (e.target === d || e.target.closest('[data-close]')) return d.close();
+      const s = e.target.closest('[data-scope]'); if (s) { scope = s.dataset.scope; d.querySelectorAll('.seg [data-scope]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.scope === scope)); draw(); return; }
+      const p = e.target.closest('[data-pick]'); if (p) { d.close(); onPick(p.dataset.pick); }
+    };
+    d.showModal(); setTimeout(() => $('#cmpQ').focus(), 50);
+  }
+  function wireCompareBar() {
+    $('#compareBar').addEventListener('click', (e) => {
+      let b = e.target.closest('[data-cb]');
+      const sl = !b && e.target.closest('[data-slot]'); // tapping the car itself (the only way on phones) changes it
+      if (sl) b = { dataset: { cb: 'change', i: sl.dataset.slot } };
+      if (!b) return;
+      const i = Number(b.dataset.i), act = b.dataset.cb;
+      if (act === 'reset') { cmp.slots = [null, null, null]; saveCmp(); updateCompareBar(); }
+      else if (act === 'remove') { const keys = cmpKeys(); cmp.slots = cmp.slots.map((s, j) => (j === i ? { removed: true } : s || (keys[j] ? { key: keys[j] } : s))); saveCmp(); updateCompareBar(); }
+      else if (act === 'change') cmpPicker(i, (k) => { const keys = cmpKeys(); cmp.slots = cmp.slots.map((s, j) => (j === i ? { key: k } : s || (keys[j] ? { key: keys[j] } : s))); saveCmp(); updateCompareBar(); });
+      else if (act === 'go') { const keys = cmpKeys().filter(Boolean); cmp.slots = cmpKeys().map((k) => (k ? { key: k } : { removed: true })); saveCmp(); go('compare', keys.map((k) => { const m = modelByKey(k); return mslug(m.brand, m.model); }).join(',')); }
+    });
+  }
+
+  // requirements: every feature at least one of the cars offers, plus a few that aren't features
+  const REQ_EXTRA = {
+    auto: { label: 'Automatic gearbox', has: (c) => c.transmission === 'Automatic' },
+    seven: { label: '7 seats', has: (c) => (c.seats || 0) >= 6 },
+    fiveStar: { label: '5-star crash rating', model: true },
+    mileage: { label: 'Low running cost (mileage / range)', has: () => true },
+    awd: { label: '4x4 / AWD', has: (c) => c.drive !== '2WD' },
+    ev: { label: 'Electric', has: (c) => c.fuel === 'Electric' },
+    diesel: { label: 'Diesel engine', has: (c) => c.fuel === 'Diesel' },
+    cng: { label: 'CNG option', has: (c) => c.fuel === 'CNG' },
+    hybrid: { label: 'Hybrid', has: (c) => /hybrid/i.test(c.fuel) },
+  };
+  // the order people most often ask for these (used to pick the first 15 shown)
+  const REQ_RANK = ['sunroof', 'airbags6', 'auto', 'adas', 'camera360', 'ventilated', 'wirelessAA', 'fiveStar', 'autoClimate', 'mileage', 'cruise', 'wirelessCharger', 'rearCamera', 'premiumAudio', 'panoramic', 'seven', 'poweredSeat', 'digitalCluster', 'connected', 'keyless', 'ledHeadlamps', 'rearAC', 'hud', 'tpms', 'esc', 'isofix', 'androidAuto', 'touchscreen', 'alloys', 'pushStart', 'epb', 'rearSensors', 'frontSensors', 'blindSpot', 'dualZone', 'ambient', 'leather', 'paddleShifters', 'driveModes', 'powerTailgate', 'awd', 'ev', 'diesel', 'cng', 'hybrid'];
+  const reqLabel = (k) => (REQ_EXTRA[k] ? REQ_EXTRA[k].label : FIDX[k] != null ? FLABEL(k).replace(/ \(.*\)$/, '') : k);
+  const ncapOf = (m) => (DATA.ncap || {})[keyOf(m)] || null;
+  function reqOptions(ms) {
+    const ok = (k) => {
+      if (k === 'fiveStar') return ms.some((m) => (ncapOf(m) || {}).stars >= 4);
+      if (k === 'mileage') return true;
+      if (REQ_EXTRA[k]) return ms.some((m) => m.vs.some((v) => REQ_EXTRA[k].has(v.c)));
+      return ms.some((m) => m.vs.some((v) => v.c.feat(k) === '1'));
+    };
+    const keys = [...new Set([...REQ_RANK, ...DATA.features.map((f) => f.key)])].filter((k) => (REQ_EXTRA[k] || FIDX[k] != null) && ok(k));
+    return keys;
+  }
+  // how well one variant meets one requirement, from the experience of using it: 0 not available, 1 good, 2 great
+  const UPGRADE = { sunroof: ['panoramic', 'Panoramic'], androidAuto: ['wirelessAA', 'Wireless'], rearCamera: ['camera360', '360° camera'], rearSensors: ['frontSensors', 'Front and rear'], adas: ['blindSpot', 'With blind-spot monitor'], autoClimate: ['dualZone', 'Dual-zone'], poweredSeat: ['ventilated', 'Also ventilated'], keyless: ['pushStart', 'With push-button start'], digitalCluster: ['hud', 'Plus head-up display'], cruise: ['adas', 'Adaptive (with ADAS)'], touchscreen: ['wirelessAA', 'With wireless phone mirroring'], ventilated: ['massage', 'Ventilated and massaging'], ledHeadlamps: ['autoHeadlamps', 'Automatic LED headlamps'], rearAC: ['dualZone', 'With climate zones'] };
+  const PRAISE = { sunroof: /sunroof/i, panoramic: /panoramic|sunroof/i, touchscreen: /touchscreen|infotainment|screen/i, premiumAudio: /audio|sound|speaker/i, ventilated: /ventilat/i, adas: /adas|driver assist/i, camera360: /360/i, autoClimate: /climate|air.?con|\bac\b/i, rearAC: /rear (ac|vents)/i, poweredSeat: /seat/i, digitalCluster: /cluster|digital/i, wirelessCharger: /wireless charg/i, hud: /head.?up/i, ambient: /ambient/i, leather: /leather|upholstery/i, cruise: /cruise/i };
+  function grade(k, c, m) {
+    const x = expertOf(m) || {}, like = (x.like || []).join(' | '), dislike = (x.dislike || []).join(' | ');
+    if (k === 'fiveStar') { const n = ncapOf(m); return !n ? { g: 0, why: 'Not crash-tested yet' } : n.stars >= 5 ? { g: 2, why: `5 stars (${n.by})` } : n.stars >= 4 ? { g: 1, why: `${n.stars} stars (${n.by})` } : { g: 0, why: `${n.stars} star${n.stars === 1 ? '' : 's'} (${n.by})` }; }
+    if (k === 'mileage') {
+      if (c.fuel === 'Electric') return c.range ? (c.range >= 400 ? { g: 2, why: `${c.range} km range` } : c.range >= 250 ? { g: 1, why: `${c.range} km range` } : { g: 0, why: `${c.range} km range` }) : { g: 1, why: 'Electric' };
+      if (!c.mileage) return { g: 0, why: 'Not published' };
+      return c.mileage >= 20 ? { g: 2, why: `${c.mileage} km/l` } : c.mileage >= 15 ? { g: 1, why: `${c.mileage} km/l` } : { g: 0, why: `${c.mileage} km/l` };
+    }
+    if (k === 'auto') return c.transmission !== 'Automatic' ? { g: 0, why: 'Manual only' } : c.transType === 'AMT' ? { g: 1, why: 'AMT (jerkier shifts)' } : { g: 2, why: c.fuel === 'Electric' ? 'Electric, no gears' : c.transType || 'Automatic' };
+    if (k === 'seven') return (c.seats || 0) >= 7 ? { g: 2, why: `${c.seats} seats` } : (c.seats || 0) === 6 ? { g: 1, why: '6 seats' } : { g: 0, why: `${c.seats || 5} seats` };
+    if (REQ_EXTRA[k]) return REQ_EXTRA[k].has(c) ? { g: 2, why: 'Yes' } : { g: 0, why: 'Not offered' };
+    const v = c.feat(k);
+    if (v !== '1') return { g: 0, why: v === '?' ? 'Not listed' : 'Not on this variant' };
+    if (k === 'airbags6' && (c.airbags || 0) > 6) return { g: 2, why: `${c.airbags} airbags` };
+    const up = UPGRADE[k];
+    if (up && c.feat(up[0]) === '1') return { g: 2, why: up[1] };
+    if (PRAISE[k] && PRAISE[k].test(like)) return { g: 2, why: 'Praised by reviewers' };
+    if (PRAISE[k] && PRAISE[k].test(dislike)) return { g: 1, why: 'Reviewers have reservations' };
+    return { g: 1, why: up ? `Not ${up[1].toLowerCase()}` : 'Available' };
+  }
+  // the variant we compare: the cheapest one with every must-have (or the most of them), then the most nice-to-haves
+  function cmpVariant(m) {
+    const sel = cmp.vsel[keyOf(m)];
+    const vs = m.vs.map((v) => v.c);
+    if (sel) { const c = vs.find((c) => c.id === sel); if (c) return c; }
+    const score = (c) => { const mu = cmp.req.must.map((k) => grade(k, c, m).g); return { met: mu.filter((g) => g > 0).length }; };
+    const best = Math.max(...vs.map((c) => score(c).met));
+    return vs.filter((c) => score(c).met === best).sort((a, b) => a.orTotal - b.orTotal)[0];
+  }
+  function renderCompare(arg) {
+    const el = $('#comparePage');
+    const ms = String(arg || '').split(',').map((s) => modelBySlug(s)).filter(Boolean).slice(0, 3);
+    document.title = ms.length ? `Compare ${ms.map((m) => m.model).join(' vs ')} · Right Ride` : 'Compare cars · Right Ride';
+    if (ms.length < 2) { el.innerHTML = `<div class="cp-wrap"><div class="empty sorry">${SORRY_ICON}<h2>Pick at least two cars to compare</h2><a class="btn primary" href="#/cars" data-go="cars">Choose cars</a></div></div>`; return; }
+    // features ticked on the cars page start out as must-haves
+    if (!cmp.req.must.length && !cmp.req.nice.length) { cmp.req.must = [...featsOn()].slice(0, 5); if (state.trans.has('Automatic')) cmp.req.must.unshift('auto'); cmp.req.must = cmp.req.must.slice(0, 5); }
+    const opts = reqOptions(ms);
+    cmp.req.must = cmp.req.must.filter((k) => opts.includes(k)); cmp.req.nice = cmp.req.nice.filter((k) => opts.includes(k));
+    const chosen = new Set([...cmp.req.must, ...cmp.req.nice]);
+    const shown = cmp.all ? opts : opts.slice(0, 15);
+    const cars = ms.map((m) => ({ m, c: cmpVariant(m) }));
+    const rows = [...cmp.req.must.map((k) => ({ k, must: true })), ...cmp.req.nice.map((k) => ({ k, must: false }))];
+    for (const car of cars) {
+      car.g = rows.map((r) => grade(r.k, car.c, car.m));
+      car.met = rows.filter((r, i) => r.must && car.g[i].g > 0).length;
+      car.pts = rows.reduce((s, r, i) => s + car.g[i].g * (r.must ? 3 : 1), 0);
+      car.great = car.g.filter((x) => x.g === 2).length;
+    }
+    const nMust = cmp.req.must.length;
+    let best = null, why = '';
+    if (rows.length) {
+      const rank = cars.slice().sort((a, b) => b.met - a.met || b.pts - a.pts || a.c.orTotal - b.c.orTotal);
+      best = rank[0];
+      const r2 = rank[1];
+      const missers = cars.filter((c) => c !== best && c.met < nMust).map((c) => c.m.model);
+      const allMust = nMust && best.met === nMust;
+      const tie = cars.some((c) => c !== best && c.met === best.met && c.pts === best.pts);
+      why = (allMust ? `has all ${nMust} of your must-haves` : nMust ? `has ${best.met} of your ${nMust} must-haves, more than the others` : 'scores best on what you asked for')
+        + (missers.length && allMust ? ` (${missers.join(' and ')} ${missers.length > 1 ? 'miss' : 'misses'} at least one)` : '')
+        + (tie ? ', and costs the least among equally good matches' : r2 && best.pts > r2.pts && allMust && r2.met === nMust ? ', and does them better' : '');
+    }
+    const pill = (x) => `<span class="gr g${x.g}">${x.g === 2 ? 'Great' : x.g === 1 ? 'Good' : 'Not available'}</span><span class="gr-why">${esc(x.why)}</span>`;
+    const higher = (car, k) => { const up = car.m.vs.map((v) => v.c).filter((c) => c.orTotal > car.c.orTotal && grade(k, c, car.m).g > 0).sort((a, b) => a.orTotal - b.orTotal)[0]; return up ? `<span class="gr-up">On ${esc(up.variant)} (+${lakh(up.orTotal - car.c.orTotal)})</span>` : ''; };
+    const bucket = (name, list, max) => `<div class="rq-bucket${cmp.add === name ? ' on' : ''}" data-bucket="${name}"><div class="rq-bh"><b>${name === 'must' ? 'Must have' : 'Nice to have'}</b><span class="muted small">${list.length}/${max}</span></div>
+      <div class="rq-chosen">${list.length ? list.map((k) => `<button type="button" class="chip on" data-unreq="${k}">${esc(reqLabel(k))} ✕</button>`).join('') : `<span class="muted small">${cmp.add === name ? 'Tap options below to add them here' : `Tap here, then choose options`}</span>`}</div></div>`;
+    const basics = [
+      ['On-road price', (car) => `<b>${lakh(car.c.orTotal)}</b><span class="gr-why">${esc(car.c.variant)}</span>`],
+      ['Price range', (car) => `${lakh(car.m.min)}${car.m.max > car.m.min ? ' – ' + lakh(car.m.max) : ''}`],
+      ['Safety rating', (car) => { const n = ncapOf(car.m); return n ? `${stars(n.stars)}<span class="gr-why">${esc(n.by)}</span>` : '<span class="muted">Not tested</span>'; }],
+      ['Mileage / range', (car) => (car.c.fuel === 'Electric' ? (car.c.range ? car.c.range + ' km' : '–') : car.c.mileage ? car.c.mileage + ' km/l' : '–')],
+      ['Fuel · gearbox', (car) => esc([...car.m.fuels].join(', ')) + '<span class="gr-why">' + esc(car.m.trans.join(', ')) + '</span>'],
+      ['Seats', (car) => esc(String(car.c.seats || '–'))],
+      ['Expert score', (car) => { const x = expertOf(car.m); return x && x.s ? `<b>${esc(x.s)}</b>/10` : '–'; }],
+    ];
+    el.innerHTML = `<div class="cp-wrap cmp-page">
+      <button class="cp-back" type="button" data-go="cars"><span aria-hidden="true">‹</span> Back to cars</button>
+      <h1 class="ch-t cmp-title">Compare to find your Right Ride</h1>
+      <section class="cp-sec rq">
+        <div class="rq-top"><div><h2 class="display">What matters to you?</h2><p class="muted">Pick up to 5 must-haves and 5 nice-to-haves. We'll rate each car on how well it does each one.</p></div></div>
+        <div class="rq-buckets">${bucket('must', cmp.req.must, 5)}${bucket('nice', cmp.req.nice, 5)}</div>
+        <div class="rq-opts"><div class="label">Add to <b>${cmp.add === 'must' ? 'Must have' : 'Nice to have'}</b> <span class="seg rq-seg" role="group" aria-label="Add to"><button type="button" data-add="must" aria-pressed="${cmp.add === 'must'}">Must have</button><button type="button" data-add="nice" aria-pressed="${cmp.add === 'nice'}">Nice to have</button></span></div>
+          <div class="chips">${shown.map((k) => `<button type="button" class="chip${chosen.has(k) ? ' sel' : ''}" data-req="${k}" aria-pressed="${chosen.has(k)}">${esc(reqLabel(k))}${cmp.req.must.includes(k) ? ' <small>must</small>' : cmp.req.nice.includes(k) ? ' <small>nice</small>' : ''}</button>`).join('')}
+          ${opts.length > 15 ? `<button type="button" class="chip more" data-reqall>${cmp.all ? 'Show fewer' : `See all ${opts.length}`}</button>` : ''}</div></div>
+      </section>
+      <section class="cmp-grid" style="--n:${cars.length}">
+        <div class="cg-row cg-cars"><div class="cg-k"></div>${cars.map((car, i) => `<div class="cg-car${best === car ? ' best' : ''}">
+          ${best === car ? `<div class="cg-best">Best for you</div>` : ''}
+          <div class="cg-img">${carImg(car.m, '(max-width: 700px) 30vw, 260px')}</div>
+          <div class="muted small">${esc(car.m.brand)}</div><a class="cg-name" href="#/car/${mslug(car.m.brand, car.m.model)}">${esc(car.m.model)}</a>
+          <label class="cg-var"><span class="sr">Variant</span><select data-vsel="${esc(keyOf(car.m))}">${car.m.vs.map((v) => v.c).sort((a, b) => a.orTotal - b.orTotal).map((c) => `<option value="${esc(c.id)}" ${c.id === car.c.id ? 'selected' : ''}>${esc(c.variant)} · ${lakh(c.orTotal)}</option>`).join('')}</select></label>
+          ${rows.length ? `<div class="cg-sum">${nMust ? `<b>${car.met}/${nMust}</b> must-haves` : ''}${nMust ? ' · ' : ''}${car.great} great</div>` : ''}
+          <button class="link small" type="button" data-cmpchange="${i}">Change car</button></div>`).join('')}</div>
+        ${best ? `<div class="cg-why"><b>${esc(best.m.model)}</b> fits you best: it ${esc(why)}.</div>` : ''}
+        ${rows.length ? `<div class="cg-sect">Your requirements</div>${rows.map((r, ri) => `<div class="cg-row"><div class="cg-k">${esc(reqLabel(r.k))}<span class="cg-tag ${r.must ? 'must' : ''}">${r.must ? 'Must have' : 'Nice to have'}</span></div>${cars.map((car) => `<div class="cg-v${best === car ? ' best' : ''}">${pill(car.g[ri])}${car.g[ri].g === 0 ? higher(car, r.k) : ''}</div>`).join('')}</div>`).join('')}`
+          : `<p class="muted cg-empty">Choose your must-haves above to see how each car does.</p>`}
+        <div class="cg-sect">The basics</div>
+        ${basics.filter(([, fn]) => cars.some((car) => fn(car) !== '–')).map(([l, fn]) => `<div class="cg-row"><div class="cg-k">${l}</div>${cars.map((car) => `<div class="cg-v${best === car ? ' best' : ''}">${fn(car)}</div>`).join('')}</div>`).join('')}
+      </section>
+      <p class="hint">"Great" means the better version of a feature (for example a panoramic sunroof, wireless phone mirroring or a 360° camera) or one that expert reviews praise. Ratings are for the variant shown; change it above.</p>
+    </div>`;
+  }
+  function wireComparePage() {
+    const P = $('#comparePage');
+    const rerender = () => { saveCmp(); keepY(() => renderCompare(cmpArg)); };
+    P.addEventListener('click', (e) => {
+      const a = e.target.closest('[data-add]'); if (a) { cmp.add = a.dataset.add; return rerender(); }
+      const bk = e.target.closest('[data-bucket]'); if (bk && !e.target.closest('[data-unreq]')) { cmp.add = bk.dataset.bucket; return rerender(); }
+      const u = e.target.closest('[data-unreq]'); if (u) { const k = u.dataset.unreq; cmp.req.must = cmp.req.must.filter((x) => x !== k); cmp.req.nice = cmp.req.nice.filter((x) => x !== k); cmp.vsel = {}; return rerender(); }
+      const r = e.target.closest('[data-req]');
+      if (r) {
+        const k = r.dataset.req, list = cmp.req[cmp.add], other = cmp.add === 'must' ? 'nice' : 'must';
+        if (list.includes(k)) cmp.req[cmp.add] = list.filter((x) => x !== k);
+        else { cmp.req[other] = cmp.req[other].filter((x) => x !== k); if (list.length >= 5) { flashMsg(`You can pick up to 5 ${cmp.add === 'must' ? 'must-haves' : 'nice-to-haves'}`); return; } list.push(k); }
+        cmp.vsel = {}; return rerender();
+      }
+      if (e.target.closest('[data-reqall]')) { cmp.all = !cmp.all; return rerender(); }
+      const ch = e.target.closest('[data-cmpchange]');
+      if (ch) {
+        const i = Number(ch.dataset.cmpchange), slugs = cmpArg.split(',');
+        const taken = slugs.filter((x, j) => j !== i).map((x) => { const mm = modelBySlug(x); return mm && keyOf(mm); }).filter(Boolean);
+        cmpPicker(-1, (k) => { const m = modelByKey(k); slugs[i] = mslug(m.brand, m.model); cmp.slots = slugs.map((x) => { const mm = modelBySlug(x); return mm ? { key: keyOf(mm) } : { removed: true }; }).concat([null, null, null]).slice(0, 3); cmp.vsel = {}; saveCmp(); go('compare', slugs.join(',')); }, taken);
+      }
+    });
+    P.addEventListener('change', (e) => { const s = e.target.closest('[data-vsel]'); if (s) { cmp.vsel[s.dataset.vsel] = s.value; keepY(() => renderCompare(cmpArg)); } });
+  }
+  function flashMsg(t) { let n = $('#flash'); if (!n) { n = document.createElement('div'); n.id = 'flash'; n.className = 'flash'; n.setAttribute('role', 'status'); document.body.appendChild(n); } n.textContent = t; n.classList.add('on'); clearTimeout(flashMsg.t); flashMsg.t = setTimeout(() => n.classList.remove('on'), 2200); }
+  let cmpArg = '';
+  // ticking a variant in a variant table puts its model in the compare bar
+  function cmpToggle(id, on) {
+    const c = byId(id); if (!c) return; const k = c.brand + '|' + c.model, keys = cmpKeys();
+    let slots = cmp.slots.map((s, j) => s || (keys[j] ? { key: keys[j] } : null));
+    if (on) { if (keys.includes(k)) slots = slots.map((s) => (s && s.key === k ? { key: k } : s)); else { let j = slots.findIndex((s) => !s || s.removed); if (j < 0) j = 2; slots[j] = { key: k }; } }
+    else slots = slots.map((s) => (s && s.key === k ? { removed: true } : s));
+    cmp.slots = slots; saveCmp(); updateCompareBar();
   }
 
   async function init() {
