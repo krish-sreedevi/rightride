@@ -1762,10 +1762,15 @@
     space: { label: 'Space (cabin and boot)', model: true },
     resale: { label: 'Resale value', model: true },
   };
+  // option groups on the compare page
+  const REQ_INTERIOR = new Set(['touchscreen', 'androidAuto', 'wirelessAA', 'connected', 'digitalCluster', 'wirelessCharger', 'premiumAudio', 'hud', 'voiceCommands', 'autoClimate', 'dualZone', 'rearAC', 'keyless', 'pushStart', 'poweredSeat', 'ventilated', 'autoIRVM', 'paddleShifters', 'rearArmrest', 'tiltTelescopic', 'ambient', 'leather', 'airPurifier', 'massage', 'captainSeats']);
+  const REQ_EXTERIOR = new Set(['sunroof', 'panoramic', 'powerTailgate', 'ledHeadlamps', 'ledDRL', 'alloys', 'fogLamps', 'roofRails', 'autoHeadlamps', 'rainWipers', 'foldingORVM']);
+  const REQ_GROUPS = [['basics', 'The basics', 'Running costs, space, safety and driving'], ['interior', 'Interior features', 'Screens, comfort and convenience inside'], ['exterior', 'Exterior features', 'Roof, lights, wheels and tailgate']];
+  const reqGroup = (k) => (REQ_INTERIOR.has(k) ? 'interior' : REQ_EXTERIOR.has(k) ? 'exterior' : 'basics');
   // extra words people search with
   const REQ_ALIAS = { space: 'room roomy spacious boot luggage legroom headroom cabin family big', resale: 'resale value depreciation sell later hold value', mileage: 'fuel economy efficiency kmpl running cost range', auto: 'automatic at amt cvt dct gearbox', seven: '7 seater seats family', fiveStar: 'safety ncap crash safe', wirelessAA: 'carplay android auto wireless', androidAuto: 'carplay android auto', adas: 'adas driver assist lane', camera360: '360 camera surround', awd: '4wd 4x4 awd offroad', sunroof: 'sunroof roof', panoramic: 'panoramic sunroof', ventilated: 'cooled seats ventilated' };
   // the order people most often ask for these (used to pick the first 15 shown)
-  const REQ_RANK = ['sunroof', 'airbags6', 'auto', 'space', 'adas', 'camera360', 'ventilated', 'wirelessAA', 'fiveStar', 'autoClimate', 'mileage', 'resale', 'cruise', 'wirelessCharger', 'rearCamera', 'premiumAudio', 'panoramic', 'seven', 'poweredSeat', 'digitalCluster', 'connected', 'keyless', 'ledHeadlamps', 'rearAC', 'hud', 'tpms', 'esc', 'isofix', 'androidAuto', 'touchscreen', 'alloys', 'pushStart', 'epb', 'rearSensors', 'frontSensors', 'blindSpot', 'dualZone', 'ambient', 'leather', 'paddleShifters', 'driveModes', 'powerTailgate', 'awd', 'ev', 'diesel', 'cng', 'hybrid'];
+  const REQ_RANK = ['sunroof', 'auto', 'mileage', 'space', 'resale', 'airbags6', 'fiveStar', 'adas', 'camera360', 'ventilated', 'wirelessAA', 'autoClimate', 'cruise', 'wirelessCharger', 'rearCamera', 'premiumAudio', 'panoramic', 'seven', 'poweredSeat', 'digitalCluster', 'connected', 'keyless', 'ledHeadlamps', 'rearAC', 'hud', 'tpms', 'esc', 'isofix', 'androidAuto', 'touchscreen', 'alloys', 'pushStart', 'epb', 'rearSensors', 'frontSensors', 'blindSpot', 'dualZone', 'ambient', 'leather', 'paddleShifters', 'driveModes', 'powerTailgate', 'awd', 'ev', 'diesel', 'cng', 'hybrid'];
   const reqLabel = (k) => (REQ_EXTRA[k] ? REQ_EXTRA[k].label : FIDX[k] != null ? FLABEL(k).replace(/ \(.*\)$/, '') : k);
   const ncapOf = (m) => (DATA.ncap || {})[keyOf(m)] || null;
   function reqOptions(ms) {
@@ -1909,8 +1914,8 @@
         <div class="rq-buckets">${bucket('must', cmp.req.must, 5)}${bucket('nice', cmp.req.nice, 5)}</div>
         <div class="rq-opts"><div class="label">Add to <b>${cmp.add === 'must' ? 'Must have' : 'Nice to have'}</b> <span class="seg rq-seg" role="group" aria-label="Add to"><button type="button" data-add="must" aria-pressed="${cmp.add === 'must'}">Must have</button><button type="button" data-add="nice" aria-pressed="${cmp.add === 'nice'}">Nice to have</button></span></div>
           <label class="rq-search"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input type="search" id="rqQ" placeholder="Search features: boot, resale, sunroof…" autocomplete="off" aria-label="Search features" value="${esc(cmp.q || '')}"></label>
-          <div class="chips" id="rqChips">${shown.map((k, i) => `<button type="button" class="chip${chosen.has(k) ? ' sel' : ''}" data-req="${k}" data-drag="${k}" data-rank="${i}" data-find="${esc((reqLabel(k) + ' ' + k + ' ' + (REQ_ALIAS[k] || '')).toLowerCase())}" aria-pressed="${chosen.has(k)}">${esc(reqLabel(k))}${cmp.req.must.includes(k) ? ' <small>must</small>' : cmp.req.nice.includes(k) ? ' <small>nice</small>' : ''}</button>`).join('')}
-          ${opts.length > 15 ? `<button type="button" class="chip more" data-reqall>${cmp.all ? 'Show fewer' : `See all ${opts.length}`}</button>` : ''}<span class="muted small rq-none" hidden>No feature matches that. Try another word.</span></div></div>
+          <div class="chips rq-groups" id="rqChips">${REQ_GROUPS.map(([g, title, sub]) => `<div class="rq-grp" data-grp="${g}"><div class="rq-grp-h"><b>${title}</b><span class="muted small">${sub}</span></div><div class="chips">${shown.map((k, i) => [k, i]).filter(([k]) => reqGroup(k) === g).map(([k], i) => `<button type="button" class="chip${chosen.has(k) ? ' sel' : ''}" data-req="${k}" data-drag="${k}" data-rank="${i}" data-find="${esc((reqLabel(k) + ' ' + k + ' ' + (REQ_ALIAS[k] || '')).toLowerCase())}" aria-pressed="${chosen.has(k)}">${esc(reqLabel(k))}${cmp.req.must.includes(k) ? ' <small>must</small>' : cmp.req.nice.includes(k) ? ' <small>nice</small>' : ''}</button>`).join('')}</div></div>`).join('')}
+          ${opts.length > 18 ? `<button type="button" class="chip more" data-reqall>${cmp.all ? 'Show fewer' : `See all ${opts.length}`}</button>` : ''}<span class="muted small rq-none" hidden>No feature matches that. Try another word.</span></div></div>
       </section>
       <section class="cmp-grid" style="--n:${cars.length}">
         <div class="cg-row cg-cars"><div class="cg-k"></div>${cars.map((car, i) => `<div class="cg-car${best === car ? ' best' : ''}">
@@ -1988,9 +1993,10 @@
       const q = (cmp.q || '').trim().toLowerCase(), words = q.split(/\s+/).filter(Boolean);
       let n = 0;
       box.querySelectorAll('[data-rank]').forEach((b) => {
-        const show = words.length ? words.every((w) => b.dataset.find.includes(w)) : cmp.all || Number(b.dataset.rank) < 15;
+        const show = words.length ? words.every((w) => b.dataset.find.includes(w)) : cmp.all || Number(b.dataset.rank) < 6 || b.classList.contains('sel');
         b.hidden = !show; if (show) n++;
       });
+      box.querySelectorAll('.rq-grp').forEach((g) => { g.hidden = !g.querySelector('[data-rank]:not([hidden])'); });
       const more = $('[data-reqall]', box); if (more) more.hidden = !!words.length;
       $('.rq-none', box).hidden = n > 0;
     }

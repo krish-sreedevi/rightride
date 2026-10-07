@@ -1006,3 +1006,7 @@ body.rq-dragging, body.rq-dragging * { cursor: grabbing !important; }
 .rq-search:focus-within { box-shadow: inset 0 0 0 1.5px var(--brand); }
 .rq-search input { flex: 1; min-width: 0; border: 0; background: none; font: inherit; color: var(--text); outline: none; }
 .rq-none { align-self: center; }
+.rq-groups { display: grid; gap: 14px; }
+.rq-grp-h { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+.rq-grp-h b { font-size: .92rem; }
+.rq-groups > .chip.more { justify-self: start; }
