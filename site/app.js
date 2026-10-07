@@ -1573,10 +1573,17 @@
     else swap();
   }
   function go(next, arg) {
-    const h = next === 'cars' ? '#/cars' : next === 'car' ? '#/car/' + arg : next === 'compare' ? '#/compare/' + arg : '#/';
+    // the home page is the bare address (rightride.in), without "#/"
+    if (next === 'home') {
+      if (location.hash && location.hash !== '#' && location.hash !== '#/') { history.pushState(null, '', location.pathname + location.search); route(true); }
+      else { if (location.hash) history.replaceState(null, '', location.pathname + location.search); showPage('home', true); }
+      return;
+    }
+    const h = next === 'cars' ? '#/cars' : next === 'car' ? '#/car/' + arg : '#/compare/' + arg;
     if (location.hash !== h) location.hash = h; else showPage(next, true, arg);
   }
   function route(animate) {
+    if (location.hash === '#/' || location.hash === '#') history.replaceState(null, '', location.pathname + location.search); // home is the bare address
     countView();
     const c = location.hash.match(/^#\/car\/([\w-]+)/);
     if (c) return showPage('car', animate, c[1]);
@@ -1704,7 +1711,9 @@
     });
     // a shared link with filters, or a saved recommendation, opens straight on the cars page
     // the bare address always lands on the home page; only a shared link with filters opens the cars page
-    if (!location.hash || location.hash === '#') history.replaceState(null, '', location.pathname + location.search + (/[?&](body|feats|brand|fuel|min|max|seats|trans)=/.test(location.search) ? '#/cars' : '#/'));
+    if (/[?&](body|feats|brand|fuel|min|max|seats|trans)=/.test(location.search) && (!location.hash || location.hash === '#')) history.replaceState(null, '', location.pathname + location.search + '#/cars');
+    else if (location.hash === '#/' || location.hash === '#') history.replaceState(null, '', location.pathname + location.search); // old links to "#/" show the clean address
+    window.addEventListener('popstate', () => { if (!location.hash) route(true); }); // back to the bare home address
     route(false);
   }
 
