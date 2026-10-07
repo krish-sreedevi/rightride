@@ -244,7 +244,9 @@
   ];
   function drawTabs() {
     const n = activeCount();
-    $('#tabs').innerHTML = `<div class="tab-row">${TABS.filter((t) => !t.when || t.when()).map((t) => `<button type="button" class="tab${state.tab === t.id ? ' on' : ''}" data-tab="${t.id}">${esc(t.label)}</button>`).join('')}</div>
+    // no finder answers yet: a "Right Ride" tab next to All cars starts the step-by-step finder
+    const rrTab = state.rec ? '' : '<button type="button" class="tab tab-rr" data-wz-open title="Answer a few questions and get cars ranked for you">Right Ride</button>';
+    $('#tabs').innerHTML = `<div class="tab-row">${TABS.filter((t) => !t.when || t.when()).map((t) => `<button type="button" class="tab${state.tab === t.id ? ' on' : ''}" data-tab="${t.id}">${esc(t.label)}</button>`).join('')}${rrTab}</div>
       <button type="button" id="openFilters" class="filter-btn${n ? ' has' : ''}"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Filters <span id="filterCount">${n ? n : ''}</span></button>`;
   }
   const activeCount = () => state.feats.size + ['body', 'fuel', 'trans', 'seats', 'brand'].reduce((s, k) => s + state[k].size, 0) + (state.budgetMin || state.budgetMax ? 1 : 0);
@@ -552,6 +554,7 @@
   function hideSug() { const box = $('#qSug'); if (box) box.hidden = true; const q = $('#q'); if (q) { q.setAttribute('aria-expanded', 'false'); q.removeAttribute('aria-activedescendant'); } sug.i = -1; }
   function wireShowroom() {
     $('#tabs').addEventListener('click', (e) => {
+      if (e.target.closest('[data-wz-open]')) return openWizard(1);
       const t = e.target.closest('[data-tab]'); if (t) return setTab(t.dataset.tab);
       if (e.target.closest('#openFilters')) openDrawer();
     });

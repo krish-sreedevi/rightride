@@ -1103,3 +1103,7 @@ a, .link, .tab, .foot-nav a, .filter-btn, .btn, .chip, .ms > summary, .ms-opt, .
 #more { transition: background-color .25s var(--ease-out), box-shadow .3s var(--ease-out), transform .3s var(--ease-out); }
 #more:hover { transform: translateY(-1px); }
 .results-head h1 { transition: opacity .3s var(--ease-out); }
+.tab-rr { display: inline-flex; align-items: center; gap: 6px; }
+.tab-rr::before { content: ''; width: 18px; height: 14px; background: url(brand/mark-day-small.svg) center / contain no-repeat; }
+.tab-rr .rrw { transition: opacity .25s var(--ease-out); }
+.tab-rr:hover .rrw { opacity: .8; }
