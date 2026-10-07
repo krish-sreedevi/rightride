@@ -29,6 +29,9 @@ jobs:
         continue-on-error: true
       - name: Search-engine pages and sitemap
         run: node tools/seo-pages.mjs
+      - name: Which car pages changed (for IndexNow)
+        run: node tools/indexnow.mjs diff
+        continue-on-error: true
       - name: Usage stats for the admin portal (encrypted)
         run: node tools/admin-stats.mjs
         continue-on-error: true
@@ -43,3 +46,6 @@ jobs:
         with: { path: site }
       - id: d
         uses: actions/deploy-pages@v4
+      - name: Tell Bing about changed pages (IndexNow)
+        run: node tools/indexnow.mjs submit
+        continue-on-error: true

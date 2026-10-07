@@ -8,3 +8,4 @@ site/brands/
 site/sitemap.xml
 site/llms.txt
 site/api/
+.indexnow-urls.json
