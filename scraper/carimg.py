@@ -181,6 +181,10 @@ def cut_reflection(im):
         if occ[y] < mn:
             mn, ymin = occ[y], y
         elif mn < occ.max() * 0.35 and occ[y] > max(mn * 2, occ.max() * 0.12) and y - ymin > 4:
+            # a reflection is tall (a mirrored car); a floor shadow under the tyres is thin and must not cut the wheels off
+            top = int(np.argmax(occ > 0)); below = int(np.nonzero(occ)[0].max()) - ymin
+            if below < (ymin - top) * 0.2:
+                return im
             return im.crop((0, 0, im.size[0], ymin + 2))
     return im
 

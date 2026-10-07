@@ -24,6 +24,9 @@ jobs:
         with: { node-version: 20 }
       - name: Build cars.json from latest data
         run: node scraper/normalize.mjs
+      - name: Colour dots from each colour's photo
+        run: pip install -q pillow && python3 tools/swatches.py && node scraper/normalize.mjs
+        continue-on-error: true
       - name: Usage stats for the admin portal (encrypted)
         run: node tools/admin-stats.mjs
         continue-on-error: true

@@ -5,6 +5,8 @@ import path from 'path';
 import { matchVariant } from './autocar-features.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+// colour dots sampled from each colour's own photo by tools/swatches.py
+const SWATCHES = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data/swatches.json'), 'utf8')); } catch (e) { return {}; } })();
 
 // ---------- feature catalogue ----------
 // key: [bucket, label, regex on raw feature label (and value text), optional exclude regex]
@@ -406,7 +408,7 @@ function buildExtras(out) {
     };
     const ci = CIMG[k] || {};
     models[k] = {
-      colors: (ci.colors || []).slice(0, 14).map((c) => ({ name: c.name, img: c.img, sw: swatch(c.name) })),
+      colors: (ci.colors || []).slice(0, 14).map((c) => ({ name: c.name, img: c.img, sw: SWATCHES[c.img] || swatch(c.name) })), // swatch sampled from the photo, else guessed from the name
       interior: (ci.interior || []).slice(0, 8).map((c) => ({ cap: c.cap, img: c.img })),
       mileage, rating, service, resale,
     };

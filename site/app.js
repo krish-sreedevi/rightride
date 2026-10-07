@@ -878,7 +878,12 @@
       </section>
     </div>`;
     drawVariants(m); drawDealers(m); spyChapters();
-    loadExtras().then((X) => { if (cp.key !== key) return; const e = X[key]; if (e) { drawHeroGallery(m, e); drawMetrics(m, e); } });
+    loadExtras().then((X) => {
+      if (cp.key !== key) return; const e = X[key]; if (!e) return;
+      // interior photos come from carmakers' sites and some refuse to load: show only the ones that do, and no Interior button if none do
+      drawHeroGallery(m, { ...e, interior: [] }); drawMetrics(m, e);
+      if (e.interior && e.interior.length) imgsThatLoad(e.interior).then((ok) => { if (cp.key === key && ok.length) { const i = gal.i; drawHeroGallery(m, { ...e, interior: ok }); if (i) heroGo(i, false); } });
+    });
   }
 
   // ---- photos (colours, interior) and ownership metrics, from site/data/extras.json ----
@@ -895,8 +900,16 @@
     return out;
   }
   const swStyle = (sw) => (sw.length > 1 ? `linear-gradient(135deg, ${sw[0]} 50%, ${sw[1]} 50%)` : sw[0]);
+  // keep only the photos that actually load (checked in the background, 8 s at most)
+  const imgOk = new Map();
+  function imgsThatLoad(list) {
+    return Promise.all(list.map((x) => {
+      if (!imgOk.has(x.img)) imgOk.set(x.img, new Promise((ok) => { const im = new Image(); im.referrerPolicy = 'no-referrer'; const t = setTimeout(() => ok(false), 8000); im.onload = () => { clearTimeout(t); ok(im.naturalWidth > 40); }; im.onerror = () => { clearTimeout(t); ok(false); }; im.src = pic(x.img, 640); }));
+      return imgOk.get(x.img).then((good) => (good ? x : null));
+    })).then((r) => r.filter(Boolean));
+  }
   function slideImg(m, x, i, w, sizes) {
-    return `<img loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async" src="${esc(pic(x.img, w))}" srcset="${esc(pic(x.img, 640))} 640w, ${esc(pic(x.img, 1000))} 1000w, ${esc(pic(x.img, 1600))} 1600w" sizes="${sizes}" alt="${esc(m.brand + ' ' + m.model + ' – ' + x.cap)}" onerror="this.closest('[data-slide]').classList.add('broken')">`;
+    return `<img loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async" referrerpolicy="no-referrer" src="${esc(pic(x.img, w))}" srcset="${esc(pic(x.img, 640))} 640w, ${esc(pic(x.img, 1000))} 1000w, ${esc(pic(x.img, 1600))} 1600w" sizes="${sizes}" alt="${esc(m.brand + ' ' + m.model + ' – ' + x.cap)}" onerror="this.closest('[data-slide]').classList.add('broken')">`;
   }
   function drawHeroGallery(m, e) {
     const H = $('#heroGal'), S = $('#heroStrip'); if (!H || !S) return;
@@ -908,7 +921,7 @@
       <button class="gal-btn prev" type="button" data-hs="-1" aria-label="Previous photo">‹</button><button class="gal-btn next" type="button" data-hs="1" aria-label="Next photo">›</button>
       <div class="hg-cap" id="hgCap" aria-live="polite"></div><span class="hg-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>`;
     S.innerHTML = `${firstColor >= 0 ? `<div class="hg-sws" role="group" aria-label="Colours">${gal.slides.map((x, i) => x.kind === 'color' ? `<button type="button" class="sw" data-hi="${i}" title="${esc(x.cap)}" aria-label="${esc(x.cap)}"><span style="background:${swStyle(x.sw)}"></span></button>` : '').join('')}</div>` : ''}
-      ${firstInt >= 0 ? `<button type="button" class="hg-int" data-hi="${firstInt}"><img src="${esc(pic(gal.slides[firstInt].img, 160))}" alt="" loading="lazy"><span>Interior<em>${gal.slides.filter((x) => x.kind === 'interior').length} photos</em></span></button>` : ''}`;
+      ${firstInt >= 0 ? `<button type="button" class="hg-int" data-hi="${firstInt}"><img src="${esc(pic(gal.slides[firstInt].img, 160))}" alt="" loading="lazy" referrerpolicy="no-referrer"><span>Interior<em>${gal.slides.filter((x) => x.kind === 'interior').length} photos</em></span></button>` : ''}`;
     const T = $('#hgTrack');
     const sync = () => {
       gal.i = Math.max(0, Math.min(gal.slides.length - 1, Math.round(T.scrollLeft / (T.clientWidth || 1)) || 0));
@@ -930,7 +943,7 @@
     L.innerHTML = `<div class="lb-top"><div class="lb-title"><b>${esc(m.brand)} ${esc(m.model)}</b><span id="lbCap"></span></div><button type="button" class="lb-x" data-lbx aria-label="Close">✕</button></div>
       <div class="lb-stage"><div class="lb-track" id="lbTrack" tabindex="0">${gal.slides.map((x, i) => `<figure class="lb-slide" data-slide>${x.kind === 'main' ? carImg(m, '100vw') : slideImg(m, x, Math.abs(i - start) < 2 ? 0 : 9, 1600, '100vw')}</figure>`).join('')}</div>
         <button class="gal-btn prev lb-btn" type="button" data-lbs="-1" aria-label="Previous photo">‹</button><button class="gal-btn next lb-btn" type="button" data-lbs="1" aria-label="Next photo">›</button></div>
-      <div class="lb-thumbs" id="lbThumbs">${gal.slides.map((x, i) => `<button type="button" class="lb-th${x.kind === 'color' ? ' c' : ''}" data-lbi="${i}" aria-label="${esc(x.cap)}">${x.kind === 'main' ? carImg(m, '96px') : `<img src="${esc(pic(x.img, 200))}" alt="" loading="lazy">`}${x.kind === 'color' ? `<i style="background:${swStyle(x.sw)}"></i>` : ''}</button>`).join('')}</div>`;
+      <div class="lb-thumbs" id="lbThumbs">${gal.slides.map((x, i) => `<button type="button" class="lb-th${x.kind === 'color' ? ' c' : ''}" data-lbi="${i}" aria-label="${esc(x.cap)}">${x.kind === 'main' ? carImg(m, '96px') : `<img src="${esc(pic(x.img, 200))}" alt="" loading="lazy" referrerpolicy="no-referrer">`}${x.kind === 'color' ? `<i style="background:${swStyle(x.sw)}"></i>` : ''}</button>`).join('')}</div>`;
     if (!L.open) L.showModal();
     document.body.classList.add('lb-open');
     const T = $('#lbTrack');
