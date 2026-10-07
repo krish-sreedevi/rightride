@@ -1010,3 +1010,6 @@ body.rq-dragging, body.rq-dragging * { cursor: grabbing !important; }
 .rq-grp-h { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
 .rq-grp-h b { font-size: .92rem; }
 .rq-groups > .chip.more { justify-self: start; }
+.rq-grp-all { margin-left: auto; font-weight: 600; font-size: .85rem; color: var(--brand); background: none; border: 0; cursor: pointer; padding: 2px 0; }
+.rq-grp-all:hover { text-decoration: underline; }
+@media (max-width: 600px) { .rq-grp-h > .muted { order: 3; flex-basis: 100%; margin-top: -4px; } }

@@ -1914,8 +1914,8 @@
         <div class="rq-buckets">${bucket('must', cmp.req.must, 5)}${bucket('nice', cmp.req.nice, 5)}</div>
         <div class="rq-opts"><div class="label">Add to <b>${cmp.add === 'must' ? 'Must have' : 'Nice to have'}</b> <span class="seg rq-seg" role="group" aria-label="Add to"><button type="button" data-add="must" aria-pressed="${cmp.add === 'must'}">Must have</button><button type="button" data-add="nice" aria-pressed="${cmp.add === 'nice'}">Nice to have</button></span></div>
           <label class="rq-search"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input type="search" id="rqQ" placeholder="Search features: boot, resale, sunroof…" autocomplete="off" aria-label="Search features" value="${esc(cmp.q || '')}"></label>
-          <div class="chips rq-groups" id="rqChips">${REQ_GROUPS.map(([g, title, sub]) => `<div class="rq-grp" data-grp="${g}"><div class="rq-grp-h"><b>${title}</b><span class="muted small">${sub}</span></div><div class="chips">${shown.map((k, i) => [k, i]).filter(([k]) => reqGroup(k) === g).map(([k], i) => `<button type="button" class="chip${chosen.has(k) ? ' sel' : ''}" data-req="${k}" data-drag="${k}" data-rank="${i}" data-find="${esc((reqLabel(k) + ' ' + k + ' ' + (REQ_ALIAS[k] || '')).toLowerCase())}" aria-pressed="${chosen.has(k)}">${esc(reqLabel(k))}${cmp.req.must.includes(k) ? ' <small>must</small>' : cmp.req.nice.includes(k) ? ' <small>nice</small>' : ''}</button>`).join('')}</div></div>`).join('')}
-          ${opts.length > 18 ? `<button type="button" class="chip more" data-reqall>${cmp.all ? 'Show fewer' : `See all ${opts.length}`}</button>` : ''}<span class="muted small rq-none" hidden>No feature matches that. Try another word.</span></div></div>
+          <div class="chips rq-groups" id="rqChips">${REQ_GROUPS.map(([g, title, sub]) => { const gk = shown.filter((k) => reqGroup(k) === g), open = (cmp.allG || {})[g]; return `<div class="rq-grp" data-grp="${g}"><div class="rq-grp-h"><b>${title}</b><span class="muted small">${sub}</span>${gk.length > 6 ? `<button type="button" class="link rq-grp-all" data-grpall="${g}">${open ? 'Show fewer' : `See all ${gk.length}`}</button>` : ''}</div><div class="chips">${gk.map((k) => [k]).map(([k], i) => `<button type="button" class="chip${chosen.has(k) ? ' sel' : ''}" data-req="${k}" data-drag="${k}" data-rank="${i}" data-find="${esc((reqLabel(k) + ' ' + k + ' ' + (REQ_ALIAS[k] || '')).toLowerCase())}" aria-pressed="${chosen.has(k)}">${esc(reqLabel(k))}${cmp.req.must.includes(k) ? ' <small>must</small>' : cmp.req.nice.includes(k) ? ' <small>nice</small>' : ''}</button>`).join('')}</div></div>`; }).join('')}
+<span class="muted small rq-none" hidden>No feature matches that. Try another word.</span></div></div>
       </section>
       <section class="cmp-grid" style="--n:${cars.length}">
         <div class="cg-row cg-cars"><div class="cg-k"></div>${cars.map((car, i) => `<div class="cg-car${best === car ? ' best' : ''}">
@@ -1993,11 +1993,11 @@
       const q = (cmp.q || '').trim().toLowerCase(), words = q.split(/\s+/).filter(Boolean);
       let n = 0;
       box.querySelectorAll('[data-rank]').forEach((b) => {
-        const show = words.length ? words.every((w) => b.dataset.find.includes(w)) : cmp.all || Number(b.dataset.rank) < 6 || b.classList.contains('sel');
+        const show = words.length ? words.every((w) => b.dataset.find.includes(w)) : (cmp.allG || {})[b.closest('[data-grp]').dataset.grp] || Number(b.dataset.rank) < 6 || b.classList.contains('sel');
         b.hidden = !show; if (show) n++;
       });
       box.querySelectorAll('.rq-grp').forEach((g) => { g.hidden = !g.querySelector('[data-rank]:not([hidden])'); });
-      const more = $('[data-reqall]', box); if (more) more.hidden = !!words.length;
+      box.querySelectorAll('[data-grpall]').forEach((x) => { x.hidden = !!words.length; });
       $('.rq-none', box).hidden = n > 0;
     }
   function wireComparePage() {
@@ -2016,7 +2016,7 @@
         else { cmp.req[other] = cmp.req[other].filter((x) => x !== k); if (list.length >= 5) { flashMsg(`You can pick up to 5 ${cmp.add === 'must' ? 'must-haves' : 'nice-to-haves'}`); return; } list.push(k); }
         cmp.vsel = {}; return rerender();
       }
-      if (e.target.closest('[data-reqall]')) { cmp.all = !cmp.all; return rerender(); }
+      const ga = e.target.closest('[data-grpall]'); if (ga) { cmp.allG = { ...(cmp.allG || {}), [ga.dataset.grpall]: !(cmp.allG || {})[ga.dataset.grpall] }; return rerender(); }
       const ch = e.target.closest('[data-cmpchange]');
       if (ch) {
         const i = Number(ch.dataset.cmpchange), slugs = cmpArg.split(',');
