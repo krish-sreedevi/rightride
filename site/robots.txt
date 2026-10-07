@@ -3,4 +3,19 @@ Allow: /
 Disallow: /admin.html
 Disallow: /data/admin-stats.enc.json
 
+# AI assistants and answer engines are welcome to read the car pages and open data
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bingbot
+Allow: /
+Disallow: /admin.html
+
 Sitemap: https://rightride.in/sitemap.xml

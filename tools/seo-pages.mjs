@@ -100,7 +100,7 @@ for (const m of all) {
     m.nc ? ['Safety rating', `${m.nc.stars}-star (${m.nc.by})`] : null,
     m.x && m.x.s ? ['Expert score', `${m.x.s}/10`] : null,
   ].filter(Boolean);
-  const body = `${crumbHtml([['Home', ORIGIN + '/'], ['Cars', ORIGIN + '/cars/'], [m.brand, `${ORIGIN}/brands/${slug(m.brand)}/`], [m.model, canon]])}
+  let body = `${crumbHtml([['Home', ORIGIN + '/'], ['Cars', ORIGIN + '/cars/'], [m.brand, `${ORIGIN}/brands/${slug(m.brand)}/`], [m.model, canon]])}
 <section class="hero">
   <div class="hero-img">${m.image ? `<img src="/${esc(m.image)}" alt="${esc(name)}" width="1200" height="700" fetchpriority="high">` : ''}</div>
   <div class="hero-txt">
@@ -123,8 +123,21 @@ ${m.vs.map((v) => `<tr><td>${esc(v.variant)}</td><td>${esc(v.fuel)}</td><td>${es
 ${(m.e.colors || []).length ? `<section><h2>${esc(name)} colours</h2><p>${esc(list(m.e.colors.map((c) => c.name)))}.</p></section>` : ''}
 ${similar.length ? `<section><h2>Similar cars to the ${esc(m.model)}</h2><div class="cars">${similar.map(card).join('')}</div><p><a href="/#/compare/${[m, ...similar.slice(0, 2)].map((o) => o.slug).join(',')}">Compare the ${esc(m.model)} with the ${esc(similar.slice(0, 2).map((o) => o.model).join(' and '))} →</a></p></section>` : ''}
 <section class="more"><h2>More from ${esc(m.brand)}</h2><p><a href="/brands/${slug(m.brand)}/">All ${esc(m.brand)} cars and prices →</a></p></section>`;
+  // short, factual answers to the questions people (and AI assistants) ask about a car
+  const cheapest = m.vs[0], top = m.vs[m.vs.length - 1];
+  const firstAuto = m.vs.find((v) => v.transmission === 'Automatic');
+  const qa = [
+    [`What is the price of the ${name}?`, `The ${name} costs ${lakh(m.min)}${m.max > m.min ? ` to ${lakh(m.max)}` : ''} ex-showroom in India (${TODAY}). The on-road price adds road tax, registration, insurance, FASTag and TCS, and depends on your state.`],
+    [`Which is the cheapest ${name} variant?`, `The ${cheapest.variant} (${cheapest.fuel}, ${cheapest.transmission || 'manual'}) at ${lakh(cheapest.price)} ex-showroom.${m.vs.length > 1 ? ` The top variant is the ${top.variant} at ${lakh(top.price)}.` : ''}`],
+    ...(firstAuto && m.trans.length > 1 ? [[`What is the cheapest automatic ${name}?`, `The ${firstAuto.variant} (${firstAuto.fuel}) at ${lakh(firstAuto.price)} ex-showroom.`]] : []),
+    ...(effic ? [[`What is the ${m.fuels.every((f) => f === 'Electric') ? 'range' : 'mileage'} of the ${name}?`, `${effic}${m.fuels.every((f) => f === 'Electric') ? ' (certified)' : ' (claimed by the maker)'}.`]] : []),
+    ...(m.nc ? [[`Is the ${name} safe?`, `It has a ${m.nc.stars}-star ${m.nc.by} crash-test rating${airbags ? ` and up to ${airbags} airbags` : ''}.`]] : airbags ? [[`How many airbags does the ${name} have?`, `Up to ${airbags}, depending on the variant.`]] : []),
+    [`What fuel and gearbox options does the ${name} have?`, `${list(m.fuels)} with ${list(m.trans.map((t) => t.toLowerCase()))} transmission${m.trans.length > 1 ? 's' : ''}; ${m.vs.length} variant${m.vs.length > 1 ? 's' : ''} in all.`],
+  ];
+  body += `\n<section><h2>${esc(name)}: quick answers</h2><dl class="qa">${qa.map(([q, a]) => `<div><dt>${esc(q)}</dt><dd>${esc(a)}</dd></div>`).join('')}</dl></section>`;
   const jsonld = [
     crumbs([['Home', ORIGIN + '/'], ['Cars', ORIGIN + '/cars/'], [m.brand, `${ORIGIN}/brands/${slug(m.brand)}/`], [m.model, canon]]),
+    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: qa.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
     { '@context': 'https://schema.org', '@type': 'Car', name, brand: { '@type': 'Brand', name: m.brand }, model: m.model, bodyType: m.body, fuelType: m.fuels.join(', '), vehicleTransmission: m.trans.join(', '), ...(m.seats.length ? { seatingCapacity: Math.max(...m.seats) } : {}), ...(m.image ? { image: abs(m.image) } : {}), url: canon, description: desc },
   ];
   write(`cars/${m.slug}/index.html`, page({ title: `${name} Price ${YEAR}, Variants, Mileage & Features | Right Ride`, desc, canon, body, jsonld, image: m.image ? abs(m.image) : null, track: `/seo/car/${m.slug}` }));
@@ -155,6 +168,37 @@ for (const b of brands) {
 ${brands.map((b) => `<section id="${slug(b)}"><h2><a href="/brands/${slug(b)}/">${esc(b)}</a></h2><div class="cars">${all.filter((m) => m.brand === b).map(card).join('')}</div></section>`).join('\n')}`;
   write('cars/index.html', page({ title: `New Cars in India ${YEAR}: Prices, Variants & Features of Every Model | Right Ride`, desc: `Compare all ${all.length} new car models on sale in India from ${brands.length} brands: ex-showroom prices, variants, mileage, safety ratings and features.`, canon, body, jsonld: [crumbs([['Home', ORIGIN + '/'], ['Cars', canon]])], track: '/seo/cars' }));
 }
+
+// ---- open data for apps and AI assistants: every model and variant with prices, as plain JSON ----
+const api = { source: ORIGIN, updated: TODAY, currency: 'INR', priceType: 'ex-showroom', note: 'Prices from each maker\'s official India website, refreshed weekly. On-road prices vary by state: see ' + ORIGIN + '/#/cars',
+  models: all.map((m) => ({ brand: m.brand, model: m.model, body: m.body, url: `${ORIGIN}/cars/${m.slug}/`, fuels: m.fuels, transmissions: m.trans, seats: m.seats, priceMin: m.min, priceMax: m.max,
+    safety: m.nc ? { stars: m.nc.stars, by: m.nc.by } : null, expertScore: m.x && m.x.s ? m.x.s : null,
+    variants: m.vs.map((v) => ({ name: v.variant, fuel: v.fuel, transmission: v.transmission, price: v.price, ...(v.airbags ? { airbags: v.airbags } : {}), ...(v.range ? { rangeKm: v.range } : {}) })) })) };
+write('api/models.json', JSON.stringify(api));
+write('llms.txt', `# Right Ride
+
+> Right Ride (rightride.in) is an independent guide to buying a new car in India. It lists every new car on sale (${all.length} models, ${D.cars.length} variants, ${brands.length} brands) with ex-showroom prices taken weekly from each maker's official website, on-road price estimates for every Indian state, variant-by-variant features, mileage, crash-test ratings, expert verdicts and nearby dealers.
+
+Prices are ex-showroom in Indian rupees unless stated. On-road prices (road tax, registration, insurance, FASTag, TCS) depend on the state and are shown in the interactive site. Last updated ${TODAY}.
+
+## Car pages
+- [All new cars in India](${ORIGIN}/cars/): every model, grouped by brand
+${brands.map((b) => `- [${b} cars](${ORIGIN}/brands/${slug(b)}/): ${((n) => n + (n === 1 ? ' model' : ' models'))(all.filter((m) => m.brand === b).length)}`).join('\n')}
+
+## Data
+- [All models and variants as JSON](${ORIGIN}/api/models.json): brand, model, body, fuels, gearboxes, seats, price range, safety rating, expert score and every variant with its ex-showroom price
+- [Sitemap](${ORIGIN}/sitemap.xml)
+
+## Interactive tools
+- [Find my Right Ride](${ORIGIN}/#/cars): filter by budget, body, fuel, gearbox and 50+ features; on-road price for any state
+- Car page: ${ORIGIN}/#/car/<model-slug> (variants, on-road price, dealers, test drive)
+- Compare up to 3 cars: ${ORIGIN}/#/compare/<slug>,<slug>,<slug>
+
+## Optional
+- [Privacy policy](${ORIGIN}/privacy.html)
+- [Terms and conditions](${ORIGIN}/terms.html)
+- Contact: info@rightride.in
+`);
 
 // ---- sitemap ----
 for (const p of ['privacy.html', 'terms.html']) urls.push([`${ORIGIN}/${p}`, '0.2']);

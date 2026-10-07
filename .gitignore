@@ -6,3 +6,5 @@ site/data/admin-stats.enc.json
 site/cars/
 site/brands/
 site/sitemap.xml
+site/llms.txt
+site/api/

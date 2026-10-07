@@ -42,3 +42,4 @@ table { width:100%; border-collapse:collapse; font-size:.92rem; } th, td { text-
 .foot { max-width:1120px; margin:0 auto; padding:24px 16px 40px; border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; }
 .foot nav { display:flex; flex-wrap:wrap; gap:8px 22px; margin-bottom:10px; } .foot nav a { color:var(--muted); text-decoration:none; font-weight:600; }
 @media (max-width: 760px) { .hero { grid-template-columns:1fr; } .two { grid-template-columns:1fr; } .topnav a:not(.cta) { display:none; } .price { font-size:1.6rem; } }
+.qa { display:grid; gap:10px; margin:0; } .qa div { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:14px 16px; } .qa dt { font-weight:700; } .qa dd { margin:4px 0 0; }
