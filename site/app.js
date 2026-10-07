@@ -325,7 +325,9 @@
     const key = m.brand + '|' + m.model;
     const sub = opts.stat ? opts.stat(m) : (x && x.like && x.like[0]) || `${m.fuels.join(' · ')}`;
     const nF = featsOn().size;
-    const warn = nF && m.best ? (m.best.ev.miss.length ? `<span class="tw miss">Missing ${m.best.ev.miss.length}</span>` : m.best.ev.unk.length ? `<span class="tw unk">${m.best.ev.unk.length} unconfirmed</span>` : `<span class="tw ok">${nF === 1 ? esc(FLABEL([...featsOn()][0]).replace(/ \(.*\)$/, '')) : 'All ' + nF} ✓</span>`) : '';
+    // name the features that are missing or not confirmed, not just how many
+    const fl = (ks) => { const n = ks.map((k) => FLABEL(k).replace(/ \(.*\)$/, '')); return esc(n.slice(0, 2).join(', ') + (n.length > 2 ? ` +${n.length - 2} more` : '')); };
+    const warn = nF && m.best ? (m.best.ev.miss.length ? `<span class="tw miss" title="${esc(m.best.ev.miss.map(FLABEL).join(', '))}"><b>Missing ${m.best.ev.miss.length}</b><span>${fl(m.best.ev.miss)}</span></span>` : m.best.ev.unk.length ? `<span class="tw unk" title="Not listed by the maker: ${esc(m.best.ev.unk.map(FLABEL).join(', '))}"><b>${m.best.ev.unk.length} unconfirmed</b><span>${fl(m.best.ev.unk)}</span></span>` : `<span class="tw ok">${nF === 1 ? esc(FLABEL([...featsOn()][0]).replace(/ \(.*\)$/, '')) : 'All ' + nF} ✓</span>`) : '';
     return `<article class="tile${opts.big ? ' big' : ''}" data-key="${esc(key)}" tabindex="0" role="button" aria-label="${esc(m.brand + ' ' + m.model)}">
       ${x && x.s ? `<span class="sc">${esc(x.s)}/10</span>` : ''}<span class="pr">${lakh(m.min)}</span>
       <div class="timg">${carImg(m, opts.big ? '(max-width: 900px) 86vw, 560px' : '(max-width: 900px) 70vw, 280px')}</div>
@@ -852,7 +854,6 @@
           <div class="cp-price">${lakh(m.min)}${m.max > m.min ? ` <span>– ${lakh(m.max)}</span>` : ''}</div>
           <div class="cp-tags">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>
           <div class="cp-badges">${x && x.s ? `<span class="cp-badge"><b>${esc(x.s)}</b><small>/10</small><span>Expert score</span></span>` : ''}${nc ? `<a class="cp-badge nc" href="#cpSafety" data-jump="cpSafety"><b>${nc.stars}★</b><span>${esc(nc.by)}</span></a>` : ''}</div>
-          <div class="sheet-cta"><a class="btn primary" href="#chVariant" data-jump="chVariant">Find the Right Variant</a><a class="btn ghost" href="#chDealer" data-jump="chDealer">Find the Right Dealer</a></div>
         </div>
       </section>
       <nav class="cp-nav" id="cpNav" aria-label="Sections"><a href="#chRide" data-jump="chRide" class="on"><span class="n">1</span><b>Is this my Right Ride?</b></a><a href="#chVariant" data-jump="chVariant"><span class="n">2</span><b>Find the Right Variant</b></a><a href="#chDealer" data-jump="chDealer"><span class="n">3</span><b>Find the Right Dealer</b></a></nav>
