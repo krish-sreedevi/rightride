@@ -37,7 +37,7 @@ async function gcPeriod(days) {
   const hits = []; let exclude = [];
   for (let page = 0; page < 20; page++) {
     const j = await gc('stats/hits', { ...range, limit: 100, exclude_paths: exclude.join(',') });
-    hits.push(...(j.hits || []).map((h) => ({ path: h.path, path_id: h.path_id, title: h.title, event: h.event, count: h.count, ...(h.event ? { days: (h.stats || []).map((x) => x.daily || 0) } : {}) })));
+    hits.push(...(j.hits || []).map((h) => ({ path: h.path, path_id: h.path_id, title: h.title, event: h.event, count: h.count, ...(days === 365 ? { s: (h.stats || []).map((x, i) => [i, x.daily || 0]).filter((x) => x[1]) } : {}) })));
     if (!j.more || !(j.hits || []).length) break;
     exclude = hits.map((h) => h.path_id);
   }
@@ -65,6 +65,15 @@ async function gaReport(tok, body) {
   const j = await r.json();
   return (j.rows || []).map((row) => [...(row.dimensionValues || []).map((d) => d.value), ...(row.metricValues || []).map((m) => +m.value)]);
 }
+// one year of per-day numbers, so the admin page can add up any custom date range
+const isoDay = (d) => `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6)}`;
+async function gaDaily(tok) {
+  const dateRanges = [{ startDate: '364daysAgo', endDate: 'today' }];
+  const tot = await gaReport(tok, { dateRanges, dimensions: [{ name: 'date' }], metrics: ['activeUsers', 'newUsers', 'sessions', 'screenPageViews', 'userEngagementDuration', 'engagedSessions'].map((name) => ({ name })), limit: 400 });
+  const by = async (dim, metric) => (await gaReport(tok, { dateRanges, dimensions: [{ name: 'date' }, { name: dim }], metrics: [{ name: metric }], limit: 25000 })).map(([d, n, v]) => [isoDay(d), n, v]);
+  const [pages, channels, sources, cities, devices, events] = await Promise.all([by('pageTitle', 'screenPageViews'), by('sessionDefaultChannelGroup', 'sessions'), by('sessionSource', 'sessions'), by('city', 'activeUsers'), by('deviceCategory', 'activeUsers'), by('eventName', 'eventCount')]);
+  return { totals: tot.map(([d, ...v]) => [isoDay(d), ...v]), pages, channels, sources, cities, devices, events };
+}
 async function gaPeriod(tok, days) {
   const dateRanges = [{ startDate: `${days - 1}daysAgo`, endDate: 'today' }];
   const top = (dim, metric, limit = 12) => gaReport(tok, { dateRanges, dimensions: [{ name: dim }], metrics: [{ name: metric }], orderBys: [{ metric: { metricName: metric }, desc: true }], limit });
@@ -75,7 +84,7 @@ async function gaPeriod(tok, days) {
     top('city', 'activeUsers', 15), top('deviceCategory', 'activeUsers', 5), top('eventName', 'eventCount', 20),
   ]);
   const [users, newUsers, sessions, views, avgSec, engagement] = tot || [0, 0, 0, 0, 0, 0];
-  return { totals: { users, newUsers, sessions, views, avgSec, engagement }, daily: daily.map(([d, v]) => ({ day: `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6)}`, v })), pages, channels, sources, cities, devices, events };
+  return { totals: { users, newUsers, sessions, views, avgSec, engagement }, daily: daily.map(([d, v]) => ({ day: isoDay(d), v })), pages, channels, sources, cities, devices, events };
 }
 
 // ---------- encrypt with the admin sign-in (matches admin.html) ----------
@@ -97,6 +106,7 @@ if (out.ga.connected) {
   try {
     const tok = await gaToken(JSON.parse(E.GA_SA_KEY));
     for (const d of PERIODS) out.ga.periods[d] = await gaPeriod(tok, d);
+    out.ga.daily = await gaDaily(tok);
     log('Google Analytics ok');
   } catch (e) { out.ga.error = e.message.replace(/[A-Za-z0-9_\-.]{40,}/g, '…'); log('Google Analytics failed:', out.ga.error); }
 }

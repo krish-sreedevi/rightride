@@ -88,6 +88,10 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
 .ideas { margin:10px 0 0; padding-left:18px; } .ideas li { margin:7px 0; font-size:.9rem; }
 .note { font-size:.82rem; color:var(--muted); margin-top:10px; }
 @media (max-width: 820px) { .funnel .st { grid-template-columns:96px minmax(0,1fr) 96px; } .nav { top:57px; } .money .why { display:none; } }
+.dates { display:inline-flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.dates input { width:auto; padding:7px 10px; border-radius:999px; font:600 .85rem Inter, sans-serif; color-scheme:light dark; }
+@media (max-width: 480px) { .bar > .seg { flex-wrap:nowrap; } .bar > .seg button { padding:7px 9px; font-size:.8rem; } }
+.sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); margin:0; }
 </style>
 </head>
 <body>
@@ -107,7 +111,7 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
   const store = (s) => ({ get(k) { try { return s.getItem('rradmin.' + k) || ''; } catch (e) { return ''; } }, set(k, v) { try { v ? s.setItem('rradmin.' + k, v) : s.removeItem('rradmin.' + k); } catch (e) {} } });
   const LS = store(window.localStorage), SS = store(window.sessionStorage);
   const TABS = [['overview', 'Overview'], ['bookings', 'Bookings'], ['videos', 'Videos'], ['audience', 'Audience'], ['money', 'Money']];
-  const S = { days: +(LS.get('days') || 30), tab: (location.hash.slice(1) || LS.get('tab') || 'overview'), by: { td: 'brand', vid: 'car' } };
+  const S = { days: LS.get('days') === 'custom' ? 'custom' : +(LS.get('days') || 30), from: LS.get('from'), to: LS.get('to'), tab: (location.hash.slice(1) || LS.get('tab') || 'overview'), by: { td: 'brand', vid: 'car' } };
   if (!TABS.some(([k]) => k === S.tab)) S.tab = 'overview';
   // what each tracked click is worth (your assumptions, editable on the Money tab, kept on this device)
   const RATE_DEF = { testdrive: 250, call: 150, 'dealer-site': 15, 'maker-site': 10, video: 3, rpm: 60 };
@@ -163,22 +167,59 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
   const dec = (s) => { try { return decodeURIComponent(String(s || '').replace(/\+/g, ' ')); } catch (e) { return s; } };
   const sum = (l) => l.reduce((s, h) => s + h.count, 0);
   function agg(list, keyFn) { const m = new Map(); for (const h of list) { const k = keyFn(h); if (!k) continue; m.set(k, (m.get(k) || 0) + h.count); } return [...m].sort((a, b) => b[1] - a[1]); }
+  // ---------- date range: a preset (last N days) or a custom from/to ----------
+  const addDays = (iso, n) => { const d = new Date(iso + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+  const spanDays = (a, b) => Math.round((new Date(b + 'T00:00:00Z') - new Date(a + 'T00:00:00Z')) / 864e5) + 1;
+  const niceDay = (iso) => new Date(iso + 'T00:00:00Z').toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+  function allDays() {
+    const Y = DATA.gc && DATA.gc.periods && DATA.gc.periods['365'];
+    const l = Y ? Y.tot.stats.map((x) => x.day) : DATA.ga && DATA.ga.daily ? DATA.ga.daily.totals.map((r) => r[0]).sort() : [];
+    return l.length ? l : [new Date().toISOString().slice(0, 10)];
+  }
+  function range() {
+    const days = allDays(), first = days[0], last = days[days.length - 1];
+    if (S.days !== 'custom') return { from: addDays(last, -(S.days - 1)), to: last, custom: false, first, last };
+    let from = S.from && S.from >= first ? S.from : addDays(last, -29), to = S.to && S.to <= last ? S.to : last;
+    if (from > to) [from, to] = [to, from];
+    return { from, to, custom: true, first, last };
+  }
+  // GA numbers for a custom range, added up from the per-day table (users are added per day, so they're approximate)
+  function gaRange(G, R) {
+    const inR = (d) => d >= R.from && d <= R.to;
+    const rows = G.totals.filter((r) => inR(r[0]));
+    const t = rows.reduce((s, r) => s.map((x, i) => x + (r[i + 1] || 0)), [0, 0, 0, 0, 0, 0]);
+    const top = (list, n = 15) => { const m = new Map(); for (const [d, k, v] of list) if (inR(d)) m.set(k, (m.get(k) || 0) + v); return [...m].sort((a, b) => b[1] - a[1]).slice(0, n); };
+    return { approx: true, totals: { users: t[0], newUsers: t[1], sessions: t[2], views: t[3], avgSec: t[2] ? t[4] / t[2] : 0, engagement: t[2] ? t[5] / t[2] : 0 }, daily: rows.map((r) => ({ day: r[0], v: r[1] })).sort((a, b) => (a.day < b.day ? -1 : 1)), pages: top(G.pages), channels: top(G.channels, 8), sources: top(G.sources), cities: top(G.cities), devices: top(G.devices, 5), events: top(G.events, 20) };
+  }
   function model() {
-    const D = DATA, P = String(S.days);
-    const g = (D.gc && D.gc.periods && D.gc.periods[P]) || null, a = (D.ga && D.ga.periods && D.ga.periods[P]) || null;
-    const hits = g ? g.hits : [], tot = g ? g.tot : { total: 0, total_events: 0, stats: [] };
+    const D = DATA, R = range();
+    R.n = spanDays(R.from, R.to);
+    // lists GoatCounter only gives per period (referrers, countries, screens) use the smallest period that covers the range
+    const P = R.custom ? String([7, 30, 90, 365].find((n) => n >= spanDays(R.from, R.last)) || 365) : String(S.days);
+    const g = (D.gc && D.gc.periods && D.gc.periods[P]) || null;
+    const Y = D.gc && D.gc.periods && D.gc.periods['365'];
+    let a = (D.ga && D.ga.periods && D.ga.periods[P]) || null;
+    if (R.custom) a = D.ga && D.ga.daily ? gaRange(D.ga.daily, R) : null;
+    let hits = [], tot = { total: 0, total_events: 0, stats: [] }, dayList = [];
+    if (Y && Y.hits.some((h) => h.s)) {
+      // add up each page and click over the chosen days, from the 1-year per-day counts
+      const idx = []; Y.tot.stats.forEach((x, i) => { if (x.day >= R.from && x.day <= R.to) idx.push(i); });
+      dayList = idx.map((i) => Y.tot.stats[i].day);
+      hits = Y.hits.map((h) => { const m = new Map(h.s || []); const days = idx.map((i) => m.get(i) || 0); return { ...h, days, count: days.reduce((x, y) => x + y, 0) }; }).filter((h) => h.count);
+      const stats = idx.map((i) => Y.tot.stats[i]);
+      tot = { stats, total: stats.reduce((x, y) => x + (y.daily || 0), 0), total_events: hits.filter((h) => h.event).reduce((x, h) => x + h.count, 0) };
+    } else if (g) { hits = g.hits; tot = g.tot; dayList = (tot.stats || []).map((x) => x.day); }
     const pages = hits.filter((h) => !h.event);
     // events are "kind/brand/model/detail"; detail is the dealer, the YouTube channel or the maker
     const ev = hits.filter((h) => h.event).map((h) => { const [kind, b, m, d] = h.path.split('/').map(dec); return { kind, b, m, car: `${b} ${m}`, d: d || '', count: h.count, days: h.days || [] }; });
     const K = (...k) => ev.filter((e) => k.includes(e.kind));
-    const dayList = (tot.stats || []).map((s) => s.day);
     const perDay = (list) => dayList.map((d, i) => ({ d, v: list.reduce((s, e) => s + (e.days[i] || 0), 0) }));
     const carPages = pages.filter((h) => /^\/car\//.test(h.path));
     const viewsByCar = new Map(carPages.map((h) => [h.title || h.path, h.count]));
     const book = K('testdrive', 'call', 'dealer-site'), vids = K('video');
     const pageViews = a ? a.totals.views : sum(pages);
-    const M = { g, a, tot, pages, ev, K, dayList, perDay, carPages, viewsByCar, book, vids, pageViews,
-      gcOn: !!(D.gc && D.gc.connected && !D.gc.error && g), gaOn: !!(D.ga && D.ga.connected && !D.ga.error && a),
+    const M = { R, P, g, a, tot, pages, ev, K, dayList, perDay, carPages, viewsByCar, book, vids, pageViews,
+      gcOn: !!(D.gc && D.gc.connected && !D.gc.error && (g || Y)), gaOn: !!(D.ga && D.ga.connected && !D.ga.error && a),
       visitors: (tot.total || 0) - (tot.total_events || 0), carViews: sum(carPages),
       td: sum(K('testdrive')), calls: sum(K('call')), sites: sum(K('dealer-site')), maker: sum(K('maker-site')), video: sum(vids), reviews: sum(K('review')) };
     M.streams = [
@@ -303,7 +344,7 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
   V.audience = (M) => {
     const t = M.a && M.a.totals;
     return `${gaGate(M, () => `<div class="kpis six">
-        ${kpi('Users', fmt(t.users))}${kpi('New users', fmt(t.newUsers))}${kpi('Sessions', fmt(t.sessions))}
+        ${kpi('Users', fmt(t.users), M.a.approx ? 'daily users added up' : '')}${kpi('New users', fmt(t.newUsers))}${kpi('Sessions', fmt(t.sessions))}
         ${kpi('Page views', fmt(t.views))}${kpi('Avg. session', dur(t.avgSec))}${kpi('Engaged', Math.round((t.engagement || 0) * 100) + '%')}</div>
       <div class="grid3">
         <div class="card"><h3>Devices</h3>${barList(M.a.devices, 4, 'gold')}</div>
@@ -315,17 +356,17 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
         <div class="card"><h3>Events</h3>${barList(M.a.events, 12, 'gold')}</div>
       </div>`)}
       ${M.gcOn ? `<div class="grid3">
-        <div class="card"><h3>Countries</h3><p class="muted small">GoatCounter</p>${barList(M.g.locations, 8)}</div>
-        <div class="card"><h3>Screen sizes</h3><p class="muted small">GoatCounter</p>${barList(M.g.sizes, 6)}</div>
-        <div class="card"><h3>Referring sites</h3><p class="muted small">GoatCounter</p>${barList(M.g.refs, 8)}</div>
+        <div class="card"><h3>Countries</h3><p class="muted small">GoatCounter${M.R.custom ? ` · last ${M.P === '365' ? 'year' : M.P + ' days'}` : ''}</p>${barList(M.g.locations, 8)}</div>
+        <div class="card"><h3>Screen sizes</h3><p class="muted small">GoatCounter${M.R.custom ? ` · last ${M.P === '365' ? 'year' : M.P + ' days'}` : ''}</p>${barList(M.g.sizes, 6)}</div>
+        <div class="card"><h3>Referring sites</h3><p class="muted small">GoatCounter${M.R.custom ? ` · last ${M.P === '365' ? 'year' : M.P + ' days'}` : ''}</p>${barList(M.g.refs, 8)}</div>
       </div>` : ''}`;
   };
   V.money = (M) => {
-    const k = 30 / S.days;
+    const k = 30 / M.R.n;
     const topBrands = agg(M.book, (e) => e.b).slice(0, 6), topCh = agg(M.vids, (e) => e.d || 'YouTube').slice(0, 6);
     const mob = M.a ? (M.a.devices.find((d) => d[0] === 'mobile') || [0, 0])[1] / (M.a.devices.reduce((s, d) => s + d[1], 0) || 1) : null;
     return `<div class="grid2" style="margin-top:0">
-        <div class="card"><h3>Estimated earnings</h3><div class="big">${rs(M.earn)}</div><p class="muted small">in the last ${S.days === 365 ? 'year' : S.days + ' days'} · about <b>${rs(M.earn * k)}</b> a month at this pace</p></div>
+        <div class="card"><h3>Estimated earnings</h3><div class="big">${rs(M.earn)}</div><p class="muted small">${M.R.custom ? `from ${niceDay(M.R.from)} to ${niceDay(M.R.to)}` : `in the last ${S.days === 365 ? 'year' : S.days + ' days'}`} · about <b>${rs(M.earn * k)}</b> a month at this pace</p></div>
         <div class="card"><h3>Biggest opportunity</h3>${(() => { const top = [...M.streams].sort((a, b) => b.earn - a.earn)[0]; return top && top.earn ? `<div class="big" style="font-size:1.5rem">${esc(top.name)}</div><p class="muted small">${esc(top.why)}. ${rs(top.earn)} of the ${rs(M.earn)} total.</p>` : '<p class="empty">Not enough activity yet.</p>'; })()}</div>
       </div>
       <div class="card" style="margin-top:16px"><h3>Revenue streams</h3><p class="muted small">Change the rates to what partners actually pay you; they're saved on this device. The defaults are rough Indian market guesses, not quotes.</p>
@@ -356,7 +397,8 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
     const M = model();
     $('#nav').innerHTML = TABS.map(([k, l]) => `<button role="tab" data-tab="${k}" aria-selected="${S.tab === k}">${l}</button>`).join('');
     $('#app').innerHTML = `
-      <div class="bar"><div class="seg" role="group" aria-label="Period">${[7, 30, 90, 365].map((d) => `<button data-days="${d}" aria-pressed="${S.days === d}">${d === 365 ? '1 year' : d + ' days'}</button>`).join('')}</div>
+      <div class="bar"><div class="seg" role="group" aria-label="Period">${[7, 30, 90, 365].map((d) => `<button data-days="${d}" aria-pressed="${S.days === d}">${d === 365 ? '1 year' : d + ' days'}</button>`).join('')}<button data-days="custom" aria-pressed="${M.R.custom}">Custom</button></div>
+        ${M.R.custom ? `<span class="dates"><label class="sr" for="dFrom">From</label><input type="date" id="dFrom" value="${M.R.from}" min="${M.R.first}" max="${M.R.last}"><span class="muted">to</span><label class="sr" for="dTo">To</label><input type="date" id="dTo" value="${M.R.to}" min="${M.R.first}" max="${M.R.last}"><span class="muted small">${M.R.n} day${M.R.n === 1 ? '' : 's'}</span></span>` : ''}
         <span class="muted small">Updated ${esc(ago(DATA.built))} · refreshes every hour</span><span style="flex:1"></span>
         <span class="links"><a class="btn" href="https://analytics.google.com/analytics/web/" target="_blank" rel="noopener">Google Analytics ↗</a><a class="btn" href="https://${esc(DATA.gc.code)}.goatcounter.com" target="_blank" rel="noopener">GoatCounter ↗</a></span></div>
       ${V[S.tab](M)}`;
@@ -366,7 +408,8 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
   function wire() {
     for (const b of document.querySelectorAll('[data-tab]')) b.onclick = () => go(b.dataset.tab);
     for (const b of document.querySelectorAll('[data-go]')) b.onclick = (e) => { e.preventDefault(); go(b.dataset.go); };
-    for (const b of document.querySelectorAll('[data-days]')) b.onclick = () => { S.days = +b.dataset.days; LS.set('days', S.days); draw(); };
+    for (const b of document.querySelectorAll('[data-days]')) b.onclick = () => { S.days = b.dataset.days === 'custom' ? 'custom' : +b.dataset.days; LS.set('days', S.days); draw(); if (S.days === 'custom') { const f = $('#dFrom'); if (f) f.focus(); } };
+    for (const id of ['dFrom', 'dTo']) { const i = document.getElementById(id); if (i) i.onchange = () => { if (!i.value) return; S[id === 'dFrom' ? 'from' : 'to'] = i.value; LS.set(id === 'dFrom' ? 'from' : 'to', i.value); draw(); }; }
     for (const b of document.querySelectorAll('[data-by]')) b.onclick = () => { S.by[b.dataset.by] = b.dataset.v; draw(); };
     for (const i of document.querySelectorAll('[data-rate]')) i.onchange = () => { const v = parseFloat(i.value); RATE[i.dataset.rate] = isFinite(v) && v >= 0 ? v : RATE_DEF[i.dataset.rate]; LS.set('rates', JSON.stringify(RATE)); draw(); };
     const r = document.querySelector('[data-reset]'); if (r) r.onclick = () => { RATE = { ...RATE_DEF }; LS.set('rates', ''); draw(); };
