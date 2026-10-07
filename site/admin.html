@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
 <style>
-:root { --bg:#f5f5f7; --panel:#fff; --text:#1d1d1f; --muted:#6e6e73; --line:rgba(0,0,0,.08); --chip:rgba(0,0,0,.05); --brand:#C9281B; --brand-soft:rgba(201,40,27,.1); --grad:linear-gradient(180deg,#DA4330,#B81F14); --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 28px rgba(0,0,0,.06); }
+:root { --bg:#f5f5f7; --panel:#fff; --text:#1d1d1f; --muted:#6e6e73; --line:rgba(0,0,0,.08); --chip:rgba(0,0,0,.05); --brand:#D02A1C; --brand-soft:rgba(208,42,28,.1); --grad:linear-gradient(180deg,#E5341F,#D02A1C); --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 28px rgba(0,0,0,.06); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#000; --panel:#1c1c1e; --text:#f5f5f7; --muted:#98989d; --line:rgba(255,255,255,.1); --chip:rgba(255,255,255,.07); --brand:#FF5A3A; --brand-soft:rgba(255,90,58,.16); --grad:linear-gradient(180deg,#FF6A48,#E5341F); --shadow:none; } }
 * { box-sizing: border-box; }
 body { margin:0; background:var(--bg); color:var(--text); font:15px/1.5 Inter, system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
@@ -64,7 +64,7 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
 </head>
 <body>
 <header>
-  <picture><source srcset="brand/logo-red-white.svg" media="(prefers-color-scheme: dark)"><img src="brand/logo-red-black.svg" alt="Right Ride"></picture>
+  <picture><source srcset="brand/logo-night.svg" media="(prefers-color-scheme: dark)"><img src="brand/logo-day.svg" alt="Right Ride"></picture>
   <h1>Admin</h1><span class="sp"></span>
   <button class="btn" id="out" hidden>Sign out</button>
 </header>

@@ -2,7 +2,7 @@
 // Set the site code below once a GoatCounter account exists (e.g. "rightride" for rightride.goatcounter.com).
 window.RR_ANALYTICS = { goatcounter: 'rightride' };
 (function () {
-  const code = window.RR_ANALYTICS.goatcounter;
+  const code = /^(www\.)?rightride\.in$/.test(location.hostname) ? window.RR_ANALYTICS.goatcounter : '';
   const q = [];
   // rr.track(path, title, isEvent): queued until GoatCounter's script has loaded
   window.rrTrack = function (path, title, event) {
@@ -11,7 +11,8 @@ window.RR_ANALYTICS = { goatcounter: 'rightride' };
     if (window.goatcounter && window.goatcounter.count) window.goatcounter.count(hit); else q.push(hit);
   };
   if (document.currentScript && document.currentScript.hasAttribute('data-admin')) return; // the admin page reads stats, it isn't counted
-  if (!code || /^(localhost|127\.|\[::1\])/.test(location.hostname)) return;
+  // Only count visits on the live domain (not aksreedevi.in, previews or localhost)
+  if (!code || !/^(www\.)?rightride\.in$/.test(location.hostname)) return;
   window.goatcounter = { no_onload: true, allow_local: false };
   const s = document.createElement('script');
   s.async = true; s.src = 'https://gc.zgo.at/count.js';

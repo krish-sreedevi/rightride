@@ -1259,7 +1259,7 @@
     const close = `<button class="wz-x" type="button" data-wz="close" aria-label="Close">✕</button>`;
     let body = '', canNext = true;
     if (s === 0) {
-      body = `<img class="wz-mark" src="brand/logo-red-black.svg" alt="Right Ride"><h2 id="wzTitle" class="display">What can we help you with?</h2>
+      body = `<img class="wz-mark" src="brand/logo-day.svg" alt="Right Ride"><h2 id="wzTitle" class="display">What can we help you with?</h2>
         <div class="wz-choices two">
           <button class="wz-opt" type="button" data-wz="browse"><b>Just browsing</b><span>Explore every car, variant and on-road price</span></button>
           <button class="wz-opt primary" type="button" data-wz="start" autofocus><b>Find the Right Ride for me!</b><span>Personalised recommendations in 5 quick steps</span></button>
@@ -1759,15 +1759,20 @@
     diesel: { label: 'Diesel engine', has: (c) => c.fuel === 'Diesel' },
     cng: { label: 'CNG option', has: (c) => c.fuel === 'CNG' },
     hybrid: { label: 'Hybrid', has: (c) => /hybrid/i.test(c.fuel) },
+    space: { label: 'Space (cabin and boot)', model: true },
+    resale: { label: 'Resale value', model: true },
   };
+  // extra words people search with
+  const REQ_ALIAS = { space: 'room roomy spacious boot luggage legroom headroom cabin family big', resale: 'resale value depreciation sell later hold value', mileage: 'fuel economy efficiency kmpl running cost range', auto: 'automatic at amt cvt dct gearbox', seven: '7 seater seats family', fiveStar: 'safety ncap crash safe', wirelessAA: 'carplay android auto wireless', androidAuto: 'carplay android auto', adas: 'adas driver assist lane', camera360: '360 camera surround', awd: '4wd 4x4 awd offroad', sunroof: 'sunroof roof', panoramic: 'panoramic sunroof', ventilated: 'cooled seats ventilated' };
   // the order people most often ask for these (used to pick the first 15 shown)
-  const REQ_RANK = ['sunroof', 'airbags6', 'auto', 'adas', 'camera360', 'ventilated', 'wirelessAA', 'fiveStar', 'autoClimate', 'mileage', 'cruise', 'wirelessCharger', 'rearCamera', 'premiumAudio', 'panoramic', 'seven', 'poweredSeat', 'digitalCluster', 'connected', 'keyless', 'ledHeadlamps', 'rearAC', 'hud', 'tpms', 'esc', 'isofix', 'androidAuto', 'touchscreen', 'alloys', 'pushStart', 'epb', 'rearSensors', 'frontSensors', 'blindSpot', 'dualZone', 'ambient', 'leather', 'paddleShifters', 'driveModes', 'powerTailgate', 'awd', 'ev', 'diesel', 'cng', 'hybrid'];
+  const REQ_RANK = ['sunroof', 'airbags6', 'auto', 'space', 'adas', 'camera360', 'ventilated', 'wirelessAA', 'fiveStar', 'autoClimate', 'mileage', 'resale', 'cruise', 'wirelessCharger', 'rearCamera', 'premiumAudio', 'panoramic', 'seven', 'poweredSeat', 'digitalCluster', 'connected', 'keyless', 'ledHeadlamps', 'rearAC', 'hud', 'tpms', 'esc', 'isofix', 'androidAuto', 'touchscreen', 'alloys', 'pushStart', 'epb', 'rearSensors', 'frontSensors', 'blindSpot', 'dualZone', 'ambient', 'leather', 'paddleShifters', 'driveModes', 'powerTailgate', 'awd', 'ev', 'diesel', 'cng', 'hybrid'];
   const reqLabel = (k) => (REQ_EXTRA[k] ? REQ_EXTRA[k].label : FIDX[k] != null ? FLABEL(k).replace(/ \(.*\)$/, '') : k);
   const ncapOf = (m) => (DATA.ncap || {})[keyOf(m)] || null;
   function reqOptions(ms) {
     const ok = (k) => {
       if (k === 'fiveStar') return ms.some((m) => (ncapOf(m) || {}).stars >= 4);
-      if (k === 'mileage') return true;
+      if (k === 'mileage' || k === 'space') return true;
+      if (k === 'resale') return ms.some((m) => ((EXTRA_DATA || {})[keyOf(m)] || {}).resale);
       if (REQ_EXTRA[k]) return ms.some((m) => m.vs.some((v) => REQ_EXTRA[k].has(v.c)));
       return ms.some((m) => m.vs.some((v) => v.c.feat(k) === '1'));
     };
@@ -1806,9 +1811,15 @@
     if (k === 'mileage') {
       const ml = mileageOf(c, m);
       if (!ml) return { g: 1, why: 'Not published' };
-      if (ml.ev) return ml.v >= 400 ? { g: 2, why: `${ml.v} km range` } : ml.v >= 250 ? { g: 1, why: `${ml.v} km range` } : { g: 0, why: `${ml.v} km range` };
+      if (ml.ev) return ml.v >= 400 ? { g: 2, why: `${ml.v} km range` } : ml.v >= 250 ? { g: 1, why: `${ml.v} km range` } : { g: 0, weak: true, why: `${ml.v} km range` };
       const cng = ml.unit === 'km/kg', good = cng ? 22 : 15, great = cng ? 28 : 19;
-      return { g: ml.v >= great ? 2 : ml.v >= good ? 1 : 0, why: `${ml.v} ${ml.unit} ${ml.real ? 'real-world' : 'claimed'}` };
+      return { g: ml.v >= great ? 2 : ml.v >= good ? 1 : 0, weak: true, why: `${ml.v} ${ml.unit} ${ml.real ? 'real-world' : 'claimed'}` };
+    }
+    if (k === 'space') return spaceGrade(c, m, like, dislike);
+    if (k === 'resale') {
+      const r = ((EXTRA_DATA || {})[keyOf(m)] || {}).resale;
+      if (!r || !r.pct) return { g: 1, why: 'No estimate yet' };
+      return { g: r.pct >= 60 ? 2 : r.pct >= 50 ? 1 : 0, weak: true, why: `Keeps about ${r.pct}% after 5 years` };
     }
     if (k === 'auto') return c.transmission !== 'Automatic' ? { g: 0, why: 'Manual only' } : c.transType === 'AMT' ? { g: 1, why: 'AMT (jerkier shifts)' } : { g: 2, why: c.fuel === 'Electric' ? 'Electric, no gears' : c.transType || 'Automatic' };
     if (k === 'seven') return (c.seats || 0) >= 7 ? { g: 2, why: `${c.seats} seats` } : (c.seats || 0) === 6 ? { g: 1, why: '6 seats' } : { g: 0, why: `${c.seats || 5} seats` };
@@ -1821,6 +1832,20 @@
     if (PRAISE[k] && PRAISE[k].test(like)) return { g: 2, why: 'Praised by reviewers' };
     if (PRAISE[k] && PRAISE[k].test(dislike)) return { g: 1, why: 'Reviewers have reservations' };
     return { g: 1, why: up ? `Not ${up[1].toLowerCase()}` : 'Available' };
+  }
+  // space: size class from body and seats, nudged up or down by what reviewers say about the cabin and boot
+  const SPACE_GOOD = /spacious|roomy|space|legroom|headroom|big boot|large boot|boot|practical|third.row|3rd.row/i;
+  const SPACE_BAD = /cramped|tight|small boot|boot space|legroom|headroom|rear space|third.row|3rd.row|rear seat/i;
+  function spaceGrade(c, m, like, dislike) {
+    const seats = c.seats || 5, body = m.body || c.body || '';
+    let g = seats >= 7 || body === 'MUV / MPV' ? 2 : body === 'Hatchback' ? 0 : 1;
+    const base = seats >= 7 ? `${seats} seats` : body === 'MUV / MPV' ? 'MUV' : body || 'Car';
+    const goodL = (like.split(' | ').find((t) => SPACE_GOOD.test(t)) || ''), badL = (dislike.split(' | ').find((t) => SPACE_BAD.test(t) && !/display|screen|info/i.test(t)) || '');
+    let why = base;
+    if (goodL && !badL) { g = Math.min(2, g + 1); why += ' · reviewers: ' + goodL.toLowerCase(); }
+    else if (badL && !goodL) { g = Math.max(0, g - 1); why += ' · reviewers: ' + badL.toLowerCase(); }
+    else if (g === 0) { g = seats >= 5 ? 1 : 0; why = 'Hatchback · compact cabin and boot'; }
+    return { g, weak: true, why };
   }
   // the variant we compare: the cheapest one with every must-have (or the most of them), then the most nice-to-haves
   function cmpVariant(m) {
@@ -1841,7 +1866,7 @@
     const opts = reqOptions(ms);
     cmp.req.must = cmp.req.must.filter((k) => opts.includes(k)); cmp.req.nice = cmp.req.nice.filter((k) => opts.includes(k));
     const chosen = new Set([...cmp.req.must, ...cmp.req.nice]);
-    const shown = cmp.all ? opts : opts.slice(0, 15);
+    const shown = opts;
     const cars = ms.map((m) => ({ m, c: cmpVariant(m) }));
     const rows = [...cmp.req.must.map((k) => ({ k, must: true })), ...cmp.req.nice.map((k) => ({ k, must: false }))];
     for (const car of cars) {
@@ -1863,7 +1888,7 @@
         + (missers.length && allMust ? ` (${missers.join(' and ')} ${missers.length > 1 ? 'miss' : 'misses'} at least one)` : '')
         + (tie ? ', and costs the least among equally good matches' : r2 && best.pts > r2.pts && allMust && r2.met === nMust ? ', and does them better' : '');
     }
-    const pill = (x) => `<span class="gr g${x.g}">${x.g === 2 ? 'Great' : x.g === 1 ? 'Good' : 'Not available'}</span><span class="gr-why">${esc(x.why)}</span>`;
+    const pill = (x) => `<span class="gr g${x.g}">${x.g === 2 ? 'Great' : x.g === 1 ? 'Good' : x.weak ? 'Weak' : 'Not available'}</span><span class="gr-why">${esc(x.why)}</span>`;
     const higher = (car, k) => { const up = car.m.vs.map((v) => v.c).filter((c) => c.orTotal > car.c.orTotal && grade(k, c, car.m).g > 0).sort((a, b) => a.orTotal - b.orTotal)[0]; return up ? `<span class="gr-up">On ${esc(up.variant)} (+${lakh(up.orTotal - car.c.orTotal)})</span>` : ''; };
     const bucket = (name, list, max) => `<div class="rq-bucket${cmp.add === name ? ' on' : ''}" data-bucket="${name}"><div class="rq-bh"><b>${name === 'must' ? 'Must have' : 'Nice to have'}</b><span class="muted small">${list.length}/${max}</span></div>
       <div class="rq-chosen">${list.length ? list.map((k) => `<button type="button" class="chip on" data-unreq="${k}" data-drag="${k}">${esc(reqLabel(k))} ✕</button>`).join('') : `<span class="muted small rq-drop-hint">Drag options here, or ${cmp.add === name ? 'tap them below' : 'tap this box, then tap options'}</span>`}</div></div>`;
@@ -1883,8 +1908,9 @@
         <div class="rq-top"><div><h2 class="display">What matters to you?</h2><p class="muted">Pick up to 5 must-haves and 5 nice-to-haves: drag options into a box, or tap them. We'll rate each car on how well it does each one.</p></div></div>
         <div class="rq-buckets">${bucket('must', cmp.req.must, 5)}${bucket('nice', cmp.req.nice, 5)}</div>
         <div class="rq-opts"><div class="label">Add to <b>${cmp.add === 'must' ? 'Must have' : 'Nice to have'}</b> <span class="seg rq-seg" role="group" aria-label="Add to"><button type="button" data-add="must" aria-pressed="${cmp.add === 'must'}">Must have</button><button type="button" data-add="nice" aria-pressed="${cmp.add === 'nice'}">Nice to have</button></span></div>
-          <div class="chips">${shown.map((k) => `<button type="button" class="chip${chosen.has(k) ? ' sel' : ''}" data-req="${k}" data-drag="${k}" aria-pressed="${chosen.has(k)}">${esc(reqLabel(k))}${cmp.req.must.includes(k) ? ' <small>must</small>' : cmp.req.nice.includes(k) ? ' <small>nice</small>' : ''}</button>`).join('')}
-          ${opts.length > 15 ? `<button type="button" class="chip more" data-reqall>${cmp.all ? 'Show fewer' : `See all ${opts.length}`}</button>` : ''}</div></div>
+          <label class="rq-search"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input type="search" id="rqQ" placeholder="Search features: boot, resale, sunroof…" autocomplete="off" aria-label="Search features" value="${esc(cmp.q || '')}"></label>
+          <div class="chips" id="rqChips">${shown.map((k, i) => `<button type="button" class="chip${chosen.has(k) ? ' sel' : ''}" data-req="${k}" data-drag="${k}" data-rank="${i}" data-find="${esc((reqLabel(k) + ' ' + k + ' ' + (REQ_ALIAS[k] || '')).toLowerCase())}" aria-pressed="${chosen.has(k)}">${esc(reqLabel(k))}${cmp.req.must.includes(k) ? ' <small>must</small>' : cmp.req.nice.includes(k) ? ' <small>nice</small>' : ''}</button>`).join('')}
+          ${opts.length > 15 ? `<button type="button" class="chip more" data-reqall>${cmp.all ? 'Show fewer' : `See all ${opts.length}`}</button>` : ''}<span class="muted small rq-none" hidden>No feature matches that. Try another word.</span></div></div>
       </section>
       <section class="cmp-grid" style="--n:${cars.length}">
         <div class="cg-row cg-cars"><div class="cg-k"></div>${cars.map((car, i) => `<div class="cg-car${best === car ? ' best' : ''}">
@@ -1902,6 +1928,7 @@
       </section>
       <p class="hint">"Great" means the better version of a feature (for example a panoramic sunroof, wireless phone mirroring or a 360° camera) or one that expert reviews praise. Ratings are for the variant shown; change it above.</p>
     </div>`;
+    filterReq();
   }
   // put requirement k into a bucket ('must' / 'nice'), or take it out (null); false if the bucket is full
   function setReq(k, to) {
@@ -1955,10 +1982,23 @@
     // a drag must not also count as a tap
     P.addEventListener('click', (e) => { if (P.dataset.justDragged) { e.stopImmediatePropagation(); e.preventDefault(); } }, true);
   }
+  function filterReq() {
+    const P = $('#comparePage');
+      const box = $('#rqChips', P); if (!box) return;
+      const q = (cmp.q || '').trim().toLowerCase(), words = q.split(/\s+/).filter(Boolean);
+      let n = 0;
+      box.querySelectorAll('[data-rank]').forEach((b) => {
+        const show = words.length ? words.every((w) => b.dataset.find.includes(w)) : cmp.all || Number(b.dataset.rank) < 15;
+        b.hidden = !show; if (show) n++;
+      });
+      const more = $('[data-reqall]', box); if (more) more.hidden = !!words.length;
+      $('.rq-none', box).hidden = n > 0;
+    }
   function wireComparePage() {
     const P = $('#comparePage');
     const rerender = () => { saveCmp(); keepY(() => renderCompare(cmpArg)); };
     wireReqDrag(P, rerender);
+    P.addEventListener('input', (e) => { if (e.target.id === 'rqQ') { cmp.q = e.target.value; filterReq(); } });
     P.addEventListener('click', (e) => {
       const a = e.target.closest('[data-add]'); if (a) { cmp.add = a.dataset.add; return rerender(); }
       const bk = e.target.closest('[data-bucket]'); if (bk && !e.target.closest('[data-unreq]')) { cmp.add = bk.dataset.bucket; return rerender(); }

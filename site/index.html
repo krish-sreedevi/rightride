@@ -6,8 +6,9 @@
   <title>Right Ride — find the right car for you</title>
   <meta name="description" content="Pick the features you want and see every matching car variant sold in India, with on-road prices for your state.">
   <link rel="icon" type="image/svg+xml" href="brand/favicon.svg">
-  <link rel="apple-touch-icon" href="brand/app-icon.svg">
-  <meta name="theme-color" content="#C9281B">
+  <link rel="apple-touch-icon" href="brand/app-icon-180.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="brand/app-icon-512.png">
+  <meta name="theme-color" content="#0B0B0D">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -17,10 +18,8 @@
   <script src="rr-intro.js"></script>
   <header class="topbar">
     <a class="logo" href="#/" data-go="home" aria-label="Right Ride home">
-      <picture>
-        <source srcset="brand/logo-red-white.svg" media="(prefers-color-scheme: dark)">
-        <img src="brand/logo-red-black.svg" alt="Right Ride" width="150" height="46">
-      </picture>
+      <img class="logo-d" src="brand/logo-day.svg" alt="Right Ride" width="143" height="46">
+      <img class="logo-n" src="brand/logo-night.svg" alt="Right Ride" width="143" height="46">
     </a>
     <div class="loc">
       <label for="state" class="sr">Your state</label>
@@ -28,7 +27,7 @@
     </div>
     <button id="findBtn" class="rr-cta find-btn" type="button" aria-label="Find my Right Ride">
       <span class="rr-cta-in">
-        <span class="rr-cta-orb" aria-hidden="true"><img class="o-w" src="brand/icon-white.svg" alt="" width="14" height="20"><img class="o-r" src="brand/icon-red.svg" alt="" width="14" height="20"></span>
+        <span class="rr-cta-orb" aria-hidden="true"><img class="o-w" src="brand/icon-white.svg" alt="" width="20" height="16"><img class="o-r" src="brand/mark-day-small.svg" alt="" width="20" height="16"></span>
         <span class="rr-cta-text">Find my Right Ride</span>
         <span class="rr-cta-go" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </span>
@@ -37,7 +36,8 @@
 
   <div id="locToast" class="loc-toast" role="status" hidden></div>
 
-  <section class="hero sunrise" id="hero">
+  <section class="hero sunrise night" id="hero">
+    <img class="hero-mark" src="brand/icon-night.svg" alt="" aria-hidden="true">
     <svg class="scene" id="scene" viewBox="0 0 1360 860" preserveAspectRatio="none" aria-hidden="true">
       <defs>
         <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="sky0"/><stop offset=".75" class="sky1"/><stop offset="1" class="sky2"/></linearGradient>
@@ -50,11 +50,7 @@
       </defs>
       <rect id="skyRect" x="-4000" width="9360" height="500" fill="url(#sky)"/>
       <rect id="groundRect" x="-4000" y="500" width="9360" height="360" fill="url(#ground)"/>
-      <g clip-path="url(#above)"><g class="sun-rise">
-        <ellipse class="halo" cx="680" cy="500" rx="420" ry="290" fill="url(#halo)"/>
-        <circle cx="680" cy="500" r="165" fill="url(#sunfill)"/>
-      </g></g>
-      <line class="horizon" x1="-4000" y1="500" x2="5360" y2="500"/>
+            <line class="horizon" x1="-4000" y1="500" x2="5360" y2="500"/>
       <g class="road" id="road"></g>
     </svg>
     <div class="sun-copy">
