@@ -37,7 +37,7 @@ async function gcPeriod(days) {
   const hits = []; let exclude = [];
   for (let page = 0; page < 20; page++) {
     const j = await gc('stats/hits', { ...range, limit: 100, exclude_paths: exclude.join(',') });
-    hits.push(...(j.hits || []).map((h) => ({ path: h.path, path_id: h.path_id, title: h.title, event: h.event, count: h.count })));
+    hits.push(...(j.hits || []).map((h) => ({ path: h.path, path_id: h.path_id, title: h.title, event: h.event, count: h.count, ...(h.event ? { days: (h.stats || []).map((x) => x.daily || 0) } : {}) })));
     if (!j.more || !(j.hits || []).length) break;
     exclude = hits.map((h) => h.path_id);
   }

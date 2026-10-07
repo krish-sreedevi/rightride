@@ -15,7 +15,7 @@ window.RR_ANALYTICS = { goatcounter: 'rightride', ga: 'G-B102KX5D7F' };
       if (event) {
         // e.g. "testdrive/kia/seltos/dealer" -> event "testdrive" with car and dealer as parameters
         const [kind, brand, model, dealer] = path.split('/').map((s) => { try { return decodeURIComponent(String(s || '').replace(/\+/g, ' ')); } catch (e) { return s; } });
-        window.gtag('event', kind.replace(/[^a-z0-9_]/gi, '_'), { car_brand: brand, car_model: model, dealer: dealer, label: title });
+        window.gtag('event', kind.replace(/[^a-z0-9_]/gi, '_'), { car_brand: brand, car_model: model, detail: dealer, label: title }); // detail = dealer, YouTube channel or maker
       } else {
         window.gtag('event', 'page_view', { page_title: title || path, page_location: location.origin + '/#' + path, page_path: path });
       }

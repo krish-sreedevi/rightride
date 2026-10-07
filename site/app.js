@@ -829,7 +829,7 @@
           <section class="cp-sec" id="cpSafety"><div class="cp-sec-head"><h3 class="display">Safety rating</h3></div>${safety}</section>
           <section class="cp-sec"><div class="cp-sec-head"><h3 class="display">Expert view</h3>${x && x.s ? `<span class="xbadge">Expert score ${esc(x.s)}/10</span>` : ''}</div>
             ${x ? `<ul class="pc">${x.like.map((t) => `<li class="pro">${esc(t)}</li>`).join('')}${x.dislike.map((t) => `<li class="con">${esc(t)}</li>`).join('')}</ul>${x.basedOn ? `<p class="muted small">From the review of the ${esc(x.basedOn)}.</p>` : ''}` : '<p class="muted">No expert review yet.</p>'}
-            <div class="cp-links"><a class="watch" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>Watch the video review</a>${x && x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">Read the review ↗</a>` : ''}<a href="${esc(m.url)}" target="_blank" rel="noopener">Official site ↗</a></div>
+            <div class="cp-links"><a class="watch" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"${trk(m, 'video', ytCh(m))}><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>Watch the video review</a>${x && x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener"${trk(m, 'review', 'Autocar India')}>Read the review ↗</a>` : ''}<a href="${esc(m.url)}" target="_blank" rel="noopener"${trk(m, 'maker-site', m.brand)}>Official site ↗</a></div>
           </section>
         </div>
       </section>
@@ -1141,6 +1141,10 @@
   const PRIO_HINT = { features: 'Tech, safety and convenience kit', mileage: 'Fuel efficiency / range', comfort: 'Space, seats and ride quality', value: 'Most car for the money' };
   const BODY_OPTS = { small: { label: 'Small car', sub: 'Hatchbacks — easy to park', bodies: ['Hatchback'] }, sedan: { label: 'Sedan', sub: 'Boot, comfort, highway manners', bodies: ['Sedan'] }, suv: { label: 'SUV', sub: 'SUVs and 7-seat MUVs', bodies: ['SUV', 'MUV / MPV'] } };
   const expertOf = (m) => (DATA.experts || {})[m.brand + '|' + m.model] || null;
+  // which YouTube channel a video link goes to (the review title ends with it, e.g. "| Autocar India")
+  const ytCh = (m) => { const x = expertOf(m); if (!x || !x.yt) return 'YouTube search'; const p = (x.ytT || '').split('|'); const ch = (p.length > 1 && p.pop().trim()) || 'YouTube'; return /autocar/i.test(ch) ? 'Autocar India' : ch; };
+  // click tracking attributes, read by the click listener near the end of this file
+  const trk = (m, kind, detail) => ` data-ev="${kind}" data-car="${mslug(m.brand, m.model)}" data-detail="${esc(detail || '')}"`;
   const ytUrl = (m) => { const x = expertOf(m); return x && x.yt ? `https://www.youtube.com/watch?v=${x.yt}` : `https://www.youtube.com/results?search_query=${encodeURIComponent(`${m.brand} ${m.model} review`)}`; };
   const onesOf = (c) => (/[01]/.test(c.fs) ? c.fs.split('1').length - 1 : null);
 
@@ -1257,8 +1261,8 @@
         <div class="price"><div class="match"><b>${m.match.toFixed(1)}</b><span>/10 match</span></div><div class="big">${lakh(c.orTotal)}</div><div class="small">on-road · ex-showroom ${lakh(c.or.ex)}</div></div>
       </div>
       ${x ? `<div class="expert"><div class="xs"><span class="xbadge">Expert ${x.s ? esc(x.s) + '/10' : 'review'}</span>${x.basedOn ? `<span class="muted"> (review of the ${esc(x.basedOn)})</span>` : ''}</div><ul class="pc">${pros}</ul></div>` : `<div class="expert"><span class="muted">No expert review yet — ranked on specs.</span></div>`}
-      <div class="card-foot"><a class="watch" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>${x && x.yt ? 'Watch the video review' : 'Find a video review'}</a>
-        <span class="foot-links">${x && x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">Expert review ↗</a>` : ''}<button class="link" data-toggle="${esc(key)}">${open ? 'Hide' : 'See'} ${m.vs.length} variant${m.vs.length > 1 ? 's' : ''}</button></span></div>
+      <div class="card-foot"><a class="watch" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"${trk(m, 'video', ytCh(m))}><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>${x && x.yt ? 'Watch the video review' : 'Find a video review'}</a>
+        <span class="foot-links">${x && x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener"${trk(m, 'review', 'Autocar India')}>Expert review ↗</a>` : ''}<button class="link" data-toggle="${esc(key)}">${open ? 'Hide' : 'See'} ${m.vs.length} variant${m.vs.length > 1 ? 's' : ''}</button></span></div>
       ${open ? variantTable(m) : ''}
     </article>`;
   }
@@ -1548,9 +1552,9 @@
   const seg = (t) => encodeURIComponent(String(t || '').trim()).replace(/%20/g, '+');
   document.addEventListener('click', (e) => {
     const a = e.target.closest('[data-td],[data-ev]'); if (!a || !window.rrTrack) return;
-    const m = cp.dealerModel || modelBySlug(carSlug); if (!m) return;
+    const m = (a.dataset.car && modelBySlug(a.dataset.car)) || cp.dealerModel || modelBySlug(carSlug); if (!m) return;
     const kind = a.hasAttribute('data-td') ? 'testdrive' : a.dataset.ev;
-    const dealer = a.dataset.dealer ? `${a.dataset.dealer}${a.dataset.area ? ' (' + a.dataset.area + ')' : ''}` : '';
+    const dealer = a.dataset.dealer ? `${a.dataset.dealer}${a.dataset.area ? ' (' + a.dataset.area + ')' : ''}` : (a.dataset.detail || '');
     window.rrTrack(`${kind}/${seg(m.brand)}/${seg(m.model)}/${seg(dealer)}`, `${kind}: ${m.brand} ${m.model}${dealer ? ' @ ' + dealer : ''}`, true);
   }, true);
   // ---------------- home scene: sunrise over a road drawn in true perspective ----------------
