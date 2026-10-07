@@ -1035,7 +1035,7 @@
     const geo = store.get('geo', null);
     box.innerHTML = `<form class="dl-find" data-dlform><button type="button" class="btn ghost" data-dl="geo">${PIN} Use my location</button><span class="muted">or</span>
         <input class="dl-pin" name="pin" inputmode="numeric" autocomplete="postal-code" maxlength="6" pattern="[1-9][0-9]{5}" placeholder="Enter pincode" aria-label="Pincode"><button class="btn primary" type="submit">Find</button></form>
-      <p class="hint dl-geo-note">Your location is only used in your browser to sort showrooms by distance. Pincodes are looked up with OpenStreetMap's Nominatim service.</p>
+      <p class="hint dl-geo-note">Your location is only used in your browser to sort showrooms by distance. Pincodes are looked up with OpenStreetMap's Nominatim service. Showroom data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>.</p>
       <div id="dlList" aria-live="polite"></div>`;
     if (geo) listDealers(m, geo);
   }
