@@ -110,7 +110,7 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const store = (s) => ({ get(k) { try { return s.getItem('rradmin.' + k) || ''; } catch (e) { return ''; } }, set(k, v) { try { v ? s.setItem('rradmin.' + k, v) : s.removeItem('rradmin.' + k); } catch (e) {} } });
   const LS = store(window.localStorage), SS = store(window.sessionStorage);
-  const TABS = [['overview', 'Overview'], ['bookings', 'Bookings'], ['videos', 'Videos'], ['audience', 'Audience'], ['money', 'Money']];
+  const TABS = [['overview', 'Overview'], ['bookings', 'Bookings'], ['videos', 'Videos'], ['filters', 'Filters'], ['audience', 'Audience'], ['money', 'Money']];
   const S = { days: LS.get('days') === 'custom' ? 'custom' : +(LS.get('days') || 30), from: LS.get('from'), to: LS.get('to'), tab: (location.hash.slice(1) || LS.get('tab') || 'overview'), by: { td: 'brand', vid: 'car' } };
   if (!TABS.some(([k]) => k === S.tab)) S.tab = 'overview';
   // what each tracked click is worth (your assumptions, editable on the Money tab, kept on this device)
@@ -340,6 +340,46 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
         <div class="card"><h3>Watch rate by car</h3><p class="muted small">Video clicks per 100 car-page views (cars with 5+ views).</p>${barList(viewRate, 10, 'gold')}</div>
       </div>
       ${search ? `<p class="note">${fmt(search)} click${search === 1 ? '' : 's'} went to a YouTube search because the car has no matched review video yet. Those are views a channel could own.</p>` : ''}`;
+  });
+  // which filters people pick on the cars page ("filter/<group>/<value>" events), grouped into buckets
+  V.filters = (M) => gcGate(M, () => {
+    const F = M.K('filter'), by = (g) => agg(F.filter((e) => e.b === g), (e) => e.m);
+    const cars = F.filter((e) => !/^finder /.test(e.b) && e.b !== 'sort'), finder = F.filter((e) => /^finder /.test(e.b));
+    const groups = agg(cars, (e) => ({ brand: 'Brand', feature: 'Features', transmission: 'Transmission', gearbox: 'Gearbox type', fuel: 'Fuel', body: 'Body type', seats: 'Seats', budget: 'Budget', drive: 'Drive' }[e.b] || e.b));
+    const top = (g) => { const r = by(g)[0]; return r ? `${esc(r[0])}` : '–'; };
+    const card = (title, rows, n = 10, sub = '') => `<div class="card"><h3>${title}</h3>${sub ? `<p class="muted small">${sub}</p>` : ''}${barList(rows, n)}</div>`;
+    return `<div class="kpis">
+        ${kpi('Filter selections', fmt(sum(cars)), 'times a filter was switched on')}
+        ${kpi('Most-picked brand', top('brand'), by('brand')[0] ? fmt(by('brand')[0][1]) + ' selections' : 'none yet')}
+        ${kpi('Most-wanted feature', top('feature'), by('feature')[0] ? fmt(by('feature')[0][1]) + ' selections' : 'none yet')}
+        ${kpi('Finder runs', fmt(sum(finder.filter((e) => e.b === 'finder body'))), 'people who answered the finder')}
+      </div>
+      <div class="card"><h3>Filter selections per day</h3>${chart('filt', M.perDay(cars), 'Filter selections')}</div>
+      <div class="grid3">
+        ${card('Which filters get used', groups, 9, 'Selections per filter type.')}
+        ${card('Brand', by('brand'), 12)}
+        ${card('Features', by('feature'), 12)}
+      </div>
+      <div class="grid3">
+        ${card('Transmission', [...by('transmission'), ...by('gearbox')], 6)}
+        ${card('Fuel', by('fuel'), 6)}
+        ${card('Body type', by('body'), 6)}
+      </div>
+      <div class="grid3">
+        ${card('Budget', by('budget'), 8, 'Upper budget people set.')}
+        ${card('Seats', by('seats'), 4)}
+        ${card('Sort order', by('sort'), 6, 'How people re-sort the list.')}
+      </div>
+      ${sec('Finder answers', '', 'What people answer in the step-by-step finder.')}
+      <div class="grid3" style="margin-top:0">
+        ${card('Car type', by('finder body'), 6)}
+        ${card('Budget', by('finder budget'), 8)}
+        ${card('Top priority', by('finder top priority'), 4)}
+      </div>
+      <div class="grid2">
+        ${card('Fuel', by('finder fuel'), 6)}
+        ${card('Gearbox', by('finder gearbox'), 4)}
+      </div>`;
   });
   V.audience = (M) => {
     const t = M.a && M.a.totals;

@@ -197,6 +197,14 @@
     $('#filterBody').innerHTML = html;
   }
 
+  // which filters people use: one event per selection, e.g. "filter/brand/Kia" (only when a filter is switched on)
+  const FGROUP = { body: 'body', seats: 'seats', brand: 'brand', fuel: 'fuel', trans: 'transmission', transType: 'gearbox', drive: 'drive', feats: 'feature' };
+  function trackFilter(group, value) {
+    if (!window.rrTrack || value == null || value === '') return;
+    const seg = (t) => encodeURIComponent(String(t).trim()).replace(/%20/g, '+');
+    window.rrTrack(`filter/${seg(group)}/${seg(value)}`, `Filter · ${group}: ${value}`, true);
+  }
+  const budgetBand = (max) => { const n = parseFloat(max); if (!n) return ''; return n <= 6 ? 'Up to ₹6 L' : n <= 10 ? '₹6–10 L' : n <= 15 ? '₹10–15 L' : n <= 20 ? '₹15–20 L' : n <= 30 ? '₹20–30 L' : n <= 50 ? '₹30–50 L' : 'Above ₹50 L'; };
   function onFilterClick(e) {
     if (e.target.closest('[data-brandclose]')) { const d = $('#brandMs'); d.open = false; d.querySelector('summary').focus(); return; }
     if (e.target.closest('[data-brandclear]')) { state.brand.clear(); for (const i of $$('#brandMs [data-brand]')) i.checked = false; $('#brandSum').textContent = brandSummary(); state.page = 1; saveFilters(); render(); return; }
@@ -204,12 +212,14 @@
     if (!b) return;
     if (b.dataset.budget) {
       const [a, z] = b.dataset.budget.split(',');
-      state.budgetMin = a === '0' ? '' : a; state.budgetMax = z; $('#bmin').value = state.budgetMin; $('#bmax').value = state.budgetMax;
+      state.budgetMin = a === '0' ? '' : a; state.budgetMax = z; $('#bmin').value = state.budgetMin; $('#bmax').value = state.budgetMax; trackFilter('budget', budgetBand(z));
     } else {
       const set = state[b.closest('[data-set]').dataset.set];
       const v = b.dataset.v;
       set.has(v) ? set.delete(v) : set.add(v);
       b.setAttribute('aria-pressed', set.has(v));
+      const g = b.closest('[data-set]').dataset.set;
+      if (set.has(v)) trackFilter(FGROUP[g] || g, g === 'feats' ? FLABEL(v) : v);
       const d = b.closest('details'); const cnt = d && d.querySelector('.count');
       if (cnt) { const n = $$('.chip[aria-pressed="true"]', d).length; cnt.textContent = n ? n + ' selected' : ''; }
     }
@@ -589,6 +599,8 @@
   function render() {
     if ((activeCount() || state.q) && state.tab === 'foryou') state.tab = 'all';
     if (state.tab === 'picks' && !(state.sort === 'rec' && state.rec)) state.tab = 'all';
+    else if (state.tab !== 'picks' && state.sort === 'rec' && state.rec) state.tab = 'picks'; // back to "Best match for you" = back to Your picks
+    store.set('tab', state.tab);
     drawTabs();
     const shelvesView = state.tab === 'foryou';
     $('#shelves').hidden = !shelvesView; $('#gridView').hidden = shelvesView;
@@ -944,7 +956,7 @@
       if (e.target.classList.contains('lb-slide') || e.target.classList.contains('lb-stage')) L.close(); // tap outside the photo
     });
     L.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); lbGo((lbSync.i || 0) + (e.key === 'ArrowRight' ? 1 : -1)); } });
-    L.addEventListener('close', () => { document.body.classList.remove('lb-open'); heroGo(lbSync.i || 0, false); });
+    L.addEventListener('close', () => { document.body.classList.remove('lb-open'); heroGo(lbSync.i || 0, false); L.innerHTML = ''; });
   }
   const fmtL = (n) => (n >= 1e7 ? `₹${(n / 1e7).toFixed(2)} Cr` : `₹${(n / 1e5).toFixed(1)} L`);
   function drawMetrics(m, e) {
@@ -1418,6 +1430,8 @@
         if (wz.step < 5) { wz.step = wz.step === 3 && a.fuel === 'Electric' ? 5 : wz.step + 1; return drawWizard(); }
         closeWizard();
         const r = { body: a.body, budget: Number(a.budget), fuel: a.fuel || 'Any', trans: a.trans, prio: a.prio.slice() };
+        // finder answers count as filter choices too
+        trackFilter('finder body', (BODY_OPTS[r.body] || {}).label || r.body); trackFilter('finder budget', budgetBand(r.budget)); trackFilter('finder fuel', r.fuel); trackFilter('finder gearbox', r.trans); trackFilter('finder top priority', PRIO[r.prio[0]]);
         const L = window.RRLoader, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (!L) { applyRec(r); return; }
         L.show('Finding your Right Ride…');
@@ -1707,12 +1721,13 @@
   // ---------------- wiring ----------------
   function wire() {
     $('#filterBody').addEventListener('click', onFilterClick);
+    $('#filterBody').addEventListener('change', (e) => { if (e.target.id === 'bmax' && state.budgetMax) trackFilter('budget', budgetBand(state.budgetMax)); });
     document.addEventListener('click', (e) => { const d = $('#brandMs'); if (d && d.open && !d.contains(e.target)) d.open = false; });
     document.addEventListener('keydown', (e) => { const d = $('#brandMs'); if (e.key === 'Escape' && d && d.open) { d.open = false; d.querySelector('summary').focus(); e.stopPropagation(); } }, true);
     $('#filterBody').addEventListener('toggle', (e) => { if (e.target.id === 'brandMs' && e.target.open) { const q = $('#brandQ'); q.value = ''; $$('#brandMs .ms-opt').forEach((o) => (o.hidden = false)); q.focus({ preventScroll: true }); } }, true);
     $('#filterBody').addEventListener('input', (e) => {
       if (e.target.id === 'brandQ') { const q = e.target.value.trim().toLowerCase(); for (const o of $$('#brandMs .ms-opt')) o.hidden = !!q && !o.dataset.name.includes(q); return; }
-      if (e.target.dataset.brand) { const v = e.target.dataset.brand; e.target.checked ? state.brand.add(v) : state.brand.delete(v); $('#brandSum').textContent = brandSummary(); }
+      if (e.target.dataset.brand) { const v = e.target.dataset.brand; e.target.checked ? state.brand.add(v) : state.brand.delete(v); $('#brandSum').textContent = brandSummary(); if (e.target.checked) trackFilter('brand', v); }
       if (e.target.id === 'bmin') state.budgetMin = e.target.value.replace(/[^\d.]/g, '');
       if (e.target.id === 'bmax') state.budgetMax = e.target.value.replace(/[^\d.]/g, '');
       if (e.target.id === 'allowUnknown') state.allowUnknown = e.target.checked;
@@ -1744,7 +1759,7 @@
     document.addEventListener('click', (e) => { if (e.target.closest('[data-open-finder]')) openWizard(1); });
     wireWizard();
     $('#more').addEventListener('click', () => { state.page++; render(); if (!matchMedia('(prefers-reduced-motion: reduce)').matches) window.scrollBy({ top: Math.round(innerHeight * .35), behavior: 'smooth' }); });
-    $('#sort').addEventListener('change', (e) => { state.sort = e.target.value; saveFilters(); render(); });
+    $('#sort').addEventListener('change', (e) => { state.sort = e.target.value; saveFilters(); render(); trackFilter('sort', e.target.selectedOptions[0] ? e.target.selectedOptions[0].textContent : e.target.value); });
     $('#state').addEventListener('change', (e) => { if (e.target.value === DETECT) { store.set('stateManual', false); detect(false); } else { hideLocToast(); setState(e.target.value, true); } });
     $('#locToast').addEventListener('click', (e) => {
       const b = e.target.closest('[data-loc]'); if (!b) return;
