@@ -62,7 +62,7 @@
     </div>
     <div class="sun-cta"><div class="glass-pill">
       <button class="btn primary lg" type="button" data-open-finder>Find my Right Ride <span aria-hidden="true">→</span></button>
-      <a class="btn lg plain" href="#/cars" data-go="cars">Browse all cars</a>
+      <a class="btn lg plain" href="#/cars" data-go="cars" data-fresh>Browse all cars</a>
     </div></div>
   </section>
 
@@ -124,9 +124,12 @@
   <dialog id="cmpPick" class="cmp-pick" aria-label="Choose a car to compare"></dialog>
   <dialog id="wizard" class="wizard" aria-labelledby="wzTitle"><div id="wizardBody"></div></dialog>
 
-  <footer class="foot">
-    <nav class="foot-nav" aria-label="Site information"><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms and conditions</a><a href="#" id="aboutLink">Data sources &amp; coverage</a><a href="mailto:info@rightride.in">info@rightride.in</a></nav>
-    <p class="muted"><span id="updated"></span><span class="foot-c">© 2026 Right Ride. All rights reserved.</span></p>
+  <footer class="foot" data-nobrand>
+    <div class="foot-in">
+      <a class="foot-logo" href="#/" data-go="home" aria-label="Right Ride home"><img class="logo-d" src="brand/logo-day.svg" alt="Right Ride" width="99" height="32"><img class="logo-n" src="brand/logo-night.svg" alt="" width="99" height="32"></a>
+      <nav class="foot-nav" aria-label="Site information"><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms and conditions</a><a href="#" id="aboutLink">Data sources &amp; coverage</a><a href="mailto:info@rightride.in">info@rightride.in</a></nav>
+    </div>
+    <div class="foot-base"><span>© 2026 Right Ride. All rights reserved.</span><span id="updated"></span></div>
   </footer>
   <script src="rr-loader.js" defer></script>
   <script src="analytics.js"></script>

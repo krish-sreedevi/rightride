@@ -1245,6 +1245,13 @@
     state.sort = 'price'; $('#sort').value = 'price'; $('#sort option[value="rec"]').hidden = true;
     saveFilters(); buildFilters(); render();
   }
+  // a clean cars list: no finder ranking, filters, search or open rows
+  function browseAll() {
+    state.rec = null; store.set('rec', null); state.tab = 'all'; store.set('tab', 'all');
+    clearFilters(); state.page = 1; state.open.clear();
+    state.sort = 'price'; $('#sort').value = 'price'; $('#sort option[value="rec"]').hidden = true;
+    saveFilters(); buildFilters(); render();
+  }
   const bar10 = (v) => `<span class="sbar"><i style="width:${Math.max(4, Math.min(100, v * 10))}%"></i></span>`;
   function recCard(m, rank) {
     const c = m.pick, x = m.expert, key = m.brand + '|' + m.model, open = state.open.has(key);
@@ -1612,7 +1619,9 @@
     window.addEventListener('hashchange', () => route(true));
     document.addEventListener('click', (e) => {
       const a = e.target.closest('[data-go]'); if (!a) return;
-      e.preventDefault(); go(a.dataset.go);
+      e.preventDefault();
+      if (a.hasAttribute('data-fresh')) browseAll(); // "Browse all cars" on the landing page starts with no filters
+      go(a.dataset.go);
     });
     // a shared link with filters, or a saved recommendation, opens straight on the cars page
     // the bare address always lands on the home page; only a shared link with filters opens the cars page
