@@ -1499,7 +1499,7 @@
       else if (next === 'compare') { cmpArg = arg || ''; cmp.vsel = {}; renderCompare(cmpArg); window.scrollTo({ top: 0, behavior: 'instant' }); if (!EXTRA_DATA) loadExtras().then((x) => { EXTRA_DATA = x || {}; if (page === 'compare') keepY(() => renderCompare(cmpArg)); }); }
       else if (next === 'cars') { render(); window.scrollTo({ top: prev === 'car' ? carsY : 0, behavior: 'instant' }); }
       else { window.scrollTo({ top: 0, behavior: 'instant' }); requestAnimationFrame(placeHorizon); startLanes(); }
-      if (animate && prev && !reduce && !noAnim) { void B.offsetWidth; B.classList.add('to-' + next); clearTimeout(showPage.t); showPage.t = setTimeout(() => B.classList.remove('to-cars', 'to-home', 'to-car'), 1100); }
+      if (animate && prev && !reduce && !noAnim) { void B.offsetWidth; B.classList.add('to-' + next); clearTimeout(showPage.t); showPage.t = setTimeout(() => B.classList.remove('to-cars', 'to-home', 'to-car', 'vt-car'), 1100); }
     };
     // into or out of a car page: the car's photo glides between its card and the page's big photo
     if (animate && !reduce && document.startViewTransition && ((next === 'car' && (prev === 'cars' || prev === 'compare')) || (prev === 'car' && next === 'cars'))) {
@@ -1510,14 +1510,15 @@
       B.classList.add('vt-car');
       const vt = document.startViewTransition(() => {
         if (src) src.style.viewTransitionName = '';
-        swap(true);
+        swap(!fromCard);
         const dst = fromCard ? $('#heroGal') : cardImg();
         if (src && dst) dst.style.viewTransitionName = NAME;
         vt.dst = dst;
       });
-      vt.finished.finally(() => { if (vt.dst) vt.dst.style.viewTransitionName = ''; B.classList.remove('vt-car'); });
+      vt.finished.finally(() => { if (vt.dst) vt.dst.style.viewTransitionName = ''; setTimeout(() => { if (!B.classList.contains('to-car')) B.classList.remove('vt-car'); }, 50); });
       return;
     }
+    if (animate && prev && !reduce && next === 'car' && prev !== 'car') { B.classList.add('leaving'); clearTimeout(showPage.l); showPage.l = setTimeout(swap, 300); return; }
     if (animate && prev && !reduce && window.scrollY < 400 && prev !== 'car' && next !== 'car') { B.classList.add('leaving'); clearTimeout(showPage.l); showPage.l = setTimeout(swap, 330); }
     else swap();
   }

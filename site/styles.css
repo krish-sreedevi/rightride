@@ -191,10 +191,24 @@ body[data-page="cars"] .hero { display: none; }
 
 /* leaving a page */
 body.leaving[data-page="cars"] .layout, body.leaving[data-page="cars"] .foot { animation: page-out-down .34s var(--ease) both; }
+body.leaving[data-page="compare"] .cmp-page, body.leaving[data-page="compare"] #comparePage { animation: page-out .34s var(--ease) both; }
 @keyframes page-out { to { opacity: 0; transform: translateY(-36px) scale(.94); filter: blur(6px); } }
 @keyframes page-out-down { to { opacity: 0; transform: translateY(24px); filter: blur(4px); } }
 /* arriving */
-body.to-cars .layout, body.to-car .car-page { animation: page-in .6s var(--ease) backwards; }
+body.to-cars .layout { animation: page-in .6s var(--ease) backwards; }
+/* entering a car page: the photo settles in, then the details and sections follow one after another */
+body.to-car .cp-back { animation: car-in-fade .5s .05s cubic-bezier(.2,.7,.2,1) backwards; }
+body.to-car .cp-media { animation: car-in-photo .9s cubic-bezier(.2,.7,.2,1) backwards; }
+body.to-car .cp-info > * { animation: car-in-up .7s cubic-bezier(.2,.7,.2,1) backwards; }
+body.to-car .cp-info > :nth-child(1) { animation-delay: .15s; } body.to-car .cp-info > :nth-child(2) { animation-delay: .22s; }
+body.to-car .cp-info > :nth-child(3) { animation-delay: .29s; } body.to-car .cp-info > :nth-child(4) { animation-delay: .36s; }
+body.to-car .cp-info > :nth-child(5) { animation-delay: .43s; } body.to-car .cp-info > :nth-child(6) { animation-delay: .5s; }
+body.to-car .cp-info > :nth-child(n+7) { animation-delay: .57s; }
+body.to-car .cp-nav, body.to-car .cp-ch { animation: car-in-up .8s .55s cubic-bezier(.2,.7,.2,1) backwards; }
+@keyframes car-in-photo { from { opacity: 0; transform: translateX(-40px) scale(.94); } }
+@keyframes car-in-up { from { opacity: 0; transform: translateY(26px); } }
+@keyframes car-in-fade { from { opacity: 0; } }
+body.vt-car.to-car .cp-media { animation: none; } /* the photo is already gliding in */
 
 body.to-cars .topbar::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: linear-gradient(90deg, transparent, var(--brand), transparent); animation: sweep .9s var(--ease) both; }
 body.to-home .hero-inner > :nth-child(2) { animation-delay: .06s; } body.to-home .hero-inner > :nth-child(3) { animation-delay: .12s; } body.to-home .hero-inner > :nth-child(4) { animation-delay: .18s; }
@@ -221,6 +235,7 @@ body.to-home .hero-inner > :nth-child(2) { animation-delay: .06s; } body.to-home
 .rr-cta:hover { transform: translate(-50%, -50%) scale(1.04); box-shadow: 0 10px 34px color-mix(in srgb, var(--brand) 40%, transparent); }
 .rr-cta:hover .rr-cta-in { background: var(--brand); }
 .rr-cta:hover .rr-cta-text { background: none; color: #fff; -webkit-background-clip: border-box; }
+.rr-cta:hover .rr-cta-text .rrw { color: #fff; }
 .rr-cta:hover .rr-cta-orb { transform: rotate(-20deg) scale(1.08); background: #fff; color: var(--brand); }
 .rr-cta:hover .rr-cta-go { transform: translateX(4px); background: rgba(255,255,255,.2); color: #fff; }
 .rr-cta:active { transform: translate(-50%, -50%) scale(.97); }
@@ -1067,9 +1082,10 @@ body.rq-dragging, body.rq-dragging * { cursor: grabbing !important; }
 .btn.sm { padding: 7px 16px; font-size: .85rem; }
 
 /* smooth move into and out of a car page (View Transitions; other browsers keep the fade-in) */
-::view-transition-group(rr-car) { animation-duration: .55s; animation-timing-function: cubic-bezier(.22, .8, .2, 1); }
+::view-transition-group(rr-car) { animation-duration: .9s; animation-timing-function: cubic-bezier(.22, .8, .2, 1); }
 ::view-transition-old(rr-car), ::view-transition-new(rr-car) { height: 100%; object-fit: contain; }
-::view-transition-old(root) { animation: .3s cubic-bezier(.4, 0, .2, 1) both vt-out; }
-::view-transition-new(root) { animation: .45s .08s cubic-bezier(.22, .8, .2, 1) both vt-in; }
-@keyframes vt-out { to { opacity: 0; transform: scale(.985); } }
-@keyframes vt-in { from { opacity: 0; transform: translateY(18px); } }
+::view-transition-old(root) { animation: .45s cubic-bezier(.4, 0, .2, 1) both vt-out; }
+::view-transition-new(root) { animation: .3s .15s ease-out both vt-fade-in; }
+@keyframes vt-fade-in { from { opacity: 0; } }
+@keyframes vt-out { to { opacity: 0; transform: scale(.97); filter: blur(4px); } }
+@keyframes vt-in { from { opacity: 0; transform: translateY(40px); } }
