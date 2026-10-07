@@ -1,3 +1,8 @@
 node_modules/
 .DS_Store
 site/data/admin-stats.enc.json
+
+# built in the deploy workflow by tools/seo-pages.mjs
+site/cars/
+site/brands/
+site/sitemap.xml

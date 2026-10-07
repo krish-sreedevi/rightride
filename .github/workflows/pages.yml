@@ -27,6 +27,8 @@ jobs:
       - name: Colour dots from each colour's photo
         run: pip install -q pillow && python3 tools/swatches.py && node scraper/normalize.mjs
         continue-on-error: true
+      - name: Search-engine pages and sitemap
+        run: node tools/seo-pages.mjs
       - name: Usage stats for the admin portal (encrypted)
         run: node tools/admin-stats.mjs
         continue-on-error: true
