@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'   # hourly, to refresh the admin portal's usage numbers
   workflow_run:
     workflows: ['Refresh car data']
     types: [completed]
@@ -22,6 +24,15 @@ jobs:
         with: { node-version: 20 }
       - name: Build cars.json from latest data
         run: node scraper/normalize.mjs
+      - name: Usage stats for the admin portal (encrypted)
+        run: node tools/admin-stats.mjs
+        continue-on-error: true
+        env:
+          ADMIN_USER: ${{ secrets.ADMIN_USER }}
+          ADMIN_PASS: ${{ secrets.ADMIN_PASS }}
+          GC_TOKEN: ${{ secrets.GC_TOKEN }}
+          GA_SA_KEY: ${{ secrets.GA_SA_KEY }}
+          GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }

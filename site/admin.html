@@ -9,43 +9,51 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
 <style>
-:root { --bg:#f5f5f7; --panel:#fff; --text:#1d1d1f; --muted:#6e6e73; --line:rgba(0,0,0,.08); --chip:rgba(0,0,0,.05); --brand:#D02A1C; --brand-soft:rgba(208,42,28,.1); --grad:linear-gradient(180deg,#E5341F,#D02A1C); --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 28px rgba(0,0,0,.06); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#000; --panel:#1c1c1e; --text:#f5f5f7; --muted:#98989d; --line:rgba(255,255,255,.1); --chip:rgba(255,255,255,.07); --brand:#FF5A3A; --brand-soft:rgba(255,90,58,.16); --grad:linear-gradient(180deg,#FF6A48,#E5341F); --shadow:none; } }
+:root { --bg:#f5f5f7; --panel:#fff; --text:#15181D; --muted:#6e6e73; --line:rgba(0,0,0,.08); --chip:rgba(0,0,0,.05); --brand:#D02A1C; --gold:#C99228; --brand-soft:rgba(208,42,28,.1); --grad:linear-gradient(180deg,#E5341F,#D02A1C); --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 28px rgba(0,0,0,.06); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#030303; --panel:#15161a; --text:#f5f5f7; --muted:#98989d; --line:rgba(255,255,255,.1); --chip:rgba(255,255,255,.07); --brand:#E5341F; --gold:#F6CF6E; --brand-soft:rgba(229,52,31,.16); --grad:linear-gradient(180deg,#FF5A3A,#E5341F); --shadow:none; } }
 * { box-sizing: border-box; }
 body { margin:0; background:var(--bg); color:var(--text); font:15px/1.5 Inter, system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
 .rrw { font-family:Michroma, Inter, sans-serif; color:var(--brand); font-weight:400; }
 header { display:flex; align-items:center; gap:14px; padding:14px max(16px, calc((100vw - 1180px)/2)); border-bottom:1px solid var(--line); background:var(--panel); position:sticky; top:0; z-index:5; }
 header h1 { font-family:Michroma, Inter, sans-serif; font-weight:400; font-size:1.05rem; margin:0; }
-header img { height:30px; }
+header img { height:30px; display:block; }
 header .sp { flex:1; }
 main { max-width:1180px; margin:0 auto; padding:22px 16px 60px; }
-.card { background:var(--panel); border-radius:20px; box-shadow:var(--shadow); padding:20px 22px; }
-.btn { border:0; border-radius:999px; padding:9px 18px; font:600 .9rem Inter, sans-serif; cursor:pointer; background:var(--chip); color:var(--text); }
+.card { background:var(--panel); border-radius:20px; box-shadow:var(--shadow); padding:20px 22px; min-width:0; }
+.btn { border:0; border-radius:999px; padding:9px 18px; font:600 .9rem Inter, sans-serif; cursor:pointer; background:var(--chip); color:var(--text); text-decoration:none; display:inline-block; }
 .btn.primary { background:var(--grad); color:#fff; }
 .btn:focus-visible, input:focus-visible, .seg button:focus-visible { outline:2px solid var(--brand); outline-offset:2px; }
 input { font:inherit; padding:11px 14px; border-radius:12px; border:0; background:var(--chip); color:var(--text); width:100%; }
 label { display:block; font-size:.82rem; font-weight:600; color:var(--muted); margin:14px 0 6px; }
-.login { max-width:460px; margin:40px auto; }
+.login { max-width:420px; margin:40px auto; }
 .login h2 { font-family:Michroma, Inter, sans-serif; font-weight:400; font-size:1.3rem; margin:0 0 4px; }
 .muted { color:var(--muted); } .small { font-size:.82rem; }
 .err { color:var(--brand); font-weight:600; margin-top:12px; }
 .bar { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:18px; }
-.seg { display:inline-flex; background:var(--chip); border-radius:999px; padding:3px; }
+.seg { display:inline-flex; background:var(--chip); border-radius:999px; padding:3px; flex-wrap:wrap; }
 .seg button { border:0; background:none; font:600 .85rem Inter, sans-serif; color:var(--text); padding:7px 14px; border-radius:999px; cursor:pointer; }
 .seg button[aria-pressed="true"] { background:var(--panel); box-shadow:0 1px 4px rgba(0,0,0,.12); }
 .kpis { display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; margin-bottom:16px; }
+.kpis.six { grid-template-columns:repeat(6, 1fr); }
 .kpi .k { font-size:.8rem; font-weight:600; color:var(--muted); }
-.kpi .v { font-size:2rem; font-weight:700; letter-spacing:-.02em; line-height:1.15; margin-top:4px; }
+.kpi .v { font-size:1.9rem; font-weight:700; letter-spacing:-.02em; line-height:1.15; margin-top:4px; }
 .kpi .s { font-size:.8rem; color:var(--muted); }
 .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; }
+.grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-top:16px; }
+h2.sec { font-family:Michroma, Inter, sans-serif; font-weight:400; font-size:1.05rem; margin:34px 0 4px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+h2.sec .src { font:600 .75rem Inter, sans-serif; color:var(--muted); background:var(--chip); border-radius:999px; padding:3px 10px; }
+h2.sec + p { margin:0 0 14px; }
 h3 { margin:0 0 4px; font-size:1.05rem; }
 .chart { position:relative; height:200px; margin-top:12px; }
 .chart svg { width:100%; height:100%; display:block; overflow:visible; }
 .chart .ax { fill:var(--muted); font-size:11px; }
 .chart .grid { stroke:var(--line); }
 .chart rect.b { fill:var(--brand); }
-.chart rect.hit { fill:transparent; cursor:default; }
-.chart rect.hit:hover + rect.b, .chart g:hover rect.b { opacity:.75; }
+.chart path.ln { fill:none; stroke:var(--gold); stroke-width:2.5; vector-effect:non-scaling-stroke; }
+.chart rect.hit { fill:transparent; }
+.chart g:hover rect.b { opacity:.75; }
+.legend { display:flex; gap:16px; font-size:.8rem; color:var(--muted); margin-top:6px; flex-wrap:wrap; }
+.legend i { display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:6px; vertical-align:-1px; }
 .tip { position:absolute; pointer-events:none; background:var(--text); color:var(--bg); font-size:.8rem; padding:6px 10px; border-radius:8px; white-space:nowrap; transform:translate(-50%, -110%); opacity:0; transition:opacity .12s; }
 .list { list-style:none; margin:12px 0 0; padding:0; display:grid; gap:9px; }
 .list li { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 12px; align-items:center; font-size:.88rem; }
@@ -54,107 +62,124 @@ h3 { margin:0 0 4px; font-size:1.05rem; }
 .list .ct { font-weight:700; font-variant-numeric:tabular-nums; }
 .list .tr { grid-column:1 / -1; height:6px; border-radius:3px; background:var(--chip); overflow:hidden; }
 .list .tr i { display:block; height:100%; border-radius:3px; background:var(--brand); }
+.list.gold .tr i { background:var(--gold); }
 .empty { color:var(--muted); padding:18px 0 4px; }
 .tabs { margin-top:10px; }
-details { margin-top:16px; } summary { cursor:pointer; font-weight:600; }
 table { width:100%; border-collapse:collapse; font-size:.85rem; margin-top:10px; }
 th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); } td.n { text-align:right; font-variant-numeric:tabular-nums; }
-@media (max-width: 820px) { .kpis { grid-template-columns:1fr 1fr; } .grid2 { grid-template-columns:1fr; } .kpi .v { font-size:1.6rem; } }
+.setup { border:1px dashed var(--line); box-shadow:none; }
+.setup ol { margin:8px 0 0; padding-left:20px; } .setup li { margin:4px 0; }
+.setup code { background:var(--chip); padding:1px 6px; border-radius:6px; font-size:.82rem; }
+.links { display:flex; gap:8px; flex-wrap:wrap; }
+@media (max-width: 980px) { .kpis.six { grid-template-columns:repeat(3, 1fr); } .grid3 { grid-template-columns:1fr 1fr; } }
+@media (max-width: 820px) { .kpis, .kpis.six { grid-template-columns:1fr 1fr; } .grid2, .grid3 { grid-template-columns:1fr; } .kpi .v { font-size:1.5rem; } }
 </style>
 </head>
 <body>
 <header>
-  <picture><source srcset="brand/logo-night.svg" media="(prefers-color-scheme: dark)"><img src="brand/logo-day.svg" alt="Right Ride"></picture>
+  <picture><source srcset="brand/logo-night.svg" media="(prefers-color-scheme: dark)"><img src="brand/logo-day.svg" alt="Right Ride" width="93" height="30"></picture>
   <h1>Admin</h1><span class="sp"></span>
   <button class="btn" id="out" hidden>Sign out</button>
 </header>
 <main id="app"></main>
-<script src="analytics.js" data-admin></script>
 <script>
 (() => {
+  // Stats are fetched every hour by the site's GitHub workflow (tools/admin-stats.mjs) and published encrypted.
+  // Signing in derives the key from the username + password and decrypts them here, in the browser.
   const $ = (s) => document.querySelector(s);
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const st = { get(k) { try { return localStorage.getItem('rradmin.' + k) || ''; } catch (e) { return ''; } }, set(k, v) { try { v ? localStorage.setItem('rradmin.' + k, v) : localStorage.removeItem('rradmin.' + k); } catch (e) {} } };
-  const S = { code: st.get('code') || (window.RR_ANALYTICS || {}).goatcounter || '', token: st.get('token'), days: +(st.get('days') || 30), tab: 'brand' };
-  const brandWord = (s) => esc(s).replace(/\b(Right|Ride)\b/g, '<span class="rrw">$1</span>');
+  const store = (s) => ({ get(k) { try { return s.getItem('rradmin.' + k) || ''; } catch (e) { return ''; } }, set(k, v) { try { v ? s.setItem('rradmin.' + k, v) : s.removeItem('rradmin.' + k); } catch (e) {} } });
+  const LS = store(window.localStorage), SS = store(window.sessionStorage);
+  const S = { days: +(LS.get('days') || 30), tab: 'brand' };
+  const fmt = (n) => (Math.round(n || 0)).toLocaleString('en-IN');
+  const b64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+  const toB64 = (u) => btoa(String.fromCharCode(...new Uint8Array(u)));
+
+  let FILE = null, DATA = null;
+  const getFile = () => FILE ? Promise.resolve(FILE) : fetch('data/admin-stats.enc.json?t=' + Date.now(), { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null).then((j) => (FILE = j));
+  async function keyFrom(user, pass, f) {
+    const pw = await crypto.subtle.importKey('raw', new TextEncoder().encode(`${user.trim().toLowerCase()}\n${pass}`), 'PBKDF2', false, ['deriveBits']);
+    return crypto.subtle.deriveBits({ name: 'PBKDF2', hash: 'SHA-256', salt: new TextEncoder().encode(f.salt), iterations: f.iter }, pw, 256);
+  }
+  async function decrypt(raw, f) {
+    const key = await crypto.subtle.importKey('raw', raw, 'AES-GCM', false, ['decrypt']);
+    const pt = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(f.iv) }, key, b64(f.ct));
+    return JSON.parse(new TextDecoder().decode(pt));
+  }
 
   function login(msg) {
     $('#out').hidden = true;
-    $('#app').innerHTML = `<form class="card login" id="lf"><h2>Sign in</h2><p class="muted small">Visits are counted with GoatCounter. Enter your GoatCounter site code and an API token with "Read statistics" permission (GoatCounter → Settings → API).</p>
-      <label for="code">Site code</label><input id="code" value="${esc(S.code)}" placeholder="e.g. rightride" autocomplete="username" required>
-      <label for="tok">API token</label><input id="tok" type="password" value="" placeholder="Paste token" autocomplete="current-password" required>
-      <label style="display:flex;gap:8px;align-items:center;font-weight:500;color:var(--text)"><input type="checkbox" id="rem" style="width:auto" checked> Remember on this device</label>
-      <div style="margin-top:16px"><button class="btn primary" type="submit">Open dashboard</button></div>${msg ? `<div class="err">${esc(msg)}</div>` : ''}</form>`;
-    $('#lf').onsubmit = (e) => { e.preventDefault(); S.code = $('#code').value.trim().replace(/\.goatcounter\.com.*$/, '').replace(/^https?:\/\//, ''); S.token = $('#tok').value.trim(); if ($('#rem').checked) { st.set('code', S.code); st.set('token', S.token); } else st.set('token', ''); load(); };
+    $('#app').innerHTML = `<form class="card login" id="lf"><h2>Sign in</h2><p class="muted small">Usage from GoatCounter and Google Analytics, in one place.</p>
+      <label for="u">Username</label><input id="u" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+      <label for="p">Password</label><input id="p" type="password" autocomplete="current-password" required>
+      <label style="display:flex;gap:8px;align-items:center;font-weight:500;color:var(--text)"><input type="checkbox" id="rem" style="width:auto" checked> Keep me signed in on this device</label>
+      <div style="margin-top:16px"><button class="btn primary" type="submit" id="go">Sign in</button></div>${msg ? `<div class="err" role="alert">${esc(msg)}</div>` : ''}</form>`;
+    $('#u').focus();
+    $('#lf').onsubmit = async (e) => {
+      e.preventDefault(); $('#go').disabled = true; $('#go').textContent = 'Signing in…';
+      const f = await getFile();
+      if (!f) return login('The usage numbers haven\'t been published yet. They refresh every hour; try again later.');
+      try {
+        const raw = await keyFrom($('#u').value, $('#p').value, f);
+        DATA = await decrypt(raw, f);
+        (($('#rem').checked) ? LS : SS).set('key', toB64(raw));
+        draw();
+      } catch (err) { login('That username and password don\'t match.'); }
+    };
   }
-
-  const day = (d) => d.toISOString().slice(0, 10);
-  async function api(path, params) {
-    const u = new URL(`https://${S.code}.goatcounter.com/api/v0/${path}`);
-    for (const [k, v] of Object.entries(params || {})) if (v != null && v !== '') u.searchParams.set(k, v);
-    for (let i = 0; i < 4; i++) {
-      const r = await fetch(u, { headers: { Authorization: 'Bearer ' + S.token, 'Content-Type': 'application/json' } });
-      if (r.status === 429) { await new Promise((ok) => setTimeout(ok, 1100 * (i + 1))); continue; }
-      if (r.status === 401 || r.status === 403) throw new Error('auth');
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      return r.json();
-    }
-    throw new Error('Too many requests, try again in a minute');
-  }
-  async function allHits(range) {
-    const out = []; let exclude = [];
-    for (let page = 0; page < 20; page++) {
-      const j = await api('stats/hits', { ...range, limit: 100, exclude_paths: exclude.join(',') });
-      out.push(...(j.hits || []));
-      if (!j.more || !(j.hits || []).length) break;
-      exclude = out.map((h) => h.path_id);
-    }
-    return out;
-  }
-
-  let D = null;
-  async function load() {
+  async function start() {
+    const k = LS.get('key') || SS.get('key');
+    if (!k) return login();
     $('#app').innerHTML = '<p class="muted">Loading…</p>';
-    if (!S.code || !S.token) return login();
-    const end = new Date(), start = new Date(Date.now() - (S.days - 1) * 864e5);
-    const range = { start: day(start) + 'T00:00:00Z', end: day(end) + 'T23:59:59Z' }; // the API wants full timestamps
-    try {
-      const [tot, hits] = await Promise.all([api('stats/total', range), allHits(range)]);
-      D = { tot, hits, range };
-      draw();
-    } catch (e) {
-      if (e.message === 'auth') { st.set('token', ''); S.token = ''; return login('That token was not accepted. Check the site code and that the token can read statistics.'); }
-      $('#app').innerHTML = `<div class="card"><b>Couldn't load the numbers.</b><p class="muted">${esc(e.message)}</p><button class="btn" onclick="location.reload()">Try again</button></div>`;
-    }
+    const f = await getFile();
+    if (!f) return login('The usage numbers haven\'t been published yet. They refresh every hour; try again later.');
+    try { DATA = await decrypt(b64(k), f); draw(); } catch (e) { LS.set('key', ''); SS.set('key', ''); login(); }
   }
 
+  // ---------- drawing helpers ----------
   const dec = (s) => { try { return decodeURIComponent(String(s).replace(/\+/g, ' ')); } catch (e) { return s; } };
   function agg(list, keyFn) { const m = new Map(); for (const h of list) { const k = keyFn(h); if (!k) continue; m.set(k, (m.get(k) || 0) + h.count); } return [...m].sort((a, b) => b[1] - a[1]); }
-  function barList(rows, unit, n = 12) {
-    if (!rows.length) return `<p class="empty">Nothing yet for this period.</p>`;
-    const max = rows[0][1];
-    return `<ol class="list">${rows.slice(0, n).map(([k, v]) => { const [a, b] = Array.isArray(k) ? k : [k, '']; return `<li><span class="nm" title="${esc(a + (b ? ' · ' + b : ''))}">${esc(a)}${b ? `<small>${esc(b)}</small>` : ''}</span><span class="ct">${v.toLocaleString('en-IN')}</span><span class="tr" aria-hidden="true"><i style="width:${Math.max(2, v / max * 100)}%"></i></span></li>`; }).join('')}</ol>${rows.length > n ? `<p class="muted small">+ ${rows.length - n} more</p>` : ''}`;
+  function barList(rows, n = 12, cls = '') {
+    if (!rows || !rows.length) return `<p class="empty">Nothing yet for this period.</p>`;
+    const max = rows[0][1] || 1;
+    return `<ol class="list ${cls}">${rows.slice(0, n).map(([k, v]) => { const [a, b] = Array.isArray(k) ? k : [k, '']; return `<li><span class="nm" title="${esc(a + (b ? ' · ' + b : ''))}">${esc(a)}${b ? `<small>${esc(b)}</small>` : ''}</span><span class="ct">${fmt(v)}</span><span class="tr" aria-hidden="true"><i style="width:${Math.max(2, v / max * 100)}%"></i></span></li>`; }).join('')}</ol>${rows.length > n ? `<p class="muted small">+ ${rows.length - n} more</p>` : ''}`;
   }
-  function dailyChart(stats) {
-    const days = (stats || []).map((s) => ({ d: s.day, v: s.daily || 0 }));
+  // bars = GoatCounter visitors per day, gold line = Google Analytics users per day
+  function dailyChart(days, line) {
     if (!days.length) return '<p class="empty">No visits yet.</p>';
     const W = 1000, H = 200, pad = { l: 34, r: 6, t: 8, b: 22 };
-    const max = Math.max(4, ...days.map((x) => x.v)), mag = Math.pow(10, Math.floor(Math.log10(max))), nice = Math.max(4, Math.ceil(max / mag) * mag + (Math.ceil(max / mag) * mag) % 2); // whole-number ticks
+    const max = Math.max(4, ...days.map((x) => Math.max(x.v || 0, x.g || 0))), mag = Math.pow(10, Math.floor(Math.log10(max))), nice = Math.max(4, Math.ceil(max / mag) * mag + (Math.ceil(max / mag) * mag) % 2);
     const bw = (W - pad.l - pad.r) / days.length, gap = Math.min(2, bw * .2);
     const y = (v) => pad.t + (H - pad.t - pad.b) * (1 - v / nice);
-    const ticks = [0, nice / 2, nice];
     const lab = (i) => new Date(days[i].d).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
     const every = Math.ceil(days.length / 8);
+    const ln = line ? `<path class="ln" d="${days.map((x, i) => `${i ? 'L' : 'M'}${(pad.l + i * bw + bw / 2).toFixed(1)},${y(x.g || 0).toFixed(1)}`).join('')}"/>` : '';
     return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Visitors per day">
-      ${ticks.map((t) => `<line class="grid" x1="${pad.l}" x2="${W - pad.r}" y1="${y(t)}" y2="${y(t)}"/><text class="ax" x="${pad.l - 6}" y="${y(t) + 4}" text-anchor="end">${t}</text>`).join('')}
-      ${days.map((x, i) => { const bx = pad.l + i * bw + gap / 2, h = Math.max(x.v ? 2 : 0, H - pad.b - y(x.v)); return `<g data-i="${i}"><rect class="hit" x="${pad.l + i * bw}" y="${pad.t}" width="${bw}" height="${H - pad.t - pad.b}"/><rect class="b" x="${bx}" y="${H - pad.b - h}" width="${bw - gap}" height="${h}" rx="${Math.min(4, (bw - gap) / 2)}"/></g>`; }).join('')}
+      ${[0, nice / 2, nice].map((t) => `<line class="grid" x1="${pad.l}" x2="${W - pad.r}" y1="${y(t)}" y2="${y(t)}"/><text class="ax" x="${pad.l - 6}" y="${y(t) + 4}" text-anchor="end">${t}</text>`).join('')}
+      ${days.map((x, i) => { const bx = pad.l + i * bw + gap / 2, h = Math.max(x.v ? 2 : 0, H - pad.b - y(x.v || 0)); return `<g data-i="${i}"><rect class="hit" x="${pad.l + i * bw}" y="${pad.t}" width="${bw}" height="${H - pad.t - pad.b}"/><rect class="b" x="${bx}" y="${H - pad.b - h}" width="${Math.max(0, bw - gap)}" height="${h}" rx="${Math.min(4, (bw - gap) / 2)}"/></g>`; }).join('')}
+      ${ln}
       ${days.map((x, i) => (i % every === 0 ? `<text class="ax" x="${pad.l + i * bw + bw / 2}" y="${H - 6}" text-anchor="middle">${lab(i)}</text>` : '')).join('')}
     </svg><div class="tip" id="tip"></div>`;
   }
+  const ago = (iso) => { const m = Math.round((Date.now() - new Date(iso)) / 6e4); return m < 2 ? 'just now' : m < 90 ? m + ' min ago' : Math.round(m / 60) + ' h ago'; };
+  const dur = (s) => { s = Math.round(s || 0); return s < 60 ? s + 's' : Math.floor(s / 60) + 'm ' + (s % 60) + 's'; };
+
+  const SETUP_GC = `<div class="card setup"><h3>Connect GoatCounter</h3><p class="muted small">Not connected yet. One-time setup, about 2 minutes:</p><ol class="small">
+    <li>In GoatCounter, open <b>Settings → API</b> and create a token with only <b>Read statistics</b> ticked.</li>
+    <li>In GitHub, open the <b>rightride</b> repo → <b>Settings → Secrets and variables → Actions → New repository secret</b>.</li>
+    <li>Name it <code>GC_TOKEN</code>, paste the token, and save. Numbers appear here within the hour.</li></ol></div>`;
+  const SETUP_GA = `<div class="card setup"><h3>Connect Google Analytics</h3><p class="muted small">The tag is live on rightride.in and collecting. To show its numbers here, one-time setup, about 10 minutes:</p><ol class="small">
+    <li>In <b>Google Cloud Console</b>, create a project, enable the <b>Google Analytics Data API</b>, then create a <b>service account</b> and download a <b>JSON key</b> for it.</li>
+    <li>In <b>Google Analytics → Admin → Property access management</b>, add the service account's email as a <b>Viewer</b>.</li>
+    <li>In <b>Admin → Property details</b>, copy the numeric <b>Property ID</b>.</li>
+    <li>In GitHub (repo → Settings → Secrets and variables → Actions), add <code>GA_SA_KEY</code> (paste the whole JSON file) and <code>GA_PROPERTY_ID</code> (the number).</li></ol></div>`;
 
   function draw() {
     $('#out').hidden = false;
-    const { tot, hits, range } = D;
+    const D = DATA, P = String(S.days);
+    const g = (D.gc && D.gc.periods && D.gc.periods[P]) || null, a = (D.ga && D.ga.periods && D.ga.periods[P]) || null;
+    // GoatCounter: site pages and Right Ride actions
+    const hits = g ? g.hits : [], tot = g ? g.tot : { total: 0, total_events: 0, stats: [] };
     const pages = hits.filter((h) => !h.event), ev = hits.filter((h) => h.event);
     const td = ev.filter((h) => /^testdrive\//.test(h.path)).map((h) => { const [, b, m, d] = h.path.split('/'); return { b: dec(b), m: dec(m), d: dec(d || ''), count: h.count }; });
     const calls = ev.filter((h) => /^call\//.test(h.path)).reduce((s, h) => s + h.count, 0);
@@ -162,40 +187,71 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
     const carPages = pages.filter((h) => /^\/car\//.test(h.path));
     const visitors = (tot.total || 0) - (tot.total_events || 0);
     const tdTotal = td.reduce((s, h) => s + h.count, 0), cpTotal = carPages.reduce((s, h) => s + h.count, 0);
-    const tabRows = { brand: agg(td, (h) => h.b), car: agg(td, (h) => h.b + ' ' + h.m), dealer: agg(td, (h) => h.d ? h.d + '|' + h.b : '') .map(([k, v]) => { const [d, b] = k.split('|'); return [[d, b], v]; }) };
+    const tabRows = { brand: agg(td, (h) => h.b), car: agg(td, (h) => h.b + ' ' + h.m), dealer: agg(td, (h) => (h.d ? h.d + '|' + h.b : '')).map(([k, v]) => { const [d, b] = k.split('|'); return [[d, b], v]; }) };
+    // one day list for the chart, from whichever sources are connected
+    const byDay = new Map();
+    for (const s of tot.stats || []) byDay.set(s.day, { d: s.day, v: s.daily || 0, g: 0 });
+    for (const s of a ? a.daily : []) { const x = byDay.get(s.day) || { d: s.day, v: 0, g: 0 }; x.g = s.v; byDay.set(s.day, x); }
+    const days = [...byDay.values()].sort((x, y) => (x.d < y.d ? -1 : 1));
+    S.days_ = days;
+    const at = a ? a.totals : null;
+    const gcOn = D.gc && D.gc.connected && !D.gc.error, gaOn = D.ga && D.ga.connected && !D.ga.error;
     $('#app').innerHTML = `
       <div class="bar"><div class="seg" role="group" aria-label="Period">${[7, 30, 90, 365].map((d) => `<button data-days="${d}" aria-pressed="${S.days === d}">${d === 365 ? '1 year' : d + ' days'}</button>`).join('')}</div>
-        <span class="muted small">${esc(range.start.slice(0, 10))} to ${esc(range.end.slice(0, 10))} · ${esc(S.code)}.goatcounter.com</span></div>
+        <span class="muted small">Updated ${esc(ago(D.built))} · refreshes every hour</span><span class="sp" style="flex:1"></span>
+        <span class="links"><a class="btn" href="https://analytics.google.com/analytics/web/" target="_blank" rel="noopener">Google Analytics ↗</a><a class="btn" href="https://${esc(D.gc.code)}.goatcounter.com" target="_blank" rel="noopener">GoatCounter ↗</a></span></div>
       <div class="kpis">
-        <div class="card kpi"><div class="k">Visitors</div><div class="v">${visitors.toLocaleString('en-IN')}</div><div class="s">unique visits to the site</div></div>
-        <div class="card kpi"><div class="k">Car page views</div><div class="v">${cpTotal.toLocaleString('en-IN')}</div><div class="s">across ${carPages.length} car${carPages.length === 1 ? '' : 's'}</div></div>
-        <div class="card kpi"><div class="k">Test-drive clicks</div><div class="v">${tdTotal.toLocaleString('en-IN')}</div><div class="s">${visitors ? ((tdTotal / visitors) * 100).toFixed(1) + '% of visitors' : '–'}</div></div>
-        <div class="card kpi"><div class="k">Dealer calls · websites</div><div class="v">${calls.toLocaleString('en-IN')} · ${sites.toLocaleString('en-IN')}</div><div class="s">taps on phone numbers and dealer sites</div></div>
+        <div class="card kpi"><div class="k">Visitors</div><div class="v">${gcOn ? fmt(visitors) : at ? fmt(at.users) : '–'}</div><div class="s">${gcOn && at ? `GoatCounter · ${fmt(at.users)} in Google Analytics` : gcOn ? 'GoatCounter, unique per page per day' : at ? 'Google Analytics users' : 'connect a source below'}</div></div>
+        <div class="card kpi"><div class="k">Car page views</div><div class="v">${gcOn ? fmt(cpTotal) : '–'}</div><div class="s">${gcOn ? `across ${carPages.length} car${carPages.length === 1 ? '' : 's'}` : 'from GoatCounter'}</div></div>
+        <div class="card kpi"><div class="k">Test-drive clicks</div><div class="v">${gcOn ? fmt(tdTotal) : '–'}</div><div class="s">${gcOn && visitors ? ((tdTotal / visitors) * 100).toFixed(1) + '% of visitors' : 'from GoatCounter'}</div></div>
+        <div class="card kpi"><div class="k">Dealer calls · websites</div><div class="v">${gcOn ? fmt(calls) + ' · ' + fmt(sites) : '–'}</div><div class="s">taps on phone numbers and dealer sites</div></div>
       </div>
-      <div class="card"><h3>Visitors per day</h3><div class="chart" id="ch">${dailyChart(tot.stats)}</div></div>
-      <div class="grid2">
+      <div class="card"><h3>Visitors per day</h3><div class="chart" id="ch">${dailyChart(days, !!a)}</div>
+        <div class="legend">${gcOn ? '<span><i style="background:var(--brand)"></i>GoatCounter visitors</span>' : ''}${a ? '<span><i style="background:var(--gold)"></i>Google Analytics users</span>' : ''}</div></div>
+
+      <h2 class="sec"><span class="rrw">Right Ride</span> activity <span class="src">GoatCounter</span></h2><p class="muted small">Which cars people look at and which dealers they contact.</p>
+      ${gcOn ? `<div class="grid2">
         <div class="card"><h3>Most visited car pages</h3>${barList(carPages.map((h) => [[h.title || h.path, ''], h.count]))}</div>
         <div class="card"><h3>Test-drive clicks</h3>
           <div class="seg tabs" role="group" aria-label="Group by">${[['brand', 'Per brand'], ['car', 'Per car'], ['dealer', 'Per dealer']].map(([k, l]) => `<button data-tab="${k}" aria-pressed="${S.tab === k}">${l}</button>`).join('')}</div>
           ${barList(tabRows[S.tab])}</div>
       </div>
-      <div class="grid2">
-        <div class="card"><h3>All pages</h3>${barList(pages.map((h) => [[h.title || h.path, h.path], h.count]), '', 10)}</div>
-        <div class="card"><h3>Every test-drive click</h3>${td.length ? `<table><thead><tr><th>Car</th><th>Dealer</th><th style="text-align:right">Clicks</th></tr></thead><tbody>${td.sort((a, b) => b.count - a.count).slice(0, 60).map((h) => `<tr><td>${esc(h.b + ' ' + h.m)}</td><td>${esc(h.d || '–')}</td><td class="n">${h.count}</td></tr>`).join('')}</tbody></table>` : '<p class="empty">No test-drive clicks yet.</p>'}</div>
+      <div class="grid3">
+        <div class="card"><h3>All pages</h3>${barList(pages.map((h) => [[h.title || h.path, h.path], h.count]), 10)}</div>
+        <div class="card"><h3>Where visitors come from</h3>${barList(g.refs, 10)}</div>
+        <div class="card"><h3>Countries</h3>${barList(g.locations, 8)}<h3 style="margin-top:16px">Screen sizes</h3>${barList(g.sizes, 5)}</div>
       </div>
-      <p class="muted small" style="margin-top:18px">Counts are GoatCounter "visitors": each person is counted once per page per day, with no cookies. <a href="https://${esc(S.code)}.goatcounter.com" target="_blank" rel="noopener" style="color:var(--brand)">Open GoatCounter ↗</a></p>`;
+      <div class="card" style="margin-top:16px"><h3>Every test-drive click</h3>${td.length ? `<table><thead><tr><th>Car</th><th>Dealer</th><th style="text-align:right">Clicks</th></tr></thead><tbody>${td.sort((x, y) => y.count - x.count).slice(0, 60).map((h) => `<tr><td>${esc(h.b + ' ' + h.m)}</td><td>${esc(h.d || '–')}</td><td class="n">${h.count}</td></tr>`).join('')}</tbody></table>` : '<p class="empty">No test-drive clicks yet.</p>'}</div>`
+      : D.gc.error ? `<div class="card"><b>GoatCounter didn't answer.</b><p class="muted small">${esc(D.gc.error)}. If the token was deleted, create a new one and update the <code>GC_TOKEN</code> secret.</p></div>` : SETUP_GC}
+
+      <h2 class="sec">Audience <span class="src">Google Analytics · G-B102KX5D7F</span></h2><p class="muted small">Who visits, how they find the site and how long they stay.</p>
+      ${gaOn && a ? `<div class="kpis six">
+        <div class="card kpi"><div class="k">Users</div><div class="v">${fmt(at.users)}</div></div>
+        <div class="card kpi"><div class="k">New users</div><div class="v">${fmt(at.newUsers)}</div></div>
+        <div class="card kpi"><div class="k">Sessions</div><div class="v">${fmt(at.sessions)}</div></div>
+        <div class="card kpi"><div class="k">Page views</div><div class="v">${fmt(at.views)}</div></div>
+        <div class="card kpi"><div class="k">Avg. session</div><div class="v">${dur(at.avgSec)}</div></div>
+        <div class="card kpi"><div class="k">Engaged</div><div class="v">${Math.round((at.engagement || 0) * 100)}%</div></div>
+      </div>
+      <div class="grid3">
+        <div class="card"><h3>Top pages</h3>${barList(a.pages, 10, 'gold')}</div>
+        <div class="card"><h3>Channels</h3>${barList(a.channels, 8, 'gold')}<h3 style="margin-top:16px">Sources</h3>${barList(a.sources, 6, 'gold')}</div>
+        <div class="card"><h3>Cities</h3>${barList(a.cities, 10, 'gold')}<h3 style="margin-top:16px">Devices</h3>${barList(a.devices, 4, 'gold')}</div>
+      </div>
+      <div class="card" style="margin-top:16px"><h3>Events</h3>${barList(a.events, 20, 'gold')}</div>`
+      : D.ga && D.ga.error ? `<div class="card"><b>Google Analytics didn't answer.</b><p class="muted small">${esc(D.ga.error)}. Check that the service account is a Viewer on the property and that <code>GA_PROPERTY_ID</code> is the numeric property ID.</p></div>` : SETUP_GA}`;
     wire();
   }
   function wire() {
-    for (const b of document.querySelectorAll('[data-days]')) b.onclick = () => { S.days = +b.dataset.days; st.set('days', S.days); load(); };
+    for (const b of document.querySelectorAll('[data-days]')) b.onclick = () => { S.days = +b.dataset.days; LS.set('days', S.days); draw(); };
     for (const b of document.querySelectorAll('[data-tab]')) b.onclick = () => { S.tab = b.dataset.tab; draw(); };
     const ch = $('#ch'), tip = $('#tip'); if (!ch || !tip) return;
-    const days = D.tot.stats || [];
-    ch.onmousemove = (e) => { const g = e.target.closest('g[data-i]'); if (!g) { tip.style.opacity = 0; return; } const x = days[+g.dataset.i]; const r = ch.getBoundingClientRect(); tip.textContent = `${new Date(x.day).toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short' })}: ${(x.daily || 0).toLocaleString('en-IN')} visitors`; tip.style.left = (e.clientX - r.left) + 'px'; tip.style.top = (e.clientY - r.top) + 'px'; tip.style.opacity = 1; };
+    const days = S.days_ || [];
+    ch.onmousemove = (e) => { const gg = e.target.closest('g[data-i]'); if (!gg) { tip.style.opacity = 0; return; } const x = days[+gg.dataset.i]; const r = ch.getBoundingClientRect(); tip.textContent = `${new Date(x.d).toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short' })}: ${fmt(x.v)} visitors${DATA.ga && DATA.ga.connected ? ` · ${fmt(x.g)} GA users` : ''}`; tip.style.left = (e.clientX - r.left) + 'px'; tip.style.top = (e.clientY - r.top) + 'px'; tip.style.opacity = 1; };
     ch.onmouseleave = () => { tip.style.opacity = 0; };
   }
-  $('#out').onclick = () => { st.set('token', ''); S.token = ''; login(); };
-  load();
+  $('#out').onclick = () => { LS.set('key', ''); SS.set('key', ''); DATA = null; login(); };
+  start();
 })();
 </script>
 </body>

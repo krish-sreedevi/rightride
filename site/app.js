@@ -771,7 +771,27 @@
       for (const f of fuels) if (vs.some((c) => c.fuel === f)) cp.fuel.add(f);
       for (const g of gears) if (vs.some((c) => c.transmission === g)) cp.gear.add(g);
       for (const k of featsOn()) if (vs.some((c) => c.feat(k) === '1')) cp.need.add(k);
-      cp.carried = cp.fuel.size + cp.gear.size + cp.need.size;
+      cp.carried = cp.fuel.size + cp.gear.size + cp.need.size; cp.carriedFrom = 'search';
+      // coming from the compare page: its must-haves and nice-to-haves replace the above
+      if (cp.fromCmp) {
+        cp.fromCmp = false; cp.fuel.clear(); cp.gear.clear(); cp.need.clear();
+        const FUEL_REQ = { ev: 'Electric', diesel: 'Diesel', cng: 'CNG' };
+        const apply = (k) => {
+          if (k === 'auto') { if (vs.some((c) => c.transmission === 'Automatic')) cp.gear.add('Automatic'); return; }
+          if (FUEL_REQ[k]) { if (vs.some((c) => c.fuel === FUEL_REQ[k])) cp.fuel.add(FUEL_REQ[k]); return; }
+          if (k === 'hybrid') { vs.filter((c) => /hybrid/i.test(c.fuel)).forEach((c) => cp.fuel.add(c.fuel)); return; }
+          if (FIDX[k] != null && vs.some((c) => c.feat(k) === '1')) cp.need.add(k);
+        };
+        const fits = () => vs.some((c) => (!cp.fuel.size || cp.fuel.has(c.fuel)) && (!cp.gear.size || cp.gear.has(c.transmission)) && [...cp.need].every((k) => c.feat(k) === '1'));
+        cmp.req.must.forEach(apply);
+        // a nice-to-have is ticked only if some variant still has every must-have along with it
+        for (const k of cmp.req.nice) {
+          const before = { f: new Set(cp.fuel), g: new Set(cp.gear), n: new Set(cp.need) };
+          apply(k);
+          if (!fits()) { cp.fuel = before.f; cp.gear = before.g; cp.need = before.n; }
+        }
+        cp.carried = cp.fuel.size + cp.gear.size + cp.need.size; cp.carriedFrom = 'compare';
+      }
     }
     const x = expertOf(m), nc = (DATA.ncap || {})[key], usp = (DATA.usp || {})[key];
     const st = RTO.states[state.st].name;
@@ -983,12 +1003,12 @@
         ${cp.need.size ? `<ul class="vh-pick-has">${[...cp.need].map((k) => `<li>${esc(FLABEL(k).replace(/ \(.*\)$/, ''))}</li>`).join('')}</ul>` : ''}
         <div class="vh-pick-act"><button class="btn primary" type="button" data-vid="${esc(best.id)}">Price break-up</button><a class="btn ghost" href="#chDealer" data-jump="chDealer">Book a test drive</a></div></div>`;
     } else pick = `<div class="vh-pick none">${SORRY_ICON}<div><b>Sorry, no ${esc(m.model)} variant has all of that.</b><div class="muted small">Untick a feature to see the closest variants.</div></div></div>`;
-    const grp = (name, vals, set) => vals.length > 1 ? `<div class="group"><div class="label">${name}</div><div class="chips">${vals.map((v) => `<button type="button" class="chip" data-cpf="${name === 'Fuel' ? 'fuel' : 'gear'}" data-v="${esc(v)}" aria-pressed="${set.has(v)}">${esc(v)}</button>`).join('')}</div></div>` : '';
+    const grp = (name, vals, set) => vals.length > 1 || set.size ? `<div class="group"><div class="label">${name}</div><div class="chips">${vals.map((v) => `<button type="button" class="chip" data-cpf="${name === 'Fuel' ? 'fuel' : 'gear'}" data-v="${esc(v)}" aria-pressed="${set.has(v)}">${esc(v)}</button>`).join('')}</div></div>` : '';
     const cnt = (k) => known.filter((c) => c.feat(k) === '1').length;
     const noFeat = known.length ? '<p class="muted">These variants have the same feature list.</p>' : `<div class="note">${esc(m.brand)} doesn't publish a variant-wise feature list, so we can only compare prices and specs here.</div>`;
     box.innerHTML = `<div class="vh-split${all.length > 1 ? '' : ' one'}">
       <div class="vh-left">
-        ${all.length > 1 ? `<div class="vh-step">What do you want?</div>${cp.carried ? '<p class="hint vh-carried">Your choices from the search are already ticked.</p>' : ''}
+        ${all.length > 1 ? `<div class="vh-step">What do you want?</div>${cp.carried ? `<p class="hint vh-carried">${cp.carriedFrom === 'compare' ? 'Your must-haves and nice-to-haves from Compare are already ticked.' : 'Your choices from the search are already ticked.'}</p>` : ''}
         <div class="vh-filters">${grp('Fuel', fuels, cp.fuel)}${grp('Gearbox', gears, cp.gear)}</div>
         ${diff.length ? `<div class="group"><div class="label">Features that differ <span class="muted">· tap the ones you want</span></div><div class="chips vh-need">${(cp.more ? diff : diff.filter((f, i) => i < 12 || cp.need.has(f.key))).map((f) => `<button type="button" class="chip" data-need="${f.key}" aria-pressed="${cp.need.has(f.key)}">${esc(f.label)}<small>${cnt(f.key)}/${known.length}</small></button>`).join('')}${diff.length > 12 ? `<button type="button" class="chip more" data-more>${cp.more ? 'Fewer' : `+${diff.filter((f, i) => i >= 12 && !cp.need.has(f.key)).length} more`}</button>` : ''}</div></div>` : noFeat}
         ${allHave.length ? `<p class="vh-all-have">✓ Every variant here has ${esc(allHave.map((k) => FLABEL(k).replace(/ \(.*\)$/, '')).join(', '))}</p>` : ''}
@@ -1920,7 +1940,7 @@
       <section class="cmp-grid" style="--n:${cars.length}">
         <div class="cg-row cg-cars"><div class="cg-k"></div>${cars.map((car, i) => `<div class="cg-car${best === car ? ' best' : ''}">
           ${best === car ? `<div class="cg-best">Best for you</div>` : ''}
-          <div class="cg-img">${carImg(car.m, '(max-width: 700px) 30vw, 260px')}</div>
+          <a class="cg-img" href="#/car/${mslug(car.m.brand, car.m.model)}" aria-label="${esc(car.m.brand + ' ' + car.m.model)}: open the car page">${carImg(car.m, '(max-width: 700px) 30vw, 260px')}</a>
           <div class="muted small">${esc(car.m.brand)}</div><a class="cg-name" href="#/car/${mslug(car.m.brand, car.m.model)}">${esc(car.m.model)}</a>
           <label class="cg-var"><span class="sr">Variant</span><select data-vsel="${esc(keyOf(car.m))}">${car.m.vs.map((v) => v.c).sort((a, b) => a.orTotal - b.orTotal).map((c) => `<option value="${esc(c.id)}" ${c.id === car.c.id ? 'selected' : ''}>${esc(c.variant)} · ${lakh(c.orTotal)}</option>`).join('')}</select></label>
           ${rows.length ? `<div class="cg-sum">${nMust ? `<b>${car.met}/${nMust}</b> must-haves` : ''}${nMust ? ' · ' : ''}${car.great} great</div>` : ''}
@@ -2006,6 +2026,7 @@
     wireReqDrag(P, rerender);
     P.addEventListener('input', (e) => { if (e.target.id === 'rqQ') { cmp.q = e.target.value; filterReq(); } });
     P.addEventListener('click', (e) => {
+      if (e.target.closest('a[href^="#/car/"]')) { cp.fromCmp = true; cp.key = null; return; }
       const a = e.target.closest('[data-add]'); if (a) { cmp.add = a.dataset.add; return rerender(); }
       const bk = e.target.closest('[data-bucket]'); if (bk && !e.target.closest('[data-unreq]')) { cmp.add = bk.dataset.bucket; return rerender(); }
       const u = e.target.closest('[data-unreq]'); if (u) { const k = u.dataset.unreq; cmp.req.must = cmp.req.must.filter((x) => x !== k); cmp.req.nice = cmp.req.nice.filter((x) => x !== k); cmp.vsel = {}; return rerender(); }
