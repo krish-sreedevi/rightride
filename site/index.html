@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="brand/favicon.svg">
   <link rel="apple-touch-icon" href="brand/app-icon-180.png">
   <link rel="icon" type="image/png" sizes="512x512" href="brand/app-icon-512.png">
-  <meta name="theme-color" content="#0B0B0D">
+  <meta name="theme-color" content="#C9281B">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -36,8 +36,7 @@
 
   <div id="locToast" class="loc-toast" role="status" hidden></div>
 
-  <section class="hero sunrise night" id="hero">
-    <img class="hero-mark" src="brand/icon-night.svg" alt="" aria-hidden="true">
+  <section class="hero sunrise" id="hero">
     <svg class="scene" id="scene" viewBox="0 0 1360 860" preserveAspectRatio="none" aria-hidden="true">
       <defs>
         <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="sky0"/><stop offset=".75" class="sky1"/><stop offset="1" class="sky2"/></linearGradient>
@@ -50,7 +49,11 @@
       </defs>
       <rect id="skyRect" x="-4000" width="9360" height="500" fill="url(#sky)"/>
       <rect id="groundRect" x="-4000" y="500" width="9360" height="360" fill="url(#ground)"/>
-            <line class="horizon" x1="-4000" y1="500" x2="5360" y2="500"/>
+            <g clip-path="url(#above)"><g class="sun-rise">
+        <ellipse class="halo" cx="680" cy="500" rx="420" ry="290" fill="url(#halo)"/>
+        <circle cx="680" cy="500" r="165" fill="url(#sunfill)"/>
+      </g></g>
+      <line class="horizon" x1="-4000" y1="500" x2="5360" y2="500"/>
       <g class="road" id="road"></g>
     </svg>
     <div class="sun-copy">
