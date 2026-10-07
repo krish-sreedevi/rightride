@@ -1461,7 +1461,7 @@
       B.dataset.page = next;
       if (next !== 'car') { document.title = ORIG_TITLE; navFromList = navFromList && next === 'cars'; }
       if (next === 'car') { carSlug = arg; renderCar(arg); window.scrollTo({ top: 0, behavior: 'instant' }); }
-      else if (next === 'compare') { cmpArg = arg || ''; cmp.vsel = {}; renderCompare(cmpArg); window.scrollTo({ top: 0, behavior: 'instant' }); }
+      else if (next === 'compare') { cmpArg = arg || ''; cmp.vsel = {}; renderCompare(cmpArg); window.scrollTo({ top: 0, behavior: 'instant' }); if (!EXTRA_DATA) loadExtras().then((x) => { EXTRA_DATA = x || {}; if (page === 'compare') keepY(() => renderCompare(cmpArg)); }); }
       else if (next === 'cars') { render(); window.scrollTo({ top: prev === 'car' ? carsY : 0, behavior: 'instant' }); }
       else { window.scrollTo({ top: 0, behavior: 'instant' }); requestAnimationFrame(placeHorizon); startLanes(); }
       if (animate && prev && !reduce) { void B.offsetWidth; B.classList.add('to-' + next); clearTimeout(showPage.t); showPage.t = setTimeout(() => B.classList.remove('to-cars', 'to-home', 'to-car'), 1100); }
@@ -1777,13 +1777,38 @@
   // how well one variant meets one requirement, from the experience of using it: 0 not available, 1 good, 2 great
   const UPGRADE = { sunroof: ['panoramic', 'Panoramic'], androidAuto: ['wirelessAA', 'Wireless'], rearCamera: ['camera360', '360° camera'], rearSensors: ['frontSensors', 'Front and rear'], adas: ['blindSpot', 'With blind-spot monitor'], autoClimate: ['dualZone', 'Dual-zone'], poweredSeat: ['ventilated', 'Also ventilated'], keyless: ['pushStart', 'With push-button start'], digitalCluster: ['hud', 'Plus head-up display'], cruise: ['adas', 'Adaptive (with ADAS)'], touchscreen: ['wirelessAA', 'With wireless phone mirroring'], ventilated: ['massage', 'Ventilated and massaging'], ledHeadlamps: ['autoHeadlamps', 'Automatic LED headlamps'], rearAC: ['dualZone', 'With climate zones'] };
   const PRAISE = { sunroof: /sunroof/i, panoramic: /panoramic|sunroof/i, touchscreen: /touchscreen|infotainment|screen/i, premiumAudio: /audio|sound|speaker/i, ventilated: /ventilat/i, adas: /adas|driver assist/i, camera360: /360/i, autoClimate: /climate|air.?con|\bac\b/i, rearAC: /rear (ac|vents)/i, poweredSeat: /seat/i, digitalCluster: /cluster|digital/i, wirelessCharger: /wireless charg/i, hud: /head.?up/i, ambient: /ambient/i, leather: /leather|upholstery/i, cruise: /cruise/i };
+  // mileage of one variant: real-world from road tests / owner reports for the same fuel and gearbox when we have it,
+  // else the claimed (ARAI) figure; electric cars give range
+  let EXTRA_DATA = null;
+  function mileageOf(c, m) {
+    const rows = ((EXTRA_DATA || {})[keyOf(m)] || {}).mileage || [];
+    const auto = c.transmission === 'Automatic';
+    if (c.fuel === 'Electric') {
+      const ev = rows.filter((x) => x.ev && x.evRange);
+      if (ev.length) return { ev: true, v: Math.round(ev.reduce((t, x) => t + x.evRange, 0) / ev.length), real: true, claimed: c.range };
+      return c.range ? { ev: true, v: c.range, real: false } : null;
+    }
+    const fuelOk = (x) => (c.fuel === 'Hybrid' ? /hybrid/i.test(x.fuel || '') : x.fuel === c.fuel);
+    const same = rows.filter((x) => !x.ev && fuelOk(x)), exact = same.filter((x) => /manual/i.test(x.tr || '') !== auto);
+    const pick = (exact.length ? exact : same)[0];
+    const unit = c.fuel === 'CNG' ? 'km/kg' : 'km/l';
+    if (pick) {
+      const real = pick.tested || pick.user;
+      const claimed = pick.arai || c.mileage || null;
+      if (real) return { v: real, real: true, claimed, unit, how: pick.tested ? 'road-tested' : 'owner reports' };
+      if (claimed) return { v: claimed, real: false, claimed, unit };
+    }
+    return c.mileage ? { v: c.mileage, real: false, claimed: c.mileage, unit } : null;
+  }
   function grade(k, c, m) {
     const x = expertOf(m) || {}, like = (x.like || []).join(' | '), dislike = (x.dislike || []).join(' | ');
     if (k === 'fiveStar') { const n = ncapOf(m); return !n ? { g: 0, why: 'Not crash-tested yet' } : n.stars >= 5 ? { g: 2, why: `5 stars (${n.by})` } : n.stars >= 4 ? { g: 1, why: `${n.stars} stars (${n.by})` } : { g: 0, why: `${n.stars} star${n.stars === 1 ? '' : 's'} (${n.by})` }; }
     if (k === 'mileage') {
-      if (c.fuel === 'Electric') return c.range ? (c.range >= 400 ? { g: 2, why: `${c.range} km range` } : c.range >= 250 ? { g: 1, why: `${c.range} km range` } : { g: 0, why: `${c.range} km range` }) : { g: 1, why: 'Electric' };
-      if (!c.mileage) return { g: 0, why: 'Not published' };
-      return c.mileage >= 20 ? { g: 2, why: `${c.mileage} km/l` } : c.mileage >= 15 ? { g: 1, why: `${c.mileage} km/l` } : { g: 0, why: `${c.mileage} km/l` };
+      const ml = mileageOf(c, m);
+      if (!ml) return { g: 1, why: 'Not published' };
+      if (ml.ev) return ml.v >= 400 ? { g: 2, why: `${ml.v} km range` } : ml.v >= 250 ? { g: 1, why: `${ml.v} km range` } : { g: 0, why: `${ml.v} km range` };
+      const cng = ml.unit === 'km/kg', good = cng ? 22 : 15, great = cng ? 28 : 19;
+      return { g: ml.v >= great ? 2 : ml.v >= good ? 1 : 0, why: `${ml.v} ${ml.unit} ${ml.real ? 'real-world' : 'claimed'}` };
     }
     if (k === 'auto') return c.transmission !== 'Automatic' ? { g: 0, why: 'Manual only' } : c.transType === 'AMT' ? { g: 1, why: 'AMT (jerkier shifts)' } : { g: 2, why: c.fuel === 'Electric' ? 'Electric, no gears' : c.transType || 'Automatic' };
     if (k === 'seven') return (c.seats || 0) >= 7 ? { g: 2, why: `${c.seats} seats` } : (c.seats || 0) === 6 ? { g: 1, why: '6 seats' } : { g: 0, why: `${c.seats || 5} seats` };
@@ -1841,12 +1866,12 @@
     const pill = (x) => `<span class="gr g${x.g}">${x.g === 2 ? 'Great' : x.g === 1 ? 'Good' : 'Not available'}</span><span class="gr-why">${esc(x.why)}</span>`;
     const higher = (car, k) => { const up = car.m.vs.map((v) => v.c).filter((c) => c.orTotal > car.c.orTotal && grade(k, c, car.m).g > 0).sort((a, b) => a.orTotal - b.orTotal)[0]; return up ? `<span class="gr-up">On ${esc(up.variant)} (+${lakh(up.orTotal - car.c.orTotal)})</span>` : ''; };
     const bucket = (name, list, max) => `<div class="rq-bucket${cmp.add === name ? ' on' : ''}" data-bucket="${name}"><div class="rq-bh"><b>${name === 'must' ? 'Must have' : 'Nice to have'}</b><span class="muted small">${list.length}/${max}</span></div>
-      <div class="rq-chosen">${list.length ? list.map((k) => `<button type="button" class="chip on" data-unreq="${k}">${esc(reqLabel(k))} ✕</button>`).join('') : `<span class="muted small">${cmp.add === name ? 'Tap options below to add them here' : `Tap here, then choose options`}</span>`}</div></div>`;
+      <div class="rq-chosen">${list.length ? list.map((k) => `<button type="button" class="chip on" data-unreq="${k}" data-drag="${k}">${esc(reqLabel(k))} ✕</button>`).join('') : `<span class="muted small rq-drop-hint">Drag options here, or ${cmp.add === name ? 'tap them below' : 'tap this box, then tap options'}</span>`}</div></div>`;
     const basics = [
       ['On-road price', (car) => `<b>${lakh(car.c.orTotal)}</b><span class="gr-why">${esc(car.c.variant)}</span>`],
       ['Price range', (car) => `${lakh(car.m.min)}${car.m.max > car.m.min ? ' – ' + lakh(car.m.max) : ''}`],
       ['Safety rating', (car) => { const n = ncapOf(car.m); return n ? `${stars(n.stars)}<span class="gr-why">${esc(n.by)}</span>` : '<span class="muted">Not tested</span>'; }],
-      ['Mileage / range', (car) => (car.c.fuel === 'Electric' ? (car.c.range ? car.c.range + ' km' : '–') : car.c.mileage ? car.c.mileage + ' km/l' : '–')],
+      ['Mileage / range', (car) => { const ml = mileageOf(car.c, car.m); if (!ml) return '<span class="muted">Not published</span>'; if (ml.ev) return `<b>${ml.v} km</b><span class="gr-why">${ml.real ? 'tested range' : 'claimed range'}${ml.real && ml.claimed ? ` · claimed ${ml.claimed} km` : ''}</span>`; return `<b>${ml.v} ${ml.unit}</b><span class="gr-why">${ml.real ? `real-world (${ml.how})` : 'claimed (ARAI)'}${ml.real && ml.claimed ? ` · claimed ${ml.claimed}` : ''}</span>`; }],
       ['Fuel · gearbox', (car) => esc([...car.m.fuels].join(', ')) + '<span class="gr-why">' + esc(car.m.trans.join(', ')) + '</span>'],
       ['Seats', (car) => esc(String(car.c.seats || '–'))],
       ['Expert score', (car) => { const x = expertOf(car.m); return x && x.s ? `<b>${esc(x.s)}</b>/10` : '–'; }],
@@ -1855,10 +1880,10 @@
       <button class="cp-back" type="button" data-go="cars"><span aria-hidden="true">‹</span> Back to cars</button>
       <h1 class="ch-t cmp-title">Compare to find your Right Ride</h1>
       <section class="cp-sec rq">
-        <div class="rq-top"><div><h2 class="display">What matters to you?</h2><p class="muted">Pick up to 5 must-haves and 5 nice-to-haves. We'll rate each car on how well it does each one.</p></div></div>
+        <div class="rq-top"><div><h2 class="display">What matters to you?</h2><p class="muted">Pick up to 5 must-haves and 5 nice-to-haves: drag options into a box, or tap them. We'll rate each car on how well it does each one.</p></div></div>
         <div class="rq-buckets">${bucket('must', cmp.req.must, 5)}${bucket('nice', cmp.req.nice, 5)}</div>
         <div class="rq-opts"><div class="label">Add to <b>${cmp.add === 'must' ? 'Must have' : 'Nice to have'}</b> <span class="seg rq-seg" role="group" aria-label="Add to"><button type="button" data-add="must" aria-pressed="${cmp.add === 'must'}">Must have</button><button type="button" data-add="nice" aria-pressed="${cmp.add === 'nice'}">Nice to have</button></span></div>
-          <div class="chips">${shown.map((k) => `<button type="button" class="chip${chosen.has(k) ? ' sel' : ''}" data-req="${k}" aria-pressed="${chosen.has(k)}">${esc(reqLabel(k))}${cmp.req.must.includes(k) ? ' <small>must</small>' : cmp.req.nice.includes(k) ? ' <small>nice</small>' : ''}</button>`).join('')}
+          <div class="chips">${shown.map((k) => `<button type="button" class="chip${chosen.has(k) ? ' sel' : ''}" data-req="${k}" data-drag="${k}" aria-pressed="${chosen.has(k)}">${esc(reqLabel(k))}${cmp.req.must.includes(k) ? ' <small>must</small>' : cmp.req.nice.includes(k) ? ' <small>nice</small>' : ''}</button>`).join('')}
           ${opts.length > 15 ? `<button type="button" class="chip more" data-reqall>${cmp.all ? 'Show fewer' : `See all ${opts.length}`}</button>` : ''}</div></div>
       </section>
       <section class="cmp-grid" style="--n:${cars.length}">
@@ -1878,9 +1903,62 @@
       <p class="hint">"Great" means the better version of a feature (for example a panoramic sunroof, wireless phone mirroring or a 360° camera) or one that expert reviews praise. Ratings are for the variant shown; change it above.</p>
     </div>`;
   }
+  // put requirement k into a bucket ('must' / 'nice'), or take it out (null); false if the bucket is full
+  function setReq(k, to) {
+    const from = cmp.req.must.includes(k) ? 'must' : cmp.req.nice.includes(k) ? 'nice' : null;
+    if (from === to) return true;
+    if (to && cmp.req[to].length >= 5) { flashMsg(`You can pick up to 5 ${to === 'must' ? 'must-haves' : 'nice-to-haves'}`); return false; }
+    if (from) cmp.req[from] = cmp.req[from].filter((x) => x !== k);
+    if (to) cmp.req[to].push(k);
+    cmp.vsel = {}; return true;
+  }
+  // drag a requirement chip into a bucket (mouse: drag; touch: press and hold, then drag); dropping a chosen one back on the options removes it
+  function wireReqDrag(P, rerender) {
+    let d = null;
+    const zoneAt = (x, y) => { const el = document.elementFromPoint(x, y); if (!el) return null; const b = el.closest('[data-bucket]'); if (b) return { el: b, to: b.dataset.bucket }; const o = el.closest('.rq-opts'); return o ? { el: o, to: null } : null; };
+    const clear = () => { P.querySelectorAll('.drop-on').forEach((x) => x.classList.remove('drop-on')); };
+    const start = () => {
+      d.on = true; const r = d.src.getBoundingClientRect();
+      d.ghost = d.src.cloneNode(true); d.ghost.classList.add('drag-ghost'); d.ghost.style.width = r.width + 'px';
+      d.dx = d.x0 - r.left; d.dy = d.y0 - r.top; document.body.appendChild(d.ghost); d.src.classList.add('dragging'); document.body.classList.add('rq-dragging');
+      if (navigator.vibrate && d.touch) navigator.vibrate(12);
+      move(d.x0, d.y0);
+    };
+    const move = (x, y) => { d.ghost.style.transform = `translate(${x - d.dx}px, ${y - d.dy}px)`; clear(); const z = zoneAt(x, y); if (z && (z.to || d.chosen)) z.el.classList.add('drop-on'); };
+    const end = (x, y) => {
+      const dd = d; d = null; clearTimeout(dd.t); window.removeEventListener('pointermove', onMove); window.removeEventListener('pointerup', onUp); window.removeEventListener('pointercancel', onCancel); window.removeEventListener('touchmove', noScroll);
+      if (!dd.on) return;
+      dd.ghost.remove(); dd.src.classList.remove('dragging'); document.body.classList.remove('rq-dragging'); clear();
+      P.dataset.justDragged = '1'; setTimeout(() => delete P.dataset.justDragged, 0);
+      if (x == null) return;
+      const z = zoneAt(x, y);
+      if (z && z.to) { if (setReq(dd.k, z.to)) { cmp.add = z.to; rerender(); } }
+      else if (z && dd.chosen) { setReq(dd.k, null); rerender(); }
+    };
+    const onMove = (e) => {
+      if (!d) return;
+      const far = Math.hypot(e.clientX - d.x0, e.clientY - d.y0);
+      if (!d.on) { if (d.touch) { if (far > 10) end(); return; } if (far > 6) start(); else return; }
+      move(e.clientX, e.clientY);
+    };
+    const onUp = (e) => end(e.clientX, e.clientY);
+    const onCancel = () => end();
+    const noScroll = (e) => { if (d && d.on) e.preventDefault(); };
+    P.addEventListener('pointerdown', (e) => {
+      const c = e.target.closest('[data-drag]'); if (!c || e.button > 0) return;
+      d = { src: c, k: c.dataset.drag, chosen: c.hasAttribute('data-unreq') || cmp.req.must.includes(c.dataset.drag) || cmp.req.nice.includes(c.dataset.drag), x0: e.clientX, y0: e.clientY, touch: e.pointerType !== 'mouse', on: false };
+      if (d.touch) d.t = setTimeout(() => d && !d.on && start(), 260);
+      window.addEventListener('pointermove', onMove); window.addEventListener('pointerup', onUp); window.addEventListener('pointercancel', onCancel);
+      window.addEventListener('touchmove', noScroll, { passive: false });
+    });
+    P.addEventListener('contextmenu', (e) => { if (e.target.closest('[data-drag]')) e.preventDefault(); });
+    // a drag must not also count as a tap
+    P.addEventListener('click', (e) => { if (P.dataset.justDragged) { e.stopImmediatePropagation(); e.preventDefault(); } }, true);
+  }
   function wireComparePage() {
     const P = $('#comparePage');
     const rerender = () => { saveCmp(); keepY(() => renderCompare(cmpArg)); };
+    wireReqDrag(P, rerender);
     P.addEventListener('click', (e) => {
       const a = e.target.closest('[data-add]'); if (a) { cmp.add = a.dataset.add; return rerender(); }
       const bk = e.target.closest('[data-bucket]'); if (bk && !e.target.closest('[data-unreq]')) { cmp.add = bk.dataset.bucket; return rerender(); }

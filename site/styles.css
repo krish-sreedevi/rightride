@@ -989,3 +989,12 @@ body[data-page="cars"] .layout { padding-bottom: 110px; }
   .cg-name { font-size: .92rem; }
   .cg-var select { font-size: .74rem; padding: 6px; }
 }
+
+/* compare: drag requirements into the must / nice boxes */
+.rq-opts [data-drag], .rq-chosen [data-drag] { cursor: grab; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+.rq-bucket.drop-on, .rq-opts.drop-on { box-shadow: inset 0 0 0 2px var(--brand), 0 0 0 4px var(--brand-soft); background: var(--brand-soft); }
+.rq-opts { border-radius: 16px; transition: box-shadow .15s var(--ease), background .15s var(--ease); }
+.rq-opts.drop-on { padding: 6px; margin: -6px; }
+.chip.dragging { opacity: .35; }
+.drag-ghost { position: fixed; left: 0; top: 0; z-index: 100; pointer-events: none; margin: 0; box-shadow: 0 12px 28px -8px rgba(0,0,0,.35); transform-origin: center; opacity: .95; cursor: grabbing; }
+body.rq-dragging, body.rq-dragging * { cursor: grabbing !important; }
