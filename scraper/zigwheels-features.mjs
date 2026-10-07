@@ -16,6 +16,13 @@ const SLUG = {
   'Land Rover|Defender 110': 'land-rover-cars/defender', 'Land Rover|Defender 90': 'land-rover-cars/defender', 'Land Rover|Defender 130': 'land-rover-cars/defender',
   'Maruti Suzuki|WagonR': 'maruti-suzuki-cars/wagon-r', 'MG|Windsor Pro': 'mg-motor-cars/windsor-ev', 'MG|Hector Plus 6 Seater': 'mg-motor-cars/hector-plus',
   'Toyota|Land Cruiser 300': 'toyota-cars/land-cruiser-300', 'Mahindra|Scorpio-N': 'mahindra-cars/scorpio-n',
+  // an array means the model is split across several ZigWheels pages (e.g. petrol and EV); their variant lists are combined
+  'BMW|7 Series': 'bmw-cars/7-series-facelift', 'BMW|M4': 'bmw-cars/m4-competition', 'BMW|4 Series': 'bmw-cars/m440i',
+  'Citroën|AircrossX': 'citroen-cars/c3-aircross', 'Citroën|BasaltX': 'citroen-cars/basalt', 'Citroën|C3X': 'citroen-cars/c3', 'Citroën|ë-C3X': 'citroen-cars/ec3',
+  'Force Motors|Gurkha 3-Door': 'force-motors-cars/gurkha',
+  'MINI|Countryman': ['mini-cars/countryman-c', 'mini-cars/countryman-electric'], 'MINI|John Cooper Works Countryman': 'mini-cars/cooper-countryman',
+  'Mercedes-Benz|A-Class': 'mercedes-benz-cars/amg-a-45-s', 'Mercedes-Benz|CLA': 'mercedes-benz-cars/cla-electric', 'Mercedes-Benz|Maybach EQS SUV': 'mercedes-benz-cars/maybach-eqs', 'Mercedes-Benz|Maybach SL': 'mercedes-benz-cars/maybach-sl-680',
+  'Porsche|Macan': ['porsche-cars/macan', 'porsche-cars/macan-ev'], 'Volvo|EC40': 'volvo-cars/c40-recharge',
 };
 const BRAND = { MG: 'mg-motor' };
 const slugify = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9.]+/g, '-').replace(/^-|-$/g, '');
@@ -65,7 +72,7 @@ function variantList(h, base) {
     const fm = row.match(/\b(Petrol|Diesel|CNG|Electric|Hybrid)\b/i);
     const tm = row.match(/\b(Manual|Automatic)\b/i);
     seen.add(a[1]);
-    out.push({ n: unent(a[2]), s: a[1], p: pm ? Math.round(parseFloat(pm[1].replace(/,/g, '')) * (/cr/i.test(pm[2]) ? 1e7 : 1e5)) : null, fuel: fm ? fm[1][0].toUpperCase() + fm[1].slice(1).toLowerCase() : null, tr: tm ? (tm[1].toLowerCase() === 'manual' ? 'Manual' : 'Automatic') : null });
+    out.push({ n: unent(a[2]), s: a[1], p: pm ? Math.round(parseFloat(pm[1].replace(/,/g, '')) * (/cr/i.test(pm[2]) ? 1e7 : 1e5)) : null, fuel: fm ? (/cng/i.test(fm[1]) ? 'CNG' : fm[1][0].toUpperCase() + fm[1].slice(1).toLowerCase()) : null, tr: tm ? (tm[1].toLowerCase() === 'manual' ? 'Manual' : 'Automatic') : null });
   }
   return out;
 }
@@ -166,27 +173,42 @@ async function main() {
   let pages = 0, failed = 0;
   await pool(keys, Number(process.env.ZW_CONC || 4), async (k) => {
     const [brand, model] = k.split('|');
-    const cands = [...new Set([SLUG[k], `${BRAND[brand] || slugify(brand)}-cars/${slugify(model)}`, `${BRAND[brand] || slugify(brand)}-cars/${slugify(model).replace(/\./g, '')}`, `${BRAND[brand] || slugify(brand)}-cars/${slugify(model.replace(/\s+(EV|Lwb|LWB)$/i, ''))}`].filter(Boolean))];
     let list = null, base = null;
-    for (const c of cands) {
-      const r = await get(`${BASE}/${c}`);
-      if (r === undefined) { failed++; return; }
-      if (!r) continue;
-      const realBase = (r.url.replace(BASE + '/', '').match(/^[a-z0-9-]+-cars\/[a-z0-9.\-]+/) || [c])[0];
-      const vl = variantList(r.html, realBase);
-      if (vl.length) { list = vl; base = realBase; break; }
+    if (Array.isArray(SLUG[k])) { // several pages: combine their variant lists, each variant remembering its own page
+      const bases = [];
+      for (const c of SLUG[k]) {
+        const r = await get(`${BASE}/${c}`);
+        if (r === undefined) { failed++; return; }
+        if (!r) continue;
+        const realBase = (r.url.replace(BASE + '/', '').match(/^[a-z0-9-]+-cars\/[a-z0-9.\-]+/) || [c])[0];
+        const vl = variantList(r.html, realBase).map((v) => ({ ...v, b: realBase }));
+        if (vl.length) { list = [...(list || []), ...vl]; bases.push(realBase); }
+      }
+      base = bases.join(',');
+    } else {
+      const cands = [...new Set([SLUG[k], `${BRAND[brand] || slugify(brand)}-cars/${slugify(model)}`, `${BRAND[brand] || slugify(brand)}-cars/${slugify(model).replace(/\./g, '')}`, `${BRAND[brand] || slugify(brand)}-cars/${slugify(model.replace(/\s+(EV|Lwb|LWB)$/i, ''))}`].filter(Boolean))];
+      for (const c of cands) {
+        const r = await get(`${BASE}/${c}`);
+        if (r === undefined) { failed++; return; }
+        if (!r) continue;
+        const realBase = (r.url.replace(BASE + '/', '').match(/^[a-z0-9-]+-cars\/[a-z0-9.\-]+/) || [c])[0];
+        const vl = variantList(r.html, realBase);
+        if (vl.length) { list = vl; base = realBase; break; }
+      }
     }
     if (!list) { console.log('not on ZigWheels:', k); return; }
     const ours = byModel.get(k);
     const want = new Map();
     const single = ours.length === 1 && /starting|from/i.test(ours[0].variant);
+    // one variant on each side of the same model page: it's the same car, even when the listed prices have drifted apart
+    const oneToOne = ours.length === 1 && list.length === 1;
     for (const c of ours) {
-      const a = single ? list.slice().sort((x, y) => (x.p || 9e18) - (y.p || 9e18))[0] : matchVariant(c, list, false);
-      if (a) want.set(a.s, a);
+      const a = single ? list.slice().sort((x, y) => (x.p || 9e18) - (y.p || 9e18))[0] : matchVariant(c, list, oneToOne);
+      if (a) want.set((a.b || '') + '/' + a.s, a);
     }
     const got = []; let ncap = null;
     for (const a of want.values()) {
-      const r = await get(`${BASE}/${base}/${a.s}`); pages++;
+      const r = await get(`${BASE}/${a.b || base}/${a.s}`); pages++;
       if (!r) { if (r === undefined) failed++; continue; }
       const R = rows(r.html);
       if (!Object.keys(R).length) continue;

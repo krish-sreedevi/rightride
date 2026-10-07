@@ -33,7 +33,8 @@
       "captainSeats": true,
       "sunroof": false,
       "adas": false,
-      "esc": false
+      "esc": false,
+      "rearDisc": false
      }
     }
    ]
@@ -67,7 +68,8 @@
       "captainSeats": true,
       "sunroof": false,
       "adas": false,
-      "esc": false
+      "esc": false,
+      "rearDisc": false
      }
     }
    ]

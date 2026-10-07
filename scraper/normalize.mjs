@@ -125,6 +125,8 @@ function mapFeatures(features, complete) {
 }
 
 // ---------- powertrain & basics ----------
+// makers' pages that give no fuel / gearbox for a model (Kia's showroom feed), and whose names don't say it
+const POWERTRAIN_HINT = { 'Kia|Carnival': ['Diesel', 'Automatic'], 'Kia|EV6': ['Electric', 'Automatic'], 'Kia|EV9': ['Electric', 'Automatic'] };
 function normFuel(s, name = '') {
   const t = `${s} ${name}`.toLowerCase();
   if (/phev|plug-?in/.test(t)) return 'PHEV';
@@ -232,8 +234,9 @@ export function normalize() {
       for (const v of m.variants || []) {
         if (!v.price || v.price < 200000) continue;
         if (/ambulance|taxi|fleet|\bcsd\b/i.test(v.name)) continue;
-        const fuel = normFuel(v.fuel, `${v.name} ${m.model}`);
-        const { transmission, transType } = normTrans(v.transmission, v.name, fuel);
+        const hint = (!v.fuel && !v.transmission && POWERTRAIN_HINT[brand + '|' + model]) || [];
+        const fuel = normFuel(v.fuel || hint[0], `${v.name} ${m.model}`);
+        const { transmission, transType } = normTrans(v.transmission || hint[1], v.name, fuel);
         const { f, airbags } = mapFeatures(v.features || [], complete && (v.features || []).length > 0);
         if (v.featureFlags) Object.assign(f, v.featureFlags); // curated / pre-mapped
         const specs = v.specs || {};
@@ -276,15 +279,21 @@ export function normalize() {
   let afFilled = 0;
   for (const [k, list] of Object.entries(afByModel)) {
     const m = AF[k]; if (!m) continue;
-    const todo = list.filter((c) => !Object.values(c.f).some((v) => v === true || v === false));
+    const blank = (c) => !Object.values(c.f).some((v) => v === true || v === false);
+    // normally only variants the maker gives no features for; a model scraped with AF_ALL=1 also has its gaps filled (never overriding what's known)
+    const todo = m.all ? list : list.filter(blank);
     const single = todo.length === 1 && list.length === 1 && /starting/i.test(todo[0].variant);
+    // the scraper stores only the Autocar variants it matched to ours, so one-to-one means it already paired them
+    const oneToOne = list.length === 1 && m.variants.length === 1;
     for (const c of todo) {
-      const a = single ? m.variants.slice().sort((x, y) => (x.p || 9e9) - (y.p || 9e9))[0] : matchVariant(c, m.variants, false);
+      const a = single ? m.variants.slice().sort((x, y) => (x.p || 9e9) - (y.p || 9e9))[0] : matchVariant(c, m.variants, oneToOne);
       if (!a) continue;
+      const wasBlank = blank(c);
       for (const kk of a.y) if (c.f[kk] == null) c.f[kk] = true;
       for (const kk of a.no) if (c.f[kk] == null) c.f[kk] = false;
       if (c.airbags == null && a.airbags) c.airbags = a.airbags;
-      c.fsrc = 'autocar'; afFilled++;
+      if (wasBlank) c.fsrc = 'autocar';
+      afFilled++;
     }
   }
   console.log(`features from Autocar India: ${afFilled} variants`);
@@ -294,8 +303,9 @@ export function normalize() {
   for (const [k, list] of Object.entries(afByModel)) {
     const m = ZW[k]; if (!m) continue;
     const single = list.length === 1 && /starting|from/i.test(list[0].variant);
+    const oneToOne = list.length === 1 && m.variants.length === 1; // the scraper already paired them
     for (const c of list) {
-      const a = single ? m.variants.slice().sort((x, y) => (x.p || 9e18) - (y.p || 9e18))[0] : matchVariant(c, m.variants, false);
+      const a = single ? m.variants.slice().sort((x, y) => (x.p || 9e18) - (y.p || 9e18))[0] : matchVariant(c, m.variants, oneToOne);
       if (!a) continue;
       let n = 0;
       // a second source saying "yes" also corrects a "no" from the maker's site (their lists often omit features rather than deny them)

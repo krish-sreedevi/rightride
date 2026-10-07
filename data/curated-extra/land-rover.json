@@ -23,8 +23,36 @@
             "panoramic": true,
             "hud": true,
             "massage": true,
-            "powerTailgate": true
-          }
+            "powerTailgate": true,
+            "abs": true,
+            "esc": true,
+            "hillAssist": true,
+            "hillDescent": true,
+            "tpms": true,
+            "isofix": true,
+            "rearCamera": true,
+            "camera360": true,
+            "rearSensors": true,
+            "frontSensors": true,
+            "touchscreen": true,
+            "androidAuto": true,
+            "connected": true,
+            "wirelessCharger": true,
+            "premiumAudio": true,
+            "autoClimate": true,
+            "dualZone": true,
+            "cruise": true,
+            "keyless": true,
+            "poweredSeat": true,
+            "ventilated": true,
+            "autoHeadlamps": true,
+            "rainWipers": true,
+            "foldingORVM": true,
+            "leather": true,
+            "alloys": true,
+            "fogLamps": true
+          },
+          "featureSource": "https://www.landrover.in/discovery/discovery/models-and-specifications.html"
         }
       ]
     }

@@ -51,9 +51,10 @@ async function q0(bb) {
 const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : [];
 const out = [], seen = new Set();
 let failed = 0;
+const failedTiles = [];
 for (const [s, w, n, e] of tiles) {
   const els = await q([s, w, n, e]);
-  if (!els) { failed++; continue; }
+  if (!els) { failed++; failedTiles.push([s, w, n, e]); continue; }
   for (const el of els) {
     const t = el.tags || {};
     const hay = `${t.brand || ''} ${t.name || ''} ${t.operator || ''} ${t['brand:en'] || ''}`;
@@ -76,6 +77,18 @@ for (const [s, w, n, e] of tiles) {
   }
   await sleep(1500);
 }
+// a tile that failed this time keeps last week's showrooms, so one slow server can't wipe out a region
+const rebrand = (d) => { const b = Object.keys(BRANDS).find((k) => BRANDS[k].test(d.n)); return b && b !== d.b && ['Lexus', 'MINI', 'Jaguar'].includes(b) ? b : d.b; };
+let kept = 0;
+for (const [s, w, n, e] of failedTiles) {
+  for (const d of prev) {
+    if (d.la < s || d.la >= n || d.lo < w || d.lo >= e) continue;
+    const x = { ...d, n: fixName(d.n) }; x.b = rebrand(x);
+    const key = `${x.b}|${x.n}|${x.la.toFixed(3)}|${x.lo.toFixed(3)}`;
+    if (seen.has(key)) continue; seen.add(key); out.push(x); kept++;
+  }
+}
+if (failedTiles.length) console.log(`${failedTiles.length} tiles failed; kept ${kept} showrooms from the previous run there`);
 if (failed > tiles.length / 3 && prev.length > out.length) { console.log(`too many failed tiles (${failed}); keeping previous ${prev.length} dealers`); process.exit(0); }
 fs.writeFileSync(OUT, JSON.stringify(out));
 const by = {}; for (const d of out) by[d.b] = (by[d.b] || 0) + 1;

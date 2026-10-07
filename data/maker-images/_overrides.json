@@ -1,31 +1,33 @@
 {
- "note": "Manual fixes for the image standardizer: hero (replacement URL), flip (mirror), erase (boxes to blank out, as fractions of the source photo).",
- "models": {
-  "Volkswagen|Virtus": {
-   "erase": [
-    [
-     0.16,
-     0.08,
-     0.275,
-     0.41
-    ]
-   ]
-  },
-  "BYD|Seal": {
-   "erase": [
-    [
-     0,
-     0.55,
-     0.244,
-     1
-    ],
-    [
-     0.244,
-     0.745,
-     1,
-     1
-    ]
-   ]
+  "note": "Manual fixes for the image standardizer: hero (replacement URL), flip (mirror), erase (boxes to blank out, as fractions of the source photo).",
+  "models": {
+    "Volkswagen|Virtus": {
+      "erase": [
+        [
+          0.16,
+          0.08,
+          0.275,
+          0.41
+        ]
+      ]
+    },
+    "BYD|Seal": {
+      "hero": "https://www.byd.com/material/byd-site/eu-v3/model/seal2026/pc/exterior-gallery/white/1.webp"
+    },
+    "Skoda|Kodiaq": {
+      "hero": "https://cdn.skoda-storyboard.com/2023/10/03_Skoda_Kodiaq_40cd21a3.jpg"
+    },
+    "Skoda|Kushaq": {
+      "hero": "https://cdn.skoda-storyboard.com/2026/01/260120_-Skoda-Auto-unveils-the-new-Kushaq-in-India-1_97e16730-2560x1440.jpg"
+    },
+    "Mercedes-Benz|V-Class": {
+      "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/447815/807_057/iris.png?q=COSY-EU-100-1713d0VXq7PLqtyO67PobzIr3eWsrrCsdRRzwQZYkHlGE1UHFm9mjP9QCc3eDkzy6gWm7YqWdhKrqRfld9PsgBxxXGIl21ZxveOwF1duIZbAmUEFI5YUU9QCrxCDkznVzWm7o9udhKMDdf%25vTBDEyL6IjlYavYa2rHirWpn84KBuoigfa3M4Pa2NTgeHNj6PsaPVSeiSQqts4rcRcUg4JxXGPgl1J0ejdwOBsuIZbAUuAFI5Gp39QC01mDkzBBgWm7%25EWdhKJV4f%25vOqsEyLbRBlYaIYG2rHQropn8kbUuoimui3M4h67NTg1yNj6PR6CVSexE7qts1EaRcUwEUxXGZlO1J0F1KwOB9qGZbAMbLFI5TWi9QC6jwDkzSRzWm7txPdhKc1yf%25vXw0EyLJZKlYaOcl2rHbxHpn8IV8uoiEDT3M4l48NTg2vSj6PpgAVSeTi3qtsLtPRcUaRUxXGHtO1J0xMiwOB1ufZbAw3xFI5ZNk9QCFoHDkz9MpWm7DT7dhKW6ef%25vdrNEyLfnWlYaElV2rHl2fpn82pauoipEA3M4u67NTg3Sij6Pu6PVSe3SdqtsNlKRcUj2JxXGVNG1J0Ow2wOBbkvZbAImEFI5QOl9QCk0ADkzmBjWm7PXWdhKeJyf%25vs2vEyLUCWlYaGTA2rH02qpn8BlCuoiAex3M4iM6NTg4TKj6PgmWVSeP8eqtseiPRcU18zxXGwi81J0uF0wOB3QwZbAsDxFITin0xdL789iqgMWpO5u9CAGmG1a1SLOI6KtLoPMzdRnbp&BKGND=9&IMGT=P27&cp=U7lLKRUtPa6KAFr8s_ubHw&uni=m&POV=BE330,PZM"
+    },
+    "Mercedes-Benz|A-Class": {
+      "hero": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/177054/806_056/iris.png?q=COSY-EU-100-1713d0VXqNpFqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtGyUtsd2HdcUfp8qXGEubmJ0l3IJOB2NMcbApjTlI5uVcZQC31sTkzNwtnm7jA6ZhKV5Kh%25vqCJjyLRgcDYaxPXSrH1eJ1n8ws8WoiZUkpM4FGTJTg9ozZ6PDMcbSeWza3tsd7oTcUfKM0XGE4yBJ0lg0VOB2PSObApet9I5usQMQC3UvWkzNLPKm7jaSthymI9WFlccUfAyYXOcVD0JbX5YJOB2gz1bAp4dDI5uBmMQC3AE1kzNW2Mm7jKevhKVvXt%25vqLukyLRaQDYaxHrqrHAlGqhTWFEnlA9BbpG1JnwxV4V%25d%25CWLH59zW0uBZTmGaX&BKGND=9&IMGT=P27&cp=U7lLKRUtPa6KAFr8s_ubHw&uni=m&POV=BE330,PZM"
+    },
+    "Land Rover|Defender 130": {
+      "hero": "https://imagegen.config.landrover.com/ciw/img?z=eJyVll1zojAUhn-N3MmED9FecBHXqt12d7ttV7e9YSIgqJS4hBZnf_2ehASpvdhkBkiUOQ_ve85JoEBhXtdHNvDwwJ3DQRhLa2bHtNzuMrsgZVLR97SCP17hblHxSxB4MBzcAK7p6bAVQ1aRJFpEy4jVpN7F9v6YDbz5-8Cb-YmP9lbhoFA-Y2p_sWf2Ncz4rwWcSzhv4GQ5SWgjeHwqeGToeAiup8ixj-UnqAY1pgV9qwR1w1IB_RHdR-XQSQ4AzgrKWJQV0U_7ziJaxEcFeyXs0AFX0RoYD1aszXjqx9p7RsuP9lwdUFpmuzIVimAqiWSYeCMkUrdujWmxXhSmZwxPlS9tBMa9WPvZKkDL_yPpsd5BBrgCmMri1_Qty9MyTYSpCUtJzSBf0pQWF88Us3OF51zcQoLAmj4IX18ShMHxSFvIJlb2yiHynfgvkH7x-QSRsnNmCjx7-8qV3XbOtEH45mM89-XrlLzJ07QQSpq8kJUHO55Tb8SIdlvVReBMC4m_KV6_E-G47_WjPgl__4QQ7kyrToYo8DcNgJQZfcKyze6DDOb6jZtOBHPlIx3rFaXt5swnKgG3SroWAj92gH4huu7Sh-CnXjC3EPjajdkl33M27Jx8A4JM_uqcfOPHt8FCuWndYBEEiPTaxoAgla97yo3bZq2Uj5HhZsB3qDE5iR2q23UNKHetgN_iJSf1G4tQ4cKB65jm3glGZNvf77kFfYwswPPFG8NYSI8gjIyuTEvhuROSiFKsOh_6FFmKFwB0XyrGIlQ4dzDRWvsXy8D_E5-XgQGhrcIUviy6dWD8fBkN2pvQuXKRlYcOvHStbYgsGsIX6z_9iueE"
+    }
   }
- }
 }

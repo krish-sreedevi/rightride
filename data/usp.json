@@ -1008,6 +1008,552 @@
    "Quick 150hp 1.5 TSI with DSG",
    "Massive 521-litre boot",
    "Comfortable rear seat with good thigh support"
+  ],
+  "Audi|RS Q8": [
+   "640hp 4.0-litre twin-turbo V8 with a stirring note",
+   "0-100kph in a claimed 3.6 seconds",
+   "Hot-hatch-like grip from Quattro sport differential",
+   "Comfort-mode ride better than rivals'",
+   "Carbon-ceramic brakes as standard"
+  ],
+  "Audi|S5 Sportback": [
+   "354hp 3.0 turbo V6 with lag-free response",
+   "0-100kph in a claimed 4.7 seconds",
+   "Striking sportback styling with frameless doors",
+   "Pliant low-speed ride on 18-inch wheels",
+   "Practical 480-litre boot with powered hatch"
+  ],
+  "Audi|SQ8": [
+   "507hp twin-turbo V8, 0-100kph in 4.1 seconds",
+   "All-wheel steering makes it surprisingly agile",
+   "Absorbent air suspension with height adjust",
+   "Spacious rear with its own climate zones",
+   "Plush, high-quality cabin with sport seats"
+  ],
+  "BMW|M2": [
+   "460hp twin-turbo straight-six from the M3/M4",
+   "0-100kph in a claimed 4.3 seconds",
+   "Surprisingly absorbent ride for an M car",
+   "Superbly balanced chassis with huge grip",
+   "Usable rear seat and 390-litre boot"
+  ],
+  "BMW|M4": [
+   "530hp straight-six with almost no turbo lag",
+   "0-100kph in a claimed 3.5 seconds",
+   "M xDrive AWD with selectable RWD mode",
+   "Agile handling with virtually no body roll",
+   "Usable rear seats and 440-litre boot"
+  ],
+  "BMW|M5": [
+   "727hp, 1,000Nm V8 plug-in hybrid",
+   "0-100kph in a claimed 3.5 seconds",
+   "About 50km of real-world electric range",
+   "Surprisingly comfortable on the highway",
+   "Roomy rear seat and 18-speaker B&W audio"
+  ],
+  "BYD|Atto 3": [
+   "Blade LFP battery with a strong safety record",
+   "521km ARAI range from 60.48kWh battery",
+   "Brisk 204hp motor, 0-100kph in 7.3 seconds",
+   "Robustly built, uniquely styled cabin",
+   "Rotating 12.8-inch screen and built-in dashcam"
+  ],
+  "BYD|Seal": [
+   "Up to 650km NEDC range with 82.56kWh pack",
+   "Progressive yet punchy power, up to 530hp",
+   "Supremely comfortable rear seat, huge legroom",
+   "High-quality cabin with rotating 15.6in screen",
+   "10 airbags and a full ADAS suite"
+  ],
+  "BYD|Sealion 7": [
+   "Luxury-car levels of cabin quality and finish",
+   "530hp AWD version does 0-100kph in 4.5s",
+   "Smooth, progressive power delivery",
+   "Spacious, reclining rear seats",
+   "11 airbags and Level 2 ADAS"
+  ],
+  "BYD|eMAX 7": [
+   "Absorbent ride, composed at highway speeds",
+   "530km NEDC range from 71.8kWh battery",
+   "6- or 7-seat layouts; third row fits adults",
+   "Slick, rotating 12.8-inch touchscreen",
+   "Level 2 ADAS and 115kW DC fast charging"
+  ],
+  "Citroën|AircrossX": [
+   "Class-best low-speed ride over bad roads",
+   "Smooth, punchy 110hp 1.2 turbo-petrol",
+   "Removable third-row seats in 5+2 version",
+   "Precise, well-weighted steering",
+   "Ventilated seats and 10.25in screen on X Max"
+  ],
+  "Citroën|BasaltX": [
+   "Exceptional ride quality on broken roads",
+   "Class-leading 470-litre boot",
+   "Upmarket new dash with soft leatherette",
+   "Adjustable rear thigh support on top AT",
+   "4-star Bharat NCAP rating, six airbags"
+  ],
+  "Citroën|C3X": [
+   "Smooth, absorbent ride over rough roads",
+   "Eager 110hp turbo-petrol with 6-speed AT option",
+   "Roomy rear seat with good leg and headroom",
+   "10.25-inch touchscreen with wireless CarPlay",
+   "180mm ground clearance, SUV-like stance"
+  ],
+  "Citroën|C5 Aircross": [
+   "Best-in-class ride from hydraulic cushions",
+   "Smooth 177hp diesel with 8-speed automatic",
+   "Outstanding refinement, double-glazed glass",
+   "Spacious rear with panoramic sunroof",
+   "Distinctive, standout crossover design"
+  ],
+  "Citroën|ë-C3X": [
+   "Pliant, comfort-focused ride",
+   "29.2kWh battery, up to 330km claimed range",
+   "Silent, smooth electric drive",
+   "Roomy cabin for four on a 2,540mm wheelbase",
+   "Keeps a spare wheel and 315-litre boot"
+  ],
+  "Force Motors|Gurkha 3-Door": [
+   "Locking differentials on both axles",
+   "140hp, 320Nm Mercedes-derived 2.6 diesel",
+   "Best off-road angles: 39-deg approach",
+   "233mm ground clearance, 700mm wading",
+   "Shift-on-the-fly 4WD with low range"
+  ],
+  "Force Motors|Gurkha 5-Door": [
+   "Locking differentials on both axles",
+   "140hp, 320Nm Mercedes-derived 2.6 diesel",
+   "233mm ground clearance; snorkel standard",
+   "Seven seats with 3-point belts in third row",
+   "Massive road presence, like a desi G-Wagon"
+  ],
+  "Honda|Amaze - 2nd Gen": [
+   "Absorbent ride that copes well with bad roads",
+   "Large 420-litre boot",
+   "Roomy, well-cushioned rear seat",
+   "Refined 90hp 1.2 i-VTEC petrol",
+   "Practical cabin with a great driving position"
+  ],
+  "Honda|City e:HEV": [
+   "Only strong hybrid in its class",
+   "Claimed 27.26kpl; around 20kpl on our drive",
+   "Seamless switching between EV and hybrid",
+   "Sophisticated ride, solid high-speed stability",
+   "ADAS suite, ventilated seats, lane-watch camera"
+  ],
+  "Honda|ZR-V": [
+   "Smooth 184hp hybrid, full 315Nm from standstill",
+   "0-100kph in a claimed 7.9 seconds",
+   "Claimed fuel efficiency of 22.8kpl",
+   "Practical, well-finished, soft-touch cabin",
+   "12-speaker Bose audio, 8 airbags, Level 2 ADAS"
+  ],
+  "Hyundai|Exter": [
+   "Smooth, refined 83hp 1.2-litre petrol",
+   "Spacious rear bench on a 2,450mm wheelbase",
+   "Large 391-litre boot",
+   "Six airbags as standard",
+   "Sunroof and dual-lens dashcam on offer"
+  ],
+  "Hyundai|Verna": [
+   "Class-leading 160hp 1.5 turbo-petrol",
+   "Class-leading 528-litre boot",
+   "5-star Global NCAP rating",
+   "Heated and ventilated front seats",
+   "Dual 10.25-inch screens, 8-speaker Bose audio"
+  ],
+  "Isuzu|D-Max V-Cross": [
+   "Tough ladder-frame pickup that shrugs off rough roads",
+   "163hp 1.9 diesel, manual or 6-speed auto",
+   "Shift-on-the-fly 4WD with low range",
+   "Big tyres iron out potholes",
+   "Good load-carrying ability"
+  ],
+  "Isuzu|MU-X": [
+   "Huge middle-row legroom, reclining 60:40 seat",
+   "230mm ground clearance and 4x4 option",
+   "Relaxed, low-stress highway cruiser",
+   "Commanding driving position",
+   "Tough body-on-frame build for off-road use"
+  ],
+  "Jaguar|F-PACE": [
+   "Stunning, rakish design",
+   "Fun to drive, yet rides well",
+   "Rich cabin with plenty of aluminium trim",
+   "Slick 11.4-inch Pivi Pro touchscreen",
+   "Roomy rear with two climate zones"
+  ],
+  "Kia|EV9": [
+   "Powered 2nd-row captain seats with ottomans",
+   "561km ARAI range from 99.8kWh battery",
+   "384hp dual motors, 0-100kph in 5.36s tested",
+   "10-80% in 24 min on a 350kW charger",
+   "Comfortable ride, impressive handling"
+  ],
+  "Kia|Sorento": [
+   "Segment-best ride that smothers broken roads",
+   "193hp diesel or 230hp strong hybrid",
+   "Ventilated second-row captain chairs",
+   "Plush, well-built cabin, slick 12.3in screen",
+   "10 airbags and Level 2+ ADAS"
+  ],
+  "Land Rover|Discovery": [
+   "900mm wading depth, up to 283mm clearance",
+   "Seats seven, with powered rear-seat folding",
+   "Accurate, precise steering for its size",
+   "Commanding, towering driving position",
+   "Practical cabin with clever storage"
+  ],
+  "Lexus|ES": [
+   "Silent, seamless petrol-hybrid powertrain",
+   "Spacious, reclining rear seat",
+   "Hushed cabin with active noise cancellation",
+   "Absorbent ride over bad roads",
+   "Mark Levinson audio and 10 airbags"
+  ],
+  "Lexus|LM": [
+   "First-class rear seats in 4-seat version",
+   "48-inch rear display in Ultra Luxury trim",
+   "23-speaker audio and 4-zone climate control",
+   "250hp 2.5-litre petrol-hybrid powertrain",
+   "10 airbags and 5-star Euro NCAP rating"
+  ],
+  "Lexus|LX": [
+   "Massive road presence on 22-inch wheels",
+   "Torquey 308hp, 700Nm twin-turbo V6 diesel",
+   "Built to last, a byword for reliability",
+   "Real off-road kit with low range",
+   "Broad, comfortable heated and cooled front seats"
+  ],
+  "Lexus|NX": [
+   "Only strong hybrid in its class",
+   "Ran on electric power half the time in testing",
+   "Confident handling with little body roll",
+   "17-speaker Mark Levinson audio",
+   "Physical controls for climate and audio"
+  ],
+  "Lexus|RX": [
+   "Rich, superbly finished cabin",
+   "Instant response from 250hp AWD hybrid",
+   "Supple, comfortable ride on 21-inch wheels",
+   "Slick, iPad-like 14-inch touchscreen",
+   "21-speaker Mark Levinson audio"
+  ],
+  "MG|Cyberster": [
+   "510hp dual motors, 0-100kph in a claimed 3.2s",
+   "Electric scissor doors, 10-second soft top",
+   "580km claimed range from 77kWh battery",
+   "Comfy, beautifully finished cabin",
+   "Perfect 50:50 weight distribution with AWD"
+  ],
+  "MG|Hector Tomahawk PHEV": [
+   "India's first mainstream plug-in hybrid SUV",
+   "Over 115km claimed electric-only range",
+   "Claimed total range of over 1,100km",
+   "Switches between EV and hybrid modes by itself",
+   "Panoramic sunroof and 360 camera on all trims"
+  ],
+  "MG|M9": [
+   "Armchair-like powered middle-row seats",
+   "Excellent refinement, road noise well contained",
+   "Huge 3.2m wheelbase; third row fits adults",
+   "Middle-row climate zone and panoramic sunroof",
+   "5-star Euro NCAP rating and Level 2 ADAS"
+  ],
+  "MINI|Cooper": [
+   "Punchy 204hp 2.0 turbo-petrol",
+   "0-100kph in 6.48 seconds in our test",
+   "Go-kart handling with sharp, direct steering",
+   "Crisp 9.4-inch circular OLED touchscreen",
+   "Strong brakes with a sharp initial bite"
+  ],
+  "MINI|Cooper Convertible": [
+   "Electric soft top opens in 18 seconds",
+   "Sunroof mode slides the roof back partially",
+   "204hp turbo-petrol, 0-100kph in 6.9 seconds",
+   "Agile, go-kart-like handling",
+   "12-speaker Harman Kardon audio as standard"
+  ],
+  "MINI|Countryman": [
+   "Roomy cabin with 505-litre boot and sliding rear seat",
+   "Loaded single spec with HUD, Harman Kardon audio",
+   "Sharp, high-res circular OLED touchscreen",
+   "Composed, reassuring manners at highway speeds",
+   "Rs 47.5 lakh price undercuts GLA and X1"
+  ],
+  "MINI|John Cooper Works Countryman": [
+   "300hp 2.0 turbo-petrol, 0-100kph in 5.4 seconds",
+   "Sharp, direct steering with excellent grip",
+   "All4 all-wheel drive for added traction",
+   "Roomy rear with sliding, reclining bench",
+   "Practical 500-litre boot"
+  ],
+  "Mahindra|BE 6 Sporteq": [
+   "Head-turning, concept car-like styling",
+   "Up to 682km ARAI range with 79kWh battery",
+   "Polished ride and handling on bad roads",
+   "5-star Bharat NCAP rating, Level 2 ADAS",
+   "16-speaker Harman Kardon with Dolby Atmos"
+  ],
+  "Mahindra|XEV 9S": [
+   "Strong 286hp top version, 0-100kph in 7 seconds",
+   "Comfortable middle row with sliding bench",
+   "Triple 12.3-inch screens and AR head-up display",
+   "Ventilated rear seats, openable panoramic roof",
+   "Strong value for a three-row electric SUV"
+  ],
+  "Mahindra|XEV 9e": [
+   "Quick 286hp motor, 0-100kph in 7.45s (tested)",
+   "Excellent refinement with little road noise",
+   "Roomy rear seat that fits three adults",
+   "Cavernous 663-litre boot plus 150-litre frunk",
+   "Triple-screen dash and 16-speaker Harman Kardon"
+  ],
+  "Mahindra|XUV 3XO EV": [
+   "Well equipped from base AX5 trim",
+   "150hp, 310Nm front motor",
+   "351km ARAI range from 39.4kWh battery",
+   "Top trim adds Level 2 ADAS, 360-degree camera",
+   "Harman Kardon audio with Dolby Atmos on AX7L"
+  ],
+  "Maruti Suzuki|Eeco": [
+   "Very affordable people and cargo carrier",
+   "Walk-in cabin with high seats, big glass area",
+   "Massive load area in the five-seater",
+   "Compact size, easy to drive and park",
+   "Slick gearbox and light clutch"
+  ],
+  "Mercedes-Benz|A-Class": [
+   "421hp engine, 0-100kph in 4.17s (tested)",
+   "Playful, agile handling with drift mode",
+   "Accurate steering with good feel",
+   "Supportive seats and practical hatch body",
+   "Burmester audio, dual 10.25-inch screens"
+  ],
+  "Mercedes-Benz|AMG GT Coupe": [
+   "Brutal 4.0 twin-turbo V8 with up to 612hp",
+   "0-100kph in 3.2 seconds (GT 63 Pro)",
+   "Menacing V8 soundtrack with pops and crackles",
+   "All-wheel drive and rear steer aid agility",
+   "Sensational Burmester audio, crisp 360 camera"
+  ],
+  "Mercedes-Benz|CLE Coupe": [
+   "450hp twin-turbo six, 0-100kph in 4.2 seconds",
+   "Lag-free power from electric compressor",
+   "AWD and rear steer make handling exploitable",
+   "Usable rear seat for a coupe",
+   "Fully loaded: HUD, Burmester, ventilated seats"
+  ],
+  "Mercedes-Benz|E-Class": [
+   "Best-in-segment rear seat with Chauffeur Pack",
+   "Triple-screen Superscreen dashboard",
+   "Diesel can cover 800km+ on one tank",
+   "Planted, comfortable ride",
+   "540-litre boot with space-saver spare"
+  ],
+  "Mercedes-Benz|EQS SUV": [
+   "Certified 809km range, about 600km real-world",
+   "Supple air suspension glides over bad roads",
+   "56-inch Hyperscreen spanning the dashboard",
+   "Comfy middle row with twin 11.9-inch screens",
+   "Strong value at Rs 1.41 crore via local assembly"
+  ],
+  "Mercedes-Benz|G-Class": [
+   "Smooth 367hp, 750Nm straight-six diesel",
+   "Three locking diffs and low range for off-road",
+   "Solid, built-to-last feel",
+   "Commanding view and 241mm ground clearance",
+   "Transparent bonnet camera and off-road cockpit"
+  ],
+  "Mercedes-Benz|GLC Coupe": [
+   "421hp 2.0 turbo with e-turbo and e-boost",
+   "Sharp steering and agile handling",
+   "Sporty AMG cabin with superb steering wheel",
+   "Burmester audio, HUD and 360-degree cameras",
+   "545-litre boot with space-saver spare"
+  ],
+  "Mercedes-Benz|GLE Coupe": [
+   "435hp six-cylinder, 0-100kph in 5 seconds",
+   "Forgiving air-suspended ride for an AMG",
+   "Spacious rear and practical SUV body",
+   "Top-notch fit, finish and quality",
+   "Adjustable ride height for rough trails"
+  ],
+  "Mercedes-Benz|Maybach EQS SUV": [
+   "Recliner-like rear seats with Chauffeur Package",
+   "Superb refinement; near-silent cabin",
+   "658hp dual motors, 0-100kph in 4.34s (tested)",
+   "Claimed 611km range, 10-80% in 31 minutes",
+   "Opulent cabin with 15-speaker Burmester 4D"
+  ],
+  "Mercedes-Benz|Maybach GLS": [
+   "First-class rear seats with 43.5-degree recline",
+   "Silky smooth, strong 4.0 V8",
+   "Floaty ride with e-Active Body Control",
+   "Huge road presence and wow factor",
+   "Heated, ventilated, massage seats for all four"
+  ],
+  "Mercedes-Benz|Maybach S-Class": [
+   "Silky 612hp V12, 0-100kph in 4.5 seconds",
+   "First Class rear suite with fully reclining seats",
+   "Extra 180mm of rear legroom",
+   "Hushed, tranquil cabin",
+   "31-speaker Burmester audio system"
+  ],
+  "Mercedes-Benz|Maybach SL": [
+   "Possibly the most comfortable roadster on sale",
+   "Effortless 585hp V8, 0-100kph in 4.1 seconds",
+   "Astonishing refinement even with roof up",
+   "Roof opens in about 16 seconds at up to 50kph",
+   "Exquisite craftsmanship and bespoke colours"
+  ],
+  "Mercedes-Benz|V-Class": [
+   "3.4-metre extra-long wheelbase",
+   "4-seater option with leg-rest captain seats",
+   "Airmatic air suspension standard",
+   "15-speaker Burmester audio with Dolby Atmos",
+   "Choice of 237hp diesel or 231hp petrol"
+  ],
+  "Nissan|Gravite": [
+   "Seats seven within 4 metres",
+   "Third row usable even by adults",
+   "Removable third row frees 625 litres",
+   "Sliding, reclining, split-folding middle row",
+   "Low Rs 5.65 lakh starting price"
+  ],
+  "Nissan|X-Trail": [
+   "Smooth, refined 163hp variable-compression turbo",
+   "One of the best CVT automatics around",
+   "Impressive ride quality and confident handling",
+   "Spacious second row with slide and recline",
+   "Superb build quality, 210mm ground clearance"
+  ],
+  "Porsche|911": [
+   "Turbo S: 711hp, 0-100kph in 2.5 seconds",
+   "Leech-like grip from AWD and rear steer",
+   "Precise handling that feels light and small",
+   "Excellent visibility through thin pillars",
+   "Usable ride with optional 40mm front lift"
+  ],
+  "Porsche|Cayenne": [
+   "Reworked air suspension delivers superb ride",
+   "Sharp handling with little body roll",
+   "353hp twin-turbo V6, 0-100kph in 6 seconds",
+   "Taycan-style multi-screen dashboard",
+   "Comfortable rear seat with room to stretch"
+  ],
+  "Porsche|Cayenne Coupé": [
+   "Sleeker, sportier look than the Cayenne",
+   "Air suspension rides well on 21-inch wheels",
+   "Direct steering and tight body control",
+   "Generous rear legroom despite lower roof",
+   "Off-road mode raises ride height"
+  ],
+  "Porsche|Macan": [
+   "Exceptional handling with pin-sharp steering",
+   "Explosive 440hp twin-turbo V6 in GTS",
+   "One of the quickest-shifting PDK gearboxes",
+   "Air suspension soaks up broken roads",
+   "Powerful brakes with well-judged pedal feel"
+  ],
+  "Porsche|Panamera": [
+   "353hp V6, 0-100kph in 5.1 seconds",
+   "Adaptive air suspension as standard",
+   "Accurate, precise steering",
+   "Agile feel for a large sedan",
+   "Matrix LED lights and 8 airbags standard"
+  ],
+  "Porsche|Taycan": [
+   "Staggering pace: Turbo does 0-100kph in 2.7s",
+   "Best-handling four-door EV; corners flat",
+   "Supple ride despite big wheels",
+   "Up to 630km WLTP range from 105kWh battery",
+   "Fast charging at up to 320kW"
+  ],
+  "Tata|Aeris": [
+   "Dual-cylinder CNG setup leaves usable boot",
+   "Excellent ride on broken roads",
+   "Segment-first ventilated front seats",
+   "Slick 10.25-inch touchscreen, 360 camera",
+   "Priced below rivals, from Rs 6.29 lakh"
+  ],
+  "Tata|Harrier EV": [
+   "Dual-motor AWD, 0-100kph in 6.74s (tested)",
+   "Up to 627km claimed range (75kWh)",
+   "5-star Bharat NCAP rating",
+   "Crisp 14.5-inch Samsung QLED touchscreen",
+   "Roomy rear seat for three adults"
+  ],
+  "Tesla|Model Y": [
+   "Huge 822-litre boot plus 117-litre frunk",
+   "Spacious rear with power-reclining seats",
+   "Excellent refinement at high speeds",
+   "Slick, feature-packed touchscreen",
+   "Long Range does 0-100kph in 5.95s (tested)"
+  ],
+  "VinFast|VF MPV 7": [
+   "Spacious cabin; roomy third row for adults",
+   "Theatre-style raised middle row",
+   "Long 2.8m wheelbase, 183mm ground clearance",
+   "10-80% DC charge in about 30 minutes",
+   "Stable, composed high-speed ride"
+  ],
+  "VinFast|VF6": [
+   "Undercuts rivals at Rs 16.49-18.29 lakh",
+   "Strong 204hp front motor",
+   "Exceptional interior material quality",
+   "Mature ride, excellent highway road holding",
+   "Seven airbags as standard, plus Level 2 ADAS"
+  ],
+  "VinFast|VF7": [
+   "Quick AWD version: 0-100kph in 6.03s (tested)",
+   "Plush ride with European maturity",
+   "Spacious, upmarket-feeling cabin",
+   "5-star Bharat NCAP rating",
+   "Good value against Harrier EV and XEV 9e"
+  ],
+  "Volkswagen|Tayron": [
+   "Smooth, punchy 204hp 2.0 TSI engine",
+   "Tidy, predictable handling with 4Motion AWD",
+   "Solid build and premium-feeling cabin",
+   "Spacious second row; 850 litres with row 3 down",
+   "Ventilated, massage seats, HUD, Harman Kardon"
+  ],
+  "Volkswagen|Tiguan R-Line": [
+   "Impressive ride comfort",
+   "Tidy handling with DCC Pro adaptive dampers",
+   "Huge 652-litre boot with spare wheel",
+   "Intuitive 15-inch touchscreen",
+   "204hp 2.0 TSI with AWD, 0-100kph in 7.1s"
+  ],
+  "Volvo|EC40": [
+   "Rapid 408hp, 0-100kph in 4.7 seconds",
+   "Claimed 530km WLTP range",
+   "5-star Euro NCAP rating and ADAS",
+   "Supremely comfortable front seats",
+   "Stylish coupe-SUV design"
+  ],
+  "Volvo|EX30": [
+   "Quick 272hp motor, 0-100kph in 5.7 seconds",
+   "Claimed 480km WLTP range",
+   "Quiet, relaxed and easy to drive",
+   "Fast Google-based 12.3-inch touchscreen",
+   "Level 2 ADAS and 360-degree camera"
+  ],
+  "Volvo|XC60": [
+   "Comfortable ride on bad roads",
+   "Plush cabin with superb fit and finish",
+   "Class-leading Bowers & Wilkins audio",
+   "8 airbags and well-tuned Level 2 ADAS",
+   "Excellent highway manners"
+  ],
+  "Volvo|XC90": [
+   "Plush, inviting Nappa leather cabin",
+   "Sensational 19-speaker Bowers & Wilkins audio",
+   "Ventilated, massage front seats standard",
+   "Third row of seats; folds into flat load bed",
+   "HUD, 4-zone climate, crisp 360-degree camera"
   ]
  }
 }

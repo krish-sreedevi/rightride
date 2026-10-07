@@ -29,7 +29,8 @@
       "foldingORVM": false,
       "sunroof": false,
       "ambient": false,
-      "airbags6": true
+      "airbags6": true,
+      "autoClimate": false
      }
     },
     {
@@ -52,7 +53,8 @@
       "foldingORVM": false,
       "sunroof": false,
       "ambient": false,
-      "airbags6": true
+      "airbags6": true,
+      "autoClimate": false
      }
     },
     {
@@ -75,7 +77,8 @@
       "foldingORVM": false,
       "sunroof": false,
       "ambient": false,
-      "airbags6": true
+      "airbags6": true,
+      "autoClimate": false
      }
     },
     {
@@ -98,7 +101,8 @@
       "foldingORVM": false,
       "sunroof": false,
       "ambient": false,
-      "airbags6": true
+      "airbags6": true,
+      "autoClimate": false
      }
     }
    ]

@@ -1,6 +1,6 @@
 // Right Ride visit counting with GoatCounter (no cookies, no personal data).
 // Set the site code below once a GoatCounter account exists (e.g. "rightride" for rightride.goatcounter.com).
-window.RR_ANALYTICS = { goatcounter: '' };
+window.RR_ANALYTICS = { goatcounter: 'rightride' };
 (function () {
   const code = window.RR_ANALYTICS.goatcounter;
   const q = [];

@@ -2,7 +2,7 @@
 // (Mahindra, Toyota, Skoda, VW, Nissan, the luxury brands, and a few gaps elsewhere).
 // For each such model: read /cars/<make>/<model>/variants, match our variants to Autocar's
 // (fuel, gearbox, ex-showroom price), then read each matched variant page's feature table.
-// Writes data/autocar-features.json: { updated, models: { "Brand|Model": { slug, variants: [{ n, s, fuel, tr, p, y: [keys], no: [keys], airbags }] } } }
+// Writes data/autocar-features.json: { updated, models: { "Brand|Model": { slug, all?, variants: [{ n, s, fuel, tr, p, y: [keys], no: [keys], airbags }] } } }
 // Usage: node scraper/autocar-features.mjs   (env: AF_ONLY="Brand|Model,…", AF_SLICE="i/n", AF_ALL=1 to include models that already have features)
 import fs from 'fs';
 import path from 'path';
@@ -17,6 +17,13 @@ const SLUG = {
   'Mahindra|XUV 3XO': 'mahindra/xuv-3xo', 'Mahindra|XUV 7XO': 'mahindra/xuv-7xo', 'Mahindra|Scorpio-N': 'mahindra/scorpio-n',
   'Land Rover|Defender 110': 'land-rover/defender', 'Land Rover|Defender 90': 'land-rover/defender', 'Land Rover|Defender 130': 'land-rover/defender',
   'Toyota|Land Cruiser 300': 'toyota/land-cruiser', 'Toyota|Legender': 'toyota/fortuner', 'Mahindra|Bolero Neo Plus': 'mahindra/bolero-neo-plus',
+  // an array means the model is split across several Autocar pages (e.g. petrol and EV); their variant lists are combined
+  'BMW|4 Series': 'bmw/4-series-convertible', 'BMW|M4': 'bmw/m4-coupe',
+  'Citroën|AircrossX': 'citroen/aircross', 'Citroën|BasaltX': 'citroen/basalt', 'Citroën|C3X': 'citroen/c3', 'Citroën|ë-C3X': 'citroen/ec3',
+  'Force Motors|Gurkha 5-Door': 'force/gurkha-5-door',
+  'MINI|Countryman': ['mini/countryman', 'mini/countryman-electric'], 'MINI|John Cooper Works Countryman': 'mini/countryman',
+  'Mercedes-Benz|AMG GT Coupe': 'mercedes-benz/amg-gt', 'Mercedes-Benz|CLA': 'mercedes-benz/cla-electric', 'Mercedes-Benz|Maybach SL': 'mercedes-benz/sl',
+  'Porsche|Macan': ['porsche/macan', 'porsche/macan-ev'], 'Volvo|EC40': 'volvo/c40-recharge',
 };
 
 const slugify = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -150,33 +157,46 @@ async function main() {
   let pages = 0, filled = 0, failed = 0;
   for (const k of keys) {
     const [brand, model] = k.split('|');
-    const slugs = [...new Set([SLUG[k], xp[k] && xp[k].slug, `${BRAND_SLUG[brand] || slugify(brand)}/${slugify(model)}`].filter(Boolean))];
     let list = null, slug = null;
-    for (const s of slugs) {
-      const h = await get(`${BASE}/cars/${s}/variants`);
-      if (h === undefined) { failed++; break; }
-      const vl = h && block(h, '"variant_list":[');
-      if (vl && vl.length) { list = vl; slug = s; break; }
+    if (Array.isArray(SLUG[k])) { // several pages: combine their variant lists, each variant remembering its own page
+      const got = [];
+      for (const s of SLUG[k]) {
+        const h = await get(`${BASE}/cars/${s}/variants`);
+        if (h === undefined) { failed++; break; }
+        const vl = h && block(h, '"variant_list":[');
+        if (vl && vl.length) { list = [...(list || []), ...vl.map((v) => ({ ...v, _b: s }))]; got.push(s); }
+      }
+      slug = got.join(',');
+    } else {
+      const slugs = [...new Set([SLUG[k], xp[k] && xp[k].slug, `${BRAND_SLUG[brand] || slugify(brand)}/${slugify(model)}`].filter(Boolean))];
+      for (const s of slugs) {
+        const h = await get(`${BASE}/cars/${s}/variants`);
+        if (h === undefined) { failed++; break; }
+        const vl = h && block(h, '"variant_list":[');
+        if (vl && vl.length) { list = vl; slug = s; break; }
+      }
     }
     if (!list) { console.log('no variants on Autocar:', k); continue; }
-    const avs = list.filter((v) => v.launch_stage !== 'upcoming').map((v) => ({ n: v.display_name, s: v.slug, fuel: fuelOf(v.fuel_type), tr: v.transmission_category === 'Manual' ? 'Manual' : v.transmission_category ? 'Automatic' : null, p: (v.price && v.price.ex_showroom_price) || null }));
+    const avs = list.filter((v) => v.launch_stage !== 'upcoming').map((v) => ({ n: v.display_name, s: v.slug, b: v._b, fuel: fuelOf(v.fuel_type), tr: v.transmission_category === 'Manual' ? 'Manual' : v.transmission_category ? 'Automatic' : null, p: (v.price && v.price.ex_showroom_price) || null }));
     const ours = byModel.get(k).filter((c) => process.env.AF_ALL || needs(c));
     const single = ours.length === 1 && /starting/i.test(ours[0].variant);
+    // one variant on each side of the same model page: it's the same car, even when the listed prices have drifted apart
+    const oneToOne = ours.length === 1 && byModel.get(k).length === 1 && avs.length === 1;
     const want = new Map();
     for (const c of ours) {
-      const a = single ? avs.slice().sort((x, y) => (x.p || 9e9) - (y.p || 9e9))[0] : matchVariant(c, avs, false);
-      if (a) want.set(a.s, a);
+      const a = single ? avs.slice().sort((x, y) => (x.p || 9e9) - (y.p || 9e9))[0] : matchVariant(c, avs, oneToOne);
+      if (a) want.set((a.b || '') + '/' + a.s, a);
     }
     const got = [];
     for (const a of want.values()) {
-      const h = await get(`${BASE}/cars/${slug}/${a.s}`); pages++;
+      const h = await get(`${BASE}/cars/${a.b || slug}/${a.s}`); pages++;
       if (!h) { if (h === undefined) failed++; continue; }
       const fi = h.indexOf('"features":{"description"'); const fb = fi < 0 ? null : block(h.slice(fi), '"features":{');
       if (!fb || !fb.data) continue;
       got.push({ ...a, ...mapFeatures(fb.data) });
       await sleep(250);
     }
-    if (got.length) { out.models[k] = { slug, variants: got }; filled += ours.length; }
+    if (got.length) { out.models[k] = { slug, all: process.env.AF_ALL ? true : undefined, variants: got }; filled += ours.length; } // all: also fill gaps in variants that already have some features
     console.log(`${k}: ${avs.length} on Autocar, ${ours.length} ours, ${got.length} variant pages read`);
   }
   fs.writeFileSync(OUT, JSON.stringify(out));
