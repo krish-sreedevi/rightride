@@ -1483,12 +1483,15 @@
 
   // ---------------- two pages: home (#/) and cars (#/cars) ----------------
   let page = null, carSlug = null, carsY = 0;
+  // the photo of the car that was just clicked, so it can glide into the car page
+  let lastCarImg = null;
+  document.addEventListener('click', (e) => { const c = e.target.closest('.tile, .card, .cg-car'); if (c) lastCarImg = c.querySelector('img'); }, true);
   function showPage(next, animate = true, arg = null) {
     if (next === page && (next !== 'car' || arg === carSlug) && (next !== 'compare' || arg === cmpArg)) return;
     const prev = page; page = next;
     if (prev === 'cars') carsY = window.scrollY;
     const B = document.body, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const swap = () => {
+    const swap = (noAnim) => {
       B.classList.remove('leaving', 'to-cars', 'to-home', 'to-car');
       B.dataset.page = next;
       if (next !== 'car') { document.title = ORIG_TITLE; navFromList = navFromList && next === 'cars'; }
@@ -1496,8 +1499,25 @@
       else if (next === 'compare') { cmpArg = arg || ''; cmp.vsel = {}; renderCompare(cmpArg); window.scrollTo({ top: 0, behavior: 'instant' }); if (!EXTRA_DATA) loadExtras().then((x) => { EXTRA_DATA = x || {}; if (page === 'compare') keepY(() => renderCompare(cmpArg)); }); }
       else if (next === 'cars') { render(); window.scrollTo({ top: prev === 'car' ? carsY : 0, behavior: 'instant' }); }
       else { window.scrollTo({ top: 0, behavior: 'instant' }); requestAnimationFrame(placeHorizon); startLanes(); }
-      if (animate && prev && !reduce) { void B.offsetWidth; B.classList.add('to-' + next); clearTimeout(showPage.t); showPage.t = setTimeout(() => B.classList.remove('to-cars', 'to-home', 'to-car'), 1100); }
+      if (animate && prev && !reduce && !noAnim) { void B.offsetWidth; B.classList.add('to-' + next); clearTimeout(showPage.t); showPage.t = setTimeout(() => B.classList.remove('to-cars', 'to-home', 'to-car'), 1100); }
     };
+    // into or out of a car page: the car's photo glides between its card and the page's big photo
+    if (animate && !reduce && document.startViewTransition && ((next === 'car' && (prev === 'cars' || prev === 'compare')) || (prev === 'car' && next === 'cars'))) {
+      const fromCard = next === 'car', NAME = 'rr-car';
+      const cardImg = () => { const m = modelBySlug(carSlug); const el = m && document.querySelector(`#results [data-key="${CSS.escape(m.brand + '|' + m.model)}"] img`); return el && el.offsetParent ? el : null; };
+      let src = fromCard ? (lastCarImg && lastCarImg.isConnected && lastCarImg.offsetParent ? lastCarImg : null) : $('#heroGal');
+      if (src) src.style.viewTransitionName = NAME;
+      B.classList.add('vt-car');
+      const vt = document.startViewTransition(() => {
+        if (src) src.style.viewTransitionName = '';
+        swap(true);
+        const dst = fromCard ? $('#heroGal') : cardImg();
+        if (src && dst) dst.style.viewTransitionName = NAME;
+        vt.dst = dst;
+      });
+      vt.finished.finally(() => { if (vt.dst) vt.dst.style.viewTransitionName = ''; B.classList.remove('vt-car'); });
+      return;
+    }
     if (animate && prev && !reduce && window.scrollY < 400 && prev !== 'car' && next !== 'car') { B.classList.add('leaving'); clearTimeout(showPage.l); showPage.l = setTimeout(swap, 330); }
     else swap();
   }
@@ -1621,7 +1641,14 @@
     document.addEventListener('click', (e) => {
       const a = e.target.closest('[data-go]'); if (!a) return;
       e.preventDefault();
-      if (a.hasAttribute('data-fresh')) browseAll(); // "Browse all cars" on the landing page starts with no filters
+      if (a.hasAttribute('data-fresh')) { // "Browse all cars" on the landing page: a short loader, then all cars with no filters
+        const L = window.RRLoader, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!L) { browseAll(); go(a.dataset.go); return; }
+        L.show('Loading all cars…');
+        setTimeout(() => { browseAll(); go(a.dataset.go); }, reduce ? 300 : 900);
+        setTimeout(() => L.hide(), reduce ? 450 : 1150);
+        return;
+      }
       go(a.dataset.go);
     });
     // a shared link with filters, or a saved recommendation, opens straight on the cars page
