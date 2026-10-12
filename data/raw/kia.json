@@ -1,6 +1,6 @@
 {
  "brand": "Kia",
- "scrapedAt": "2026-10-05T00:05:15.551Z",
+ "scrapedAt": "2026-10-12T00:42:43.335Z",
  "source": "https://www.kia.com/in/our-vehicles/seltos/showroom.html",
  "models": [
   {
@@ -530,7 +530,7 @@
      "features": [
       {
        "group": "Highlights",
-       "label": "ADAS Level 2 with 29 Autonomous Features",
+       "label": "ADAS Level 2 with 30 Autonomous Features",
        "value": "Yes"
       },
       {

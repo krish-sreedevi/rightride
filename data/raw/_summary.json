@@ -1,4 +1,143 @@
 {
- "at": "2026-10-06T18:46:17.258Z",
- "summary": []
+ "at": "2026-10-12T00:46:38.712Z",
+ "summary": [
+  {
+   "brand": "BMW",
+   "key": "bmw",
+   "models": 17,
+   "variants": 23,
+   "seconds": 5,
+   "log": []
+  },
+  {
+   "brand": "Honda",
+   "key": "honda",
+   "models": 5,
+   "variants": 26,
+   "seconds": 66,
+   "log": []
+  },
+  {
+   "brand": "Hyundai",
+   "key": "hyundai",
+   "models": 13,
+   "variants": 221,
+   "seconds": 68,
+   "log": []
+  },
+  {
+   "brand": "Jeep",
+   "key": "jeep",
+   "models": 4,
+   "variants": 18,
+   "seconds": 5,
+   "log": []
+  },
+  {
+   "brand": "Kia",
+   "key": "kia",
+   "models": 11,
+   "variants": 63,
+   "seconds": 18,
+   "log": []
+  },
+  {
+   "brand": "Mahindra",
+   "key": "mahindra",
+   "models": 10,
+   "variants": 134,
+   "seconds": 18,
+   "log": []
+  },
+  {
+   "brand": "Maruti Suzuki",
+   "key": "maruti",
+   "models": 9,
+   "variants": 103,
+   "seconds": 12,
+   "log": []
+  },
+  {
+   "brand": "Mercedes-Benz",
+   "key": "mercedes",
+   "models": 24,
+   "variants": 32,
+   "seconds": 8,
+   "log": []
+  },
+  {
+   "brand": "MG",
+   "key": "mg",
+   "models": 11,
+   "variants": 46,
+   "seconds": 27,
+   "log": []
+  },
+  {
+   "brand": "Maruti Suzuki",
+   "key": "nexa",
+   "models": 9,
+   "variants": 76,
+   "seconds": 27,
+   "log": []
+  },
+  {
+   "brand": "Nissan",
+   "key": "nissan",
+   "models": 3,
+   "variants": 42,
+   "seconds": 5,
+   "log": []
+  },
+  {
+   "brand": "Renault",
+   "key": "renault",
+   "models": 4,
+   "variants": 38,
+   "seconds": 13,
+   "log": []
+  },
+  {
+   "brand": "Skoda",
+   "key": "skoda",
+   "models": 6,
+   "variants": 47,
+   "seconds": 10,
+   "log": [
+    "skoda no variants Octavia RS"
+   ]
+  },
+  {
+   "brand": "Tata",
+   "key": "tata-ev",
+   "models": 6,
+   "variants": 45,
+   "seconds": 21,
+   "log": []
+  },
+  {
+   "brand": "Tata",
+   "key": "tata",
+   "models": 0,
+   "variants": 0,
+   "seconds": 17,
+   "error": "Error: page.evaluate: Error: HTTP 403 https://tata.cars/\n    at Object.fetchText (eval at evaluate (:234:30), <anonymous>:14:26)\n    at async Object.fetchDoc (eval at evaluate (:234:30), <anonymous>:29:18)\n    at async run (eval at evaluate (:234:30), <anonymous>:3:18)\n    at async <anonymous>:260:30"
+  },
+  {
+   "brand": "Toyota",
+   "key": "toyota",
+   "models": 13,
+   "variants": 79,
+   "seconds": 42,
+   "log": []
+  },
+  {
+   "brand": "Volkswagen",
+   "key": "volkswagen",
+   "models": 3,
+   "variants": 23,
+   "seconds": 36,
+   "log": []
+  }
+ ]
 }

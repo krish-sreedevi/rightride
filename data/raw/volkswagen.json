@@ -1,6 +1,6 @@
 {
  "brand": "Volkswagen",
- "scrapedAt": "2026-10-05T00:09:22.024Z",
+ "scrapedAt": "2026-10-12T00:46:38.519Z",
  "source": "https://www.volkswagen.co.in/en.html",
  "models": [
   {
@@ -385,9 +385,64 @@
    ]
   },
   {
-   "model": "VW Virtus",
-   "url": "https://www.volkswagen.co.in/en/models/virtus.html",
-   "image": "https://www.volkswagen.co.in/etc.clientlibs/clientlibs/vwa-ngw18/ngw18-frontend/apps/resources/statics/img/vw-logo-2x.png",
+   "model": "Volkswagen Virtus Anniversary Edition",
+   "url": "https://www.volkswagen.co.in/en/models/virtus-sport.html",
+   "image": "https://assets.volkswagen.com/is/image/volkswagenag/virtus-sport-og-image?Zml0PWNyb3AlMkMxJndpZD0xMjAwJmhlaT02MDAmZm10PWpwZWcmcWx0PTc5JmJmYz1vZmYmNzY1Nw==",
+   "variants": [
+    {
+     "name": "Virtus GT Line 1.0 TSI MT",
+     "trim": "Virtus GT Line",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "",
+     "price": 1434900,
+     "priceCity": "Delhi",
+     "prices": {},
+     "specs": {},
+     "features": []
+    },
+    {
+     "name": "Virtus GT Line 1.0 TSI AT",
+     "trim": "Virtus GT Line",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 1524900,
+     "priceCity": "Delhi",
+     "prices": {},
+     "specs": {},
+     "features": []
+    },
+    {
+     "name": "Virtus GT Plus Sport 1.5 TSI DSG",
+     "trim": "Virtus GT Plus Sport",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 1919900,
+     "priceCity": "Delhi",
+     "prices": {},
+     "specs": {},
+     "features": []
+    },
+    {
+     "name": "Virtus GT Plus Sport 1.5 TSI DSG - Anniversary Edition",
+     "trim": "Virtus GT Plus Sport",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "",
+     "price": 1919900,
+     "priceCity": "Delhi",
+     "prices": {},
+     "specs": {},
+     "features": []
+    }
+   ]
+  },
+  {
+   "model": "VW Virtus Chrome",
+   "url": "https://www.volkswagen.co.in/en/models/virtus-chrome.html",
+   "image": "https://assets.volkswagen.com/is/image/volkswagenag/virtus-chrome-og-image?Zml0PWNyb3AlMkMxJndpZD0xMjAwJmhlaT02MDAmZm10PWpwZWcmcWx0PTc5JmJmYz1vZmYmNzY1Nw==",
    "variants": [
     {
      "name": "Virtus 1.0 TSI MT Comfortline",

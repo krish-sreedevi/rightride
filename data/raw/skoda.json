@@ -1,8 +1,146 @@
 {
  "brand": "Skoda",
- "scrapedAt": "2026-10-05T00:07:39.767Z",
+ "scrapedAt": "2026-10-12T00:44:42.969Z",
  "source": "https://skodapeaceofmind.co.in/Skoda_TCD/checkprice/checkprice.aspx",
  "models": [
+  {
+   "model": "New Slavia",
+   "url": "https://www.skoda-auto.co.in/models/new-slavia",
+   "variants": [
+    {
+     "name": "Classic 1.0 TSI MT",
+     "trim": "Classic",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1.0 TSI",
+     "price": 999900,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Classic+ 1.0 TSI MT",
+     "trim": "Classic+",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1.0 TSI",
+     "price": 1099000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Signature 1.0 TSI MT",
+     "trim": "Signature",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1.0 TSI",
+     "price": 1394000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Sportline 1.0 TSI MT",
+     "trim": "Sportline",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1.0 TSI",
+     "price": 1434000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Prestige 1.0 TSI MT",
+     "trim": "Prestige",
+     "fuel": "Petrol",
+     "transmission": "Manual",
+     "engine": "1.0 TSI",
+     "price": 1589000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Classic+ 1.0 TSI AT",
+     "trim": "Classic+",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "1.0 TSI",
+     "price": 1249000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Signature 1.0 TSI AT",
+     "trim": "Signature",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "1.0 TSI",
+     "price": 1494000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Sportline 1.0 TSI AT",
+     "trim": "Sportline",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "1.0 TSI",
+     "price": 1534000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Prestige 1.0 TSI AT",
+     "trim": "Prestige",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "1.0 TSI",
+     "price": 1689000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Monte Carlo 1.0 TSI AT",
+     "trim": "Monte",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "1.0 TSI",
+     "price": 1729000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Prestige 1.5 TSI DSG",
+     "trim": "Prestige",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "1.5 TSI",
+     "price": 1859000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    },
+    {
+     "name": "Monte Carlo 1.5 TSI DSG",
+     "trim": "Monte",
+     "fuel": "Petrol",
+     "transmission": "Automatic",
+     "engine": "1.5 TSI",
+     "price": 1884000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": []
+    }
+   ]
+  },
   {
    "model": "Kodiaq RS",
    "url": "https://www.skoda-auto.co.in/models/kodiaq-rs",

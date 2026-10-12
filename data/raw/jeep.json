@@ -1,6 +1,6 @@
 {
  "brand": "Jeep",
- "scrapedAt": "2026-10-05T00:05:06.193Z",
+ "scrapedAt": "2026-10-12T00:42:25.736Z",
  "source": "jeep-india.com model pages (trim highlights, starting ex-showroom)",
  "models": [
   {
@@ -1504,7 +1504,7 @@
      "transmission": "Automatic",
      "drive": "4x4",
      "seats": 5,
-     "price": 6620000,
+     "price": 6770000,
      "priceCity": "Delhi",
      "prices": {},
      "features": [
@@ -1542,7 +1542,7 @@
      "transmission": "Automatic",
      "drive": "4x4",
      "seats": 5,
-     "price": 7080000,
+     "price": 7230000,
      "priceCity": "Delhi",
      "prices": {},
      "features": [

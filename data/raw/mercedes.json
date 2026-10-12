@@ -1,6 +1,6 @@
 {
  "brand": "Mercedes-Benz",
- "scrapedAt": "2026-10-05T00:06:11.233Z",
+ "scrapedAt": "2026-10-12T00:43:20.962Z",
  "source": "https://www.mercedes-benz.co.in/passengercars/models.html?group=all",
  "models": [
   {
@@ -42,7 +42,7 @@
      "drive": "AWD",
      "seats": 4,
      "engine": "1999 cc",
-     "price": 11500000,
+     "price": 11600000,
      "priceCity": "Delhi",
      "prices": {},
      "features": [],
@@ -67,7 +67,7 @@
      "drive": "",
      "seats": 5,
      "engine": "1496 cc",
-     "price": 6120000,
+     "price": 6200000,
      "priceCity": "Delhi",
      "prices": {},
      "features": [],
@@ -134,7 +134,7 @@
      "drive": "AWD",
      "seats": 5,
      "engine": "",
-     "price": 13350000,
+     "price": 13500000,
      "priceCity": "Delhi",
      "prices": {},
      "features": [],
@@ -159,7 +159,7 @@
      "drive": "AWD",
      "seats": 5,
      "engine": "1993 cc",
-     "price": 8350000,
+     "price": 8400000,
      "priceCity": "Delhi",
      "prices": {},
      "features": [],
@@ -176,7 +176,7 @@
      "drive": "AWD",
      "seats": 5,
      "engine": "1993 cc",
-     "price": 8150000,
+     "price": 8200000,
      "priceCity": "Delhi",
      "prices": {},
      "features": [],
@@ -268,7 +268,7 @@
      "drive": "AWD",
      "seats": 5,
      "engine": "1993 cc",
-     "price": 7700000,
+     "price": 7800000,
      "priceCity": "Delhi",
      "prices": {},
      "features": [],
@@ -394,7 +394,7 @@
      "drive": "AWD",
      "seats": 5,
      "engine": "",
-     "price": 31000000,
+     "price": 31500000,
      "priceCity": "Delhi",
      "prices": {},
      "features": [],
@@ -436,7 +436,7 @@
      "drive": "AWD",
      "seats": 5,
      "engine": "2989 cc",
-     "price": 37400000,
+     "price": 38000000,
      "priceCity": "Delhi",
      "prices": {},
      "features": [],
@@ -528,7 +528,7 @@
      "drive": "AWD",
      "seats": 4,
      "engine": "2999 cc",
-     "price": 13250000,
+     "price": 13400000,
      "priceCity": "Delhi",
      "prices": {},
      "features": [],
@@ -628,7 +628,7 @@
      "drive": "AWD",
      "seats": 2,
      "engine": "3982 cc",
-     "price": 30000000,
+     "price": 30500000,
      "priceCity": "Delhi",
      "prices": {},
      "features": [],
@@ -660,6 +660,31 @@
      "specs": {
       "Top speed": "210",
       "Boot": "440"
+     }
+    }
+   ]
+  },
+  {
+   "model": "Mercedes-Maybach S-Class",
+   "body": "Sedan",
+   "url": "https://www.mercedes-benz.co.in/passengercars/models/saloon-long/mercedes-maybach-s-class/overview.html",
+   "image": "https://media.oneweb.mercedes-benz.com/images/dynamic/europe/IN/223970/807/iris.png?q=COSY-EU-100-1713d0VXqbYdng9jfZobxEnlqHI5QqqrQCPPnU2GOGmxm7skt0uBI5TB2rQm6ApnksS5uoSiaC3Mt9CzNTcDT7j6XEqKVSJasvqtO5hLRcbC1axXIHKH1JQ9v8wOkD8iZbmWT4FIY5Hg9QrCgPDknzdeWmoWcsdhMqgUf%25TRUGEy6xc0lYS1pB2rtw6ApncgL5uoXPbC3MJyIzNTOYh7j6bK5KVSue4vqt3szLRcNU1axXjxaH1JV2s8wOqNLiZbRj54FIxe4g9Q1sMPDkwU7eWmZL5sdhFagUf%259HUGEyDgc0lYWBHB2rdLvApnqZn5uoR7XC3MxKCzNT1s87j6wriKVSZnCvqtFLgLRc9a7axXDHtH1JW9Z8wOdAFiZbHuJ4FI8Vrg9Qia8PDk4eoeWmNVcsdhjqTUf%25VwtGEyquM0lY9abB2rD2vApnWp35uodFJC3MfdOzNTEsT7j6lrbKVS2nyvqtpoULRcuCPaxX3zXH1JN7c8wOjiUiZbV4a4FIqg4g9QRPQPDkxeteWm1sKsdhwUTUf%25ZpzGEyFu20lY93%25B2r%25HUApny8A5uoYiNC3Mr4mzNTnvA7j6xj5KVS1G4vqtw0vLRcZG0a8L7hymoBB2rN8iACBX%25u5zAjiaC3Md3mzNT9fz7j6DUbKVSWGKvqtdozLRcfMGaxXEzKH1Jp2A8wOxBMiZb1A54FIw3Yg9QZNBPDkFRkeWm9x6sdhD0sUf%25WBJGEyd8G0lYfkYB2rEm8Apnl5G5uo2g3C3MpPezNTuPS7j631sKVS%25e4vqtyLQLRcxUraxX1xmH1Jw1J8wOZwAiZbFun4FI9Vog9QDKbPDkWJneWmdO5sdhfUgUfxtVkgAMrSGtlKS3bF%25vGyhQ2QPTPwMWf1nZMqJRYA4VdK&cp=8mhxDZy3qhkDFW2gqQWvpQ&&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center&cp=8mhxDZy3qhkDFW2gqQWvpQ",
+   "variants": [
+    {
+     "name": "Mercedes-Maybach S-Class Hybrid",
+     "trim": "Hybrid",
+     "fuel": "Hybrid",
+     "transmission": "Automatic",
+     "drive": "AWD",
+     "seats": 5,
+     "engine": "2998 cc",
+     "price": 32000000,
+     "priceCity": "Delhi",
+     "prices": {},
+     "features": [],
+     "specs": {
+      "Top speed": "250",
+      "Boot": "330"
      }
     }
    ]
@@ -703,7 +728,7 @@
      "drive": "AWD",
      "seats": 2,
      "engine": "3982 cc",
-     "price": 43000000,
+     "price": 44000000,
      "priceCity": "Delhi",
      "prices": {},
      "features": [],
