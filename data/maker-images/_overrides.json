@@ -35,6 +35,10 @@
   },
   "Nissan|Magnite": {
    "contactShadow": true
+  },
+  "Jeep|Grand Cherokee": {
+   "ai": true,
+   "contactShadow": true
   }
  }
 }
