@@ -32,7 +32,8 @@ window.RR_ANALYTICS = { goatcounter: 'rightride', ga: 'G-B102KX5D7F', clarity: '
   s.async = true; s.src = 'https://gc.zgo.at/count.js';
   s.dataset.goatcounter = `https://${code}.goatcounter.com/count`;
   s.onload = () => { while (q.length) window.goatcounter.count(q.shift()); };
-  document.head.appendChild(s);
+  const afterLoad = (fn, ms) => (document.readyState === 'complete' ? setTimeout(fn, ms) : window.addEventListener('load', () => setTimeout(fn, ms), { once: true }));
+  afterLoad(() => document.head.appendChild(s), 300); // counted after the page is up, so it never slows the first paint
 
   // Google Analytics 4 (gtag.js). Page views are sent by rrTrack on every route, so the automatic one is off.
   window.dataLayer = window.dataLayer || [];
@@ -41,7 +42,7 @@ window.RR_ANALYTICS = { goatcounter: 'rightride', ga: 'G-B102KX5D7F', clarity: '
   window.gtag('config', ga, { send_page_view: false });
   const g = document.createElement('script');
   g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga;
-  document.head.appendChild(g);
+  afterLoad(() => document.head.appendChild(g), 800);
 
   // Microsoft Clarity: loads once the page has finished loading, so it never slows the first paint
   const startClarity = () => {
@@ -51,6 +52,5 @@ window.RR_ANALYTICS = { goatcounter: 'rightride', ga: 'G-B102KX5D7F', clarity: '
       y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, 'clarity', 'script', window.RR_ANALYTICS.clarity);
   };
-  if (document.readyState === 'complete') setTimeout(startClarity, 1500);
-  else window.addEventListener('load', () => setTimeout(startClarity, 1500), { once: true });
+  afterLoad(startClarity, 2500);
 })();
