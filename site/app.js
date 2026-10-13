@@ -1506,31 +1506,35 @@
     }, (err) => {
       locating = false; sel.classList.remove('locating'); fillStates(); $('#state').value = state.st;
       if (auto === true) return; // silent attempt — don't nag
-      locToast(err.code === 1 ? 'Allow location access to price cars for your state automatically, or choose your state.' : 'We couldn\'t find your location. Please choose your state.', err.code === 1);
+      locToast(err.code === 1 ? 'Location access wasn\'t allowed — that\'s fine. Choose your state from the drop-down to see the right on-road prices.' : 'We couldn\'t find your location. Please choose your state.', err.code === 1);
     }, { timeout: 12000, maximumAge: 3600e3 });
   }
   function hideLocToast() { const t = $('#locToast'); if (t) t.hidden = true; }
-  function locToast(msg, canRetry) {
+  function locToast(msg, canRetry, retryLabel, stay) {
     const show = () => {
       const t = $('#locToast');
-      t.innerHTML = `<span class="lt-ico" aria-hidden="true">◎</span><span class="lt-msg">${esc(msg)}</span><span class="lt-act">${canRetry ? '<button class="btn ghost" type="button" data-loc="retry">Allow location</button>' : ''}<button class="btn primary" type="button" data-loc="pick">Choose state</button><button class="lt-x" type="button" data-loc="close" aria-label="Dismiss">✕</button></span>`;
-      t.hidden = false; clearTimeout(locToast.t); locToast.t = setTimeout(hideLocToast, 15000);
+      t.innerHTML = `<span class="lt-ico" aria-hidden="true">◎</span><span class="lt-msg">${esc(msg)}</span><span class="lt-act">${canRetry ? '<button class="btn ghost" type="button" data-loc="retry">' + esc(retryLabel || 'Allow location') + '</button>' : ''}<button class="btn primary" type="button" data-loc="pick">Choose state</button><button class="lt-x" type="button" data-loc="close" aria-label="Dismiss">✕</button></span>`;
+      t.hidden = false; clearTimeout(locToast.t); locToast.t = setTimeout(hideLocToast, stay || 15000);
     };
     const w = $('#wizard');
     if (w && w.open) w.addEventListener('close', () => setTimeout(show, 400), { once: true }); else show();
   }
+  const LOC_WHY = 'We only use your location to show the right on-road price for your state (road tax and registration differ by state). Rather not share it? Just pick your state from the drop-down at the top.';
   function autoLocate() {
-    if (store.get('stateManual', false)) return; // they picked a state themselves — respect it
+    if (autoLocate.done) return; autoLocate.done = true;  // once per visit
+    if (store.get('stateManual', false)) return;          // they picked a state themselves — respect it
     const asked = store.get('locAsked', false);
-    const go = () => { store.set('locAsked', true); detect(asked); }; // after the first time, fail quietly
+    const explain = () => { store.set('locAsked', true); locToast(LOC_WHY, true, 'Use my location', 25000); }; // our note first; the browser asks only if they tap "Use my location"
     if (navigator.permissions && navigator.permissions.query) {
       navigator.permissions.query({ name: 'geolocation' }).then((p) => {
         if (p.state === 'granted') detect(true);            // already allowed: no prompt, just locate
-        else if (p.state === 'prompt' && !asked) go();       // ask once, ever
-        else if (p.state === 'denied' && !asked) { store.set('locAsked', true); locToast('Location access is blocked for this site. Choose your state, or allow location in your browser settings.', false); }
-      }).catch(() => { if (!asked) go(); });
-    } else if (!asked) go();
+        else if (p.state === 'prompt' && !asked) explain(); // explain once, ever
+      }).catch(() => { if (!asked) explain(); });
+    } else if (!asked) explain();
   }
+  // ask only once they're looking at cars, never on the landing page
+  const locateSoon = () => { if (!autoLocate.done && !autoLocate.t) autoLocate.t = setTimeout(() => { if (page === 'cars' || page === 'car') autoLocate(); autoLocate.t = 0; }, 1500); };
+
 
   // ---------------- two pages: home (#/) and cars (#/cars) ----------------
   let page = null, carSlug = null, carsY = 0;
@@ -1546,6 +1550,7 @@
       B.classList.remove('leaving', 'to-cars', 'to-home', 'to-car');
       B.dataset.page = next;
       if (next !== 'car') { document.title = ORIG_TITLE; navFromList = navFromList && next === 'cars'; }
+      if (next === 'cars' || next === 'car') locateSoon(); // the location question waits until cars are on screen
       if (next === 'car') { carSlug = arg; renderCar(arg); window.scrollTo({ top: 0, behavior: 'instant' }); }
       else if (next === 'compare') { cmpArg = arg || ''; cmp.vsel = {}; renderCompare(cmpArg); window.scrollTo({ top: 0, behavior: 'instant' }); if (!EXTRA_DATA) loadExtras().then((x) => { EXTRA_DATA = x || {}; if (page === 'compare') keepY(() => renderCompare(cmpArg)); }); }
       else if (next === 'cars') { render(); window.scrollTo({ top: prev === 'car' ? carsY : 0, behavior: 'instant' }); }
@@ -2178,7 +2183,7 @@
     } catch (e) {
       $('#resultTitle').textContent = 'Could not load car data. Please refresh.'; return;
     }
-    fillStates(); loadFilters(); state.tab = store.get('tab', null); if (!TABS.some((t) => t.id === state.tab) || (state.tab === 'picks' && !state.rec)) state.tab = state.rec && state.sort === 'rec' ? 'picks' : 'all'; prep(); buildFilters(); wire(); render(); wirePages(); autoLocate();
+    fillStates(); loadFilters(); state.tab = store.get('tab', null); if (!TABS.some((t) => t.id === state.tab) || (state.tab === 'picks' && !state.rec)) state.tab = state.rec && state.sort === 'rec' ? 'picks' : 'all'; prep(); buildFilters(); wire(); render(); wirePages();
     { const hs = $('#heroStats'), s = `${DATA.cars.length.toLocaleString('en-IN')} variants · ${new Set(DATA.cars.map((c) => c.brand + c.model)).size} models · ${DATA.brands.length} brands — priced for your state`; if (hs.textContent !== s) hs.textContent = s; }
     $('#updated').textContent = `Data updated ${new Date(DATA.generated).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} · ${DATA.cars.length} variants from ${DATA.brands.length} brands`;
   }
