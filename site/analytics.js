@@ -35,6 +35,17 @@ window.RR_ANALYTICS = { goatcounter: 'rightride', ga: 'G-B102KX5D7F', clarity: '
   const afterLoad = (fn, ms) => (document.readyState === 'complete' ? setTimeout(fn, ms) : window.addEventListener('load', () => setTimeout(fn, ms), { once: true }));
   afterLoad(() => document.head.appendChild(s), 300); // counted after the page is up, so it never slows the first paint
 
+  // Google Analytics and Clarity are heavier, so they wait until the visitor first interacts (tap, scroll, key)
+  // or until 6 s after the page has loaded and the browser is idle, whichever comes first. Events sent before
+  // then are queued and delivered once they load, so nothing is lost.
+  const later = (fn) => {
+    let done = false;
+    const go = () => { if (done) return; done = true; EV.forEach((e) => removeEventListener(e, go, true)); fn(); };
+    const EV = ['pointerdown', 'keydown', 'touchstart', 'scroll', 'wheel'];
+    EV.forEach((e) => addEventListener(e, go, { capture: true, passive: true, once: true }));
+    afterLoad(() => (window.requestIdleCallback ? requestIdleCallback(go, { timeout: 2000 }) : go()), 6000);
+  };
+
   // Google Analytics 4 (gtag.js). Page views are sent by rrTrack on every route, so the automatic one is off.
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () { window.dataLayer.push(arguments); };
@@ -42,15 +53,13 @@ window.RR_ANALYTICS = { goatcounter: 'rightride', ga: 'G-B102KX5D7F', clarity: '
   window.gtag('config', ga, { send_page_view: false });
   const g = document.createElement('script');
   g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga;
-  afterLoad(() => document.head.appendChild(g), 800);
+  later(() => document.head.appendChild(g));
 
-  // Microsoft Clarity: loads once the page has finished loading, so it never slows the first paint
+  // Microsoft Clarity (heatmaps and replays)
+  window.clarity = window.clarity || function () { (window.clarity.q = window.clarity.q || []).push(arguments); }; // queue until it loads
   const startClarity = () => {
-    (function (c, l, a, r, i, t, y) {
-      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
-      t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
-      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-    })(window, document, 'clarity', 'script', window.RR_ANALYTICS.clarity);
+    const t = document.createElement('script'); t.async = true; t.src = 'https://www.clarity.ms/tag/' + window.RR_ANALYTICS.clarity;
+    document.head.appendChild(t);
   };
-  afterLoad(startClarity, 2500);
+  later(startClarity);
 })();
