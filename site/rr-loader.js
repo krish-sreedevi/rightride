@@ -1,4 +1,4 @@
-/* Right Ride — loading animation (v6 "Light Trails").
+/* Right Ride — loading animation (v9 "Light Trails").
    Overlay:   RRLoader.show("Finding your right ride…");  ...  RRLoader.hide();
    Wrap work: RRLoader.during(fetch("data/cars.json"), "Loading cars…");
    Inline:    <img src="rr-loader-day.svg" width="64" alt="Loading">  (rr-loader-night.svg on dark backgrounds) */

@@ -1369,7 +1369,7 @@
     const close = `<button class="wz-x" type="button" data-wz="close" aria-label="Close">✕</button>`;
     let body = '', canNext = true;
     if (s === 0) {
-      body = `<img class="wz-mark" src="brand/logo-day.webp" alt="Right Ride"><h2 id="wzTitle" class="display">What can we help you with?</h2>
+      body = `<img class="wz-mark" src="brand/logo-day.webp?v=9" alt="Right Ride"><h2 id="wzTitle" class="display">What can we help you with?</h2>
         <div class="wz-choices two">
           <button class="wz-opt" type="button" data-wz="browse"><b>Just browsing</b><span>Explore every car, variant and on-road price</span></button>
           <button class="wz-opt primary" type="button" data-wz="start" autofocus><b>Find the Right Ride for me!</b><span>Personalised recommendations in 5 quick steps</span></button>
