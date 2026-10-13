@@ -236,7 +236,7 @@ def build(only=None, force=False):
     index = json.load(open(index_path)) if os.path.exists(index_path) else {'models': {}}
     src_files = [f for f in glob.glob(os.path.join(ROOT, 'data/maker-images/*.json')) if not os.path.basename(f).startswith('_')]
     overrides = {}
-    ov = os.path.join(ROOT, 'data/maker-images/_overrides.json')  # optional manual fixes: {"Brand|Model": {"hero": url, "flip": true}}
+    ov = os.path.join(ROOT, 'data/maker-images/_overrides.json')  # optional manual fixes: {"Brand|Model": {"hero": url, "flip": true, "contactShadow": true}}
     if os.path.exists(ov):
         overrides = json.load(open(ov)).get('models', {})
     done = fail = 0
@@ -265,6 +265,9 @@ def build(only=None, force=False):
                         how = standardize(url, path, flip=o.get('flip', False), erase=o.get('erase') if kind == 'hero' else None, ai=o.get('ai', False))
                         if not how:
                             print('  could not cut out', key, kind, name or '', file=sys.stderr); fail += 1; continue
+                        if o.get('contactShadow'):  # high camera angle: shadow follows the tyres (see reshadow.py)
+                            from reshadow import contact_shadow
+                            contact_shadow(Image.open(path)).save(path, 'WEBP', quality=82, method=6)
                         rec['how'] = how; done += 1
                     except Exception as e:
                         print('  failed', key, kind, name or '', str(e)[:80], file=sys.stderr); fail += 1
