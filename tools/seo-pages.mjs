@@ -57,7 +57,7 @@ ${go ? `<script>if (/[?&]go=1/.test(location.search)) location.replace(${JSON.st
 <link rel="canonical" href="${canon}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Right Ride"><meta property="og:locale" content="en_IN">
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${canon}">
-<meta property="og:image" content="${esc(image || ORIGIN + '/brand/og-card.png')}"><meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="${esc(image || ORIGIN + '/brand/og-card.png?v=9')}"><meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#D02A1C">
 <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg?v=7s"><link rel="apple-touch-icon" href="/brand/app-icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap"></noscript>
@@ -164,11 +164,11 @@ for (const b of brands) {
 {
   const canon = `${ORIGIN}/cars/`;
   const body = `${crumbHtml([['Home', ORIGIN + '/'], ['Cars', canon]])}
-<h1>New cars in India ${YEAR}</h1>
-<p class="lede">Every new car on sale in India: ${all.length} models and ${D.cars.length} variants from ${brands.length} brands, with ex-showroom prices from each maker's official website. <a href="/#/cars">Filter them by budget and features, and see on-road prices for your state →</a></p>
+<h1>Cars in India ${YEAR}</h1>
+<p class="lede">Every car on sale in India: ${all.length} models and ${D.cars.length} variants from ${brands.length} brands, with ex-showroom prices from each maker's official website. <a href="/#/cars">Filter them by budget and features, and see on-road prices for your state →</a></p>
 <nav class="brandnav" aria-label="Brands">${brands.map((b) => `<a href="#${slug(b)}">${esc(b)}</a>`).join('')}</nav>
 ${brands.map((b) => `<section id="${slug(b)}"><h2><a href="/brands/${slug(b)}/">${esc(b)}</a></h2><div class="cars">${all.filter((m) => m.brand === b).map(card).join('')}</div></section>`).join('\n')}`;
-  write('cars/index.html', page({ title: `New Cars in India ${YEAR}: Prices, Variants & Features of Every Model | Right Ride`, desc: `Compare all ${all.length} new car models on sale in India from ${brands.length} brands: ex-showroom prices, variants, mileage, safety ratings and features.`, canon, body, jsonld: [crumbs([['Home', ORIGIN + '/'], ['Cars', canon]])], track: '/seo/cars' }));
+  write('cars/index.html', page({ title: `Cars in India ${YEAR}: Prices, Variants & Features of Every Model | Right Ride`, desc: `Compare all ${all.length} car models on sale in India from ${brands.length} brands: ex-showroom prices, variants, mileage, safety ratings and features.`, canon, body, jsonld: [crumbs([['Home', ORIGIN + '/'], ['Cars', canon]])], track: '/seo/cars' }));
 }
 
 // ---- open data for apps and AI assistants: every model and variant with prices, as plain JSON ----
@@ -179,12 +179,12 @@ const api = { source: ORIGIN, updated: TODAY, currency: 'INR', priceType: 'ex-sh
 write('api/models.json', JSON.stringify(api));
 write('llms.txt', `# Right Ride
 
-> Right Ride (rightride.in) is an independent guide to buying a new car in India. It lists every new car on sale (${all.length} models, ${D.cars.length} variants, ${brands.length} brands) with ex-showroom prices taken weekly from each maker's official website, on-road price estimates for every Indian state, variant-by-variant features, mileage, crash-test ratings, expert verdicts and nearby dealers.
+> Right Ride (rightride.in) is an independent guide to buying a car in India. It lists every car on sale (${all.length} models, ${D.cars.length} variants, ${brands.length} brands) with ex-showroom prices taken weekly from each maker's official website, on-road price estimates for every Indian state, variant-by-variant features, mileage, crash-test ratings, expert verdicts and nearby dealers.
 
 Prices are ex-showroom in Indian rupees unless stated. On-road prices (road tax, registration, insurance, FASTag, TCS) depend on the state and are shown in the interactive site. Last updated ${TODAY}.
 
 ## Car pages
-- [All new cars in India](${ORIGIN}/cars/): every model, grouped by brand
+- [All cars in India](${ORIGIN}/cars/): every model, grouped by brand
 ${brands.map((b) => `- [${b} cars](${ORIGIN}/brands/${slug(b)}/): ${((n) => n + (n === 1 ? ' model' : ' models'))(all.filter((m) => m.brand === b).length)}`).join('\n')}
 
 ## Data
