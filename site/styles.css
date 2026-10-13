@@ -1202,3 +1202,8 @@ a, .link, .tab, .foot-nav a, .filter-btn, .btn, .chip, .ms > summary, .ms-opt, .
 
 /* landing page: no state picker in the header (it appears once cars are shown) */
 body[data-page="home"] .topbar .loc { display: none; }
+
+/* car hero buttons: one tidy row, same height, centred */
+.cp-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 18px; }
+.cp-cta > .btn, .cp-cta .share-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; margin: 0; box-sizing: border-box; line-height: 1; vertical-align: middle; }
+.cp-cta > .btn svg, .cp-cta .share-btn svg { flex: none; }
