@@ -743,7 +743,7 @@
   // Answers go to a Google Form (its responses sheet is read hourly into the admin portal by tools/admin-stats.mjs).
   // FEEDBACK.form is the long id in the form's link (docs.google.com/forms/d/e/<id>/viewform); entries are the
   // form's field names (entry.123…) for questions 1–4, in order. Until they're set, answers open as an email instead.
-  const FEEDBACK = { form: '', entries: [] };
+  const FEEDBACK = { form: '1FAIpQLSf_s-T-xZx_vjFCMDt6rV7j4Ltg-KBrZI9OkbrdTq4zANMC2Q', entries: ['entry.203897553', 'entry.1082609341', 'entry.1294443554', 'entry.623616519'] };
   const FB_Q = [
     { k: 'exp', q: 'How was the experience of finding the right car for you?', o: [['1', 'Poor'], ['2', 'Fair'], ['3', 'Good'], ['4', 'Great'], ['5', 'Excellent']], scale: true },
     { k: 'cmp', q: 'Did you find the comparison section easy to use?', o: [['Yes', 'Yes'], ['Somewhat', 'Somewhat'], ['No', 'No'], ["Didn't use it", "Didn't use it"]] },
