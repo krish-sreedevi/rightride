@@ -50,7 +50,7 @@ const page = ({ title, desc, canon, body, jsonld = [], image, track, go }) => `<
 <html lang="en-IN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light only">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light only"><script>try{if(localStorage.getItem('rr-theme')==='dark'){document.documentElement.dataset.theme='dark';document.querySelector('meta[name=color-scheme]').content='dark'}}catch(e){}</script>
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 ${go ? `<script>if (/[?&]go=1/.test(location.search)) location.replace(${JSON.stringify(go)});</script>` : ''}

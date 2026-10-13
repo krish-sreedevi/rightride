@@ -1897,6 +1897,20 @@
     wireCompareBar(); wireComparePage();
     $('#modal').addEventListener('click', (e) => { if (e.target.closest('[data-close]') || e.target.id === 'modal') $('#modal').close(); });
     $('#aboutLink').addEventListener('click', (e) => { e.preventDefault(); about(); });
+    // light / dark switch (home page only); the choice is remembered and applied on every page before it paints
+    const themeBtn = $('#themeBtn');
+    const setTheme = (dark) => {
+      const h = document.documentElement;
+      if (dark) h.dataset.theme = 'dark'; else delete h.dataset.theme;
+      const m = document.querySelector('meta[name=color-scheme]'); if (m) m.content = dark ? 'dark' : 'light only';
+      const l = dark ? 'Switch to light theme' : 'Switch to dark theme';
+      if (themeBtn) { themeBtn.setAttribute('aria-label', l); themeBtn.title = l; }
+      try { localStorage.setItem('rr-theme', dark ? 'dark' : 'light'); } catch (e) {}
+    };
+    if (themeBtn) {
+      if (document.documentElement.dataset.theme === 'dark') { themeBtn.setAttribute('aria-label', 'Switch to light theme'); themeBtn.title = 'Switch to light theme'; }
+      themeBtn.addEventListener('click', () => { const dark = document.documentElement.dataset.theme !== 'dark'; setTheme(dark); window.rrTrack && window.rrTrack('theme/' + (dark ? 'dark' : 'light'), 'Theme', true); });
+    }
     $('#feedbackLink').addEventListener('click', (e) => { e.preventDefault(); feedback(); });
     if (location.hash === '#feedback') { history.replaceState(null, '', location.pathname + location.search); feedback(); }
     $('#closeFilters').addEventListener('click', closeDrawer);

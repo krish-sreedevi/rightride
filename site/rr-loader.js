@@ -9,7 +9,7 @@
     st.textContent="#rr-loader{position:fixed;inset:0;z-index:2147482000;display:grid;place-items:center;align-content:center;gap:16px;background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s}"+
       "#rr-loader.on{opacity:1;visibility:visible}#rr-loader svg{width:84px;height:auto}#rr-loader .rr-n{display:none}"+
       "#rr-loader p{margin:0;font:400 12px/1.4 Michroma,system-ui,sans-serif;letter-spacing:.06em;color:#15181D;opacity:.75}"+
-      "@media not all{#rr-loader{background:rgba(7,7,8,.9)}#rr-loader .rr-d{display:none}#rr-loader .rr-n{display:block}#rr-loader p{color:#fff}}";
+      "html[data-theme=dark] #rr-loader{background:rgba(7,7,8,.9)}html[data-theme=dark] #rr-loader .rr-d{display:none}html[data-theme=dark] #rr-loader .rr-n{display:block}html[data-theme=dark] #rr-loader p{color:#fff}";
     document.head.appendChild(st);
     el=document.createElement("div"); el.id="rr-loader"; el.setAttribute("role","status"); el.setAttribute("aria-live","polite");
     el.innerHTML='<div class="rr-d">'+DAY+'</div><div class="rr-n">'+NIGHT+'</div><p></p>'; document.body.appendChild(el);

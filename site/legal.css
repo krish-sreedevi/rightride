@@ -1,6 +1,6 @@
 /* Privacy policy and terms pages */
 :root { --bg:#f5f5f7; --panel:#fff; --text:#15181D; --muted:#5f6368; --line:rgba(0,0,0,.09); --chip:rgba(0,0,0,.05); --brand:#D02A1C; --gold:#C08A1E; }
-@media not all /* dark theme off */ { :root:not([data-theme="light"]) { --bg:#030303; --panel:#15161a; --text:#f5f5f7; --muted:#a1a1a6; --line:rgba(255,255,255,.1); --chip:rgba(255,255,255,.07); --brand:#FF5A3A; --gold:#F6CF6E; } }
+html[data-theme="dark"] { --bg:#030303; --panel:#15161a; --text:#f5f5f7; --muted:#a1a1a6; --line:rgba(255,255,255,.1); --chip:rgba(255,255,255,.07); --brand:#FF5A3A; --gold:#F6CF6E; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 Inter, system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
@@ -11,7 +11,8 @@ a:focus-visible { outline:2px solid var(--brand); outline-offset:2px; border-rad
 .top .sp { flex:1; }
 .top .back { font-weight:600; font-size:.9rem; text-decoration:none; }
 .top .logo-n { display:none; }
-@media not all /* dark theme off */ { .top .logo-d { display:none; } .top .logo-n { display:block; } }
+html[data-theme="dark"] .top .logo-d { display:none; }
+html[data-theme="dark"] .top .logo-n { display:block; }
 main { max-width:860px; margin:0 auto; padding:34px 16px 70px; }
 h1 { font-family:Michroma, Inter, sans-serif; font-weight:400; font-size:clamp(1.5rem, 4vw, 2.1rem); line-height:1.25; margin:0 0 6px; letter-spacing:-.01em; }
 .meta { color:var(--muted); font-size:.9rem; margin:0 0 24px; }
@@ -35,3 +36,6 @@ code { background:var(--chip); padding:1px 6px; border-radius:6px; font-size:.86
 
 /* always the light theme, whatever the phone or computer is set to */
 :root { color-scheme: light only; }
+
+html[data-theme="dark"] { color-scheme: dark; }
+html[data-theme="dark"] .top img { content: url(/brand/logo-night.webp?v=9); }
