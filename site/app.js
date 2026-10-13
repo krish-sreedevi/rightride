@@ -1430,7 +1430,7 @@
     } else if (s === 2) {
       const v = Number(a.budget); canNext = v >= 3 && v <= 500;
       body = `<h2 id="wzTitle" class="display">What's your budget?</h2><p class="muted">Your maximum on-road price in lakhs, for ${esc(RTO.states[state.st].name)}.</p>
-        <label class="wz-money"><span>₹</span><input id="wzBudget" inputmode="decimal" autocomplete="off" placeholder="e.g. 12" value="${esc(a.budget)}"><span>lakh</span></label>
+        <form id="wzBudgetForm" action="#" novalidate><label class="wz-money"><span>₹</span><input id="wzBudget" inputmode="decimal" enterkeyhint="next" autocomplete="off" placeholder="e.g. 12" value="${esc(a.budget)}"><span>lakh</span></label></form>
         <div class="chips wz-quick">${[6, 8, 10, 12, 15, 20, 25, 35, 50].map((n) => `<button class="chip" type="button" data-budget="${n}" aria-pressed="${Number(a.budget) === n}">₹${n} L</button>`).join('')}</div>
         ${a.budget && !canNext ? '<p class="wz-err">Enter an amount between 3 and 500 lakh.</p>' : ''}`;
     } else if (s === 3) {
@@ -1466,7 +1466,7 @@
       if (Math.abs(h1 - h0) > 2) { W.style.overflow = 'hidden'; W.animate([{ height: h0 + 'px' }, { height: h1 + 'px' }], { duration: 420, easing: ease }).onfinish = () => { W.style.overflow = ''; }; }
     }
     if (s === 5) wireTT($('#prioList'), () => wz.a.prio, (o) => { wz.a.prio = o; });
-    if (s === 2) { const i = $('#wzBudget'); i.focus(); i.setSelectionRange(i.value.length, i.value.length); }
+    if (s === 2 && matchMedia('(hover: hover) and (pointer: fine)').matches) { const i = $('#wzBudget'); i.focus(); i.setSelectionRange(i.value.length, i.value.length); }
   }
   // priorities list: tap a row to move it to the top; rows can also be dragged
   const UP_ICO = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg>';
@@ -1535,7 +1535,7 @@
       if (b.dataset.body) { a.body = b.dataset.body; wz.step = 2; return drawWizard(); }
       if (b.dataset.fuel) { a.fuel = b.dataset.fuel; if (a.fuel === 'Electric') { a.trans = 'Either'; wz.step = 5; } else wz.step = 4; return drawWizard(); }
       if (b.dataset.trans) { a.trans = b.dataset.trans; wz.step = 5; return drawWizard(); }
-      if (b.dataset.budget) { a.budget = b.dataset.budget; return drawWizard(); }
+      if (b.dataset.budget) { a.budget = b.dataset.budget; if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); return drawWizard(); }
     });
     W.addEventListener('input', (e) => {
       if (e.target.id !== 'wzBudget') return;
@@ -1544,7 +1544,26 @@
       $('[data-wz="next"]', W).disabled = !ok;
       $$('.wz-quick .chip', W).forEach((c) => c.setAttribute('aria-pressed', Number(c.dataset.budget) === v));
     });
-    W.addEventListener('keydown', (e) => { if (e.key === 'Enter' && e.target.id === 'wzBudget') { const n = $('[data-wz="next"]', W); if (!n.disabled) n.click(); } });
+    W.addEventListener('keydown', (e) => { if (e.key === 'Enter' && e.target.id === 'wzBudget') { e.preventDefault(); wzGo(); } });
+    W.addEventListener('submit', (e) => { if (e.target.id === 'wzBudgetForm') { e.preventDefault(); wzGo(); } });
+    function wzGo() { const n = $('[data-wz="next"]', W); if (n && !n.disabled) { const i = $('#wzBudget', W); if (i) i.blur(); n.click(); } }
+    // phones: while the on-screen keyboard is open, fit the card into the visible area above it,
+    // with Back / Next pinned to the bottom of the card so they're never hidden
+    const vv = window.visualViewport;
+    if (vv) {
+      const D = $('#wizard');
+      const fit = () => {
+        const kb = innerHeight - vv.height - vv.offsetTop;
+        if (D.open && kb > 80) {
+          D.classList.add('kb');
+          Object.assign(D.style, { top: vv.offsetTop + 8 + 'px', bottom: kb + 8 + 'px', maxHeight: vv.height - 16 + 'px' });
+        } else if (D.classList.contains('kb')) {
+          D.classList.remove('kb'); D.style.top = D.style.bottom = D.style.maxHeight = '';
+        }
+      };
+      vv.addEventListener('resize', fit); vv.addEventListener('scroll', fit);
+      W.addEventListener('focusin', () => setTimeout(fit, 300)); W.addEventListener('focusout', () => setTimeout(fit, 300));
+    }
     $('#wizard').addEventListener('click', (e) => { if (e.target.id === 'wizard' && wz.step === 0) closeWizard(); });
   }
   function maybeWelcome() {
