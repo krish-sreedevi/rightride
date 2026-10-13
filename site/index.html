@@ -25,7 +25,7 @@
   <link rel="preload" as="image" href="brand/logo-day.webp?v=9">
   <style>html.rr-pre body::after{content:"";position:fixed;inset:0;z-index:2147483000;background:radial-gradient(120% 90% at 50% 60%,#121215,#070708 55%,#030303)}</style>
   <script>/* opening animation: loads without blocking the page; a dark cover hides the page until it starts */
-  (function(){var f=/[?&]intro\b/.test(location.search),s=null;try{s=sessionStorage.getItem('rr-intro-seen')}catch(e){}if(s&&!f)return;var h=document.documentElement,off=function(){h.classList.remove('rr-pre')};h.classList.add('rr-pre');var j=document.createElement('script');j.src='rr-intro.js?v=9';j.async=true;j.onload=j.onerror=off;document.head.appendChild(j);setTimeout(off,3000)})();</script>
+  (function(){if(location.hash==='#feedback')return;var f=/[?&]intro\b/.test(location.search),s=null;try{s=sessionStorage.getItem('rr-intro-seen')}catch(e){}if(s&&!f)return;var h=document.documentElement,off=function(){h.classList.remove('rr-pre')};h.classList.add('rr-pre');var j=document.createElement('script');j.src='rr-intro.js?v=9';j.async=true;j.onload=j.onerror=off;document.head.appendChild(j);setTimeout(off,3000)})();</script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="home">

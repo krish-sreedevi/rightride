@@ -743,6 +743,7 @@
   // Answers go to a Google Form (its responses sheet is read hourly into the admin portal by tools/admin-stats.mjs).
   // FEEDBACK.form is the long id in the form's link (docs.google.com/forms/d/e/<id>/viewform); entries are the
   // form's field names (entry.123…) for questions 1–4, in order. Until they're set, answers open as an email instead.
+  const FB_LINK = location.hash === '#feedback'; // rightride.in/feedback (or /#feedback) opens the form straight away
   const FEEDBACK = { form: '1FAIpQLSf_s-T-xZx_vjFCMDt6rV7j4Ltg-KBrZI9OkbrdTq4zANMC2Q', entries: ['entry.203897553', 'entry.1082609341', 'entry.1294443554', 'entry.623616519'] };
   const FB_Q = [
     { k: 'exp', q: 'How was the experience of finding the right car for you?', o: [['1', 'Poor'], ['2', 'Fair'], ['3', 'Good'], ['4', 'Great'], ['5', 'Excellent']], scale: true },
@@ -1567,6 +1568,7 @@
     $('#wizard').addEventListener('click', (e) => { if (e.target.id === 'wizard' && wz.step === 0) closeWizard(); });
   }
   function maybeWelcome() {
+    if (FB_LINK) return;
     let seen = false; try { seen = !!sessionStorage.getItem('rr-welcome'); sessionStorage.setItem('rr-welcome', '1'); } catch (e) {}
     const force = /[?&]intro\b/.test(location.search);
     if ((seen && !force) || (!force && /[?&](body|feats|brand|fuel|min|max)=/.test(location.search))) return;
