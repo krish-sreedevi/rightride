@@ -46,13 +46,14 @@ const all = [...models.values()].sort((a, b) => a.brand.localeCompare(b.brand) |
 const brands = [...new Set(all.map((m) => m.brand))].sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
 
 // ---- shared page shell ----
-const page = ({ title, desc, canon, body, jsonld = [], image, track }) => `<!doctype html>
+const page = ({ title, desc, canon, body, jsonld = [], image, track, go }) => `<!doctype html>
 <html lang="en-IN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
+${go ? `<script>if (/[?&]go=1/.test(location.search)) location.replace(${JSON.stringify(go)});</script>` : ''}
 <link rel="canonical" href="${canon}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Right Ride"><meta property="og:locale" content="en_IN">
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${canon}">
@@ -141,7 +142,7 @@ ${similar.length ? `<section><h2>Similar cars to the ${esc(m.model)}</h2><div cl
     { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: qa.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
     { '@context': 'https://schema.org', '@type': 'Car', name, brand: { '@type': 'Brand', name: m.brand }, model: m.model, bodyType: m.body, fuelType: m.fuels.join(', '), vehicleTransmission: m.trans.join(', '), ...(m.seats.length ? { seatingCapacity: Math.max(...m.seats) } : {}), ...(m.image ? { image: abs(m.image) } : {}), url: canon, description: desc },
   ];
-  write(`cars/${m.slug}/index.html`, page({ title: `${name} Price ${YEAR}, Variants, Mileage & Features | Right Ride`, desc, canon, body, jsonld, image: m.image ? abs(m.image) : null, track: `/seo/car/${m.slug}` }));
+  write(`cars/${m.slug}/index.html`, page({ title: `${name} Price ${YEAR}, Variants, Mileage & Features | Right Ride`, desc, canon, body, jsonld, image: m.image ? abs(m.image) : null, track: `/seo/car/${m.slug}`, go: app }));
   urls.push([canon, '0.8']);
 }
 

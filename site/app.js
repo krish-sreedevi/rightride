@@ -855,7 +855,7 @@
           <div class="cp-price">${lakh(m.min)}${m.max > m.min ? ` <span>– ${lakh(m.max)}</span>` : ''}</div>
           <div class="cp-tags">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>
           <div class="cp-badges">${x && x.s ? `<span class="cp-badge"><b>${esc(x.s)}</b><small>/10</small><span>Expert score</span></span>` : ''}${nc ? `<a class="cp-badge nc" href="#cpSafety" data-jump="cpSafety"><b>${nc.stars}★</b><span>${esc(nc.by)}</span></a>` : ''}</div>
-          <div class="cp-cta"><a class="btn primary" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"${trk(m, 'video', ytCh(m))}><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>Watch expert video</a><a class="btn ghost" href="${esc(m.url)}" target="_blank" rel="noopener"${trk(m, 'maker-site', m.brand)}>Official site <span aria-hidden="true">↗</span></a></div>
+          <div class="cp-cta"><a class="btn primary" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"${trk(m, 'video', ytCh(m))}><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>Watch expert video</a><a class="btn ghost" href="${esc(m.url)}" target="_blank" rel="noopener"${trk(m, 'maker-site', m.brand)}>Official site <span aria-hidden="true">↗</span></a>${shareBtn('car')}</div>
         </div>
       </section>
       <nav class="cp-nav" id="cpNav" aria-label="Sections"><a href="#chRide" data-jump="chRide" class="on"><span class="n">1</span><b>Is this my Right Ride?</b></a><a href="#chVariant" data-jump="chVariant"><span class="n">2</span><b>Find the Right Variant</b></a><a href="#chDealer" data-jump="chDealer"><span class="n">3</span><b>Find the Right Dealer</b></a></nav>
@@ -1194,6 +1194,35 @@
   // which YouTube channel a video link goes to (the review title ends with it, e.g. "| Autocar India")
   const ytCh = (m) => { const x = expertOf(m); if (!x || !x.yt) return 'YouTube search'; const p = (x.ytT || '').split('|'); const ch = (p.length > 1 && p.pop().trim()) || 'YouTube'; return /autocar/i.test(ch) ? 'Autocar India' : ch; };
   // click tracking attributes, read by the click listener near the end of this file
+  // ---- sharing a car or a comparison: WhatsApp, copy link, or the phone's own share sheet ----
+  const SITE = 'https://rightride.in';
+  const SHARE_ICO = '<svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const WA_ICO = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.6 4c1.7.7 2.3.8 3.1.7.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg>';
+  const shareBtn = (kind) => `<span class="share" data-share-wrap><button class="btn ghost share-btn" type="button" data-share="${kind}" aria-haspopup="menu" aria-expanded="false">${SHARE_ICO}Share</button><span class="share-menu" role="menu" hidden><button type="button" role="menuitem" data-share-do="wa">${WA_ICO}WhatsApp</button><button type="button" role="menuitem" data-share-do="copy"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Copy link</button>${navigator.share ? '<button type="button" role="menuitem" data-share-do="more">' + SHARE_ICO + 'More…</button>' : ''}</span></span>`;
+  function shareInfo(kind) {
+    if (kind === 'car') {
+      const m = modelBySlug(carSlug); if (!m) return null;
+      const slug = mslug(m.brand, m.model), st = (RTO.states[state.st] || {}).name, low = Math.min(...m.vs.map((v) => onRoad(v.c, state.st).total));
+      return { url: `${SITE}/cars/${slug}/?go=1`, text: `Have a look at the ${m.brand} ${m.model} on Right Ride: on-road from ${lakh(low)}${st ? ' in ' + st : ''}, with every variant, feature and expert verdict.`, ev: `share/${seg(m.brand)}/${seg(m.model)}` };
+    }
+    const ms = (cmpArg || '').split(',').map(modelBySlug).filter(Boolean);
+    if (!ms.length) return null;
+    return { url: `${SITE}/#/compare/${ms.map((m) => mslug(m.brand, m.model)).join(',')}`, text: `Comparing the ${ms.map((m) => m.brand + ' ' + m.model).join(' vs ')} on Right Ride. Which one would you pick?`, ev: 'share/compare/' + seg(ms.map((m) => m.model).join(' vs ')) };
+  }
+  function closeShare() { $$('.share-menu').forEach((x) => { x.hidden = true; }); $$('.share-btn').forEach((b) => b.setAttribute('aria-expanded', 'false')); }
+  document.addEventListener('click', async (e) => {
+    const b = e.target.closest('[data-share]');
+    if (b) { const menu = b.nextElementSibling, open = menu.hidden; closeShare(); menu.hidden = !open; b.setAttribute('aria-expanded', String(open)); return; }
+    const d = e.target.closest('[data-share-do]');
+    if (!d) { if (!e.target.closest('.share-menu')) closeShare(); return; }
+    const kind = d.closest('[data-share-wrap]').querySelector('[data-share]').dataset.share, s = shareInfo(kind); closeShare(); if (!s) return;
+    const how = d.dataset.shareDo;
+    window.rrTrack && window.rrTrack(`${s.ev}/${how}`, 'Share', true);
+    if (how === 'wa') window.open('https://wa.me/?text=' + encodeURIComponent(s.text + '\n' + s.url), '_blank', 'noopener');
+    else if (how === 'more') { try { await navigator.share({ title: 'Right Ride', text: s.text, url: s.url }); } catch (err) {} }
+    else { try { await navigator.clipboard.writeText(s.url); flashMsg('Link copied'); } catch (err) { prompt('Copy this link', s.url); } }
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeShare(); });
   const trk = (m, kind, detail) => ` data-ev="${kind}" data-car="${mslug(m.brand, m.model)}" data-detail="${esc(detail || '')}"`;
   const ytUrl = (m) => { const x = expertOf(m); return x && x.yt ? `https://www.youtube.com/watch?v=${x.yt}` : `https://www.youtube.com/results?search_query=${encodeURIComponent(`${m.brand} ${m.model} review`)}`; };
   const onesOf = (c) => (/[01]/.test(c.fs) ? c.fs.split('1').length - 1 : null);
@@ -2041,7 +2070,7 @@
     ];
     el.innerHTML = `<div class="cp-wrap cmp-page">
       <button class="cp-back" type="button" data-go="cars"><span aria-hidden="true">‹</span> Back to cars</button>
-      <h1 class="ch-t cmp-title">Compare to find your Right Ride</h1>
+      <div class="cmp-title-row"><h1 class="ch-t cmp-title">Compare to find your Right Ride</h1>${shareBtn('cmp')}</div>
       <section class="cp-sec rq">
         <div class="rq-top"><div><h2 class="display">What matters to you?</h2><p class="muted">Pick up to 5 must-haves and 5 nice-to-haves: drag options into a box, or tap them. We'll rate each car on how well it does each one.</p></div></div>
         <div class="rq-buckets">${bucket('must', cmp.req.must, 5)}${bucket('nice', cmp.req.nice, 5)}</div>

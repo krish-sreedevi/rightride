@@ -1186,3 +1186,19 @@ a, .link, .tab, .foot-nav a, .filter-btn, .btn, .chip, .ms > summary, .ms-opt, .
 @keyframes hero-in { from { opacity: .01; transform: translateY(28px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
 .sun-copy .hero-title { animation-name: hero-in; }
 .sun-copy .lede { animation-name: hero-in; }
+
+/* share a car or a comparison */
+.share { position: relative; display: inline-flex; }
+.share-btn { display: inline-flex; align-items: center; gap: 7px; }
+.share-menu { position: absolute; top: calc(100% + 8px); left: 0; z-index: 40; min-width: 190px; padding: 6px; border-radius: 16px; background: var(--panel); box-shadow: 0 0 0 1px var(--line), 0 14px 36px rgba(0,0,0,.16); display: grid; gap: 2px; animation: page-in .22s var(--ease) both; }
+.share-menu[hidden] { display: none; }
+.share-menu button { display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px 12px; border: 0; border-radius: 11px; background: none; color: var(--text); font: 500 .92rem/1.2 Inter, system-ui, sans-serif; text-align: left; cursor: pointer; }
+.share-menu button:hover, .share-menu button:focus-visible { background: var(--chip, rgba(0,0,0,.05)); }
+.share-menu [data-share-do="wa"] svg { color: #25D366; }
+.cmp-title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin: 6px 0 16px; }
+.cmp-title-row .cmp-title { margin: 0; }
+.cp-cta { position: relative; z-index: 25; }
+.cp-hero:has(.share-menu:not([hidden])) { position: relative; z-index: 25; }
+
+/* landing page: no state picker in the header (it appears once cars are shown) */
+body[data-page="home"] .topbar .loc { display: none; }
