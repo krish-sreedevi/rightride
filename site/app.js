@@ -1542,13 +1542,13 @@
   function locToast(msg, canRetry, retryLabel, stay) {
     const show = () => {
       const t = $('#locToast');
-      t.innerHTML = `<span class="lt-ico" aria-hidden="true">◎</span><span class="lt-msg">${esc(msg)}</span><span class="lt-act">${canRetry ? '<button class="btn ghost" type="button" data-loc="retry">' + esc(retryLabel || 'Allow location') + '</button>' : ''}<button class="btn primary" type="button" data-loc="pick">Choose state</button><button class="lt-x" type="button" data-loc="close" aria-label="Dismiss">✕</button></span>`;
+      t.innerHTML = `<span class="lt-ico" aria-hidden="true">◎</span><span class="lt-msg">${esc(msg).replace(/\n/g, '<br>')}</span><span class="lt-act">${canRetry ? '<button class="btn ghost" type="button" data-loc="retry">' + esc(retryLabel || 'Allow location') + '</button>' : ''}<button class="btn primary" type="button" data-loc="pick">Choose state</button><button class="lt-x" type="button" data-loc="close" aria-label="Dismiss">✕</button></span>`;
       t.hidden = false; clearTimeout(locToast.t); locToast.t = setTimeout(hideLocToast, stay || 15000);
     };
     const w = $('#wizard');
     if (w && w.open) w.addEventListener('close', () => setTimeout(show, 400), { once: true }); else show();
   }
-  const LOC_WHY = 'We only use your location to show the right on-road price for your state (road tax and registration differ by state). Rather not share it? Just pick your state from the drop-down at the top.';
+  const LOC_WHY = 'We use your location only to show on-road prices for your state.\nPrefer not to? Pick your state from the drop\u2011down.';
   function autoLocate() {
     if (autoLocate.done) return; autoLocate.done = true;  // once per visit
     if (store.get('stateManual', false)) return;          // they picked a state themselves — respect it
