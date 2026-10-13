@@ -1,13 +1,13 @@
 /* Static car, brand and all-cars pages (built by tools/seo-pages.mjs) */
 :root { --bg:#f5f5f7; --panel:#fff; --text:#15181D; --muted:#5f6368; --line:rgba(0,0,0,.09); --chip:rgba(0,0,0,.05); --brand:#D02A1C; --yes:#1f8a4c; --no:#c2410c; }
-@media (prefers-color-scheme: dark) { :root { --bg:#030303; --panel:#15161a; --text:#f5f5f7; --muted:#a1a1a6; --line:rgba(255,255,255,.1); --chip:rgba(255,255,255,.07); --brand:#FF5A3A; --yes:#4ade80; --no:#fb923c; } }
+@media not all /* dark theme off */ { :root { --bg:#030303; --panel:#15161a; --text:#f5f5f7; --muted:#a1a1a6; --line:rgba(255,255,255,.1); --chip:rgba(255,255,255,.07); --brand:#FF5A3A; --yes:#4ade80; --no:#fb923c; } }
 * { box-sizing: border-box; }
 body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 Inter, system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
 a { color:var(--brand); text-underline-offset:2px; }
 .top { display:flex; align-items:center; gap:14px; padding:12px max(16px, calc((100vw - 1120px)/2)); background:var(--panel); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:5; }
 .top img { height:30px; width:auto; display:block; }
 .top .logo-n { display:none; }
-@media (prefers-color-scheme: dark) { .top .logo-d { display:none; } .top .logo-n { display:block; } }
+@media not all /* dark theme off */ { .top .logo-d { display:none; } .top .logo-n { display:block; } }
 .topnav { margin-left:auto; display:flex; align-items:center; gap:18px; font-weight:600; font-size:.92rem; }
 .topnav a { color:var(--text); text-decoration:none; }
 .topnav .cta { background:var(--brand); color:#fff; padding:8px 16px; border-radius:999px; }
@@ -43,3 +43,6 @@ table { width:100%; border-collapse:collapse; font-size:.92rem; } th, td { text-
 .foot nav { display:flex; flex-wrap:wrap; gap:8px 22px; margin-bottom:10px; } .foot nav a { color:var(--muted); text-decoration:none; font-weight:600; }
 @media (max-width: 760px) { .hero { grid-template-columns:1fr; } .two { grid-template-columns:1fr; } .topnav a:not(.cta) { display:none; } .price { font-size:1.6rem; } }
 .qa { display:grid; gap:10px; margin:0; } .qa div { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:14px 16px; } .qa dt { font-weight:700; } .qa dd { margin:4px 0 0; }
+
+/* always the light theme, whatever the phone or computer is set to */
+:root { color-scheme: light only; }

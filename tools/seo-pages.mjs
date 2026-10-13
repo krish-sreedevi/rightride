@@ -50,7 +50,7 @@ const page = ({ title, desc, canon, body, jsonld = [], image, track, go }) => `<
 <html lang="en-IN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light only">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 ${go ? `<script>if (/[?&]go=1/.test(location.search)) location.replace(${JSON.stringify(go)});</script>` : ''}
@@ -65,7 +65,7 @@ ${go ? `<script>if (/[?&]go=1/.test(location.search)) location.replace(${JSON.st
 ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j).replace(/</g, '\\u003c')}</script>`).join('\n')}
 </head>
 <body>
-<header class="top"><a href="/" aria-label="Right Ride home"><picture><source srcset="/brand/logo-night.webp" media="(prefers-color-scheme: dark)"><img src="/brand/logo-day.webp" alt="Right Ride" width="178" height="30"></picture></a>
+<header class="top"><a href="/" aria-label="Right Ride home"><picture><img src="/brand/logo-day.webp" alt="Right Ride" width="178" height="30"></picture></a>
 <nav class="topnav" aria-label="Main"><a href="/cars/">All cars</a><a class="cta" href="/#/cars">Find my Right Ride</a></nav></header>
 <main>
 ${body}
