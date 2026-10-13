@@ -408,7 +408,7 @@ function buildExtras(out) {
     };
     const ci = CIMG[k] || {};
     models[k] = {
-      colors: (ci.colors || []).slice(0, 14).map((c) => ({ name: c.name, img: c.img, sw: SWATCHES[c.img] || swatch(c.name) })), // swatch sampled from the photo, else guessed from the name
+      colors: (ci.colors || []).filter((c) => !c.lowres && !c.hide).slice(0, 14).map((c) => ({ name: c.name, img: c.img, sw: SWATCHES[c.img] || swatch(c.name) })), // swatch sampled from the photo, else guessed from the name
       interior: (ci.interior || []).slice(0, 8).map((c) => ({ cap: c.cap, img: c.img })),
       mileage, rating, service, resale,
     };

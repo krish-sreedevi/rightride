@@ -259,7 +259,10 @@ def build(only=None, force=False):
                 path = os.path.join(ROOT, 'site', rel)
                 rec = {'src': url, 'img': rel}
                 if os.path.exists(path) and not force:
-                    pass
+                    # keep what we already know about this photo (how it was cut, manual flags such as lowres)
+                    old = prev.get('hero') if kind == 'hero' else next((x for x in prev.get('colors', []) if x.get('img') == rel), None)
+                    if old and old.get('img') == rel:
+                        rec = {k: v for k, v in old.items() if k != 'name'}
                 else:
                     try:
                         how = standardize(url, path, flip=o.get('flip', False), erase=o.get('erase') if kind == 'hero' else None, ai=o.get('ai', False))

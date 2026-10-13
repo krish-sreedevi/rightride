@@ -13,7 +13,8 @@
    "contactShadow": true
   },
   "BYD|Seal": {
-   "hero": "https://www.byd.com/material/byd-site/eu-v3/model/seal2026/pc/exterior-gallery/white/1.webp"
+   "hero": "https://www.byd.com/material/byd-site/eu-v3/model/seal2026/pc/exterior-gallery/white/1.webp",
+   "ai": true
   },
   "Skoda|Kodiaq": {
    "hero": "https://cdn.skoda-storyboard.com/2023/10/03_Skoda_Kodiaq_40cd21a3.jpg"
@@ -42,6 +43,25 @@
   },
   "Toyota|Fortuner": {
    "hero": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/car-01.webp"
+  },
+  "MG|Windsor EV": {
+   "ai": true
+  },
+  "MG|Windsor Pro": {
+   "ai": true
+  },
+  "Maruti Suzuki|Brezza": {
+   "ai": true
+  },
+  "Toyota|Legender": {
+   "ai": true
+  },
+  "Toyota|Urban Cruiser Taisor": {
+   "ai": true
+  },
+  "Mahindra|Thar Roxx": {
+   "ai": true,
+   "contactShadow": true
   }
  }
 }
