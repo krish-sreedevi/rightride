@@ -389,7 +389,7 @@ console.log(`SEO pages: ${all.length} cars, ${brands.length} brands, sitemap wit
 {
   const f = path.join(SITE, 'index.html');
   const stats = `${D.cars.length.toLocaleString('en-IN')} variants · ${new Set(D.cars.map((c) => c.brand + c.model)).size} models · ${D.brands.length} brands — priced for your state`;
-  const h = fs.readFileSync(f, 'utf8').replace(/(<p class="lede" id="heroStats">)[^<]*(<\/p>)/, `$1${stats}$2`);
+  const h = fs.readFileSync(f, 'utf8').replace(/(<p class="lede" id="heroStats">)[^<]*(<\/p>)/, (x) => x);
   fs.writeFileSync(f, h);
 }
 

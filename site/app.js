@@ -2299,7 +2299,7 @@
       $('#resultTitle').textContent = 'Could not load car data. Please refresh.'; return;
     }
     fillStates(); loadFilters(); state.tab = store.get('tab', null); if (!TABS.some((t) => t.id === state.tab) || (state.tab === 'picks' && !state.rec)) state.tab = state.rec && state.sort === 'rec' ? 'picks' : 'all'; prep(); buildFilters(); wire(); render(); wirePages();
-    { const hs = $('#heroStats'), s = `${DATA.cars.length.toLocaleString('en-IN')} variants · ${new Set(DATA.cars.map((c) => c.brand + c.model)).size} models · ${DATA.brands.length} brands — priced for your state`; if (hs.textContent !== s) hs.textContent = s; }
+    // hero subtitle is fixed copy (index.html): "Your friendly car expert…"
     $('#updated').textContent = `Data updated ${new Date(DATA.generated).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} · ${DATA.cars.length} variants from ${DATA.brands.length} brands`;
   }
   init();

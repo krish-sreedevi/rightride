@@ -99,7 +99,7 @@ body.rec-mode .layout { padding-top: 28px; }
 
 /* ---------- results ---------- */
 .results-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-end; margin: 6px 0 14px; flex-wrap: wrap; }
-.results-head h1 { font-size: 1.25rem; }
+.results-head h1, .results-head .rt { font-size: 1.25rem; }
 .results-head p { margin: 6px 0 0; }
 .sort { display: flex; gap: 8px; align-items: center; }
 .active-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
@@ -1109,7 +1109,7 @@ a, .link, .tab, .foot-nav a, .filter-btn, .btn, .chip, .ms > summary, .ms-opt, .
 .q-sug:not([hidden]) { animation: menu-in .22s var(--ease-out); }
 #more { transition: background-color .25s var(--ease-out), box-shadow .3s var(--ease-out), transform .3s var(--ease-out); }
 #more:hover { transform: translateY(-1px); }
-.results-head h1 { transition: opacity .3s var(--ease-out); }
+.results-head h1, .results-head .rt { transition: opacity .3s var(--ease-out); }
 .tab-rr { display: inline-flex; align-items: center; gap: 7px; align-self: center; padding: 6px 12px 6px 9px !important; border-radius: 999px; background: var(--brand-soft); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--brand) 28%, transparent); color: var(--brand); }
 .tab-rr::before { content: ''; width: 18px; height: 14px; background: url(brand/orb-day.webp?v=9) center / contain no-repeat; transition: transform .35s var(--ease-out); }
 .tab-rr::after { content: ''; width: 7px; height: 7px; border-top: 2px solid currentColor; border-right: 2px solid currentColor; transform: rotate(45deg); margin-left: 1px; transition: transform .3s var(--ease-out); }
@@ -1255,3 +1255,10 @@ body[data-page="home"] .theme-tg:active { transform: scale(.92) rotate(-20deg); 
 .theme-tg .ic-sun { display: none; }
 html[data-theme="dark"] .theme-tg .ic-sun { display: block; }
 html[data-theme="dark"] .theme-tg .ic-moon { display: none; }
+
+/* keep "Right Ride" together on one line in the hero */
+.hero-title .nw { white-space: nowrap; }
+.results-head .rt { margin: 0; font-family: Michroma, Inter, sans-serif; font-weight: 400; letter-spacing: .01em; }
+/* home: keep the header on one row so the sun/moon button sits at the top right on small phones too */
+body[data-page="home"] .topbar { flex-wrap: nowrap; }
+body[data-page="home"] .theme-tg { position: absolute; top: 50%; right: max(16px, calc((100vw - 1320px) / 2 + 20px)); margin: -19px 0 0; }
