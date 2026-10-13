@@ -17,7 +17,7 @@ try { X = JSON.parse(fs.readFileSync(path.join(SITE, 'data/extras.json'), 'utf8'
 const YEAR = new Date(D.generated || Date.now()).getFullYear();
 const TODAY = new Date(D.generated || Date.now()).toISOString().slice(0, 10);
 
-const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const slug = (s) => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const mslug = (b, m) => slug(b + ' ' + m);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const lakh = (n) => (n >= 1e7 ? '₹' + (n / 1e7).toFixed(2) + ' crore' : '₹' + (n / 1e5).toFixed(2) + ' lakh');
@@ -216,4 +216,12 @@ console.log(`SEO pages: ${all.length} cars, ${brands.length} brands, sitemap wit
   const stats = `${D.cars.length.toLocaleString('en-IN')} variants · ${new Set(D.cars.map((c) => c.brand + c.model)).size} models · ${D.brands.length} brands — priced for your state`;
   const h = fs.readFileSync(f, 'utf8').replace(/(<p class="lede" id="heroStats">)[^<]*(<\/p>)/, `$1${stats}$2`);
   fs.writeFileSync(f, h);
+}
+
+// ---- old addresses (before accents were dropped from slugs, e.g. /brands/citro-n/) forward to the new ones ----
+{
+  const old = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const stub = (to) => `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Moved</title><link rel="canonical" href="${ORIGIN}${to}"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=${to}"></head><body><a href="${to}">This page has moved</a></body></html>`;
+  const pairs = [...all.map((m) => [old(m.brand + ' ' + m.model), m.slug, 'cars']), ...brands.map((b) => [old(b.brand || b), slug(b.brand || b), 'brands'])];
+  for (const [o, n, dir] of pairs) if (o !== n) write(`${dir}/${o}/index.html`, stub(`/${dir}/${n}/`));
 }

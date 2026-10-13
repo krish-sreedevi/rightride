@@ -780,8 +780,9 @@
   }
 
   // ---------------- car page: #/car/<brand-model> ----------------
-  const mslug = (b, m) => (b + ' ' + m).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  const modelBySlug = (s) => groupAll().find((m) => mslug(m.brand, m.model) === s);
+  const mslug = (b, m) => (b + ' ' + m).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const oldSlug = (b, m) => (b + ' ' + m).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); // "citro-n-c3x" links from before accents were handled
+  const modelBySlug = (s) => groupAll().find((m) => mslug(m.brand, m.model) === s) || groupAll().find((m) => oldSlug(m.brand, m.model) === s);
   let navFromList = false;
   function openCar(key) { const [b, m] = key.split('|'); navFromList = true; go('car', mslug(b, m)); }
   const cp = { key: null, fuel: new Set(), gear: new Set(), need: new Set(), all: false };
