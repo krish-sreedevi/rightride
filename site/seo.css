@@ -50,3 +50,16 @@ table { width:100%; border-collapse:collapse; font-size:.92rem; } th, td { text-
 
 html[data-theme="dark"] { color-scheme: dark; }
 html[data-theme="dark"] .top img { content: url(/brand/logo-night.webp?v=9); }
+
+/* comparison and "best of" pages */
+.links { list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:8px; }
+.links a { display:inline-block; background:var(--panel); border:1px solid var(--line); border-radius:999px; padding:7px 14px; text-decoration:none; color:var(--text); font-size:.9rem; font-weight:500; }
+.links a:hover { border-color:var(--brand); color:var(--brand); }
+.vs { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:18px 0 0; }
+.rank { list-style:none; padding:0; margin:18px 0 0; display:grid; gap:10px; }
+.car.row { flex-direction:row; align-items:center; gap:14px; }
+.car.row .n { font-family:Michroma, Inter, sans-serif; font-size:1.1rem; color:var(--brand); min-width:28px; text-align:center; }
+.car.row .ci { width:150px; height:88px; flex:none; } .car.row .ci img { height:88px; }
+.car.row .t { display:flex; flex-direction:column; gap:2px; }
+th[scope="row"] { color:var(--text); font-size:.88rem; }
+@media (max-width: 560px) { .car.row .ci { width:96px; height:60px; } .car.row .ci img { height:60px; } }

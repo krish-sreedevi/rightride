@@ -9,3 +9,6 @@ site/sitemap.xml
 site/llms.txt
 site/api/
 .indexnow-urls.json
+site/compare/
+site/best/
+site/llms-full.txt
