@@ -41,6 +41,12 @@ jobs:
           GC_TOKEN: ${{ secrets.GC_TOKEN }}
           GA_SA_KEY: ${{ secrets.GA_SA_KEY }}
           GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
+      - name: Minify scripts and styles (smaller, faster pages)
+        run: |
+          for f in site/app.js site/styles.css site/seo.css site/legal.css; do
+            npx --yes esbuild@0.24.0 "$f" --minify --allow-overwrite --outfile="$f" --log-level=warning
+          done
+        continue-on-error: true
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }

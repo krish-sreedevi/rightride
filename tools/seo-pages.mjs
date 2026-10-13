@@ -58,13 +58,13 @@ const page = ({ title, desc, canon, body, jsonld = [], image, track }) => `<!doc
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${canon}">
 <meta property="og:image" content="${esc(image || ORIGIN + '/brand/og-card.png')}"><meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#D02A1C">
-<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg?v=7t"><link rel="apple-touch-icon" href="/brand/app-icon-180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg?v=7s"><link rel="apple-touch-icon" href="/brand/app-icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap"></noscript>
 <link rel="stylesheet" href="/seo.css">
 ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j).replace(/</g, '\\u003c')}</script>`).join('\n')}
 </head>
 <body>
-<header class="top"><a href="/" aria-label="Right Ride home"><img class="logo-d" src="/brand/logo-day.svg" alt="Right Ride" width="105" height="34"><img class="logo-n" src="/brand/logo-night.svg" alt="" width="105" height="34"></a>
+<header class="top"><a href="/" aria-label="Right Ride home"><picture><source srcset="/brand/logo-night.webp" media="(prefers-color-scheme: dark)"><img src="/brand/logo-day.webp" alt="Right Ride" width="178" height="30"></picture></a>
 <nav class="topnav" aria-label="Main"><a href="/cars/">All cars</a><a class="cta" href="/#/cars">Find my Right Ride</a></nav></header>
 <main>
 ${body}
@@ -109,12 +109,13 @@ for (const m of all) {
     <p class="price">${short(m.min)}${m.max > m.min ? ` <span>– ${short(m.max)}</span>` : ''}</p>
     <p class="muted">Ex-showroom price in India. On-road prices for your state include road tax, registration, insurance, FASTag and TCS.</p>
     <p class="actions"><a class="btn primary" href="${app}">See on-road price in your state</a><a class="btn" href="${app}">Compare variants &amp; find dealers</a></p>
+    <p class="actions"><a class="btn" href="${m.x && m.x.yt ? `https://www.youtube.com/watch?v=${esc(m.x.yt)}` : `https://www.youtube.com/results?search_query=${encodeURIComponent(`${m.brand} ${m.model} review`)}`}" rel="noopener" target="_blank">▶ Watch expert video</a>${m.url ? `<a class="btn" href="${esc(m.url)}" rel="noopener" target="_blank">Official site ↗</a>` : ''}</p>
   </div>
 </section>
 <p class="lede">The ${esc(name)} is ${esc(bodyPhrase(m.body))} available with ${esc(list(m.fuels.map((f) => f.toLowerCase())))} power and ${esc(list(m.trans.map((t) => t.toLowerCase())))} gearbox${m.trans.length > 1 ? ' options' : ''}${m.seats.length ? `, seating ${m.seats.join(' or ')}` : ''}. It is sold in ${m.vs.length} variant${m.vs.length > 1 ? 's' : ''}, priced from ${lakh(m.min)}${m.max > m.min ? ` to ${lakh(m.max)}` : ''} ex-showroom${m.nc ? `, and has a ${m.nc.stars}-star ${esc(m.nc.by)} safety rating` : ''}.</p>
 <section><h2>${esc(name)} key facts</h2><dl class="facts">${facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl></section>
 ${m.usp.length ? `<section><h2>Why people pick the ${esc(m.model)}</h2><ul class="ticks">${m.usp.map((u) => `<li>${esc(u)}</li>`).join('')}</ul></section>` : ''}
-${m.x && (m.x.like || m.x.dislike) ? `<section><h2>Expert verdict</h2><div class="two"><div><h3>Likes</h3><ul class="ticks">${(m.x.like || []).map((u) => `<li>${esc(u)}</li>`).join('')}</ul></div><div><h3>Dislikes</h3><ul class="crosses">${(m.x.dislike || []).map((u) => `<li>${esc(u)}</li>`).join('')}</ul></div></div>${m.x.url ? `<p class="muted small">From the <a href="${esc(m.x.url)}" rel="noopener" target="_blank">Autocar India review</a>.</p>` : ''}</section>` : ''}
+${m.x && (m.x.like || m.x.dislike) ? `<section><h2>Expert verdict</h2><div class="two"><div><h3>Likes</h3><ul class="ticks">${(m.x.like || []).map((u) => `<li>${esc(u)}</li>`).join('')}</ul></div><div><h3>Dislikes</h3><ul class="crosses">${(m.x.dislike || []).map((u) => `<li>${esc(u)}</li>`).join('')}</ul></div></div></section>` : ''}
 <section><h2>${esc(name)} variants and prices</h2>
 <div class="scroll"><table><thead><tr><th>Variant</th><th>Fuel</th><th>Gearbox</th><th class="n">Ex-showroom</th></tr></thead><tbody>
 ${m.vs.map((v) => `<tr><td>${esc(v.variant)}</td><td>${esc(v.fuel)}</td><td>${esc(v.transmission || '–')}${v.transType && v.transType !== v.transmission ? ` <small>(${esc(v.transType)})</small>` : ''}</td><td class="n">${short(v.price)}</td></tr>`).join('\n')}
@@ -208,3 +209,11 @@ ${urls.map(([u, pr]) => `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><prior
 </urlset>
 `);
 console.log(`SEO pages: ${all.length} cars, ${brands.length} brands, sitemap with ${urls.length} URLs`);
+
+// ---- home page: bake today's numbers into the hero, so the largest text is final at first paint ----
+{
+  const f = path.join(SITE, 'index.html');
+  const stats = `${D.cars.length.toLocaleString('en-IN')} variants · ${new Set(D.cars.map((c) => c.brand + c.model)).size} models · ${D.brands.length} brands — priced for your state`;
+  const h = fs.readFileSync(f, 'utf8').replace(/(<p class="lede" id="heroStats">)[^<]*(<\/p>)/, `$1${stats}$2`);
+  fs.writeFileSync(f, h);
+}

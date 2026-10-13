@@ -1,6 +1,6 @@
-// Right Ride visit counting: GoatCounter (no cookies) and Google Analytics 4.
+// Right Ride visit counting: GoatCounter (no cookies), Google Analytics 4 and Microsoft Clarity (heatmaps and session replays).
 // Both only run on the live domain (rightride.in), never on aksreedevi.in, previews or localhost.
-window.RR_ANALYTICS = { goatcounter: 'rightride', ga: 'G-B102KX5D7F' };
+window.RR_ANALYTICS = { goatcounter: 'rightride', ga: 'G-B102KX5D7F', clarity: 'ywwld7mc88' };
 (function () {
   const live = /^(www\.)?rightride\.in$/.test(location.hostname);
   const code = live ? window.RR_ANALYTICS.goatcounter : '';
@@ -11,6 +11,7 @@ window.RR_ANALYTICS = { goatcounter: 'rightride', ga: 'G-B102KX5D7F' };
     if (!code) return;
     const hit = { path, title: title || path, event: !!event };
     if (window.goatcounter && window.goatcounter.count) window.goatcounter.count(hit); else q.push(hit);
+    if (window.clarity && event) window.clarity('event', String(path).split('/')[0].replace(/[^a-z0-9_]/gi, '_')); // e.g. "video", "testdrive"
     if (ga && window.gtag) {
       if (event) {
         // e.g. "testdrive/kia/seltos/dealer" -> event "testdrive" with car and dealer as parameters
@@ -41,4 +42,15 @@ window.RR_ANALYTICS = { goatcounter: 'rightride', ga: 'G-B102KX5D7F' };
   const g = document.createElement('script');
   g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga;
   document.head.appendChild(g);
+
+  // Microsoft Clarity: loads once the page has finished loading, so it never slows the first paint
+  const startClarity = () => {
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+      t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, 'clarity', 'script', window.RR_ANALYTICS.clarity);
+  };
+  if (document.readyState === 'complete') setTimeout(startClarity, 1500);
+  else window.addEventListener('load', () => setTimeout(startClarity, 1500), { once: true });
 })();

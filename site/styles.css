@@ -270,7 +270,7 @@ body.to-home .hero-inner > :nth-child(2) { animation-delay: .06s; } body.to-home
 .wz-x { position: absolute; top: 14px; right: 14px; border: 0; background: var(--chip); color: var(--muted); width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: .9rem; display: grid; place-items: center; }
 .wz-x:hover { color: var(--text); background: var(--chip-hover); }
 .wz-mark { display: block; height: 54px; width: auto; margin: 0 auto 20px; }
-@media (prefers-color-scheme: dark) { .wz-mark { content: url(brand/logo-night.svg); } }
+@media (prefers-color-scheme: dark) { .wz-mark { content: url(brand/logo-night.webp); } }
 .wz-body h2 { font-size: 1.35rem; line-height: 1.35; margin: 0 0 6px; text-align: center; }
 .wz-body > p { text-align: center; margin: 0 0 14px; }
 .wz-steps { display: flex; align-items: center; gap: 6px; margin-bottom: 22px; padding-right: 40px; }
@@ -1105,7 +1105,7 @@ a, .link, .tab, .foot-nav a, .filter-btn, .btn, .chip, .ms > summary, .ms-opt, .
 #more:hover { transform: translateY(-1px); }
 .results-head h1 { transition: opacity .3s var(--ease-out); }
 .tab-rr { display: inline-flex; align-items: center; gap: 7px; align-self: center; padding: 6px 12px 6px 9px !important; border-radius: 999px; background: var(--brand-soft); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--brand) 28%, transparent); color: var(--brand); }
-.tab-rr::before { content: ''; width: 18px; height: 14px; background: url(brand/mark-day-small.svg) center / contain no-repeat; transition: transform .35s var(--ease-out); }
+.tab-rr::before { content: ''; width: 18px; height: 14px; background: url(brand/orb-day.webp) center / contain no-repeat; transition: transform .35s var(--ease-out); }
 .tab-rr::after { content: ''; width: 7px; height: 7px; border-top: 2px solid currentColor; border-right: 2px solid currentColor; transform: rotate(45deg); margin-left: 1px; transition: transform .3s var(--ease-out); }
 .tab-rr:hover, .tab-rr:focus-visible { background: var(--brand); color: #fff; box-shadow: 0 6px 18px color-mix(in srgb, var(--brand) 35%, transparent); }
 .tab-rr:hover .rrw, .tab-rr:focus-visible .rrw { color: #fff; }
@@ -1171,3 +1171,18 @@ a, .link, .tab, .foot-nav a, .filter-btn, .btn, .chip, .ms > summary, .ms-opt, .
   .shop-bar .search-wrap { order: 2; flex: 1 1 0; min-width: 0; }
   .shop-bar .filter-btn { order: 3; }
 }
+
+/* cars page bar scrolls away with the page (only the header stays on top) */
+.shop-bar { position: relative; top: auto; }
+.shop-bar .tabs, .shop-bar .tab-row { position: static; }
+
+/* v7 lockup: wider logo (text 55% of mark height) */
+.logo img { height: 40px; }
+.foot-logo img { height: 28px; }
+.wz-mark { height: 44px; max-width: 80%; }
+@media (max-width: 760px) { .logo img { height: 32px; } }
+@media (max-width: 420px) { .logo img { height: 27px; } }
+/* hero text fades in from almost-transparent (not 0) so the browser counts it as painted straight away */
+@keyframes hero-in { from { opacity: .01; transform: translateY(28px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+.sun-copy .hero-title { animation-name: hero-in; }
+.sun-copy .lede { animation-name: hero-in; }

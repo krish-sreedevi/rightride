@@ -7,20 +7,20 @@
 <meta name="description" content="How Right Ride (rightride.in) collects, uses and protects information when you compare cars on the site.">
 <meta name="theme-color" content="#D02A1C">
 <link rel="canonical" href="https://rightride.in/privacy.html">
-<link rel="icon" type="image/svg+xml" href="brand/favicon.svg?v=7t">
+<link rel="icon" type="image/svg+xml" href="brand/favicon.svg?v=7s">
 <link rel="apple-touch-icon" href="brand/app-icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap"></noscript>
 <link rel="stylesheet" href="legal.css">
 </head>
 <body>
 <header class="top">
-  <a href="./" aria-label="Right Ride home"><img class="logo-d" src="brand/logo-day.svg" alt="Right Ride" width="105" height="34"><img class="logo-n" src="brand/logo-night.svg" alt="Right Ride" width="105" height="34"></a>
+  <a href="./" aria-label="Right Ride home"><picture><source srcset="brand/logo-night.webp" media="(prefers-color-scheme: dark)"><img src="brand/logo-day.webp" alt="Right Ride" width="178" height="30"></picture></a>
   <span class="sp"></span><a class="back" href="./#/cars">← Back to cars</a>
 </header>
 <main>
   <h1>Privacy policy</h1>
-  <p class="meta">Last updated 7 October 2026</p>
+  <p class="meta">Last updated 13 October 2026</p>
 
   <p>Right Ride (<a href="https://rightride.in">rightride.in</a>) helps people in India compare new cars, find the right variant and reach a nearby dealer. This policy explains what information we collect when you use the site, why we collect it, who we share it with and the choices you have.</p>
 
@@ -28,7 +28,7 @@
     <h2>The short version</h2>
     <ul>
       <li>You don't need an account, and we never ask for your name, phone number or payment details.</li>
-      <li>We count visits and clicks with GoatCounter and Google Analytics so we know which cars and features people find useful.</li>
+      <li>We count visits and clicks with GoatCounter and Google Analytics, and use Microsoft Clarity to see how people move around pages (clicks, scrolling and anonymised session replays), so we know which cars and features people find useful and what to fix.</li>
       <li>If you let us use your location, it stays in your browser. It isn't sent to us.</li>
       <li>We don't sell your personal data. Partners only ever see totals, such as "120 test-drive clicks for one car this month".</li>
       <li>Questions or requests: <a href="mailto:info@rightride.in">info@rightride.in</a>.</li>
@@ -82,6 +82,7 @@
     <thead><tr><th>Name</th><th>Set by</th><th>Purpose</th><th>How long</th></tr></thead>
     <tbody>
       <tr><td><code>_ga</code>, <code>_ga_*</code></td><td>Google Analytics</td><td>Tells one visit from another so we can count visitors and sessions</td><td>Up to 2 years</td></tr>
+      <tr><td><code>_clck</code>, <code>_clsk</code>, <code>CLID</code></td><td>Microsoft Clarity</td><td>Links page views into one session so clicks and scrolling can be replayed and summarised</td><td>Up to 1 year</td></tr>
       <tr><td><code>rr.*</code> (local storage)</td><td>Right Ride</td><td>Remembers your state, your location if you allowed it, filters, finder answers and the cars you're comparing, on this device</td><td>Until you clear it</td></tr>
       <tr><td><code>rr-intro-seen</code> (session storage)</td><td>Right Ride</td><td>Plays the opening animation only once per visit</td><td>Until you close the tab</td></tr>
     </tbody>
@@ -93,6 +94,7 @@
   <ul>
     <li><b>GitHub Pages</b> hosts the website. Like any web host, it may log IP addresses to keep the service secure.</li>
     <li><b>Google Analytics</b> (Google) measures visits and clicks. See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses data from sites that use its services</a>.</li>
+    <li><b>Microsoft Clarity</b> (Microsoft) records clicks, scrolling and mouse movement as anonymised session replays and heatmaps. Text you type into fields is masked. See the <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft privacy statement</a> and <a href="https://learn.microsoft.com/clarity/setup-and-installation/clarity-data" target="_blank" rel="noopener">how Clarity handles data</a>.</li>
     <li><b>GoatCounter</b> counts visits without cookies and without storing IP addresses.</li>
     <li><b>Google Fonts</b> supplies the site's fonts, so your browser connects to Google's servers to load them.</li>
     <li><b>OpenStreetMap Nominatim</b> looks up PIN codes when you search for showrooms.</li>
@@ -115,6 +117,7 @@
   <h2 id="keep">7. How long we keep it</h2>
   <ul>
     <li><b>Google Analytics:</b> event-level data is kept for the period set in our account, which is no longer than 14 months. Summary reports may be kept longer.</li>
+    <li><b>Microsoft Clarity:</b> session replays and heatmap data are kept by Microsoft for up to 13 months.</li>
     <li><b>GoatCounter:</b> visit totals are kept for as long as the site runs. GoatCounter doesn't store IP addresses.</li>
     <li><b>Emails:</b> kept for as long as we need them to deal with your message and for our records. Ask us and we'll delete them.</li>
     <li><b>Browser storage:</b> stays on your device until you clear it.</li>

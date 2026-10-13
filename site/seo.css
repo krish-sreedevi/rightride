@@ -5,7 +5,7 @@
 body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 Inter, system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
 a { color:var(--brand); text-underline-offset:2px; }
 .top { display:flex; align-items:center; gap:14px; padding:12px max(16px, calc((100vw - 1120px)/2)); background:var(--panel); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:5; }
-.top img { height:34px; width:auto; display:block; }
+.top img { height:30px; width:auto; display:block; }
 .top .logo-n { display:none; }
 @media (prefers-color-scheme: dark) { .top .logo-d { display:none; } .top .logo-n { display:block; } }
 .topnav { margin-left:auto; display:flex; align-items:center; gap:18px; font-weight:600; font-size:.92rem; }

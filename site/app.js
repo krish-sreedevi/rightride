@@ -854,6 +854,7 @@
           <div class="cp-price">${lakh(m.min)}${m.max > m.min ? ` <span>– ${lakh(m.max)}</span>` : ''}</div>
           <div class="cp-tags">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>
           <div class="cp-badges">${x && x.s ? `<span class="cp-badge"><b>${esc(x.s)}</b><small>/10</small><span>Expert score</span></span>` : ''}${nc ? `<a class="cp-badge nc" href="#cpSafety" data-jump="cpSafety"><b>${nc.stars}★</b><span>${esc(nc.by)}</span></a>` : ''}</div>
+          <div class="cp-cta"><a class="btn primary" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"${trk(m, 'video', ytCh(m))}><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>Watch expert video</a><a class="btn ghost" href="${esc(m.url)}" target="_blank" rel="noopener"${trk(m, 'maker-site', m.brand)}>Official site <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
       <nav class="cp-nav" id="cpNav" aria-label="Sections"><a href="#chRide" data-jump="chRide" class="on"><span class="n">1</span><b>Is this my Right Ride?</b></a><a href="#chVariant" data-jump="chVariant"><span class="n">2</span><b>Find the Right Variant</b></a><a href="#chDealer" data-jump="chDealer"><span class="n">3</span><b>Find the Right Dealer</b></a></nav>
@@ -865,7 +866,6 @@
           <section class="cp-sec" id="cpSafety"><div class="cp-sec-head"><h3 class="display">Safety rating</h3></div>${safety}</section>
           <section class="cp-sec"><div class="cp-sec-head"><h3 class="display">Expert view</h3>${x && x.s ? `<span class="xbadge">Expert score ${esc(x.s)}/10</span>` : ''}</div>
             ${x ? `<ul class="pc">${x.like.map((t) => `<li class="pro">${esc(t)}</li>`).join('')}${x.dislike.map((t) => `<li class="con">${esc(t)}</li>`).join('')}</ul>${x.basedOn ? `<p class="muted small">From the review of the ${esc(x.basedOn)}.</p>` : ''}` : '<p class="muted">No expert review yet.</p>'}
-            <div class="cp-links"><a class="watch" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"${trk(m, 'video', ytCh(m))}><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>Watch the video review</a>${x && x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener"${trk(m, 'review', 'Autocar India')}>Read the review ↗</a>` : ''}<a href="${esc(m.url)}" target="_blank" rel="noopener"${trk(m, 'maker-site', m.brand)}>Official site ↗</a></div>
           </section>
         </div>
       </section>
@@ -1339,7 +1339,7 @@
     const close = `<button class="wz-x" type="button" data-wz="close" aria-label="Close">✕</button>`;
     let body = '', canNext = true;
     if (s === 0) {
-      body = `<img class="wz-mark" src="brand/logo-day.svg" alt="Right Ride"><h2 id="wzTitle" class="display">What can we help you with?</h2>
+      body = `<img class="wz-mark" src="brand/logo-day.webp" alt="Right Ride"><h2 id="wzTitle" class="display">What can we help you with?</h2>
         <div class="wz-choices two">
           <button class="wz-opt" type="button" data-wz="browse"><b>Just browsing</b><span>Explore every car, variant and on-road price</span></button>
           <button class="wz-opt primary" type="button" data-wz="start" autofocus><b>Find the Right Ride for me!</b><span>Personalised recommendations in 5 quick steps</span></button>
@@ -2166,6 +2166,11 @@
   }
 
   async function init() {
+    // on the home page, fetch the 1.2 MB car list only after the page has loaded, so it never competes with the first paint
+    if (document.body.dataset.page === 'home') await Promise.all([
+      new Promise((r) => (document.readyState === 'complete' ? r() : addEventListener('load', r, { once: true }))),
+      new Promise((r) => { try { new PerformanceObserver(r).observe({ type: 'largest-contentful-paint', buffered: true }); } catch (e) { r(); } setTimeout(r, 2500); addEventListener('pointerdown', r, { once: true }); addEventListener('keydown', r, { once: true }); addEventListener('hashchange', r, { once: true }); }),
+    ]).then(() => new Promise((r) => (window.requestIdleCallback ? requestIdleCallback(r, { timeout: 1200 }) : setTimeout(r, 300))));
     try {
       const [d, r] = await Promise.all([fetch('data/cars.json').then((x) => x.json()), fetch('data/rto.json').then((x) => x.json())]);
       DATA = d; RTO = r;
@@ -2173,7 +2178,7 @@
       $('#resultTitle').textContent = 'Could not load car data. Please refresh.'; return;
     }
     fillStates(); loadFilters(); state.tab = store.get('tab', null); if (!TABS.some((t) => t.id === state.tab) || (state.tab === 'picks' && !state.rec)) state.tab = state.rec && state.sort === 'rec' ? 'picks' : 'all'; prep(); buildFilters(); wire(); render(); wirePages(); autoLocate();
-    $('#heroStats').textContent = `${DATA.cars.length.toLocaleString('en-IN')} variants · ${new Set(DATA.cars.map((c) => c.brand + c.model)).size} models · ${DATA.brands.length} brands — priced for your state`;
+    { const hs = $('#heroStats'), s = `${DATA.cars.length.toLocaleString('en-IN')} variants · ${new Set(DATA.cars.map((c) => c.brand + c.model)).size} models · ${DATA.brands.length} brands — priced for your state`; if (hs.textContent !== s) hs.textContent = s; }
     $('#updated').textContent = `Data updated ${new Date(DATA.generated).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} · ${DATA.cars.length} variants from ${DATA.brands.length} brands`;
   }
   init();
