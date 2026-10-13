@@ -3222,13 +3222,6 @@
      "img": "img/cars/land-rover-range-rover-sport/santorini-black-69fb4b95bd.webp",
      "how": "ai",
      "name": "Santorini Black"
-    },
-    {
-     "src": "https://jlr.scene7.com/is/image/jlr/L461_23MY_140_GLHD_EIGER_GREY_SATIN_CROP?wid=1600",
-     "img": "img/cars/land-rover-range-rover-sport/eiger-grey-c833d6ed60.webp",
-     "how": "ai",
-     "name": "Eiger Grey",
-     "hide": true
     }
    ],
    "interior": [
@@ -8876,57 +8869,7 @@
     "img": "img/cars/isuzu-d-max-v-cross/hero-ba6d90af4d.webp",
     "how": "alpha"
    },
-   "colors": [
-    {
-     "src": "https://www.isuzu.in/images/vcross/Features/colors/Silky%20Pearl%20White.jpg",
-     "img": "img/cars/isuzu-d-max-v-cross/silky-white-pearl-3e66304711.webp",
-     "how": "ai",
-     "name": "Silky White Pearl",
-     "lowres": true
-    },
-    {
-     "src": "https://www.isuzu.in/images/vcross/Features/colors/Black%20Mica.jpg",
-     "img": "img/cars/isuzu-d-max-v-cross/black-mica-e5c37a895f.webp",
-     "how": "ai",
-     "name": "Black Mica",
-     "lowres": true
-    },
-    {
-     "src": "https://www.isuzu.in/images/vcross/Features/colors/Red%20Spinel%20Mica.jpg",
-     "img": "img/cars/isuzu-d-max-v-cross/red-spinel-mica-d8db6e40cd.webp",
-     "how": "ai",
-     "name": "Red Spinel Mica",
-     "lowres": true
-    },
-    {
-     "src": "https://www.isuzu.in/images/vcross/Features/colors/Nautilus%20Mica.jpg",
-     "img": "img/cars/isuzu-d-max-v-cross/nautilus-blue-749d4ba954.webp",
-     "how": "ai",
-     "name": "Nautilus Blue",
-     "lowres": true
-    },
-    {
-     "src": "https://www.isuzu.in/images/vcross/Features/colors/Galena%20Gray.jpg",
-     "img": "img/cars/isuzu-d-max-v-cross/galena-grey-1a1ef2452b.webp",
-     "how": "ai",
-     "name": "Galena Grey",
-     "lowres": true
-    },
-    {
-     "src": "https://www.isuzu.in/images/vcross/Features/colors/Silver%20Metallic.jpg",
-     "img": "img/cars/isuzu-d-max-v-cross/silver-metallic-b9eed86803.webp",
-     "how": "ai",
-     "name": "Silver Metallic",
-     "lowres": true
-    },
-    {
-     "src": "https://www.isuzu.in/images/vcross/Features/colors/Splash%20White.jpg",
-     "img": "img/cars/isuzu-d-max-v-cross/splash-white-e176f96b7c.webp",
-     "how": "ai",
-     "name": "Splash White",
-     "lowres": true
-    }
-   ],
+   "colors": [],
    "interior": [
     {
      "cap": "Dashboard",
@@ -8953,50 +8896,7 @@
     "img": "img/cars/isuzu-hi-lander/hero-00996dcc62.webp",
     "how": "alpha"
    },
-   "colors": [
-    {
-     "src": "https://www.isuzu.in/images/hilander/Features/colors/Hilandersilver.png",
-     "img": "img/cars/isuzu-hi-lander/silver-metallic-4e6e10b56c.webp",
-     "how": "alpha",
-     "name": "Silver Metallic",
-     "lowres": true
-    },
-    {
-     "src": "https://www.isuzu.in/images/hilander/Features/colors/Hilanderblue.png",
-     "img": "img/cars/isuzu-hi-lander/nautilus-blue-38a698ec4e.webp",
-     "how": "alpha",
-     "name": "Nautilus Blue",
-     "lowres": true
-    },
-    {
-     "src": "https://www.isuzu.in/images/hilander/Features/colors/Hilander-redmica.png",
-     "img": "img/cars/isuzu-hi-lander/red-spinel-mica-dd63ed60af.webp",
-     "how": "alpha",
-     "name": "Red Spinel Mica",
-     "lowres": true
-    },
-    {
-     "src": "https://www.isuzu.in/images/hilander/Features/colors/HilanderGret.png",
-     "img": "img/cars/isuzu-hi-lander/galena-grey-99e010fd5b.webp",
-     "how": "alpha",
-     "name": "Galena Grey",
-     "lowres": true
-    },
-    {
-     "src": "https://www.isuzu.in/images/hilander/Features/colors/Hilanderblackmica.png",
-     "img": "img/cars/isuzu-hi-lander/black-mica-79bf9fc85d.webp",
-     "how": "alpha",
-     "name": "Black Mica",
-     "lowres": true
-    },
-    {
-     "src": "https://www.isuzu.in/images/hilander/Features/colors/Hilanderwhite.png",
-     "img": "img/cars/isuzu-hi-lander/splash-white-78fbe687da.webp",
-     "how": "alpha",
-     "name": "Splash White",
-     "lowres": true
-    }
-   ],
+   "colors": [],
    "interior": [
     {
      "cap": "Dashboard",

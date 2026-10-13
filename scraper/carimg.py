@@ -236,7 +236,7 @@ def build(only=None, force=False):
     index = json.load(open(index_path)) if os.path.exists(index_path) else {'models': {}}
     src_files = [f for f in glob.glob(os.path.join(ROOT, 'data/maker-images/*.json')) if not os.path.basename(f).startswith('_')]
     overrides = {}
-    ov = os.path.join(ROOT, 'data/maker-images/_overrides.json')  # optional manual fixes: {"Brand|Model": {"hero": url, "flip": true, "contactShadow": true}}
+    ov = os.path.join(ROOT, 'data/maker-images/_overrides.json')  # optional manual fixes: {"Brand|Model": {"hero": url, "flip": true, "contactShadow": true, "dropColors": ["name"]}}
     if os.path.exists(ov):
         overrides = json.load(open(ov)).get('models', {})
     done = fail = 0
@@ -252,6 +252,7 @@ def build(only=None, force=False):
             hero = o.get('hero') or m.get('hero')
             if hero: jobs.append(('hero', hero, None))
             for c in m.get('colors') or []:
+                if c.get('name') in (o.get('dropColors') or []): continue  # manual: maker photo unusable
                 if c.get('img'): jobs.append(('color', c['img'], c['name']))
             for kind, url, name in jobs:
                 h = hashlib.sha1(url.encode()).hexdigest()[:10]

@@ -14,7 +14,8 @@
   },
   "BYD|Seal": {
    "hero": "https://www.byd.com/material/byd-site/eu-v3/model/seal2026/pc/exterior-gallery/white/1.webp",
-   "ai": true
+   "ai": true,
+   "contactShadow": true
   },
   "Skoda|Kodiaq": {
    "hero": "https://cdn.skoda-storyboard.com/2023/10/03_Skoda_Kodiaq_40cd21a3.jpg"
@@ -45,23 +46,54 @@
    "hero": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/car-01.webp"
   },
   "MG|Windsor EV": {
-   "ai": true
+   "ai": true,
+   "contactShadow": true
   },
   "MG|Windsor Pro": {
-   "ai": true
+   "ai": true,
+   "contactShadow": true
   },
   "Maruti Suzuki|Brezza": {
-   "ai": true
+   "ai": true,
+   "contactShadow": true
   },
   "Toyota|Legender": {
-   "ai": true
+   "ai": true,
+   "contactShadow": true
   },
   "Toyota|Urban Cruiser Taisor": {
-   "ai": true
+   "ai": true,
+   "contactShadow": true
   },
   "Mahindra|Thar Roxx": {
    "ai": true,
    "contactShadow": true
+  },
+  "Land Rover|Range Rover Sport": {
+   "dropColors": [
+    "Eiger Grey"
+   ]
+  },
+  "Isuzu|Hi-Lander": {
+   "dropColors": [
+    "Silver Metallic",
+    "Nautilus Blue",
+    "Red Spinel Mica",
+    "Galena Grey",
+    "Black Mica",
+    "Splash White"
+   ]
+  },
+  "Isuzu|D-Max V-Cross": {
+   "dropColors": [
+    "Silky White Pearl",
+    "Black Mica",
+    "Red Spinel Mica",
+    "Nautilus Blue",
+    "Galena Grey",
+    "Silver Metallic",
+    "Splash White"
+   ]
   }
  }
 }
