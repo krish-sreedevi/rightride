@@ -7651,9 +7651,9 @@
   },
   "Toyota|Fortuner": {
    "hero": {
-    "src": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/muscle-to-lead-car.webp",
-    "img": "img/cars/toyota-fortuner/hero-9bef0ae6e9.webp",
-    "how": "ai"
+    "src": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/car-01.webp",
+    "img": "img/cars/toyota-fortuner/hero-05e98e5276.webp",
+    "how": "alpha"
    },
    "colors": [
     {

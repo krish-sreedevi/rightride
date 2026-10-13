@@ -39,6 +39,9 @@
   "Jeep|Grand Cherokee": {
    "ai": true,
    "contactShadow": true
+  },
+  "Toyota|Fortuner": {
+   "hero": "https://static.toyotabharat.com/images/showroom/fortuner/fortuner-mmc/car-01.webp"
   }
  }
 }
