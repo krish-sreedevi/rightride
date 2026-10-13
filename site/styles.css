@@ -1262,3 +1262,6 @@ html[data-theme="dark"] .theme-tg .ic-moon { display: none; }
 /* home: keep the header on one row so the sun/moon button sits at the top right on small phones too */
 body[data-page="home"] .topbar { flex-wrap: nowrap; }
 body[data-page="home"] .theme-tg { position: absolute; top: 50%; right: max(16px, calc((100vw - 1320px) / 2 + 20px)); margin: -19px 0 0; }
+
+#heroStats .hl { font-weight: 600; color: var(--text); }
+#heroStats { text-wrap: balance; }
