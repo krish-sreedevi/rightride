@@ -739,6 +739,55 @@
     $('#modal').showModal();
   }
 
+  // ---------------- feedback (footer link) ----------------
+  // Answers go to a Google Form (its responses sheet is read hourly into the admin portal by tools/admin-stats.mjs).
+  // FEEDBACK.form is the long id in the form's link (docs.google.com/forms/d/e/<id>/viewform); entries are the
+  // form's field names (entry.123…) for questions 1–4, in order. Until they're set, answers open as an email instead.
+  const FEEDBACK = { form: '', entries: [] };
+  const FB_Q = [
+    { k: 'exp', q: 'How was the experience of finding the right car for you?', o: [['1', 'Poor'], ['2', 'Fair'], ['3', 'Good'], ['4', 'Great'], ['5', 'Excellent']], scale: true },
+    { k: 'cmp', q: 'Did you find the comparison section easy to use?', o: [['Yes', 'Yes'], ['Somewhat', 'Somewhat'], ['No', 'No'], ["Didn't use it", "Didn't use it"]] },
+    { k: 'info', q: 'Did you find all the information you care about?', o: [['Yes', 'Yes'], ['Mostly', 'Mostly'], ['No', 'No']] },
+    { k: 'better', q: 'How would you make us better?', text: true },
+  ];
+  function feedback() {
+    const ans = {};
+    const body = FB_Q.map((x, i) => `<fieldset class="fb-q"><legend><span class="fb-n">${i + 1}</span>${esc(x.q)}</legend>${x.text
+      ? `<textarea id="fbText" rows="4" maxlength="1500" placeholder="Anything missing, confusing or that you loved…"></textarea>`
+      : `<div class="fb-opts${x.scale ? ' scale' : ''}" role="radiogroup" aria-label="${esc(x.q)}">${x.o.map(([v, l]) => `<button type="button" role="radio" aria-checked="false" data-fb="${x.k}" data-v="${esc(v)}">${x.scale ? `<b>${v}</b>` : ''}${esc(l)}</button>`).join('')}</div>`}</fieldset>`).join('');
+    $('#modalBody').innerHTML = `<div class="modal-head"><div><h2>Share your feedback</h2><p class="muted" style="margin:4px 0 0">Four quick questions. Answer as many as you like.</p></div><button class="btn ghost" data-close aria-label="Close">✕</button></div>
+      <form class="modal-body fb" id="fbForm">${body}<div class="fb-foot"><span class="muted small" id="fbMsg">We don't ask for your name or email.</span><button class="btn primary lg" type="submit" id="fbSend" disabled>Send feedback</button></div></form>`;
+    const f = $('#fbForm'), send = $('#fbSend'), txt = $('#fbText');
+    const ready = () => { send.disabled = !(Object.keys(ans).length || txt.value.trim()); };
+    f.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-fb]'); if (!b) return;
+      const k = b.dataset.fb, on = ans[k] !== b.dataset.v;
+      for (const x of f.querySelectorAll(`[data-fb="${k}"]`)) x.setAttribute('aria-checked', String(on && x === b));
+      if (on) ans[k] = b.dataset.v; else delete ans[k];
+      ready();
+    });
+    txt.addEventListener('input', ready);
+    f.addEventListener('submit', async (e) => {
+      e.preventDefault(); if (send.disabled) return;
+      const vals = [ans.exp || '', ans.cmp || '', ans.info || '', txt.value.trim()];
+      send.disabled = true; send.textContent = 'Sending…';
+      window.rrTrack && window.rrTrack('feedback/sent', 'Feedback sent', true);
+      if (!FEEDBACK.form || FEEDBACK.entries.length < 4) {
+        const t = FB_Q.map((x, i) => `${x.q}\n${vals[i] ? (x.scale ? vals[i] + '/5' : vals[i]) : '–'}`).join('\n\n');
+        location.href = `mailto:info@rightride.in?subject=${encodeURIComponent('Right Ride feedback')}&body=${encodeURIComponent(t)}`;
+        send.textContent = 'Send feedback'; ready(); return;
+      }
+      const p = new URLSearchParams(); FEEDBACK.entries.forEach((en, i) => { if (vals[i]) p.append(en, vals[i]); });
+      try {
+        await fetch(`https://docs.google.com/forms/d/e/${FEEDBACK.form}/formResponse`, { method: 'POST', mode: 'no-cors', body: p });
+        $('#modalBody').innerHTML = `<div class="modal-head"><h2>Thank you!</h2><button class="btn ghost" data-close aria-label="Close">✕</button></div><div class="modal-body fb-done"><p>Your feedback helps us make Right Ride better for the next person looking for the right car.</p><button class="btn primary" data-close>Close</button></div>`;
+      } catch (err) {
+        send.disabled = false; send.textContent = 'Try again'; $('#fbMsg').textContent = "Couldn't send. Check your connection and try again.";
+      }
+    });
+    $('#modal').showModal();
+  }
+
   // ---------------- active filters, removing one, and the "sorry" state ----------------
   function activeFilters() {
     const out = [];
@@ -1829,6 +1878,8 @@
     wireCompareBar(); wireComparePage();
     $('#modal').addEventListener('click', (e) => { if (e.target.closest('[data-close]') || e.target.id === 'modal') $('#modal').close(); });
     $('#aboutLink').addEventListener('click', (e) => { e.preventDefault(); about(); });
+    $('#feedbackLink').addEventListener('click', (e) => { e.preventDefault(); feedback(); });
+    if (location.hash === '#feedback') { history.replaceState(null, '', location.pathname + location.search); feedback(); }
     $('#closeFilters').addEventListener('click', closeDrawer);
     $('#applyMobile').addEventListener('click', () => { closeDrawer(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
     $('#list').addEventListener('keydown', (e) => { const t = e.target.closest('.tile'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openCar(t.dataset.key); } });

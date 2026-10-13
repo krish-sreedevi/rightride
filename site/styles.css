@@ -1207,3 +1207,23 @@ body[data-page="home"] .topbar .loc { display: none; }
 .cp-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 18px; }
 .cp-cta > .btn, .cp-cta .share-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; margin: 0; box-sizing: border-box; line-height: 1; vertical-align: middle; }
 .cp-cta > .btn svg, .cp-cta .share-btn svg { flex: none; }
+
+/* ---------- feedback form ---------- */
+#modal:has(.fb), #modal:has(.fb-done) { width: min(620px, calc(100vw - 24px)); }
+.fb { display: grid; gap: 22px; }
+.fb-q { border: 0; margin: 0; padding: 0; min-width: 0; }
+.fb-q legend { display: flex; gap: 10px; align-items: baseline; font-weight: 600; font-size: 1rem; line-height: 1.4; padding: 0; margin-bottom: 12px; }
+.fb-n { flex: none; display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--brand-soft); color: var(--brand); font-size: .8rem; font-weight: 700; transform: translateY(-1px); }
+.fb-opts { display: flex; flex-wrap: wrap; gap: 8px; padding-left: 34px; }
+.fb-opts button { font: inherit; font-size: .92rem; border: 0; background: var(--chip); color: var(--text); padding: 9px 16px; border-radius: 999px; cursor: pointer; transition: background .2s var(--ease), color .2s var(--ease), transform .15s var(--ease); }
+.fb-opts button:hover { background: var(--chip-hover); }
+.fb-opts button:active { transform: scale(.96); }
+.fb-opts button[aria-checked="true"] { background: var(--brand); color: #fff; }
+.fb-opts.scale { display: grid; grid-template-columns: repeat(5, 1fr); }
+.fb-opts.scale button { display: grid; gap: 2px; justify-items: center; padding: 10px 4px; border-radius: 14px; font-size: .8rem; }
+.fb-opts.scale button b { font-size: 1.15rem; }
+.fb textarea { display: block; width: calc(100% - 34px); margin-left: 34px; box-sizing: border-box; font: inherit; font-size: .95rem; color: var(--text); background: var(--panel-2, var(--chip)); border: 1px solid var(--line-2); border-radius: 14px; padding: 12px 14px; resize: vertical; min-height: 96px; }
+.fb textarea:focus { outline: 2px solid color-mix(in srgb, var(--brand) 50%, transparent); outline-offset: 1px; }
+.fb-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 4px; }
+.fb-done p { font-size: 1rem; line-height: 1.55; margin: 0 0 18px; }
+@media (max-width: 520px) { .fb-opts { padding-left: 0; } .fb textarea { margin-left: 0; width: 100%; } .fb-opts.scale button { font-size: .72rem; } .fb-foot .btn { width: 100%; } }

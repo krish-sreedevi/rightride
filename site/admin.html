@@ -92,6 +92,11 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
 .dates input { width:auto; padding:7px 10px; border-radius:999px; font:600 .85rem Inter, sans-serif; color-scheme:light dark; }
 @media (max-width: 480px) { .bar > .seg { flex-wrap:nowrap; } .bar > .seg button { padding:7px 9px; font-size:.8rem; } }
 .sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); margin:0; }
+.fbk .chips { display:flex; flex-wrap:wrap; gap:6px; margin:6px 0 0; }
+.fbk .chip { font-size:.75rem; padding:2px 9px; border-radius:999px; background:var(--chip); color:var(--muted); }
+.fbk li { list-style:none; padding:14px 0; border-bottom:1px solid var(--line); } .fbk ol { margin:0; padding:0; } .fbk li:last-child { border-bottom:0; }
+.fbk .tx { font-size:.95rem; line-height:1.5; white-space:pre-wrap; overflow-wrap:anywhere; } .fbk .when { font-size:.78rem; color:var(--muted); }
+.stars { color:var(--gold); letter-spacing:1px; }
 </style>
 </head>
 <body>
@@ -110,7 +115,7 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const store = (s) => ({ get(k) { try { return s.getItem('rradmin.' + k) || ''; } catch (e) { return ''; } }, set(k, v) { try { v ? s.setItem('rradmin.' + k, v) : s.removeItem('rradmin.' + k); } catch (e) {} } });
   const LS = store(window.localStorage), SS = store(window.sessionStorage);
-  const TABS = [['overview', 'Overview'], ['bookings', 'Bookings'], ['videos', 'Videos'], ['filters', 'Filters'], ['audience', 'Audience'], ['money', 'Money']];
+  const TABS = [['overview', 'Overview'], ['bookings', 'Bookings'], ['videos', 'Videos'], ['filters', 'Filters'], ['audience', 'Audience'], ['money', 'Money'], ['feedback', 'Feedback']];
   const S = { days: LS.get('days') === 'custom' ? 'custom' : +(LS.get('days') || 30), from: LS.get('from'), to: LS.get('to'), tab: (location.hash.slice(1) || LS.get('tab') || 'overview'), by: { td: 'brand', vid: 'car' } };
   if (!TABS.some(([k]) => k === S.tab)) S.tab = 'overview';
   // what each tracked click is worth (your assumptions, editable on the Money tab, kept on this device)
@@ -432,6 +437,46 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
         <li><b>Market reports:</b> anonymous monthly reports on which cars Indian buyers compare and book, sold to brands.</li></ul></div>`;
   };
 
+  V.feedback = () => {
+    const F = DATA.fb || {};
+    if (!F.connected) return SETUP_FB;
+    if (F.error) return errCard('Feedback sheet', F.error, 'Check the <code>FEEDBACK_SHEET_ID</code> secret and that the sheet is shared with the service account.');
+    const R = range(), all = F.rows || [];
+    const rows = all.filter((x) => { const d = String(x.t).slice(0, 10); return d >= R.from && d <= R.to; }).sort((a, b) => (a.t < b.t ? 1 : -1));
+    const n = rows.length, rated = rows.filter((x) => x.exp), avg = rated.length ? rated.reduce((s, x) => s + x.exp, 0) / rated.length : 0;
+    const share = (k, v) => { const r = rows.filter((x) => x[k]); return r.length ? pct(r.filter((x) => x[k] === v).length, r.length) : '–'; };
+    const cnt = (k, opts) => opts.map((o) => [o, rows.filter((x) => String(x[k]) === String(o)).length]);
+    const LBL = { 1: 'Poor', 2: 'Fair', 3: 'Good', 4: 'Great', 5: 'Excellent' };
+    const bars = (list) => { const t = list.reduce((s, x) => s + x[1], 0) || 1; return `<ol class="list">${list.map(([k, v]) => `<li><span class="nm">${esc(k)}</span><span class="ct">${fmt(v)}<small class="muted" style="font-weight:500;margin-left:6px">${pct(v, t)}</small></span><span class="tr"><i style="width:${v / t * 100}%"></i></span></li>`).join('')}</ol>`; };
+    const when = (t) => { const d = new Date(t); return isNaN(d) ? esc(t) : d.toLocaleString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', hour: 'numeric', minute: '2-digit' }); };
+    const notes = rows.filter((x) => x.text);
+    const period = R.custom ? `${niceDay(R.from)} to ${niceDay(R.to)}` : `the last ${S.days === 365 ? 'year' : S.days + ' days'}`;
+    return `<div class="kpis">
+        ${kpi('Responses', fmt(n), `${fmt(all.length)} in total`)}
+        ${kpi('Finding the right car', rated.length ? avg.toFixed(1) + ' / 5' : '–', rated.length ? `<span class="stars">${'★'.repeat(Math.round(avg))}${'☆'.repeat(5 - Math.round(avg))}</span> from ${fmt(rated.length)} ratings` : 'no ratings yet')}
+        ${kpi('Comparison easy to use', share('cmp', 'Yes'), 'answered "Yes"')}
+        ${kpi('Found all the information', share('info', 'Yes'), 'answered "Yes"')}
+      </div>
+      <div class="grid3">
+        <div class="card"><h3>How was finding the right car?</h3>${bars([5, 4, 3, 2, 1].map((k) => [`${k} · ${LBL[k]}`, rows.filter((x) => x.exp === k).length]))}</div>
+        <div class="card"><h3>Comparison easy to use?</h3>${bars(cnt('cmp', ['Yes', 'Somewhat', 'No', "Didn't use it"]))}</div>
+        <div class="card"><h3>Found all the information?</h3>${bars(cnt('info', ['Yes', 'Mostly', 'No']))}</div>
+      </div>
+      <div class="card fbk" style="margin-top:16px"><div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><h3 style="margin:0">How would you make us better?</h3>${n ? '<button class="btn" data-csv>Download CSV</button>' : ''}</div>
+        <p class="muted small">${fmt(notes.length)} written ${notes.length === 1 ? 'suggestion' : 'suggestions'} in ${period}, newest first.</p>
+        ${notes.length ? `<ol>${notes.map((x) => `<li><div class="tx">${esc(x.text)}</div><div class="chips">${x.exp ? `<span class="chip">Experience ${x.exp}/5</span>` : ''}${x.cmp ? `<span class="chip">Comparison: ${esc(x.cmp)}</span>` : ''}${x.info ? `<span class="chip">All info: ${esc(x.info)}</span>` : ''}<span class="when">${when(x.t)}</span></div></li>`).join('')}</ol>` : '<p class="empty">No written suggestions for this period.</p>'}</div>`;
+  };
+  const SETUP_FB = `<div class="card setup"><h3>Connect the feedback form</h3><p class="muted small">Feedback from the site's footer is stored in a Google Form's response sheet.</p><ol>
+    <li>In Google Cloud, open the project that holds the Google Analytics service account and enable the <b>Google Sheets API</b>.</li>
+    <li>Open the form's response sheet, click <b>Share</b> and add the service account's email as a <b>Viewer</b>.</li>
+    <li>Add the sheet's id (the long part of its link between <code>/d/</code> and <code>/edit</code>) as the GitHub secret <code>FEEDBACK_SHEET_ID</code>.</li></ol><p class="muted small">Responses appear here within the hour.</p></div>`;
+  function fbCsv() {
+    const R = range(), q = (v) => `"${String(v ?? '').replace(/"/g, '""')}"`;
+    const rows = (DATA.fb.rows || []).filter((x) => { const d = String(x.t).slice(0, 10); return d >= R.from && d <= R.to; });
+    const csv = [['Time', 'Experience (1-5)', 'Comparison easy to use', 'Found all the information', 'How would you make us better'], ...rows.map((x) => [x.t, x.exp || '', x.cmp, x.info, x.text])].map((r) => r.map(q).join(',')).join('\n');
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['﻿' + csv], { type: 'text/csv' })); a.download = `right-ride-feedback-${R.from}-to-${R.to}.csv`; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  }
+
   function draw() {
     $('#out').hidden = false; $('#nav').hidden = false;
     const M = model();
@@ -452,6 +497,7 @@ th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); 
     for (const id of ['dFrom', 'dTo']) { const i = document.getElementById(id); if (i) i.onchange = () => { if (!i.value) return; S[id === 'dFrom' ? 'from' : 'to'] = i.value; LS.set(id === 'dFrom' ? 'from' : 'to', i.value); draw(); }; }
     for (const b of document.querySelectorAll('[data-by]')) b.onclick = () => { S.by[b.dataset.by] = b.dataset.v; draw(); };
     for (const i of document.querySelectorAll('[data-rate]')) i.onchange = () => { const v = parseFloat(i.value); RATE[i.dataset.rate] = isFinite(v) && v >= 0 ? v : RATE_DEF[i.dataset.rate]; LS.set('rates', JSON.stringify(RATE)); draw(); };
+    const cv = document.querySelector('[data-csv]'); if (cv) cv.onclick = fbCsv;
     const r = document.querySelector('[data-reset]'); if (r) r.onclick = () => { RATE = { ...RATE_DEF }; LS.set('rates', ''); draw(); };
     for (const ch of document.querySelectorAll('.chart[data-ch]')) {
       const c = CH[ch.dataset.ch], tip = ch.querySelector('.tip');

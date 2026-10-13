@@ -41,6 +41,7 @@ jobs:
           GC_TOKEN: ${{ secrets.GC_TOKEN }}
           GA_SA_KEY: ${{ secrets.GA_SA_KEY }}
           GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
+          FEEDBACK_SHEET_ID: ${{ secrets.FEEDBACK_SHEET_ID }}
       - name: Minify scripts and styles (smaller, faster pages)
         run: |
           for f in site/app.js site/styles.css site/seo.css site/legal.css; do

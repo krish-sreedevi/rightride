@@ -8,6 +8,8 @@
 //   GC_TOKEN                GoatCounter API token with "Read statistics" permission (optional)
 //   GA_SA_KEY               Google Cloud service-account key (the whole JSON file) with Viewer access to the GA4 property (optional)
 //   GA_PROPERTY_ID          numeric GA4 property ID, e.g. 512345678 (optional, needed with GA_SA_KEY)
+//   FEEDBACK_SHEET_ID       id of the Google Sheet holding the feedback form's responses, shared (Viewer) with the
+//                           GA_SA_KEY service account; the Google Sheets API must be enabled in its Cloud project (optional)
 import { webcrypto as C, createSign } from 'node:crypto';
 import { writeFileSync, mkdirSync } from 'node:fs';
 
@@ -50,10 +52,10 @@ async function gcPeriod(days) {
 
 // ---------- Google Analytics 4 (Data API, service account) ----------
 const b64u = (b) => Buffer.from(b).toString('base64url');
-async function gaToken(key) {
+async function gaToken(key, scope = 'https://www.googleapis.com/auth/analytics.readonly') {
   const now = Math.floor(Date.now() / 1000);
   const head = b64u(JSON.stringify({ alg: 'RS256', typ: 'JWT' }));
-  const body = b64u(JSON.stringify({ iss: key.client_email, scope: 'https://www.googleapis.com/auth/analytics.readonly', aud: 'https://oauth2.googleapis.com/token', iat: now, exp: now + 3000 }));
+  const body = b64u(JSON.stringify({ iss: key.client_email, scope, aud: 'https://oauth2.googleapis.com/token', iat: now, exp: now + 3000 }));
   const sig = createSign('RSA-SHA256').update(head + '.' + body).sign(key.private_key).toString('base64url');
   const r = await fetch('https://oauth2.googleapis.com/token', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer', assertion: `${head}.${body}.${sig}` }) });
   if (!r.ok) throw new Error('Google sign-in failed: HTTP ' + r.status);
@@ -87,6 +89,19 @@ async function gaPeriod(tok, days) {
   return { totals: { users, newUsers, sessions, views, avgSec, engagement }, daily: daily.map(([d, v]) => ({ day: isoDay(d), v })), pages, channels, sources, cities, devices, events };
 }
 
+// ---------- feedback (Google Form responses sheet) ----------
+// Columns: Timestamp, then the four questions in the order the site asks them. Matched by position.
+async function feedback(key) {
+  const tok = await gaToken(key, 'https://www.googleapis.com/auth/spreadsheets.readonly');
+  const u = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(E.FEEDBACK_SHEET_ID)}/values/A1:F20000?valueRenderOption=UNFORMATTED_VALUE&dateTimeRenderOption=SERIAL_NUMBER`;
+  const r = await fetch(u, { headers: { Authorization: 'Bearer ' + tok } });
+  if (!r.ok) throw new Error('Google Sheets: HTTP ' + r.status + (r.status === 403 ? ' (share the sheet with the service account and enable the Sheets API)' : r.status === 404 ? ' (check FEEDBACK_SHEET_ID)' : ''));
+  const rows = ((await r.json()).values || []).slice(1);
+  // the sheet's serial dates are in the form's time zone (India), so shift back to UTC
+  const when = (v) => (typeof v === 'number' ? new Date(Math.round((v - 25569) * 864e5 - 5.5 * 36e5)).toISOString() : String(v || ''));
+  return rows.filter((x) => x.some((v, i) => i && String(v ?? '').trim())).map((x) => ({ t: when(x[0]), exp: +x[1] || null, cmp: String(x[2] ?? '').trim(), info: String(x[3] ?? '').trim(), text: String(x[4] ?? '').trim().slice(0, 2000) }));
+}
+
 // ---------- encrypt with the admin sign-in (matches admin.html) ----------
 const SALT = 'rightride-admin-v1', ITER = 600000;
 async function encrypt(obj) {
@@ -109,6 +124,10 @@ if (out.ga.connected) {
     out.ga.daily = await gaDaily(tok);
     log('Google Analytics ok');
   } catch (e) { out.ga.error = e.message.replace(/[A-Za-z0-9_\-.]{40,}/g, '…'); log('Google Analytics failed:', out.ga.error); }
+}
+out.fb = { connected: !!(E.FEEDBACK_SHEET_ID && E.GA_SA_KEY), rows: [] };
+if (out.fb.connected) {
+  try { out.fb.rows = await feedback(JSON.parse(E.GA_SA_KEY)); log('Feedback ok:', out.fb.rows.length, 'responses'); } catch (e) { out.fb.error = e.message.replace(/[A-Za-z0-9_\-.]{40,}/g, '…'); log('Feedback failed:', out.fb.error); }
 }
 mkdirSync('site/data', { recursive: true });
 writeFileSync('site/data/admin-stats.enc.json', JSON.stringify(await encrypt(out)));

@@ -70,7 +70,7 @@ ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j).repl
 <main>
 ${body}
 </main>
-<footer class="foot"><nav aria-label="Site information"><a href="/cars/">All cars</a><a href="/privacy.html">Privacy policy</a><a href="/terms.html">Terms and conditions</a><a href="mailto:info@rightride.in">info@rightride.in</a></nav>
+<footer class="foot"><nav aria-label="Site information"><a href="/cars/">All cars</a><a href="/privacy.html">Privacy policy</a><a href="/terms.html">Terms and conditions</a><a href="/#feedback">Give feedback</a><a href="mailto:info@rightride.in">info@rightride.in</a></nav>
 <p>© ${YEAR} Right Ride. All rights reserved. Prices are ex-showroom from each maker's official website, refreshed every week; confirm with your dealer before booking. Right Ride is independent and not affiliated with any carmaker.</p></footer>
 <script src="/analytics.js"></script>
 <script>window.rrTrack && window.rrTrack(${JSON.stringify(track)}, document.title);</script>
