@@ -1439,3 +1439,6 @@ body[data-page="home"] .theme-tg { position: absolute; top: 50%; right: max(16px
   .shop-bar.sx-on .tab-row, .shop-bar.sx-on .filter-btn { opacity: 0; }
 }
 @media (max-width: 760px) { .shop-bar .search-wrap.sx-closing .search input { opacity: 0; transition: none; } }
+
+/* dealer cards: no entrance animation (iOS Safari could leave a card invisible, showing as an empty gap) */
+.dl { animation: none; opacity: 1; transform: none; }
