@@ -2023,7 +2023,7 @@
     };
     d.innerHTML = `<div class="cp-head"><h2>Choose a car to compare</h2><button class="btn ghost" type="button" data-close aria-label="Close">✕</button></div>
       <div class="cp-tools"><input id="cmpQ" type="search" placeholder="Search by name" autocomplete="off" aria-label="Search cars">
-      <div class="seg" role="group" aria-label="Which cars">${closest.length ? `<button type="button" data-scope="close" aria-pressed="${scope === 'close'}" title="Cars most like the ${esc(one.model)}: body type, price, fuel and seats">Closest options</button>` : ''}<button type="button" data-scope="filtered" aria-pressed="${scope === 'filtered'}">Your results (${filtered.length})</button><button type="button" data-scope="all" aria-pressed="${scope === 'all'}">All cars</button></div></div>
+      <div class="seg" role="group" aria-label="Which cars">${closest.length ? `<button type="button" data-scope="close" aria-pressed="${scope === 'close'}" title="Cars most like the ${esc(one.model)}: body type, price, fuel and seats">Closest<span class="sg-x"> options</span></button>` : ''}${filtered.length ? `<button type="button" data-scope="filtered" aria-pressed="${scope === 'filtered'}">Your results<span class="sg-x"> (${filtered.length})</span></button>` : ''}<button type="button" data-scope="all" aria-pressed="${scope === 'all'}">All cars</button></div></div>
       <div id="cmpList" class="cp-list"></div>`;
     draw();
     d.oninput = (e) => { if (e.target.id === 'cmpQ') draw(); };
