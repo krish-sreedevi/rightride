@@ -1,4 +1,4 @@
-/* Right Ride — minimal, futuristic, Apple-like */
+/* RightRide — minimal, futuristic, Apple-like */
 :root {
   --bg: #f5f5f7; --panel: #ffffff; --panel-2: #fbfbfd; --text: #1d1d1f; --muted: #6e6e73; --line: rgba(0,0,0,.08); --line-2: rgba(0,0,0,.14);
   --brand: #D02A1C; --brand-2: #E5341F; --brand-soft: rgba(208,42,28,.08); --brand-grad: linear-gradient(180deg, #E5341F, #D02A1C); --warn: #b45309; --warn-soft: rgba(245,158,11,.12);
@@ -1256,7 +1256,7 @@ body[data-page="home"] .theme-tg:active { transform: scale(.92) rotate(-20deg); 
 html[data-theme="dark"] .theme-tg .ic-sun { display: block; }
 html[data-theme="dark"] .theme-tg .ic-moon { display: none; }
 
-/* keep "Right Ride" together on one line in the hero */
+/* keep "RightRide" together on one line in the hero */
 .hero-title .nw { white-space: nowrap; }
 .results-head .rt { margin: 0; font-family: Michroma, Inter, sans-serif; font-weight: 400; letter-spacing: .01em; }
 /* home: keep the header on one row so the sun/moon button sits at the top right on small phones too */
