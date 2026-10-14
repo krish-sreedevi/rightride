@@ -1325,3 +1325,54 @@ body[data-page="home"] .theme-tg { position: absolute; top: 50%; right: max(16px
   .shop-bar .tab-rr::after { display: none; }
   .dl-find [data-dl="geo"] { height: 44px; border-radius: 50%; }
 }
+
+/* compare page: a slim sticky row of car names (phones only) */
+.cg-mini { display: none; }
+@media (max-width: 760px) {
+  /* results: two cars per row */
+  .tile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .tile-grid .tile { padding: 10px 10px 12px; border-radius: 18px; }
+  .tile-grid .tile.big { grid-column: 1 / -1; }
+  .tile-grid .tile:not(.big) .timg { height: 92px; margin: 22px 0 6px; }
+  .tile-grid .tile:not(.big) .timg img { height: 92px; filter: drop-shadow(0 8px 8px rgba(0,0,0,.12)); }
+  .tile-grid .tile:not(.big) .tt h3 { font-size: .95rem; }
+  .tile-grid .tile:not(.big) .tt .m { font-size: .74rem; -webkit-line-clamp: 1; }
+  .tile-grid .tile:not(.big) .pr { top: 8px; right: 8px; padding: 2px 8px; font-size: .74rem; }
+  .tile-grid .tile:not(.big) .sc { top: 8px; left: 8px; padding: 2px 7px; font-size: .7rem; }
+  .tile-grid .tile:not(.big) .tw { font-size: .68rem; margin-top: 6px; }
+  /* compare bar: one slim strip, three thumbnails and the button */
+  .compare-bar { padding: 8px 12px calc(8px + env(safe-area-inset-bottom)); }
+  .cb-in { flex-wrap: nowrap; gap: 8px; }
+  .cb-head { display: none; }
+  .cb-slots { order: 1; width: auto; flex: 1 1 auto; gap: 6px; }
+  .cb-slot { padding: 4px; min-height: 0; height: 46px; justify-content: center; }
+  .cb-slot.empty { min-height: 0; height: 46px; font-size: 0; }
+  .cb-slot.empty .cb-plus { font-size: 1.1rem; }
+  .cb-thumb { height: 36px; }
+  .cb-name { display: none; }
+  .cb-act { position: absolute; top: -6px; right: -6px; margin: 0; }
+  .cb-act .cb-btn { display: none; }
+  .cb-x { width: 20px; height: 20px; font-size: .65rem; background: var(--panel); box-shadow: 0 1px 4px rgba(0,0,0,.18); }
+  .cb-go { order: 2; width: auto; flex: none; padding: 0 14px; height: 46px; }
+  body[data-page="cars"] .foot { padding-bottom: 80px; }
+  /* filters: the Show results button sits on a solid strip at the bottom */
+  .filters { padding-bottom: 0; }
+  #applyMobile { bottom: 0; margin: 14px 0 0; box-shadow: 0 0 0 14px var(--panel), 0 -24px 24px var(--panel); z-index: 3; }
+  /* compare page: feature name on its own line, values side by side underneath; slim sticky car names */
+  .cmp-grid { overflow: visible; padding: 6px 12px 14px; }
+  .cg-row { grid-template-columns: repeat(var(--n), minmax(0, 1fr)); min-width: 0; }
+  .cg-row > .cg-k { grid-column: 1 / -1; padding: 12px 0 2px; font-size: .82rem; color: var(--muted); }
+  .cg-row > .cg-k:empty { display: none; }
+  .cg-v { padding: 4px 8px 12px; font-size: .86rem; }
+  .cg-cars .cg-car { padding: 10px 6px; }
+  .cg-img, .cg-img img, .cg-img svg { height: 70px; }
+  .cg-mini { display: grid; position: sticky; top: var(--topbar-h, 56px); z-index: 6; background: var(--panel); border-bottom: 1px solid var(--line); margin: 0 -12px; padding: 0 12px; box-shadow: 0 6px 12px -8px rgba(0,0,0,.18); }
+  .cg-mn { padding: 9px 8px; font-weight: 700; font-size: .85rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cg-mn.best { color: var(--brand); }
+  /* car page variant table: roomier feature names, narrower tick columns, sticky variant names */
+  .vh-scroll { max-height: 72vh; overflow: auto; overscroll-behavior: contain; }
+  .vh-table .vh-c0 { min-width: 150px; max-width: 160px; font-size: .8rem; line-height: 1.25; }
+  .vh-table th, .vh-table td { min-width: 76px; padding: 7px 6px; }
+  .vh-table thead th { position: sticky; top: 0; z-index: 2; }
+  .vh-table thead th.vh-c0 { z-index: 3; }
+}

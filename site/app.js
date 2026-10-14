@@ -2173,6 +2173,7 @@
           <label class="cg-var"><span class="sr">Variant</span><select data-vsel="${esc(keyOf(car.m))}">${car.m.vs.map((v) => v.c).sort((a, b) => a.orTotal - b.orTotal).map((c) => `<option value="${esc(c.id)}" ${c.id === car.c.id ? 'selected' : ''}>${esc(c.variant)} · ${lakh(c.orTotal)}</option>`).join('')}</select></label>
           ${rows.length ? `<div class="cg-sum">${nMust ? `<b>${car.met}/${nMust}</b> must-haves` : ''}${nMust ? ' · ' : ''}${car.great} great</div>` : ''}
           <button class="link small" type="button" data-cmpchange="${i}">Change car</button></div>`).join('')}</div>
+        <div class="cg-row cg-mini" aria-hidden="true"><div class="cg-k"></div>${cars.map((car) => `<div class="cg-mn${best === car ? ' best' : ''}">${esc(car.m.model)}</div>`).join('')}</div>
         ${best ? `<div class="cg-why"><b>${esc(best.m.model)}</b> fits you best: it ${esc(why)}.</div>` : ''}
         ${rows.length ? `<div class="cg-sect">Your requirements</div>${rows.map((r, ri) => `<div class="cg-row"><div class="cg-k">${esc(reqLabel(r.k))}<span class="cg-tag ${r.must ? 'must' : ''}">${r.must ? 'Must have' : 'Nice to have'}</span></div>${cars.map((car) => `<div class="cg-v${best === car ? ' best' : ''}">${pill(car.g[ri])}${car.g[ri].g === 0 ? higher(car, r.k) : ''}</div>`).join('')}</div>`).join('')}`
           : `<p class="muted cg-empty">Choose your must-haves above to see how each car does.</p>`}
