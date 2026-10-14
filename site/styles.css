@@ -1421,3 +1421,14 @@ body[data-page="home"] .theme-tg { position: absolute; top: 50%; right: max(16px
   .shop-bar .tab-rr::before { width: 15px; height: 12px; }
   .shop-bar .filter-btn { padding-left: 12px; padding-right: 12px; gap: 6px; }
 }
+
+/* car page hero: specs as one tidy line, scores side by side, video full width with Official site and Share as a pair underneath */
+.cp-specs { display: flex; flex-wrap: wrap; gap: 2px 0; margin: 2px 0 16px; font-size: .9rem; color: var(--muted); }
+.cp-specs span:not(:last-child)::after { content: '·'; margin: 0 8px; color: var(--line-2); font-weight: 700; }
+.cp-badges { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; max-width: 460px; margin-bottom: 16px; }
+.cp-badge { justify-content: flex-start; }
+.cp-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 460px; }
+.cp-cta > .btn.primary { grid-column: 1 / -1; }
+.cp-cta > .btn, .cp-cta .share, .cp-cta .share-btn { width: 100%; margin: 0; }
+.cp-cta .share { display: block; position: relative; }
+@media (max-width: 760px) { .cp-specs { font-size: .82rem; } .cp-specs span:not(:last-child)::after { margin: 0 6px; } }

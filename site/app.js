@@ -903,7 +903,7 @@
           <h1 class="display cp-title">${esc(m.model)}</h1>
           <div class="muted small">On-road price in ${esc(st)}</div>
           <div class="cp-price">${lakh(m.min)}${m.max > m.min ? ` <span>– ${lakh(m.max)}</span>` : ''}</div>
-          <div class="cp-tags">${tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('')}</div>
+          <div class="cp-specs">${tags.map((t) => `<span>${esc(t)}</span>`).join('')}</div>
           <div class="cp-badges">${x && x.s ? `<span class="cp-badge"><b>${esc(x.s)}</b><small>/10</small><span>Expert score</span></span>` : ''}${nc ? `<a class="cp-badge nc" href="#cpSafety" data-jump="cpSafety"><b>${nc.stars}★</b><span>${esc(nc.by)}</span></a>` : ''}</div>
           <div class="cp-cta"><a class="btn primary" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"${trk(m, 'video', ytCh(m))}><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>Watch expert video</a><a class="btn ghost" href="${esc(m.url)}" target="_blank" rel="noopener"${trk(m, 'maker-site', m.brand)}>Official site <span aria-hidden="true">↗</span></a>${shareBtn('car')}</div>
         </div>
