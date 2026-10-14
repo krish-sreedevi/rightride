@@ -1994,17 +1994,28 @@
     const d = $('#cmpPick'), taken = new Set(takenKeys || cmpKeys().filter((k, j) => k && j !== i));
     const filtered = cmpSource().filter((m) => !taken.has(keyOf(m)));
     const all = groupAll().filter((m) => !taken.has(keyOf(m))).sort((a, b) => a.brand.localeCompare(b.brand) || a.model.localeCompare(b.model));
-    let scope = filtered.length ? 'filtered' : 'all';
+    // with exactly one car chosen, offer its closest rivals: same body type, similar on-road price, shared fuels and seating
+    const one = taken.size === 1 ? modelByKey([...taken][0]) : null;
+    const seatsOf = (m) => Math.max(0, ...m.vs.map((v) => (v.c && v.c.seats) || 0));
+    const closest = one ? groupAll().filter((m) => !taken.has(keyOf(m)) && m.min && one.min).map((m) => {
+      const p = Math.abs(Math.log(((m.min + m.max) / 2) / ((one.min + one.max) / 2)));
+      const fu = one.fuels.filter((f) => m.fuels.includes(f)).length / Math.max(1, one.fuels.length);
+      const sd = seatsOf(m) === seatsOf(one) ? 0 : Math.abs(seatsOf(m) - seatsOf(one)) >= 2 ? 0.35 : 0.2;
+      const only4 = (x) => x.vs.every((v) => v.c && v.c.drive && v.c.drive !== '2WD'), dd = only4(m) !== only4(one) ? 0.35 : 0;
+      return [m, p * 2 + (m.body === one.body ? 0 : 0.6) + (1 - fu) * 0.35 + sd + dd + (m.brand === one.brand ? 0.08 : 0)];
+    }).sort((a, b) => a[1] - b[1]).slice(0, 10).map((x) => x[0]) : [];
+    let scope = closest.length ? 'close' : filtered.length ? 'filtered' : 'all';
     const row = (m) => `<button type="button" class="cp-row" data-pick="${esc(keyOf(m))}"><span class="cp-th">${carImg(m, '72px')}</span><span class="cp-n"><span class="muted small">${esc(m.brand)}</span><b>${esc(m.model)}</b></span><span class="cp-p">${lakh(m.min)}</span></button>`;
     const draw = () => {
       const q = compact(($('#cmpQ') || {}).value || '');
-      const base = scope === 'filtered' ? filtered : all;
+      const base = scope === 'close' ? closest : scope === 'filtered' ? filtered : all;
       const list = q ? base.filter((m) => compact(m.brand + m.model).includes(q) || compact(m.model).includes(q)) : base;
+      if (scope === 'close' && !q) { $('#cmpList').innerHTML = `<p class="muted small cp-why">Cars most like the <b>${esc(one.brand + ' ' + one.model)}</b>: similar price, body type, fuel and seats.</p>` + list.map(row).join(''); return; }
       $('#cmpList').innerHTML = list.length ? list.slice(0, 120).map(row).join('') : `<p class="muted cp-none">No cars match.${scope === 'filtered' ? ' <button class="link" type="button" data-scope="all">Search all cars</button>' : ''}</p>`;
     };
     d.innerHTML = `<div class="cp-head"><h2>Choose a car to compare</h2><button class="btn ghost" type="button" data-close aria-label="Close">✕</button></div>
       <div class="cp-tools"><input id="cmpQ" type="search" placeholder="Search by name" autocomplete="off" aria-label="Search cars">
-      <div class="seg" role="group" aria-label="Which cars"><button type="button" data-scope="filtered" aria-pressed="${scope === 'filtered'}">Your results (${filtered.length})</button><button type="button" data-scope="all" aria-pressed="${scope === 'all'}">All cars</button></div></div>
+      <div class="seg" role="group" aria-label="Which cars">${closest.length ? `<button type="button" data-scope="close" aria-pressed="${scope === 'close'}" title="Cars most like the ${esc(one.model)}: body type, price, fuel and seats">Closest options</button>` : ''}<button type="button" data-scope="filtered" aria-pressed="${scope === 'filtered'}">Your results (${filtered.length})</button><button type="button" data-scope="all" aria-pressed="${scope === 'all'}">All cars</button></div></div>
       <div id="cmpList" class="cp-list"></div>`;
     draw();
     d.oninput = (e) => { if (e.target.id === 'cmpQ') draw(); };

@@ -1442,3 +1442,5 @@ body[data-page="home"] .theme-tg { position: absolute; top: 50%; right: max(16px
 
 /* dealer cards: no entrance animation (iOS Safari could leave a card invisible, showing as an empty gap) */
 .dl { animation: none; opacity: 1; transform: none; }
+.cp-why { margin: 2px 4px 8px; }
+@media (max-width: 520px) { .cp-tools .seg { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; } .cp-tools .seg button { white-space: nowrap; flex: none; } }
