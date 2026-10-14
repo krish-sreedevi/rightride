@@ -627,7 +627,7 @@
     if (($('#list').className === 'list') !== !!recMode) listKeys = new Set(); // switching between list and grid: everything enters fresh
     snapList();
     $('#list').className = recMode ? 'list' : 'tile-grid';
-    $('#list').innerHTML = shown.length ? shown.map((m, i) => (!recMode && featsOn().size && m.tier > 0 && (i === 0 || shown[i - 1].tier === 0) ? `<div class="grid-split"><b>More to check</b><span class="muted">We couldn't confirm every feature for these yet. Open a car to see its variants.</span></div>` : '') + (recMode ? recCard(m, i + 1) : tile(m))).join('') : sorry();
+    $('#list').innerHTML = shown.length ? shown.map((m, i) => (!recMode && featsOn().size && m.tier > 0 && (i === 0 || shown[i - 1].tier === 0) ? `<div class="grid-split"><b>More to check</b><span class="muted">We couldn't confirm every feature for these yet. Open a car to see its variants.</span></div>` : '') + (recMode ? recCard(m, i + 1) : tile(m))).join('') + fewMore(list.length) : sorry();
     animateList();
     $('#more').hidden = list.length <= shown.length;
     updateCompareBar();
@@ -859,6 +859,14 @@
       ${opts.length ? `<p class="muted">Remove one of these to see cars that fit the rest:</p>
       <div class="relax">${opts.map((o) => `<button class="relax-btn" type="button" data-rm="${esc(o.spec)}"><span>Remove <b>${esc(o.label)}</b></span><em>${o.n} car${o.n > 1 ? 's' : ''} <span aria-hidden="true">→</span></em></button>`).join('')}</div>` : '<p class="muted">Nothing comes up even with one filter removed.</p>'}
       <button class="link" type="button" data-rm="*">Clear all filters</button></div>`;
+  }
+  // only one or two cars match: under them, offer the same "remove one filter" shortcuts, each showing how many cars it opens up
+  function fewMore(have) {
+    if (have > 2 || !activeFilters().length) return '';
+    const opts = relaxOptions().filter((o) => o.n > have).slice(0, 4);
+    if (!opts.length) return '';
+    return `<div class="few-more"><h3>Only ${have} car${have > 1 ? 's' : ''} match${have > 1 ? '' : 'es'} everything</h3><p class="muted">Remove one filter to see more:</p>
+      <div class="relax">${opts.map((o) => `<button class="relax-btn" type="button" data-rm="${esc(o.spec)}"><span>Remove <b>${esc(o.label)}</b></span><em>${o.n} cars <span aria-hidden="true">→</span></em></button>`).join('')}</div></div>`;
   }
 
   // ---------------- car page: #/car/<brand-model> ----------------

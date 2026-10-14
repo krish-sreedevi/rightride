@@ -1444,3 +1444,7 @@ body[data-page="home"] .theme-tg { position: absolute; top: 50%; right: max(16px
 .dl { animation: none; opacity: 1; transform: none; }
 .cp-why { margin: 2px 4px 8px; }
 @media (max-width: 520px) { .cp-tools .seg { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; } .cp-tools .seg button { white-space: nowrap; flex: none; } }
+
+.few-more { grid-column: 1 / -1; text-align: center; padding: 22px 16px 6px; margin-top: 6px; border-top: 1px dashed var(--line-2); }
+.few-more h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.few-more .relax { margin-top: 12px; }
