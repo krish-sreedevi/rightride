@@ -611,7 +611,7 @@
     const list = results();
     const nV = list.reduce((s, m) => s + m.vs.length, 0);
     const stName = RTO.states[state.st].name;
-    $('#resultTitle').textContent = list.length ? `${list.length} model${list.length > 1 ? 's' : ''} · ${nV} variants match` : 'No cars match';
+    $('#resultTitle').innerHTML = list.length ? `${list.length} model${list.length > 1 ? 's' : ''}<span class="rt-v"> · ${nV} variant${nV > 1 ? 's' : ''}</span> match` : 'No cars match';
     if (list.length && featsOn().size) {
       const ok = list.filter((m) => m.tier === 0).length, rest = list.length - ok;
       $('#resultTitle').textContent = ok ? `${ok} model${ok > 1 ? 's' : ''} match` : 'No confirmed matches';
@@ -908,7 +908,7 @@
           <div class="cp-cta"><a class="btn primary" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"${trk(m, 'video', ytCh(m))}><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>Watch expert video</a><a class="btn ghost" href="${esc(m.url)}" target="_blank" rel="noopener"${trk(m, 'maker-site', m.brand)}>Official site <span aria-hidden="true">↗</span></a>${shareBtn('car')}</div>
         </div>
       </section>
-      <nav class="cp-nav" id="cpNav" aria-label="Sections"><a href="#chRide" data-jump="chRide" class="on"><span class="n">1</span><b>Is this my Right Ride?</b></a><a href="#chVariant" data-jump="chVariant"><span class="n">2</span><b>Find the Right Variant</b></a><a href="#chDealer" data-jump="chDealer"><span class="n">3</span><b>Find the Right Dealer</b></a></nav>
+      <nav class="cp-nav" id="cpNav" aria-label="Sections"><a href="#chRide" data-jump="chRide" class="on"><span class="n">1</span><b class="l">Is this my Right Ride?</b><b class="s">Right for me?</b></a><a href="#chVariant" data-jump="chVariant"><span class="n">2</span><b class="l">Find the Right Variant</b><b class="s">Variant</b></a><a href="#chDealer" data-jump="chDealer"><span class="n">3</span><b class="l">Find the Right Dealer</b><b class="s">Dealer</b></a></nav>
       <section class="cp-ch" id="chRide" aria-labelledby="chRideT">
         ${chHead(1, 'chRide', 'Is this my Right Ride?', `What owning a ${esc(m.model)} is like, what experts think and how safe it is.`)}
         <section class="cp-sec" id="cpMetrics" hidden></section>
@@ -1133,7 +1133,7 @@
   function drawDealers(m) {
     const box = $('#cpDealers'); if (!box) return;
     const geo = store.get('geo', null);
-    box.innerHTML = `<form class="dl-find" data-dlform><button type="button" class="btn ghost" data-dl="geo">${PIN} Use my location</button><span class="muted">or</span>
+    box.innerHTML = `<form class="dl-find" data-dlform><button type="button" class="btn ghost" data-dl="geo" aria-label="Use my location">${PIN}<span class="t"> Use my location</span></button><span class="muted dl-or">or</span>
         <input class="dl-pin" name="pin" inputmode="numeric" autocomplete="postal-code" maxlength="6" pattern="[1-9][0-9]{5}" placeholder="Enter pincode" aria-label="Pincode"><button class="btn primary" type="submit">Find</button></form>
       <p class="hint dl-geo-note">Your location is only used in your browser to sort showrooms by distance. Pincodes are looked up with OpenStreetMap's Nominatim service. Showroom data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>.</p>
       <div id="dlList" aria-live="polite"></div>`;
