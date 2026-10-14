@@ -2144,7 +2144,7 @@
     const pill = (x) => `<span class="gr g${x.g}">${x.g === 2 ? 'Great' : x.g === 1 ? 'Good' : x.weak ? 'Weak' : 'Not available'}</span><span class="gr-why">${esc(x.why)}</span>`;
     const higher = (car, k) => { const up = car.m.vs.map((v) => v.c).filter((c) => c.orTotal > car.c.orTotal && grade(k, c, car.m).g > 0).sort((a, b) => a.orTotal - b.orTotal)[0]; return up ? `<span class="gr-up">On ${esc(up.variant)} (+${lakh(up.orTotal - car.c.orTotal)})</span>` : ''; };
     const bucket = (name, list, max) => `<div class="rq-bucket${cmp.add === name ? ' on' : ''}" data-bucket="${name}"><div class="rq-bh"><b>${name === 'must' ? 'Must have' : 'Nice to have'}</b><span class="muted small">${list.length}/${max}</span></div>
-      <div class="rq-chosen">${list.length ? list.map((k) => `<button type="button" class="chip on" data-unreq="${k}" data-drag="${k}">${esc(reqLabel(k))} ✕</button>`).join('') : `<span class="muted small rq-drop-hint">Drag options here, or ${cmp.add === name ? 'tap them below' : 'tap this box, then tap options'}</span>`}</div></div>`;
+      <div class="rq-chosen">${list.length ? list.map((k) => `<button type="button" class="chip on" data-unreq="${k}" data-drag="${k}">${esc(reqLabel(k))} ✕</button>`).join('') : `<span class="muted small rq-drop-hint">${rqPhone() ? 'Tap a feature below' : `Drag options here, or ${cmp.add === name ? 'tap them below' : 'tap this box, then tap options'}`}</span>`}</div></div>`;
     const basics = [
       ['On-road price', (car) => `<b>${lakh(car.c.orTotal)}</b><span class="gr-why">${esc(car.c.variant)}</span>`],
       ['Price range', (car) => `${lakh(car.m.min)}${car.m.max > car.m.min ? ' – ' + lakh(car.m.max) : ''}`],
@@ -2158,7 +2158,7 @@
       <button class="cp-back" type="button" data-go="cars"><span aria-hidden="true">‹</span> Back to cars</button>
       <div class="cmp-title-row"><h1 class="ch-t cmp-title">Compare to find your Right Ride</h1>${shareBtn('cmp')}</div>
       <section class="cp-sec rq">
-        <div class="rq-top"><div><h2 class="display">What matters to you?</h2><p class="muted">Pick up to 5 must-haves and 5 nice-to-haves: drag options into a box, or tap them. We'll rate each car on how well it does each one.</p></div></div>
+        <div class="rq-top"><div><h2 class="display">What matters to you?</h2><p class="muted">Pick up to 5 must-haves and 5 nice-to-haves: ${rqPhone() ? 'tap a feature and choose where it goes' : 'drag options into a box, or tap them'}. We'll rate each car on how well it does each one.</p></div></div>
         <div class="rq-buckets">${bucket('must', cmp.req.must, 5)}${bucket('nice', cmp.req.nice, 5)}</div>
         <div class="rq-opts"><div class="label">Add to <b>${cmp.add === 'must' ? 'Must have' : 'Nice to have'}</b> <span class="seg rq-seg" role="group" aria-label="Add to"><button type="button" data-add="must" aria-pressed="${cmp.add === 'must'}">Must have</button><button type="button" data-add="nice" aria-pressed="${cmp.add === 'nice'}">Nice to have</button></span></div>
           <label class="rq-search"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input type="search" id="rqQ" placeholder="Search features: boot, resale, sunroof…" autocomplete="off" aria-label="Search features" value="${esc(cmp.q || '')}"></label>
@@ -2183,6 +2183,35 @@
       <p class="hint">"Great" means the better version of a feature (for example a panoramic sunroof, wireless phone mirroring or a 360° camera) or one that expert reviews praise. Ratings are for the variant shown; change it above.</p>
     </div>`;
     filterReq();
+  }
+  // phones: tap a feature to choose Must have / Nice to have from a small menu (no dragging, no "Add to" switch)
+  const rqPhone = () => matchMedia('(max-width: 760px), (pointer: coarse)').matches;
+  let rqPop = null;
+  const closeRqPop = () => { if (rqPop) { rqPop.remove(); rqPop = null; } };
+  function openRqPop(chip, rerender) {
+    closeRqPop();
+    const k = chip.dataset.req, cur = cmp.req.must.includes(k) ? 'must' : cmp.req.nice.includes(k) ? 'nice' : null;
+    const el = document.createElement('div'); el.className = 'rq-pop'; el.setAttribute('role', 'menu');
+    el.innerHTML = `<div class="rq-pop-t">${esc(reqLabel(k))}</div><div class="rq-pop-b">
+      <button type="button" role="menuitem" data-rqto="must" class="${cur === 'must' ? 'on' : ''}">Must have <small>${cmp.req.must.length}/5</small></button>
+      <button type="button" role="menuitem" data-rqto="nice" class="${cur === 'nice' ? 'on' : ''}">Nice to have <small>${cmp.req.nice.length}/5</small></button>
+      ${cur ? '<button type="button" role="menuitem" data-rqto="" class="rm">Remove</button>' : ''}</div>`;
+    document.body.appendChild(el); rqPop = el;
+    const r = chip.getBoundingClientRect(), w = el.offsetWidth, h = el.offsetHeight;
+    const left = Math.max(10, Math.min(innerWidth - w - 10, r.left + r.width / 2 - w / 2));
+    const below = r.bottom + 8 + h < innerHeight - 10;
+    el.style.left = left + 'px'; el.style.top = (below ? r.bottom + 8 : r.top - h - 8) + 'px'; el.classList.add(below ? 'down' : 'up');
+    el.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-rqto]'); if (!b) return;
+      const to = b.dataset.rqto || null; closeRqPop();
+      if (setReq(k, to)) { if (to) cmp.add = to; rerender(); }
+    });
+    setTimeout(() => {
+      const away = (e) => { if (rqPop && !rqPop.contains(e.target)) { closeRqPop(); off(); } };
+      const off = () => { document.removeEventListener('pointerdown', away, true); window.removeEventListener('scroll', onScroll, true); };
+      const y0 = scrollY, onScroll = () => { if (Math.abs(scrollY - y0) > 40) { closeRqPop(); off(); } };
+      document.addEventListener('pointerdown', away, true); window.addEventListener('scroll', onScroll, true);
+    }, 0);
   }
   // put requirement k into a bucket ('must' / 'nice'), or take it out (null); false if the bucket is full
   function setReq(k, to) {
@@ -2226,7 +2255,7 @@
     const onCancel = () => end();
     const noScroll = (e) => { if (d && d.on) e.preventDefault(); };
     P.addEventListener('pointerdown', (e) => {
-      const c = e.target.closest('[data-drag]'); if (!c || e.button > 0) return;
+      const c = e.target.closest('[data-drag]'); if (!c || e.button > 0 || (e.pointerType !== 'mouse' && rqPhone())) return;
       d = { src: c, k: c.dataset.drag, chosen: c.hasAttribute('data-unreq') || cmp.req.must.includes(c.dataset.drag) || cmp.req.nice.includes(c.dataset.drag), x0: e.clientX, y0: e.clientY, touch: e.pointerType !== 'mouse', on: false };
       if (d.touch) d.t = setTimeout(() => d && !d.on && start(), 260);
       window.addEventListener('pointermove', onMove); window.addEventListener('pointerup', onUp); window.addEventListener('pointercancel', onCancel);
@@ -2260,6 +2289,7 @@
       const bk = e.target.closest('[data-bucket]'); if (bk && !e.target.closest('[data-unreq]')) { cmp.add = bk.dataset.bucket; return rerender(); }
       const u = e.target.closest('[data-unreq]'); if (u) { const k = u.dataset.unreq; cmp.req.must = cmp.req.must.filter((x) => x !== k); cmp.req.nice = cmp.req.nice.filter((x) => x !== k); cmp.vsel = {}; return rerender(); }
       const r = e.target.closest('[data-req]');
+      if (r && rqPhone()) return openRqPop(r, rerender);
       if (r) {
         const k = r.dataset.req, list = cmp.req[cmp.add], other = cmp.add === 'must' ? 'nice' : 'must';
         if (list.includes(k)) cmp.req[cmp.add] = list.filter((x) => x !== k);
