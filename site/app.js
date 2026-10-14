@@ -739,6 +739,38 @@
     $('#modal').showModal();
   }
 
+  // phones: the search icon grows smoothly into a full-width box when tapped, and shrinks back when left empty
+  function wireSearchExpand() {
+    const W = $('.shop-bar .search-wrap'), I = $('#q'); if (!W || !I) return;
+    const bar = W.closest('.shop-bar'), phone = () => matchMedia('(max-width: 760px)').matches;
+    const reduce = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let anim = null;
+    const clipFor = (small, big) => `inset(${small.top - big.top}px ${big.right - small.right}px ${big.bottom - small.bottom}px ${small.left - big.left}px round 999px)`;
+    const open = () => {
+      if (!phone() || W.classList.contains('sx-open')) return;
+      const a = W.getBoundingClientRect();
+      W.classList.add('sx-open'); bar.classList.add('sx-on');
+      if (reduce()) return;
+      const b = W.getBoundingClientRect();
+      if (anim) anim.cancel();
+      anim = W.animate([{ clipPath: clipFor(a, b) }, { clipPath: 'inset(0px 0px 0px 0px round 999px)' }], { duration: 320, easing: 'cubic-bezier(.22,.8,.24,1)' });
+    };
+    const close = () => {
+      if (!W.classList.contains('sx-open') || I.value.trim()) return;
+      const b = W.getBoundingClientRect();
+      bar.classList.remove('sx-on');
+      if (reduce() || !phone()) { W.classList.remove('sx-open'); return; }
+      W.classList.remove('sx-open'); const a = W.getBoundingClientRect(); W.classList.add('sx-open'); W.classList.add('sx-closing');
+      if (anim) anim.cancel();
+      anim = W.animate([{ clipPath: 'inset(0px 0px 0px 0px round 999px)' }, { clipPath: clipFor(a, b) }], { duration: 260, easing: 'cubic-bezier(.4,0,.2,1)' });
+      anim.onfinish = anim.oncancel = () => { W.classList.remove('sx-closing'); if (document.activeElement !== I) W.classList.remove('sx-open'); anim = null; };
+    };
+    if (I.value && phone()) { W.classList.add('sx-open'); bar.classList.add('sx-on'); }
+    I.addEventListener('focus', open);
+    I.addEventListener('blur', () => setTimeout(close, 120)); // let a tap on a suggestion land first
+    I.addEventListener('input', () => { if (I.value) open(); });
+  }
+
   // ---------------- feedback (footer link) ----------------
   // Answers go to a Google Form (its responses sheet is read hourly into the admin portal by tools/admin-stats.mjs).
   // FEEDBACK.form is the long id in the form's link (docs.google.com/forms/d/e/<id>/viewform); entries are the
@@ -1897,6 +1929,7 @@
     });
     $('#reset').addEventListener('click', () => { clearFilters(); if (state.sort === 'rec') { state.sort = 'price'; $('#sort').value = 'price'; } saveFilters(); buildFilters(); render(); });
     wireCompareBar(); wireComparePage();
+    wireSearchExpand();
     $('#modal').addEventListener('click', (e) => { if (e.target.closest('[data-close]') || e.target.id === 'modal') $('#modal').close(); });
     $('#aboutLink').addEventListener('click', (e) => { e.preventDefault(); about(); });
     // light / dark switch (home page only); the choice is remembered and applied on every page before it paints
