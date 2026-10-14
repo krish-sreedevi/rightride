@@ -1405,3 +1405,19 @@ body[data-page="home"] .theme-tg { position: absolute; top: 50%; right: max(16px
   .rq-drop-hint { white-space: nowrap; }
 }
 @media (max-width: 760px) { .rq-bh { width: 78px; } .rq-bh b { white-space: nowrap; font-size: .78rem; } .rq-bh .small { font-size: .72rem; } }
+/* phones: collapsed search is exactly a 40px circle with the icon centred (iOS gives search inputs a minimum width, so the hidden input sits on top of the icon instead of beside it) */
+@media (max-width: 760px) {
+  .shop-bar .search-wrap { flex: 0 0 40px; }
+  .shop-bar .search { position: relative; width: 40px; min-width: 40px; max-width: 40px; gap: 0; padding: 0; justify-content: center; }
+  .shop-bar .search svg { flex: none; margin: 0; }
+  .shop-bar .search input { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; margin: 0; opacity: 0; -webkit-appearance: none; appearance: none; }
+  .shop-bar .search-wrap:focus-within .search, .shop-bar .search-wrap:has(input:not(:placeholder-shown)) .search { max-width: none; gap: 8px; }
+  .shop-bar .search-wrap:focus-within .search input, .shop-bar .search-wrap:has(input:not(:placeholder-shown)) .search input { position: static; width: auto; height: auto; opacity: 1; }
+}
+@media (max-width: 760px) {
+  .shop-bar { gap: 6px; padding-left: 12px; }
+  .shop-bar .tab-row { gap: 10px; padding-right: 0; }
+  .shop-bar .tab-rr { padding: 4px 9px 4px 7px !important; font-size: .8rem; gap: 4px; }
+  .shop-bar .tab-rr::before { width: 15px; height: 12px; }
+  .shop-bar .filter-btn { padding-left: 12px; padding-right: 12px; gap: 6px; }
+}
