@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light only">
   <script>try{if(localStorage.getItem('rr-theme')==='dark'){document.documentElement.dataset.theme='dark';document.querySelector('meta[name=color-scheme]').content='dark'}}catch(e){}</script>
 <meta name="robots" content="noindex, nofollow">
-<title>RightRide Admin</title>
+<title>Right Ride Admin</title>
 <link rel="icon" type="image/svg+xml" href="brand/favicon.svg?v=9">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Michroma&display=swap"></noscript>
@@ -104,7 +104,7 @@ html[data-theme="dark"] { color-scheme: dark; } html[data-theme="dark"] header i
 </head>
 <body>
 <header>
-  <picture><img src="brand/logo-day.webp?v=9" alt="RightRide" width="133" height="30"></picture>
+  <picture><img src="brand/logo-day.webp?v=9" alt="Right Ride" width="133" height="30"></picture>
   <h1>Admin</h1><span class="sp"></span>
   <button class="btn" id="out" hidden>Sign out</button>
 </header>
@@ -344,7 +344,7 @@ html[data-theme="dark"] { color-scheme: dark; } html[data-theme="dark"] header i
       <div class="card"><h3>Video clicks per day</h3>${chart('vid', M.perDay(M.vids), 'Video clicks')}</div>
       <div class="grid3">
         <div class="card"><h3>Video clicks</h3>${seg('vid', S.by.vid, [['car', 'Per car'], ['brand', 'Per brand']])}${barList(rows[S.by.vid], 12, 'gold')}</div>
-        <div class="card"><h3>Per YouTube channel</h3><p class="muted small">Views each channel gets from RightRide. Use this when pitching sponsored placements.</p>${barList(agg(M.vids, (e) => e.d || 'YouTube'), 8, 'gold')}</div>
+        <div class="card"><h3>Per YouTube channel</h3><p class="muted small">Views each channel gets from Right Ride. Use this when pitching sponsored placements.</p>${barList(agg(M.vids, (e) => e.d || 'YouTube'), 8, 'gold')}</div>
         <div class="card"><h3>Watch rate by car</h3><p class="muted small">Video clicks per 100 car-page views (cars with 5+ views).</p>${barList(viewRate, 10, 'gold')}</div>
       </div>
       ${search ? `<p class="note">${fmt(search)} click${search === 1 ? '' : 's'} went to a YouTube search because the car has no matched review video yet. Those are views a channel could own.</p>` : ''}`;
@@ -424,7 +424,7 @@ html[data-theme="dark"] { color-scheme: dark; } html[data-theme="dark"] header i
         <button class="btn" data-reset style="margin-top:12px">Reset rates</button></div>
       <div class="grid3">
         <div class="card"><h3>Dealers to pitch</h3><p class="muted small">Brands whose cars get the most booking actions. Offer their dealers a per-lead deal.</p>${barList(topBrands, 6)}</div>
-        <div class="card"><h3>Channels to pitch</h3><p class="muted small">YouTube channels getting views from RightRide. Offer a featured spot or a revenue share.</p>${barList(topCh, 6, 'gold')}</div>
+        <div class="card"><h3>Channels to pitch</h3><p class="muted small">YouTube channels getting views from Right Ride. Offer a featured spot or a revenue share.</p>${barList(topCh, 6, 'gold')}</div>
         <div class="card"><h3>Your ad audience</h3><p class="muted small">What an advertiser buys.</p><ol class="list">
           <li><span class="nm">Page views</span><span class="ct">${fmt(M.pageViews)}</span></li>
           <li><span class="nm">Visitors</span><span class="ct">${fmt(M.gcOn ? M.visitors : M.a ? M.a.totals.users : 0)}</span></li>

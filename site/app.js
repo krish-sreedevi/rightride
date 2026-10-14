@@ -254,8 +254,8 @@
   ];
   function drawTabs() {
     const n = activeCount();
-    // no finder answers yet: a "RightRide" tab next to All cars starts the step-by-step finder
-    const rrTab = state.rec ? '' : '<button type="button" class="tab tab-rr" data-wz-open title="Answer a few questions and get cars ranked for you">RightRide</button>';
+    // no finder answers yet: a "Right Ride" tab next to All cars starts the step-by-step finder
+    const rrTab = state.rec ? '' : '<button type="button" class="tab tab-rr" data-wz-open title="Answer a few questions and get cars ranked for you">Right Ride</button>';
     $('#tabs').innerHTML = `<div class="tab-row">${TABS.filter((t) => !t.when || t.when()).map((t) => `<button type="button" class="tab${state.tab === t.id ? ' on' : ''}" data-tab="${t.id}">${esc(t.label)}</button>`).join('')}${rrTab}</div>
       <button type="button" id="openFilters" class="filter-btn${n ? ' has' : ''}"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Filters <span id="filterCount">${n ? n : ''}</span></button>`;
   }
@@ -807,13 +807,13 @@
       window.rrTrack && window.rrTrack('feedback/sent', 'Feedback sent', true);
       if (!FEEDBACK.form || FEEDBACK.entries.length < 4) {
         const t = FB_Q.map((x, i) => `${x.q}\n${vals[i] ? (x.scale ? vals[i] + '/5' : vals[i]) : '–'}`).join('\n\n');
-        location.href = `mailto:info@rightride.in?subject=${encodeURIComponent('RightRide feedback')}&body=${encodeURIComponent(t)}`;
+        location.href = `mailto:info@rightride.in?subject=${encodeURIComponent('Right Ride feedback')}&body=${encodeURIComponent(t)}`;
         send.textContent = 'Send feedback'; ready(); return;
       }
       const p = new URLSearchParams(); FEEDBACK.entries.forEach((en, i) => { if (vals[i]) p.append(en, vals[i]); });
       try {
         await fetch(`https://docs.google.com/forms/d/e/${FEEDBACK.form}/formResponse`, { method: 'POST', mode: 'no-cors', body: p });
-        $('#modalBody').innerHTML = `<div class="modal-head"><h2>Thank you!</h2><button class="btn ghost" data-close aria-label="Close">✕</button></div><div class="modal-body fb-done"><p>Your feedback helps us make RightRide better for the next person looking for the right car.</p><button class="btn primary" data-close>Close</button></div>`;
+        $('#modalBody').innerHTML = `<div class="modal-head"><h2>Thank you!</h2><button class="btn ghost" data-close aria-label="Close">✕</button></div><div class="modal-body fb-done"><p>Your feedback helps us make Right Ride better for the next person looking for the right car.</p><button class="btn primary" data-close>Close</button></div>`;
       } catch (err) {
         send.disabled = false; send.textContent = 'Try again'; $('#fbMsg').textContent = "Couldn't send. Check your connection and try again.";
       }
@@ -923,7 +923,7 @@
     }
     const x = expertOf(m), nc = (DATA.ncap || {})[key], usp = (DATA.usp || {})[key];
     const st = RTO.states[state.st].name;
-    document.title = `${m.brand} ${m.model}: on-road price in ${st}, variants & showrooms · RightRide`;
+    document.title = `${m.brand} ${m.model}: on-road price in ${st}, variants & showrooms · Right Ride`;
     const seats = [...new Set(m.vs.map((v) => v.c.seats).filter(Boolean))].sort();
     const tags = [...m.fuels, ...m.trans, seats.length ? seats.join(' / ') + ' seats' : '', `${m.vs.length} variant${m.vs.length > 1 ? 's' : ''}`].filter(Boolean);
     const max = (nc && nc.max) || { 'Bharat NCAP': [32, 49], 'Global NCAP': [34, 49] }[nc && nc.by] || [null, null];
@@ -948,9 +948,9 @@
           <div class="cp-cta"><a class="btn primary" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"${trk(m, 'video', ytCh(m))}><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>Watch expert video</a><a class="btn ghost" href="${esc(m.url)}" target="_blank" rel="noopener"${trk(m, 'maker-site', m.brand)}>Official site <span aria-hidden="true">↗</span></a>${shareBtn('car')}</div>
         </div>
       </section>
-      <nav class="cp-nav" id="cpNav" aria-label="Sections"><a href="#chRide" data-jump="chRide" class="on"><span class="n">1</span><b class="l">Is this my RightRide?</b><b class="s">Right for me?</b></a><a href="#chVariant" data-jump="chVariant"><span class="n">2</span><b class="l">Find the Right Variant</b><b class="s">Variant</b></a><a href="#chDealer" data-jump="chDealer"><span class="n">3</span><b class="l">Find the Right Dealer</b><b class="s">Dealer</b></a></nav>
+      <nav class="cp-nav" id="cpNav" aria-label="Sections"><a href="#chRide" data-jump="chRide" class="on"><span class="n">1</span><b class="l">Is this my Right Ride?</b><b class="s">Right for me?</b></a><a href="#chVariant" data-jump="chVariant"><span class="n">2</span><b class="l">Find the Right Variant</b><b class="s">Variant</b></a><a href="#chDealer" data-jump="chDealer"><span class="n">3</span><b class="l">Find the Right Dealer</b><b class="s">Dealer</b></a></nav>
       <section class="cp-ch" id="chRide" aria-labelledby="chRideT">
-        ${chHead(1, 'chRide', 'Is this my RightRide?', `What owning a ${esc(m.model)} is like, what experts think and how safe it is.`)}
+        ${chHead(1, 'chRide', 'Is this my Right Ride?', `What owning a ${esc(m.model)} is like, what experts think and how safe it is.`)}
         <section class="cp-sec" id="cpMetrics" hidden></section>
         ${usp1}
         <div class="cp-two">
@@ -1293,11 +1293,11 @@
     if (kind === 'car') {
       const m = modelBySlug(carSlug); if (!m) return null;
       const slug = mslug(m.brand, m.model), st = (RTO.states[state.st] || {}).name, low = Math.min(...m.vs.map((v) => onRoad(v.c, state.st).total));
-      return { url: `${SITE}/cars/${slug}/?go=1`, text: `Have a look at the ${m.brand} ${m.model} on RightRide: on-road from ${lakh(low)}${st ? ' in ' + st : ''}, with every variant, feature and expert verdict.`, ev: `share/${seg(m.brand)}/${seg(m.model)}` };
+      return { url: `${SITE}/cars/${slug}/?go=1`, text: `Have a look at the ${m.brand} ${m.model} on Right Ride: on-road from ${lakh(low)}${st ? ' in ' + st : ''}, with every variant, feature and expert verdict.`, ev: `share/${seg(m.brand)}/${seg(m.model)}` };
     }
     const ms = (cmpArg || '').split(',').map(modelBySlug).filter(Boolean);
     if (!ms.length) return null;
-    return { url: `${SITE}/#/compare/${ms.map((m) => mslug(m.brand, m.model)).join(',')}`, text: `Comparing the ${ms.map((m) => m.brand + ' ' + m.model).join(' vs ')} on RightRide. Which one would you pick?`, ev: 'share/compare/' + seg(ms.map((m) => m.model).join(' vs ')) };
+    return { url: `${SITE}/#/compare/${ms.map((m) => mslug(m.brand, m.model)).join(',')}`, text: `Comparing the ${ms.map((m) => m.brand + ' ' + m.model).join(' vs ')} on Right Ride. Which one would you pick?`, ev: 'share/compare/' + seg(ms.map((m) => m.model).join(' vs ')) };
   }
   function closeShare() { $$('.share-menu').forEach((x) => { x.hidden = true; }); $$('.share-btn').forEach((b) => b.setAttribute('aria-expanded', 'false')); }
   document.addEventListener('click', async (e) => {
@@ -1309,7 +1309,7 @@
     const how = d.dataset.shareDo;
     window.rrTrack && window.rrTrack(`${s.ev}/${how}`, 'Share', true);
     if (how === 'wa') window.open('https://wa.me/?text=' + encodeURIComponent(s.text + '\n' + s.url), '_blank', 'noopener');
-    else if (how === 'more') { try { await navigator.share({ title: 'RightRide', text: s.text, url: s.url }); } catch (err) {} }
+    else if (how === 'more') { try { await navigator.share({ title: 'Right Ride', text: s.text, url: s.url }); } catch (err) {} }
     else { try { await navigator.clipboard.writeText(s.url); flashMsg('Link copied'); } catch (err) { prompt('Copy this link', s.url); } }
   });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeShare(); });
@@ -1459,10 +1459,10 @@
     const close = `<button class="wz-x" type="button" data-wz="close" aria-label="Close">✕</button>`;
     let body = '', canNext = true;
     if (s === 0) {
-      body = `<img class="wz-mark" src="brand/logo-day.webp?v=9" alt="RightRide"><h2 id="wzTitle" class="display">What can we help you with?</h2>
+      body = `<img class="wz-mark" src="brand/logo-day.webp?v=9" alt="Right Ride"><h2 id="wzTitle" class="display">What can we help you with?</h2>
         <div class="wz-choices two">
           <button class="wz-opt" type="button" data-wz="browse"><b>Just browsing</b><span>Explore every car, variant and on-road price</span></button>
-          <button class="wz-opt primary" type="button" data-wz="start" autofocus><b>Find the RightRide for me!</b><span>Personalised recommendations in 5 quick steps</span></button>
+          <button class="wz-opt primary" type="button" data-wz="start" autofocus><b>Find the Right Ride for me!</b><span>Personalised recommendations in 5 quick steps</span></button>
         </div>`;
     } else if (s === 1) {
       canNext = !!a.body;
@@ -1568,7 +1568,7 @@
         trackFilter('finder body', (BODY_OPTS[r.body] || {}).label || r.body); trackFilter('finder budget', budgetBand(r.budget)); trackFilter('finder fuel', r.fuel); trackFilter('finder gearbox', r.trans); trackFilter('finder top priority', PRIO[r.prio[0]]);
         const L = window.RRLoader, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (!L) { applyRec(r); return; }
-        L.show('Finding your RightRide…');
+        L.show('Finding your Right Ride…');
         setTimeout(() => applyRec(r), reduce ? 600 : 2200); // results render just before the loader fades out
         setTimeout(() => L.hide(), reduce ? 800 : 2500);
         return;
@@ -1750,7 +1750,7 @@
   const setTopbarH = () => { const t = document.querySelector('.topbar'); if (t) document.documentElement.style.setProperty('--topbar-h', t.offsetHeight + 'px'); };
   setTopbarH(); window.addEventListener('resize', setTopbarH);
   // ---- "Right" and "Ride" are always set like the logo: Michroma, brand red ----
-  const RR_WORD = /RightRide|\b(Right|Ride)\b/;
+  const RR_WORD = /\b(Right|Ride)\b/;
   const RR_SKIP = /^(SCRIPT|STYLE|TEXTAREA|INPUT|OPTION|SELECT|TITLE|svg|text|tspan)$/;
   function brandWords(root) {
     const base = root && (root.nodeType === 3 ? root.parentNode : root.nodeType === 1 ? root : null);
@@ -1762,8 +1762,8 @@
     const hits = []; while (walk.nextNode()) hits.push(walk.currentNode);
     for (const n of hits) {
       const f = document.createDocumentFragment();
-      for (const part of n.nodeValue.split(/(RightRide|\bRight\b|\bRide\b)/)) {
-        if (part === 'Right' || part === 'Ride' || part === 'RightRide') { const sp = document.createElement('span'); sp.className = 'rrw'; sp.textContent = part; f.appendChild(sp); }
+      for (const part of n.nodeValue.split(/\b(Right|Ride)\b/)) {
+        if (part === 'Right' || part === 'Ride') { const sp = document.createElement('span'); sp.className = 'rrw'; sp.textContent = part; f.appendChild(sp); }
         else if (part) f.appendChild(document.createTextNode(part));
       }
       n.parentNode.replaceChild(f, n);
@@ -2164,7 +2164,7 @@
   function renderCompare(arg) {
     const el = $('#comparePage');
     const ms = String(arg || '').split(',').map((s) => modelBySlug(s)).filter(Boolean).slice(0, 3);
-    document.title = ms.length ? `Compare ${ms.map((m) => m.model).join(' vs ')} · RightRide` : 'Compare cars · RightRide';
+    document.title = ms.length ? `Compare ${ms.map((m) => m.model).join(' vs ')} · Right Ride` : 'Compare cars · Right Ride';
     if (ms.length < 2) { el.innerHTML = `<div class="cp-wrap"><div class="empty sorry">${SORRY_ICON}<h2>Pick at least two cars to compare</h2><a class="btn primary" href="#/cars" data-go="cars">Choose cars</a></div></div>`; return; }
     // features ticked on the cars page start out as must-haves
     if (!cmp.req.must.length && !cmp.req.nice.length) { cmp.req.must = [...featsOn()].slice(0, 5); if (state.trans.has('Automatic')) cmp.req.must.unshift('auto'); cmp.req.must = cmp.req.must.slice(0, 5); }
@@ -2208,7 +2208,7 @@
     ];
     el.innerHTML = `<div class="cp-wrap cmp-page">
       <button class="cp-back" type="button" data-go="cars"><span aria-hidden="true">‹</span> Back to cars</button>
-      <div class="cmp-title-row"><h1 class="ch-t cmp-title">Compare to find your RightRide</h1>${shareBtn('cmp')}</div>
+      <div class="cmp-title-row"><h1 class="ch-t cmp-title">Compare to find your Right Ride</h1>${shareBtn('cmp')}</div>
       <section class="cp-sec rq">
         <div class="rq-top"><div><h2 class="display">What matters to you?</h2><p class="muted">Pick up to 5 must-haves and 5 nice-to-haves: ${rqPhone() ? 'tap a feature and choose where it goes' : 'drag options into a box, or tap them'}. We'll rate each car on how well it does each one.</p></div></div>
         <div class="rq-buckets">${bucket('must', cmp.req.must, 5)}${bucket('nice', cmp.req.nice, 5)}</div>

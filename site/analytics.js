@@ -1,4 +1,4 @@
-// RightRide visit counting: GoatCounter (no cookies), Google Analytics 4 and Microsoft Clarity (heatmaps and session replays).
+// Right Ride visit counting: GoatCounter (no cookies), Google Analytics 4 and Microsoft Clarity (heatmaps and session replays).
 // Both only run on the live domain (rightride.in), never on aksreedevi.in, previews or localhost.
 window.RR_ANALYTICS = { goatcounter: 'rightride', ga: 'G-B102KX5D7F', clarity: 'ywwld7mc88' };
 (function () {
