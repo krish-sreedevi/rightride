@@ -4,7 +4,10 @@ import fs from 'fs';
 import path from 'path';
 import { matchVariant } from './autocar-features.mjs';
 
-const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+const ROOT = path.resolve(path.dirname(decodeURIComponent(new URL(import.meta.url).pathname)), '..');
+// some makers' scraped links are site-relative ("/suv/xuv400/X400.html…"); make them absolute so they never point at rightride.in
+const MAKER_ORIGIN = { Mahindra: 'https://auto.mahindra.com' };
+const absUrl = (u, brand) => { if (!u || /^https?:\/\//.test(u)) return u || null; const o = MAKER_ORIGIN[brand]; if (!o) return null; try { return new URL(u, o).href; } catch (e) { return null; } };
 // colour dots sampled from each colour's own photo by tools/swatches.py
 const SWATCHES = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data/swatches.json'), 'utf8')); } catch (e) { return {}; } })();
 
@@ -258,7 +261,7 @@ export function normalize() {
           mileage: num(v.mileage || specOf(specs, /fuel efficiency|mileage|arai|km\/l/i)) || null,
           range: fuel === 'Electric' ? num(specOf(specs, /range|mid[c]?/i)) : null,
           airbags: airbags ?? v.airbags ?? null, f, featureCount: (v.features || []).length || (v.featureFlags ? Object.values(v.featureFlags).filter(Boolean).length : 0),
-          url: m.url, image: v.image || m.image || null,
+          url: absUrl(m.url, brand), image: v.image || m.image || null,
           src: raw.curated ? 'curated' : 'official',
         });
         nV++;
@@ -416,7 +419,7 @@ function buildExtras(out) {
   return { updated: new Date().toISOString(), models };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (decodeURIComponent(new URL(import.meta.url).pathname) === path.resolve(process.argv[1])) {
   const out = normalize();
   const dest = path.join(ROOT, 'site/data');
   fs.mkdirSync(dest, { recursive: true });
