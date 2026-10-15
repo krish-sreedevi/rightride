@@ -1507,8 +1507,10 @@
       if (!a.st || !RTO.states[a.st]) a.st = state.st;
       const opts = Object.entries(RTO.states).sort((x, y) => x[1].name.localeCompare(y[1].name)).map(([k, v]) => `<option value="${k}"${k === a.st ? ' selected' : ''}>${esc(v.name)}</option>`).join('');
       body = `<h2 id="wzTitle" class="display">Last one. Where do you live?</h2><p class="muted">Road tax changes the price by lakhs between states.<br>We use this only for on-road prices.</p>
-        <div class="wz-loc"><button class="btn ghost wz-geo" type="button" data-wzgeo>${a.geoLabel ? `◎ Near ${esc(a.geoLabel)}` : '◎ Use my location'}</button><span class="muted">or</span>
-        <label class="wz-st"><span class="sr">Your state</span><select id="wzState">${opts}</select></label></div>
+        <div class="wz-choices two wz-locs">
+          <button class="wz-opt${a.locMode === 'geo' ? ' sel' : ''}" type="button" data-wzgeo aria-pressed="${a.locMode === 'geo'}"><b>${a.geoLabel ? `Near ${esc(a.geoLabel)}` : 'Detect my location'}</b><span>${a.geoLabel ? `${esc(RTO.states[a.st].name)}. Tap to detect again.` : 'One tap. Used only for prices.'}</span></button>
+          <div class="wz-opt wz-pick${a.locMode === 'pick' ? ' sel' : ''}"><b>Choose my state</b><label class="wz-st"><span class="sr">Your state</span><select id="wzState">${opts}</select></label></div>
+        </div>
         <p class="muted small wz-loc-msg" id="wzLocMsg" aria-live="polite"></p>`;
     }
     const nav = s ? `<div class="wz-nav"><button class="btn ghost" type="button" data-wz="back">Back</button><button class="btn primary" type="button" data-wz="next" ${canNext ? '' : 'disabled'}>${s === 6 ? 'Show my matches' : 'Next'}</button></div>` : '';
@@ -1599,13 +1601,13 @@
       if (b.hasAttribute('data-wzgeo')) {
         const msg = $('#wzLocMsg');
         if (!navigator.geolocation) { msg.textContent = 'Location isn\'t available here. Please pick your state.'; return; }
-        b.disabled = true; b.textContent = '◎ Finding you…';
+        b.disabled = true; b.querySelector('b').textContent = 'Finding you…';
         navigator.geolocation.getCurrentPosition((p) => {
           let best = null, bd = Infinity; const { latitude: la, longitude: lo } = p.coords;
           for (const [name, st, x, y] of RTO.cities) { const d = (x - la) ** 2 + ((y - lo) * Math.cos(la * Math.PI / 180)) ** 2; if (d < bd) { bd = d; best = [name, st]; } }
-          if (best) { a.st = best[1]; a.geoLabel = best[0]; store.set('geo', { la, lo, label: best[0] }); }
+          if (best) { a.st = best[1]; a.geoLabel = best[0]; a.locMode = 'geo'; store.set('geo', { la, lo, label: best[0] }); }
           drawWizard();
-        }, () => { b.disabled = false; b.textContent = '◎ Use my location'; msg.textContent = 'No problem. Pick your state from the list.'; }, { timeout: 12000, maximumAge: 3600e3 });
+        }, () => { b.disabled = false; b.querySelector('b').textContent = 'Detect my location'; msg.textContent = 'No problem. Choose your state instead.'; }, { timeout: 12000, maximumAge: 3600e3 });
         return;
       }
       if (b.dataset.need) { a.need = b.dataset.need; a.prio = fullPrio(NEEDS[a.need].prio); return drawWizard(); }
@@ -1614,7 +1616,7 @@
       if (b.dataset.trans) { a.trans = b.dataset.trans; wz.step = 5; return drawWizard(); }
       if (b.dataset.budget) { a.budget = b.dataset.budget; if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); return drawWizard(); }
     });
-    W.addEventListener('change', (e) => { if (e.target.id === 'wzState') { wz.a.st = e.target.value; wz.a.geoLabel = ''; } });
+    W.addEventListener('change', (e) => { if (e.target.id === 'wzState') { wz.a.st = e.target.value; wz.a.geoLabel = ''; wz.a.locMode = 'pick'; $$('.wz-locs .wz-opt', W).forEach((x) => x.classList.toggle('sel', x.classList.contains('wz-pick'))); } });
     W.addEventListener('input', (e) => {
       if (e.target.id !== 'wzBudget') return;
       wz.a.budget = e.target.value.replace(/[^\d.]/g, '');

@@ -1484,3 +1484,15 @@ body[data-page="home"] .theme-tg { position: absolute; top: 50%; right: max(16px
 .wz-loc-msg { text-align: center; min-height: 1.2em; }
 @media (max-width: 520px) { .wz-loc { flex-direction: column; } .wz-loc .wz-geo, .wz-st, .wz-st select { width: 100%; } .wz-loc > .muted { display: none; } }
 .wz-st select { max-width: none; } @media (max-width: 520px) { .wz-st select { text-align: center; text-align-last: center; } }
+
+/* step 6: two choices, detect or choose */
+.wz-locs { margin-top: 20px; }
+.wz-locs .wz-opt { cursor: pointer; }
+.wz-pick { cursor: default !important; }
+.wz-pick .wz-st { width: 100%; margin-top: 6px; }
+.wz-pick select { width: 100%; max-width: none; min-width: 0; height: 44px; background: var(--panel); box-shadow: inset 0 0 0 1px var(--line-2); }
+@media (max-width: 900px) {
+  .wz-locs .wz-opt { align-items: center !important; text-align: center; }
+  .wz-pick select { text-align: center; text-align-last: center; }
+}
+@media (max-width: 900px) { .wz-pick select { padding-left: 36px; padding-right: 36px; } }
