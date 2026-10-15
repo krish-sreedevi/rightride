@@ -1357,7 +1357,7 @@
         mileage: mix(sc.mileage, mN == null ? null : 3 + mN * 7, 'mileage'),
         comfort: mix(sc.comfort, null, 'comfort'),
         value: mix(sc.value, 3 + priceN * 7, 'value'),
-        safety: (() => { const nc = (DATA.ncap || {})[m.brand + '|' + m.model], ab = m.pick.airbags; const a = nc && nc.stars ? nc.stars * 2 : null, b = ab ? 3 + Math.min(ab, 6) / 6 * 7 : null; if (a == null && b == null) m.est.safety = true; return a != null && b != null ? 0.65 * a + 0.35 * b : a ?? b ?? 5; })(),
+        safety: (() => { const nc = (DATA.ncap || {})[m.brand + '|' + m.model], ab = m.pick.airbags; const a = nc && nc.stars ? nc.stars * 2 : null, b = ab ? 3 + Math.min(ab, 6) / 6 * 7 : null; if (a == null && b == null) m.est.safety = true; return a != null && b != null ? 0.65 * a + 0.35 * b : a != null ? a : b != null ? Math.min(b, 7) : 5; })(), // not crash-tested: airbags alone can't score above 7
       };
       const t = state.rec.prio.reduce((s, k, i) => s + w[i] * m.sub[k], 0);
       m.match = Math.round((0.85 * t + 0.15 * (base ?? 6)) * 10) / 10;
