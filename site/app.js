@@ -68,7 +68,7 @@
   const filterable = (f) => !HIDE_BUCKETS.has(f.bucket) && !HIDE_FEATS.has(f.key);
   const BODY_MAP = { 'Coupe / Convertible': 'Sedan', Pickup: 'SUV' };
   const seatGroup = (n) => (!n ? null : n <= 5 ? '4–5' : '6–7');
-  const TTYPES = { MT: 'Manual', AMT: 'AMT', AT: 'Torque converter (AT)', CVT: 'CVT / IVT', 'e-CVT': 'e-CVT (hybrid)', DCT: 'Dual-clutch (DCT/DSG)' };
+  const TTYPES = { MT: 'Manual', AMT: 'AMT (a manual with a robot doing the clutch)', AT: 'Torque converter (AT)', CVT: 'CVT / IVT', 'e-CVT': 'e-CVT (hybrid)', DCT: 'Dual-clutch (DCT/DSG)' };
   function prep() {
     FKEYS = DATA.features.map((f) => f.key);
     DATA.features.forEach((f, i) => (FIDX[f.key] = i));
@@ -298,16 +298,16 @@
   const L = 1e5;
   const byScore = (a, b) => b.s - a.s || a.min - b.min;
   const SHELVES = [
-    { id: 'top', title: 'Top rated by experts', sub: 'The highest expert scores among cars on sale right now', pick: (ms) => ms.filter((m) => m.s).sort(byScore), feature: true, see: { tab: 'top' } },
-    { id: 'value', title: 'Best value under ₹10 L', sub: 'Expert favourites that won\'t stretch the budget', pick: (ms) => ms.filter((m) => m.min <= 10 * L).sort(byScore), see: { tab: 'u10', sort: 'expert' } },
+    { id: 'top', title: 'Experts\' favourites', sub: 'The highest expert scores among cars on sale now', pick: (ms) => ms.filter((m) => m.s).sort(byScore), feature: true, see: { tab: 'top' } },
+    { id: 'value', title: 'Most car for under ₹10 L', sub: 'Expert favourites that won\'t stretch the budget', pick: (ms) => ms.filter((m) => m.min <= 10 * L).sort(byScore), see: { tab: 'u10', sort: 'expert' } },
     { id: 'csuv', title: 'Compact SUVs under ₹15 L', sub: 'India\'s favourite kind of car', pick: (ms) => ms.filter((m) => m.body === 'SUV' && m.min <= 15 * L).sort(byScore), see: { set: { body: ['SUV'] }, max: 15, sort: 'expert' } },
-    { id: 'family', title: 'Family 7-seaters', sub: 'Room for everyone — SUVs and MUVs with three rows', pick: (ms) => ms.filter((m) => m.seatsMax >= 6).sort(byScore), see: { set: { seats: ['6–7'] }, sort: 'expert' } },
+    { id: 'family', title: 'Family 7-seaters', sub: 'Room for everyone. SUVs and MUVs with three rows', pick: (ms) => ms.filter((m) => m.seatsMax >= 6).sort(byScore), see: { set: { seats: ['6–7'] }, sort: 'expert' } },
     { id: 'auto12', title: 'Automatics under ₹12 L', sub: 'Two pedals, no clutch, sensible money', pick: (ms) => ms.filter((m) => m.vs.some((x) => x.c.transmission === 'Automatic' && x.c.orTotal <= 12 * L)).sort(byScore), see: { set: { trans: ['Automatic'] }, max: 12, sort: 'expert' } },
     { id: 'ev', title: 'Go electric', sub: 'Every EV on sale, priced for your state', pick: (ms) => ms.filter((m) => m.fuels.includes('Electric')).sort(byScore), see: { tab: 'ev' } },
-    { id: 'mileage', title: 'Mileage champions', sub: 'The most kilometres per litre', pick: (ms) => ms.filter((m) => m.mileage).sort((a, b) => b.mileage - a.mileage), stat: (m) => `${m.mileage} km/l`, see: { sort: 'mileage' } },
+    { id: 'mileage', title: 'Goes furthest on a litre', sub: 'The most kilometres per litre', pick: (ms) => ms.filter((m) => m.mileage).sort((a, b) => b.mileage - a.mileage), stat: (m) => `${m.mileage} km/l`, see: { sort: 'mileage' } },
     { id: 'hatch', title: 'City hatchbacks', sub: 'Easy to park, easy on the wallet', pick: (ms) => ms.filter((m) => m.body === 'Hatchback').sort(byScore), see: { tab: 'hatch' } },
     { id: 'sedan', title: 'Sedans', sub: 'Boot space and highway comfort', pick: (ms) => ms.filter((m) => m.body === 'Sedan').sort(byScore), see: { tab: 'sedan' } },
-    { id: 'lux', title: 'Luxury', sub: 'From ₹50 lakh and up', pick: (ms) => ms.filter((m) => m.min >= 50 * L).sort(byScore), see: { min: 50, sort: 'expert' } },
+    { id: 'lux', title: 'Luxury', sub: 'From ₹50 L and up', pick: (ms) => ms.filter((m) => m.min >= 50 * L).sort(byScore), see: { min: 50, sort: 'expert' } },
   ];
   function seeAll(id) {
     const sh = SHELVES.find((x) => x.id === id); if (!sh) return;
@@ -329,7 +329,7 @@
     const fl = (ks) => { const n = ks.map((k) => FLABEL(k).replace(/ \(.*\)$/, '')); return esc(n.slice(0, 2).join(', ') + (n.length > 2 ? ` +${n.length - 2} more` : '')); };
     const warn = nF && m.best ? (m.best.ev.miss.length ? `<span class="tw miss" title="${esc(m.best.ev.miss.map(FLABEL).join(', '))}"><b>Missing ${m.best.ev.miss.length}</b><span>${fl(m.best.ev.miss)}</span></span>` : m.best.ev.unk.length ? `<span class="tw unk" title="Not listed by the maker: ${esc(m.best.ev.unk.map(FLABEL).join(', '))}"><b>${m.best.ev.unk.length} unconfirmed</b><span>${fl(m.best.ev.unk)}</span></span>` : `<span class="tw ok">${nF === 1 ? esc(FLABEL([...featsOn()][0]).replace(/ \(.*\)$/, '')) : 'All ' + nF} ✓</span>`) : '';
     return `<article class="tile${opts.big ? ' big' : ''}" data-key="${esc(key)}" tabindex="0" role="button" aria-label="${esc(m.brand + ' ' + m.model)}">
-      ${x && x.s ? `<span class="sc">${esc(x.s)}/10</span>` : ''}<span class="pr">${lakh(m.min)}</span>
+      ${x && x.s ? `<span class="sc">${esc(x.s)}/10</span>` : ''}<span class="pr">${lakh(m.min)}<small> on-road</small></span>
       <div class="timg">${carImg(m, opts.big ? '(max-width: 900px) 86vw, 560px' : '(max-width: 900px) 70vw, 280px')}</div>
       <div class="tt"><h3>${opts.big ? esc(m.brand) + ' ' : ''}${esc(m.model)}</h3><div class="m">${opts.big ? esc(sub) : `${esc(m.brand)} · ${esc(sub)}`}</div>${warn}</div>
     </article>`;
@@ -670,7 +670,7 @@
       <div class="card-main">
         <div class="thumb">${img}</div>
         <div><div class="brand">${esc(m.brand)}</div><h3>${esc(m.model)}</h3><div class="meta">${tags}</div></div>
-        <div class="price"><div class="small">${m.vs.length > 1 ? 'Matching variants from' : 'On-road'}</div><div class="big">${lakh(m.min)}</div><div class="small">${m.vs.length > 1 ? 'up to ' + lakh(m.max) : 'ex-showroom ' + lakh(b.or.ex)}</div></div>
+        <div class="price"><div class="small">${m.vs.length > 1 ? 'On-road, matching variants from' : 'On-road'}</div><div class="big">${lakh(m.min)}</div><div class="small">${m.vs.length > 1 ? 'up to ' + lakh(m.max) : 'ex-showroom ' + lakh(b.or.ex)}</div></div>
       </div>
       <div class="card-foot"><span class="muted">Cheapest match: <b style="color:var(--text)">${esc(b.variant)}</b></span><button class="link" data-toggle="${esc(key)}">${open ? 'Hide' : 'See'} ${m.vs.length} variant${m.vs.length > 1 ? 's' : ''}</button></div>
       ${open ? variantTable(m) : ''}
@@ -729,13 +729,17 @@
 
 
   function about() {
-    const rows = DATA.brands.sort((a, b) => a.brand.localeCompare(b.brand)).map((b) => `<tr><td>${esc(b.brand)}</td><td class="num">${b.models}</td><td class="num">${b.variants}</td><td>${b.curated ? 'Curated snapshot' : 'Official site (automatic)'}</td><td>${b.updated ? new Date(b.updated).toLocaleDateString('en-IN') : ''}</td></tr>`).join('');
+    const rows = DATA.brands.sort((a, b) => a.brand.localeCompare(b.brand)).map((b) => `<tr><td>${esc(b.brand)}</td><td class="num">${b.models}</td><td class="num">${b.variants}</td><td>${b.curated ? 'Checked by us' : 'Maker\'s site, weekly'}</td><td>${b.updated ? new Date(b.updated).toLocaleDateString('en-IN') : ''}</td></tr>`).join('');
     $('#modalBody').innerHTML = `<div class="modal-head"><h2>Data sources &amp; coverage</h2><button class="btn ghost" data-close aria-label="Close">✕</button></div><div class="modal-body">
-      <p>Every Monday a robot visits each carmaker's official Indian website and collects models, variants, ex-showroom prices and (where published) variant-wise features. Where a maker publishes state-wise prices (Hyundai, Maruti Suzuki, Toyota, Honda) those are used; otherwise the national/Delhi ex-showroom price is used.</p>
-      <p>Expert scores, real-world mileage, owner ratings, service costs and some missing feature details come from leading Indian motoring publications and car sites, and are refreshed weekly. Crash-test results come from Bharat NCAP, Global NCAP and, where neither has tested a car, ASEAN NCAP. Resale values and some maintenance costs are our own estimates and are labelled as such.</p>
-      <p>Car photos are the manufacturers' own press and website images. Showroom locations © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> (<a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">ODbL</a>); our showroom list (<a href="data/dealers.json">dealers.json</a>) is offered under the same licence.</p>
-      <p>On-road prices add state road tax (from each state's published slabs), registration and number-plate fees, an insurance estimate, FASTag and TCS. Road tax rules last checked: ${esc(RTO.verified)}.</p>
-      <table><thead><tr><th>Brand</th><th class="num">Models</th><th class="num">Variants</th><th>Source</th><th>Updated</th></tr></thead><tbody>${rows}</tbody></table><p class="muted">Jaguar currently has no models on sale in India (jaguar.in redirects to the global site while the brand moves to its new electric range), so there is nothing to list yet. Curated brands show the starting ex-showroom price per model; their features are not yet published variant-by-variant, so they appear as "not confirmed" when you filter by features.</p></div>`;
+      <p>Every Monday, a robot visits each carmaker's official Indian website.</p>
+      <p>It collects models, variants, ex-showroom prices and features, where published.</p>
+      <p>Hyundai, Maruti Suzuki, Toyota and Honda publish prices by state, so we use those. For other makers, we use the Delhi ex-showroom price.</p>
+      <p>Expert scores, real-world mileage, owner ratings and service costs come from leading Indian motoring sites. They're refreshed weekly.</p>
+      <p>Crash-test results come from Bharat NCAP and Global NCAP. If neither has tested a car, we use ASEAN NCAP.</p>
+      <p>Resale values and some maintenance costs are our own estimates. We label them as estimates.</p>
+      <p>Car photos are the makers' own press and website images. Showroom locations © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> (<a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">ODbL</a>). Our showroom list (<a href="data/dealers.json">dealers.json</a>) is shared under the same licence.</p>
+      <p>On-road prices add state road tax, registration and number plates, an insurance estimate, FASTag and TCS. Road tax rules last checked: ${esc(RTO.verified)}.</p>
+      <table><thead><tr><th>Brand</th><th class="num">Models</th><th class="num">Variants</th><th>Source</th><th>Updated</th></tr></thead><tbody>${rows}</tbody></table><p class="muted">Jaguar currently has no models on sale in India (jaguar.in redirects to the global site while the brand moves to its new electric range), so there's nothing to list yet. For brands we check by hand, we show the starting ex-showroom price per model. Their features aren't published variant by variant yet, so they show as "not confirmed" when you filter by features.</p></div>`;
     $('#modal').showModal();
   }
 
@@ -855,9 +859,9 @@
   const SORRY_ICON = `<svg class="sorry-ico" viewBox="0 0 96 72" aria-hidden="true"><path d="M10 52h76M14 52V40l10-16h40l12 14c6 1 10 6 10 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30" cy="53" r="7" fill="var(--panel)" stroke="currentColor" stroke-width="3"/><circle cx="70" cy="53" r="7" fill="var(--panel)" stroke="currentColor" stroke-width="3"/><circle cx="41" cy="34" r="2" fill="currentColor"/><circle cx="55" cy="34" r="2" fill="currentColor"/><path d="M41 44c3-3.5 11-3.5 14 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>`;
   function sorry() {
     const opts = relaxOptions();
-    return `<div class="empty sorry">${SORRY_ICON}<h2>Sorry, no cars match all of that</h2>
-      ${opts.length ? `<p class="muted">Remove one of these to see cars that fit the rest:</p>
-      <div class="relax">${opts.map((o) => `<button class="relax-btn" type="button" data-rm="${esc(o.spec)}"><span>Remove <b>${esc(o.label)}</b></span><em>${o.n} car${o.n > 1 ? 's' : ''} <span aria-hidden="true">→</span></em></button>`).join('')}</div>` : '<p class="muted">Nothing comes up even with one filter removed.</p>'}
+    return `<div class="empty sorry">${SORRY_ICON}<h2>No car ticks every box</h2>
+      ${opts.length ? `<p class="muted">Remove one and see what fits:</p>
+      <div class="relax">${opts.map((o) => `<button class="relax-btn" type="button" data-rm="${esc(o.spec)}"><span>Remove <b>${esc(o.label)}</b></span><em>${o.n} car${o.n > 1 ? 's' : ''} <span aria-hidden="true">→</span></em></button>`).join('')}</div>` : '<p class="muted">Still nothing. Try clearing all filters.</p>'}
       <button class="link" type="button" data-rm="*">Clear all filters</button></div>`;
   }
   // only one or two cars match: under them, offer the same "remove one filter" shortcuts, each showing how many cars it opens up
@@ -889,7 +893,7 @@
   const ncapInfo = (by) => `<div class="nc-info" id="ncInfo" hidden><p>${NCAP_INFO[by] || ''}</p><p class="muted small">More stars means better protection in a crash. Ratings apply to the version that was tested; newer or facelifted versions may differ.</p></div>`;
   function renderCar(slug) {
     const el = $('#carPage'), m = modelBySlug(slug);
-    if (!m) { el.innerHTML = `<div class="cp-wrap"><div class="empty sorry">${SORRY_ICON}<h2>Sorry, we couldn't find that car</h2><p class="muted">It may have been discontinued or renamed.</p><a class="btn primary" href="#/cars" data-go="cars">Browse all cars</a></div></div>`; return; }
+    if (!m) { el.innerHTML = `<div class="cp-wrap"><div class="empty sorry">${SORRY_ICON}<h2>We can't find that car</h2><p class="muted">It may have been renamed or discontinued.</p><a class="btn primary" href="#/cars" data-go="cars">Browse all cars</a></div></div>`; return; }
     const key = m.brand + '|' + m.model;
     if (cp.key !== key) {
       gal.i = 0; cp.key = key; cp.fuel.clear(); cp.gear.clear(); cp.need.clear(); cp.all = false; cp.more = false;
@@ -931,7 +935,7 @@
         ${nc.aop != null || nc.cop != null ? `<div class="nc-bars">${nc.aop != null ? `<div><span>Adult occupant</span>${bar10(nc.aop / max[0] * 10)}<b>${nc.aop}${max[0] ? `<small>/${max[0]}</small>` : ''}</b></div>` : ''}${nc.cop != null ? `<div><span>Child occupant</span>${bar10(nc.cop / max[1] * 10)}<b>${nc.cop}${max[1] ? `<small>/${max[1]}</small>` : ''}</b></div>` : ''}${nc.sa != null ? `<div><span>Safety assist</span>${bar10(nc.sa / max[2] * 10)}<b>${nc.sa}${max[2] ? `<small>/${max[2]}</small>` : ''}</b></div>` : ''}</div>` : ''}
         ${nc.note ? `<p class="note">${esc(nc.note)}</p>` : ''}`
       : `<p class="muted">Not crash-tested by Bharat NCAP or Global NCAP yet. ${m.vs.some((v) => v.c.airbags) ? `Comes with up to ${Math.max(...m.vs.map((v) => v.c.airbags || 0))} airbags.` : ''}</p>`;
-    const usp1 = usp && usp.length ? `<section class="cp-sec cp-usp"><div class="cp-sec-head"><h3 class="display">Why people pick it</h3><span class="ai-tag"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2l1.8 5.6L19.5 9l-5.7 1.6L12 16l-1.8-5.4L4.5 9l5.7-1.4zM19 15l.9 2.6 2.6.9-2.6.9L19 22l-.9-2.6-2.6-.9 2.6-.9z"/></svg>AI summary of expert reviews</span></div>
+    const usp1 = usp && usp.length ? `<section class="cp-sec cp-usp"><div class="cp-sec-head"><h3 class="display">Why people pick it</h3><span class="ai-tag"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2l1.8 5.6L19.5 9l-5.7 1.6L12 16l-1.8-5.4L4.5 9l5.7-1.4zM19 15l.9 2.6 2.6.9-2.6.9L19 22l-.9-2.6-2.6-.9 2.6-.9z"/></svg>What the experts say, in short</span></div>
         <ol class="usp">${usp.map((u) => `<li>${esc(u)}</li>`).join('')}</ol></section>` : '';
     const chHead = (n, id, title, sub) => `<header class="ch-head"><span class="ch-n" aria-hidden="true">${n}</span><div><h2 class="ch-t" id="${id}T">${title}</h2>${sub ? `<p class="muted">${sub}</p>` : ''}</div></header>`;
     $('#carPage').innerHTML = `<div class="cp-wrap">
@@ -1103,7 +1107,7 @@
     // user satisfaction
     if (e.rating) {
       const g = e.rating;
-      tiles.push(`<div class="mt"><div class="mt-k">Average user satisfaction</div><div class="mt-v">${g.avg.toFixed(1)}<small>/5</small> ${stars(Math.round(g.avg))}</div>
+      tiles.push(`<div class="mt"><div class="mt-k">What owners say</div><div class="mt-v">${g.avg.toFixed(1)}<small>/5</small> ${stars(Math.round(g.avg))}</div>
         <div class="mt-s">From ${g.count.toLocaleString('en-IN')} owner ratings across ${Object.keys(g.sources).length} leading Indian car sites</div></div>`);
     }
     if (!tiles.length) { box.hidden = true; return; }
@@ -1142,7 +1146,7 @@
         <ul class="vh-pick-specs">${[best.seats ? best.seats + ' seats' : '', best.airbags ? best.airbags + ' airbags' : '', rng(best) !== '–' ? rng(best) : '', best.cc ? best.cc + ' cc' : '', best.drive && best.drive !== '2WD' ? best.drive : ''].filter(Boolean).map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
         ${cp.need.size ? `<ul class="vh-pick-has">${[...cp.need].map((k) => `<li>${esc(FLABEL(k).replace(/ \(.*\)$/, ''))}</li>`).join('')}</ul>` : ''}
         <div class="vh-pick-act"><button class="btn primary" type="button" data-vid="${esc(best.id)}">Price break-up</button><a class="btn ghost" href="#chDealer" data-jump="chDealer">Book a test drive</a></div></div>`;
-    } else pick = `<div class="vh-pick none">${SORRY_ICON}<div><b>Sorry, no ${esc(m.model)} variant has all of that.</b><div class="muted small">Untick a feature to see the closest variants.</div></div></div>`;
+    } else pick = `<div class="vh-pick none">${SORRY_ICON}<div><b>No ${esc(m.model)} variant has all of these.</b><div class="muted small">Untick a feature to see the closest variants.</div></div></div>`;
     const grp = (name, vals, set) => vals.length > 1 || set.size ? `<div class="group"><div class="label">${name}</div><div class="chips">${vals.map((v) => `<button type="button" class="chip" data-cpf="${name === 'Fuel' ? 'fuel' : 'gear'}" data-v="${esc(v)}" aria-pressed="${set.has(v)}">${esc(v)}</button>`).join('')}</div></div>` : '';
     const cnt = (k) => known.filter((c) => c.feat(k) === '1').length;
     const noFeat = known.length ? '<p class="muted">These variants have the same feature list.</p>' : `<div class="note">${esc(m.brand)} doesn't publish a variant-wise feature list, so we can only compare prices and specs here.</div>`;
@@ -1157,7 +1161,7 @@
       <div class="vh-right" aria-live="polite">${pick}</div>
     </div>
     <div class="vh-cmp"><div class="vh-cmp-h"><h3 class="display">Compare variants</h3><span class="muted small">${cp.all ? 'Every spec and feature' : 'Only what differs'}${pool.length < all.length ? ` · ${pool.length} of ${all.length} variants match your fuel and gearbox` : ''}</span></div>
-      <div class="vh-scroll"><table class="vh-table"><thead><tr><th class="vh-c0">Variant</th>${pool.map((c) => `<th class="${c === best ? 'best' : ok(c) ? '' : 'off'}"><button type="button" data-vid="${esc(c.id)}"><span class="vh-vn">${esc(c.variant)}</span><b>${lakh(c.orTotal)}</b>${c === best ? '<em>Best fit</em>' : ''}</button></th>`).join('')}</tr></thead>
+      <div class="vh-scroll"><table class="vh-table"><thead><tr><th class="vh-c0">Variant</th>${pool.map((c) => `<th class="${c === best ? 'best' : ok(c) ? '' : 'off'}"><button type="button" data-vid="${esc(c.id)}"><span class="vh-vn">${esc(c.variant)}</span><b>${lakh(c.orTotal)}</b>${c === best ? '<em>Your Right Variant</em>' : ''}</button></th>`).join('')}</tr></thead>
         <tbody>${specs.map(([l, fn]) => `<tr class="spec"><td class="vh-c0">${l}</td>${pool.map((c) => `<td class="${c === best ? 'best' : ok(c) ? '' : 'off'}">${esc(fn(c))}</td>`).join('')}</tr>`).join('')}
         ${ordered.map((f) => `<tr class="${cp.need.has(f.key) ? 'want' : ''}"><td class="vh-c0">${esc(f.label)}</td>${pool.map((c) => `<td class="${c === best ? 'best' : ok(c) ? '' : 'off'}">${cell(c, f.key)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
       ${known.length ? `<label class="toggle vh-all"><input type="checkbox" data-cpall ${cp.all ? 'checked' : ''}> Also show features every variant shares</label>` : ''}</div>`;
@@ -1279,7 +1283,7 @@
   // ---------------- personalised recommendations ----------------
   const PRIO = { features: 'Features', mileage: 'Mileage', comfort: 'Comfort', value: 'Value for money' };
   const PRIO_HINT = { features: 'Tech, safety and convenience kit', mileage: 'Fuel efficiency / range', comfort: 'Space, seats and ride quality', value: 'Most car for the money' };
-  const BODY_OPTS = { small: { label: 'Small car', sub: 'Hatchbacks — easy to park', bodies: ['Hatchback'] }, sedan: { label: 'Sedan', sub: 'Boot, comfort, highway manners', bodies: ['Sedan'] }, suv: { label: 'SUV', sub: 'SUVs and 7-seat MUVs', bodies: ['SUV', 'MUV / MPV'] } };
+  const BODY_OPTS = { small: { label: 'Small car', sub: 'Hatchbacks, easy to park', bodies: ['Hatchback'] }, sedan: { label: 'Sedan', sub: 'Boot, comfort, highway manners', bodies: ['Sedan'] }, suv: { label: 'SUV', sub: 'SUVs and 7-seat MUVs', bodies: ['SUV', 'MUV / MPV'] } };
   const expertOf = (m) => (DATA.experts || {})[m.brand + '|' + m.model] || null;
   // which YouTube channel a video link goes to (the review title ends with it, e.g. "| Autocar India")
   const ytCh = (m) => { const x = expertOf(m); if (!x || !x.yt) return 'YouTube search'; const p = (x.ytT || '').split('|'); const ch = (p.length > 1 && p.pop().trim()) || 'YouTube'; return /autocar/i.test(ch) ? 'Autocar India' : ch; };
@@ -1436,7 +1440,7 @@
         </div>
         <div class="price"><div class="match"><b>${m.match.toFixed(1)}</b><span>/10 match</span></div><div class="big">${lakh(c.orTotal)}</div><div class="small">on-road · ex-showroom ${lakh(c.or.ex)}</div></div>
       </div>
-      ${x ? `<div class="expert"><div class="xs"><span class="xbadge">Expert ${x.s ? esc(x.s) + '/10' : 'review'}</span>${x.basedOn ? `<span class="muted"> (review of the ${esc(x.basedOn)})</span>` : ''}</div><ul class="pc">${pros}</ul></div>` : `<div class="expert"><span class="muted">No expert review yet — ranked on specs.</span></div>`}
+      ${x ? `<div class="expert"><div class="xs"><span class="xbadge">Expert ${x.s ? esc(x.s) + '/10' : 'review'}</span>${x.basedOn ? `<span class="muted"> (review of the ${esc(x.basedOn)})</span>` : ''}</div><ul class="pc">${pros}</ul></div>` : `<div class="expert"><span class="muted">No expert review yet, so we've ranked it on specs.</span></div>`}
       <div class="card-foot"><a class="watch" href="${esc(ytUrl(m))}" target="_blank" rel="noopener"${trk(m, 'video', ytCh(m))}><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5A2.7 2.7 0 0 0 2.4 7.2 28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1z"/></svg>${x && x.yt ? 'Watch the video review' : 'Find a video review'}</a>
         <span class="foot-links">${x && x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener"${trk(m, 'review', 'Autocar India')}>Expert review ↗</a>` : ''}<button class="link" data-toggle="${esc(key)}">${open ? 'Hide' : 'See'} ${m.vs.length} variant${m.vs.length > 1 ? 's' : ''}</button></span></div>
       ${open ? variantTable(m) : ''}
@@ -1470,18 +1474,18 @@
         <div class="wz-choices three">${Object.entries(BODY_OPTS).map(([k, o]) => `<button class="wz-opt${a.body === k ? ' sel' : ''}" type="button" data-body="${k}" aria-pressed="${a.body === k}">${bodyIcon(k)}<b>${o.label}</b><span>${o.sub}</span></button>`).join('')}</div>`;
     } else if (s === 2) {
       const v = Number(a.budget); canNext = v >= 3 && v <= 500;
-      body = `<h2 id="wzTitle" class="display">What's your budget?</h2><p class="muted">Your maximum on-road price in lakhs, for ${esc(RTO.states[state.st].name)}.</p>
-        <form id="wzBudgetForm" action="#" novalidate><label class="wz-money"><span>₹</span><input id="wzBudget" inputmode="decimal" enterkeyhint="next" autocomplete="off" placeholder="e.g. 12" value="${esc(a.budget)}"><span>lakh</span></label></form>
+      body = `<h2 id="wzTitle" class="display">What's your budget?</h2><p class="muted">Your maximum on-road price in ₹ L, for ${esc(RTO.states[state.st].name)}.</p>
+        <form id="wzBudgetForm" action="#" novalidate><label class="wz-money"><span>₹</span><input id="wzBudget" inputmode="decimal" enterkeyhint="next" autocomplete="off" placeholder="e.g. 12" value="${esc(a.budget)}"><span>L</span></label></form>
         <div class="chips wz-quick">${[6, 8, 10, 12, 15, 20, 25, 35, 50].map((n) => `<button class="chip" type="button" data-budget="${n}" aria-pressed="${Number(a.budget) === n}">₹${n} L</button>`).join('')}</div>
-        ${a.budget && !canNext ? '<p class="wz-err">Enter an amount between 3 and 500 lakh.</p>' : ''}`;
+        ${a.budget && !canNext ? '<p class="wz-err">Enter an amount between 3 and 500 L.</p>' : ''}`;
     } else if (s === 3) {
       canNext = !!a.fuel;
-      const F = { Petrol: 'Simple, widely available', Diesel: 'Torque and long-distance economy', CNG: 'Lowest running cost', Hybrid: 'Petrol + electric, incl. plug-in', Electric: 'Zero tailpipe emissions', Any: 'Show me everything' };
+      const F = { Petrol: 'Simple, widely available', Diesel: 'Strong pull, great on long drives', CNG: 'Lowest running cost', Hybrid: 'Petrol + electric, incl. plug-in', Electric: 'Zero tailpipe emissions', Any: 'Show me everything' };
       body = `<h2 id="wzTitle" class="display">Which fuel type?</h2>
         <div class="wz-choices three">${Object.entries(F).map(([k, sub]) => `<button class="wz-opt${a.fuel === k ? ' sel' : ''}" type="button" data-fuel="${k}" aria-pressed="${a.fuel === k}"><b>${k === 'Any' ? 'No preference' : k}</b><span>${sub}</span></button>`).join('')}</div>`;
     } else if (s === 4) {
       canNext = !!a.trans;
-      const T = { Automatic: 'Two pedals — AT, CVT, DCT or AMT', Manual: 'Clutch and gear lever', Either: 'Show me both' };
+      const T = { Automatic: 'No clutch pedal. AMT, CVT, DCT and AT all count', Manual: 'Clutch and gear lever', Either: 'Show me both' };
       body = `<h2 id="wzTitle" class="display">Automatic or Manual?</h2>
         <div class="wz-choices three">${Object.entries(T).map(([k, sub]) => `<button class="wz-opt${a.trans === k ? ' sel' : ''}" type="button" data-trans="${k}" aria-pressed="${a.trans === k}"><b>${k === 'Either' ? 'No preference' : k}</b><span>${sub}</span></button>`).join('')}</div>`;
     } else if (s === 5) {
@@ -1645,7 +1649,7 @@
     }, (err) => {
       locating = false; sel.classList.remove('locating'); fillStates(); $('#state').value = state.st;
       if (auto === true) return; // silent attempt — don't nag
-      locToast(err.code === 1 ? 'Location access wasn\'t allowed — that\'s fine. Choose your state from the drop-down to see the right on-road prices.' : 'We couldn\'t find your location. Please choose your state.', err.code === 1);
+      locToast(err.code === 1 ? 'Location access wasn\'t allowed. That\'s fine. Choose your state from the drop-down to see the right on-road prices.' : 'We couldn\'t find your location. Please choose your state.', err.code === 1);
     }, { timeout: 12000, maximumAge: 3600e3 });
   }
   function hideLocToast() { const t = $('#locToast'); if (t) t.hidden = true; }
@@ -2015,7 +2019,7 @@
       return [m, p * 2 + (m.body === one.body ? 0 : 0.6) + (1 - fu) * 0.35 + sd + dd + (m.brand === one.brand ? 0.08 : 0)];
     }).sort((a, b) => a[1] - b[1]).slice(0, 10).map((x) => x[0]) : [];
     let scope = closest.length ? 'close' : filtered.length ? 'filtered' : 'all';
-    const row = (m) => `<button type="button" class="cp-row" data-pick="${esc(keyOf(m))}"><span class="cp-th">${carImg(m, '72px')}</span><span class="cp-n"><span class="muted small">${esc(m.brand)}</span><b>${esc(m.model)}</b></span><span class="cp-p">${lakh(m.min)}</span></button>`;
+    const row = (m) => `<button type="button" class="cp-row" data-pick="${esc(keyOf(m))}"><span class="cp-th">${carImg(m, '72px')}</span><span class="cp-n"><span class="muted small">${esc(m.brand)}</span><b>${esc(m.model)}</b></span><span class="cp-p">${lakh(m.min)}<small>ex-showroom</small></span></button>`;
     const draw = () => {
       const q = compact(($('#cmpQ') || {}).value || '');
       const base = scope === 'close' ? closest : scope === 'filtered' ? filtered : all;
@@ -2221,7 +2225,7 @@
       </section>
       <section class="cmp-grid" style="--n:${cars.length}">
         <div class="cg-row cg-cars"><div class="cg-k"></div>${cars.map((car, i) => `<div class="cg-car${best === car ? ' best' : ''}">
-          ${best === car ? `<div class="cg-best">Best for you</div>` : ''}
+          ${best === car ? `<div class="cg-best">Fits you best</div>` : ''}
           <a class="cg-img" href="#/car/${mslug(car.m.brand, car.m.model)}" aria-label="${esc(car.m.brand + ' ' + car.m.model)}: open the car page">${carImg(car.m, '(max-width: 700px) 30vw, 260px')}</a>
           <div class="muted small">${esc(car.m.brand)}</div><a class="cg-name" href="#/car/${mslug(car.m.brand, car.m.model)}">${esc(car.m.model)}</a>
           <label class="cg-var"><span class="sr">Variant</span><select data-vsel="${esc(keyOf(car.m))}">${car.m.vs.map((v) => v.c).sort((a, b) => a.orTotal - b.orTotal).map((c) => `<option value="${esc(c.id)}" ${c.id === car.c.id ? 'selected' : ''}>${esc(c.variant)} · ${lakh(c.orTotal)}</option>`).join('')}</select></label>
@@ -2381,7 +2385,7 @@
       const [d, r] = await Promise.all([fetch('data/cars.json').then((x) => x.json()), fetch('data/rto.json').then((x) => x.json())]);
       DATA = d; RTO = r;
     } catch (e) {
-      $('#resultTitle').textContent = 'Could not load car data. Please refresh.'; return;
+      $('#resultTitle').textContent = 'We couldn\'t load the cars. Please refresh.'; return;
     }
     fillStates(); loadFilters(); state.tab = store.get('tab', null); if (!TABS.some((t) => t.id === state.tab) || (state.tab === 'picks' && !state.rec)) state.tab = state.rec && state.sort === 'rec' ? 'picks' : 'all'; prep(); buildFilters(); wire(); render(); wirePages();
     // hero subtitle is fixed copy (index.html): "Your friendly car expert…"
