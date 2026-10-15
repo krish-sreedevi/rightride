@@ -2003,7 +2003,9 @@
     const filtered = cmpSource().filter((m) => !taken.has(keyOf(m)));
     const all = groupAll().filter((m) => !taken.has(keyOf(m))).sort((a, b) => a.brand.localeCompare(b.brand) || a.model.localeCompare(b.model));
     // with exactly one car chosen, offer its closest rivals: same body type, similar on-road price, shared fuels and seating
-    const one = taken.size === 1 ? modelByKey([...taken][0]) : null;
+    // closest rivals of the first car chosen: always when only one car is in, and also for the next slot when the search found only one or two cars
+    const firstKey = cmpKeys().find((k, j) => k && j !== i && taken.has(k)) || [...taken][0];
+    const one = firstKey && (taken.size === 1 || filtered.length <= 1) ? modelByKey(firstKey) : null;
     const seatsOf = (m) => Math.max(0, ...m.vs.map((v) => (v.c && v.c.seats) || 0));
     const closest = one ? groupAll().filter((m) => !taken.has(keyOf(m)) && m.min && one.min).map((m) => {
       const p = Math.abs(Math.log(((m.min + m.max) / 2) / ((one.min + one.max) / 2)));
