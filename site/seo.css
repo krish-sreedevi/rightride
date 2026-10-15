@@ -63,3 +63,4 @@ html[data-theme="dark"] .top img { content: url(/brand/logo-night.webp?v=9); }
 .car.row .t { display:flex; flex-direction:column; gap:2px; }
 th[scope="row"] { color:var(--text); font-size:.88rem; }
 @media (max-width: 560px) { .car.row .ci { width:96px; height:60px; } .car.row .ci img { height:60px; } }
+.steps { padding-left:22px; margin:0; } .steps li { margin:8px 0; padding-left:4px; } .steps li::marker { color:var(--brand); font-weight:700; }

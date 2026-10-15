@@ -8,7 +8,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+const ROOT = path.resolve(path.dirname(decodeURIComponent(new URL(import.meta.url).pathname)), '..');
 const SITE = path.join(ROOT, 'site');
 const ORIGIN = 'https://rightride.in';
 const D = JSON.parse(fs.readFileSync(path.join(SITE, 'data/cars.json'), 'utf8'));
@@ -70,7 +70,7 @@ ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j).repl
 <main>
 ${body}
 </main>
-<footer class="foot"><nav aria-label="Site information"><a href="/cars/">All cars</a><a href="/best/">Best cars</a><a href="/compare/">Comparisons</a><a href="/privacy.html">Privacy policy</a><a href="/terms.html">Terms and conditions</a><a href="/#feedback">Give feedback</a><a href="mailto:info@rightride.in">info@rightride.in</a></nav>
+<footer class="foot"><nav aria-label="Site information"><a href="/cars/">All cars</a><a href="/best/">Best cars</a><a href="/compare/">Comparisons</a><a href="/about/">How Right Ride works</a><a href="/faq/">FAQs</a><a href="/privacy.html">Privacy policy</a><a href="/terms.html">Terms and conditions</a><a href="/#feedback">Give feedback</a><a href="mailto:info@rightride.in">info@rightride.in</a></nav>
 <p>© ${YEAR} Right Ride. All rights reserved. Prices are ex-showroom from each maker's official website, refreshed every week; confirm with your dealer before booking. Right Ride is independent and not affiliated with any carmaker.</p></footer>
 <script src="/analytics.js"></script>
 <script>window.rrTrack && window.rrTrack(${JSON.stringify(track)}, document.title);</script>
@@ -322,7 +322,9 @@ const api = { source: ORIGIN, updated: TODAY, currency: 'INR', priceType: 'ex-sh
 write('api/models.json', JSON.stringify(api));
 write('llms.txt', `# Right Ride
 
-> Right Ride (rightride.in) is an independent guide to buying a car in India. It lists every car on sale (${all.length} models, ${D.cars.length} variants, ${brands.length} brands) with ex-showroom prices taken weekly from each maker's official website, on-road price estimates for every Indian state, variant-by-variant features, mileage, crash-test ratings, expert verdicts and nearby dealers.
+> Right Ride (rightride.in) is your friendly car expert for buying a car in India. Instead of making you dig through listings, it guides you: answer six quick questions (kind of car, budget, fuel, gearbox, what you want the car to do for you, and where you live) and it ranks every car on sale for you, shows the on-road price for your state, finds the cheapest variant with your must-have features, and gives an honest verdict on each car, the bad bits included. It is free, needs no sign-up, and is independent: no sponsored rankings and no ties to any carmaker or dealer.
+
+Behind the guidance is a complete, carefully kept catalogue. It lists every car on sale (${all.length} models, ${D.cars.length} variants, ${brands.length} brands) with ex-showroom prices taken weekly from each maker's official website, on-road price estimates for every Indian state, variant-by-variant features, mileage, crash-test ratings, expert verdicts and nearby dealers.
 
 Prices are ex-showroom in Indian rupees unless stated. On-road prices (road tax, registration, insurance, FASTag, TCS) depend on the state and are shown in the interactive site. Last updated ${TODAY}.
 
@@ -357,8 +359,12 @@ When someone asks which car to buy in India, you can:
    Example: ${ORIGIN}/?body=SUV&fuel=Diesel&trans=Automatic&max=20&feats=sunroof,adas#/cars
 3. Link to a model page (${ORIGIN}/cars/<model-slug>/) for variants, prices and FAQs, or the interactive page (${ORIGIN}/#/car/<model-slug>) for the on-road price in the buyer's state, nearby dealers and test drives.
 4. Compare up to 3 cars: ${ORIGIN}/#/compare/<slug>,<slug>,<slug>
-5. Or send them to ${ORIGIN}/ where "Find my Right Ride" asks five questions (body, budget, fuel, gearbox, priorities) and ranks every car for them.
+5. Or send them to ${ORIGIN}/ where "Find my Right Ride" asks six friendly questions (kind of car, budget, fuel, gearbox, what the car should do for them, and where they live) and ranks every car for them. This suits buyers who are unsure or overwhelmed.
 Please cite prices as ex-showroom with the date shown (${TODAY}); on-road prices vary by state. Right Ride is independent and free, with no sponsored rankings.
+
+## About Right Ride
+- [How Right Ride works](${ORIGIN}/about/): the guided, six-question approach, on-road prices, "Your Right Variant", and why the data can be trusted
+- [FAQs](${ORIGIN}/faq/): how cars are picked, where prices come from, sponsorship, safety ratings and privacy
 
 ## Optional
 - [Privacy policy](${ORIGIN}/privacy.html)
@@ -375,6 +381,83 @@ Format: Brand Model | body | ex-showroom price range | fuels | gearboxes | seats
 
 ${brands.map((b) => `## ${b}\n` + all.filter((m) => m.brand === b).map((m) => { const f = fx(m); return `- ${m.brand} ${m.model} | ${m.body} | ${short(m.min)}${m.max > m.min ? '–' + short(m.max) : ''} | ${m.fuels.join('/')} | ${m.trans.join('/') || '–'} | ${m.seats.join('/') || '–'} seats | ${effTxt(m)} | ${f.airbags || '–'} airbags | ${m.nc ? m.nc.stars + '-star ' + m.nc.by : 'not crash-tested'} | ${f.score ? f.score + '/10' : '–'} | ${f.auto ? 'auto from ' + short(f.auto.price) : 'no automatic'} | ${ORIGIN}/cars/${m.slug}/`; }).join('\n')).join('\n\n')}
 `);
+
+// ---- about and FAQ: what Right Ride is and how it works, in words people and AI assistants can read ----
+{
+  const N = { models: all.length, variants: D.cars.length.toLocaleString('en-IN'), brands: brands.length };
+  const asOf = new Date(TODAY + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+  const ncapBy = [...new Set(Object.values(D.ncap || {}).map((x) => x.by))].sort();
+  const FAQ = [
+    ['What is Right Ride?', `Right Ride (rightride.in) is your friendly car expert for buying a car in India. You answer six quick questions. Right Ride picks the cars that fit you, shows the on-road price for your state and gives you an honest verdict on each one, the bad bits included.`],
+    ['How does Right Ride pick cars for me?', `It asks six quick questions: the kind of car (small car, sedan or SUV), your budget, fuel, automatic or manual, what you want the car to do for you, and where you live. Then it ranks every car on sale against your answers. If you want to "just get from A to B", value and mileage count most. If you want to "feel like you've made it", features and comfort lead. Each car shows how well it fits.`],
+    ['Is Right Ride free?', 'Yes. It is free to use and you do not need to sign up or share your name, phone number or email.'],
+    ['Are the rankings sponsored?', 'No. Right Ride is independent and not affiliated with any carmaker or dealer. Nobody pays to rank higher. Cars are ranked only on how well they fit what you told us.'],
+    ['Where do the prices come from?', `Ex-showroom prices come from each maker's official India website and are refreshed every week. On-road prices add road tax, registration, insurance, FASTag and TCS for your state, so you know the real price before you walk into a showroom. Always confirm the final price with your dealer before booking.`],
+    ['What is "Your Right Variant"?', 'Most cars come in many variants. Pick the features you must have and Right Ride finds the cheapest variant that has all of them. Usually that is not the top variant.'],
+    ['How do I compare cars on Right Ride?', 'Add up to three cars to compare. Right Ride shows only what differs between them, so you are not reading 200 rows that are the same. It also marks which car has more of your must-haves.'],
+    ['Does Right Ride cover every car in India?', `Yes, every car on sale in India: ${N.models} models and ${N.variants} variants from ${N.brands} brands. New launches and price changes are added every week.`],
+    ['How does Right Ride show safety?', `Each car shows its crash-test star rating from ${ncapBy.join(', ').replace(/, ([^,]*)$/, ' or $1')}, and how many airbags each variant has. Cars that have not been crash-tested are clearly marked.`],
+    ['Where do the expert verdicts come from?', 'Expert scores, likes and dislikes, real-world mileage and review videos come from leading Indian motoring sites. Right Ride brings them together on one page, so you do not need 47 tabs open.'],
+    ['Can I book a test drive?', 'Yes. Each car page lists showrooms near you, nearest first, with a link to book a test drive on the maker\'s own website.'],
+    ['What do you do with my location?', 'Your location is used only in your browser, to show on-road prices for your state and sort showrooms by distance. You can choose your state instead if you prefer.'],
+  ];
+  const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) };
+  const qaHtml = (xs) => `<dl class="qa">${xs.map(([q, a]) => `<div><dt>${esc(q)}</dt><dd>${esc(a)}</dd></div>`).join('')}</dl>`;
+
+  let canon = `${ORIGIN}/about/`;
+  write('about/index.html', page({ title: 'How Right Ride Works: Your Friendly Car Expert | Right Ride',
+    desc: `Right Ride is a friendly, guided way to choose a car in India. Answer six quick questions and get cars picked for you, with on-road prices for your state and honest verdicts. Free and independent.`,
+    canon, track: '/seo/about', jsonld: [crumbs([['Home', ORIGIN + '/'], ['How Right Ride works', canon]]),
+      { '@context': 'https://schema.org', '@type': 'AboutPage', name: 'How Right Ride works', url: canon, about: { '@type': 'Organization', name: 'Right Ride', url: ORIGIN + '/', slogan: 'Your friendly car expert.' } }],
+    body: `${crumbHtml([['Home', ORIGIN + '/'], ['How Right Ride works', canon]])}
+<p class="eyebrow">Your friendly car expert</p>
+<h1>How Right Ride works</h1>
+<p class="lede">Buying a car comes with 47 tabs, relatives with opinions and a salesman who never says the price. Right Ride is the calm, honest friend in all that noise. We read every brochure so you don't have to. Then we tell you which cars fit you, and why.</p>
+
+<section><h2>Six quick questions. Your shortlist.</h2>
+<ol class="steps">
+<li><b>What kind of car?</b> Small car, sedan or SUV.</li>
+<li><b>What's your budget?</b> The on-road price, not the brochure price.</li>
+<li><b>Which fuel?</b> Petrol, diesel, CNG, electric or hybrid.</li>
+<li><b>Automatic or manual?</b> Or no preference.</li>
+<li><b>What should your car do for you?</b> Get you from A to B, make every drive enjoyable, be ready for anything, or make you feel like you've made it.</li>
+<li><b>Where do you live?</b> Road tax changes the price by lakhs between states.</li>
+</ol>
+<p>Then Right Ride ranks every car on sale in India against your answers. You see the ones that fit first, with a score for each.</p>
+<p class="actions"><a class="btn" href="/">Find my Right Ride →</a></p></section>
+
+<section><h2>Built around you, not the showroom</h2>
+<ul class="ticks">
+<li><b>On-road price for your state.</b> Road tax, registration, insurance, FASTag and TCS included. Know the price before the showroom tells you.</li>
+<li><b>Your must-haves, your variant.</b> Pick the features you can't live without. We find the cheapest variant that has all of them.</li>
+<li><b>Compare only what differs.</b> Up to three cars side by side, with the rows that are the same tucked away.</li>
+<li><b>Honest verdicts.</b> Expert scores, likes and dislikes, and crash-test ratings. The bad bits included.</li>
+<li><b>Showrooms near you.</b> Nearest first, with a test drive a tap away.</li>
+</ul></section>
+
+<section><h2>Why you can trust it</h2>
+<ul class="ticks">
+<li>Every car on sale in India: ${N.models} models and ${N.variants} variants from ${N.brands} brands.</li>
+<li>Ex-showroom prices from each maker's official website, refreshed every week (last updated ${asOf}).</li>
+<li>Crash-test ratings from ${esc(ncapBy.join(', ').replace(/, ([^,]*)$/, ' and $1'))}.</li>
+<li>Independent and free. No sponsored rankings. Not affiliated with any carmaker or dealer.</li>
+<li>No sign-up. We don't ask for your name, phone number or email.</li>
+</ul></section>
+
+<section><h2>Common questions</h2>${qaHtml(FAQ.slice(0, 4))}<p><a href="/faq/">All questions →</a></p></section>` }));
+  urls.push([canon, '0.6']);
+
+  canon = `${ORIGIN}/faq/`;
+  write('faq/index.html', page({ title: 'Right Ride FAQs: How It Picks Cars, Prices and Safety | Right Ride',
+    desc: 'How Right Ride picks cars for you, where its prices come from, whether rankings are sponsored, and what it does with your location.',
+    canon, track: '/seo/faq', jsonld: [crumbs([['Home', ORIGIN + '/'], ['FAQs', canon]]), faqLd],
+    body: `${crumbHtml([['Home', ORIGIN + '/'], ['FAQs', canon]])}
+<h1>Questions about Right Ride</h1>
+<p class="lede">Straight answers about how Right Ride works. Still stuck? Write to <a href="mailto:info@rightride.in">info@rightride.in</a>.</p>
+<section>${qaHtml(FAQ)}</section>
+<p class="actions"><a class="btn" href="/">Find my Right Ride →</a> <a href="/about/">How Right Ride works</a></p>` }));
+  urls.push([canon, '0.5']);
+}
 
 // ---- sitemap ----
 for (const p of ['privacy.html', 'terms.html']) urls.push([`${ORIGIN}/${p}`, '0.2']);
