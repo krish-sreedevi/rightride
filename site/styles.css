@@ -1496,3 +1496,23 @@ body[data-page="home"] .theme-tg { position: absolute; top: 50%; right: max(16px
   .wz-pick select { text-align: center; text-align-last: center; }
 }
 @media (max-width: 900px) { .wz-pick select { padding-left: 36px; padding-right: 36px; } }
+/* finder step 6, option A: one primary (detect), "or", quiet state select; Next stays dimmed until one is chosen */
+.wz-locs { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0; margin: 22px auto 4px; max-width: 380px; }
+.wz-locs .wz-geo { height: 50px; width: 100%; justify-content: center; gap: 8px; display: inline-flex; align-items: center; }
+.wz-locs .wz-geo b { font-weight: 700; }
+.wz-geo-note { margin: 8px 0 0; }
+.wz-or { width: 100%; display: flex; align-items: center; gap: 12px; margin: 16px 0; color: var(--muted); font-size: .85rem; }
+.wz-or::before, .wz-or::after { content: ""; flex: 1; height: 1px; background: var(--line-2); }
+.wz-locs .wz-st { width: 100%; margin: 0; }
+.wz-locs .wz-st select { width: 100%; min-width: 0; height: 50px; padding: 0 40px; background: var(--chip); box-shadow: none; color: var(--muted); text-align: center; text-align-last: center; }
+.wz-locs .wz-st select.set { color: var(--text); box-shadow: inset 0 0 0 2px var(--text); background: var(--panel); }
+@media (max-width: 900px) {
+  .wz-locs { align-items: center; margin-left: auto; margin-right: auto; text-align: center; }
+  .wz-locs .wz-st select { text-align: center; text-align-last: center; }
+}
+/* one primary at a time: secondary = outlined, brand text. Repeated row actions and helper buttons use this. */
+.btn.secondary { background: transparent; color: var(--brand); font-weight: 600; box-shadow: inset 0 0 0 1.5px var(--brand); }
+.btn.secondary:hover { background: var(--brand-soft); }
+/* nearest dealer keeps the filled button; the rest are outlined */
+.dl:first-child .dl-td { background: var(--brand-grad); color: #fff; box-shadow: 0 6px 18px color-mix(in srgb, var(--brand) 28%, transparent); }
+.vh-table th.best em .rrw { color: inherit; }

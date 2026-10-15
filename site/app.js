@@ -161,7 +161,7 @@
     return `<details class="ms" id="brandMs"><summary aria-labelledby="brandLbl brandSum"><span id="brandSum">${esc(brandSummary())}</span><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
       <div class="ms-pop"><input type="search" class="ms-q" id="brandQ" placeholder="Search brands" aria-label="Search brands" autocomplete="off">
         <div class="ms-list" role="group" aria-label="Brands">${brands.map((b) => `<label class="ms-opt" data-name="${esc(b.toLowerCase())}"><input type="checkbox" data-brand="${esc(b)}" ${state.brand.has(b) ? 'checked' : ''}><span>${esc(b)}</span></label>`).join('')}</div>
-        <div class="ms-foot"><button type="button" class="link" data-brandclear>Clear</button><button type="button" class="btn primary sm" data-brandclose>Done</button></div></div></details>`;
+        <div class="ms-foot"><button type="button" class="link" data-brandclear>Clear</button><button type="button" class="btn secondary sm" data-brandclose>Done</button></div></div></details>`;
   }
   function buildFilters() {
     const bodies = Object.keys(countBy((c) => c.body)).sort();
@@ -1145,7 +1145,7 @@
         ${adds.length ? `<div class="vh-up">Step up to <b>${esc(nxt.variant)}</b> (+${lakh(nxt.orTotal - best.orTotal).replace('₹', '₹')}) for ${esc(adds.slice(0, 5).map((f) => f.label).join(', '))}${adds.length > 5 ? ` and ${adds.length - 5} more` : ''}.</div>` : ''}
         <ul class="vh-pick-specs">${[best.seats ? best.seats + ' seats' : '', best.airbags ? best.airbags + ' airbags' : '', rng(best) !== '–' ? rng(best) : '', best.cc ? best.cc + ' cc' : '', best.drive && best.drive !== '2WD' ? best.drive : ''].filter(Boolean).map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
         ${cp.need.size ? `<ul class="vh-pick-has">${[...cp.need].map((k) => `<li>${esc(FLABEL(k).replace(/ \(.*\)$/, ''))}</li>`).join('')}</ul>` : ''}
-        <div class="vh-pick-act"><button class="btn primary" type="button" data-vid="${esc(best.id)}">Price break-up</button><a class="btn ghost" href="#chDealer" data-jump="chDealer">Book a test drive</a></div></div>`;
+        <div class="vh-pick-act"><button class="btn secondary" type="button" data-vid="${esc(best.id)}">Price break-up</button><a class="btn ghost" href="#chDealer" data-jump="chDealer">Book a test drive</a></div></div>`;
     } else pick = `<div class="vh-pick none">${SORRY_ICON}<div><b>No ${esc(m.model)} variant has all of these.</b><div class="muted small">Untick a feature to see the closest variants.</div></div></div>`;
     const grp = (name, vals, set) => vals.length > 1 || set.size ? `<div class="group"><div class="label">${name}</div><div class="chips">${vals.map((v) => `<button type="button" class="chip" data-cpf="${name === 'Fuel' ? 'fuel' : 'gear'}" data-v="${esc(v)}" aria-pressed="${set.has(v)}">${esc(v)}</button>`).join('')}</div></div>` : '';
     const cnt = (k) => known.filter((c) => c.feat(k) === '1').length;
@@ -1178,7 +1178,7 @@
     const box = $('#cpDealers'); if (!box) return;
     const geo = store.get('geo', null);
     box.innerHTML = `<form class="dl-find" data-dlform><button type="button" class="btn ghost" data-dl="geo" aria-label="Use my location">${PIN}<span class="t"> Use my location</span></button><span class="muted dl-or">or</span>
-        <input class="dl-pin" name="pin" inputmode="numeric" autocomplete="postal-code" maxlength="6" pattern="[1-9][0-9]{5}" placeholder="Enter pincode" aria-label="Pincode"><button class="btn primary" type="submit">Find</button></form>
+        <input class="dl-pin" name="pin" inputmode="numeric" autocomplete="postal-code" maxlength="6" pattern="[1-9][0-9]{5}" placeholder="Enter pincode" aria-label="Pincode"><button class="btn secondary" type="submit">Find</button></form>
       <p class="hint dl-geo-note">Your location is only used in your browser to sort showrooms by distance. Pincodes are looked up with OpenStreetMap's Nominatim service. Showroom data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>.</p>
       <div id="dlList" aria-live="polite"></div>`;
     if (geo) listDealers(m, geo);
@@ -1230,7 +1230,7 @@
     const plain = !dealerGroup(d.n, m.brand); // just "Hyundai" etc. on the map
     return `<li class="dl"><div class="dl-main"><b class="dl-n">${esc(plain ? `${m.brand} showroom${area ? ', ' + area : ''}` : d.n)}</b><div class="dl-a">${esc(addr || 'Address not listed')}</div>
       <div class="dl-meta"><span class="dl-km">${d.km < 10 ? d.km.toFixed(1) : Math.round(d.km)} km away</span>${tel ? `<a class="dl-tel" href="tel:${esc(tel)}" data-ev="call" data-dealer="${esc(d.n)}">${PHONE} ${esc(d.t)}</a>` : ''}${web ? `<a class="dl-web" href="${esc(web)}" target="_blank" rel="noopener" data-ev="dealer-site" data-dealer="${esc(d.n)}">Dealer website ↗</a>` : ''}</div></div>
-      <div class="dl-act"><a class="btn primary dl-td" href="${esc(testDriveUrl(m))}" target="_blank" rel="noopener" data-td data-dealer="${esc(d.n)}" data-area="${esc(area || '')}">${T.kind === 'enquiry' ? 'Ask for a test drive' : 'Book a test drive'} ↗</a></div></li>`;
+      <div class="dl-act"><a class="btn secondary dl-td" href="${esc(testDriveUrl(m))}" target="_blank" rel="noopener" data-td data-dealer="${esc(d.n)}" data-area="${esc(area || '')}">${T.kind === 'enquiry' ? 'Ask for a test drive' : 'Book a test drive'} ↗</a></div></li>`;
   }
   async function pinToGeo(pin) {
     try {
@@ -1477,7 +1477,7 @@
       body = `<img class="wz-mark" src="brand/logo-day.webp?v=9" alt="Right Ride"><h2 id="wzTitle" class="display">What can we help you with?</h2>
         <div class="wz-choices two">
           <button class="wz-opt" type="button" data-wz="browse"><b>Just browsing</b><span>Explore every car, variant and on-road price</span></button>
-          <button class="wz-opt primary" type="button" data-wz="start" autofocus><b>Find the Right Ride for me!</b><span>Personalised recommendations in 5 quick steps</span></button>
+          <button class="wz-opt primary" type="button" data-wz="start" autofocus><b>Find the Right Ride for me!</b><span>Personalised recommendations in 6 quick steps</span></button>
         </div>`;
     } else if (s === 1) {
       canNext = !!a.body;
@@ -1505,11 +1505,14 @@
         <div class="wz-choices two wz-need">${Object.entries(NEEDS).map(([k, o]) => `<button class="wz-opt${a.need === k ? ' sel' : ''}" type="button" data-need="${k}" aria-pressed="${a.need === k}"><b>${esc(o.t)}</b><span>${esc(o.sub)}</span></button>`).join('')}</div>`;
     } else if (s === 6) {
       if (!a.st || !RTO.states[a.st]) a.st = state.st;
-      const opts = Object.entries(RTO.states).sort((x, y) => x[1].name.localeCompare(y[1].name)).map(([k, v]) => `<option value="${k}"${k === a.st ? ' selected' : ''}>${esc(v.name)}</option>`).join('');
+      canNext = !!a.locMode;
+      const opts = Object.entries(RTO.states).sort((x, y) => x[1].name.localeCompare(y[1].name)).map(([k, v]) => `<option value="${k}"${a.locMode === 'pick' && k === a.st ? ' selected' : ''}>${esc(v.name)}</option>`).join('');
       body = `<h2 id="wzTitle" class="display">Last one. Where do you live?</h2><p class="muted">Road tax changes the price by lakhs between states.<br>We use this only for on-road prices.</p>
-        <div class="wz-choices two wz-locs">
-          <button class="wz-opt${a.locMode === 'geo' ? ' sel' : ''}" type="button" data-wzgeo aria-pressed="${a.locMode === 'geo'}"><b>${a.geoLabel ? `Near ${esc(a.geoLabel)}` : 'Detect my location'}</b><span>${a.geoLabel ? `${esc(RTO.states[a.st].name)}. Tap to detect again.` : 'One tap. Used only for prices.'}</span></button>
-          <div class="wz-opt wz-pick${a.locMode === 'pick' ? ' sel' : ''}"><b>Choose my state</b><label class="wz-st"><span class="sr">Your state</span><select id="wzState">${opts}</select></label></div>
+        <div class="wz-locs">
+          <button class="btn ${a.locMode ? 'ghost' : 'primary'} wz-geo" type="button" data-wzgeo aria-pressed="${a.locMode === 'geo'}"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg><b>${a.locMode === 'geo' && a.geoLabel ? `Near ${esc(a.geoLabel)}` : 'Detect my location'}</b></button>
+          <p class="muted small wz-geo-note">${a.locMode === 'geo' && a.geoLabel ? `${esc(RTO.states[a.st].name)}. Tap to detect again.` : 'Quickest. One tap.'}</p>
+          <div class="wz-or" aria-hidden="true"><span>or</span></div>
+          <label class="wz-st"><span class="sr">Your state</span><select id="wzState"${a.locMode === 'pick' ? ' class="set"' : ''}><option value=""${a.locMode === 'pick' ? '' : ' selected'} disabled>Choose my state</option>${opts}</select></label>
         </div>
         <p class="muted small wz-loc-msg" id="wzLocMsg" aria-live="polite"></p>`;
     }
@@ -1616,7 +1619,7 @@
       if (b.dataset.trans) { a.trans = b.dataset.trans; wz.step = 5; return drawWizard(); }
       if (b.dataset.budget) { a.budget = b.dataset.budget; if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); return drawWizard(); }
     });
-    W.addEventListener('change', (e) => { if (e.target.id === 'wzState') { wz.a.st = e.target.value; wz.a.geoLabel = ''; wz.a.locMode = 'pick'; $$('.wz-locs .wz-opt', W).forEach((x) => x.classList.toggle('sel', x.classList.contains('wz-pick'))); } });
+    W.addEventListener('change', (e) => { if (e.target.id === 'wzState' && e.target.value) { wz.a.st = e.target.value; wz.a.geoLabel = ''; wz.a.locMode = 'pick'; drawWizard(); } });
     W.addEventListener('input', (e) => {
       if (e.target.id !== 'wzBudget') return;
       wz.a.budget = e.target.value.replace(/[^\d.]/g, '');
@@ -1691,7 +1694,7 @@
   function locToast(msg, canRetry, retryLabel, stay) {
     const show = () => {
       const t = $('#locToast');
-      t.innerHTML = `<span class="lt-ico" aria-hidden="true">◎</span><span class="lt-msg">${esc(msg).replace(/\n/g, '<br>')}</span><span class="lt-act">${canRetry ? '<button class="btn ghost" type="button" data-loc="retry">' + esc(retryLabel || 'Allow location') + '</button>' : ''}<button class="btn primary" type="button" data-loc="pick">Choose state</button><button class="lt-x" type="button" data-loc="close" aria-label="Dismiss">✕</button></span>`;
+      t.innerHTML = `<span class="lt-ico" aria-hidden="true">◎</span><span class="lt-msg">${esc(msg).replace(/\n/g, '<br>')}</span><span class="lt-act">${canRetry ? '<button class="btn ghost" type="button" data-loc="retry">' + esc(retryLabel || 'Allow location') + '</button>' : ''}<button class="btn secondary" type="button" data-loc="pick">Choose state</button><button class="lt-x" type="button" data-loc="close" aria-label="Dismiss">✕</button></span>`;
       t.hidden = false; clearTimeout(locToast.t); locToast.t = setTimeout(hideLocToast, stay || 15000);
     };
     const w = $('#wizard');
