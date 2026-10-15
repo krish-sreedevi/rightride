@@ -2008,7 +2008,7 @@
   // ---------------- compare up to 3 cars ----------------
   // the bar on the cars page holds 3 slots; empty slots follow the current results, a slot the user picked stays put,
   // and a slot the user cleared stays empty until they add a car
-  const cmp = { slots: store.get('cmpSlots', [null, null, null]), req: store.get('cmpReq', { must: [], nice: [] }), add: 'must', all: false, vsel: {} };
+  const cmp = { sig: store.get('cmpSig', null), slots: store.get('cmpSlots', [null, null, null]), req: store.get('cmpReq', { must: [], nice: [] }), add: 'must', all: false, vsel: {} };
   const keyOf = (m) => m.brand + '|' + m.model;
   const modelByKey = (k) => groupAll().find((m) => keyOf(m) === k);
   function cmpSource() {
@@ -2018,7 +2018,16 @@
     return list;
   }
   function cmpKeys() {
-    const src = cmpSource().map(keyOf), pinned = cmp.slots.filter((s) => s && s.key).map((s) => s.key);
+    const src = cmpSource().map(keyOf);
+    // slots the site filled for you follow your results: when your preferences change the results, they refresh.
+    // only cars you picked yourself stay put.
+    const sig = src.slice(0, 12).join(',');
+    if (src.length && cmp.sig !== sig) {
+      if (cmp.sig != null) cmp.slots = cmp.slots.map((s) => (s && s.key && !s.auto ? s : null));
+      else cmp.slots = cmp.slots.map((s) => (s && s.key ? { key: s.key, auto: true } : null)); // slots saved before this change: treat as auto
+      cmp.sig = sig; saveCmp();
+    }
+    const pinned = cmp.slots.filter((s) => s && s.key).map((s) => s.key);
     const used = new Set(pinned), out = [];
     for (const s of cmp.slots) {
       if (s && s.key) out.push(s.key);
@@ -2027,7 +2036,7 @@
     }
     return out;
   }
-  const saveCmp = () => { store.set('cmpSlots', cmp.slots); store.set('cmpReq', cmp.req); };
+  const saveCmp = () => { store.set('cmpSlots', cmp.slots); store.set('cmpReq', cmp.req); store.set('cmpSig', cmp.sig); };
   function updateCompareBar() {
     const bar = $('#compareBar'); if (!bar) return;
     const keys = cmpKeys(), ms = keys.map((k) => (k ? modelByKey(k) : null));
@@ -2087,9 +2096,9 @@
       if (!b) return;
       const i = Number(b.dataset.i), act = b.dataset.cb;
       if (act === 'reset') { cmp.slots = [null, null, null]; saveCmp(); updateCompareBar(); }
-      else if (act === 'remove') { const keys = cmpKeys(); cmp.slots = cmp.slots.map((s, j) => (j === i ? { removed: true } : s || (keys[j] ? { key: keys[j] } : s))); saveCmp(); updateCompareBar(); }
-      else if (act === 'change') cmpPicker(i, (k) => { const keys = cmpKeys(); cmp.slots = cmp.slots.map((s, j) => (j === i ? { key: k } : s || (keys[j] ? { key: keys[j] } : s))); saveCmp(); updateCompareBar(); });
-      else if (act === 'go') { const keys = cmpKeys().filter(Boolean); cmp.slots = cmpKeys().map((k) => (k ? { key: k } : { removed: true })); saveCmp(); go('compare', keys.map((k) => { const m = modelByKey(k); return mslug(m.brand, m.model); }).join(',')); }
+      else if (act === 'remove') { const keys = cmpKeys(); cmp.slots = cmp.slots.map((s, j) => (j === i ? { removed: true } : s || (keys[j] ? { key: keys[j], auto: true } : s))); saveCmp(); updateCompareBar(); }
+      else if (act === 'change') cmpPicker(i, (k) => { const keys = cmpKeys(); cmp.slots = cmp.slots.map((s, j) => (j === i ? { key: k } : s || (keys[j] ? { key: keys[j], auto: true } : s))); saveCmp(); updateCompareBar(); });
+      else if (act === 'go') { const keys = cmpKeys().filter(Boolean); const prev = cmp.slots; cmp.slots = cmpKeys().map((k, j) => (k ? (prev[j] && prev[j].key === k && !prev[j].auto ? prev[j] : { key: k, auto: true }) : { removed: true })); saveCmp(); go('compare', keys.map((k) => { const m = modelByKey(k); return mslug(m.brand, m.model); }).join(',')); }
     });
   }
 
@@ -2398,7 +2407,7 @@
       if (ch) {
         const i = Number(ch.dataset.cmpchange), slugs = cmpArg.split(',');
         const taken = slugs.filter((x, j) => j !== i).map((x) => { const mm = modelBySlug(x); return mm && keyOf(mm); }).filter(Boolean);
-        cmpPicker(-1, (k) => { const m = modelByKey(k); slugs[i] = mslug(m.brand, m.model); cmp.slots = slugs.map((x) => { const mm = modelBySlug(x); return mm ? { key: keyOf(mm) } : { removed: true }; }).concat([null, null, null]).slice(0, 3); cmp.vsel = {}; saveCmp(); go('compare', slugs.join(',')); }, taken);
+        cmpPicker(-1, (k) => { const m = modelByKey(k); slugs[i] = mslug(m.brand, m.model); cmp.slots = slugs.map((x) => { const mm = modelBySlug(x); return mm ? { key: keyOf(mm), auto: x !== slugs[i] && !cmp.slots.some((s) => s && s.key === keyOf(mm) && !s.auto) } : { removed: true }; }).concat([null, null, null]).slice(0, 3); cmp.vsel = {}; saveCmp(); go('compare', slugs.join(',')); }, taken);
       }
     });
     P.addEventListener('change', (e) => { const s = e.target.closest('[data-vsel]'); if (s) { cmp.vsel[s.dataset.vsel] = s.value; keepY(() => renderCompare(cmpArg)); } });
@@ -2408,7 +2417,7 @@
   // ticking a variant in a variant table puts its model in the compare bar
   function cmpToggle(id, on) {
     const c = byId(id); if (!c) return; const k = c.brand + '|' + c.model, keys = cmpKeys();
-    let slots = cmp.slots.map((s, j) => s || (keys[j] ? { key: keys[j] } : null));
+    let slots = cmp.slots.map((s, j) => s || (keys[j] ? { key: keys[j], auto: true } : null));
     if (on) { if (keys.includes(k)) slots = slots.map((s) => (s && s.key === k ? { key: k } : s)); else { let j = slots.findIndex((s) => !s || s.removed); if (j < 0) j = 2; slots[j] = { key: k }; } }
     else slots = slots.map((s) => (s && s.key === k ? { removed: true } : s));
     cmp.slots = slots; saveCmp(); updateCompareBar();
