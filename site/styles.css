@@ -1476,3 +1476,11 @@ body[data-page="home"] .theme-tg { position: absolute; top: 50%; right: max(16px
   #wizard .wz-opt .wz-ico { margin: 0 0 4px; }
 }
 @media (min-width: 901px) { #wizard .wz-need .wz-opt { align-items: flex-start !important; text-align: left; } }
+
+/* finder step 6: location */
+.wz-loc { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 22px 0 6px; }
+.wz-loc .wz-geo { height: 46px; padding: 0 18px; }
+.wz-st select { height: 46px; min-width: 200px; border: 0; border-radius: 999px; padding: 0 40px 0 18px; background: var(--chip); color: var(--text); font: inherit; font-weight: 600; }
+.wz-loc-msg { text-align: center; min-height: 1.2em; }
+@media (max-width: 520px) { .wz-loc { flex-direction: column; } .wz-loc .wz-geo, .wz-st, .wz-st select { width: 100%; } .wz-loc > .muted { display: none; } }
+.wz-st select { max-width: none; } @media (max-width: 520px) { .wz-st select { text-align: center; text-align-last: center; } }
