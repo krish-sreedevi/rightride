@@ -1281,8 +1281,8 @@
   function keepY(fn) { const y = window.scrollY; fn(); window.scrollTo({ top: y, behavior: 'instant' }); }
 
   // ---------------- personalised recommendations ----------------
-  const PRIO = { features: 'Features', mileage: 'Mileage', comfort: 'Comfort', value: 'Value for money' };
-  const PRIO_HINT = { features: 'Tech, safety and convenience kit', mileage: 'Fuel efficiency / range', comfort: 'Space, seats and ride quality', value: 'Most car for the money' };
+  const PRIO = { features: 'Features', mileage: 'Mileage', comfort: 'Comfort', value: 'Value for money', safety: 'Safety' };
+  const PRIO_HINT = { features: 'Tech, safety and convenience kit', mileage: 'Fuel efficiency / range', comfort: 'Space, seats and ride quality', value: 'Most car for the money', safety: 'Crash rating and airbags' };
   const BODY_OPTS = { small: { label: 'Small car', sub: 'Hatchbacks, easy to park', bodies: ['Hatchback'] }, sedan: { label: 'Sedan', sub: 'Boot, comfort, highway manners', bodies: ['Sedan'] }, suv: { label: 'SUV', sub: 'SUVs and 7-seat MUVs', bodies: ['SUV', 'MUV / MPV'] } };
   const expertOf = (m) => (DATA.experts || {})[m.brand + '|' + m.model] || null;
   // which YouTube channel a video link goes to (the review title ends with it, e.g. "| Autocar India")
@@ -1321,11 +1321,20 @@
   const ytUrl = (m) => { const x = expertOf(m); return x && x.yt ? `https://www.youtube.com/watch?v=${x.yt}` : `https://www.youtube.com/results?search_query=${encodeURIComponent(`${m.brand} ${m.model} review`)}`; };
   const onesOf = (c) => (/[01]/.test(c.fs) ? c.fs.split('1').length - 1 : null);
 
+  // last finder step: what the car should do for you (the job), which sets the priority order
+  const NEEDS = {
+    ab: { t: 'Just get me from A to B', sub: 'Low running costs. No surprises.', prio: ['value', 'mileage', 'safety', 'comfort', 'features'] },
+    joy: { t: 'Make my drive the best part of my day', sub: 'Comfort, a smooth drive and good tech.', prio: ['comfort', 'features', 'safety', 'mileage', 'value'] },
+    ready: { t: 'Be ready for anything', sub: 'Office, family, hospital runs, road trips.', prio: ['safety', 'comfort', 'value', 'mileage', 'features'] },
+    made: { t: "Feel like I've made it", sub: "The features and finish you've earned.", prio: ['features', 'comfort', 'safety', 'value', 'mileage'] },
+  };
+  const fullPrio = (p) => { const o = (p || []).filter((k) => PRIO[k]); for (const k of Object.keys(PRIO)) if (!o.includes(k)) o.push(k); return o; };
   function pickVariant(m) {
     const p = state.rec.prio[0], vs = m.vs.map((x) => x.c);
     const cheap = (a, b) => a.orTotal - b.orTotal;
     if (p === 'value') return vs.slice().sort(cheap)[0];
     if (p === 'mileage') return vs.slice().sort((a, b) => (b.mileage || 0) - (a.mileage || 0) || cheap(a, b))[0];
+    if (p === 'safety') return vs.slice().sort((a, b) => (b.airbags || 0) - (a.airbags || 0) || cheap(a, b))[0];
     // features / comfort first: the best-equipped variant that fits the budget
     return vs.slice().sort((a, b) => (onesOf(b) ?? 0) - (onesOf(a) ?? 0) || b.orTotal - a.orTotal)[0];
   }
@@ -1335,7 +1344,8 @@
     const feats = list.map((m) => onesOf(m.pick)).filter((x) => x != null).sort((a, b) => a - b);
     const miles = list.map((m) => (m.pick.fuel === 'Electric' ? null : m.pick.mileage)).filter(Boolean).sort((a, b) => a - b);
     const budget = state.rec.budget * 1e5;
-    const w = [0.4, 0.3, 0.2, 0.1];
+    state.rec.prio = fullPrio(state.rec.prio);
+    const w = [0.36, 0.26, 0.18, 0.12, 0.08];
     for (const m of list) {
       const x = expertOf(m), sc = (x && x.sc) || {}, base = x && x.s ? x.s : null;
       m.est = {};
@@ -1347,6 +1357,7 @@
         mileage: mix(sc.mileage, mN == null ? null : 3 + mN * 7, 'mileage'),
         comfort: mix(sc.comfort, null, 'comfort'),
         value: mix(sc.value, 3 + priceN * 7, 'value'),
+        safety: (() => { const nc = (DATA.ncap || {})[m.brand + '|' + m.model], ab = m.pick.airbags; const a = nc && nc.stars ? nc.stars * 2 : null, b = ab ? 3 + Math.min(ab, 6) / 6 * 7 : null; if (a == null && b == null) m.est.safety = true; return a != null && b != null ? 0.65 * a + 0.35 * b : a ?? b ?? 5; })(),
       };
       const t = state.rec.prio.reduce((s, k, i) => s + w[i] * m.sub[k], 0);
       m.match = Math.round((0.85 * t + 0.15 * (base ?? 6)) * 10) / 10;
@@ -1450,7 +1461,7 @@
   // ---- welcome question + 4-step builder ----
   const wz = { step: 0, a: null, picked: [] };
 
-  const defaults = () => ({ body: null, budget: '', fuel: null, trans: null, prio: ['features', 'mileage', 'comfort', 'value'] });
+  const defaults = () => ({ body: null, budget: '', fuel: null, trans: null, prio: fullPrio(['features', 'mileage', 'comfort', 'value']), need: null });
   function openWizard(step = 0) {
     wz.a = Object.assign(defaults(), state.rec ? JSON.parse(JSON.stringify(state.rec)) : {});
     wz.step = step; wz.shown = null; drawWizard();
@@ -1489,8 +1500,9 @@
       body = `<h2 id="wzTitle" class="display">Automatic or Manual?</h2>
         <div class="wz-choices three">${Object.entries(T).map(([k, sub]) => `<button class="wz-opt${a.trans === k ? ' sel' : ''}" type="button" data-trans="${k}" aria-pressed="${a.trans === k}"><b>${k === 'Either' ? 'No preference' : k}</b><span>${sub}</span></button>`).join('')}</div>`;
     } else if (s === 5) {
-      body = `<h2 id="wzTitle" class="display">What matters most?</h2><p class="muted">Use the arrows to put the most important at the top.</p>
-        <ol class="tt" id="prioList" aria-label="Your priorities, most important first">${ttRows(a.prio)}</ol>`;
+      canNext = !!a.need;
+      body = `<h2 id="wzTitle" class="display">What should your car do for you?</h2><p class="muted">Pick the one that sounds most like you.</p>
+        <div class="wz-choices two wz-need">${Object.entries(NEEDS).map(([k, o]) => `<button class="wz-opt${a.need === k ? ' sel' : ''}" type="button" data-need="${k}" aria-pressed="${a.need === k}"><b>${esc(o.t)}</b><span>${esc(o.sub)}</span></button>`).join('')}</div>`;
     }
     const nav = s ? `<div class="wz-nav"><button class="btn ghost" type="button" data-wz="back">Back</button><button class="btn primary" type="button" data-wz="next" ${canNext ? '' : 'disabled'}>${s === 5 ? 'Show my matches' : 'Next'}</button></div>` : '';
     // soft transition between steps: old step fades and drifts out, new one drifts in, the card eases to its new height
@@ -1510,7 +1522,6 @@
       const h1 = W.offsetHeight;
       if (Math.abs(h1 - h0) > 2) { W.style.overflow = 'hidden'; W.animate([{ height: h0 + 'px' }, { height: h1 + 'px' }], { duration: 420, easing: ease }).onfinish = () => { W.style.overflow = ''; }; }
     }
-    if (s === 5) wireTT($('#prioList'), () => wz.a.prio, (o) => { wz.a.prio = o; });
     if (s === 2 && matchMedia('(hover: hover) and (pointer: fine)').matches) { const i = $('#wzBudget'); i.focus(); i.setSelectionRange(i.value.length, i.value.length); }
   }
   // priorities list: tap a row to move it to the top; rows can also be dragged
@@ -1567,9 +1578,9 @@
       if (b.dataset.wz === 'next') {
         if (wz.step < 5) { wz.step = wz.step === 3 && a.fuel === 'Electric' ? 5 : wz.step + 1; return drawWizard(); }
         closeWizard();
-        const r = { body: a.body, budget: Number(a.budget), fuel: a.fuel || 'Any', trans: a.trans, prio: a.prio.slice() };
+        const r = { body: a.body, budget: Number(a.budget), fuel: a.fuel || 'Any', trans: a.trans, need: a.need, prio: fullPrio(NEEDS[a.need] ? NEEDS[a.need].prio : a.prio) };
         // finder answers count as filter choices too
-        trackFilter('finder body', (BODY_OPTS[r.body] || {}).label || r.body); trackFilter('finder budget', budgetBand(r.budget)); trackFilter('finder fuel', r.fuel); trackFilter('finder gearbox', r.trans); trackFilter('finder top priority', PRIO[r.prio[0]]);
+        trackFilter('finder body', (BODY_OPTS[r.body] || {}).label || r.body); trackFilter('finder budget', budgetBand(r.budget)); trackFilter('finder fuel', r.fuel); trackFilter('finder gearbox', r.trans); trackFilter('finder top priority', PRIO[r.prio[0]]); if (r.need) trackFilter('finder job', NEEDS[r.need].t);
         const L = window.RRLoader, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (!L) { applyRec(r); return; }
         L.show('Finding your Right Ride…');
@@ -1577,6 +1588,7 @@
         setTimeout(() => L.hide(), reduce ? 800 : 2500);
         return;
       }
+      if (b.dataset.need) { a.need = b.dataset.need; a.prio = fullPrio(NEEDS[a.need].prio); return drawWizard(); }
       if (b.dataset.body) { a.body = b.dataset.body; wz.step = 2; return drawWizard(); }
       if (b.dataset.fuel) { a.fuel = b.dataset.fuel; if (a.fuel === 'Electric') { a.trans = 'Either'; wz.step = 5; } else wz.step = 4; return drawWizard(); }
       if (b.dataset.trans) { a.trans = b.dataset.trans; wz.step = 5; return drawWizard(); }
@@ -1885,6 +1897,7 @@
     if (o) { state.allowUnknown = o.allowUnknown ?? true; state.closeMatches = o.closeMatches ?? true; state.sort = o.sort || 'price'; }
     state.rec = store.get('rec', null);
     if (state.rec && !BODY_OPTS[state.rec.body]) state.rec = null;
+    if (state.rec) state.rec.prio = fullPrio(state.rec.prio);
     if (state.sort === 'rec' && !state.rec) state.sort = 'price';
     $('#sort option[value="rec"]').hidden = !state.rec;
     $('#sort').value = state.sort;
