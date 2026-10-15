@@ -1467,3 +1467,12 @@ body[data-page="home"] .theme-tg { position: absolute; top: 50%; right: max(16px
 .wz-need .wz-opt b { line-height: 1.3; }
 .wz-need .wz-opt { flex-direction: column !important; align-items: flex-start !important; text-align: left; flex-wrap: nowrap !important; gap: 4px; }
 .wz-need .wz-opt span { flex-basis: auto !important; }
+/* finder option cards: text centred on phones, left-aligned on larger screens */
+#wizard .wz-opt { text-align: left; align-items: flex-start; }
+#wizard .wz-opt b, #wizard .wz-opt span { text-align: inherit; }
+@media (max-width: 900px) {
+  #wizard .wz-opt { flex-direction: column !important; flex-wrap: nowrap !important; align-items: center !important; justify-content: center; text-align: center; }
+  #wizard .wz-opt span { flex-basis: auto !important; }
+  #wizard .wz-opt .wz-ico { margin: 0 0 4px; }
+}
+@media (min-width: 901px) { #wizard .wz-need .wz-opt { align-items: flex-start !important; text-align: left; } }
